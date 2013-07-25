@@ -6,7 +6,7 @@ If you've got an FTDI cable/interface you can connect directly to the module usi
 
 If not, just use your Arduino to make the connection. First, wire the TX and RX pins of your module to your Arduino. They need wired in a crossover configuration, so from the module to the Arduino wire RX to pin 10 and TX to pin 11.
 
-[ _Firmata diagram coming soon!_ ]
+[ _Fritzing diagram coming soon!_ ]
 
 Then upload the following Sketch to your Arduino which creates a connection between the Arduino's serial port and the JY-MCU. This is a slightly modified version of the Sketch found here: [http://arduino.cc/en/Reference/SoftwareSerial](http://arduino.cc/en/Reference/SoftwareSerial)
 
@@ -57,7 +57,7 @@ If you're curious about the specific version of firmware on your module, issue a
 
 The command to change the baud rate is `AT+BAUDx` where `x` is a hexadecimal number 1-C representing the desired rate from 1200-1382400bps. To set the baud to 57600, issue `AT+BAUD7`.
 
-More information, including more AT commands which the module will respond to, can at the following links:
+More information, including more AT commands which the module will respond to, can be found at the following links:
 
 [http://byron76.blogspot.com/2011/09/one-board-several-firmwares.html](http://byron76.blogspot.com/2011/09/one-board-several-firmwares.html)
 
@@ -69,7 +69,7 @@ More information, including more AT commands which the module will respond to, c
 
 Once the baud rate is properly set, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
 
-[ _Another slick Firmata diagram will go here!_ ]
+[ _Another slick Fritzing diagram will go here!_ ]
 
 Pair to the module from your host device, [tell Johnny-Five which port to use](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md) and...
 
