@@ -4,9 +4,9 @@ The JY-MCU Bluetooth Serial Port module defaults to 9600 or 38400 baud depending
 
 If you've got an FTDI cable/interface you can connect directly to the module using that. BAM! Step 1 done!
 
-If not, just use your Arduino to make the connection. First, wire the TX and RX pins of your module to your Arduino. They need wired in a crossover configuration, so from the module to the Arduino wire RX to pin 10 and TX to pin 11.
+If not, just use your Arduino to make the connection. First, wire the TX and RX pins of your module to your Arduino. They need wired in a crossover configuration, so from the module to the Arduino wire TX to pin 10 and RX to pin 11.
 
-[ _Fritzing diagram coming soon!_ ]
+![Fritzing Diagram](http://i.imgur.com/xLAbKup.png)
 
 Then upload the following Sketch to your Arduino which creates a connection between the Arduino's serial port and the JY-MCU. This is a slightly modified version of the Sketch found here: [http://arduino.cc/en/Reference/SoftwareSerial](http://arduino.cc/en/Reference/SoftwareSerial)
 
@@ -69,7 +69,7 @@ More information, including more AT commands which the module will respond to, c
 
 Once the baud rate is properly set, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
 
-[ _Another slick Fritzing diagram will go here!_ ]
+![Fritzing Diagram](http://i.imgur.com/fjMCXVx.png)
 
 Pair to the module from your host device, [tell Johnny-Five which port to use](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md) and...
 
