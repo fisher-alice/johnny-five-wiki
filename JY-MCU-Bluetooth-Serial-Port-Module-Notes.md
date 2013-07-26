@@ -76,3 +76,7 @@ Pair to the module from your host device, [tell Johnny-Five which port to use](h
 ## Step 4: Profit!
 
 Your NodeBot has been _unleashed!_ Go forth and build!
+
+
+---
+_*Thanks to Patrik Thalin for the JY-MCU Fritzing part which is [available here](http://www.thalin.se/2013/01/fritzing-veroboard-and-breadboard.html)._
