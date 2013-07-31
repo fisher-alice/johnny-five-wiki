@@ -49,8 +49,6 @@ var digital = new five.Led("O0");
 
 ### Shape
 
-Led objects will have the following shape:
-
 ```js
 { 
   board: ...A reference to the board object the Led is attached to
