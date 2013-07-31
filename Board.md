@@ -270,7 +270,7 @@ board.on("ready", function() {
 });
 ```
 
-### Examples
+## Examples
 
 - [Board](https://github.com/rwldrn/johnny-five/blob/master/docs/board.md)
 - [Board With Port](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md)
