@@ -36,8 +36,35 @@ var analog = new five.Pin("A0");
   </tbody>
 </table>
 
+### Shape
 
-### Usage
+```js
+{ 
+  board: ...A reference to the board object the Led is attached to
+  id: ...A user definable id value. Defaults to null
+  pin: ...The pin address that the Led is attached to
+  addr: ...The pin address that the Led is attached to
+  type: ...The type of pin this is, either "digital" or "analog"
+}
+```
+
+### Usage Example
+
+```js
+var five = require("johnny-five"),
+    board = new five.Board();
+
+board.on("ready", function() {
+  var strobe, state;
+
+  strobe = new five.Pin(13);
+
+  this.loop(500, function() {
+    strobe.write( state ^= 0x01 );
+  });
+});
+```
+
 
 ## API
 
