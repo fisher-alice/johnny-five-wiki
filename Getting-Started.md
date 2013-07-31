@@ -6,7 +6,7 @@
 3. Node.js (>=0.10.0) installed
 4. node-gyp installed
 
-## Hello World.
+## Hello World
 
 Generally Arduino boards (Uno, Mega, Leonardo, Fio, Mini) come pre-flashed with the compiled StandardFirmata firmware. In most cases, getting started is as simple as...
 
@@ -49,6 +49,5 @@ node strobe.js
     - Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmata
     - Click the "Upload" button.
     - If the upload was successful, the board is now prepared and you can close the Arduino IDE.
-
 
 
