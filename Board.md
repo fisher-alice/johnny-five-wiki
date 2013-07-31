@@ -8,7 +8,7 @@ Related:
 
 ### Parameters
 
-**options**
+- **options** Optional object of themselves optional parameters.
 <table>
   <thead>
     <tr>
@@ -25,6 +25,19 @@ Related:
     </tr>
   </tbody>
 </table>
+
+### Shape
+```js
+{ 
+  ready: ...A boolean value that indicates the readiness of the physical board
+  firmata: ...A reference to the protocol layer
+  id: ...A user definable id value. Defaults to a generated uid
+  pins: ...An array of all pins produced by the capabilities query
+  type: ...A string identifier of the board type, one of: "UNO", "MEGA", "LEONARDO" or "UNKOWN"
+  repl: ...A reference to the repl session object
+  port: A string illustrating the device path or COM address
+}
+```
 
 ### Initializing a Board
 
@@ -256,4 +269,3 @@ board.on("ready", function() {
   });
 });
 ```
-
