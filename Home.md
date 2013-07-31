@@ -7,4 +7,5 @@
 
 
 # How-To Guides
+- [Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)
 - [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
