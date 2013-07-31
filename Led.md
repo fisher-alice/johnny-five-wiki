@@ -176,7 +176,7 @@ led.stop();
 
 Led objects are output only and therefore do not emit any events.
 
-### Examples
+## Examples
 - [Laser](https://github.com/rwldrn/johnny-five/blob/master/docs/laser.md)
 - [Led Matrix](https://github.com/rwldrn/johnny-five/blob/master/docs/led-matrix.md)
 - [Led Fade](https://github.com/rwldrn/johnny-five/blob/master/docs/led-fade.md)
