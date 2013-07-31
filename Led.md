@@ -47,6 +47,20 @@ var digital = new five.Led("O0");
 </table>
 
 
+### Shape
+
+Led objects will have the following shape:
+
+```js
+{ 
+  board: ...A reference to the board object the Led is attached to
+  id: ...A user definable id value. Defaults to null
+  pin: ...The pin address that the Led is attached to
+  value: ...The current value of the Led. READONLY
+  interval: ...An interval reference, if an interval exists
+}
+```
+
 
 
 
@@ -163,5 +177,4 @@ led.stop();
 ## Events
 
 Led objects are output only and therefore do not emit any events.
-
 
