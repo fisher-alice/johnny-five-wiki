@@ -176,3 +176,13 @@ led.stop();
 
 Led objects are output only and therefore do not emit any events.
 
+### Examples
+- [Laser](https://github.com/rwldrn/johnny-five/blob/master/docs/laser.md)
+- [Led Matrix](https://github.com/rwldrn/johnny-five/blob/master/docs/led-matrix.md)
+- [Led Fade](https://github.com/rwldrn/johnny-five/blob/master/docs/led-fade.md)
+- [Led On Off](https://github.com/rwldrn/johnny-five/blob/master/docs/led-on-off.md)
+- [Led Pulse](https://github.com/rwldrn/johnny-five/blob/master/docs/led-pulse.md)
+- [Led Rgb](https://github.com/rwldrn/johnny-five/blob/master/docs/led-rgb.md)
+- [Led Rainbow](https://github.com/rwldrn/johnny-five/blob/master/docs/led-rainbow.md)
+- [Led Strobe](https://github.com/rwldrn/johnny-five/blob/master/docs/led-strobe.md)
+- [Seven Segment](https://github.com/rwldrn/johnny-five/blob/master/docs/seven-segment.md)
