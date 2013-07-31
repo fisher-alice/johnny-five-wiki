@@ -15,7 +15,6 @@ For Leds that have on/off states, as well as inverval or color related state (Pu
 //
 var pwm = new five.Led(11);
 ```
-
 Tinkerkit: 
 ```js
 // Attached to "Output 0"
