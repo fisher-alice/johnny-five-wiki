@@ -5,15 +5,14 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 
 ### Parameters
 
-**pin** A Number or String address for the pin. If digital, use the number, if analog use the "A" prefixed string.
-
+- **pin** A Number or String address for the pin. If digital, use the number, if analog use the "A" prefixed string.
 ```js
 var digital = new five.Pin(13);
 
 var analog = new five.Pin("A0");
 ```
 
-**options** An object of property parameters.
+- **options** An object of property parameters.
 <table>
   <thead>
     <tr>
