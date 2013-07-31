@@ -12,7 +12,7 @@ var digital = new five.Led(13);
 ```
 For Leds that have on/off states, as well as inverval or color related state (Pulse, Brightness, RGB, etc), use a PWM pin (demarcated by either a "~" or "#" next to the pin number on the actual board).
 ```js
-//
+// Look for "~", ie. ~11
 var pwm = new five.Led(11);
 ```
 Tinkerkit: 
