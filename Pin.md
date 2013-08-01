@@ -185,3 +185,7 @@ five.Pin.read(13, function(value) {
   console.log(value);
 });
 ```
+
+## Examples
+- [Pin](https://github.com/rwldrn/johnny-five/blob/master/docs/pin.md)
+- [Pin Circuit Event](https://github.com/rwldrn/johnny-five/blob/master/docs/pin-circuit-event.md)
