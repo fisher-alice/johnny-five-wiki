@@ -142,8 +142,19 @@ sensor.within([ 100, 200 ], function() {
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
 
-
-
-
+## Examples
+- [Accelerometer](https://github.com/rwldrn/johnny-five/blob/master/docs/accelerometer.md)
+- [Accelerometer Pan Tilt](https://github.com/rwldrn/johnny-five/blob/master/docs/accelerometer-pan-tilt.md)
+- [Photoresistor](https://github.com/rwldrn/johnny-five/blob/master/docs/photoresistor.md)
+- [Potentiometer](https://github.com/rwldrn/johnny-five/blob/master/docs/potentiometer.md)
+- [Sensor](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor.md)
+- [Sensor Fsr Servo](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-fsr-servo.md)
+- [Sensor Fsr](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-fsr.md)
+- [Sensor Ir Led Receiver](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-ir-led-receiver.md)
+- [Sensor Slider](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-slider.md)
+- [Slider Log](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-log.md)
+- [Slider Pan](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-pan.md)
+- [Slider Servo Control](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-servo-control.md)
+- [Sensor Temperature](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-temperature.md)
 
 
