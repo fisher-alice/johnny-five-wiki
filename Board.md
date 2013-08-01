@@ -4,7 +4,7 @@ The `Board` class constructs objects that represent the physical board itself.
 
 Related: 
 
-- [Multi-Board Supprort](https://github.com/rwldrn/johnny-five/wiki/Boards)
+- [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
 ### Parameters
 
