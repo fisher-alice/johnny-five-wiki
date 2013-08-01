@@ -1,4 +1,4 @@
-- **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get johnny-five alive on your machine.
+- **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine.
 
 # Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
