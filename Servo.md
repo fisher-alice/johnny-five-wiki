@@ -217,3 +217,12 @@ servo.ccw(1);
 
 It's recommended to use a rotary potentiometer as the mechanism for determining servo movement.
 
+## Examples
+- [Servo](https://github.com/rwldrn/johnny-five/blob/master/docs/servo.md)
+- [Servo Options](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-options.md)
+- [Servo Array](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
+- [Servo Digital](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-digital.md)
+- [Servo Dual](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-dual.md)
+- [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
+- [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
+- [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
