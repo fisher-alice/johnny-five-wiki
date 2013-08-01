@@ -40,10 +40,10 @@ var analog = new five.Pin("A0");
 
 ```js
 { 
-  board: ...A reference to the board object the Led is attached to
+  board: ...A reference to the board object the pin is on
   id: ...A user definable id value. Defaults to null
-  pin: ...The pin address that the Led is attached to
-  addr: ...The pin address that the Led is attached to
+  pin: ...The pin address of the pin
+  addr: ...The pin address of the pin
   type: ...The type of pin this is, either "digital" or "analog"
 }
 ```
