@@ -53,9 +53,9 @@ var digital = new five.Servo("O0");
 
 ```
 { 
-  board: A reference to the board object the Led is attached to
+  board: A reference to the board object the Servo is attached to
   id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Led is attached to
+  pin: The pin address that the Servo is attached to
   mode: The Pin.MODE, Defaults to SERVO
   range: The range of motion in degrees. Defaults to [0, 180]
   history: An array containing records of each movement 
