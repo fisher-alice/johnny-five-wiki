@@ -276,8 +276,3 @@ board.on("ready", function() {
 - [Board With Port](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md)
 - [Board Multi](https://github.com/rwldrn/johnny-five/blob/master/docs/board-multi.md)
 - [Repl](https://github.com/rwldrn/johnny-five/blob/master/docs/repl.md)
-- [Shiftregister](https://github.com/rwldrn/johnny-five/blob/master/docs/shiftregister.md)
-- [Pin](https://github.com/rwldrn/johnny-five/blob/master/docs/pin.md)
-- [Pin Circuit Event](https://github.com/rwldrn/johnny-five/blob/master/docs/pin-circuit-event.md)
-- [Whisker](https://github.com/rwldrn/johnny-five/blob/master/docs/whisker.md)
-
