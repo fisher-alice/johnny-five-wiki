@@ -1,3 +1,5 @@
+- **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get johnny-five alive on your machine.
+
 # Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
@@ -5,7 +7,5 @@
 - [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwldrn/johnny-five/wiki/Servo)
 
-
 # How-To Guides
-- [Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)
 - [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
