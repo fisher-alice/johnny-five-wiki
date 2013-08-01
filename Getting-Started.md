@@ -1,10 +1,23 @@
 ## Prerequisites
 
-1. Developer tools for your platform (Mac users should install xcode)
-2. An Arduino or compatible board (Uno, Mega, Leonardo, Fio, Mini)
+- An Arduino or compatible board (Uno, Mega, Leonardo, Fio, Mini)
     - [Sparkfun Inventor's Kit](https://www.sparkfun.com/products/11576) (Recommended for getting started)
-3. Node.js (>=0.10.0) installed
-4. node-gyp installed
+
+### OSX
+
+- Install Node.js 0.10.x
+- Install Xcode
+- Install node-gyp `npm install -g node-gyp`
+
+### Windows 
+
+Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomment-7696662
+
+- Install Node.js 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
+- Visual Studio Express 2010 32 bit (make sure you have the C++ dependencies checked)
+- [Python 2.7.3](http://www.python.org/getit/releases/2.7.3/)
+- Open up cmd (Start > Run.. > cmd) and enter `set PATH=%PATH%;C:\Python27`
+- Install node-gyp `npm install -g node-gyp`
 
 ## Hello World
 
@@ -49,5 +62,4 @@ node strobe.js
     - Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmata
     - Click the "Upload" button.
     - If the upload was successful, the board is now prepared and you can close the Arduino IDE.
-
 
