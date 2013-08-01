@@ -66,9 +66,9 @@ var digital = new five.Sensor("O0");
 
 ```
 { 
-  board: A reference to the board object the Led is attached to
+  board: A reference to the board object the Sensor is attached to
   id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Led is attached to
+  pin: The pin address that the Sensor is attached to
   mode: The Pin.MODE, Defaults to OUTPUT
   freq: The frequency in ms of data reads. Defaults to 25ms
   range: The range of voltage value. Defaults to 0-1023
