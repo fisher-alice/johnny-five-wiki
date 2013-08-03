@@ -45,7 +45,7 @@ var digital = new five.Sensor("O0");
     </tr>
     <tr>
       <td>freq</td>
-      <td>The frequency in ms of data reads. Defaults to 25ms</td>
+      <td>The frequency in ms of data events. Defaults to 25ms</td>
       <td>no</td>
     </tr>
     <tr>
