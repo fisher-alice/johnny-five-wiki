@@ -16,7 +16,6 @@ The `IR` class constructs objects that represent a single (I2C or analog) Infrar
 ```js
 var motion = new five.IR.Motion(7);
 ```
-
 ```js
 // I2C proximity
 var proximity = new five.IR.Proximity("GP2Y0D805Z0F");
