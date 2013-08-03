@@ -2,7 +2,7 @@
 
 # Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
-- [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/IR-(Infrared))
+- [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
 - [Pin](https://github.com/rwldrn/johnny-five/wiki/Pin)
 - [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor)
