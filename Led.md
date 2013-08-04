@@ -106,7 +106,7 @@ var led = new five.Led(13);
 led.toggle();
 ```
 
-- **strobe(ms)** Strobe/Blink the Led on/off in phases over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". Defaults to 500ms.
+- **strobe(ms)** Strobe/Blink the Led on/off in phases over `ms`. This is an **interval** operation and can be stopped by calling `led.stop()`, however that will not necessarily turn it "off". Defaults to 500ms.
 ```js
 var led = new five.Led(13);
 
