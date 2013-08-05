@@ -54,12 +54,11 @@ var analog = new five.Pin({
 
 ```js
 { 
-  board: ...A reference to the board object the pin is on
-  id: ...A user definable id value. Defaults to null
-  pin: ...The pin address of the pin
-  addr: ...The pin address of the pin
-  type: ...The type of pin this is, either "digital" or "analog"
-  value: ...The most recently reported value for this pin.
+  id: A user definable id value. Defaults to null
+  pin: The pin address of the pin
+  addr: The pin address of the pin
+  type: The type of pin this is, either "digital" or "analog"
+  value: The most recently reported value for this pin.
 }
 ```
 
