@@ -54,9 +54,12 @@ var sensor = new five.Sensor("O0");
   </tbody>
 </table>
 ```js
-// Create a temperature sensor on pin "A0" that...
+// Create a temperature sensor...
+// 
+//   - attached to pin "A0"
 //   - emits data events every 250ms
 //   - emits change events when the temperature has changed 5 degrees.
+//
 var temp = new five.Sensor({
   pin: "A0", 
   freq: 250, 
