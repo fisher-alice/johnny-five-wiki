@@ -1,8 +1,6 @@
 The `Board` class constructs objects that represent the physical board itself. All device objects depend on an initialized and ready board object.
 
-Related: 
-
-- [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
+See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
 ### Parameters
 
