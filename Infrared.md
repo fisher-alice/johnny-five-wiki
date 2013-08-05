@@ -68,10 +68,8 @@ var motion = new five.IR.Proximity({
 
 ```
 { 
-  board: A reference to the board object the Sensor is attached to
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Sensor is attached to
-  mode: The Pin.MODE, Defaults to INPUT
   freq: The frequency in ms of data reads. Defaults to 25ms
   value: Digital state reading (0 or 1). READONLY
   isCalibrated: Boolean flag indicating calibration state of motion sensor 
