@@ -1,5 +1,3 @@
-# Pin
-
 The `Pin` class constructs objects that represent any one pin on the physical board.
 
 
