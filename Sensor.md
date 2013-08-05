@@ -19,10 +19,10 @@ The `Sensor` class constructs objects that represent a single analog Sensor atta
 ```js
 var sensor = new five.Sensor("A0");
 ```
-Tinkerkit: 
+TinkerKit: 
 ```js
-// Attached to "Output 0"
-var sensor = new five.Sensor("O0");
+// Attached to TinkerKit's "Input 0"
+var sensor = new five.Sensor("I0");
 ```
 
 
@@ -31,6 +31,8 @@ var sensor = new five.Sensor("O0");
   <thead>
     <tr>
       <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
       <th>Description</th>
       <th>Required</th>
     </tr>
@@ -38,11 +40,15 @@ var sensor = new five.Sensor("O0");
   <tbody>
     <tr>
       <td>pin</td>
-      <td>The String address of the pin the sensor is attached to, ie. "A0" or "O1"</td>
+      <td>Number, String</td>
+      <td>"A0", "I1", 5 (Any pin on board)</td>
+      <td>The Number or String address of the pin the sensor is attached to, ie. "A0" or "I1"</td>
       <td>yes</td>
     </tr>
     <tr>
       <td>freq</td>
+      <td>Number</td>
+      <td>Milliseconds</td>
       <td>The frequency in ms of data events. Defaults to 25ms</td>
       <td>no</td>
     </tr>
