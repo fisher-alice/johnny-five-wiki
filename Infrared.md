@@ -1,5 +1,3 @@
-# IR
-
 The `IR` class constructs objects that represent a single (I2C or analog) Infrared sensor attached to the physical board. This class can produce several IR relevant device instances, including:
 
 - Motion
