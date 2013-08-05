@@ -19,17 +19,17 @@ Related:
   </thead>
   <tbody>
     <tr>
-      <td>port</td>
-      <td>String</td>
-      <td>"/dev/ttyAM0", "COM1"</td>
-      <td>Path or name of device port/COM</td>
-      <td>no</td>
-    </tr>
-    <tr>
       <td>id</td>
       <td>Number, String</td>
       <td>Any</td>
       <td>User definable identification</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>port</td>
+      <td>String</td>
+      <td>"/dev/ttyAM0", "COM1"</td>
+      <td>Path or name of device port/COM</td>
       <td>no</td>
     </tr>
   </tbody>
