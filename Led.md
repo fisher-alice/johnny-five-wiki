@@ -1,5 +1,3 @@
-# Led
-
 The `Led` class constructs objects that represent a single Led attached to the physical board.
 
 
