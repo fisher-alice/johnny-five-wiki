@@ -25,6 +25,8 @@ var digital = new five.Led("O0");
   <thead>
     <tr>
       <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
       <th>Description</th>
       <th>Required</th>
     </tr>
@@ -32,13 +34,17 @@ var digital = new five.Led("O0");
   <tbody>
     <tr>
       <td>pin</td>
-      <td>The Number address of the pin the led is attached to.</td>
+      <td>Number</td>
+      <td>Any Digital Pin</td>
+      <td>The Number address of the pin the led is attached to</td>
       <td>yes</td>
     </tr>
     <tr>
       <td>type</td>
+      <td>String</td>
+      <td>"output", "pwm"</td>
       <td>
-       "output" or "pwm". For most cases, this can be omitted; the type will be inferred based on the pin address number.
+        For most cases, this can be omitted; the type will be inferred based on the pin address number.
       </td>
       <td>no</td>
     </tr>
