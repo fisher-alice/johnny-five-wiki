@@ -9,6 +9,8 @@ The `Boards` class constructs a collection object containing multiple board obje
   <thead>
     <tr>
       <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
       <th>Description</th>
       <th>Required</th>
     </tr>
@@ -16,19 +18,22 @@ The `Boards` class constructs a collection object containing multiple board obje
   <tbody>
     <tr>
       <td>id</td>
-      <td>A string identifier for use in your program</td>
+      <td>Number, String</td>
+      <td>Any</td>
+      <td>User definable identification</td>
       <td>no</td>
     </tr>
     <tr>
       <td>port</td>
-      <td>A string path or name of device port/COM</td>
+      <td>String</td>
+      <td>"/dev/ttyAM0", "COM1"</td>
+      <td>Path or name of device port/COM</td>
       <td>no</td>
     </tr>
-
   </tbody>
 </table>
 
-### Initializing a Board
+### Initializing Multiple Boards
 
 The easiest way to initialize multiple board objects is to call the `Boards` constructor function with `new`. Don't worry about knowing your device's path or COM port, Johnny-Five will figure out which USBs are in use by compatible boards automatically.
 
