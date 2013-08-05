@@ -2,9 +2,7 @@ The `Boards` class constructs a collection object containing multiple board obje
 
 ### Parameters
 
-**ports** A list of port objects or port address strings
-
-**port**
+- **ports** A list of port objects or port address strings. Port objects may have the following properties:
 <table>
   <thead>
     <tr>
