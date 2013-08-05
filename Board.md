@@ -1,5 +1,15 @@
 The `Board` class constructs objects that represent the physical board itself. All device objects depend on an initialized and ready board object.
 
+Johnny-Five has been tested on, but is not limited to, the following boards:
+
+- [Arduino UNO](http://arduino.cc/en/Main/arduinoBoardUno)
+- [Arduino Leonardo](http://arduino.cc/en/Main/arduinoBoardLeonardo)
+- [Arduino MEGA](http://arduino.cc/en/Main/arduinoBoardMega)
+- [Arduino FIO](http://arduino.cc/en/Main/ArduinoBoardFio)
+- [Arduino Pro](http://arduino.cc/en/Main/ArduinoBoardPro)
+- [Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)
+- [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
+
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
 ### Parameters
