@@ -1,5 +1,3 @@
-# Board
-
 The `Board` class constructs objects that represent the physical board itself.
 
 Related: 
