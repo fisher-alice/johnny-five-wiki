@@ -28,8 +28,8 @@ var servo = new five.Servo("O0");
     <tr>
       <td>pin</td>
       <td>Number, String</td>
-      <td>11, "01" (Any PWM)</td>
-      <td>The address of the pin the servo is attached to, ie. 11 or "O1"</td>
+      <td>Any PWM Pin</td>
+      <td>The address of the pin the servo is attached to, ie. 11 or "O1" (if using TinkerKit)</td>
       <td>yes</td>
     </tr>
     <tr>
