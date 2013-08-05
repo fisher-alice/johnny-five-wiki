@@ -1,5 +1,7 @@
 The `Boards` class constructs a collection object containing multiple board objects. If no arguments are passed, `Board` objects will be created for every board detected in the order that the system enumerates them. 
 
+See also: [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
+
 ### Parameters
 
 - **ports** A list of port objects or port address strings. Port objects may have the following properties:
