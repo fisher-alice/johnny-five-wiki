@@ -1,4 +1,4 @@
-The `Board` class constructs objects that represent the physical board itself.
+The `Board` class constructs objects that represent the physical board itself. All device objects depend on an initialized and ready board object.
 
 Related: 
 
