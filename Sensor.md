@@ -11,18 +11,18 @@ The `Sensor` class constructs objects that represent a single analog Sensor atta
 - Photoresistor 
 - Light Dependent Resistor
 
-...And more.
+...And more, see [examples](https://github.com/rwldrn/johnny-five/wiki/Sensor#examples)
 
 ### Parameters
 
 - **pin** A Number or String address for the Sensor pin (analog).
 ```js
-var digital = new five.Sensor("A0");
+var sensor = new five.Sensor("A0");
 ```
 Tinkerkit: 
 ```js
 // Attached to "Output 0"
-var digital = new five.Sensor("O0");
+var sensor = new five.Sensor("O0");
 ```
 
 
@@ -47,18 +47,22 @@ var digital = new five.Sensor("O0");
       <td>no</td>
     </tr>
     <tr>
-      <td>range</td>
-      <td>The range of voltage value. Defaults to 0-1023</td>
-      <td>no</td>
-    </tr>
-    <tr>
       <td>threshold</td>
       <td>The change threshold (+/- value). Defaults to 1</td>
       <td>no</td>
     </tr>
   </tbody>
 </table>
-
+```js
+// Create a temperature sensor on pin "A0" that...
+//   - emits data events every 250ms
+//   - emits change events when the temperature has changed 5 degrees.
+var temp = new five.Sensor({
+  pin: "A0", 
+  freq: 250, 
+  threshold: 5
+});
+```
 
 ### Shape
 
@@ -154,5 +158,4 @@ sensor.within([ 100, 200 ], function() {
 - [Slider Pan](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-pan.md)
 - [Slider Servo Control](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-servo-control.md)
 - [Sensor Temperature](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-temperature.md)
-
 
