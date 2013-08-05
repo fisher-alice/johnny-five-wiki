@@ -8,7 +8,7 @@ For Leds that only have on/off states, use a digital pin:
 ```js
 var digital = new five.Led(13);
 ```
-For Leds that have on/off states, as well as inverval or color related state (Pulse, Brightness, RGB, etc), use a PWM pin (demarcated by either a "~" or "#" next to the pin number on the actual board).
+For Leds that have on/off states, as well as inverval or color related state (Pulse, Brightness, RGB, etc), use a PWM pin (usually demarcated by either a "~" or "#" next to the pin number on the actual board).
 ```js
 // Look for "~", ie. ~11
 var pwm = new five.Led(11);
@@ -37,13 +37,20 @@ var digital = new five.Led("O0");
     </tr>
     <tr>
       <td>type</td>
-      <td>OUTPUT or PWM</td>
+      <td>
+        OUTPUT or PWM. For most cases, this can be omitted; the type will be inferred based on the pin address number.
+      </td>
       <td>no</td>
     </tr>
 
   </tbody>
 </table>
-
+```js
+var pwm = new five.Led({
+  pin: 11, 
+  type: "PWM"
+});
+```
 
 ### Shape
 
