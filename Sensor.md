@@ -1,5 +1,3 @@
-# Sensor
-
 The `Sensor` class constructs objects that represent a single analog Sensor attached to the physical board. This class is intentionally generic and will work well with many types of sensors, including:
 
 - Linear Potentiometer (Slider)
