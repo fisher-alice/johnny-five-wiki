@@ -54,6 +54,8 @@ var sensor = new five.Sensor("I0");
     </tr>
     <tr>
       <td>threshold</td>
+      <td>Number</td>
+      <td>Any</td>
       <td>The change threshold (+/- value). Defaults to 1</td>
       <td>no</td>
     </tr>
