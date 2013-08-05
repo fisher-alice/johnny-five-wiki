@@ -1,15 +1,15 @@
-The `Servo` class constructs objects that represent a single Servo attached to the physical board. This class is designed to work well with both Standard and Continous motion servos.
+The `Servo` class constructs objects that represent a single Servo attached to the physical board. This class is designed to work well with both **Standard** and **Continuous** motion servos.
 
 ### Parameters
 
 - **pin** A Number or String address for the Servo pin (PWM).
 ```js
-var digital = new five.Servo(11);
+var servo = new five.Servo(11);
 ```
 Tinkerkit: 
 ```js
 // Attached to "Output 0"
-var digital = new five.Servo("O0");
+var servo = new five.Servo("O0");
 ```
 
 
@@ -18,6 +18,8 @@ var digital = new five.Servo("O0");
   <thead>
     <tr>
       <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
       <th>Description</th>
       <th>Required</th>
     </tr>
@@ -25,36 +27,60 @@ var digital = new five.Servo("O0");
   <tbody>
     <tr>
       <td>pin</td>
-      <td>The String address of the pin the servo is attached to, ie. 11 or "O1"</td>
+      <td>Number, String</td>
+      <td>11, "01" (Any PWM)</td>
+      <td>The address of the pin the servo is attached to, ie. 11 or "O1"</td>
       <td>yes</td>
     </tr>
     <tr>
       <td>range</td>
+      <td>Array</td>
+      <td>[ lower, upper ]</td>
       <td>The range of motion in degrees. Defaults to [0, 180]</td>
       <td>no</td>
     </tr>
     <tr>
       <td>type</td>
-      <td>The type of servo, one of "standard" or "continuous". Defaults to "standard"</td>
+      <td>String</td>
+      <td>"standard", "continuous"</td>
+      <td>The type of servo being created. Defaults to "standard"</td>
       <td>no</td>
     </tr>
     <tr>
-      <td>specs</td>
-      <td>An object of datasheet specs. Not yet defined.</td>
+      <td>startAt</td>
+      <td>Number</td>
+      <td>Any number between 0-180</td>
+      <td>Degrees to initialize the servo at.</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>center</td>
+      <td>Boolean</td>
+      <td>true or false</td>
+      <td>Optionally center the servo on initialization. Defaults to `false`</td>
       <td>no</td>
     </tr>
   </tbody>
 </table>
-
+```js
+// Create a standard servo...
+// 
+//   - attached to pin 11
+//   - limited range of 45-135 degrees
+//
+var temp = new five.Sensor({
+  pin: "A0", 
+  freq: 250, 
+  threshold: 5
+});
+```
 
 ### Shape
 
 ```
 { 
-  board: A reference to the board object the Servo is attached to
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Servo is attached to
-  mode: The Pin.MODE, Defaults to SERVO
   range: The range of motion in degrees. Defaults to [0, 180]
   history: An array containing records of each movement 
   interval: A reference to the current interval, if one exists
