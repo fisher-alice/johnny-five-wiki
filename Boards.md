@@ -37,8 +37,15 @@ The easiest way to initialize multiple board objects is to call the `Boards` con
 
 
 ```js
-// Create 2 board instances with IDs "A" & "B"
-new five.Boards([ "A", "B" ])
+// Create 2 board instances with IDs "A" & "B" (ports will be initialized in device enumeration order)
+new five.Boards([ "A", "B" ]);
+```
+
+Or
+
+```js
+// Create 2 board instances on ports "/dev/cu.usbmodem621" and "/dev/cu.usbmodem411"
+new five.Boards([ "/dev/cu.usbmodem621", "/dev/cu.usbmodem411" ]);
 ```
 
 Or
