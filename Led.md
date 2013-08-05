@@ -38,7 +38,7 @@ var digital = new five.Led("O0");
     <tr>
       <td>type</td>
       <td>
-        OUTPUT or PWM. For most cases, this can be omitted; the type will be inferred based on the pin address number.
+       "output" or "pwm". For most cases, this can be omitted; the type will be inferred based on the pin address number.
       </td>
       <td>no</td>
     </tr>
