@@ -15,6 +15,8 @@ var analog = new five.Pin("A0");
   <thead>
     <tr>
       <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
       <th>Description</th>
       <th>Required</th>
     </tr>
@@ -22,12 +24,16 @@ var analog = new five.Pin("A0");
   <tbody>
     <tr>
       <td>pin</td>
-      <td>The Number or String address of the pin.</td>
+      <td>Number, String</td>
+      <td>Any Pin</td>
+      <td>The Number or String address of the pin</td>
       <td>yes</td>
     </tr>
     <tr>
       <td>type</td>
-      <td>"digital" or "analog". For most cases, this can be omitted; the type will be inferred based on the pin address number.</td>
+      <td>String</td>
+      <td>"digital", "analog"</td>
+      <td>For most cases, this can be omitted; the type will be inferred based on the pin address number.</td>
       <td>no</td>
     </tr>
 
