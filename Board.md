@@ -11,6 +11,8 @@ Related:
   <thead>
     <tr>
       <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
       <th>Description</th>
       <th>Required</th>
     </tr>
@@ -18,7 +20,16 @@ Related:
   <tbody>
     <tr>
       <td>port</td>
+      <td>String</td>
+      <td>"/dev/ttyAM0", "COM1"</td>
       <td>Path or name of device port/COM</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>Number, String</td>
+      <td>Any</td>
+      <td>User definable identification</td>
       <td>no</td>
     </tr>
   </tbody>
