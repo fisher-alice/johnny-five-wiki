@@ -45,7 +45,18 @@ var proximity = new five.IR.Proximity("A0");
     </tr>
   </tbody>
 </table>
-
+```js
+var motion = new five.IR.Motion({
+  pin: 7, 
+  freq: 25
+});
+```
+```js
+var motion = new five.IR.Proximity({
+  pin: "A0", 
+  freq: 25
+});
+```
 
 ### Shape
 
@@ -112,4 +123,3 @@ board.on("ready", function() {
 - **motionend** The "motionend" event is fired when motion has ceased within the observable range of the PIR/IR.Motion/IR.Proximity sensor.
 
 - **calibrated** The "calibrated" event is fired when PIR/IR.Motion sensor is ready to detect movement/motion in observable range. (PIR/IR.Motion ONLY)
-
