@@ -73,14 +73,11 @@ var temp = new five.Sensor({
 { 
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Sensor is attached to
-  mode: The Pin.MODE, Defaults to OUTPUT
-  freq: The frequency in ms of data reads. Defaults to 25ms
-  range: The range of voltage value. Defaults to 0-1023
   threshold: The change threshold (+/- value). Defaults to 1
-  isScaled: A boolean flag that idenifies whether this sensor's value is being scaled,
+
   boolean: Voltage value scaled to a boolean. READONLY
-  raw: The raw voltage reading. READONLY
-  constrained: Voltage reading constrained to 0-255. READONLY
+  raw: Voltage value (0-1023). READONLY
+  constrained: Voltage reading constrained to 8 bit values (0-255). READONLY
   scaled: Voltage reading scaled to user defined range. READONLY
   value: Voltage reading, either raw or scaled. READONLY
 }
@@ -160,4 +157,3 @@ sensor.within([ 100, 200 ], function() {
 - [Slider Pan](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-pan.md)
 - [Slider Servo Control](https://github.com/rwldrn/johnny-five/blob/master/docs/slider-servo-control.md)
 - [Sensor Temperature](https://github.com/rwldrn/johnny-five/blob/master/docs/sensor-temperature.md)
-
