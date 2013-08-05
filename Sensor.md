@@ -71,7 +71,6 @@ var temp = new five.Sensor({
 
 ```
 { 
-  board: A reference to the board object the Sensor is attached to
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Sensor is attached to
   mode: The Pin.MODE, Defaults to OUTPUT
