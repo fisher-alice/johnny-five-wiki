@@ -235,8 +235,6 @@ var servo = new five.Servo({
 servo.ccw(1);
 ```
 
-
-
 ## Events
 
 It's recommended to use a rotary potentiometer as the mechanism for determining servo movement.
@@ -250,3 +248,6 @@ It's recommended to use a rotary potentiometer as the mechanism for determining 
 - [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
 - [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
 - [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
+
+
+## Additional Information
