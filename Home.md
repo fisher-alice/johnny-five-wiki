@@ -5,6 +5,7 @@
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
 - [Pin](https://github.com/rwldrn/johnny-five/wiki/Pin)
+- [Ping](https://github.com/rwldrn/johnny-five/wiki/Ping)
 - [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwldrn/johnny-five/wiki/Servo)
 - [Stepper](https://github.com/rwldrn/johnny-five/wiki/Stepper)
