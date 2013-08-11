@@ -102,7 +102,7 @@ board.on("ready", function() {
 
   var servo = new five.Servo(11);
 
-  // Sweeo from 0-180 and repeat.
+  // Sweep from 0-180 and repeat.
   servo.sweep();
 });
 ```
@@ -199,7 +199,7 @@ var servo = new five.Servo({
 servo.center();
 ```
 
-- **center()** Sweep the servo between min and max or provided range
+- **sweep()** Sweep the servo between min and max or provided range
 ```js
 var servo = new five.Servo(11);
 
