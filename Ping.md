@@ -127,11 +127,13 @@ Now open the Arduino IDE.
 
 If you receive an error about PULSE_IN not being in scope, then copy this:
 
-    #define PULSE_IN                0x74 // send a pulse in command
-
+```c
+#define PULSE_IN                0x74 // send a pulse in command
+```
 And add it below the following line:
 
-    #define REGISTER_NOT_SPECIFIED -1
-
+```c
+#define REGISTER_NOT_SPECIFIED -1
+```
 ## Examples
 * [Ping](https://github.com/rwldrn/johnny-five/blob/master/docs/ping.md)
