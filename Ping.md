@@ -18,7 +18,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
     <tr>
       <td>pin</td>
       <td>Number, String</td>
-      <td>"A0", "I1", 5 (Any pin on board)</td>
+      <td>"A0", "I1", 5 (Any digital pin on board)</td>
       <td>The Number or String address of the pin the sensor is attached to, ie. 7</td>
       <td>yes</td>
     </tr>
