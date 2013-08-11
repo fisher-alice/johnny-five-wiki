@@ -88,6 +88,7 @@ Ping does not have any API functions
 ### Events
 
 - **change** The "change" event is emitted whenever the distance detected by the sensor changes more then the threshold value allows. 
+
 - **read** The "read" event is fired as frequently as the user defined freq will allow in milliseconds. 
 
 ## Setup
