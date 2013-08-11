@@ -63,20 +63,25 @@ var temp = new five.Ping({
   cm: The detected distance in centimetres. READONLY
 }
 ```
-### Usage
+## Usage
 
 ```js
-//Create new Ping and show distance on change
-var ping = new five.Ping(7);
-  ping.on("change", function( err, value ){
+var five = require("johnny-five"),
+    board = new five.Board();
+
+board.on("ready", function() {
+
+  //Create new Ping and show distance on change
+  var ping = new five.Ping(7);
+
+  ping.on("change", function( err, value ) {
 
     console.log('Object is ' + this.cm + ' cm away');
     console.log('Object is ' + this.inches + ' inches away');
-
   });
-});    
-```    
-### API
+});  
+```
+## API
 
 Ping does not have any API functions
 
@@ -85,14 +90,14 @@ Ping does not have any API functions
 - **change** The "change" event is emitted whenever the distance detected by the sensor changes more then the threshold value allows. 
 - **read** The "read" event is fired as frequently as the user defined freq will allow in milliseconds. 
 
-### Setup
+## Setup
 
 Ping requires a specific version of firmata to be loaded onto the Arduino in order to work.
 
 If you have the Arduino IDE open, you should close it before you start.
 
 **OS X:**
-
+```bash
     # Get yourself into this directory...
     cd /Applications/Arduino.app/Contents/Resources/Java/libraries/
 
@@ -110,7 +115,7 @@ If you have the Arduino IDE open, you should close it before you start.
 
     # get the branch with pulseIn
     git checkout -b pulseIn origin/pulseIn
-
+```
 Now open the Arduino IDE.
 
 - File > Examples > Firmata > Standard Firmata
@@ -127,5 +132,5 @@ And add it below the following line:
 
     #define REGISTER_NOT_SPECIFIED -1
 
-### Examples
+## Examples
 * [Ping](https://github.com/rwldrn/johnny-five/blob/master/docs/ping.md)
