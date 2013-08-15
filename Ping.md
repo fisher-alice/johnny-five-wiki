@@ -97,10 +97,19 @@ Ping requires a specific version of firmata to be loaded onto the Arduino in ord
 
 If you have the Arduino IDE open, you should close it before you start.
 
+First get to the following directory with your Terminal or Git command line:
+
 **OS X:**
+`/Applications/Arduino.app/Contents/Resources/Java/libraries/`
+
+**Linux:**
+`/usr/share/arduino/libraries/`
+
+**Windows:**
+`C:\Program Files (x86)\Arduino\libraries\`
+
+Then proceed with the following in your command line:
 ```bash
-    # Get yourself into this directory...
-    cd /Applications/Arduino.app/Contents/Resources/Java/libraries/
 
     # make a backup of the existing Firmata
     cp -r Firmata Firmata_stable
