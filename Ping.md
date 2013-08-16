@@ -18,7 +18,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
     <tr>
       <td>pin</td>
       <td>Number, String</td>
-      <td>"A0", "I1", 5 (Any digital pin on board)</td>
+      <td>9, "I1" (Any digital pin on board)</td>
       <td>The Number or String address of the pin the sensor is attached to, ie. 7</td>
       <td>yes</td>
     </tr>
@@ -45,7 +45,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 //   - attached to pin 7
 //   - emits data events every 250ms
 //
-var temp = new five.Ping({
+var ping = new five.Ping({
   pin: 7, 
   freq: 250
 });
