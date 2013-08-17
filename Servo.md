@@ -251,3 +251,27 @@ It's recommended to use a rotary potentiometer as the mechanism for determining 
 
 
 ## Additional Information
+
+Although servos can run on digital pins, this can sometimes cause issues. For this reason servos are forced to use only PWM under debug mode and will emit an error if used on a digital pin.
+
+**Servo debug option:**
+<table>
+  <thead>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>debug</td>
+      <td>Boolean</td>
+      <td>true or false</td>
+      <td>Set servo to debug mode</td>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
