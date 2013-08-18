@@ -69,3 +69,8 @@ node strobe.js
     - Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmata
     - Click the "Upload" button.
     - If the upload was successful, the board is now prepared and you can close the Arduino IDE.
+
+2. Sometimes Windows systems will fail to compile native dependencies, if you run across this case try:
+```bash
+npm install johnny-five --msvs_version=2012
+```
