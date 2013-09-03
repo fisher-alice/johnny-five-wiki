@@ -124,8 +124,9 @@ five.Board().on("ready", function() {
   
   led.on();
   ```
+
 - **off()** Turn the Led off.
- ```js
+  ```js
   var led = new five.Led.RGB([9, 10, 11]);
   
   led.off();
