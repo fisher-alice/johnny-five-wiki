@@ -85,7 +85,7 @@ var temp = new five.Sensor({
 
   boolean: Voltage value scaled to a boolean. READONLY
   raw: Voltage value (0-1023). READONLY
-  constrained: Voltage reading constrained to 8 bit values (0-255). READONLY
+  analog: Voltage reading constrained to 8 bit values (0-255). READONLY
   scaled: Voltage reading scaled to user defined range. READONLY
   value: Voltage reading, either raw or scaled. READONLY
 }
