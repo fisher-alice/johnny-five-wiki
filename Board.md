@@ -8,6 +8,7 @@ Johnny-Five has been tested on, but is not limited to, the following boards:
 - [Arduino FIO](http://arduino.cc/en/Main/ArduinoBoardFio)
 - [Arduino Pro](http://arduino.cc/en/Main/ArduinoBoardPro)
 - [Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)
+- [Arduino Nano](http://arduino.cc/en/Main/arduinoBoardNano)
 - [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
 
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
