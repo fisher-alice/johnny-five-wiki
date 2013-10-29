@@ -36,14 +36,14 @@ var button = new five.Button("I0");
     <tr>
       <td>invert</td>
       <td>Boolean</td>
-      <td>true|false</td>
+      <td>true or false</td>
       <td>Invert the up and down values</td>
       <td>no</td>
     </tr>
     <tr>
       <td>isPullup</td>
       <td>Boolean</td>
-      <td>true|false</td>
+      <td>true or false</td>
       <td>Initialize as a pullup button</td>
       <td>no</td>
     </tr>
