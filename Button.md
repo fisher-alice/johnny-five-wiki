@@ -11,8 +11,6 @@ TinkerKit:
 ```js
 // Attached to TinkerKit's "Input 0"
 var button = new five.Button("I0");
-
-
 ```
 
 
@@ -31,7 +29,7 @@ var button = new five.Button("I0");
     <tr>
       <td>pin</td>
       <td>Number, String</td>
-      <td>5, "I1"(Any digital pin on board)</td>
+      <td>5, "I1" (Any digital pin on board)</td>
       <td>The Number or String address of the pin the button is attached to, ie. 5 or "I1"</td>
       <td>yes</td>
     </tr>
