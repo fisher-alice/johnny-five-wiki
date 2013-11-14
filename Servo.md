@@ -127,7 +127,7 @@ board.on("ready", function() {
 
 ## API
 
-- **move(degrees 0-180 [, lapse])** Move a servo horn to specified position in degrees, 0-180 (or whatever the current valid range is). Support for a lapse param is reserved.
+- **move(degrees 0-180 [, ms])** Move a servo horn to specified position in degrees, 0-180 (or whatever the current valid range is). If `ms` is specified, the servo will take that amount of time to move to the position. 
 ```js
 var servo = new five.Servo(11);
 
