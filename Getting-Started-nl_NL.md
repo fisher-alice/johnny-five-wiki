@@ -8,7 +8,7 @@
     - [Arduino Pro](http://arduino.cc/en/Main/ArduinoBoardPro)
     - [Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)
     - [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
-- [Sparkfun Inventor's Kit](https://www.sparkfun.com/products/11576) (Word aangeraden wanneer als je begint)
+- [Sparkfun Inventor's Kit](https://www.sparkfun.com/products/11576) (Word aangeraden als je net begint)
 
 ### OSX
 
