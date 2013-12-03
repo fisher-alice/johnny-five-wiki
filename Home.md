@@ -1,8 +1,9 @@
-- **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine. ([es_ES][], [nl_NL][], [pt_BR][])
+- **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine. ([es_ES][], [nl_NL][], [pt_BR][], [fr_FR][])
 
 [es_ES]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-es_ES
 [nl_NL]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-nl_NL
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-pt_BR
+[fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
 
 # Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
