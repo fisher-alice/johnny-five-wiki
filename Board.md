@@ -36,9 +36,9 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
     </tr>
     <tr>
       <td>port</td>
-      <td>String</td>
-      <td>"/dev/ttyAM0", "COM1"</td>
-      <td>Path or name of device port/COM</td>
+      <td>String or object</td>
+      <td>"/dev/ttyAM0", "COM1", new SerialPort()</td>
+      <td>Path or name of device port/COM or SerialPort object</td>
       <td>no</td>
     </tr>
   </tbody>
@@ -78,6 +78,21 @@ or
 ```js
 var five = require("johnny-five"),
     board = new five.Board({ port: "COM1" });
+```
+
+or you can specify a SerialPort object by providing it as a property of the options object parameter:
+
+```js
+var SerialPort = require("serialport").SerialPort;
+var five = require("johnny-five"),
+    board = new five.Board(
+        {
+            port: new SerialPort("COM4", {
+			baudrate: 9600,
+			buffersize: 1
+		})
+        }
+    );
 ```
 
 
