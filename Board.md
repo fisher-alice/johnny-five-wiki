@@ -84,15 +84,13 @@ or you can specify a SerialPort object by providing it as a property of the opti
 
 ```js
 var SerialPort = require("serialport").SerialPort;
-var five = require("johnny-five"),
-    board = new five.Board(
-        {
-            port: new SerialPort("COM4", {
-			baudrate: 9600,
-			buffersize: 1
-		})
-        }
-    );
+var five = require("johnny-five");
+var board = new five.Board({
+  port: new SerialPort("COM4", {
+    baudrate: 9600,
+    buffersize: 1
+  })
+});
 ```
 
 
