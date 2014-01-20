@@ -14,6 +14,7 @@
 - [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwldrn/johnny-five/wiki/Servo)
 - [ShiftRegister](https://github.com/rwaldron/johnny-five/wiki/ShiftRegister)
+- [Sonar](https://github.com/rwldrn/johnny-five/wiki/Sonar)
 - [Stepper](https://github.com/rwldrn/johnny-five/wiki/Stepper)
 
 # How-To Guides
