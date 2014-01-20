@@ -108,4 +108,4 @@ board.on("ready", function() {
 ## Examples
 
 - [Tinkerkit Gyroscope](https://github.com/rwldrn/johnny-five/blob/master/docs/tinkerkit-gyroscope.md)
-
+- [Gyro](https://github.com/rwldrn/johnny-five/blob/master/docs/gyro.md)
