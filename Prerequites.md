@@ -1,11 +1,3 @@
-# Windows
-
-- Latest node.js and npm installed
-- node-gyp
-- Developer tools
-  - VS Express 2012
-
-
 # OSX
 
 - Latest node.js and npm installed
@@ -19,6 +11,14 @@
 - node-gyp
 - Developer tools
   - build-essential
+
+
+# Windows
+
+- Latest node.js and npm installed
+- node-gyp
+- Developer tools
+  - VS Express 2012
 
 
 
