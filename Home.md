@@ -1,4 +1,5 @@
 - **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine. ([es_ES][], [nl_NL][], [pt_BR][], [fr_FR][])
+- **[Prerequites](https://github.com/rwaldron/johnny-five/wiki/Prerequites)** - Prerequites for Linux, OSX, and Windows.
 
 [es_ES]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-es_ES
 [nl_NL]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-nl_NL
