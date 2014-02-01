@@ -13,7 +13,7 @@ Then upload the following Sketch to your Arduino which creates a connection betw
 ```c
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(11, 10); // RX, TX
+SoftwareSerial mySerial(10, 11); // RX, TX
 
 void setup()  
 {
