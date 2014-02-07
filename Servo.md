@@ -135,10 +135,10 @@ var servo = new five.Servo(11);
 servo.move(90);
 
 // Angle change takes 500ms to complete
-servo.to(90, 500);
+servo.move(90, 500);
 
 // Angle change takes 500ms to complete over 10 steps
-servo.to(90, 500, 10);
+servo.move(90, 500, 10);
 ```
 
 - **to(degrees 0-180 [, lapse])** Alias to _move_
