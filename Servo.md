@@ -127,28 +127,19 @@ board.on("ready", function() {
 
 ## API
 
-- **move(degrees 0-180 [, ms [, rate]])** Move a servo horn to specified position in degrees, 0-180 (or whatever the current valid range is). If `ms` is specified, the servo will take that amount of time to move to the position. If `rate` is specifies, the angle change will be split into distance/rate steps for the `ms` option.
-```js
-var servo = new five.Servo(11);
-
-// Set the horn to 90degrees
-servo.move(90);
-
-// Angle change takes 500ms to complete
-servo.move(90, 500);
-
-// Angle change takes 500ms to complete over 10 steps
-servo.move(90, 500, 10);
-```
-
-- **to(degrees 0-180 [, lapse])** Alias to _move_
+- **to(degrees 0-180 [, ms [, rate]])** Move a servo horn to specified position in degrees, 0-180 (or whatever the current valid range is). If `ms` is specified, the servo will take that amount of time to move to the position. If `rate` is specified, the angle change will be split into distance/rate steps for the `ms` option.
 ```js
 var servo = new five.Servo(11);
 
 // Set the horn to 90degrees
 servo.to(90);
-```
 
+// Angle change takes 500ms to complete
+servo.to(90, 500);
+
+// Angle change takes 500ms to complete over 10 steps
+servo.to(90, 500, 10);
+```
 
 - **min()** Set Servo to minimum degrees. Defaults to 0deg, respects explicit range.
 ```js
