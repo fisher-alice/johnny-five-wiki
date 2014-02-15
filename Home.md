@@ -7,7 +7,8 @@
 [fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
 
 # Documentation 
-- [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
+- [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
+[pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
 - [Pin](https://github.com/rwldrn/johnny-five/wiki/Pin)
