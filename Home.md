@@ -8,6 +8,7 @@
 
 # Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
+- [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
 - [Pin](https://github.com/rwldrn/johnny-five/wiki/Pin)
