@@ -68,7 +68,7 @@ var servo = new five.Servo("O0");
 //   - attached to pin 12
 //   - limited range of 45-135 degrees
 //
-var temp = new five.Sensor({
+var temp = new five.Servo({
   pin: 12,
   range: [45, 135]
 });
