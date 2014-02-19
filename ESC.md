@@ -1,5 +1,7 @@
 The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC with values between 0 and 180. Currently, this class assumes the ESC is calibrated.
 
+<img src="https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png">
+
 ### Parameters
 
 - **pin** A Number or String address for the ESC pin (PWM).
