@@ -65,13 +65,12 @@ var servo = new five.Servo("O0");
 ```js
 // Create a standard servo...
 // 
-//   - attached to pin 11
+//   - attached to pin 12
 //   - limited range of 45-135 degrees
 //
 var temp = new five.Sensor({
-  pin: "A0", 
-  freq: 250, 
-  threshold: 5
+  pin: 12,
+  range: [45, 135]
 });
 ```
 
@@ -86,6 +85,7 @@ var temp = new five.Sensor({
   interval: A reference to the current interval, if one exists
   isMoving: A boolean flag, true when moving, false when still
   last: The last movement record. READONLY
+  position: The last/current position. READONLY
 }
 ```
 
