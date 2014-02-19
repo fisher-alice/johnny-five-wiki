@@ -51,7 +51,7 @@ var esc = new five.ESC("O0");
     <tr>
       <td>startAt</td>
       <td>Number</td>
-      <td>Any number between 0-180</td>
+      <td>Any fractional number between 0...1</td>
       <td>Initial speed</td>
       <td>no</td>
     </tr>
