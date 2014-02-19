@@ -4,7 +4,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 - **pin** A Number or String address for the Servo pin (PWM).
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 ```
 Tinkerkit: 
 ```js
@@ -29,7 +29,7 @@ var servo = new five.Servo("O0");
       <td>pin</td>
       <td>Number, String</td>
       <td>Any PWM Pin</td>
-      <td>The address of the pin the servo is attached to, ie. 11 or "O1" (if using TinkerKit)</td>
+      <td>The address of the pin the servo is attached to, ie. 12 or "O1" (if using TinkerKit)</td>
       <td>yes</td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ var five = require("johnny-five"),
 
 board.on("ready", function() {
 
-  var servo = new five.Servo(11);
+  var servo = new five.Servo(12);
 
   // Sweep from 0-180 and repeat.
   servo.sweep();
@@ -115,7 +115,7 @@ var five = require("johnny-five"),
 board.on("ready", function() {
 
   var servo = new five.Servo({
-    pin: 11, 
+    pin: 12, 
     type: "continuous"
   });
 
@@ -129,7 +129,7 @@ board.on("ready", function() {
 
 - **to(degrees 0-180 [, ms [, rate]])** Move a servo horn to specified position in degrees, 0-180 (or whatever the current valid range is). If `ms` is specified, the servo will take that amount of time to move to the position. If `rate` is specified, the angle change will be split into distance/rate steps for the `ms` option. If the specified angle is the same as the current angle, no commands are sent.
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 
 // Set the horn to 90degrees
 servo.to(90);
@@ -143,7 +143,7 @@ servo.to(90, 500, 10);
 
 - **min()** Set Servo to minimum degrees. Defaults to 0deg, respects explicit range.
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 
 // Set horn to 0degrees
 servo.min();
@@ -151,7 +151,7 @@ servo.min();
 Or 
 ```js
 var servo = new five.Servo({
-  pin: 11, 
+  pin: 12, 
   range: [ 45, 135 ]
 });
 
@@ -161,7 +161,7 @@ servo.min();
 
 - **max()** Set Servo to maximum degrees. Defaults to 180deg, respects explicit range.
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 
 // Set horn to 135degrees
 servo.max();
@@ -169,7 +169,7 @@ servo.max();
 Or 
 ```js
 var servo = new five.Servo({
-  pin: 11, 
+  pin: 12, 
   range: [ 45, 135 ]
 });
 
@@ -180,7 +180,7 @@ servo.max();
 
 - **center()** Set Servo to center point. Defaults to 90deg, respects explicit range.
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 
 // Set horn to 90degrees
 servo.center();
@@ -188,7 +188,7 @@ servo.center();
 Or 
 ```js
 var servo = new five.Servo({
-  pin: 11, 
+  pin: 12, 
   range: [ 40, 80 ]
 });
 
@@ -198,7 +198,7 @@ servo.center();
 
 - **sweep()** Sweep the servo between min and max or provided range
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 
 // Repeated full range movement
 servo.sweep();
@@ -206,7 +206,7 @@ servo.sweep();
 
 - **stop()** Stop a moving servo. 
 ```js
-var servo = new five.Servo(11);
+var servo = new five.Servo(12);
 
 servo.stop();
 ```
@@ -215,7 +215,7 @@ servo.stop();
 - **cw(speed)** Move a **continuous** servo clockwise at speed, 0-1
 ```js
 var servo = new five.Servo({
-  pin: 11, 
+  pin: 12, 
   type: "continuous"
 });
 
@@ -225,7 +225,7 @@ servo.cw(1);
 - **ccw(speed)** Move a **continuous** servo counter clockwise at speed, 0-1
 ```js
 var servo = new five.Servo({
-  pin: 11, 
+  pin: 12, 
   type: "continuous"
 });
 
