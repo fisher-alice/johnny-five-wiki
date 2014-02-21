@@ -1,4 +1,4 @@
-The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC with values between 0 and 180. Currently, this class assumes the ESC is calibrated.
+The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC with fractional values between 0 and 1. Currently, this class assumes the ESC is pre-calibrated.
 
 <img src="https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png">
 
@@ -156,3 +156,43 @@ esc.stop();
 ## Examples
 - [Esc Keypress](https://github.com/rwldrn/johnny-five/blob/master/docs/esc-keypress.md)
 - [Esc Dualshock](https://github.com/rwldrn/johnny-five/blob/master/docs/esc-dualshock.md)
+
+
+## Calibrating an ESC
+
+Load the following sketch onto your Arduino, via the Arduino IDE follow the instructions
+
+```c
+#include <Servo.h>
+
+#define MAX_SIGNAL 2000
+#define MIN_SIGNAL 700
+#define MOTOR_PIN 12
+
+Servo motor;
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Program begin...");
+  Serial.println("This program will calibrate the ESC.");
+
+  motor.attach(MOTOR_PIN);
+
+  Serial.println("Now writing maximum output.");
+  Serial.println("Turn on power source, then wait 2 seconds and press any key.");
+  motor.writeMicroseconds(MAX_SIGNAL);
+
+  // Wait for input
+  while (!Serial.available());
+  Serial.read();
+
+  // Send min output
+  Serial.println("Sending minimum output");
+  motor.writeMicroseconds(MIN_SIGNAL);
+
+}
+
+void loop() {  
+
+}
+```
