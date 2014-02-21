@@ -160,7 +160,9 @@ esc.stop();
 
 ## Calibrating an ESC
 
-Load the following sketch onto your Arduino, via the Arduino IDE follow the instructions
+Load the following sketch onto your Arduino, via the Arduino IDE follow the instructions.
+
+This requires that the ESC's power source is **off or disconnected** at the start of the calibration process. You will be prompted to turn on/reconnect the power during the process.
 
 ```c
 #include <Servo.h>
@@ -178,8 +180,8 @@ void setup() {
 
   motor.attach(MOTOR_PIN);
 
-  Serial.println("Now writing maximum output.");
-  Serial.println("Turn on power source, then wait 2 seconds and press any key.");
+  Serial.println("Calibrating Maximum Signal");
+  Serial.println("Turn on power source, then wait 2 seconds and press any key + <enter>");
   motor.writeMicroseconds(MAX_SIGNAL);
 
   // Wait for input
@@ -187,7 +189,7 @@ void setup() {
   Serial.read();
 
   // Send min output
-  Serial.println("Sending minimum output");
+  Serial.println("Calibrating Minimum Signal");
   motor.writeMicroseconds(MIN_SIGNAL);
 
 }
