@@ -11,7 +11,8 @@ The plugin must...
 - Initialize instances that must...
     - asynchronously emit a "connected" event when the connection to a physical device has been made.
     - asynchronously emit a "ready" event when the handshake to the physical device is complete.
-    - include a property named `isReady` whose initial value is `false`. `isReady` must be set to `true` when the 
+    - include a property named `isReady` whose initial value is `false`. `isReady` must be set to `true` in the same or previous execution turn as the the "ready" event is emitted.
+        - The process of establishing a connection and becoming "ready" is irrelevant to this document's purposes.
     - include a readonly property named `MODES` whose value is a frozen object containing the following property/values: `{ INPUT: 0, OUTPUT: 1, ANALOG: 2, PWM: 3, SERVO: 4 }` 
     - include a readonly property named `pins` whose value is an array of pin configuration objects. The indices of the `pins` array must correspond to the pin address integer value, eg. on an Arduino UNO digital pin 0 is at index 0 and analog pin 0 is index 14. See [mock-pins.js](https://github.com/rwaldron/johnny-five/blob/master/test/mock-pins.js) for a complete example.
         - each pin configuration object must contain the following properties and values: 
