@@ -13,14 +13,13 @@ The plugin must...
     - include a readonly property named `MODES` whose value is a frozen object containing the following property/values: `{ INPUT: 0, OUTPUT: 1, ANALOG: 2, PWM: 3, SERVO: 4 }` 
     - include a readonly property named `pins` whose value is an array of pin configuration objects. The indices of the `pins` array must correspond to the pin address integer value, eg. on an Arduino UNO digital pin 0 is at index 0 and analog pin 0 is index 14. 
         - each pin configuration object must contain the following properties and values: 
-            - supportedModes: an array of modes supported by this pin, eg. `[0, 1, 2]` represents INPUT, OUTPUT, ANALOG. 
-            - mode: the current mode this pin is set to.
-            - value: the current value of this pin 
+            - `supportedModes`: an array of modes supported by this pin, eg. `[0, 1, 2]` represents INPUT, OUTPUT, ANALOG. 
+            - `mode`: the current mode this pin is set to.
+            - `value`: the current value of this pin 
                 - INPUT mode: property updated via the read loop
                 - OUTPUT mode: property updated via *Write methods
-            - report: 1 if reporting, 0 if not reporting
-            - analogChannel: corresponding analogPin index (127 if none)
-
+            - `report`: 1 if reporting, 0 if not reporting
+            - `analogChannel`: corresponding analogPin index (127 if none)
     - include a readonly property named `analogPins` whose value is an array of pin indices that correspond to the analog pin indices in the `pins` array. 
 
 
