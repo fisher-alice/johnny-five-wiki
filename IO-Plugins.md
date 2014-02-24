@@ -16,7 +16,10 @@ The plugin must...
     - include a readonly property named `MODES` whose value is a frozen object containing the following property/values: `{ INPUT: 0, OUTPUT: 1, ANALOG: 2, PWM: 3, SERVO: 4 }` 
     - include a readonly property named `pins` whose value is an array of pin configuration objects. The indices of the `pins` array must correspond to the pin address integer value, eg. on an Arduino UNO digital pin 0 is at index 0 and analog pin 0 is index 14. See [mock-pins.js](https://github.com/rwaldron/johnny-five/blob/master/test/mock-pins.js) for a complete example.
         - each pin configuration object must contain the following properties and values: 
-            - `supportedModes`: an array of modes supported by this pin, eg. `[0, 1, 2]` represents INPUT, OUTPUT, ANALOG. 
+            - `supportedModes`: an array of modes supported by this pin, eg. 
+                - `[0, 1, 2]` represents INPUT, OUTPUT, ANALOG. (Analog pin outs)
+                - `[0, 1, 4]` represents INPUT, OUTPUT, SERVO.  (Digital pin outs) 
+                - `[0, 1, 3, 4]` represents INPUT, OUTPUT, PWM, SERVO.  (Digital PWM pin outs)
             - `mode`: the current mode this pin is set to.
             - `value`: the current value of this pin 
                 - INPUT mode: property updated via the read loop
@@ -27,7 +30,22 @@ The plugin must...
 
 ### Minimum API Requirements
 
-**analogWrite**
-**digitalWrite**
-**analogRead**
-**digitalRead**
+**analogWrite(pin, value)**
+- Ensure pin mode is OUTPUT
+- Ensure PWM capability
+- Accept an 8 bit value (0-255) to write
+
+**digitalWrite(pin, value)**
+- Ensure pin mode is OUTPUT
+- Write HIGH/LOW (single bit: 1 or 0)
+
+**analogRead(pin, handler)**
+- Create a `data` event stream, emitting an event approximately once per millisecond per pin.
+- A corresponding "analog-read-${pin}" event is also emitted
+
+**digitalRead(pin, handler)**
+- Create a `data` event stream, emitting an event approximately once per millisecond per pin.
+- A corresponding "digital-read-${pin}" event is also emitted
+
+**servoWrite**
+TODO.
