@@ -33,10 +33,10 @@ The plugin must...
 **pinMode(pin, mode)**
 - Set the mode of a specified pin to one of: 
 ```
-INPUT: 0,
-OUTPUT: 1,
-ANALOG: 2,
-PWM: 3,
+INPUT: 0
+OUTPUT: 1
+ANALOG: 2
+PWM: 3
 SERVO: 4
 ```
 
