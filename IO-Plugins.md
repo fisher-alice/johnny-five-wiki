@@ -30,6 +30,16 @@ The plugin must...
 
 ### Minimum API Requirements
 
+**pinMode(pin, mode)**
+- Set the mode of a specified pin to one of: 
+```
+INPUT: 0,
+OUTPUT: 1,
+ANALOG: 2,
+PWM: 3,
+SERVO: 4
+```
+
 **analogWrite(pin, value)**
 - Ensure pin mode is OUTPUT
 - Ensure PWM capability
