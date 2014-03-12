@@ -39,6 +39,7 @@ ANALOG: 2
 PWM: 3
 SERVO: 4
 ```
+- Pins with "A" prefix that are set to `INPUT` should actually store `ANALOG` (2) on the pin's mode property 
 
 **analogWrite(pin, value)**
 - Ensure pin mode is OUTPUT
