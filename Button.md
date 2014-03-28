@@ -1,125 +1,124 @@
-The `Button` class constructs objects that represent a single digital Button attached to the physical board. 
+A classe `Button` constrói objetos que representam um simples botão digital ligado a placa física.
 
+### Parâmetros
 
-### Parameters
-
-- **pin** A Number or String address for the Button pin (digital).
+- **pin** Um endereço númerico ou String para o pino do botão (digital).
 ```js
 var button = new five.Button(5);
 ```
 TinkerKit: 
 ```js
-// Attached to TinkerKit's "Input 0"
+// Ligado ao TinkerKit's "Input 0"
 var button = new five.Button("I0");
 ```
 
 
-- **options** An object of property parameters.
+- **options** Um objeto com propriedades.
 <table>
   <thead>
     <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
+      <th>Propriedade</th>
+      <th>Tipo</th>
+      <th>Valor(es)</th>
+      <th>Descrição</th>
+      <th>Obrigatório</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>pin</td>
       <td>Number, String</td>
-      <td>5, "I1" (Any digital pin on board)</td>
-      <td>The Number or String address of the pin the button is attached to, ie. 5 or "I1"</td>
-      <td>yes</td>
+      <td>5, "I1" (Qualquer pino digital da placa)</td>
+      <td>O endereço numérico ou String do pino ao qual o botão está ligado, ie. 5 ou "I1"</td>
+      <td>sim</td>
     </tr>
     <tr>
       <td>invert</td>
       <td>Boolean</td>
-      <td>true or false</td>
-      <td>Invert the up and down values</td>
-      <td>no</td>
+      <td>true ou false</td>
+      <td>Inverte os valores máximo e mínimo</td>
+      <td>não</td>
     </tr>
     <tr>
       <td>isPullup</td>
       <td>Boolean</td>
-      <td>true or false</td>
-      <td>Initialize as a pullup button</td>
-      <td>no</td>
+      <td>true ou false</td>
+      <td>Inicializa como um botão pullup</td>
+      <td>não</td>
     </tr>
     <tr>
       <td>holdtime</td>
       <td>Number</td>
-      <td>milliseconds</td>
-      <td>Number of milliseconds the button must be held until emitting a "hold" event. Defaults to 500ms</td>
-      <td>no</td>
+      <td>milisegundos</td>
+      <td>Número de milisegundos que o botão deve ser pressionado até emitir um evento "hold". O valor padrão é 500ms</td>
+      <td>não</td>
     </tr>    
   </tbody>
 </table>
 ```js
-// A basic button
+// Um botão básico
 // 
-//   - attached to pin 5
-//   - emits down/press event
+//   - ligado ao pino 5
+//   - emite um evento down/press
 //
 var button = new five.Button(5);
 
 button.on("press", function() {
-  console.log( "Button has been pressed" );
+  console.log( "O botão foi pressionado" );
 });
 ```
 
-### Shape
+### Formato
 
 ```
 { 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Button is attached to
+  id: Um identificador definido pelo usuário. O padrão é um identificador gerado aleatoriamente
+  pin: O endereço do pino que o botão está ligado
   
-  downValue: 0 or 1, depending on invert or pullup
-  upValue: 0 or 1, depending on invert or pullup
-  holdtime: milliseconds
+  downValue: 0 ou 1, depende de invert ou pullup
+  upValue: 0 ou 1, depende de invert ou pullup
+  holdtime: milisegundos
 }
 ```
 
 
 
-### Usage
+### Uso
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
 
 board.on("ready", function() {
 
-  // Create a new `button` hardware instance.
+  // Cria uma nova instância `button`.
   var button = new five.Button(5);
 
   button.on("hold", function() {
-    console.log( "Button held" );
+    console.log( "Botão segurado" );
   });
 
   button.on("press", function() {
-    console.log( "Button pressed" );
+    console.log( "Botão pressionado" );
   });
 
   button.on("release", function() {
-    console.log( "Button released" );
+    console.log( "Botão liberado" );
   });
 
 });
 ```
 
 
-## Events
+## Eventos
 
-- **hold** The button has been held for `holdtime` milliseconds
+- **hold** O botão foi segurado por `holdtime` milisegundos
 
-- **down**, **press** The button has been pressed.
+- **down**, **press** O botão foi pressionado
 
-- **up**, **release** The button has been released.
+- **up**, **release** O botão foi liberado
 
 
-## Examples
+## Exemplos
 
 - [Button](https://github.com/rwldrn/johnny-five/blob/master/docs/button.md)
 - [Button Bumper](https://github.com/rwldrn/johnny-five/blob/master/docs/button-bumper.md)
