@@ -8,7 +8,7 @@
 
 # Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
-- [Button](https://github.com/rwaldron/johnny-five/wiki/Button)
+- [Button](https://github.com/rwaldron/johnny-five/wiki/Button) ([Button-pt_BR][])
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
@@ -22,6 +22,7 @@
 - [Stepper](https://github.com/rwldrn/johnny-five/wiki/Stepper)
 
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
+[Button-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Button-pt_BR
 
 # How-To Guides
 - [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
