@@ -104,7 +104,7 @@ board.on("ready", function() {
   // Create a new `sensor` hardware instance.
   var sensor = new five.Sensor("A0");
 
-  sensor.scale([ 0, 10 ]).on("read", function() {
+  sensor.scale([ 0, 10 ]).on("data", function() {
     console.log( this.value );
   });
 });
@@ -150,7 +150,7 @@ sensor.within([ 100, 200 ], function() {
 
 - **change** The "change" event is emitted whenever the value of the sensor changes more then the threshold value allows. The "change" event has aliases that can be used to better reason about the program being written: "slide", "touch", "force", "bend".
 
-- **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
+- **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the deprecated "read" event)
 
 ## Examples
 - [Accelerometer](https://github.com/rwldrn/johnny-five/blob/master/docs/accelerometer.md)
