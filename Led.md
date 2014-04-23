@@ -148,6 +148,15 @@ var led = new five.Led(13);
 led.brightness(128);
 ```
 
+- **fade(brightness, ms)** Fade from current brightness to `brightness` over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
+
+```js
+var led = new five.Led(13);
+
+// Fade to half brightness over 2 seconds
+led.fade(128, 2000);
+```
+
 - **fadeIn(ms)** Fade in from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
 ```js
