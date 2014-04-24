@@ -51,12 +51,15 @@ SERVO: 4
 - Write HIGH/LOW (single bit: 1 or 0)
 
 **analogRead(pin, handler)**
-- Create a `data` event stream, emitting an event approximately once per millisecond per pin.
+- Create a `data` event stream, invoking `handler` at an implementation independent frequency, however it is recommended that `handler` is called no less than once every 19 milliseconds.
 - A corresponding "analog-read-${pin}" event is also emitted
 
 **digitalRead(pin, handler)**
-- Create a `data` event stream, emitting an event approximately once per millisecond per pin.
+- Create a `data` event stream,  invoking `handler` at an implementation independent frequency, however it is recommended that `handler` is called no less than once every 19 milliseconds.
 - A corresponding "digital-read-${pin}" event is also emitted
 
-**servoWrite**
-TODO.
+TODO: 
+
+- sendI2CWriteRequest
+- sendI2CReadRequest
+- sendI2CConfig
