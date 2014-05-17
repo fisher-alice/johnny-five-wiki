@@ -243,6 +243,15 @@ stepper.rpm(180).step(2000, function() {
 });
 ```
 
+- **speed()** Get the speed.
+- **speed(value)** Set the speed in `0.01 * rad/s`.
+```js
+// 180 rpm
+stepper.speed(0.18850).step(2000, function() {
+  console.log( "Done stepping!" );
+});
+```
+
 - **direction()** Get the direction.
 - **direction(value)** Set the direction.
 ```js
