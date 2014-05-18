@@ -74,7 +74,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
 - **pins** An Array containing the respective values for the red, green and blue pins.
 ```js
-var digital = new five.Led([9, 10, 11]);
+var digital = new five.Led.RGB([9, 10, 11]);
 ```
 
 
