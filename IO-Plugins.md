@@ -73,6 +73,12 @@ io.normalize("A0"); // 14
 ```
 
 
+### Special Property Definitions
+
+**defaultLed**
+- This is the pin address for the board's default, built-in led.
+
+
 TODO: 
 
 - sendI2CWriteRequest
