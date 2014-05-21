@@ -59,6 +59,15 @@ SERVO: 4
 - A corresponding "digital-read-${pin}" event is also emitted
 
 
+
+TODO: 
+
+- sendI2CWriteRequest
+- sendI2CReadRequest
+- sendI2CConfig
+
+
+
 ### Special Method Definitions
 
 **normalize(pin)**
@@ -78,9 +87,3 @@ io.normalize("A0"); // 14
 **defaultLed**
 - This is the pin address for the board's default, built-in led.
 
-
-TODO: 
-
-- sendI2CWriteRequest
-- sendI2CReadRequest
-- sendI2CConfig
