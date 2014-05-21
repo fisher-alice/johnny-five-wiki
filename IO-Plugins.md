@@ -58,6 +58,13 @@ SERVO: 4
 - Create a `data` event stream,  invoking `handler` at an implementation independent frequency, however it is recommended that `handler` is called no less than once every 19 milliseconds.
 - A corresponding "digital-read-${pin}" event is also emitted
 
+
+### Special Method Definitions
+
+**normalizePin(pin)**
+- Define a special method that Johnny-Five will call when normalizing the pin value for a given class.
+
+
 TODO: 
 
 - sendI2CWriteRequest
