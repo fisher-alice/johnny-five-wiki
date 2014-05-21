@@ -62,7 +62,7 @@ SERVO: 4
 ### Special Method Definitions
 
 **normalize(pin)**
-- Define a special method that Johnny-Five will call when normalizing the pin value for a given class.
+- Define a special method that Johnny-Five will call when normalizing the pin value.
 
 
 TODO: 
