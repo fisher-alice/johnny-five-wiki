@@ -63,6 +63,14 @@ SERVO: 4
 
 **normalize(pin)**
 - Define a special method that Johnny-Five will call when normalizing the pin value.
+```js
+// Examples: 
+var io = new IOPlugin();
+
+// The board might want to map "A*" pins to their integer value, 
+// eg. Arduino allows user code to write "A0" for pin 14:
+io.normalize("A0"); // 14
+```
 
 
 TODO: 
