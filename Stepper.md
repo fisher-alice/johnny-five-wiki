@@ -22,20 +22,9 @@ Stepper motors generally require significantly involved hardware setup (that is,
       <td>pins</td>
       <td>Object *</td>
       <td>
-        ```js
-        Type: DRIVER
-        { step, dir }
-        ```
-
-        ```js
-        Type: TWO_WIRE
-        { motor1, motor2 }
-        ```
-
-        ```js
-        Type: FOUR_WIRE
-        { motor1, motor2, motor3, motor4 }
-        ```
+DRIVER: <br>`{ step, dir }`<br>
+TWO_WIRE: <br>`{ m1, m2 }`<br>
+FOUR_WIRE: <br>`{ m1, m2, m3, m4 }`<br>
 
       </td>
       <td>An object containing the named pin addresses for the 3 supported types</td>
@@ -45,20 +34,9 @@ Stepper motors generally require significantly involved hardware setup (that is,
       <td>pins</td>
       <td>Array *</td>
       <td>
-        ```js
-        Type: DRIVER
-        [ step, dir ]
-        ```
-
-        ```js
-        Type: TWO_WIRE
-        [ motor1, motor2 ]
-        ```
-
-        ```js
-        Type: FOUR_WIRE
-        [ motor1, motor2, motor3, motor4 ]
-        ```
+DRIVER: <br>`[ step, dir ]` <br>
+TWO_WIRE: <br>`[ m1, m2 ]`<br>
+FOUR_WIRE: <br>`[ m1, m2, m3, m4 ]`<br>
       </td>
 
       <td>An array containing the pin addresses for the 3 supported types</td>
@@ -390,4 +368,3 @@ stepper.ccw().step(2000);
     </tr>
   </tbody>
 </table>
-
