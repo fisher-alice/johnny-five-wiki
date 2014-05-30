@@ -232,7 +232,7 @@ motor.forward(255);
 motor.stop();
 ```
 
-- **brake()** Force a motor to stop by applying voltage to both poles
+- **brake()** Force a motor to stop (as opposed to coasting). Please note that this only works on boards with a dedicated brake pin. Other boards and interfaces will simply coast.
 ```js
 var motor = new five.Motor([11, 12]);
 
@@ -282,10 +282,6 @@ Keep in mind that "forward" and "reverse" are arbitrary labels. If your motor is
 ### Differences Between 2 and 3 pin Directional Motor Controllers
 
 Controllers that use 2 pins instead of 3 are essentially the same. Both arrangements use one PWN pin to control speed. The switches on the H-Bridge work in pairs. With 3-pin controllers you control the state of each pair. With 2-pin controllers the pairs are toggled for you based on the state of that one digital pin.
-
-### How Brake Works
-
-Voltage is applied to both poles of the motor causing it to work against itself and rapidly decelerate. The force of deceleration is proportional to the speed of the motor and it does not lock the motor in place. Motor braking will not stop your robot from rolling away if you park it on a hill. 
 
 ### Motor Control Shield Survey
 This is by no means exhaustive
