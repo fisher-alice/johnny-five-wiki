@@ -149,7 +149,7 @@ Now that your Arduino board is ok put the Serial port and the LED component in t
 
 
 ###Robot baby steps
-Now that you complete this tutorial the world of simulation is your. Try reproduce the examples from the johnny-five repository in the Proteus simulation or create something new and share with us. You can also do the opposite, start with examples that comes with Proteus software and reproduce it with real physical compoments that are connected with your johnny-five.
+Now that you complete this tutorial the world of simulation is yours. Try reproduce the examples from the johnny-five repository in the Proteus simulation or create something new and share with us. You can also do the opposite, start with examples that comes with Proteus software and reproduce it with real physical compoments that are connected with your johnny-five.
 
 I'm pretty sure that great samples will be comming. Have fun!
 
