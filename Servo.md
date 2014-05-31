@@ -272,3 +272,7 @@ Although servos can run on digital pins, this can sometimes cause issues. For th
     </tr>
   </tbody>
 </table>
+
+## Troubleshooting
+
+If you are experiencing memory leak crashes when using your servo, make sure that you are not powering the servo directly from your board. Excessive power draw on the USB port causes such crashes.
