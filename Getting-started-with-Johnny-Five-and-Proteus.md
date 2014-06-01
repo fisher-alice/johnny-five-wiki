@@ -45,13 +45,9 @@ com0com is a free program that we will use to create virtual serial ports. These
 
 ###Installing and cofigure the Proteus and com0com softwares
 After download Proteus Design Suite 8.1, you can install it in normal way. If everything is ok, it will create the folder of installation like this: 
-```
-C:\Program Files\Labcenter Electronics\Proteus 8 Professional
-```
+`C:\Program Files\Labcenter Electronics\Proteus 8 Professional`
 Now, let's import the extras Arduino boards components. Download the zip file from this [link](http://goo.gl/f7z3N) and extract it to the following folder:
-```
-C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\LIBRARY
-```
+`C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\LIBRARY`
 Nice, now download com0com from [here](http://sourceforge.net/projects/com0com/) and install it. During the instalation process, it will create two virtual serial ports and maybe install the drivers. Let's call these two serial ports 'COM1' and 'COM2' for convenience. After the installation is complete, let's configure it to work with our simulated Arduino board and johnny-five app.
 
 As [@randallagordon](https://github.com/randallagordon) point [here](https://github.com/rwaldron/johnny-five/issues/314#issuecomment-38187208), johnny-five use Firmata protocol to comunicate with Arduino and because this we need set the baud-rate of our serial ports to 57600. To do this, open your command-line and run the follow line:
@@ -112,7 +108,7 @@ Inside the "NodeProteusExample" that we create before, in your command-line, run
 This will download and install the johnny-five node module inside the "node_modules" subfolder. As you can see, the johnny-five is here.
 
 Next, create a new file "app.js" and write the follow code:
-```
+```js
 var five = require("johnny-five"),
     board = new five.Board({port:"COM2"});
 
@@ -156,5 +152,4 @@ I'm pretty sure that great samples will be comming. Have fun!
 
 ###Source code
 All the source code can be found [here](https://github.com/rodrigopandini/NodeProteusExample). After download, run the command `npm install` to install the johnny-five module and all dependencies.
-
 
