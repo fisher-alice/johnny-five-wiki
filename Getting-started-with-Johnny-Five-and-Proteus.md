@@ -67,9 +67,9 @@ If you prefer, you can go to the Control Panel > System and Security > System > 
 ###Creating our circuit in Proteus
 Open the Proteus Design Suite 8.1 and create a new project. Save it in a new folder like "NodeProteusExample". Choose "DEFAULT" option for Schematic design and hit next button. In the PCB Layout screen, keep the default "No PCB layout" and hit next. In the Firmware, keep the default "No Firmware Project" and click in next button. In the next screen, revise your options and click in the finish button. This will create a empty project for you with default schematic design. 
 
-Now, let's choose the components that will be used. In the menu, click in the "Library" option and select the "Pick parts from libraries" (or you can use the hotkey "P" - or click in the "P" buttom at the left painel). This will open a screen to you choose the device for your project. In the "Keyword" input, type "arduino". Next, select the "ARDUINO UNO R3" in the results list (double click to select). Now, type "COMPIM" in the search box again and select the "COMPIM" device listed. The last thing to choose ir our Led device. Type "LED-RED" and select it in the list (you can choose other color if you prefer). Close the Pick Device window. You can see the three devices listed in the Devices painel at left.
+Now, let's choose the components that will be used. In the menu, click in the "Library" option and select the "Pick parts from libraries" (or you can use the hotkey "P" - or click in the "P" button at the left painel). This will open a screen to you choose the device for your project. In the "Keyword" input, type "arduino". Next, select the "ARDUINO UNO R3" in the results list (double click to select). Now, type "COMPIM" in the search box again and select the "COMPIM" device listed. The last thing to choose ir our Led device. Type "LED-RED" and select it in the list (you can choose other color if you prefer). Close the Pick Device window. You can see the three devices listed in the Devices painel at left.
 
-Select the Arduino device an place it in the schematic area. Next do the same thing for the serial port and led devices. The last thing that we will need use is an "ground" terminal. You can pick it clicking in the "Terminal Mode" buttom and select the "Ground" terminal. Place it next to the Led device in the schematic.
+Select the Arduino device an place it in the schematic area. Next do the same thing for the serial port and led devices. The last thing that we will need use is an "ground" terminal. You can pick it clicking in the "Terminal Mode" button and select the "Ground" terminal. Place it next to the Led device in the schematic.
 
 Now, let's connect the devices. Click in the TX (1) pin from Arduino and connect it to the TXD (3) pin from serial. Also, connect the RX (0) to the RXD (2). 
 
@@ -140,9 +140,9 @@ If you would like use the components that already come with Proteus software, an
 
 But, since the johnny-five use the Firmata protocol to communicate with Arduino, we need put the StandartFirmata code here to be compiled and uploaded. To do this, open your Arduino IDE and go to File > Examples > Firmata > StandartFirmata. Copy all the code and past in the source code tab in Proteus. 
 
-Now, before hit build buttom, make sure that you configure the Arduino AVR to compile it. To do this, go to System menu and select Compilers Configuration and then hit Download buttom in Arduino AVR line. The program will download and install the Arduino IDE. 
+Now, before hit build button, make sure that you configure the Arduino AVR to compile it. To do this, go to System menu and select Compilers Configuration and then hit Download button in Arduino AVR line. The program will download and install the Arduino IDE. 
 
-Next, press the Build buttom from the menu (F7) and the StandartFirmata code will be compiled and uploaded to the Arduino component.
+Next, press the Build button from the menu (F7) and the StandartFirmata code will be compiled and uploaded to the Arduino component.
 Now that your Arduino board is ok put the Serial port and the LED component in the sketch and follow the steps that we do before to run the Blink example.
 
 > **Note**: You can learn more about the Arduino example and how to use the VSMStudio IDE [here](http://labcenter.s3.amazonaws.com/movies/v8/Arduino.cfm). There are also a bunch of snippets that already comes in Proteus that you can use with Arduino component. Check it!
