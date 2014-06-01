@@ -45,9 +45,13 @@ com0com is a free program that we will use to create virtual serial ports. These
 
 ###Installing and cofigure the Proteus and com0com softwares
 After download Proteus Design Suite 8.1, you can install it in normal way. If everything is ok, it will create the folder of installation like this: 
+
 `C:\Program Files\Labcenter Electronics\Proteus 8 Professional`
+
 Now, let's import the extras Arduino boards components. Download the zip file from this [link](http://goo.gl/f7z3N) and extract it to the following folder:
+
 `C:\ProgramData\Labcenter Electronics\Proteus 8 Professional\LIBRARY`
+
 Nice, now download com0com from [here](http://sourceforge.net/projects/com0com/) and install it. During the instalation process, it will create two virtual serial ports and maybe install the drivers. Let's call these two serial ports 'COM1' and 'COM2' for convenience. After the installation is complete, let's configure it to work with our simulated Arduino board and johnny-five app.
 
 As [@randallagordon](https://github.com/randallagordon) point [here](https://github.com/rwaldron/johnny-five/issues/314#issuecomment-38187208), johnny-five use Firmata protocol to comunicate with Arduino and because this we need set the baud-rate of our serial ports to 57600. To do this, open your command-line and run the follow line:
@@ -81,7 +85,7 @@ You can see the image bellow to get the ideia:
 ###Configuring our components
 Now that our components are conected, let's configure it to work accordingly.
 
-Firts, double click at the Serial component and put the baud-rate option to 57600, stop bit to '1', parity to 'none' and so on. The same configuration that we do before to our virtual serial ports.
+Firts, double click at the Serial component and put the baud-rate option to 57600, stop bit to '1', parity to 'none' and so on. The same configuration that we do before to our virtual serial ports. Remember to define the Physical Port to 'COM1'.
 
 ![serial_configuration](https://cloud.githubusercontent.com/assets/641525/3139998/5efb016e-e8fe-11e3-99fe-cd19dca14a4c.png)
 
