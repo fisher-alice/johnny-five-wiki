@@ -1,5 +1,3 @@
-Getting started with Johnny-Five and Proteus
-=========
 In this tutorial we will learn how to use Proteus Design Suite to simulate an Arduino board and how to use Johnny-Five library to connect to it through a serial port.
 
 Thus, we will need the following programs:
