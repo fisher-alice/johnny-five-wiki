@@ -1,4 +1,4 @@
-The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC with fractional values between 0 and 1. Currently, this class assumes the ESC is [pre-calibrated](#wiki-calibrating-an-esc).
+The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC. Currently, this class assumes the ESC is [pre-calibrated](#wiki-calibrating-an-esc).
 
 <img src="https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png">
 
@@ -38,21 +38,21 @@ var esc = new five.ESC("O0");
       <td>range</td>
       <td>Array</td>
       <td>[ lower, upper ]</td>
-      <td>The range of motion in speed. Defaults to [0, 180]</td>
+      <td>The range of speed in percent. Defaults to [0, 100]</td>
       <td>no</td>
     </tr>
     <tr>
       <td>pwmRange</td>
       <td>Array</td>
       <td>[ lower, upper ]</td>
-      <td>The range of motion in speed. Defaults to [600, 2400]. Overrides `range`</td>
+      <td>The range of speed in μs. Defaults to [600, 2400]. Overrides `range`</td>
       <td>no</td>
     </tr>
     <tr>
       <td>startAt</td>
       <td>Number</td>
-      <td>Any fractional number between 0...1</td>
-      <td>Initial speed</td>
+      <td>Any integer between 0...100</td>
+      <td>Initial speed percentage</td>
       <td>no</td>
     </tr>
   </tbody>
@@ -61,11 +61,11 @@ var esc = new five.ESC("O0");
 // Create an esc...
 // 
 //   - attached to pin 12
-//   - limited speed range of 45-135
+//   - limited speed range of 45-80
 //
 var esc = new five.ESC({
   pin: 12, 
-  range: [ 45, 135 ]
+  range: [ 45, 180 ]
 });
 ```
 
@@ -75,10 +75,7 @@ var esc = new five.ESC({
 { 
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the ESC is attached to
-  range: The range of motion in speed. Defaults to [0, 180]
-  history: An array containing records of each movement 
-  interval: A reference to the current interval, if one exists
-  last: The last movement record. READONLY
+  range: The range of speed as percent. Defaults to [0, 100]
   speed: The last/current speed. READONLY
 }
 ```
@@ -108,8 +105,8 @@ board.on("ready", function() {
 ```js
 var esc = new five.ESC(12);
 
-// Set the motor's speed to half
-esc.to(0.50);
+// Set the motor's speed to 50%
+esc.to(50);
 ```
 
 - **min()** Set ESC to minimum speed. Defaults to 0, respects explicit range.
