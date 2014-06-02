@@ -101,7 +101,7 @@ board.on("ready", function() {
 
 ## API
 
-- **to(speed)** Set the speed of the ESC, 0...1 as a fractional value. If the specified speed is the same as the current speed, no commands are sent.
+- **speed(value)** Set the speed of the ESC, any integer from 0...100 as a percentage value. If the specified speed is the same as the current speed, no commands are sent.
 ```js
 var esc = new five.ESC(12);
 
