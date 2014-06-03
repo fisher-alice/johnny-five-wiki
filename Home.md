@@ -27,3 +27,4 @@
 
 # How-To Guides
 - [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
+- [Getting started with Johnny Five and Proteus](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Proteus)
