@@ -1,3 +1,5 @@
+[Read more about IO Plugins here.](http://bocoup.com/weblog/intel-galileo-javascript-nodejs/)
+
 (This document is an incomplete draft)
 
 An IO plugin is any class whose instances implement a [Firmata](https://github.com/jgautier/firmata) compatible interface. 
