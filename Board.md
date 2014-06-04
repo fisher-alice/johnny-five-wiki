@@ -11,6 +11,22 @@ Johnny-Five has been tested on, but is not limited to, the following boards:
 - [Arduino Nano](http://arduino.cc/en/Main/arduinoBoardNano)
 - [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
 
+For non-Arduino based projects, the following platform [IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins) are available:
+
+- Beagle Bone
+  - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
+- Intel Galileo
+  - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
+- Pinoccio
+  - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
+- Raspberry Pi
+  - [Raspi-IO](https://gitlab.theoreticalideations.com/nebrius/raspi-io/)
+- Spark Core
+  - [Spark-IO](https://github.com/rwaldron/spark-io/)
+- IO Board (Generic IO Plugin class to make your own!)
+  - [IOBoard](https://github.com/achingbrain/node-ioboard)
+
+
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
 ### Parameters
