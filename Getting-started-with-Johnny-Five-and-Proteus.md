@@ -129,7 +129,9 @@ So, now open your command-line in the "NodeProteusExample" folder and run:
 
 `node app.js`
 
-As you can see, the terminal will show that the program is connected to the serial port 'COM2' and starts send commands to it. In Proteus simulation, you can see that the LED component starts blink, as we are waiting! 
+As you can see, the terminal will show that the program is connected to the serial port 'COM2' and starts send commands to it. In Proteus simulation, you can see that the LED component starts blink, as we are waiting!
+ 
+![running](https://cloud.githubusercontent.com/assets/641525/3208936/548ed638-ee4e-11e3-9c1c-1365cd2a1fc7.gif)
 
 The LED component is turnning on and off every 100ms but due the simulation update rate this time can not be so precise.
 
@@ -154,4 +156,3 @@ I'm pretty sure that great samples will be comming. Have fun!
 
 ###Source code
 All the source code can be found [here](https://github.com/rodrigopandini/NodeProteusExample). After download, run the command `npm install` to install the johnny-five module and all dependencies.
-
