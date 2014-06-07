@@ -8,7 +8,7 @@ Thus, we will need the following programs:
 
 To complete our goal, we will build a simple LED blink example (or as someones said, the "Hello world" of the hardware world).
 
-There are two ways to do this: using the existing components that already comes with Proteus software or adding a extra component in Proteus library that represent all the Arduino board. We will see later how to make both ways. Just keep in mind that both ways follow the same logic, changing only one or others aspect in the flow of developement. 
+There are two ways to do this: using the existing components that already comes with Proteus software or adding a extra component in Proteus library that represent all the Arduino board. We will see later how to make both ways. Just keep in mind that both ways follow the same logic, changing only one or others aspect in the flow of development. 
 
 Furthermore, in this tutorial, I'm assuming that you already have the Arduino IDE and Node.js softwares installed. 
 
