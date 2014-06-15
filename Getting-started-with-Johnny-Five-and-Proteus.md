@@ -3,7 +3,7 @@ In this tutorial we will learn how to use Proteus Design Suite to simulate an Ar
 Thus, we will need the following programs:
 + [Proteus Design Suite 8.1](http://www.labcenter.com/index.cfm)
 + [com0com](http://sourceforge.net/projects/com0com/)
-+ [Arduino](http://www.arduino.cc/)
++ [Arduino IDE](http://www.arduino.cc/)
 + [Node.js](http://nodejs.org/)
 
 To complete our goal, we will build a simple LED blink example (or as someones said, the "Hello world" of the hardware world).
