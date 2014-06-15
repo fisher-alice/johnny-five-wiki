@@ -73,7 +73,7 @@ Now, let's connect the devices. Click in the TX (1) pin from Arduino and connect
 
 Because we will use the pin 13 in our program, let's connect the pin 13 from Arduino to the Led device. To finish, connect the other pin of the Led to the Ground terminal that we placed before.
 
-You can see the image bellow to get the ideia:
+You can see the image bellow to get the idea:
 ![place_connect](https://cloud.githubusercontent.com/assets/641525/3139911/c5466f90-e8f8-11e3-9175-a050c88b58a6.gif)
 
 
