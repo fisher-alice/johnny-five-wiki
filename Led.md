@@ -104,7 +104,7 @@ var led = new five.Led(13);
 led.on();
 ```
 
-- **off()** Turn the led off.
+- **off()** Turn the led off. If a led is strobing, it will not stop. Use `led.stop().off()` to turn off a led while strobing.
 
 ```js
 var led = new five.Led(13);
