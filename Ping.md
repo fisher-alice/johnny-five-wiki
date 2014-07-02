@@ -136,15 +136,23 @@ Now open the Arduino IDE.
 
 - You should now be able to Compile and upload this version of Standard Firmata to your Arduino.
 
-If you receive an error about PULSE_IN not being in scope, then copy this:
+If you receive an error about 'PULSE_IN' not being in scope, then find the following line:
+
+```c
+#define REGISTER_NOT_SPECIFIED -1
+```
+
+And below it, add this:
 
 ```c
 #define PULSE_IN                0x74 // send a pulse in command
 ```
-And add it below the following line:
+
+So that it reads:
 
 ```c
 #define REGISTER_NOT_SPECIFIED -1
+#define PULSE_IN                0x74 // send a pulse in command
 ```
 ## Examples
 * [Ping](https://github.com/rwldrn/johnny-five/blob/master/docs/ping.md)
