@@ -29,14 +29,14 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
       <td>freq</td>
       <td>Number</td>
       <td>Milliseconds</td>
-      <td>The frequency in ms of read events. Defaults to 100ms</td>
+      <td>The frequency in ms of `data` events. Defaults to 100ms</td>
       <td>no</td>
     </tr>
     <tr>
       <td>pulse</td>
       <td>Number</td>
       <td>Milliseconds</td>
-      <td>The frequency in ms of pulses. Defaults to 500ms</td>
+      <td>The frequency in ms to wait for a pulse. Defaults to 500ms</td>
       <td>no</td>
     </tr>
 
