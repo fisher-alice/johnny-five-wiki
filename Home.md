@@ -7,7 +7,7 @@
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-pt_BR
 [fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
 
-# Documentation 
+## Documentation 
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
 - [Button](https://github.com/rwaldron/johnny-five/wiki/Button) ([Button-pt_BR][])
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
