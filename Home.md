@@ -14,6 +14,7 @@
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
+- [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
 - [Motor](https://github.com/rwldrn/johnny-five/wiki/Motor)
 - [Pin](https://github.com/rwldrn/johnny-five/wiki/Pin)
 - [Ping](https://github.com/rwldrn/johnny-five/wiki/Ping)
