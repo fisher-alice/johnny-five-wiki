@@ -115,6 +115,8 @@ Done!
 
 ```
 
+If you are having troubles uploading the firmata firmware to the device, make sure that nothing is connected to pins 0 and 1 when uploading as this can interfere with the upload process.
+
 More information about the AT commands which the module will respond to, can be found at the following links:
 
 [http://byron76.blogspot.com/2011/09/one-board-several-firmwares.html](http://byron76.blogspot.com/2011/09/one-board-several-firmwares.html)
@@ -125,27 +127,27 @@ More information about the AT commands which the module will respond to, can be 
 
 [http://mcuoneclipse.com/2013/06/19/using-the-hc-06-bluetooth-module/](http://mcuoneclipse.com/2013/06/19/using-the-hc-06-bluetooth-module/)
 
-## Step 4: Wire the module to the Arduino's hardware port
+## Step 3: Wire the module to the Arduino's hardware port
 
 Once the baud rate is properly set, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
 
 ![Fritzing Diagram](http://i.imgur.com/fjMCXVx.png)
 
+## Step 3: Reupload StandardFirmata
+
+Once the baud rate is properly set, reupload the StandardFirmata sketch.
+
+## Step 4 : Pair the module
+
 Pair to the module from your host device, [tell Johnny-Five which port to use](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md) and...
 
+## Step 5: Wire the module to the Arduino's hardware port
 
-## Step 4: Wire the module to the Arduino's hardware port
-
-Once the baud rate is properly set, reupload the StandardFirmata sketch then connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
+Then connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
 
 ![Fritzing Diagram](http://i.imgur.com/fjMCXVx.png)
 
-If you are having troubles uploading the firmata firmware to the device, make sure that nothing is connected to pins 0 and 1 when uploading as this can interfere with the upload process.
-
-To pair to the module from your host device, [tell Johnny-Five which port to use](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md) and...
-
-
-## Step 4: Profit!
+## Step 6: Profit!
 
 Your NodeBot has been _unleashed!_ Go forth and build!
 
