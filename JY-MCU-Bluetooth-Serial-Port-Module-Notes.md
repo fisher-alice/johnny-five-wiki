@@ -133,7 +133,7 @@ Once the baud rate is properly set, re upload the StandardFirmata sketch to your
 
 ## Step 4: Wire the module to the Arduino's hardware port
 
-Once the baud rate is properly set & Firmate reloaded, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
+Once the baud rate is properly set & Firmata reloaded, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
 
 ![Fritzing Diagram](http://i.imgur.com/fjMCXVx.png)
 
