@@ -8,7 +8,7 @@ We will program the Arduino to send AT commands to the module to configure it vi
 
 Then upload the following Sketch to your Arduino which creates a connection between the Arduino's serial port and the JY-MCU. Modify the ROBOT_NAME and the BLUETOOTH_SPEED values before uploading if you want a custom name or have changed the baudrate before. This is a slightly modified version of the Sketch found here: [https://gist.github.com/garrows/f8f787dac6e85591737c#file-setupbluetooth-ino](https://gist.github.com/garrows/f8f787dac6e85591737c#file-setupbluetooth-ino)
 
-```Arduino
+```c
 
 #define ROBOT_NAME "RandomBot"
 
