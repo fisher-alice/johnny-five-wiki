@@ -99,8 +99,6 @@ var matrix = new five.Led.Matrix({
   }
 });
 
-// Send data to the the matrix
-
 // Turn on a specific device by index.
 matrix.on(0);
 
