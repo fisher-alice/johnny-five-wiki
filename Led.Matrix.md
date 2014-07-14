@@ -143,10 +143,10 @@ var matrix = new five.Led.Matrix({
   }
 });
 
-// Specify a device index.
+// Clear the entire display of a specified device.
 matrix.clear(0);
 
-// Clear all devices
+// Clear the entire display for all devices
 matrix.clear();
 ```
 
@@ -164,11 +164,11 @@ var matrix = new five.Led.Matrix({
   }
 });
 
-// Specify a device index.
-matrix.clear(0);
+// Set the brightness of a specified device.
+matrix.brightness(0, 100);
 
-// Clear all devices
-matrix.clear();
+// Set the brightness for all devices
+matrix.brightness(100);
 ```
 
 
