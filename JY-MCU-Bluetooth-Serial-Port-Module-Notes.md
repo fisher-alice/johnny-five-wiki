@@ -127,25 +127,20 @@ More information about the AT commands which the module will respond to, can be 
 
 [http://mcuoneclipse.com/2013/06/19/using-the-hc-06-bluetooth-module/](http://mcuoneclipse.com/2013/06/19/using-the-hc-06-bluetooth-module/)
 
-## Step 3: Wire the module to the Arduino's hardware port
-
-Once the baud rate is properly set, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
-
-![Fritzing Diagram](http://i.imgur.com/fjMCXVx.png)
-
 ## Step 3: Reupload StandardFirmata
 
-Once the baud rate is properly set, reupload the StandardFirmata sketch.
+Once the baud rate is properly set, re upload the StandardFirmata sketch to your board. If you don't do this it might seems that your bluetooth module is getting a connection, the green light will stop blinking, but you won't  be able to connect.
 
 ## Step 4: Wire the module to the Arduino's hardware port
 
-Then connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
+Once the baud rate is properly set & Firmate reloaded, connect the TX and RX pins to Arduino pins 0 and 1 (same crossover style configuration as before).
 
 ![Fritzing Diagram](http://i.imgur.com/fjMCXVx.png)
 
+
 ## Step 5 : Pair the module
 
-Pair to the module from your host device, once you have paired with your bluetooth device the port should be visible with the 'ROBOT_NAME' you used in Step 1. It will be something like /dev/tty.ROBOT_NAME-DevB. Use this name to [tell Johnny-Five which port to use](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md)
+Pair to the module from your host device, once you have paired with your bluetooth device the serial port should be visible with the 'ROBOT_NAME' you used in Step 1. It will be something like /dev/tty.ROBOT_NAME-DevB. Use this name to [tell Johnny-Five which port to use](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md)
 
 ## Step 6: Profit!
 
