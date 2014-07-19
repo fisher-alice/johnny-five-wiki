@@ -18,14 +18,10 @@ The `ShiftRegister` class constructs an object that represents a shift register.
       <td>pins</td>
       <td>Object</td>
       <td>
-        ```
-        {
-          data: 2,
-          clock: 3,
-          latch: 4
-        }
-        ```
-      </td>
+```js
+{ data, clock, latch }
+```
+</td>
      <td>
        Sets the values of the data , clock and latch pins
      </td>
