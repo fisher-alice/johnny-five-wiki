@@ -10,6 +10,9 @@ Johnny-Five has been tested on, but is not limited to, the following boards:
 - [Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)
 - [Arduino Nano](http://arduino.cc/en/Main/arduinoBoardNano)
 - [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
+- [BotBoarduino](http://www.lynxmotion.com/c-153-botboarduino.aspx)
+- [Dagu Micro Magician v2](http://www.dawnrobotics.co.uk/dagu-micro-magician-v2/)
+- [Red Back Spider](http://robosavvy.com/store/product_info.php/products_id/1574)
 
 For non-Arduino based projects, the following platform [IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins) are available:
 
