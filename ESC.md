@@ -6,7 +6,7 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 
 - **pin** A Number or String address for the ESC pin (PWM).
 ```js
-var esc = new five.ESC(12);
+var esc = new five.ESC(9);
 ```
 Tinkerkit: 
 ```js
