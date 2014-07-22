@@ -41,19 +41,10 @@ var esc = new five.ESC("O0");
       <td>The range of speed in percent. Defaults to [0, 100]</td>
       <td>no</td>
     </tr>
-<!--
-    <tr>
-      <td>pwmRange</td>
-      <td>Array</td>
-      <td>[ lower, upper ]</td>
-      <td>The range of speed in μs. Defaults to [600, 2400]. Overrides `range`</td>
-      <td>no</td>
-    </tr>
--->
     <tr>
       <td>startAt</td>
       <td>Number</td>
-      <td>Any integer between 0...100</td>
+      <td>Any fractional number value from 0-100</td>
       <td>Initial speed percentage</td>
       <td>no</td>
     </tr>
@@ -63,11 +54,11 @@ var esc = new five.ESC("O0");
 // Create an esc...
 // 
 //   - attached to pin 12
-//   - limited speed range of 45-80
+//   - limited speed range to 0-80%
 //
 var esc = new five.ESC({
   pin: 12, 
-  range: [ 45, 180 ]
+  range: [ 0, 80 ]
 });
 ```
 
@@ -77,8 +68,8 @@ var esc = new five.ESC({
 { 
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the ESC is attached to
-  range: The range of speed as percent. Defaults to [0, 100]
-  speed: The last/current speed. READONLY
+  range: The range of speed as an array of fractional percent values. Defaults to [0, 100]
+  value: The value of the last/current speed. READONLY
 }
 ```
 
@@ -88,12 +79,12 @@ var esc = new five.ESC({
 
 Standard ESC
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
-  var esc = new five.ESC(12);
+  var esc = new five.ESC(11);
 
   // Set to top speed. (this can be physically dangerous, you've been warned.)
   esc.max();
@@ -103,43 +94,45 @@ board.on("ready", function() {
 
 ## API
 
-- **speed(value)** Set the speed of the ESC, any integer from 0...100 as a percentage value. If the specified speed is the same as the current speed, no commands are sent.
+- **speed(value)** Set the speed of the ESC, any fractional number value from 0...100 as a percentage value. If the specified speed is the same as the current speed, no commands are sent.
 ```js
-var esc = new five.ESC(12);
+var esc = new five.ESC(11);
 
 // Set the motor's speed to 50%
 esc.to(50);
 ```
 
-- **min()** Set ESC to minimum speed. Defaults to 0, respects explicit range.
+- **min()** Set ESC to minimum speed. Defaults to 0%, respects explicit range.
 ```js
-var esc = new five.ESC(12);
+var esc = new five.ESC(11);
 
 esc.min();
 ```
 Or 
 ```js
 var esc = new five.ESC({
-  pin: 12, 
-  pwmRange: [ 1000, 1900 ]
+  pin: 11, 
+  range: [ 10, 100 ]
 });
 
+// Minimum speed at 10%
 esc.min();
 ```
 
-- **max()** Set ESC to maximum speed. Defaults to 1, respects explicit range.
+- **max()** Set ESC to maximum speed. Defaults to 100%, respects specified range.
 ```js
-var esc = new five.ESC(12);
+var esc = new five.ESC(11);
 
 esc.max();
 ```
 Or 
 ```js
 var esc = new five.ESC({
-  pin: 12, 
-  range: [ 1000, 1900 ]
+  pin: 11, 
+  range: [ 0, 80 ]
 });
 
+// Max at 80%
 esc.max();
 ```
 
