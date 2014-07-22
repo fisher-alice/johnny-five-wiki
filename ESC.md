@@ -41,6 +41,7 @@ var esc = new five.ESC("O0");
       <td>The range of speed in percent. Defaults to [0, 100]</td>
       <td>no</td>
     </tr>
+<!--
     <tr>
       <td>pwmRange</td>
       <td>Array</td>
@@ -48,6 +49,7 @@ var esc = new five.ESC("O0");
       <td>The range of speed in μs. Defaults to [600, 2400]. Overrides `range`</td>
       <td>no</td>
     </tr>
+-->
     <tr>
       <td>startAt</td>
       <td>Number</td>
