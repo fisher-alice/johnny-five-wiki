@@ -15,7 +15,7 @@ Known supported devices:
 - [Dot Matrix Chain Display Kit Max7219 V2](http://www.electrodragon.com/product/dot-matrix-chain-display-kit-max7219-v2/)
 
 
-Adafruit offers a selection of colors 8x8 matrices: 
+Adafruit offers a selection of 8x8 matrices in various colors: 
 
 - [White](https://www.adafruit.com/products/1821)
 - [Amber](https://www.adafruit.com/products/1818)
