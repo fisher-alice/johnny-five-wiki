@@ -111,7 +111,7 @@ board.on("ready", function() {
 > NOTE: When the device is turned off (with the `off` method), data is retained and will be displayed on the device when turned on (with the `on` method). This is useful when powering the devices from a battery, by providing a power saving mechanism.
 
 - **on()** Turn on all matrix devices.
-- **on(index)** Turn on matrix device at specified index.
+- **on(device index)** Turn on matrix device at specified device index.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -122,7 +122,7 @@ var matrix = new five.Led.Matrix({
   }
 });
 
-// Turn on a specific device by index.
+// Turn on a specific device by device index.
 matrix.on(0);
 
 // Turn on all devices
@@ -130,7 +130,7 @@ matrix.on();
 ```
 
 - **off()** Turn off all matrix devices.
-- **off(index)** Turn off matrix device at specified index.
+- **off(device index)** Turn off matrix device at specified device index.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -141,7 +141,7 @@ var matrix = new five.Led.Matrix({
   }
 });
 
-// Turn off a specific device by index.
+// Turn off a specific device by device index.
 matrix.off(0);
 
 // Turn off all devices
@@ -153,7 +153,7 @@ matrix.off();
 
 
 - **clear()** Shut off all LEDs, for all devices.
-- **clear(index)** Shut off all LEDs, for a device at specified index.
+- **clear(device index)** Shut off all LEDs, for a device at specified device index.
 
 Note: `clear()` does not shut off the device.
 
@@ -175,7 +175,7 @@ matrix.clear();
 
 
 - **brightness(0-100)** Set the brightness from 0-100%, of all devices.
-- **brightness(index, 0-100)** Set the brightness from 0-100%, for a device at specified `index`.
+- **brightness(device index, 0-100)** Set the brightness from 0-100%, for a device at specified `device index`.
 
 
 ```js
@@ -196,7 +196,7 @@ matrix.brightness(100);
 
 
 - **led(row, col, 1|0)** Set on/off state for led at `row` and `col` (0-8, 0-8), of all devices.
-- **led(index, row, col, state)** Set on/off state for led at `row` and `col` (00-8), for a device at the specified `index`.
+- **led(device index, row, col, state)** Set on/off state for led at `row` and `col` (00-8), for a device at the specified `device index`.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -216,7 +216,7 @@ matrix.led(0, 0, 1);
 
 
 - **row(row, 0-255)** Set `row` (0-8) value to 8-bit byte (0-255), of all devices.
-- **row(index, row, 0-255)** Set `row` (0-8) value to 8-bit byte (0-255), for a device at the specified `index`.
+- **row(device index, row, 0-255)** Set `row` (0-8) value to 8-bit byte (0-255), for a device at the specified `device index`.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -236,7 +236,7 @@ matrix.row(0, 255);
 
 
 - **column(column, 0-255)** Set `column` (0-8) value to 8-bit byte (0-255), of all devices.
-- **column(index, column, 0-255)** Set `column` (0-8) value to 8-bit byte (0-255), for a device at the specified `index`.
+- **column(device index, column, 0-255)** Set `column` (0-8) value to 8-bit byte (0-255), for a device at the specified `device index`.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -255,7 +255,7 @@ matrix.column(0, 255);
 ```
 
 - **draw(character)** Draw a "character" to all devices.
-- **draw(index, character)** Draw a "character" to a device at the specified `index`.
+- **draw(device index, character)** Draw a "character" to a device at the specified `device index`.
 
 Valid "character" values: 
 
@@ -329,6 +329,17 @@ matrix.draw(asterisk);
 ```
 
 
+
+## Predefined Characters
+
+Led.Matrix.CHARS
+
+```
+0 1 2 3 4 5 6 7 8 9   
+! " # $ % & ' ( ) * + , - . / : ; < = > ? @ 
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` 
+a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
+```
 
 
 ## Events
