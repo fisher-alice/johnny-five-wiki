@@ -1,4 +1,4 @@
-The `Led.Matrix` class constructs an object that may represent one or more (chained) LED Matrix (MAX7219CNG) devices attached to the physical board. 
+The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 LED Matrix (MAX7219/MAX7221) devices attached to the physical board. 
 
 <img src="https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg">
 
