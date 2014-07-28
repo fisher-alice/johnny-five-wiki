@@ -43,7 +43,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
       <td>pins</td>
       <td>Object</td>
       <td>A valid pins object or pins array</td>
-      <td>`data`, `clock`, `cs`</td>
+      <td>data, clock, cs</td>
       <td>yes</td>
     </tr>
     <tr>
@@ -302,6 +302,7 @@ matrix.draw(0, heart);
 // Draw a heart to all devices
 matrix.draw(heart);
 
+// NOTE: this is actually a predefined character
 var exclamation = [
   0x04, 
   0x04, 
