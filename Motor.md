@@ -294,7 +294,7 @@ This is by no means exhaustive
       <th>Motor A pins</th>
       <th>Motor B pins</th>
       <th>Operating Voltage(1)</th>
-      <th>Max Current per Channel</th>
+      <th>Max A per Channel</th>
       <th>Stackable(2)</th>
     </tr>
   </thead>
@@ -366,7 +366,7 @@ This is by no means exhaustive
       <th>Motor A pins</th>
       <th>Motor B pins</th>
       <th>Operating Voltage(1)</th>
-      <th>Max Current</th>
+      <th>Max A</th>
       <th>Stackable(2)</th>
     </tr>
   </thead>
@@ -391,4 +391,4 @@ This is by no means exhaustive
 </table>
 
 1. Beware of shared voltage, the shield may be able to handle higher voltages than your Arduino. 
-1. Configurable indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
+1. Indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
