@@ -33,7 +33,7 @@ Known supported devices:
       <td>pins</td>
       <td>Object</td>
       <td>A valid pins object or pins array</td>
-      <td>`data`, `clock`, `cs`</td>
+      <td>data, clock, cs</td>
       <td>yes</td>
     </tr>
     <tr>
