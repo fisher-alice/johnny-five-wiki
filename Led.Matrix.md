@@ -8,7 +8,7 @@ Known supported devices:
 
 [See all on Tindie!](https://www.tindie.com/search/?q=MAX7219)
 
-- [MAX7219 Dot Matrix MCU LED Display Control Module Kit For Arduino With Dupont Cable](https://www.tindie.com/products/mmm999/max7219-dot-matrix-mcu-led-display-control-module-kit-for-arduino-with-dupont-cable/) Tindie!
+- [MAX7219 Dot Matrix MCU LED Display Control Module Kit For Arduino With Dupont Cable](https://www.tindie.com/products/mmm999/max7219-dot-matrix-mcu-led-display-control-module-kit-for-arduino-with-dupont-cable/)
 - [LED Matrix Kit](https://www.sparkfun.com/products/11861)
 - [DIY MAX7219 Red LED Dot Matrix Display Module for Arduino](http://www.amazon.com/gp/product/B009U7LAS0/)
 - [Dot Matrix Display Kit w/MAX7219 IC, PCB](http://www.electrodragon.com/product/dot-matrix-display-kit-wmax7219-ic-pcb/)
