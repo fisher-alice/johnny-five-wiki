@@ -1,6 +1,29 @@
 The `Led.Matrix` class constructs an object that may represent one or more (chained) LED Matrix (MAX7219CNG) devices attached to the physical board. 
 
+<img src="https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg">
 
+<img src="https://d3s5r33r268y59.cloudfront.net/27271/products/thumbs/2014-06-04T15:00:16.610Z-481.jpg.855x570_q85_pad_rcrop.jpg">
+
+Known supported devices: 
+
+[See all on Tindie!](https://www.tindie.com/search/?q=MAX7219)
+
+- [MAX7219 Dot Matrix MCU LED Display Control Module Kit For Arduino With Dupont Cable](https://www.tindie.com/products/mmm999/max7219-dot-matrix-mcu-led-display-control-module-kit-for-arduino-with-dupont-cable/) Tindie!
+- [LED Matrix Kit](https://www.sparkfun.com/products/11861)
+- [DIY MAX7219 Red LED Dot Matrix Display Module for Arduino](http://www.amazon.com/gp/product/B009U7LAS0/)
+- [Dot Matrix Display Kit w/MAX7219 IC, PCB](http://www.electrodragon.com/product/dot-matrix-display-kit-wmax7219-ic-pcb/)
+- [Dot Matrix Chain Display Kit Max7219 V2](http://www.electrodragon.com/product/dot-matrix-chain-display-kit-max7219-v2/)
+
+
+Adafruit offers a selection of colors 8x8 matrices: 
+
+- [White](https://www.adafruit.com/products/1821)
+- [Amber](https://www.adafruit.com/products/1818)
+- [Yellow](https://www.adafruit.com/products/1819)
+- [Green](https://www.adafruit.com/products/1820)
+- [Blue](https://www.adafruit.com/products/1817)
+
+(This list only represents devices that I've personally confirmed, please add devices as needed.)
 ### Parameters
 
 
