@@ -310,7 +310,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td>DF Robot</td>
+      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=59">DF Robot</a></td>
       <td>1A</td>
       <td>pwm:6,<br/>dir:7</td>
       <td>pwm:5,<br/>dir:4</td>
@@ -319,7 +319,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td>DF Robot</td>
+      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=69">DF Robot</a></td>
       <td>2A</td>
       <td>pwm:6,<br/>dir:7</td>
       <td>pwm:5,<br/>dir:4</td>
@@ -328,7 +328,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td>NKC Electronics</td>
+      <td><a href="http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html">NKC Electronics</a></td>
       <td>Motor Control Shield Kit</td>
       <td>pwm:9,<br/>dir:12</td>
       <td>pwm:10,<br/>dir:13</td>
@@ -337,7 +337,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td>Rugged Circuits</td>
+      <td><a href="http://www.ruggedcircuits.com/motor-control/rugged-motor-driver">Rugged Circuits</a></td>
       <td>Rugged Motor Driver</td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
@@ -346,7 +346,7 @@ This is by no means exhaustive
       <td>Yes</td>
     </tr>    
     <tr>
-      <td>Rugged Circuits</td>
+      <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits</a></td>
       <td>Basic Motor Driver</td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
@@ -355,7 +355,7 @@ This is by no means exhaustive
       <td>Yes</td>
     </tr>    
     <tr>
-      <td>Sparkfun</td>
+      <td><a href="https://www.sparkfun.com/products/9815">Sparkfun</a></td>
       <td>Ardumoto</td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
