@@ -73,7 +73,7 @@ var matrix = new five.Led.Matrix({
 
 ```js
 { 
-  isMatrix: ...Boolean true|false (from LedControl). READONLY
+  isMatrix: true. READONLY
   devices: ...Number of devices controlled. READONLY
 }
 ```
