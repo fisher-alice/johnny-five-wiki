@@ -290,7 +290,6 @@ This is by no means exhaustive
 <table>
   <thead>
     <tr>
-      <th>Manufacturer</th>
       <th>Name</th>
       <th>Motor A pins</th>
       <th>Motor B pins</th>
@@ -301,8 +300,7 @@ This is by no means exhaustive
   </thead>
   <tbody>
     <tr>
-      <td><a href="http://arduino.cc/en/Main/ArduinoMotorShieldR3">Arduino</a></td>
-      <td>Motor Shield R3</td>
+      <td><a href="http://arduino.cc/en/Main/ArduinoMotorShieldR3">Arduino Motor Shield R3</a></td>
       <td>pwm:3,<br/>dir:12,<br/>[brake:9,]<br/>[current:A0]</td>
       <td>pwm:11,<br/>dir:13,<br/>[brake:8,]<br/>[current:A1]</td>
       <td>7-12V</td>
@@ -310,8 +308,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=59">DF Robot</a></td>
-      <td>1A</td>
+      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=59">DF Robot 1A</a></td>
       <td>pwm:6,<br/>dir:7</td>
       <td>pwm:5,<br/>dir:4</td>
       <td>7 - 12V</td>
@@ -319,8 +316,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=69">DF Robot</a></td>
-      <td>2A</td>
+      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=69">DF Robot 2A</a></td>
       <td>pwm:6,<br/>dir:7</td>
       <td>pwm:5,<br/>dir:4</td>
       <td>4.8 - 35V</td>
@@ -328,8 +324,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td><a href="http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html">NKC Electronics</a></td>
-      <td>Motor Control Shield Kit</td>
+      <td><a href="http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html">NKC Electronics Motor Control Shield Kit</a></td>
       <td>pwm:9,<br/>dir:12</td>
       <td>pwm:10,<br/>dir:13</td>
       <td>6 - 15V shared</td>
@@ -337,8 +332,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>    
     <tr>
-      <td><a href="http://www.ruggedcircuits.com/motor-control/rugged-motor-driver">Rugged Circuits</a></td>
-      <td>Rugged Motor Driver</td>
+      <td><a href="http://www.ruggedcircuits.com/motor-control/rugged-motor-driver">Rugged Circuits Rugged Motor Driver</a></td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
       <td>8-30V</td>
@@ -346,8 +340,7 @@ This is by no means exhaustive
       <td>Yes</td>
     </tr>    
     <tr>
-      <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits</a></td>
-      <td>Basic Motor Driver</td>
+      <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits Basic Motor Driver</a></td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
       <td>8-30V</td>
@@ -355,8 +348,7 @@ This is by no means exhaustive
       <td>Yes</td>
     </tr>    
     <tr>
-      <td><a href="https://www.sparkfun.com/products/9815">Sparkfun</a></td>
-      <td>Ardumoto</td>
+      <td><a href="https://www.sparkfun.com/products/9815">Sparkfun Ardumoto</a></td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
       <td>6 - 15V shared</td>
