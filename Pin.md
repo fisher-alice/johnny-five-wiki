@@ -107,12 +107,20 @@ See [Modes](https://github.com/rwldrn/johnny-five/wiki/_preview#modes) for `supp
 var pin = new five.Pin(13);
 // This will set pin 13 high (on)
 pin.high();
+
+var pin = new five.Pin(9);
+// This will write 255 to pin 9
+pin.high();
 ```
 
 - **low()** Set the pin `LOW`.
 ```js
 var pin = new five.Pin(13);
 // This will set pin 13 low (off)
+pin.low();
+
+var pin = new five.Pin(9);
+// This will write 0 to pin 9
 pin.low();
 ```
 
