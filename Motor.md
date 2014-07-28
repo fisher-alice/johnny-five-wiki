@@ -370,7 +370,6 @@ This is by no means exhaustive
 <table>
   <thead>
     <tr>
-      <th>Manufacturer</th>
       <th>Name</th>
       <th>Motor A pins</th>
       <th>Motor B pins</th>
@@ -381,8 +380,7 @@ This is by no means exhaustive
   </thead>
   <tbody>
     <tr>
-      <td>Seeed Studios</td>
-      <td>Motor Shield V1</td>
+      <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a></td>
       <td>pwm:9,<br/>dir:8,<br/>cdir: 11</td>
       <td>pwm:10,<br/>dir:12,<br/>cdir: 13</td>
       <td>6-15V</td>
@@ -390,8 +388,7 @@ This is by no means exhaustive
       <td>No</td>
     </tr>
     <tr>
-      <td>Freetronics</td>
-      <td>Dual Channel H-Bridge Motor Driver Shield</td>
+      <td><a href="http://www.freetronics.com/products/hbridge-dual-channel-h-bridge-motor-driver-shield">Freetronics Dual Channel H-Bridge Motor Driver Shield</a></td>
       <td>pwm:6,<br/>dir:4,<br/>cdir: 7</td>
       <td>pwm:5,<br/>dir:3,<br/>cdir: 2</td>
       <td>8-40V</td>
