@@ -301,7 +301,7 @@ This is by no means exhaustive
   </thead>
   <tbody>
     <tr>
-      <td>(Arduino)[http://arduino.cc/en/Main/ArduinoMotorShieldR3]</td>
+      <td><a href="http://arduino.cc/en/Main/ArduinoMotorShieldR3">Arduino</a></td>
       <td>Motor Shield R3</td>
       <td>pwm:3,<br/>dir:12,<br/>[brake:9,]<br/>[current:A0]</td>
       <td>pwm:11,<br/>dir:13,<br/>[brake:8,]<br/>[current:A1]</td>
