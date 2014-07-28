@@ -51,7 +51,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
       <td>Number</td>
       <td>1-n</td>
       <td>
-        For single device cases, this can be omitted. Defaults to `1`.
+        For single device cases, this can be omitted. Defaults to 1.
       </td>
       <td>no</td>
     </tr>
