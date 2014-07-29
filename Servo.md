@@ -54,6 +54,13 @@ var servo = new five.Servo("O0");
       <td>no</td>
     </tr>
     <tr>
+      <td>isInverted</td>
+      <td>Boolean</td>
+      <td>true or false</td>
+      <td>Invert servo movement</td>
+      <td>no</td>
+    </tr>
+    <tr>
       <td>center</td>
       <td>Boolean</td>
       <td>true or false</td>
@@ -81,6 +88,7 @@ var esc = new five.Servo({
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Servo is attached to
   range: The range of motion in degrees. Defaults to [0, 180]
+  isInverted: A boolean, indicates whether servo values are inverted
   history: An array containing records of each movement 
   interval: A reference to the current interval, if one exists
   isMoving: A boolean flag, true when moving, false when still
