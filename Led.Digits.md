@@ -39,7 +39,7 @@ Known supported devices:
     <tr>
       <td>devices</td>
       <td>Number</td>
-      <td>1-n</td>
+      <td>1-8</td>
       <td>
         For single device cases, this can be omitted. Defaults to 1.
       </td>
