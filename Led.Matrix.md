@@ -1,4 +1,5 @@
-The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 LED Matrix (MAX7219/MAX7221) devices attached to the physical board. 
+The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 LED Matrix (MAX7219/MAX7221) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 512 controllable LEDs.
+
 
 <img src="https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg">
 
@@ -49,7 +50,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
     <tr>
       <td>devices</td>
       <td>Number</td>
-      <td>1-n</td>
+      <td>1-8</td>
       <td>
         For single device cases, this can be omitted. Defaults to 1.
       </td>
