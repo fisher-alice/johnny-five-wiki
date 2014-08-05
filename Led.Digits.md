@@ -1,4 +1,4 @@
-The `Led.Digits` class constructs an object that may represent one or more (chained) 8 Digit, 7-Segment \* LED Digit display (MAX7219/MAX7221) devices attached to the physical board. 
+The `Led.Digits` class constructs an object that may represent one or more (chained) 8 Digit, 7-Segment \* LED Digit display (MAX7219/MAX7221) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 64 displayable digits.
 
 \* Support for varying segment devices is in progress.
 
