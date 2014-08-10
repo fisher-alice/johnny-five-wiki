@@ -31,6 +31,9 @@
 [Button-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Button-pt_BR
 
 ### How-To Guides
-- [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
+- [Getting started with Johnny Five and Node Webkit](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Node-Webkit)
 - [Getting started with Johnny Five and Proteus](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Proteus)
+- [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
 - [Setting Up XBees and Johnny Five](https://github.com/rwaldron/johnny-five/wiki/Setting-Up-XBees-and-Johnny-Five)
+
+
