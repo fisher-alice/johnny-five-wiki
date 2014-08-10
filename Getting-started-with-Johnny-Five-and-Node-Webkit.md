@@ -435,16 +435,11 @@ cd ..\..
 echo.
 call :ColorText 0a "Copying files..."
 echo.
-rem if not exist %CUR_DIR%\release\ffmpegsumo.dll 
-copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\ffmpegsumo.dll %CUR_DIR%\release\ffmpegsumo.dll
-rem if not exist %CUR_DIR%\release\libEGL.dll 
-copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\libEGL.dll %CUR_DIR%\release\libEGL.dll
-rem if not exist %CUR_DIR%\release\libGLESv2.dll 
-copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\libGLESv2.dll %CUR_DIR%\release\libGLESv2.dll
-if not exist %CUR_DIR%\release\icudt.dll 
-copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\icudt.dll %CUR_DIR%\release\icudt.dll
-if not exist %CUR_DIR%\release\nw.pak 
-copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\nw.pak %CUR_DIR%\release\nw.pak
+rem if not exist %CUR_DIR%\release\ffmpegsumo.dll copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\ffmpegsumo.dll %CUR_DIR%\release\ffmpegsumo.dll
+rem if not exist %CUR_DIR%\release\libEGL.dll copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\libEGL.dll %CUR_DIR%\release\libEGL.dll
+rem if not exist %CUR_DIR%\release\libGLESv2.dll copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\libGLESv2.dll %CUR_DIR%\release\libGLESv2.dll
+if not exist %CUR_DIR%\release\icudt.dll copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\icudt.dll %CUR_DIR%\release\icudt.dll
+if not exist %CUR_DIR%\release\nw.pak copy %CUR_DIR%\buildTools\nw\node-webkit-v%NW_VERSION%-win-ia32\nw.pak %CUR_DIR%\release\nw.pak
 
 echo.
 call :ColorText 0a "Deleting temporary files..."
