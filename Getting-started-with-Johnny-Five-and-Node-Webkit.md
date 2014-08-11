@@ -568,7 +568,7 @@ and run:
 node-pre-gyp rebuild --runtime=node-webkit --target=0.8.6
 ```
 
-At the end, when the build process are finished, you can see that process run correctly 
+At the end, when the build process is finished, you can see that the process was performed correctly
 
 ```shell
 ...
@@ -598,14 +598,14 @@ Now that we have the correct version of node-serialport module installed to run 
 
 Double click at the `build.bat` file. When the build process finished, go to the release folder and open the application.
 
-When we run it, the application looks like normal, but when we try select the serial port in the select button at the top right, another error occurs and the application broke :( 
+When we run it, the application looks like normal, but when we try select the serial port in the select button at the top right, an error occurs and the application stops working :( 
 
 ![error_02](https://cloud.githubusercontent.com/assets/641525/3868690/5cddd312-205c-11e4-929a-f5644b0d12f9.png)
 
 
 Other error, really?
 --
-This error occurs because the `repl.js` make use of the `process.stdin`, as you can see [here](https://github.com/rwaldron/johnny-five/blob/master/lib/repl.js#L24), and node-webkit still not implement it.
+This error occurs because the `repl.js` makes use of the `process.stdin`, as you can see [here](https://github.com/rwaldron/johnny-five/blob/master/lib/repl.js#L24), and node-webkit still not implement it.
 
 So, to resolve this, we need write some little extra lines in our `main.js` file.
 
@@ -615,15 +615,15 @@ Writing the hook
 At the beginning of our `main.js` file, write the follow code:
 
 ```js
-var Readable = require('stream').Readable;
-var util = require('util');
+var Readable = require("stream").Readable;
+var util = require("util");
 util.inherits(MyStream, Readable);
 function MyStream(opt) {
   Readable.call(this, opt);
 }
 MyStream.prototype._read = function() {};
 // hook in our stream
-process.__defineGetter__('stdin', function() {
+process.__defineGetter__("stdin", function() {
   if (process.__stdin) return process.__stdin;
   process.__stdin = new MyStream();
   return process.__stdin;
@@ -645,9 +645,9 @@ Double click at the `build.bat` file. When the build process finished, go to the
 
 Finally our application works correctly and we can interact with it! 
 
-Make sure that the Arduino board is plugged and select the correct serial port. 
+Make sure that the Arduino board is plugged and then select the correct serial port. 
 
-The video below shows the interactions between our application and the Led component that are attached to the Arduino board.
+The video below shows the interactions between our application and a Led component that is attached to the Arduino board.
 
 [![j5nw](http://img.youtube.com/vi/rv65qAYFR84/0.jpg)](http://www.youtube.com/watch?v=rv65qAYFR84)
 
@@ -685,7 +685,7 @@ This is useful when you need test something quickly or log the outputs in the co
 
 Installing Johnny-Five for Node-Webkit directly
 --
-Previously in this tutorial, we saw that we need rebuild the node-serialport module to works correctly with node-webkit. In this way, if you like to install it "directly" without the needs of rebuild again the node-serial port, you can run the following command, when you install the johnny-five library.
+Previously in this tutorial, we saw that we need rebuild the node-serialport module to works correctly with node-webkit. In this way, if you like to install it "directly" without the needs of rebuild again the node-serialport, you can run the following command, when you install the johnny-five library.
 
 ```shell
 npm install johnny-five --runtime=node-webkit --target=0.8.6
@@ -719,7 +719,7 @@ We have seen in this tutorial how use node-webkit to create a desktop applicatio
 
 We use the Windows environment here, but you can taking advantages of node-webkit architecture and create cross platform application with all the power of web technologies and node.js. 
 
-You can also inclue the back again the `ffmpegsumo.dll`, `libEGL.dll` and `libGLESv2.dll` files and create an application that interact with sounds and videos. You can also use libraries like [Three.js](http://threejs.org/) to display a 3D objects, taking advantages of GPU acceleration, and interact with it when the user manipulated some physical components attached to the Arduino board.
+You can also inclue back again the `ffmpegsumo.dll`, `libEGL.dll` and `libGLESv2.dll` files and create an application that interact with sounds and videos. You can also use libraries like [Three.js](http://threejs.org/) to display a 3D objects, taking advantages of GPU acceleration, and interact with it when the user manipulated some physical components attached to the Arduino board.
 
 So, go ahead and try create something more complex and share with us.
 
