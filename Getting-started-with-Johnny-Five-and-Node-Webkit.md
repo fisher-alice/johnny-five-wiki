@@ -487,7 +487,7 @@ Frustrating, no?
 
 Why this error?
 --
-This error occours because the johnny-five dependency `node-serialport` is a ["3rd party modules with C/C++ addons"](https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules#3rd-party-modules-with-cc-addons).
+This error occurs because the johnny-five dependency `node-serialport` is a ["3rd party modules with C/C++ addons"](https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules#3rd-party-modules-with-cc-addons).
 
 From the project page:
 
