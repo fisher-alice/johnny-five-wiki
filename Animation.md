@@ -1,5 +1,5 @@
 The `Animation` class constructs objects that represent a single Animation. An Animation consists of a target and an array of segments.
-A **target** is the device or group of devices that are being animated. 
+A **target** is the device or list of devices that are being animated. 
 
 A **segment** is a short modular animation sequence (i.e. sit, stand, walk, etc). Segments are synchronous and run first-in, first-out.
 
