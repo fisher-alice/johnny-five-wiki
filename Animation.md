@@ -142,7 +142,7 @@ This is a step in degrees from the previous cuePoint's position.
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, -135, 20, 70 ], ...
 ```
-![keyFrames as a number](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(1).png)
+![keyFrames as a number](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(1).png)
 
 ###null
 The behavior of null varies depending upon its position in the array. If used in the first position, it will adopt the device's current value at the time the animation segment is played.
@@ -150,21 +150,21 @@ The behavior of null varies depending upon its position in the array. If used in
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ null, 90, -135, 20, 70 ], ...
 ```
-![null at beginning](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(2).png)
+![null at beginning](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(2).png)
 - - -
 If used at the end of the array it will copy the previous known value.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, -135, 20, null ], ...
 ```
-![null at end](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(3).png)
+![null at end](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(3).png)
 - - -
 If used between two keyFrames this cuePoint will be ignored for this device and the value will be a tween of the previous and next known values.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, null, 20, -155 ], ...
 ```
-![null in middle](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(4).png)
+![null in middle](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(4).png)
 
 ###false
 Will copy the previous known value (don't move the device)
@@ -172,7 +172,7 @@ Will copy the previous known value (don't move the device)
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, false, 20, -155 ], ...
 ```
-![false as a keyFrame](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(5).png)
+![false as a keyFrame](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(5).png)
 
 ###A keyFrame object
 The available properties for keyFrame objects are:
@@ -182,35 +182,35 @@ The available properties for keyFrame objects are:
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, {step: 90}, -135, 20, 70 ], ...
 ```
-![step property](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(1).png)
+![step property](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(1).png)
 
 **degrees**: The servo position in degrees.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, {degrees: 180}, -135, 20, 70 ], ...
 ```
-![degrees property](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(6).png)
+![degrees property](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(6).png)
 
 **easing**: An easing function from ease-component to apply to the tweened value of the previous and next keyFrames. See the [ease-component docs](https://www.npmjs.org/package/ease-component) for a list of available easing functions (default: "linear")
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, {degrees: 180, easing: "inOutCirc", -135, 20, 70 ], ...
 ```
-![easing property](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(7).png)
+![easing property](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(7).png)
 
 **copyDegrees**: An index from this keyFrames array from which we copy the calculated or explicitly set degrees value.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, -135, { copyDegrees: 1 }, -45 ], ...
 ```
-![copyDegrees property](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(8).png)
+![copyDegrees property](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(8).png)
 
 **copyFrame**: An index from this keyFrames array from which we copy all of the properties.
 ```
 // servo.last.degrees === 90
 ... cuePoints: [0, 0.25, 0.5, 0.75, 1], keyFrames : [ -45, 90, -135, { copyFrame: 1 }, 70 ], ...
 ```
-![copyFrame property](https://github.com/dtex/johnny-five/blob/animation/assets/Animation-Graph(9).png)
+![copyFrame property](https://github.com/rwaldron/johnny-five/blob/master/assets/Animation-Graph(9).png)
 
 **position**: A two or three tuple defining a coordinate in 2d or 3d space.
 ```
