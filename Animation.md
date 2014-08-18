@@ -8,7 +8,7 @@ Servos and Servo.Arrays may be animated. If you have a use case for another devi
 You should be familiar with the API of the device(s) you will be animating. You don't have to call the device methods directly but if you haven't used them before this will be frustrating.
 
 ### Parameters
-**target** A Servo, Servo.Array or an array of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
+**target** A Servo, Servo.Array or list of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
 ```js
 // Animate a single servo instance
 var servo = new five.Servo(9);
