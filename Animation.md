@@ -23,7 +23,7 @@ var animation = new five.Animation(servos);
 // Animate a Servo and Servo.Array. When passed as the member of an array, the 
 // Servo.Array will be passed the same value for all devices in the Servo.Array
 var servo = new five.Servo(9);
-var servos = new five.Servo.Array(10,11]);
+var servos = new five.Servo.Array([10,11]);
 var animation = new five.Animation([servo, servos]);
 ```
 ### Usage
