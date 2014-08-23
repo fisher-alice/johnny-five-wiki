@@ -128,8 +128,8 @@ sensor.scale(0, 180).on("change", function() {
 ```js
 var sensor = new five.Sensor("A0");
 
-// Voltage readings less then 100 will result in the value of the `boolean` property being false.
-// Voltage readings greater then 100 will result in the value of the `boolean` property being true.
+// Voltage readings less than 100 will result in the value of the `boolean` property being false.
+// Voltage readings greater than 100 will result in the value of the `boolean` property being true.
 sensor.booleanAt(100);
 
 ```
