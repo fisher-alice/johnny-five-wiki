@@ -45,7 +45,24 @@ An object of property parameters.
       </td>
       <td>no</td>
     </tr>
-
+    <tr>
+      <td>address</td>
+      <td>Number (usually in hexadecimal)</td>
+      <td>An I2C device address</td>
+      <td>
+        
+      </td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>controller</td>
+      <td>String</td>
+      <td>Motor controller interface type</td>
+      <td>
+        
+      </td>
+      <td>no</td>
+    </tr>
   </tbody>
 </table>
 *See [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor) for valid options on the current object
@@ -181,6 +198,30 @@ board.on("ready", function() {
 });
 ```
 
+Directional Motor via Adafruit Motor Shield V2
+```js
+var five = require("johnny-five"), 
+    board = new five.Board();
+
+board.on("ready", function() {
+
+  var motor = new five.Motor({
+      pins: {
+        pwm: 8,
+        dir: 9,
+        cdir: 10
+      },
+      address: 0x60,
+      controller: "PCA9685"
+    }
+  });
+
+  // Start the motor at maximum speed
+  motor.forward(255);
+
+});
+```
+
 
 ## API
 
@@ -269,6 +310,7 @@ board.wait(5000, function() {
 - [Motor 3-pin](https://github.com/rwldrn/johnny-five/blob/master/docs/motor-3-pin.md)
 - [Motor with Brake](https://github.com/rwldrn/johnny-five/blob/master/docs/motor-brake.md)
 - [Motor with Current Sensor](https://github.com/rwldrn/johnny-five/blob/master/docs/motor-current.md)
+- [Motor PCA9685 via I2C](https://github.com/rwldrn/johnny-five/blob/master/docs/motor-PCA9685.md)
 
 
 ## Additional Notes
@@ -390,5 +432,36 @@ This is by no means exhaustive
   </tbody>
 </table>
 
+#### I2C
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Interface</th>
+      <th>Motor A pins</th>
+      <th>Motor B pins</th>
+      <th>Motor C pins</th>
+      <th>Motor D pins</th>
+      <th>Operating Voltage(1)</th>
+      <th>Max A</th>
+      <th>Stackable(2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.adafruit.com/products/1438">Adafruit Motor/Stepper/Servo Shield V2</a></td>
+      <td>0x60 - 0x80</td>
+      <td>PCA9685</td>
+      <td>pwm:8,<br/>dir:9,<br/>cdir: 10</td>
+      <td>pwm:13,<br/>dir:12,<br/>cdir: 11</td>
+      <td>pwm:2,<br/>dir:3,<br/>cdir: 4</td>
+      <td>pwm:7,<br/>dir:6,<br/>cdir: 5</td>
+      <td>4.5-13.5V</td>
+      <td>3A</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 1. Beware of shared voltage, the shield may be able to handle higher voltages than your Arduino. 
 1. Indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
