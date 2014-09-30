@@ -1,8 +1,28 @@
-[Read more about IO Plugins here.](http://bocoup.com/weblog/intel-galileo-javascript-nodejs/)
+
 
 (This document is an incomplete draft)
 
 An IO plugin is any class whose instances implement a [Firmata](https://github.com/jgautier/firmata) compatible interface. 
+For an in-depth case study of creating an IO plugin, [read about the design and creation of the Galileo-IO Plugin here](http://bocoup.com/weblog/intel-galileo-javascript-nodejs/).
+
+### Available IO Plugins
+
+The following platform IO Plugins are currently available:
+
+- Beagle Bone
+  - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
+- Intel Galileo
+  - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
+- LightBlue Bean
+  - [Bean-IO](https://github.com/monteslu/bean-io/)
+- Pinoccio
+  - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
+- Raspberry Pi
+  - [Raspi-IO](https://gitlab.theoreticalideations.com/nebrius/raspi-io/)
+- Spark Core
+  - [Spark-IO](https://github.com/rwaldron/spark-io/)
+- IO Board (Generic IO Plugin class to make your own)
+  - [IOBoard](https://github.com/achingbrain/node-ioboard)
 
 ### Minimum Plugin Class Requirements
 
