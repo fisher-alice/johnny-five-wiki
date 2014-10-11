@@ -414,7 +414,7 @@ This is by no means exhaustive
   </thead>
   <tbody>
     <tr>
-      <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a></td>
+      <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a> and <a href="http://www.seeedstudio.com/depot/motor-shield-v20-p-1377.html?cPath=132_134">V2</a></td>
       <td>pwm:9,<br/>dir:8,<br/>cdir: 11</td>
       <td>pwm:10,<br/>dir:12,<br/>cdir: 13</td>
       <td>6-15V</td>
