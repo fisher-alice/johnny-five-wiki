@@ -108,11 +108,11 @@ board.on("ready", function() {
   // Uses default GP2Y0D805Z0F
   var prox = new five.IR.Proximity();
 
-  motion.on("motionstart", function() {
+  prox.on("motionstart", function() {
     console.log( "Something moved!" );
   });
 
-  motion.on("motionend", function() {
+  prox.on("motionend", function() {
     console.log( "All quiet now..." );
   });
 });
