@@ -438,7 +438,7 @@ This is by no means exhaustive
     <tr>
       <th>Name</th>
       <th>Address</th>
-      <th>Interface</th>
+      <th>Controller</th>
       <th>Motor A pins</th>
       <th>Motor B pins</th>
       <th>Motor C pins</th>
