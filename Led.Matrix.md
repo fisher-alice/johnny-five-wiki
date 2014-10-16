@@ -1,4 +1,4 @@
-The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 LED Matrix (MAX7219/MAX7221) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 512 controllable LEDs.
+The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 LED Matrix (MAX7219, MAX7221 and HT16K33) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 512 controllable LEDs.
 
 
 <img src="https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg">
@@ -9,12 +9,23 @@ Known supported devices:
 
 [See all on Tindie!](https://www.tindie.com/search/?q=MAX7219)
 
-- [MAX7219 Dot Matrix MCU LED Display Control Module Kit For Arduino With Dupont Cable](https://www.tindie.com/products/mmm999/max7219-dot-matrix-mcu-led-display-control-module-kit-for-arduino-with-dupont-cable/)
-- [LED Matrix Kit](https://www.sparkfun.com/products/11861)
-- [DIY MAX7219 Red LED Dot Matrix Display Module for Arduino](http://www.amazon.com/gp/product/B009U7LAS0/)
-- [Dot Matrix Display Kit w/MAX7219 IC, PCB](http://www.electrodragon.com/product/dot-matrix-display-kit-wmax7219-ic-pcb/)
-- [Dot Matrix Chain Display Kit Max7219 V2](http://www.electrodragon.com/product/dot-matrix-chain-display-kit-max7219-v2/)
+- Shift Register Devices
+  - MAX7219
+    - [MAX7219 Dot Matrix MCU LED Display Control Module Kit For Arduino With Dupont Cable](https://www.tindie.com/products/mmm999/max7219-dot-matrix-mcu-led-display-control-module-kit-for-arduino-with-dupont-cable/)
+    - [LED Matrix Kit](https://www.sparkfun.com/products/11861)
+    - [DIY MAX7219 Red LED Dot Matrix Display Module for Arduino](http://www.amazon.com/gp/product/B009U7LAS0/)
+    - [Dot Matrix Display Kit w/MAX7219 IC, PCB](http://www.electrodragon.com/product/dot-matrix-display-kit-wmax7219-ic-pcb/)
+    - [Dot Matrix Chain Display Kit Max7219 V2](http://www.electrodragon.com/product/dot-matrix-chain-display-kit-max7219-v2/)
 
+- I2C devices
+  - HT16K33
+    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Blue](http://www.adafruit.com/products/881)
+    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Green](http://www.adafruit.com/products/880)
+    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Yellow](http://www.adafruit.com/products/879)
+    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Red](http://www.adafruit.com/products/878)
+    - [Adafruit Mini 0.8" 8x8 LED Matrix w/I2C Backpack - Yellow-Green](http://www.adafruit.com/products/872)
+    - [Adafruit Mini 8x8 LED Matrix w/I2C Backpack - Yellow](http://www.adafruit.com/products/871)
+    - [Adafruit Mini 8x8 LED Matrix w/I2C Backpack - Red](http://www.adafruit.com/products/870)
 
 Adafruit offers a selection of 8x8 matrices in various colors: 
 
@@ -28,7 +39,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 ### Parameters
 
 
-- **options** An object of property parameters.
+- **shift register options** An object of property parameters.
 <table>
   <thead>
     <tr>
@@ -47,7 +58,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
       <td>data, clock, cs</td>
       <td>yes</td>
     </tr>
-    <tr>
+    <tr> 
       <td>devices</td>
       <td>Number</td>
       <td>1-8</td>
@@ -59,13 +70,54 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
   </tbody>
 </table>
+
+- **I2C options**
+<table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Properties</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>controller</td>
+      <td>string</td>
+      <td>A valid controller model name</td>
+      <td>HT16K33</td>
+      <td>yes</td>
+    </tr>
+    <tr> 
+      <td>isBicolor</td>
+      <td>Boolean</td>
+      <td>true|false</td>
+      <td>
+        ...
+      </td>
+      <td>no</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
 ```js
+// Shift Register device
 var matrix = new five.Led.Matrix({
   pins: {
     data: 2,
     clock: 3,
     cs: 4
   }
+});
+
+// I2C device
+var matrix = new five.Led.Matrix({ 
+  controller: "HT16K33",
+  isBicolor: true
 });
 
 ```
