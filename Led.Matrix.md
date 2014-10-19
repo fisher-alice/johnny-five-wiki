@@ -19,13 +19,11 @@ Known supported devices:
 
 - I2C devices
   - HT16K33
-    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Blue](http://www.adafruit.com/products/881)
-    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Green](http://www.adafruit.com/products/880)
-    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Yellow](http://www.adafruit.com/products/879)
-    - [Adafruit 0.56" 4-Digit 7-Segment Display w/I2C Backpack - Red](http://www.adafruit.com/products/878)
     - [Adafruit Mini 0.8" 8x8 LED Matrix w/I2C Backpack - Yellow-Green](http://www.adafruit.com/products/872)
     - [Adafruit Mini 8x8 LED Matrix w/I2C Backpack - Yellow](http://www.adafruit.com/products/871)
     - [Adafruit Mini 8x8 LED Matrix w/I2C Backpack - Red](http://www.adafruit.com/products/870)
+    - [Adafruit 1.2" LED Square Pixel Matrix w/I2C Backpack - bicolor](http://www.adafruit.com/products/902)
+    - [OCROBOT 8x8 LED Matrix - bicolor](http://www.aliexpress.com/item/Free-Shipping-1pc-Red-and-green-color-dot-matrix-module-I2C-1-8-inches-3mm-8/1364967656.html)
 
 Adafruit offers a selection of 8x8 matrices in various colors: 
 
@@ -90,12 +88,19 @@ Adafruit offers a selection of 8x8 matrices in various colors:
       <td>HT16K33</td>
       <td>yes</td>
     </tr>
+    <tr>
+      <td>addresses</td>
+      <td>array</td>
+      <td>An array of I2C addresses</td>
+      <td>Defaults to array of addresses in range 0x70 - 0x77, up to length specified by devices</td>
+      <td>no</td>
+    </tr>
     <tr> 
       <td>isBicolor</td>
       <td>Boolean</td>
       <td>true|false</td>
       <td>
-        ...
+        Defaults to false
       </td>
       <td>no</td>
     </tr>
@@ -248,10 +253,11 @@ matrix.brightness(100);
 ```
 
 
-- **led(row, col, 1|0)** Set on/off state for led at `row` and `col` (0-8, 0-8), of all devices.
-- **led(device index, row, col, state)** Set on/off state for led at `row` and `col` (00-8), for a device at the specified `device index`.
+- **led(row, col, state)** Set on/off/color state for led at `row` and `col` (0-8, 0-8), of all devices.
+- **led(device index, row, col, state)** Set on/off/color state for led at `row` and `col` (00-8), for a device at the specified `device index`.
 
 ```js
+// Shift Register device
 var matrix = new five.Led.Matrix({
   pins: {
     data: 2,
@@ -265,6 +271,17 @@ matrix.led(0, 0, 0, 1);
 
 // Turn on the top-left led of all devices
 matrix.led(0, 0, 1);
+
+// Turn off the top-left led of all devices
+matrix.led(0, 0, 0);
+
+// I2C device (bicolor)
+var matrix = new five.Led.Matrix({ 
+  controller: "HT16K33",
+  isBicolor: true
+});
+// Turn top-left led of the specified device yellow
+matrix.led(0, 0, 0, LedControl.COLORS.YELLOW);
 ```
 
 
