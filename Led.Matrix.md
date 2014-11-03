@@ -19,10 +19,10 @@ Known supported devices:
 
 - I2C devices
   - HT16K33
-    - [Adafruit Mini 0.8" 8x8 LED Matrix w/I2C Backpack - Yellow-Green](http://www.adafruit.com/products/872)
-    - [Adafruit Mini 8x8 LED Matrix w/I2C Backpack - Yellow](http://www.adafruit.com/products/871)
-    - [Adafruit Mini 8x8 LED Matrix w/I2C Backpack - Red](http://www.adafruit.com/products/870)
-    - [Adafruit 1.2" LED Square Pixel Matrix w/I2C Backpack - bicolor](http://www.adafruit.com/products/902)
+    - [Adafruit 0.8 8x8 LED Matrix (Any color)](https://learn.adafruit.com/adafruit-led-backpack/0-8-8x8-matrix)
+    - [Adafruit 1.2 8x8 LED Matrix bicolor](https://learn.adafruit.com/adafruit-led-backpack/bi-color-8x8-matrix)
+    - [Adafruit 1.2 8x8 LED Matrix (Any color)](https://learn.adafruit.com/adafruit-led-backpack/1-2-8x8-matrix)
+    - [Adafruit 1.2 16x8 LED Matrix (Any color)](https://www.adafruit.com/products/2040)
     - [OCROBOT 8x8 LED Matrix - bicolor](http://www.aliexpress.com/item/Free-Shipping-1pc-Red-and-green-color-dot-matrix-module-I2C-1-8-inches-3mm-8/1364967656.html)
 
 If you are working with HT16K33 devices, you will need to run at least version 2.4.0 of Firmata on the board, currently available in [beta](http://sourceforge.net/projects/firmata/files/Firmata/).
