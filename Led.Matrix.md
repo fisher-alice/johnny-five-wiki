@@ -71,7 +71,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
   </tbody>
 </table>
 
-- **I2C options**
+- **I2C options** (Requires StandardFirmata 2.4.0 or greater)
 <table>
   <thead>
     <tr>
@@ -103,6 +103,15 @@ Adafruit offers a selection of 8x8 matrices in various colors:
       <td>true|false</td>
       <td>
         Defaults to false
+      </td>
+      <td>no</td>
+    </tr>
+    <tr> 
+      <td>is16x8</td>
+      <td>Boolean</td>
+      <td>true|false</td>
+      <td>
+        The devices being used are each 16x8 units.
       </td>
       <td>no</td>
     </tr>
