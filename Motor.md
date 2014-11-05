@@ -439,10 +439,6 @@ This is by no means exhaustive
       <th>Name</th>
       <th>Address</th>
       <th>Controller</th>
-      <th>Motor A pins</th>
-      <th>Motor B pins</th>
-      <th>Motor C pins</th>
-      <th>Motor D pins</th>
       <th>Operating Voltage(1)</th>
       <th>Max A</th>
       <th>Stackable(2)</th>
@@ -453,14 +449,32 @@ This is by no means exhaustive
       <td><a href="http://www.adafruit.com/products/1438">Adafruit Motor/Stepper/Servo Shield V2</a></td>
       <td>0x60 - 0x80</td>
       <td>PCA9685</td>
-      <td>pwm:8,<br/>dir:9,<br/>cdir: 10</td>
-      <td>pwm:13,<br/>dir:12,<br/>cdir: 11</td>
-      <td>pwm:2,<br/>dir:3,<br/>cdir: 4</td>
-      <td>pwm:7,<br/>dir:6,<br/>cdir: 5</td>
       <td>4.5-13.5V</td>
       <td>3A</td>
       <td>Yes</td>
     </tr>
+    <tr>
+      <td colspan="7">
+        <table>
+          <thead>
+            <tr>
+              <th>M1</th>
+              <th>M2</th>
+              <th>M3</th>
+              <th>M4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pwm:8,<br/>dir:9,<br/>cdir: 10</td>
+              <td>pwm:13,<br/>dir:12,<br/>cdir: 11</td>
+              <td>pwm:2,<br/>dir:3,<br/>cdir: 4</td>
+              <td>pwm:7,<br/>dir:6,<br/>cdir: 5</td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+    </tr>    
   </tbody>
 </table>
 1. Beware of shared voltage, the shield may be able to handle higher voltages than your Arduino. 
