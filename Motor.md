@@ -454,7 +454,7 @@ This is by no means exhaustive
       <td>Yes</td>
     </tr>
     <tr>
-      <td colspan="6">
+      <td>
       </td>
       <td colspan="6">
         <table>
@@ -479,7 +479,6 @@ This is by no means exhaustive
     </tr>    
   </tbody>
 </table>
-
 
 1. Beware of shared voltage, the shield may be able to handle higher voltages than your Arduino. 
 1. Indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
