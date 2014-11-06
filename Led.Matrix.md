@@ -356,7 +356,7 @@ Valid "character" values:
 
 - A single character string, eg. `"A", "b", "1", "$"`
 - An array (with 8 or 16 elements) of 8-bit or 16-bit values, eg. `[0x00, 0x04, 0x15, 0x0E, 0x15, 0x04, 0x00, 0x00]` (That array represents `*` character). The dimensions of the character array must match the dimensions of the matrix i.e. 8x8, 8x16 or 16x8
-- An 8 or 16 element array of 8 or 16 character long strings, where each character represents the state of the LED at that position in the matrix, eg.
+- An 8 or 16 element array of 8 or 16 character long strings, where each character represents the on/off/color state of the LED at that position in the matrix, eg.
 ```js
 [
   "01100110",
