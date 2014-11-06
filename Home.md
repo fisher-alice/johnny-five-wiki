@@ -11,6 +11,7 @@
 - [Animation](https://github.com/rwldrn/johnny-five/wiki/Animation)
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
 - [Button](https://github.com/rwaldron/johnny-five/wiki/Button) ([Button-pt_BR][])
+- [Compass](https://github.com/rwaldron/johnny-five/wiki/Compass)
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
