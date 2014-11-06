@@ -1,4 +1,4 @@
-The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 LED Matrix (MAX7219, MAX7221 and HT16K33) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 512 controllable LEDs.
+The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 or 8x16 LED Matrix (MAX7219, MAX7221 and HT16K33) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 512 controllable LEDs.
 
 
 <img src="https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg">
@@ -107,11 +107,11 @@ Adafruit offers a selection of 8x8 matrices in various colors:
       <td>no</td>
     </tr>
     <tr> 
-      <td>is16x8</td>
-      <td>Boolean</td>
-      <td>true|false</td>
+      <td>dims</td>
+      <td>A valid dims object, array or string</td>
+      <td>rows, columns</td>
       <td>
-        The devices being used are each 16x8 units.
+        The dimensions for the devices being used: either 8x8, 16x8 or 8x16.
       </td>
       <td>no</td>
     </tr>
@@ -134,6 +134,12 @@ var matrix = new five.Led.Matrix({
 var matrix = new five.Led.Matrix({ 
   controller: "HT16K33",
   isBicolor: true
+});
+
+// 16x8 I2C device
+var matrix = new five.Led.Matrix({ 
+  controller: "HT16K33",
+  dims: "16x8"
 });
 
 ```
@@ -264,8 +270,8 @@ matrix.brightness(100);
 ```
 
 
-- **led(row, col, state)** Set on/off/color state for led at `row` and `col` (0-8, 0-8), of all devices.
-- **led(device index, row, col, state)** Set on/off/color state for led at `row` and `col` (00-8), for a device at the specified `device index`.
+- **led(row, col, state)** Set on/off/color state for led at `row` and `col` (0-16, 0-16), of all devices.
+- **led(device index, row, col, state)** Set on/off/color state for led at `row` and `col` (00-16), for a device at the specified `device index`.
 
 ```js
 // Shift Register device
@@ -296,8 +302,8 @@ matrix.led(0, 0, 0, LedControl.COLORS.YELLOW);
 ```
 
 
-- **row(row, 0-255)** Set `row` (0-8) value to 8-bit byte (0-255), of all devices.
-- **row(device index, row, 0-255)** Set `row` (0-8) value to 8-bit byte (0-255), for a device at the specified `device index`.
+- **row(row, 0-255)** Set `row` (0-16) to 8-bit or 16-bit value (0-0xFFFF), of all devices.
+- **row(device index, row, 0-255)** Set `row` (0-16) to 8-bit or 16-bit value (0-0xFFFF), for a device at the specified `device index`.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -313,11 +319,19 @@ matrix.row(0, 0, 255);
 
 // Turn on the entire first row of all devices
 matrix.row(0, 255);
+
+// 8x16 I2C device
+var matrix = new five.Led.Matrix({ 
+  controller: "HT16K33",
+  dims: [8,16]
+});
+// Turn on entire first row of all devices (16-bit value)
+matrix.row(0,0xFFFF)
 ```
 
 
-- **column(column, 0-255)** Set `column` (0-8) value to 8-bit byte (0-255), of all devices.
-- **column(device index, column, 0-255)** Set `column` (0-8) value to 8-bit byte (0-255), for a device at the specified `device index`.
+- **column(column, 0-255)** Set `column` (0-16) to 8-bit or 16-bit value (0-0xFFFF), of all devices.
+- **column(device index, column, 0-255)** Set `column` (0-16) to 8-bit or 16-bit value (0-0xFFFF), for a device at the specified `device index`.
 
 ```js
 var matrix = new five.Led.Matrix({
@@ -341,8 +355,8 @@ matrix.column(0, 255);
 Valid "character" values: 
 
 - A single character string, eg. `"A", "b", "1", "$"`
-- An 8 element array of 8-bit values, eg. `[0x00, 0x04, 0x15, 0x0E, 0x15, 0x04, 0x00, 0x00]` (That array represents `*` character).
-- An 8 element array of 8-bit binary string values, eg.
+- An array (with 8 or 16 elements) of 8-bit or 16-bit values, eg. `[0x00, 0x04, 0x15, 0x0E, 0x15, 0x04, 0x00, 0x00]` (That array represents `*` character). The dimensions of the character array must match the dimensions of the matrix i.e. 8x8, 8x16 or 16x8
+- An 8 or 16 element array of 8 or 16 character long strings, where each character represents the state of the LED at that position in the matrix, eg.
 ```js
 [
   "01100110",
