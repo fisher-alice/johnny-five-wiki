@@ -389,7 +389,7 @@ This is by no means exhaustive
       <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=59">DF Robot 1A</a></td>
       <td>pwm:6,<br/>dir:7</td>
       <td>pwm:5,<br/>dir:4</td>
-      <td></td>
+      <td>DF_ROBOT {A, B}</td>
       <td>7 - 12V</td>
       <td>1A</td>
       <td>No</td>
@@ -398,7 +398,7 @@ This is by no means exhaustive
       <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=69">DF Robot 2A</a></td>
       <td>pwm:6,<br/>dir:7</td>
       <td>pwm:5,<br/>dir:4</td>
-      <td></td>
+      <td>DF_ROBOT {A, B}</td>
       <td>4.8 - 35V</td>
       <td>2A</td>
       <td>No</td>
@@ -407,7 +407,7 @@ This is by no means exhaustive
       <td><a href="http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html">NKC Electronics Motor Control Shield Kit</a></td>
       <td>pwm:9,<br/>dir:12</td>
       <td>pwm:10,<br/>dir:13</td>
-      <td></td>
+      <td>NKC_ELECTRONICS_KIT {A, B}</td>
       <td>6 - 15V shared</td>
       <td>1A</td>
       <td>No</td>
@@ -416,7 +416,7 @@ This is by no means exhaustive
       <td><a href="http://www.ruggedcircuits.com/motor-control/rugged-motor-driver">Rugged Circuits Rugged Motor Driver</a></td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
-      <td></td>
+      <td>RUGGED_CIRCUITS {A, B}</td>
       <td>8-30V</td>
       <td>2.8A</td>
       <td>Yes</td>
@@ -425,7 +425,7 @@ This is by no means exhaustive
       <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits Basic Motor Driver</a></td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
-      <td></td>
+      <td>RUGGED_CIRCUITS {A, B}</td>
       <td>8-30V</td>
       <td>2A</td>
       <td>Yes</td>
@@ -434,7 +434,7 @@ This is by no means exhaustive
       <td><a href="https://www.sparkfun.com/products/9815">Sparkfun Ardumoto</a></td>
       <td>pwm:3,<br/>dir:12</td>
       <td>pwm:11,<br/>dir:13</td>
-      <td></td>
+      <td>SPARKFUN_ARDUMOTO {A, B}</td>
       <td>6 - 15V shared</td>
       <td>2A</td>
       <td>No</td>
@@ -460,7 +460,7 @@ This is by no means exhaustive
       <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a> and <a href="http://www.seeedstudio.com/depot/motor-shield-v20-p-1377.html?cPath=132_134">V2</a></td>
       <td>pwm:9,<br/>dir:8,<br/>cdir: 11</td>
       <td>pwm:10,<br/>dir:12,<br/>cdir: 13</td>
-      <td></td>
+      <td>SEEED_STUDIO {A, B}</td>
       <td>6-15V</td>
       <td>2A</td>
       <td>No</td>
@@ -484,6 +484,7 @@ This is by no means exhaustive
       <th>Name</th>
       <th>Address</th>
       <th>Controller</th>
+      <th>Shield Config</th>
       <th>Operating Voltage(1)</th>
       <th>Max A</th>
       <th>Stackable(2)</th>
@@ -494,6 +495,7 @@ This is by no means exhaustive
       <td><a href="http://www.adafruit.com/products/1438">Adafruit Motor/Stepper/Servo Shield V2</a></td>
       <td>0x60 - 0x80</td>
       <td>PCA9685</td>
+      <td>ADAFRUIT_V2 {M1, M2, M3, M4}
       <td>4.5-13.5V</td>
       <td>3A</td>
       <td>Yes</td>
