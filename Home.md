@@ -15,6 +15,7 @@
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
+- [IR.Reflect.Array](https://github.com/rwldrn/johnny-five/wiki/IR.Reflect.Array)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
 - [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
