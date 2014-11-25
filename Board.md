@@ -18,7 +18,7 @@ For non-Arduino based projects, the following platform [IO Plugins](https://gith
 
 - Beagle Bone
   - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
-- Intel Galileo
+- Intel Galileo, Edison
   - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
 - Pinoccio
   - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
@@ -28,7 +28,8 @@ For non-Arduino based projects, the following platform [IO Plugins](https://gith
   - [Spark-IO](https://github.com/rwaldron/spark-io/)
 - IO Board (Generic IO Plugin class to make your own!)
   - [IOBoard](https://github.com/achingbrain/node-ioboard)
-
+- Electric Imp
+  - [Imp-IO](https://github.com/rwaldron/imp-io)
 
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
@@ -60,6 +61,14 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
       <td>Path or name of device port/COM or SerialPort object</td>
       <td>no</td>
     </tr>
+    <tr>
+      <td>repl</td>
+      <td>Boolean</td>
+      <td>true, false</td>
+      <td>Set to `false` to disable REPL</td>
+      <td>no</td>
+    </tr>
+
   </tbody>
 </table>
 
