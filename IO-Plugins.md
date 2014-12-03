@@ -23,8 +23,8 @@ The following platform IO Plugins are currently available:
   - [Spark-IO](https://github.com/rwaldron/spark-io/)
 - Electric Imp
   - [Imp-IO](https://github.com/rwaldron/imp-io/)
-- IO Board (Generic IO Plugin class to make your own!)
-  - [IOBoard](https://github.com/achingbrain/node-ioboard)
+- BoardIO (Generic IO Plugin class to make your own!)
+  - [Board-IO](https://github.com/achingbrain/board-io)
 
 ### Minimum Plugin Class Requirements
 
