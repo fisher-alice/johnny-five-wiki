@@ -18,7 +18,7 @@ The following platform IO Plugins are currently available:
 - Pinoccio
   - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
 - Raspberry Pi
-  - [Raspi-IO](https://gitlab.theoreticalideations.com/nebrius/raspi-io/)
+  - [Raspi-IO](https://github.com/bryan-m-hughes/raspi-io)
 - Spark Core
   - [Spark-IO](https://github.com/rwaldron/spark-io/)
 - Electric Imp
