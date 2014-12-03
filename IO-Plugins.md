@@ -67,23 +67,61 @@ SERVO: 4
 - In firmata.js and Firmata protocol, `ANALOG` mode is used for reading (input) on analog pins because only a pin address integer is sent over the wire, which means that `A0` is sent as `0`, `A1` as `1` and so on. This creates an ambiguity: which `0` and `1` are we sending, digital or analog? Then, for reporting, analog reads are separated: https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino#L625-L632 This may not be relevant to all IO-Plugins, they may only need to provide the mode for compatibility and override it in `pinMode`. For Johnny-Five analog sensors to work with an IO Plugin, they need to support the conversion of 2 => 0 or 2 as it's used in firmata.
 
 **analogWrite(pin, value)**
-- Ensure pin mode is OUTPUT
+- Ensure pin mode is PWM (3)
 - Ensure PWM capability
 - Accept an 8 bit value (0-255) to write
 
 **digitalWrite(pin, value)**
-- Ensure pin mode is OUTPUT
+- Ensure pin mode is OUTPUT (1)
 - Write HIGH/LOW (single bit: 1 or 0)
 
+**i2cWrite(address, inBytes)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- `inBytes` is an array of data bytes to write
+
+**i2cWrite(address, register, inBytes)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- `register` is a single byte
+- `inBytes` is an array of data bytes to write
+
+**i2cWriteReg(address, register, value)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- `register` is a single byte
+- `value` is a single byte value
+
+**servoWrite(pin, value)**
+- Ensure pin mode is SERVO (4)
+  - Can be transformed
+- Ensure PWM capability
+- Accept an 8 bit value (0-255) to write
+
 **analogRead(pin, handler)**
+- Ensure pin mode is ANALOG (2)
+  - Can be transformed
 - Create a `data` event stream, invoking `handler` at an implementation independent frequency, however it is recommended that `handler` is called no less than once every 19 milliseconds.
 - A corresponding "analog-read-${pin}" event is also emitted
 
 **digitalRead(pin, handler)**
+- Ensure pin mode is INPUT (0)
+  - Can be transformed
 - Create a `data` event stream,  invoking `handler` at an implementation independent frequency, however it is recommended that `handler` is called no less than once every 19 milliseconds.
 - A corresponding "digital-read-${pin}" event is also emitted
 
+**i2cRead(address, cmdOrBytes, bytesToRead, handler)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- `cmdOrBytes` is written to the address prior to the read
+- Create a single `data` event,  invoking `handler` once after the read is complete
+- A corresponding "I2C-reply-${address}" event is also emitted
 
+**i2cRead(address, bytesToRead, handler)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- Create a single `data` event,  invoking `handler` once after the read is complete
+- A corresponding "I2C-reply-${address}" event is also emitted
 
 TODO: 
 
