@@ -11,7 +11,7 @@ The following platform IO Plugins are currently available:
 
 - Beagle Bone
   - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
-- Intel Galileo
+- Intel Galileo, Edison
   - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
 - LightBlue Bean
   - [Bean-IO](https://github.com/monteslu/bean-io/)
@@ -21,7 +21,9 @@ The following platform IO Plugins are currently available:
   - [Raspi-IO](https://gitlab.theoreticalideations.com/nebrius/raspi-io/)
 - Spark Core
   - [Spark-IO](https://github.com/rwaldron/spark-io/)
-- IO Board (Generic IO Plugin class to make your own)
+- Electric Imp
+  - [Imp-IO](https://github.com/rwaldron/imp-io/)
+- IO Board (Generic IO Plugin class to make your own!)
   - [IOBoard](https://github.com/achingbrain/node-ioboard)
 
 ### Minimum Plugin Class Requirements
