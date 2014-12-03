@@ -9,7 +9,7 @@ For an in-depth case study of creating an IO plugin, [read about the design and 
 
 The following platform IO Plugins are currently available:
 
-- Beagle Bone
+- Beagle Bone Black
   - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
 - Intel Galileo, Edison
   - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
