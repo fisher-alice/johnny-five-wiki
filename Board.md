@@ -13,23 +13,9 @@ Johnny-Five has been tested on, but is not limited to, the following boards:
 - [BotBoarduino](http://www.lynxmotion.com/c-153-botboarduino.aspx)
 - [Dagu Micro Magician v2](http://www.dawnrobotics.co.uk/dagu-micro-magician-v2/)
 - [Red Back Spider](http://robosavvy.com/store/product_info.php/products_id/1574)
+- [TI Launchpad](http://www.ti.com/ww/en/launchpad/launchpad.html?DCMP=mcu-launchpad&HQS=launchpad) (with [Energia Firmata](https://github.com/energia/Energia/tree/master/libraries/Firmata))
 
-For non-Arduino based projects, the following platform [IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins) are available:
-
-- Beagle Bone
-  - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
-- Intel Galileo, Edison
-  - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
-- Pinoccio
-  - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
-- Raspberry Pi
-  - [Raspi-IO](https://gitlab.theoreticalideations.com/nebrius/raspi-io/)
-- Spark Core
-  - [Spark-IO](https://github.com/rwaldron/spark-io/)
-- IO Board (Generic IO Plugin class to make your own!)
-  - [IOBoard](https://github.com/achingbrain/node-ioboard)
-- Electric Imp
-  - [Imp-IO](https://github.com/rwaldron/imp-io)
+For non-Arduino based projects, a number of [IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins) are available.
 
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
