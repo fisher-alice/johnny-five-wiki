@@ -51,6 +51,8 @@ The plugin must...
             - `report`: 1 if reporting, 0 if not reporting
             - `analogChannel`: corresponding analogPin index (127 if none), eg. `analogChannel: 0` is `A0` whose index is `14` in the `pins` array.
     - include a readonly property named `analogPins` whose value is an array of pin indices that correspond to the analog pin indices in the `pins` array. 
+- If an essential IO feature is not implemented or _cannot_ be implemented, the method _must_ throw. For example, the Raspberry Pi does not support analog inputs, if user code calls through to an `analogRead`, the program must throw as an irrefutable means of indicating non-support.
+- If a non-essential IO feature is not implemented or _cannot_ be implemented, the method _must_ accept the expected arguments and indicate successful completion. For example, if it receives a callback, that callback _must_ be called asynchronously.
 
 ### Minimum API Requirements
 
@@ -150,3 +152,8 @@ io.normalize("A0"); // 14
 **defaultLed**
 - This is the pin address for the board's default, built-in led.
 
+
+
+### TODO
+
+- Define pluggable transports, for example: replacing node-serialport with socket.io-serialport and similar. 
