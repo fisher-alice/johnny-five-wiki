@@ -27,6 +27,13 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
       </td>
       <td>yes</td>
     </tr>
+    <tr>
+      <td>isAnode</td>
+      <td>Boolean</td>
+      <td>true, false</td>
+      <td>Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED.</td>
+      <td>no</td>
+    </tr>
   </tbody>
 </table>
       
