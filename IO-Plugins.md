@@ -69,6 +69,7 @@ SERVO: 4
 - In firmata.js and Firmata protocol, `ANALOG` mode is used for reading (input) on analog pins because only a pin address integer is sent over the wire, which means that `A0` is sent as `0`, `A1` as `1` and so on. This creates an ambiguity: which `0` and `1` are we sending, digital or analog? Then, for reporting, analog reads are separated: https://github.com/firmata/arduino/blob/master/examples/StandardFirmata/StandardFirmata.ino#L625-L632 This may not be relevant to all IO-Plugins, they may only need to provide the mode for compatibility and override it in `pinMode`. For Johnny-Five analog sensors to work with an IO Plugin, they need to support the conversion of 2 => 0 or 2 as it's used in firmata.
 
 **analogWrite(pin, value)**
+**pwmWrite(pin, value)** (to supercede `analogWrite`)
 - Ensure pin mode is PWM (3)
 - Ensure PWM capability
 - Accept an 8 bit value (0-255) to write
