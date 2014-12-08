@@ -23,6 +23,8 @@ The following platform IO Plugins are currently available:
   - [Spark-IO](https://github.com/rwaldron/spark-io/)
 - Electric Imp
   - [Imp-IO](https://github.com/rwaldron/imp-io/)
+- RemoteIO (Wrapper to remote control another IO class)
+  - [Remote-IO](https://github.com/monteslu/remote-io)
 - BoardIO (Generic IO Plugin class to make your own!)
   - [Board-IO](https://github.com/achingbrain/board-io)
 
