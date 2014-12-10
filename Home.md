@@ -30,6 +30,7 @@
 - [ShiftRegister](https://github.com/rwaldron/johnny-five/wiki/ShiftRegister)
 - [Sonar](https://github.com/rwldrn/johnny-five/wiki/Sonar)
 - [Stepper](https://github.com/rwldrn/johnny-five/wiki/Stepper)
+- [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
 
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
 [Button-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Button-pt_BR
