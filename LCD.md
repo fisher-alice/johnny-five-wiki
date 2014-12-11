@@ -110,7 +110,7 @@ board.on("ready", function() {
 ``` js
   var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
   lcd.setCursor(0,1).print('Bloop');  //The second line, first character of the LCD display
-  lcd.home().print('Bleep'); //The second line, first character of the LCD display
+  lcd.home().print('Bleep'); //The first line, first character of the LCD display
 ```
 
 - **display()** Shows the characters on the LCD display
