@@ -38,7 +38,7 @@
 ### How-To Guides
 - [Getting started with Johnny Five and Node Webkit](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Node-Webkit)
 - [Getting started with Johnny Five and Proteus](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Proteus)
+- [Getting started with Johnny Five and the Intel Galileo gen2](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-the-Intel-Galileo-gen2)
 - [JY MCU Bluetooth Serial Port Module Notes](https://github.com/rwldrn/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes)
 - [Setting Up XBees and Johnny Five](https://github.com/rwaldron/johnny-five/wiki/Setting-Up-XBees-and-Johnny-Five)
-- [Getting started with Johnny Five and the Intel Galileo gen2](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-the-Intel-Galileo-gen2)
 
