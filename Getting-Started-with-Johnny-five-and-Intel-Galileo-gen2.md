@@ -32,6 +32,8 @@ There are a few [options](https://learn.sparkfun.com/tutorials/galileo-getting-s
 
 To do this we first need to obtain the IP address of the Galileo. This can be found using applications like [fing](http://www.overlooksoft.com/fing) or [Bonjour Browser](http://hobbyistsoftware.com/bonjourbrowser).
 
+![Bonjour Galileo IP address](http://i.imgur.com/DkJnObd.png)
+
 Now that we have our IP, all we need to do is type
 ```bash
 ssh root@x.x.x.x
