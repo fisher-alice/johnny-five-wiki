@@ -115,26 +115,31 @@ SERVO: 4
 - Create a `data` event stream,  invoking `handler` at an implementation independent frequency, however it is recommended that `handler` is called no less than once every 19 milliseconds.
 - A corresponding "digital-read-${pin}" event is also emitted
 
-**i2cRead(address, cmdOrBytes, bytesToRead, handler)**
+**i2cRead(address, register, bytesToRead, handler)**
 - Ensure pin mode is UNKNOWN (99)
   - Can be transformed
-- `cmdOrBytes` is written to the address prior to the read
-- Create a single `data` event,  invoking `handler` once after the read is complete
-- A corresponding "I2C-reply-${address}" event is also emitted
+- `register` is set prior to, or as part of, the read request.
+- Create a single `data` event,  invoking `handler` once per read, continuously and asynchronously reading.
+- A corresponding "I2C-reply-${address}-${register}" event is also emitted
 
 **i2cRead(address, bytesToRead, handler)**
 - Ensure pin mode is UNKNOWN (99)
   - Can be transformed
-- Create a single `data` event,  invoking `handler` once after the read is complete
-- A corresponding "I2C-reply-${address}" event is also emitted
+- Create a single `data` event,  invoking `handler` once per read, continuously and asynchronously reading.
+- A corresponding "I2C-reply-${address}-0" event is also emitted
 
-TODO: 
+**i2cRead(address, register, bytesToRead, handler)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- `register` is set prior to, or as part of, the read request.
+- Create a single `data` event,  invoking `handler` once after a single asynchronous read.
+- A corresponding "I2C-reply-${address}-0" event is also emitted
 
-- sendI2CWriteRequest
-- sendI2CReadRequest
-- sendI2CConfig
-
-
+**i2cRead(address, bytesToRead, handler)**
+- Ensure pin mode is UNKNOWN (99)
+  - Can be transformed
+- Create a single `data` event,  invoking `handler` once after a single asynchronous read.
+- A corresponding "I2C-reply-${address}-${register}" event is also emitted
 
 ### Special Method Definitions
 
