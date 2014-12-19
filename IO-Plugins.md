@@ -128,14 +128,14 @@ SERVO: 4
 - Create a single `data` event,  invoking `handler` once per read, continuously and asynchronously reading.
 - A corresponding "I2C-reply-${address}-0" event is also emitted
 
-**i2cRead(address, register, bytesToRead, handler)**
+**i2cReadOnce(address, register, bytesToRead, handler)**
 - Ensure pin mode is UNKNOWN (99)
   - Can be transformed
 - `register` is set prior to, or as part of, the read request.
 - Create a single `data` event,  invoking `handler` once after a single asynchronous read.
 - A corresponding "I2C-reply-${address}-0" event is also emitted
 
-**i2cRead(address, bytesToRead, handler)**
+**i2cReadOnce(address, bytesToRead, handler)**
 - Ensure pin mode is UNKNOWN (99)
   - Can be transformed
 - Create a single `data` event,  invoking `handler` once after a single asynchronous read.
