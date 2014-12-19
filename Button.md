@@ -37,7 +37,7 @@ var button = new five.Button("I0");
       <td>invert</td>
       <td>Boolean</td>
       <td>true or false</td>
-      <td>Invert the up and down values</td>
+      <td>Invert the up and down values. This is useful for inverting button signals when the pin itself doesn't have built-in pullup resistor capabilities.</td>
       <td>no</td>
     </tr>
     <tr>
