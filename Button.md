@@ -7,7 +7,13 @@ The `Button` class constructs objects that represent a single digital Button att
 ```js
 var button = new five.Button(5);
 ```
-TinkerKit: 
+
+```js
+// Attached to an analog pin
+var button = new five.Button("A0");
+```
+
+
 ```js
 // Attached to TinkerKit's "Input 0"
 var button = new five.Button("I0");
