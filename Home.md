@@ -8,6 +8,7 @@
 [fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
 
 ### Documentation 
+- [Accelerometer](https://github.com/rwldrn/johnny-five/wiki/Accelerometer)
 - [Animation](https://github.com/rwldrn/johnny-five/wiki/Animation)
 - [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
 - [Button](https://github.com/rwaldron/johnny-five/wiki/Button) ([Button-pt_BR][])
