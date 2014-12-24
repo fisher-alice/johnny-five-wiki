@@ -1,6 +1,6 @@
 The `Accelerometer` class constructs objects that represent a single Accelerometer sensor attached to the physical board.
 
-Johnny-Five currently support two kinds of Accelerometers:
+Johnny-Five currently supports two kinds of Accelerometers:
 
 - Analog (Like the Tinkerkit 2/3-Axis Accelerometer)
 - MPU-6050 I2C IMU
