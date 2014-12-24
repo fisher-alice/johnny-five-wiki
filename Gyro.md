@@ -1,4 +1,4 @@
-The `Gyro` class constructs objects that represent a single analog Gyro sensor attached to the physical board.
+The `Gyro` class constructs objects that represent a single Gyro sensor attached to the physical board.
 
 We currently support two kinds of Gyros:
 
