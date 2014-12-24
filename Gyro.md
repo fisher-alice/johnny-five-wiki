@@ -83,6 +83,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
       <th>Type</th>
       <th>Value(s)</th>
       <th>Description</th>
+      <th>Default</th>
       <th>Required</th>
     </tr>
   </thead>
@@ -92,7 +93,8 @@ This list will continue to be updated as more Gyro devices are confirmed.
       <td>Number</td>
       <td>LSB/DegreesPerSecond</td>
       <td>The sensitivity of the device.  The MPU-6050 is currently configured at +/- 250 degrees per second</td>
-      <td>yes</td>
+      <td>131</td>
+      <td>no</td>
     </tr>
   </tbody>
 </table>
