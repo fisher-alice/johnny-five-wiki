@@ -1,22 +1,81 @@
 The `Gyro` class constructs objects that represent a single analog Gyro sensor attached to the physical board.
 
+We currently support two kinds of Gyros:
+
+- Analog (Like the Tinkerkit 2-Axis Gyro)
+- MPU-6050 I2C IMU
+
 This list will continue to be updated as more Gyro devices are confirmed.
 
 ### Parameters
 
+- **General Options**
+<table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Description</th>
+      <th>Default</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>controller</td>
+      <td>string</td>
+      <td>"ANALOG" | "MPU6050"</td>
+      <td>The Name of the controller to use</td>
+      <td>"ANALOG"</td>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
 
-- **pins** An Array of String address values for the Gyro's x and y pin (analog only).
-```js
-var gyro = new five.Gyro(["A0", "A1"]);
+- **Analog Options(`controller: "ANALOG"`)** 
+<table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Description</th>
+      <th>Default</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pins</td>
+      <td>Array of Strings</td>
+      <td>["A*"]</td>
+      <td>The String analog pins that X and Y are attached to</td>
+      <td>none</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>sensitivity</td>
+      <td>Number</td>
+      <td>Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X`</td>
+      <td>This value can be identified in the device's datasheet.</td>
+      <td>none</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>resolution</td>
+      <td>Number</td>
+      <td>Varies by device</td>
+      <td>This value can be identified in the device's datasheet</td>
+      <td>4.88</td>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
 
-var gyro = new five.Gyro({
-  pins: ["A0", "A1"]
-});
-```
 
 
-
-- **options** An object of property parameters.
+- **MPU-6050 Options(`controller: "MPU6050"`)** 
 <table>
   <thead>
     <tr>
@@ -29,29 +88,15 @@ var gyro = new five.Gyro({
   </thead>
   <tbody>
     <tr>
-      <td>pins</td>
-      <td>Array of Strings</td>
-      <td>["A*"]</td>
-      <td>The String analog pins that X and Y are attached to</td>
-      <td>yes</td>
-    </tr>
-
-    <tr>
-      <td>amplify</td>
-      <td>Number</td>
-      <td>--</td>
-      <td>Currently unused</td>
-      <td>no</td>
-    </tr>
-    <tr>
       <td>sensitivity</td>
       <td>Number</td>
-      <td>Varies by device</td>
-      <td>This value can be identified in the device's datasheet</td>
-      <td>no</td>
+      <td>LSB/DegreesPerSecond</td>
+      <td>The sensitivity of the device.  The MPU-6050 is currently configured at +/- 250 degrees per second</td>
+      <td>yes</td>
     </tr>
   </tbody>
 </table>
+
 ```js
 // Create an analog Gyro object:
 // 
@@ -60,7 +105,19 @@ var gyro = new five.Gyro({
 //
 var gyro = new five.Gyro({
   pins: ["A0", "A1"],
-  sensitivity: 0.67 
+  sensitivity: 0.67,
+  resolution: 4.88
+});
+```
+
+```js
+// Create an MPU-6050 Gyro object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the MPU6050 controller
+var gyro = new five.Gyro({
+  controller: "MPU6050",
+  sensitivity: 131
 });
 ```
 
@@ -69,12 +126,15 @@ var gyro = new five.Gyro({
 ```
 { 
   id: A user definable id value. Defaults to a generated uid
-  pins: The pins defined for X and Y.
+  pins: The pins defined for X, Y, and Z.
+  isCalibrated: The calibration state of the device. READONLY
   pitch: An object containing values for the pitch rate and angle. READONLY
   roll: An object containing values for the roll rate and angle. READONLY
-  rate: And object containing the rate values of X and Y. READONLY
+  yaw: An object containing values for the yaw rate and angle. READONLY
+  rate: And object containing the rate values of X, Y, and Z. READONLY
   x: Value of x axis. READONLY
   y: Value of y axis. READONLY
+  z: Value of z axis. READONLY
 }
 ```
 
@@ -98,6 +158,10 @@ board.on("ready", function() {
   });
 });
 ```
+
+## API
+
+* **recalibrate()** Tell the device to recalibrate
 
 ## Events
 
