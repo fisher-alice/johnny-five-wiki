@@ -107,8 +107,8 @@ This list will continue to be updated as more Gyro devices are confirmed.
 //
 var gyro = new five.Gyro({
   pins: ["A0", "A1"],
-  sensitivity: 0.67,
-  resolution: 4.88
+  sensitivity: 0.67, // optional
+  resolution: 4.88   // optional
 });
 ```
 
@@ -119,7 +119,7 @@ var gyro = new five.Gyro({
 //  - specify the MPU6050 controller
 var gyro = new five.Gyro({
   controller: "MPU6050",
-  sensitivity: 131
+  sensitivity: 131 // optional
 });
 ```
 
