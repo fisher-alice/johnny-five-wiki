@@ -50,7 +50,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
       <td>pins</td>
       <td>Array of Strings</td>
       <td>["A*"]</td>
-      <td>The String analog pins that X and Y are attached to</td>
+      <td>The String analog pins that X, Y, and Z (optional) are attached to</td>
       <td>none</td>
       <td>yes</td>
     </tr>
