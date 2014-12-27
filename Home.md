@@ -15,6 +15,7 @@
 - [Compass](https://github.com/rwaldron/johnny-five/wiki/Compass)
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
+- [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
 - [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
 - [IR.Reflect.Array](https://github.com/rwldrn/johnny-five/wiki/IR.Reflect.Array)
 - [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
