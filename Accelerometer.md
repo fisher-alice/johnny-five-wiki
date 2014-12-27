@@ -186,5 +186,6 @@ if (accelerometer.hasAxis("z")) {
 ## Examples
 
 - [Tinkerkit Accelerometer](https://github.com/rwaldron/johnny-five/blob/master/docs/tinkerkit-accelerometer.md)
+- [MPU6050 Accelerometer](https://github.com/rwaldron/johnny-five/blob/master/docs/accelerometer-mpu6050.md)
 - [Accelerometer](https://github.com/rwaldron/johnny-five/blob/master/docs/accelerometer.md)
 - [Accelerometer Pan and Tilt](https://github.com/rwaldron/johnny-five/blob/master/docs/accelerometer-pan-tilt.md)
