@@ -1,8 +1,8 @@
-The `IMU` class constructs objects that represent a single IMU module attached to the physical board.
+The `IMU` class constructs objects that represent a single IMU module attached to the physical board.  An IMU is an Inertial Measurement Unit.  IMUs come in all shapes and DOFs (Degrees of Freedom).  They are often made up of several components like Accelerometers, Gyros, Temperature Sensors, and Magnetometers.
 
 Johnny-Five currently supports one kind of IMU:
 
-- MPU-6050
+- [MPU-6050](http://www.invensense.com/mems/gyro/mpu6050.html)
 
 This list will continue to be updated as more devices are confirmed.
 
