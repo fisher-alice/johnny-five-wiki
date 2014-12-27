@@ -97,11 +97,11 @@ This list will continue to be updated as more Analog devices are confirmed.
   </thead>
   <tbody>
     <tr>
-      <td>maxValue</td>
+      <td>sensitivity</td>
       <td>Number</td>
       <td>16 bit value</td>
-      <td>The raw value of the device when pointing at gravity</td>
-      <td>17300</td>
+      <td>The sensitivity for the +- 250 setting of this device</td>
+      <td>16384</td>
       <td>no</td>
     </tr>
   </tbody>
@@ -127,7 +127,7 @@ var accelerometer = new five.Accelerometer({
 //  - specify the MPU6050 controller
 var accelerometer = new five.Accelerometer({
   controller: "MPU6050",
-  maxValue: 17300 // optional
+  sensitivity: 16384 // optional
 });
 ```
 
