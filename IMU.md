@@ -115,7 +115,7 @@ The IMU does not have an explicit API.  Refer to the individual components for t
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds.
 
-- **change** The IMU does not emit "change" events directly.  You can wath the aggregate components for "change" events.
+- **change** The IMU does not emit "change" events directly.  You can watch the aggregate components for "change" events.
 
 ## Examples
 
