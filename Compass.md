@@ -17,7 +17,7 @@ The `Compass` class constructs an object that represents a single Compass sensor
   </thead>
   <tbody>
     <tr>
-      <td>device</td>
+      <td>controller</td>
       <td>String</td>
       <td>"HMC6352" or "HMC5883L"</td>
       <td>Defines the compass module device</td>
@@ -34,7 +34,7 @@ The `Compass` class constructs an object that represents a single Compass sensor
       <td>gauss</td>
       <td>Number</td>
       <td>cgs units</td>
-      <td>Set the scale gauss for compass readings</td>
+      <td>Set the scale gauss for compass readings. Defaults to 1.3</td>
       <td>no</td>
     </tr>
   </tbody>
@@ -42,8 +42,8 @@ The `Compass` class constructs an object that represents a single Compass sensor
 
 ```js
   // Create a compass sensor
-  compass = new five.Compass({
-    device: "HMC6352",
+  var compass = new five.Compass({
+    controller: "HMC6352",
     freq: 100,
     gauss: 1.3
   });
@@ -61,36 +61,38 @@ The `Compass` class constructs an object that represents a single Compass sensor
 ## Usage
 
 ```js
-var five = require("../lib/johnny-five.js"),
-  board, compass;
-
-board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
-  compass = new five.Compass({
-    device: "HMC6352",
-    //device: "HMC5883L",
-    freq: 66,
-    gauss: 1.3
+  var compass = new five.Compass({
+    controller: "HMC6352"
   });
 
   compass.on("headingchange", function() {
-
     console.log("heading", Math.floor(this.heading));
     console.log("bearing", this.bearing);
-  });
-
-  // "read"
-  //
-  // Fires continuously, every 66ms.
-  //
-  compass.on("data", function(err, timestamp) {
-    console.log("data", this.axis);
   });
 });
 ```
 
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  var compass = new five.Compass({
+    controller: "HMC5883L"
+  });
+
+  compass.on("headingchange", function() {
+    console.log("heading", Math.floor(this.heading));
+    console.log("bearing", this.bearing);
+  });
+});
+```
 ## API
 
 * **heading** Gets the compass heading reading
