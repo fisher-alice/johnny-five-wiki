@@ -3,6 +3,7 @@ The `Compass` class constructs an object that represents a single Compass sensor
 ### Paramaters
 
  * **options** An object of property parameters.
+
 ### Shape
 
 <table>
