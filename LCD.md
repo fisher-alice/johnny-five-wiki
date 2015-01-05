@@ -65,7 +65,7 @@ board.on("ready", function() {
 ## API
 
 - **print(message, opts)** prints the string 'message' to the LCD display at the cursor's current position
-- if `opts.dontProcessSpecials` is set to true, it will not print out any special characters created by the `useChar(charCode|name)` function.
+  - if `opts.dontProcessSpecials` is set to true, it will not print out any special characters created by the `useChar(charCode|name)` function.
 
 ``` js
 
