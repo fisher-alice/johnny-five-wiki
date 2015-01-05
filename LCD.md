@@ -50,7 +50,7 @@ The `LCD` class constructs an object that represents an LCD Display.
 ### Usage
 
 ```js
-var five = require("johnny-five"), 
+var five = require("johnny-five"),
     board = new five.Board();
 
 board.on("ready", function() {
@@ -67,56 +67,56 @@ board.on("ready", function() {
 - **print(message, opts)** prints the string 'message' to the LCD display at the cursor's current position
   - if `opts.dontProcessSpecials` is set to true, it will not print out any special characters created by the `useChar(charCode|name)` function.
 
-``` js
+  ``` js
 
-// No special characters
-lcd.print("Bleep bloop");
+  // No special characters
+  lcd.print("Bleep bloop");
 
-// With special characters. 
-// This will print a heart character in 1 character space.
-lcd.useChar("heart");
-lcd.print(":heart:");
+  // With special characters.
+  // This will print a heart character in 1 character space.
+  lcd.useChar("heart");
+  lcd.print(":heart:");
 
-// With special characters, unprocessed. 
-// This will print the literal string ":heart:" in 7 character spaces.
-lcd.useChar("heart");
-lcd.print(":heart:", { dontProcessSpecials: true });
-```
+  // With special characters, unprocessed.
+  // This will print the literal string ":heart:" in 7 character spaces.
+  lcd.useChar("heart");
+  lcd.print(":heart:", { dontProcessSpecials: true });
+  ```
 
-- **useChar(charCode|name)** Creates the character in LCD memory and adds character to current LCD character map. LCD memory is limited to 8 special characters at a time. 
+- **useChar(charCode|name)** Creates the character in LCD memory and adds character to current LCD character map. LCD memory is limited to 8 special characters at a time.
 
-``` js
-lcd.useChar("heart");
-lcd.print("Hello :heart:");
-```
+  ``` js
+  lcd.useChar("heart");
+  lcd.print("Hello :heart:");
+  ```
 
-- **clear()** Clears all text on the LCD. 
+- **clear()** Clears all text on the LCD.
 
-``` js
-lcd.print("Bleep bloop");
-lcd.clear();
-```
+  ``` js
+  lcd.print("Bleep bloop");
+  lcd.clear();
+  ```
 
 - **cursor(row, column)** Sets the cursor position.
 
-``` js
-// The starting position of the LCD display
-lcd.cursor(0, 0).print("Bleep");
+  ``` js
+  // The starting position of the LCD display
+  lcd.cursor(0, 0).print("Bleep");
 
-// The second line, first character of the LCD display
-lcd.cursor(0, 1).print("Bloop");
+  // The second line, first character of the LCD display
+  lcd.cursor(0, 1).print("Bloop");
 
-```
+  ```
 
 - **home()** Sets the cursor position to row 0, column 0.
 
-``` js
-// The second line, first character of the LCD display
-lcd.cursor(1, 0).print("Bloop"); 
+  ``` js
+  // The second line, first character of the LCD display
+  lcd.cursor(1, 0).print("Bloop");
 
-// The first line, first character of the LCD display
-lcd.home().print("Bleep"); 
-```
+  // The first line, first character of the LCD display
+  lcd.home().print("Bleep");
+  ```
 
 - **display()** Turn the display on.
 
@@ -124,25 +124,25 @@ lcd.home().print("Bleep");
 
 - **blink()** This causes the cursor to show and blink
 
-``` js
-lcd.blink().print("Bleep Bloop");
-```
+  ``` js
+  lcd.blink().print("Bleep Bloop");
+  ```
 
 - **noBlink()** This causes the cursor to stop blinking
 
-``` js
-lcd.noBlink().print("Bleep Bloop");
-```
+  ``` js
+  lcd.noBlink().print("Bleep Bloop");
+  ```
 
 - **autoscroll()** Turns on automatic scrolling of the LCD. This causes each character output to the display to push previous characters over by one space.
 
-``` js
-lcd.autoscroll().print("Bloop").print("Bleep");
-```
+  ``` js
+  lcd.autoscroll().print("Bloop").print("Bleep");
+  ```
 
 - **noAutoscroll()** Turns off automatic scrolling of the LCD.
 
-``` js
-lcd.noAutoscroll().print("Bloop").print("Bleep");
-```
+  ``` js
+  lcd.noAutoscroll().print("Bloop").print("Bleep");
+  ```
 
