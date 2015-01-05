@@ -72,11 +72,13 @@ board.on("ready", function() {
 // No special characters
 lcd.print("Bleep bloop");
 
-// With special characters. This will print a heart character in 1 character space.
+// With special characters. 
+// This will print a heart character in 1 character space.
 lcd.useChar("heart");
 lcd.print(":heart:");
 
-// With special characters, unprocessed. This will print the literal string ":heart:" in 7 character spaces.
+// With special characters, unprocessed. 
+// This will print the literal string ":heart:" in 7 character spaces.
 lcd.useChar("heart");
 lcd.print(":heart:", { dontProcessSpecials: true });
 ```
@@ -98,15 +100,22 @@ lcd.clear();
 - **cursor(row, column)** Sets the cursor position.
 
 ``` js
-lcd.cursor(0, 0).print("Bleep"); // The starting position of the LCD display
-lcd.cursor(0, 1).print("Bloop"); // The second line, first character of the LCD display
+// The starting position of the LCD display
+lcd.cursor(0, 0).print("Bleep");
+
+// The second line, first character of the LCD display
+lcd.cursor(0, 1).print("Bloop");
+
 ```
 
 - **home()** Sets the cursor position to row 0, column 0.
 
 ``` js
-lcd.cursor(1, 0).print("Bloop");  // The second line, first character of the LCD display
-lcd.home().print("Bleep"); // The first line, first character of the LCD display
+// The second line, first character of the LCD display
+lcd.cursor(1, 0).print("Bloop"); 
+
+// The first line, first character of the LCD display
+lcd.home().print("Bleep"); 
 ```
 
 - **display()** Turn the display on.
