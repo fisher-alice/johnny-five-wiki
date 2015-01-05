@@ -55,103 +55,85 @@ var five = require("johnny-five"),
 
 board.on("ready", function() {
 
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
+  var lcd = new five.LCD({ pins: [ 2, 3, 4, 5, 11, 12 ] });
 
-  lcd.on("ready", function(){
-    lcd.clear();
-    lcd.home();
-    lcd.print("Hello");
-  });
-  });
+  lcd.print("Hello");
+});
 
 ```
 
 ## API
 
-- **print(message,opts)** prints the string 'message' to the LCD display at the cursor's current position
-- if opts.dontProcessSpecials is set to true, it will not print out any special characters created by the useChar(charCode) function.
+- **print(message, opts)** prints the string 'message' to the LCD display at the cursor's current position
+- if `opts.dontProcessSpecials` is set to true, it will not print out any special characters created by the `useChar(charCode|name)` function.
 
 ``` js
-  // Example without dontProcessSpecials
-   var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-   lcd.print('Bleep bloop');
-  
-  // Example with dontProcessSpecials
-  lcd.useChar("heart");
-  lcd.print('Hello :heart:',{ dontProcessSpecials : false });
+
+// No special characters
+lcd.print("Bleep bloop");
+
+// With special characters. This will print a heart character in 1 character space.
+lcd.useChar("heart");
+lcd.print(":heart:");
+
+// With special characters, unprocessed. This will print the literal string ":heart:" in 7 character spaces.
+lcd.useChar("heart");
+lcd.print(":heart:", { dontProcessSpecials: true });
 ```
 
-- **useChar(charCode)** Creates the character in LCD memory and adds character to current LCD character map 
+- **useChar(charCode|name)** Creates the character in LCD memory and adds character to current LCD character map. LCD memory is limited to 8 special characters at a time. 
 
 ``` js
- var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
- lcd.useChar("heart");
- lcd.print('Hello :heart:');
+lcd.useChar("heart");
+lcd.print("Hello :heart:");
 ```
 
 - **clear()** Clears all text on the LCD. 
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.print('Bleep bloop');
-  lcd.clear();
+lcd.print("Bleep bloop");
+lcd.clear();
 ```
 
-- **setCursor(x,y)** Sets the cursor the the position <x,y>
+- **cursor(row, column)** Sets the cursor position.
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.setCursor(0,0).print('Bleep'); //The starting position of the LCD display
-  lcd.setCursor(0,1).print('Bloop'); //The second line, first character of the LCD display
+lcd.cursor(0, 0).print("Bleep"); // The starting position of the LCD display
+lcd.cursor(0, 1).print("Bloop"); // The second line, first character of the LCD display
 ```
 
-- **home()** Sets the cursor the the position <0,0>
+- **home()** Sets the cursor position to row 0, column 0.
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.setCursor(0,1).print('Bloop');  //The second line, first character of the LCD display
-  lcd.home().print('Bleep'); //The first line, first character of the LCD display
+lcd.cursor(1, 0).print("Bloop");  // The second line, first character of the LCD display
+lcd.home().print("Bleep"); // The first line, first character of the LCD display
 ```
 
-- **display()** Shows the characters on the LCD display
+- **display()** Turn the display on.
 
-``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.display().print('Bleep Bloop');
-```
-- **noDisplay()** Shows the characters on the LCD display
-
-``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.noDisplay().print('Bleep Bloop'); //You will not see this text on the LCD display
-```
+- **noDisplay()** Turn the display off.
 
 - **blink()** This causes the cursor to show and blink
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.blink().print('Bleep Bloop');
+lcd.blink().print("Bleep Bloop");
 ```
 
 - **noBlink()** This causes the cursor to stop blinking
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.noBlink().print('Bleep Bloop');
+lcd.noBlink().print("Bleep Bloop");
 ```
-- **autoscroll()** Turns on automatic scrolling of the LCD. This causes each character output to the display to push previous characters -  over by one space
+
+- **autoscroll()** Turns on automatic scrolling of the LCD. This causes each character output to the display to push previous characters over by one space.
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.autoscroll().print('Bloop').print('Bleep');
+lcd.autoscroll().print("Bloop").print("Bleep");
 ```
+
 - **noAutoscroll()** Turns off automatic scrolling of the LCD.
 
 ``` js
-  var lcd = new five.LCD({ pins: [ 2,3,4,5,11,12 ] });
-  lcd.noAutoscroll().print('Bloop').print('Bleep');
+lcd.noAutoscroll().print("Bloop").print("Bleep");
 ```
 
-## Events
-
-- **ready** The "ready" event is emitted whenever the value of the LCD has completed setup and is ready for use.
