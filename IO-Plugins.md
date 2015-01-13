@@ -9,6 +9,7 @@ For an in-depth case study of creating an IO plugin, [read about the design and 
 
 The following platform IO Plugins are currently available:
 
+<!--extract-start:ioplugins-->
 - Beagle Bone Black
   - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
 - Blend Micro
@@ -31,6 +32,7 @@ The following platform IO Plugins are currently available:
   - [Remote-IO](https://github.com/monteslu/remote-io)
 - BoardIO (Generic IO Plugin class to make your own!)
   - [Board-IO](https://github.com/achingbrain/board-io)
+<!--extract-end:ioplugins-->
 
 ### Minimum Plugin Class Requirements
 
