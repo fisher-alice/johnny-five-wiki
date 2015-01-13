@@ -11,6 +11,8 @@ The following platform IO Plugins are currently available:
 
 - Beagle Bone Black
   - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
+- Blend Micro
+  - [Blend-Micro-IO](https://github.com/noopkat/blend-micro-io)
 - Intel Galileo, Edison
   - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
 - LightBlue Bean
