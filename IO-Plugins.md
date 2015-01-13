@@ -32,6 +32,7 @@ The following platform IO Plugins are currently available:
   - [Remote-IO](https://github.com/monteslu/remote-io)
 - BoardIO (Generic IO Plugin class to make your own!)
   - [Board-IO](https://github.com/achingbrain/board-io)
+
 <!--extract-end:ioplugins-->
 
 ### Minimum Plugin Class Requirements
