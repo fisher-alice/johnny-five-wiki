@@ -6,11 +6,6 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 ```js
 var servo = new five.Servo(12);
 ```
-Tinkerkit: 
-```js
-// Attached to "Output 0"
-var servo = new five.Servo("O0");
-```
 
 
 - **options** An object of property parameters.
