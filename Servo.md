@@ -93,7 +93,8 @@ var esc = new five.Servo({
   interval: A reference to the current interval, if one exists
   isMoving: A boolean flag, true when moving, false when still
   last: The last movement record. READONLY
-  position: The last/current position. READONLY
+  position: The angle the servo is at in the physical world. READONLY
+  value: The angle the servo was last set to.
 }
 ```
 
