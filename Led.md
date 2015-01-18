@@ -74,6 +74,19 @@ var pwm = new five.Led({
 
 
 ### Usage
+
+```js
+// Blink an LED
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  var led = new five.Led(13);
+  led.blink();
+});
+```
+
+
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
