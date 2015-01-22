@@ -3,8 +3,9 @@ The `Accelerometer` class constructs objects that represent a single Acceleromet
 Supported Accelerometers:
 
 - Analog (Like the Tinkerkit 2/3-Axis Accelerometer)
-- MPU-6050 I2C IMU
-- ADXL345
+- MPU6050 (I2C IMU)
+- ADXL345 (I2C)
+- ADXL335 (Analog)
 
 This list will continue to be updated as more Analog devices are confirmed.
 
@@ -26,7 +27,7 @@ This list will continue to be updated as more Analog devices are confirmed.
     <tr>
       <td>controller</td>
       <td>string</td>
-      <td>"ANALOG" | "MPU6050"</td>
+      <td>"ANALOG" | "MPU6050" | "ADXL345" | "ADXL335"</td>
       <td>The Name of the controller to use</td>
       <td>"ANALOG"</td>
       <td>no</td>
