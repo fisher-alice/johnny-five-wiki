@@ -6,8 +6,8 @@ Johnny-Five currently supports several kinds of Temperatures:
 - [LM35](http://www.ti.com/product/lm35)
 - [TMP36](http://www.analog.com/en/mems-sensors/digital-temperature-sensors/tmp36/products/product.html)
 - [DS18B20](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) (requires [ConfigurableFirmata](https://github.com/firmata/arduino/tree/configurable))
-- [MPU-6050](http://www.invensense.com/mems/gyro/mpu6050.html) IMU
-- [Groove Temperature](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)
+- [MPU6050](http://www.invensense.com/mems/gyro/mpu6050.html) IMU
+- [Grove Temperature](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -29,7 +29,7 @@ This list will continue to be updated as more devices are confirmed.
     <tr>
       <td>controller</td>
       <td>string</td>
-      <td>"ANALOG" | "LM35" | "TMP36" | "DS18B20" | "MPU6050" | "GROOVE"</td>
+      <td>"ANALOG" | "LM35" | "TMP36" | "DS18B20" | "MPU6050" | "GROVE"</td>
       <td>The Name of the controller to use</td>
       <td>"ANALOG"</td>
       <td>no</td>
