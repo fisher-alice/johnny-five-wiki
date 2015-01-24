@@ -122,7 +122,7 @@ var accelerometer = new five.Accelerometer({
 });
 ```
 
-![LIS344AL](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-LIS344AL.png)
+![LIS344AL](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-lis344al.png)
 
 ```js
 // Create an MPU-6050 Accelerometer object:
