@@ -133,6 +133,34 @@ var accelerometer = new five.Accelerometer({
 });
 ```
 
+![MPU6050](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-MPU6050.png)
+
+```js
+// Create an ADXL345 Accelerometer object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the ADXL345 controller
+var accelerometer = new five.Accelerometer({
+  controller: "ADXL345"
+});
+```
+
+![ADXL345](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-adxl345.png)
+
+```js
+// Create an ADXL335 Accelerometer object:
+//
+//  - attach Xout, Yout and Zout to A0, A1, A2
+//  - specify the ADXL335 controller
+var accelerometer = new five.Accelerometer({
+  controller: "ADXL335",
+  pins: ["A0", "A1", "A2"]
+});
+```
+
+![ADXL335](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-adxl335.png)
+
+
 ### Shape
 
 ```
