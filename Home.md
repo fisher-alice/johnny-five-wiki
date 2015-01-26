@@ -21,6 +21,7 @@
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
 - [IR (Infrared)](https://github.com/rwaldron/johnny-five/wiki/Infrared)
 - [IR.Reflect.Array](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
+- [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
 - [Led](https://github.com/rwaldron/johnny-five/wiki/Led)
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
 - [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
@@ -35,7 +36,8 @@
 - [Sonar](https://github.com/rwaldron/johnny-five/wiki/Sonar)
 - [Stepper](https://github.com/rwaldron/johnny-five/wiki/Stepper)
 - [Temperature](https://github.com/rwaldron/johnny-five/wiki/Temperature)
-- [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
+
+
 <!--extract-end:api-->
 
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
