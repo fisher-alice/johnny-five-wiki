@@ -109,6 +109,23 @@ This list will continue to be updated as more Analog devices are confirmed.
   </tbody>
 </table>
 
+### Shape
+
+```
+{ 
+  id: A user definable id value. Defaults to a generated uid
+  pins: The pins defined for X, Y, and Z.
+  pitch: The pitch angle in degrees. READONLY
+  roll: The roll angle in degrees. READONLY
+  x: Value of x axis in G forces. READONLY
+  y: Value of y axis in G forces. READONLY
+  z: Value of z axis in G forces. READONLY
+  acceleration: The magnitude of the acceleration in G forces. READONLY
+  inclination: The incline of the device in degrees. READONLY
+  orientation: The orientation of the device (-3, -2, -1, 1, 2, 3). READONLY 
+}
+```
+
 ```js
 // Create an analog Accelerometer object:
 // 
@@ -161,24 +178,6 @@ var accelerometer = new five.Accelerometer({
 ```
 
 ![ADXL335](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-adxl335.png)
-
-
-### Shape
-
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pins: The pins defined for X, Y, and Z.
-  pitch: The pitch angle in degrees. READONLY
-  roll: The roll angle in degrees. READONLY
-  x: Value of x axis in G forces. READONLY
-  y: Value of y axis in G forces. READONLY
-  z: Value of z axis in G forces. READONLY
-  acceleration: The magnitude of the acceleration in G forces. READONLY
-  inclination: The incline of the device in degrees. READONLY
-  orientation: The orientation of the device (-3, -2, -1, 1, 2, 3). READONLY 
-}
-```
 
 
 
