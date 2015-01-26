@@ -1,4 +1,4 @@
-- **[Getting Started](https://github.com/rwldrn/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine. ([es_ES][], [nl_NL][], [pt_BR][], [fr_FR][])
+- **[Getting Started](https://github.com/rwaldron/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine. ([es_ES][], [nl_NL][], [pt_BR][], [fr_FR][])
 - **[Prerequisites](https://github.com/rwaldron/johnny-five/wiki/Prerequites)** - Prerequisites for Linux, OSX, and Windows.
 - **[IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins)** - Create IO Plugins for any platform!
 - **[Control System Hierarchy Overview](https://github.com/rwaldron/johnny-five/wiki/Control-System-Hierarchy-Overview)** - A terminology primer for component class and IO Plugin authors.
@@ -9,31 +9,31 @@
 [fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
 
 ### Documentation 
-- [Accelerometer](https://github.com/rwldrn/johnny-five/wiki/Accelerometer)
-- [Animation](https://github.com/rwldrn/johnny-five/wiki/Animation)
-- [Board](https://github.com/rwldrn/johnny-five/wiki/Board) ([pt_BR][])
+- [Accelerometer](https://github.com/rwaldron/johnny-five/wiki/Accelerometer)
+- [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
+- [Board](https://github.com/rwaldron/johnny-five/wiki/Board) ([pt_BR][])
 - [Button](https://github.com/rwaldron/johnny-five/wiki/Button) ([Button-pt_BR][])
 - [Compass](https://github.com/rwaldron/johnny-five/wiki/Compass)
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
-- [IR (Infrared)](https://github.com/rwldrn/johnny-five/wiki/Infrared)
-- [IR.Reflect.Array](https://github.com/rwldrn/johnny-five/wiki/IR.Reflect.Array)
-- [Led](https://github.com/rwldrn/johnny-five/wiki/Led)
+- [IR (Infrared)](https://github.com/rwaldron/johnny-five/wiki/Infrared)
+- [IR.Reflect.Array](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
+- [Led](https://github.com/rwaldron/johnny-five/wiki/Led)
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
 - [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
 - [Led.RGB](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb.md) (WIP, Needs wiki page)
-- [Motor](https://github.com/rwldrn/johnny-five/wiki/Motor)
+- [Motor](https://github.com/rwaldron/johnny-five/wiki/Motor)
 - [Piezo](https://github.com/rwaldron/johnny-five/wiki/Piezo)
-- [Pin](https://github.com/rwldrn/johnny-five/wiki/Pin)
-- [Ping](https://github.com/rwldrn/johnny-five/wiki/Ping)
+- [Pin](https://github.com/rwaldron/johnny-five/wiki/Pin)
+- [Ping](https://github.com/rwaldron/johnny-five/wiki/Ping)
 - [Relay](https://github.com/rwaldron/johnny-five/wiki/Relay)
-- [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor)
-- [Servo](https://github.com/rwldrn/johnny-five/wiki/Servo)
+- [Sensor](https://github.com/rwaldron/johnny-five/wiki/Sensor)
+- [Servo](https://github.com/rwaldron/johnny-five/wiki/Servo)
 - [ShiftRegister](https://github.com/rwaldron/johnny-five/wiki/ShiftRegister)
-- [Sonar](https://github.com/rwldrn/johnny-five/wiki/Sonar)
-- [Stepper](https://github.com/rwldrn/johnny-five/wiki/Stepper)
-- [Temperature](https://github.com/rwldrn/johnny-five/wiki/Temperature)
+- [Sonar](https://github.com/rwaldron/johnny-five/wiki/Sonar)
+- [Stepper](https://github.com/rwaldron/johnny-five/wiki/Stepper)
+- [Temperature](https://github.com/rwaldron/johnny-five/wiki/Temperature)
 - [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
 
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
