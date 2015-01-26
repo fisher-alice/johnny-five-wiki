@@ -24,7 +24,6 @@
 - [Led](https://github.com/rwaldron/johnny-five/wiki/Led)
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
 - [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
-- [Led.RGB](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb.md) (WIP, Needs wiki page)
 - [Motor](https://github.com/rwaldron/johnny-five/wiki/Motor)
 - [Piezo](https://github.com/rwaldron/johnny-five/wiki/Piezo)
 - [Pin](https://github.com/rwaldron/johnny-five/wiki/Pin)
