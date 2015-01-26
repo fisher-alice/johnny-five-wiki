@@ -13,8 +13,10 @@
 <!--extract-start:api-->
 - [Accelerometer](https://github.com/rwaldron/johnny-five/wiki/Accelerometer)
 - [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
-- [Board](https://github.com/rwaldron/johnny-five/wiki/Board) ([pt_BR][])
-- [Button](https://github.com/rwaldron/johnny-five/wiki/Button) ([Button-pt_BR][])
+- [Board](https://github.com/rwaldron/johnny-five/wiki/Board) 
+  - ([pt_BR][])
+- [Button](https://github.com/rwaldron/johnny-five/wiki/Button) 
+  - ([Button-pt_BR][])
 - [Compass](https://github.com/rwaldron/johnny-five/wiki/Compass)
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
