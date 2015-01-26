@@ -9,6 +9,8 @@
 [fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
 
 ### Documentation 
+
+<!--extract-start:api-->
 - [Accelerometer](https://github.com/rwaldron/johnny-five/wiki/Accelerometer)
 - [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
 - [Board](https://github.com/rwaldron/johnny-five/wiki/Board) ([pt_BR][])
@@ -35,6 +37,7 @@
 - [Stepper](https://github.com/rwaldron/johnny-five/wiki/Stepper)
 - [Temperature](https://github.com/rwaldron/johnny-five/wiki/Temperature)
 - [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
+<!--extract-end:api-->
 
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
 [Button-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Button-pt_BR
