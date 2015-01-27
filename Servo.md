@@ -62,6 +62,20 @@ var servo = new five.Servo(12);
       <td>Optionally center the servo on initialization. Defaults to `false`</td>
       <td>no</td>
     </tr>
+<tr>
+      <td>controller</td>
+      <td>String</td>
+      <td>Servo controller interface type</td>
+      <td></td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td>Number (usually in hexadecimal)</td>
+      <td>An I2C device address</td>
+      <td></td>
+      <td>no</td>
+    </tr>
   </tbody>
 </table>
 ```js
@@ -125,6 +139,24 @@ board.on("ready", function() {
 
   // Clockwise, top speed.
   servo.cw(1);
+});
+```
+
+I2C Servo (i.e. via Adafruit PWM controller)
+```js
+var five = require("johnny-five"), 
+    board = new five.Board();
+
+board.on("ready", function() {
+
+  var servo = new five.Servo({
+    pin: 0, 
+    controller: "PCA9685",
+    address: 0x41 // Defaults to 0x40
+  });
+
+  // Sweep from 0-180.
+  servo.sweep();
 });
 ```
 
@@ -246,6 +278,7 @@ It's recommended to use a rotary potentiometer as the mechanism for determining 
 - [Servo Array](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
 - [Servo Digital](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-digital.md)
 - [Servo Dual](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-dual.md)
+- [I2C Controlled Servo](https://github.com/rwaldron/johnny-five/blob/master/docs/motor-PCA9685.md)
 - [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
 - [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
 - [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
