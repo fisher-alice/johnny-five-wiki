@@ -278,7 +278,7 @@ It's recommended to use a rotary potentiometer as the mechanism for determining 
 - [Servo Array](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
 - [Servo Digital](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-digital.md)
 - [Servo Dual](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-dual.md)
-- [I2C Controlled Servo](https://github.com/rwaldron/johnny-five/blob/master/docs/motor-PCA9685.md)
+- [I2C Controlled Servo](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-PCA9685.md)
 - [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
 - [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
 - [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
