@@ -6,6 +6,7 @@ Supported Accelerometers:
 - MPU6050 (I2C IMU)
 - ADXL345 (I2C)
 - ADXL335 (Analog)
+- MMA7361 (Analog)
 
 This list will continue to be updated as more Analog devices are confirmed.
 
@@ -27,7 +28,7 @@ This list will continue to be updated as more Analog devices are confirmed.
     <tr>
       <td>controller</td>
       <td>string</td>
-      <td>"ANALOG" | "MPU6050" | "ADXL345" | "ADXL335"</td>
+      <td>"ANALOG" | "MPU6050" | "ADXL345" | "ADXL335" | "MMA7361"</td>
       <td>The Name of the controller to use</td>
       <td>"ANALOG"</td>
       <td>no</td>
@@ -74,10 +75,18 @@ This list will continue to be updated as more Analog devices are confirmed.
     </tr>
     <tr>
       <td>zeroV</td>
-      <td>Number</td>
+      <td>Number or Array</td>
       <td>0-1023</td>
-      <td>The analog input when at rest, perpendicular to gravity.</td>
+      <td>The analog input when at rest, perpendicular to gravity.  When an array, specifies the zeroV for the individual axes.</td>
       <td>478</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>autoCalibrate</td>
+      <td>Boolean</td>
+      <td>true/false</td>
+      <td>Whether to auto-calibrate the `zeroV` values.  The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky.</td>
+      <td>false</td>
       <td>no</td>
     </tr>
   </tbody>
@@ -109,11 +118,36 @@ This list will continue to be updated as more Analog devices are confirmed.
   </tbody>
 </table>
 
+- **MMA-7361 Options(`controller: "MMA7361"`)** 
+<table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Description</th>
+      <th>Default</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sleepPin</td>
+      <td>Number or String</td>
+      <td>Digital Pin Address</td>
+      <td>The digital pin that controls the sleep pin on the device.  If you don't set this pin, you need to pull it up to Vcc with a 10k resistor.</td>
+      <td>null</td>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Shape
 
 ```
 { 
   id: A user definable id value. Defaults to a generated uid
+  zeroV: The current zeroV value (or values).  May be different from initial values if auto-calibrated.
   pins: The pins defined for X, Y, and Z.
   pitch: The pitch angle in degrees. READONLY
   roll: The roll angle in degrees. READONLY
@@ -179,7 +213,24 @@ var accelerometer = new five.Accelerometer({
 
 ![ADXL335](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-adxl335.png)
 
+```js
+// Create an MMA7361 Accelerometer object:
+//
+// - attach Xo, Yo, and Zo to A0, A1, A2
+// - specify the MMA7361 controller
+// - optionally, specify the sleepPin
+// - optionally, set it to auto-calibrate
+// - optionally, set the zeroV values.  This can be done when retrieving them after an autoCalibrate
+var accelerometer = new five.Accelerometer({
+    controller: "MMA7361",
+    pins: ["A0", "A1", "A2"],
+    sleepPin: 13,
+    autoCalibrate: true,
+    zeroV: [320, 365, 295] // override the zeroV values if you know what they are from a previous autoCalibrate
+  });
+```
 
+![MMA7361](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-mma7361.png)
 
 ### Usage
 ```js
@@ -206,6 +257,16 @@ board.on("ready", function() {
 if (accelerometer.hasAxis("z")) {
   console.log(accelerometer.z)
 }
+```
+
+- **enable()** Enable the device and events (enabled by default).  For devices that can be put to sleep (like the MMA7361), wake it up.
+```js
+accelerometer.enable();
+```
+
+- **disable()** Disable the device and events.  For devices that can be put to sleep (like the MMA7361), put it to sleep.
+```js
+accelerometer.disable();
 ```
 
 ## Events
