@@ -46,6 +46,15 @@ An object of property parameters.
       <td>no</td>
     </tr>
     <tr>
+      <td>invertPWM</td>
+      <td>Boolean</td>
+      <td>true or false</td>
+      <td>
+        
+      </td>
+      <td>no</td>
+    </tr>
+    <tr>
       <td>address</td>
       <td>Number (usually in hexadecimal)</td>
       <td>An I2C device address</td>
@@ -355,6 +364,14 @@ The PWM pins on an Arduino Uno only output about 40mA. That is barely enough to 
 
 Keep in mind that "forward" and "reverse" are arbitrary labels. If your motor is turning in the wrong direction you can just switch the poles on the motor. Consider a robot with two motors connected directly to the drive wheels. For your bot to go forward, one should turn clockwise and the other should turn counter-clockwise. Switch the poles on one of those motors so that you can use forward() on both and have them work together.
 
+### Situations Where ```invertPWM: true``` is Required
+
+Most motor controller board/shield manufacturers abstract the need for this away. If you have wired up your own motor controller or you have purchased a very basic motor controller board you may need this property. To check, set both pwm and dir to their highest values. If nothing happens try lowering pwm to 0. If this makes the motor move you need to add ```invertPWM: true``` as in the example below. Instead of the pins being used for PWM and DIR they are being used to directly control the voltage applied to each pole of the motor. If both are set to high, the motor will not move.
+
+````
+var motor = new five.Motor({pins:[8,9], invertPWM:true});
+````
+
 ### Differences Between 2 and 3 pin Directional Motor Controllers
 
 Controllers that use 2 pins instead of 3 are essentially the same. Both arrangements use one PWN pin to control speed. The switches on the H-Bridge work in pairs. With 3-pin controllers you control the state of each pair. With 2-pin controllers the pairs are toggled for you based on the state of that one digital pin.
@@ -589,4 +606,3 @@ var m2 = new five.Motor(config.M2);
 var m3 = new five.Motor(config.M3);
 var m4 = new five.Motor(config.M4);
 ```
-
