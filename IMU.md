@@ -76,6 +76,10 @@ var accelerometer = new five.IMU({
 });
 ```
 
+![imu-mpu6050.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-mpu6050.png)   
+
+[imu-mpu6050.fzz](https://github.com/rwaldron/johnny-five/blob/master/docs/breadboard/imu-mpu6050.fzz)
+
 ### Shape 
 Some of these properties may or may not exist depending on whether the IMU supports it.
 
