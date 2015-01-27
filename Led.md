@@ -111,6 +111,12 @@ board.on("ready", function() {
 });
 ```
 
+Tinkerkit: 
+
+```js
+// Attached to "Output 0"
+var digital = new five.Led("O0");
+```
 
 I2C Led (i.e. via Adafruit PWM controller)
 
@@ -176,7 +182,7 @@ led.blink(500);
 - **brightness(0-255)** Set the brightness of led. This operation will only work with Leds attached to PWM pins. 
 
 ```js
-var led = new five.Led(13);
+var led = new five.Led(11);
 
 // This will set the brightness to about half 
 led.brightness(128);
@@ -185,7 +191,7 @@ led.brightness(128);
 - **fade(brightness, ms)** Fade from current brightness to `brightness` over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
 ```js
-var led = new five.Led(13);
+var led = new five.Led(11);
 
 // Fade to half brightness over 2 seconds
 led.fade(128, 2000);
@@ -194,7 +200,7 @@ led.fade(128, 2000);
 - **fadeIn(ms)** Fade in from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
 ```js
-var led = new five.Led(13);
+var led = new five.Led(11);
 
 // Fade in over 500ms.
 led.fadeIn(500);
@@ -203,7 +209,7 @@ led.fadeIn(500);
 - **fadeOut(ms)** Fade out from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
 ```js
-var led = new five.Led(13);
+var led = new five.Led(11);
 
 // Fade out over 500ms.
 led.fadeOut(500);
@@ -213,7 +219,7 @@ led.fadeOut(500);
 - **pulse(ms)** Pulse the Led in phases from on to off over `ms` time. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
 ```js
-var led = new five.Led(13);
+var led = new five.Led(11);
 
 // Pulse from on to off in 500ms phases
 led.pulse(500);
@@ -222,7 +228,7 @@ led.pulse(500);
 - **stop(ms)** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`. This operation will only work with Leds attached to PWM pins.
 
 ```js
-var led = new five.Led(13);
+var led = new five.Led(11);
 
 // Pulse from on to off in 500ms phases
 led.pulse(500);
