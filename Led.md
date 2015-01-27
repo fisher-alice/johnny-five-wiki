@@ -5,20 +5,17 @@ The `Led` class constructs objects that represent a single Led attached to the p
 
 - **pin** A Number or String address for the Led pin (digital/PWM).
 For Leds that only have on/off states, use a digital pin:
+
 ```js
 var digital = new five.Led(13);
 ```
+
 For Leds that have on/off states, as well as inverval or color related state (Pulse, Brightness, RGB, etc), use a PWM pin (usually demarcated by either a "~" or "#" next to the pin number on the actual board).
+
 ```js
 // Look for "~", ie. ~11
 var pwm = new five.Led(11);
 ```
-Tinkerkit: 
-```js
-// Attached to "Output 0"
-var digital = new five.Led("O0");
-```
-
 
 - **options** An object of property parameters.
 <table>
@@ -42,21 +39,32 @@ var digital = new five.Led("O0");
     <tr>
       <td>type</td>
       <td>String</td>
-      <td>"output", "pwm"</td>
+      <td>"OUTPUT", "PWM"</td>
       <td>
         For most cases, this can be omitted; the type will be inferred based on the pin address number.
       </td>
       <td>no</td>
     </tr>
-
+    <tr>
+      <td>controller</td>
+      <td>String</td>
+      <td>"DEFAULT", "PCA9685"</td>
+      <td>
+        Controller interface type. Defaults to `"DEFAULT"`.
+      </td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td>Number</td>
+      <td>0x40</td>
+      <td>
+        Address for I2C devices. Defaults to `0x40`.
+      </td>
+      <td>no</td>
+    </tr>
   </tbody>
 </table>
-```js
-var pwm = new five.Led({
-  pin: 11, 
-  type: "PWM"
-});
-```
 
 ### Shape
 
@@ -69,9 +77,6 @@ var pwm = new five.Led({
   interval: ...An interval reference, if an interval exists
 }
 ```
-
-
-
 
 ### Usage
 
@@ -88,8 +93,8 @@ board.on("ready", function() {
 
 
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
@@ -106,6 +111,22 @@ board.on("ready", function() {
 });
 ```
 
+
+I2C Led (i.e. via Adafruit PWM controller)
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  var led = new five.Led({
+    pin: 0,
+    controller: "PCA9685"
+  });
+
+  led.blink()
+});
+```
 
 ## API
 
@@ -220,12 +241,13 @@ led.stop();
 Led objects are output only and therefore do not emit any events.
 
 ## Examples
-- [Laser](https://github.com/rwldrn/johnny-five/blob/master/docs/laser.md)
-- [Led Matrix](https://github.com/rwldrn/johnny-five/blob/master/docs/led-matrix.md)
-- [Led Fade](https://github.com/rwldrn/johnny-five/blob/master/docs/led-fade.md)
-- [Led On Off](https://github.com/rwldrn/johnny-five/blob/master/docs/led-on-off.md)
-- [Led Pulse](https://github.com/rwldrn/johnny-five/blob/master/docs/led-pulse.md)
-- [Led Rgb](https://github.com/rwldrn/johnny-five/blob/master/docs/led-rgb.md)
-- [Led Rainbow](https://github.com/rwldrn/johnny-five/blob/master/docs/led-rainbow.md)
-- [Led Strobe](https://github.com/rwldrn/johnny-five/blob/master/docs/led-strobe.md)
-- [Seven Segment](https://github.com/rwldrn/johnny-five/blob/master/docs/seven-segment.md)
+- [Laser](https://github.com/rwaldron/johnny-five/blob/master/docs/laser.md)
+- [Led Matrix](https://github.com/rwaldron/johnny-five/blob/master/docs/led-matrix.md)
+- [Led Fade](https://github.com/rwaldron/johnny-five/blob/master/docs/led-fade.md)
+- [Led On Off](https://github.com/rwaldron/johnny-five/blob/master/docs/led-on-off.md)
+- [Led Pulse](https://github.com/rwaldron/johnny-five/blob/master/docs/led-pulse.md)
+- [Led Rgb](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb.md)
+- [Led Rainbow](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rainbow.md)
+- [Led Strobe](https://github.com/rwaldron/johnny-five/blob/master/docs/led-strobe.md)
+- [Led Rgb PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-PCA9685.md)
+- [Seven Segment](https://github.com/rwaldron/johnny-five/blob/master/docs/seven-segment.md)
