@@ -5,7 +5,7 @@ The `Button` class constructs objects that represent a single digital Button att
 
 - **pin** A Number or String address for the Button pin (digital).
 ```js
-var button = new five.Button(5);
+var button = new five.Button(8);
 ```
 
 ```js
@@ -65,15 +65,16 @@ var button = new five.Button("I0");
 ```js
 // A basic button
 // 
-//   - attached to pin 5
+//   - attached to pin 8
 //   - emits down/press event
 //
-var button = new five.Button(5);
+var button = new five.Button(8);
 
 button.on("press", function() {
   console.log( "Button has been pressed" );
 });
 ```
+![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
 ### Shape
 
@@ -98,7 +99,7 @@ var five = require("johnny-five"),
 board.on("ready", function() {
 
   // Create a new `button` hardware instance.
-  var button = new five.Button(5);
+  var button = new five.Button(8);
 
   button.on("hold", function() {
     console.log( "Button held" );
