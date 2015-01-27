@@ -62,7 +62,9 @@ board.on("ready", function() {
   });
 });
 ```
+![piezo diagram](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/piezo.png)
 
+[docs/breadboard/piezo.fzz](https://github.com/rwaldron/johnny-five/blob/master/docs/breadboard/piezo.fzz)    
 ## API
 
 - **frequency(frequency, duration)** Play tone at `frequency` (in Hz) for `duration` milliseconds.
