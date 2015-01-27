@@ -366,7 +366,7 @@ Keep in mind that "forward" and "reverse" are arbitrary labels. If your motor is
 
 ### Situations Where ```invertPWM: true``` is Required
 
-Most motor controller board/shield manufacturers abstract the need for this away. If you have wired up your own motor controller or you have purchased a very basic motor controller board you may need this property. To check, set both pwm and dir to their highest values. If nothing happens try lowering pwm to 0. If this makes the motor move you need to add ```invertPWM: true``` as in the example below. Instead of the pins being used for PWM and DIR they are being used to directly control the voltage applied to each pole of the motor. If both are set to high, the motor will not move.
+Most motor controller board/shield manufacturers abstract the need for this away. If you have wired up your own motor controller or you have purchased a very basic motor controller board you may need this property. To check, set both pwm and dir to their highest values by calling ```motor.forward(255)```. If nothing happens try calling ```motor.stop()```. If this makes the motor move you need to add ```invertPWM: true``` as in the example below. Instead of the pins being used for PWM and DIR they are being used to directly control the voltage applied to each pole of the motor. If both are set to high, the motor will not move.
 
 ````
 var motor = new five.Motor({pins:[8,9], invertPWM:true});
