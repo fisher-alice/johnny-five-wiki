@@ -9,26 +9,29 @@ You should be familiar with the API of the device(s) you will be animating. You 
 
 ### Parameters
 - **target** A Servo, Servo.Array or list of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
-```js
-// Animate a single servo instance
-var servo = new five.Servo(9);
-var animation = new five.Animation(servo);
-```
-```js
-// Independently animate the servos in a Servo.Array
-var servos = new five.Servo.Array([9,10,11]);
-var animation = new five.Animation(servos);
-```
-```js
-// Animate a Servo and Servo.Array. When passed as the member of an array, the 
-// Servo.Array will be passed the same value for all devices in the Servo.Array
-var servo = new five.Servo(9);
-var servos = new five.Servo.Array([10,11]);
-var animation = new five.Animation([servo, servos]);
-```
+  
+  ```js
+  // Animate a single servo instance
+  var servo = new five.Servo(9);
+  var animation = new five.Animation(servo);
+  ```
+  ```js
+  // Independently animate the servos in a Servo.Array
+  var servos = new five.Servo.Array([9,10,11]);
+  var animation = new five.Animation(servos);
+  ```
+  ```js
+  // Animate a Servo and Servo.Array. When passed as the member of an array, the 
+  // Servo.Array will be passed the same value for all devices in the Servo.Array
+  var servo = new five.Servo(9);
+  var servos = new five.Servo.Array([10,11]);
+  var animation = new five.Animation([servo, servos]);
+  ```
+
 ### Usage
 
 A single Servo
+
 ```js
 var five = require("johnny-five");
 var board = new five.Board();
@@ -71,22 +74,23 @@ board.on("ready", function() {
 ## API
 
 - **enqueue(segment object)** Add a segment to the animation's queue. See the list of available segment properties below.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
 
-board.on("ready", function() {
-  var servo = new five.Servo(9);
-  var animation = new five.Animation(servo);
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-  // Create an animation object
-  animation.enqueue({
-    duration: 2000,
-    cuePoints: [0, 0.25, 0.5, 0.75, 1.0],
-    keyFrames: [ 0, 135, 45, 180, 0]
+  board.on("ready", function() {
+    var servo = new five.Servo(9);
+    var animation = new five.Animation(servo);
+
+    // Create an animation object
+    animation.enqueue({
+      duration: 2000,
+      cuePoints: [0, 0.25, 0.5, 0.75, 1.0],
+      keyFrames: [ 0, 135, 45, 180, 0]
+    });
   });
-});
-```
+  ```
 
 - **play()** Play the animation. Animation's are set to play by default and this only needs to be called if the animation has been paused or a segment's speed property was set to 0.
 
