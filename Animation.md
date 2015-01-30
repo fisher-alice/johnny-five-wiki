@@ -8,7 +8,7 @@ Servos and Servo.Arrays may be animated. If you have a use case for another devi
 You should be familiar with the API of the device(s) you will be animating. You don't have to call the device methods directly but if you haven't used them before this will be frustrating.
 
 ### Parameters
-**target** A Servo, Servo.Array or list of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
+- **target** A Servo, Servo.Array or list of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
 ```js
 // Animate a single servo instance
 var servo = new five.Servo(9);
@@ -28,40 +28,35 @@ var animation = new five.Animation([servo, servos]);
 ```
 ### Usage
 
-Single Servo
+A single Servo
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
-
-  var servo = new five.Servo(9),
-    animation = new five.Animation(servo);
+  var servo = new five.Servo(9);
+  var animation = new five.Animation(servo);
 
   // Create an animation segment object
-  var tictoc = {
+  animation.enqueue({
     duration: 2000,
     cuePoints: [0, 0.25, 0.5, 0.75, 1.0],
     keyFrames: [ 0, 135, 45, 180, 0]
-  };
-
-  animation.enqueue(tictoc);
-
+  });
 });
 ```
 
-Servo.Array
+A Servo array
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
-
-  var servos = new five.Servo.Array([9, 10, 11]),
-    animation = new five.Animation(servos);
+  var servos = new five.Servos([9, 10, 11]);
+  var animation = new five.Animation(servos);
 
   // Create an animation segment object
-  var grip = {
+  animation.enqueue({
     duration: 2000,
     cuePoints: [0, 0.5, 1.0],
     keyFrames: [ 
@@ -69,10 +64,7 @@ board.on("ready", function() {
       [0, 90, 180],
       [0, 45, 180]
     ]
-  };
-
-  animation.enqueue(grip);
-
+  });
 });
 ```
 
@@ -80,23 +72,19 @@ board.on("ready", function() {
 
 - **enqueue(segment object)** Add a segment to the animation's queue. See the list of available segment properties below.
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
-
-  var servo = new five.Servo(9),
-    animation = new five.Animation(servo);
+  var servo = new five.Servo(9);
+  var animation = new five.Animation(servo);
 
   // Create an animation object
-  var sweep = {
+  animation.enqueue({
     duration: 2000,
     cuePoints: [0, 0.25, 0.5, 0.75, 1.0],
     keyFrames: [ 0, 135, 45, 180, 0]
-  };
-
-  animation.enqueue(sweep);
-
+  });
 });
 ```
 
