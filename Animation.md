@@ -8,7 +8,7 @@ Servos and Servo.Arrays may be animated. If you have a use case for another devi
 You should be familiar with the API of the device(s) you will be animating. You don't have to call the device methods directly but if you haven't used them before this will be frustrating.
 
 ### Parameters
-- **target** A Servo, Servo.Array or list of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
+- **target** A `Servo`, `Servo.Array (Servos)` or list of devices. Optional, but if not passed here it must be passed as a property of each animation segment.
   
   ```js
   // Animate a single servo instance
@@ -17,14 +17,14 @@ You should be familiar with the API of the device(s) you will be animating. You 
   ```
   ```js
   // Independently animate the servos in a Servo.Array
-  var servos = new five.Servo.Array([9,10,11]);
+  var servos = new five.Servos([9,10,11]);
   var animation = new five.Animation(servos);
   ```
   ```js
   // Animate a Servo and Servo.Array. When passed as the member of an array, the 
   // Servo.Array will be passed the same value for all devices in the Servo.Array
   var servo = new five.Servo(9);
-  var servos = new five.Servo.Array([10,11]);
+  var servos = new five.Servos([10,11]);
   var animation = new five.Animation([servo, servos]);
   ```
 
