@@ -44,7 +44,7 @@ board.on("ready", function() {
   animation.enqueue({
     duration: 2000,
     cuePoints: [0, 0.25, 0.5, 0.75, 1.0],
-    keyFrames: [ 0, 135, 45, 180, 0]
+    keyFrames: [ {degrees: 0}, {degrees: 135}, {degrees: 45}, {degrees: 180}, {degrees: 0}]
   });
 });
 ```
@@ -63,9 +63,9 @@ board.on("ready", function() {
     duration: 2000,
     cuePoints: [0, 0.5, 1.0],
     keyFrames: [ 
-      [0, 135, 180],
-      [0, 90, 180],
-      [0, 45, 180]
+      [{degrees: 0}, {degrees: 135}, {degrees: 180}],
+      [{degrees: 0}, {degrees: 90}, {degrees: 180}],
+      [{degrees: 0}, {degrees: 45}, {degrees: 180}]
     ]
   });
 });
@@ -87,7 +87,7 @@ board.on("ready", function() {
     animation.enqueue({
       duration: 2000,
       cuePoints: [0, 0.25, 0.5, 0.75, 1.0],
-      keyFrames: [ 0, 135, 45, 180, 0]
+      keyFrames: [ {degrees: 0}, {degrees: 135}, {degrees: 45}, {degrees: 180}, {degrees: 0}]
     });
   });
   ```
