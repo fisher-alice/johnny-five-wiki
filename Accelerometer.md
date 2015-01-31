@@ -28,7 +28,7 @@ This list will continue to be updated as more Analog devices are confirmed.
     <tr>
       <td>controller</td>
       <td>string</td>
-      <td>`ANALOG` `MPU6050` `ADXL345` `ADXL335` `MMA7361`</td>
+      <td>ANALOG, MPU6050, ADXL345, ADXL335, MMA7361</td>
       <td>The Name of the controller to use</td>
       <td>"ANALOG"</td>
       <td>no</td>
