@@ -28,7 +28,7 @@ This list will continue to be updated as more Analog devices are confirmed.
     <tr>
       <td>controller</td>
       <td>string</td>
-      <td>"ANALOG" | "MPU6050" | "ADXL345" | "ADXL335" | "MMA7361"</td>
+      <td>`ANALOG` `MPU6050` `ADXL345` `ADXL335` `MMA7361`</td>
       <td>The Name of the controller to use</td>
       <td>"ANALOG"</td>
       <td>no</td>
@@ -36,7 +36,7 @@ This list will continue to be updated as more Analog devices are confirmed.
   </tbody>
 </table>
 
-- **Analog Options(`controller: "ANALOG"`)** 
+- **Analog Options (`controller: "ANALOG"`)** 
 <table>
   <thead>
     <tr>
@@ -94,7 +94,7 @@ This list will continue to be updated as more Analog devices are confirmed.
 
 
 
-- **MPU-6050 Options(`controller: "MPU6050"`)** 
+- **MPU6050 Options (`controller: "MPU6050"`)** 
 <table>
   <thead>
     <tr>
@@ -118,7 +118,7 @@ This list will continue to be updated as more Analog devices are confirmed.
   </tbody>
 </table>
 
-- **MMA-7361 Options(`controller: "MMA7361"`)** 
+- **MMA7361 Options (`controller: "MMA7361"`)** 
 <table>
   <thead>
     <tr>
