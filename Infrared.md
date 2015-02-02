@@ -8,7 +8,7 @@ The `IR` class constructs objects that represent a single (I2C or analog) Infrar
     - [GP2D120XJ00F, Analog](https://www.sparkfun.com/products/8959)
     - [GP2Y0A02YK0F, Analog](https://www.sparkfun.com/products/8958)
 
-### Parameters
+## Parameters
 
 - **pin** A Number pin address for Motion sensor.
 ```js
@@ -24,47 +24,35 @@ var proximity = new five.IR.Proximity("A0");
 
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number, String</td>
-      <td>"A0", "I1", 5 (Any pin on board)</td>
-      <td>The Number or String address of the pin the sensor is attached to, ie. "A0" or "I1"</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>Milliseconds</td>
-      <td>The frequency in ms of data events. Defaults to 25ms</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
-```js
-var motion = new five.IR.Motion({
-  pin: 7, 
-  freq: 25
-});
-```
-```js
-var motion = new five.IR.Proximity({
-  pin: "A0", 
-  freq: 25
-});
-```
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pin</td>
+        <td>Number, String</td>
+        <td>"A0", "I1", 5 (Any pin on board)</td>
+        <td>The Number or String address of the pin the sensor is attached to, ie. "A0" or "I1"</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>freq</td>
+        <td>Number</td>
+        <td>Milliseconds</td>
+        <td>The frequency in ms of data events. Defaults to 25ms</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+  </table>
 
-### Shape
+## Shape
 
 ```
 { 
@@ -78,8 +66,25 @@ var motion = new five.IR.Proximity({
 ```
 
 
+## Component Initialization
 
-### Usage
+
+```js
+var motion = new five.IR.Motion({
+  pin: 7, 
+  freq: 25
+});
+```
+```js
+var motion = new five.IR.Proximity({
+  pin: "A0", 
+  freq: 25
+});
+```
+
+
+
+## Usage
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
