@@ -2,7 +2,7 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 
 <img src="https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png">
 
-### Parameters
+## Parameters
 
 - **pin** A Number or String address for the ESC pin (PWM).
 ```js
@@ -50,6 +50,21 @@ var esc = new five.ESC("O0");
     </tr>
   </tbody>
 </table>
+
+
+## Shape
+
+```
+{ 
+  id: A user definable id value. Defaults to a generated uid
+  pin: The pin address that the ESC is attached to
+  range: The range of speed as an array of fractional percent values. Defaults to [0, 100]
+  value: The value of the last/current speed. READONLY
+}
+```
+
+## Controller Initialization
+
 ```js
 // Create an esc...
 // 
@@ -62,20 +77,9 @@ var esc = new five.ESC({
 });
 ```
 
-### Shape
-
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the ESC is attached to
-  range: The range of speed as an array of fractional percent values. Defaults to [0, 100]
-  value: The value of the last/current speed. READONLY
-}
-```
 
 
-
-### Usage
+## Usage
 
 Standard ESC
 ```js
