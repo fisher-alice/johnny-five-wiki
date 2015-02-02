@@ -5,7 +5,7 @@ Supported Compass/Magnetometer:
 - HMC6352
 - HMC5883L
 
-## Parameters
+### Parameters
 
  * **options** An object of property parameters.
   <table>
@@ -36,7 +36,7 @@ Supported Compass/Magnetometer:
     </tbody>
   </table>
 
-## Shape
+### Shape
 
 ```js
 {
@@ -51,6 +51,8 @@ Supported Compass/Magnetometer:
   }
 }
 ```
+
+## Controller Initializations
 
 ```js
 var compass = new five.Compass({
@@ -95,8 +97,32 @@ board.on("ready", function() {
 });
 ```
 
+```js
+var five = require("johnny-five");
+var board = new five.Board();
 
-## Events
+board.on("ready", function() {
+
+  var compass = new five.Compass({
+    controller: "HMC5883L"
+  });
+
+  compass.on("headingchange", function() {
+    console.log("headingchange");
+    console.log("  heading : ", Math.floor(this.heading));
+    console.log("  bearing : ", this.bearing.name);
+    console.log("--------------------------------------");
+  });
+
+  compass.on("data", function() {
+    console.log("  heading : ", Math.floor(this.heading));
+    console.log("  bearing : ", this.bearing.name);
+    console.log("--------------------------------------");
+  });
+});
+```
+
+### Events
 
 * **change** The "change" event is emitted whenever the heading of the compass has changed from it's last position
 * **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
