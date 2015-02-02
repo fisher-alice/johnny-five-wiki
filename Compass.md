@@ -52,7 +52,7 @@ Supported Compass/Magnetometer:
 }
 ```
 
-## Controller Initializations
+## Component Initialization
 
 ```js
 var compass = new five.Compass({
