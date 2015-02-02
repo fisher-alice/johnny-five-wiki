@@ -122,9 +122,6 @@ The `LCD` class constructs an object that represents an LCD Display.
 
 
 
-
-
-
 ## Shape
 
 ```js
