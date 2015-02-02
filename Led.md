@@ -6,16 +6,16 @@ The `Led` class constructs objects that represent a single Led attached to the p
 - **pin** A Number or String address for the Led pin (digital/PWM).
 For Leds that only have on/off states, use a digital pin:
 
-```js
-var digital = new five.Led(13);
-```
+  ```js
+  var digital = new five.Led(13);
+  ```
 
-For Leds that have on/off states, as well as inverval or color related state (Pulse, Brightness, RGB, etc), use a PWM pin (usually demarcated by either a "~" or "#" next to the pin number on the actual board).
+  For Leds that have on/off states, as well as inverval or color related state (Pulse, Brightness, RGB, etc), use a PWM pin (usually demarcated by either a "~" or "#" next to the pin number on the actual board).
 
-```js
-// Look for "~", ie. ~11
-var pwm = new five.Led(11);
-```
+  ```js
+  // Look for "~", ie. ~11
+  var pwm = new five.Led(11);
+  ```
 
 - **options** An object of property parameters.
 <table>
