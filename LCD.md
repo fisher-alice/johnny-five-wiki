@@ -76,49 +76,47 @@ The `LCD` class constructs an object that represents an LCD Display.
 
 
 - **Parallel Options (Default)**
- <table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pins</td>
-      <td>Object</td>
-      <td>
-```js
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pins</td>
+        <td>Object</td>
+        <td>
 { 
-  rs: ..., 
-  en: ..., 
-  d4: ..., 
-  d5: ..., 
-  d6: ..., 
-  d7: ... 
+  rs, 
+  en, 
+  d4, 
+  d5, 
+  d6, 
+  d7 
 }
-```
-</td>
-     <td>
-       Sets the values of the rs, en, d4, d5, d6 and d7 pins.
-     </td>
-    </tr>
-    <tr>
-      <td>pins</td>
-      <td>Array</td>
-      <td>
-```js
+        </td>
+        <td>
+          Sets the values of the rs, en, d4, d5, d6 and d7 pins.
+        </td>
+      </tr>
+      <tr>
+        <td>pins</td>
+        <td>Array</td>
+        <td>
 [ rs, en, d4, d5, d6, d7 ]
-```
-</td>
-     <td>
-       Sets the values of the rs, en, d4, d5, d6 and d7 pins.
-     </td>
-    </tr>
-  </tbody>
+        </td>
+        <td>
+          Sets the values of the rs, en, d4, d5, d6 and d7 pins.
+        </td>
+      </tr>
+    </tbody>
   </table>
+
+
 
 
 
