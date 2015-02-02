@@ -36,16 +36,6 @@ Supported Compass/Magnetometer:
     </tbody>
   </table>
 
-```js
-  // Create a compass sensor
-  var compass = new five.Compass({
-    controller: "HMC6352",
-    freq: 100,
-    gauss: 1.3
-  });
-```
-
-
 ### Shape
 
 ```js
