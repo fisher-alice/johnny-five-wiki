@@ -3,37 +3,37 @@ The `Gyro` class constructs objects that represent a single Gyro sensor attached
 We currently support two kinds of Gyros:
 
 - Analog (Like the Tinkerkit 2-Axis Gyro)
-- MPU-6050 I2C IMU
+- MPU6050
 
 This list will continue to be updated as more Gyro devices are confirmed.
 
 ## Parameters
 
 - **General Options**
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Default</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>controller</td>
-      <td>string</td>
-      <td>"ANALOG" | "MPU6050"</td>
-      <td>The Name of the controller to use</td>
-      <td>"ANALOG"</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>controller</td>
+        <td>string</td>
+        <td>ANALOG (this is the default), MPU6050</td>
+        <td>The Name of the controller to use</td>
+        <td>"ANALOG"</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+  </table>
 
-- **Analog Options(`controller: "ANALOG"`)** 
+- **Analog Options (`controller: "ANALOG"`)** 
   <table>
     <thead>
       <tr>
@@ -75,7 +75,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 
 
 
-- **MPU6050 Options(`controller: "MPU6050"`)** 
+- **MPU6050 Options (`controller: "MPU6050"`)** 
   <table>
     <thead>
       <tr>
