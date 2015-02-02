@@ -5,7 +5,7 @@ Supported Compass/Magnetometer:
 - HMC6352
 - HMC5883L
 
-### Paramaters
+### Parameters
 
  * **options** An object of property parameters.
   <table>
