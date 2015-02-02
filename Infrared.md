@@ -2,11 +2,13 @@ The `IR` class constructs objects that represent a single (I2C or analog) Infrar
 
 - Motion
     - [Passive Infra-Red by Parallax, Digital](http://www.parallax.com/tabid/768/productid/83/default.aspx)
+    - [GP2Y0D805Z0F, I2C](http://www.pololu.com/catalog/product/1132)
+
 - Proximity
-    - [GP2Y0D805Z0F, I2C](http://www.pololu.com/catalog/product/1132) (Default)
     - [GP2Y0A21YK, Analog](https://www.sparkfun.com/products/242)
     - [GP2D120XJ00F, Analog](https://www.sparkfun.com/products/8959)
     - [GP2Y0A02YK0F, Analog](https://www.sparkfun.com/products/8958)
+    - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728)
 
 ## Parameters
 
