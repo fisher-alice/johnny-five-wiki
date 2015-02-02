@@ -63,6 +63,16 @@ For Leds that only have on/off states, use a digital pin:
       </td>
       <td>no</td>
     </tr>
+    <tr>
+      <td>isAnode</td>
+      <td>Boolean</td>
+      <td>true, false</td>
+      <td>
+        Set the LED to Anode mode. Defaults to `false`.
+      </td>
+      <td>no</td>
+    </tr>
+
   </tbody>
 </table>
 
@@ -70,13 +80,55 @@ For Leds that only have on/off states, use a digital pin:
 
 ```js
 { 
-  board: ...A reference to the board object the Led is attached to
   id: ...A user definable id value. Defaults to null
   pin: ...The pin address that the Led is attached to
-  value: ...The current value of the Led. READONLY
-  interval: ...An interval reference, if an interval exists
 }
 ```
+
+## Component Initialization
+
+```js
+// LED Standard (cathode)
+var led = new five.Led(13);
+
+var led = new five.Led({
+  pin: 13
+});
+```
+
+![LED](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led.png)
+
+```js
+// LED Standard (anode)
+var led = new five.Led({
+  pin: 13, 
+  isAnode: true
+});
+```
+
+![LED RGB Anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-anode.png)
+
+
+```js
+// LED PCA9685
+var led = new five.Led({
+  pin: 0, 
+  controller: "PCA9685"
+});
+
+
+// LED RGB PCA9685
+var led = new five.Led.RGB({
+  pins: {
+    red: 0,
+    green: 1,
+    blue: 2
+  },
+  controller: "PCA9685"
+});
+```
+
+![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
 
 ## Usage
 
@@ -88,26 +140,6 @@ var board = new five.Board();
 board.on("ready", function() {
   var led = new five.Led(13);
   led.blink();
-});
-```
-
-
-```js
-var five = require("johnny-five");
-var board = new five.Board();
-
-board.on("ready", function() {
-
-  // Leonardo's pin 13 is PWM capable
-  var pin = this.type === "LEONARDO" ? 13 : 11;
-
-  // Create a standard `led` hardware instance
-  var led = new five.Led(pin);
-
-  // Inject led object into REPL session
-  this.repl.inject({
-    led: led
-  });
 });
 ```
 
@@ -138,106 +170,106 @@ board.on("ready", function() {
 
 - **on()** Turn the led on. 
 
-``` js
-var led = new five.Led(13);
+  ``` js
+  var led = new five.Led(13);
 
-led.on();
-```
+  led.on();
+  ```
 
 - **off()** Turn the led off. If a led is strobing, it will not stop. Use `led.stop().off()` to turn off a led while strobing.
 
-```js
-var led = new five.Led(13);
+  ```js
+  var led = new five.Led(13);
 
-led.off();
-```
+  led.off();
+  ```
 
 - **toggle()** Toggle the current state, if _on_ then turn _off_, if _off_ then turn _on_.
 
-```js
-var led = new five.Led(13);
+  ```js
+  var led = new five.Led(13);
 
-led.toggle();
-```
+  led.toggle();
+  ```
 
 - **strobe(ms)** Strobe/Blink the Led on/off in phases over `ms`. This is an **interval** operation and can be stopped by calling `led.stop()`, however that will not necessarily turn it "off". Defaults to 500ms.
 
-```js
-var led = new five.Led(13);
+  ```js
+  var led = new five.Led(13);
 
-// Strobe on-off in 500ms phases
-led.strobe(500);
-```
+  // Strobe on-off in 500ms phases
+  led.strobe(500);
+  ```
 
 - **blink(ms)** alias to strobe.
 
-```js
-var led = new five.Led(13);
+  ```js
+  var led = new five.Led(13);
 
-// Strobe on-off in 500ms phases
-led.blink(500);
-```
+  // Strobe on-off in 500ms phases
+  led.blink(500);
+  ```
 
 
 - **brightness(0-255)** Set the brightness of led. This operation will only work with Leds attached to PWM pins. 
 
-```js
-var led = new five.Led(11);
+  ```js
+  var led = new five.Led(11);
 
-// This will set the brightness to about half 
-led.brightness(128);
-```
+  // This will set the brightness to about half 
+  led.brightness(128);
+  ```
 
 - **fade(brightness, ms)** Fade from current brightness to `brightness` over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
-```js
-var led = new five.Led(11);
+  ```js
+  var led = new five.Led(11);
 
-// Fade to half brightness over 2 seconds
-led.fade(128, 2000);
-```
+  // Fade to half brightness over 2 seconds
+  led.fade(128, 2000);
+  ```
 
 - **fadeIn(ms)** Fade in from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
-```js
-var led = new five.Led(11);
+  ```js
+  var led = new five.Led(11);
 
-// Fade in over 500ms.
-led.fadeIn(500);
-```
+  // Fade in over 500ms.
+  led.fadeIn(500);
+  ```
 
 - **fadeOut(ms)** Fade out from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
-```js
-var led = new five.Led(11);
+  ```js
+  var led = new five.Led(11);
 
-// Fade out over 500ms.
-led.fadeOut(500);
-```
+  // Fade out over 500ms.
+  led.fadeOut(500);
+  ```
 
 
 - **pulse(ms)** Pulse the Led in phases from on to off over `ms` time. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
-```js
-var led = new five.Led(11);
+  ```js
+  var led = new five.Led(11);
 
-// Pulse from on to off in 500ms phases
-led.pulse(500);
-```
+  // Pulse from on to off in 500ms phases
+  led.pulse(500);
+  ```
 
 - **stop(ms)** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`. This operation will only work with Leds attached to PWM pins.
 
-```js
-var led = new five.Led(11);
+  ```js
+  var led = new five.Led(11);
 
-// Pulse from on to off in 500ms phases
-led.pulse(500);
+  // Pulse from on to off in 500ms phases
+  led.pulse(500);
 
-...Sometime later...
+  ...Sometime later...
 
-led.stop();
+  led.stop();
 
-```
+  ```
 
 
 
