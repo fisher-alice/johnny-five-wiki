@@ -1,8 +1,49 @@
 The `LCD` class constructs an object that represents an LCD Display.
 
-### Parameters
+## Parameters
 
-* **options** An object of property parameters
+* **General Options**
+ <table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rows</td>
+      <td>Number</td>
+      <td>
+        The number of rows on the device
+      </td>
+      <td>
+        Defaults to 2
+      </td>
+      <td>
+        No
+      </td>
+    </tr>
+    <tr>
+      <td>cols</td>
+      <td>Number</td>
+      <td>
+        The number of columns on the device
+      </td>
+      <td>
+        Defaults to 16
+      </td>
+      <td>
+        No
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+* **Parallel Options (Default)**
  <table>
   <thead>
     <tr>
@@ -19,7 +60,29 @@ The `LCD` class constructs an object that represents an LCD Display.
       <td>Object</td>
       <td>
 ```js
-{ rs, en, d4, d5, d6, d7 }
+{ 
+  rs: ..., 
+  en: ..., 
+  d4: ..., 
+  d5: ..., 
+  d6: ..., 
+  d7: ... 
+}
+```
+</td>
+     <td>
+       Sets the values of the rs, en, d4, d5, d6 and d7 pins.
+     </td>
+      <td>
+        yes
+      </td>
+    </tr>
+    <tr>
+      <td>pins</td>
+      <td>Array</td>
+      <td>
+```js
+[ rs, en, d4, d5, d6, d7 ]
 ```
 </td>
      <td>
@@ -32,26 +95,99 @@ The `LCD` class constructs an object that represents an LCD Display.
   </tbody>
   </table>
 
-### Shape
+* **I2C Options**
+ <table>
+  <thead>
+    <tr>
+      <th>Property Name</th>
+      <th>Type</th>
+      <th>Value(s)</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>controller</td>
+      <td>String</td>
+      <td>
+PCF8574, PCF8574A, JHD1313M1 (Grove)
+</td>
+     <td>
+       The name of the controller to use.
+     </td>
+      <td>
+        yes
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+
+## Shape
 
 ```js
 {
-  board: A reference to the board object the Led is attached to
   id: A user definable id value. Defaults to null
-  bitmode: Defines the bitmode of the LCD display. Options are 4bit and 8bit.
-  lines: The number of lines that the LCD display supports. Defaults to 2.
   rows: The number of rows that the LCD display supports. Defaults to 2.
   cols: The number of columns that the LCD display contains. Defaults to 16.
-  dots: The number of dots per column. Defaults to 5x8.
-  pins : the object containing the pin values for rs, en, d4, d5, d6, d7
 }
 ```
 
-### Usage
+## Component Initialization
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+// Parallel LCD
+var lcd = new five.LCD({ 
+  pins: [8, 9, 4, 5, 6, 7]
+});
+
+// Parallel LCD w/ Backlight
+var lcd = new five.LCD({ 
+  pins: [8, 9, 4, 5, 6, 7],
+  backlight: 13,
+});
+
+// Parallel LCD w/ Backlight & Explicit Rows and Columns (20 cols, 2 rows)
+var lcd = new five.LCD({ 
+  pins: [8, 9, 4, 5, 6, 7],
+  backlight: 13,
+  rows: 2,
+  cols: 16
+});
+```
+
+![LCD](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd.png)
+
+```js
+// I2C LCD, PCF8574
+var lcd = new five.LCD({ 
+  controller: "PCF8574"
+});
+
+// I2C LCD, PCF8574A
+var lcd = new five.LCD({ 
+  controller: "PCF8574A"
+});
+
+// I2C LCD, PCF8574
+var lcd = new five.LCD({ 
+  controller: "PCF8574"
+});
+
+// I2C LCD (RGB Controller), JHD1313M1 (this is the Grove LCD)
+var lcd = new five.LCD({ 
+  controller: "JHD1313M1"
+});
+```
+
+![LCD I2C](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd-i2c-PCF8574.png)
+
+## Usage
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
