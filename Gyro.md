@@ -25,7 +25,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
       <tr>
         <td>controller</td>
         <td>string</td>
-        <td>ANALOG (this is the default), MPU6050</td>
+        <td>ANALOG, MPU6050</td>
         <td>The Name of the controller to use</td>
         <td>"ANALOG"</td>
         <td>no</td>
