@@ -1,67 +1,80 @@
 The `Button` class constructs objects that represent a single digital Button attached to the physical board. 
 
 
-### Parameters
+## Parameters
 
 - **pin** A Number or String address for the Button pin (digital).
-```js
-var button = new five.Button(8);
-```
+  ```js
+  var button = new five.Button(8);
+  ```
 
-```js
-// Attached to an analog pin
-var button = new five.Button("A0");
-```
+  ```js
+  // Attached to an analog pin
+  var button = new five.Button("A0");
+  ```
 
 
-```js
-// Attached to TinkerKit's "Input 0"
-var button = new five.Button("I0");
-```
 
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number, String</td>
-      <td>5, "I1" (Any digital pin on board)</td>
-      <td>The Number or String address of the pin the button is attached to, ie. 5 or "I1"</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>invert</td>
-      <td>Boolean</td>
-      <td>true or false</td>
-      <td>Invert the up and down values. This is useful for inverting button signals when the pin itself doesn't have built-in pullup resistor capabilities.</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>isPullup</td>
-      <td>Boolean</td>
-      <td>true or false</td>
-      <td>Initialize as a pullup button</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>holdtime</td>
-      <td>Number</td>
-      <td>milliseconds</td>
-      <td>Number of milliseconds the button must be held until emitting a "hold" event. Defaults to 500ms</td>
-      <td>no</td>
-    </tr>    
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pin</td>
+        <td>Number, String</td>
+        <td>5, "I1" (Any digital pin on board)</td>
+        <td>The Number or String address of the pin the button is attached to, ie. 5 or "I1"</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>invert</td>
+        <td>Boolean</td>
+        <td>true or false</td>
+        <td>Invert the up and down values. This is useful for inverting button signals when the pin itself doesn't have built-in pullup resistor capabilities.</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>isPullup</td>
+        <td>Boolean</td>
+        <td>true or false</td>
+        <td>Initialize as a pullup button</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>holdtime</td>
+        <td>Number</td>
+        <td>milliseconds</td>
+        <td>Number of milliseconds the button must be held until emitting a "hold" event. Defaults to 500ms</td>
+        <td>no</td>
+      </tr>    
+    </tbody>
+  </table>
+
+
+## Shape
+
+```
+{ 
+  id: A user definable id value. Defaults to a generated uid
+  pin: The pin address that the Button is attached to
+  
+  downValue: 0 or 1, depending on invert or pullup
+  upValue: 0 or 1, depending on invert or pullup
+  holdtime: milliseconds
+}
+```
+
+## Component Initialization
+
 ```js
 // A basic button
 // 
@@ -76,25 +89,11 @@ button.on("press", function() {
 ```
 ![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
-### Shape
-
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Button is attached to
-  
-  downValue: 0 or 1, depending on invert or pullup
-  upValue: 0 or 1, depending on invert or pullup
-  holdtime: milliseconds
-}
-```
-
-
 
 ### Usage
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
@@ -112,7 +111,6 @@ board.on("ready", function() {
   button.on("release", function() {
     console.log( "Button released" );
   });
-
 });
 ```
 
