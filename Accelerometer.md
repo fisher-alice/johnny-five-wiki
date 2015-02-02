@@ -161,7 +161,7 @@ This list will continue to be updated as more Analog devices are confirmed.
 }
 ```
 
-## Controller Initializations
+## Controller Initialization 
 
 ```js
 // Create an analog Accelerometer object:
@@ -236,7 +236,6 @@ var accelerometer = new five.Accelerometer({
 ![MMA7361](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-mma7361.png)
 
 ## Usage
-
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
