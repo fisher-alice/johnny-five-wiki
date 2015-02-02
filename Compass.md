@@ -1,4 +1,9 @@
-The `Compass` class constructs an object that represents a single Compass sensor
+The `Compass` class constructs an object that represents a single Compass or Magnetometer.
+
+Supported Compass/Magnetometer:
+
+- HMC6352
+- HMC5883L
 
 ### Paramaters
 
@@ -17,7 +22,7 @@ The `Compass` class constructs an object that represents a single Compass sensor
       <tr>
         <td>controller</td>
         <td>String</td>
-        <td>"HMC6352" or "HMC5883L"</td>
+        <td>HMC6352, HMC5883L</td>
         <td>Defines the compass module device</td>
         <td>yes</td>
       </tr>
