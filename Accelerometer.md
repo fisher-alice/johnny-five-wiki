@@ -147,7 +147,8 @@ This list will continue to be updated as more Analog devices are confirmed.
 ```
 { 
   id: A user definable id value. Defaults to a generated uid
-  zeroV: The current zeroV value (or values).  May be different from initial values if auto-calibrated.
+  zeroV: The current zeroV value (or values).  
+          May be different from initial values if auto-calibrated.
   pins: The pins defined for X, Y, and Z.
   pitch: The pitch angle in degrees. READONLY
   roll: The roll angle in degrees. READONLY
