@@ -6,63 +6,76 @@ Johnny-Five currently supports one kind of IMU:
 
 This list will continue to be updated as more devices are confirmed.
 
-### Parameters
+## Parameters
 
 - **General Options**
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Default</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>controller</td>
-      <td>string</td>
-      <td>"MPU6050"</td>
-      <td>The Name of the controller to use</td>
-      <td>"MPU6050"</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>ms</td>
-      <td>The delay in reporting data from this device</td>
-      <td>100</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>controller</td>
+        <td>string</td>
+        <td>"MPU6050"</td>
+        <td>The Name of the controller to use</td>
+        <td>"MPU6050"</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>freq</td>
+        <td>Number</td>
+        <td>ms</td>
+        <td>The delay in reporting data from this device</td>
+        <td>100</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+  </table>
 
-- **MPU-6050 Options(`controller: "MPU6050"`)** 
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Default</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>address</td>
-      <td>Number</td>
-      <td>8-bit value</td>
-      <td>The address of the component (can be switched via ADO pin)</td>
-      <td>0x68</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+- **MPU6050 Options(`controller: "MPU6050"`)** 
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>address</td>
+        <td>Number</td>
+        <td>8-bit value</td>
+        <td>The address of the component (can be switched via ADO pin)</td>
+        <td>0x68</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+## Shape 
+Some of these properties may or may not exist depending on whether the IMU supports it.
+
+```
+{ 
+  accelerometer: An instance of `Accelerometer` class. READONLY
+  gyro: An instance of `Gyro` class. READONLY
+  temperature: An instance of `Temperature` class. READONLY
+}
+```
+
 
 ```js
 // Create an MPU-6050 IMU object:
@@ -76,27 +89,17 @@ var accelerometer = new five.IMU({
 });
 ```
 
+## Component Initialization
+
 ![imu-mpu6050.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-mpu6050.png)   
 
 [imu-mpu6050.fzz](https://github.com/rwaldron/johnny-five/blob/master/docs/breadboard/imu-mpu6050.fzz)
 
-### Shape 
-Some of these properties may or may not exist depending on whether the IMU supports it.
+## Usage
 
-```
-{ 
-  accelerometer: An instance of `Accelerometer` class. READONLY
-  gyro: An instance of `Gyro` class. READONLY
-  temperature: An instance of `Temperature` class. READONLY
-}
-```
-
-
-
-### Usage
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
@@ -113,6 +116,7 @@ board.on("ready", function() {
 ```
 
 ## API
+
 The IMU does not have an explicit API.  Refer to the individual components for their APIs
 
 ## Events
@@ -123,4 +127,4 @@ The IMU does not have an explicit API.  Refer to the individual components for t
 
 ## Examples
 
-- [MPU-6050 IMU](https://github.com/rwaldron/johnny-five/blob/master/docs/imu-mpu6050.md)
+- [MPU6050 IMU](https://github.com/rwaldron/johnny-five/blob/master/docs/imu-mpu6050.md)
