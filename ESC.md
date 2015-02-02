@@ -4,14 +4,10 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 ## Parameters
 
 - **pin** A Number or String address for the ESC pin (PWM).
-```js
-var esc = new five.ESC(9);
-```
-Tinkerkit: 
-```js
-// Attached to "Output 0"
-var esc = new five.ESC("O0");
-```
+  ```js
+  var esc = new five.ESC(9);
+  ```
+
 
 
 - **options** An object of property parameters.
