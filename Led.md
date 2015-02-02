@@ -1,7 +1,7 @@
 The `Led` class constructs objects that represent a single Led attached to the physical board.
 
 
-### Parameters
+## Parameters
 
 - **pin** A Number or String address for the Led pin (digital/PWM).
 For Leds that only have on/off states, use a digital pin:
@@ -66,7 +66,7 @@ var pwm = new five.Led(11);
   </tbody>
 </table>
 
-### Shape
+## Shape
 
 ```js
 { 
@@ -78,7 +78,7 @@ var pwm = new five.Led(11);
 }
 ```
 
-### Usage
+## Usage
 
 ```js
 // Blink an LED
