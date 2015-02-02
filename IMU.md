@@ -76,6 +76,7 @@ Some of these properties may or may not exist depending on whether the IMU suppo
 }
 ```
 
+## Component Initialization
 
 ```js
 // Create an MPU-6050 IMU object:
@@ -89,7 +90,6 @@ var accelerometer = new five.IMU({
 });
 ```
 
-## Component Initialization
 
 ![imu-mpu6050.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-mpu6050.png)   
 
