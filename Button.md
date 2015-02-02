@@ -66,9 +66,6 @@ The `Button` class constructs objects that represent a single digital Button att
 { 
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Button is attached to
-  
-  downValue: 0 or 1, depending on invert or pullup
-  upValue: 0 or 1, depending on invert or pullup
   holdtime: milliseconds
 }
 ```
@@ -79,13 +76,8 @@ The `Button` class constructs objects that represent a single digital Button att
 // A basic button
 // 
 //   - attached to pin 8
-//   - emits down/press event
 //
 var button = new five.Button(8);
-
-button.on("press", function() {
-  console.log( "Button has been pressed" );
-});
 ```
 ![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
