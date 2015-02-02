@@ -2,7 +2,7 @@ The `LCD` class constructs an object that represents an LCD Display.
 
 ## Parameters
 
-* **General Options**
+- **General Options**
  <table>
   <thead>
     <tr>
@@ -43,7 +43,39 @@ The `LCD` class constructs an object that represents an LCD Display.
   </tbody>
   </table>
 
-* **Parallel Options (Default)**
+
+- **I2C Options**
+ <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>controller</td>
+        <td>String</td>
+        <td>
+  PCF8574, PCF8574A, JHD1313M1 (Grove)
+  </td>
+       <td>
+         The name of the controller to use.
+       </td>
+        <td>
+          yes
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+- **Parallel Options (Default)**
  <table>
   <thead>
     <tr>
@@ -51,7 +83,6 @@ The `LCD` class constructs an object that represents an LCD Display.
       <th>Type</th>
       <th>Value(s)</th>
       <th>Description</th>
-      <th>Required</th>
     </tr>
   </thead>
   <tbody>
@@ -73,9 +104,6 @@ The `LCD` class constructs an object that represents an LCD Display.
      <td>
        Sets the values of the rs, en, d4, d5, d6 and d7 pins.
      </td>
-      <td>
-        yes
-      </td>
     </tr>
     <tr>
       <td>pins</td>
@@ -88,40 +116,13 @@ The `LCD` class constructs an object that represents an LCD Display.
      <td>
        Sets the values of the rs, en, d4, d5, d6 and d7 pins.
      </td>
-      <td>
-        yes
-      </td>
     </tr>
   </tbody>
   </table>
 
-* **I2C Options**
- <table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>controller</td>
-      <td>String</td>
-      <td>
-PCF8574, PCF8574A, JHD1313M1 (Grove)
-</td>
-     <td>
-       The name of the controller to use.
-     </td>
-      <td>
-        yes
-      </td>
-    </tr>
-  </tbody>
-  </table>
+
+
+
 
 
 ## Shape
