@@ -62,6 +62,22 @@ Supported Compass/Magnetometer:
 }
 ```
 
+```js
+var compass = new five.Compass({
+  controller: "HMC6352"
+});
+```
+![HMC6352](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/compass-hmc6352.png)
+
+
+```js
+var compass = new five.Compass({
+  controller: "HMC5883L"
+});
+```
+![HMC5883L](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/compass-hmc5883l.png)
+
+
 ## Usage
 
 ```js
@@ -74,9 +90,17 @@ board.on("ready", function() {
     controller: "HMC6352"
   });
 
-  compass.on("change", function() {
-    console.log("heading", Math.floor(this.heading));
-    console.log("bearing", this.bearing);
+  compass.on("headingchange", function() {
+    console.log("headingchange");
+    console.log("  heading : ", Math.floor(this.heading));
+    console.log("  bearing : ", this.bearing.name);
+    console.log("--------------------------------------");
+  });
+
+  compass.on("data", function() {
+    console.log("  heading : ", Math.floor(this.heading));
+    console.log("  bearing : ", this.bearing.name);
+    console.log("--------------------------------------");
   });
 });
 ```
@@ -91,9 +115,17 @@ board.on("ready", function() {
     controller: "HMC5883L"
   });
 
-  compass.on("change", function() {
-    console.log("heading", Math.floor(this.heading));
-    console.log("bearing", this.bearing);
+  compass.on("headingchange", function() {
+    console.log("headingchange");
+    console.log("  heading : ", Math.floor(this.heading));
+    console.log("  bearing : ", this.bearing.name);
+    console.log("--------------------------------------");
+  });
+
+  compass.on("data", function() {
+    console.log("  heading : ", Math.floor(this.heading));
+    console.log("  bearing : ", this.bearing.name);
+    console.log("--------------------------------------");
   });
 });
 ```
