@@ -1,6 +1,6 @@
 The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC. Currently, this class assumes the ESC is [pre-calibrated](#wiki-calibrating-an-esc).
 
-<img src="https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png">
+
 
 ## Parameters
 
@@ -51,7 +51,6 @@ var esc = new five.ESC("O0");
   </tbody>
 </table>
 
-
 ## Shape
 
 ```
@@ -63,23 +62,25 @@ var esc = new five.ESC("O0");
 }
 ```
 
-## Controller Initialization
+## Controller Initialization 
 
 ```js
 // Create an esc...
 // 
-//   - attached to pin 12
+//   - attached to pin 9
 //   - limited speed range to 0-80%
 //
 var esc = new five.ESC({
-  pin: 12, 
+  pin: 9, 
   range: [ 0, 80 ]
 });
 ```
 
+![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png)
 
 
-## Usage
+
+### Usage
 
 Standard ESC
 ```js
