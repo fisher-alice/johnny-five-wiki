@@ -3,43 +3,33 @@ The `Compass` class constructs an object that represents a single Compass sensor
 ### Paramaters
 
  * **options** An object of property parameters.
-
-### Shape
-
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>controller</td>
-      <td>String</td>
-      <td>"HMC6352" or "HMC5883L"</td>
-      <td>Defines the compass module device</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>Milliseconds</td>
-      <td>The frequency in ms of data events. Defaults to 500ms</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>gauss</td>
-      <td>Number</td>
-      <td>cgs units</td>
-      <td>Set the scale gauss for compass readings. Defaults to 1.3</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>controller</td>
+        <td>String</td>
+        <td>"HMC6352" or "HMC5883L"</td>
+        <td>Defines the compass module device</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>gauss</td>
+        <td>Number</td>
+        <td>cgs units</td>
+        <td>Set the scale gauss for compass readings. Defaults to 1.3</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+  </table>
 
 ```js
   // Create a compass sensor
@@ -55,7 +45,15 @@ The `Compass` class constructs an object that represents a single Compass sensor
 
 ```js
 {
-  freq: The frequency of read events.
+  heading: The current heading in degrees, 0-360°
+  bearing: {
+    // Example
+    point: "North",
+    abbr: "N",
+    low: 354.38,
+    mid: 360,
+    high: 360
+  }
 }
 ```
 
@@ -71,7 +69,7 @@ board.on("ready", function() {
     controller: "HMC6352"
   });
 
-  compass.on("headingchange", function() {
+  compass.on("change", function() {
     console.log("heading", Math.floor(this.heading));
     console.log("bearing", this.bearing);
   });
@@ -88,21 +86,17 @@ board.on("ready", function() {
     controller: "HMC5883L"
   });
 
-  compass.on("headingchange", function() {
+  compass.on("change", function() {
     console.log("heading", Math.floor(this.heading));
     console.log("bearing", this.bearing);
   });
 });
 ```
-## API
-
-* **heading** Gets the compass heading reading
-* **bearing** Gets the compass bearing object
 
 ### Events
-* **headingchange** The "headingchange" event is emitted whenever the heading of the compass has changed from it's last position
-* **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds. ("data" replaced the "read" event)
 
+* **change** The "change" event is emitted whenever the heading of the compass has changed from it's last position
+* **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
 
 ## Examples
 
