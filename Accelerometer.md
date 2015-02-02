@@ -10,7 +10,7 @@ Supported Accelerometers:
 
 This list will continue to be updated as more Analog devices are confirmed.
 
-### Parameters
+## Parameters
 
 - **General Options**
 <table>
@@ -142,7 +142,7 @@ This list will continue to be updated as more Analog devices are confirmed.
   </tbody>
 </table>
 
-### Shape
+## Shape
 
 ```
 { 
@@ -233,7 +233,7 @@ var accelerometer = new five.Accelerometer({
 
 ![MMA7361](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-mma7361.png)
 
-### Usage
+## Usage
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
