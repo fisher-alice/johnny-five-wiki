@@ -24,6 +24,7 @@
 - [IR.Motion](https://github.com/rwaldron/johnny-five/wiki/IR.Motion)
 - [IR.Proximity](https://github.com/rwaldron/johnny-five/wiki/IR.Proximity)
 - [IR.Reflectance.Array](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
+- [Joystick](https://github.com/rwaldron/johnny-five/wiki/Joystick)
 - [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
 - [Led](https://github.com/rwaldron/johnny-five/wiki/Led)
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
