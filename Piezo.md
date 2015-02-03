@@ -1,6 +1,6 @@
 The `Piezo` class constructs objects that represent a single piezo component attached to the physical board.
 
-### Parameters
+## Parameters
 
 - **pin** A Number or String address for the Piezo (+) pin (digital):
 ```js
@@ -28,13 +28,8 @@ var piezo = new five.Piezo(3);
     </tr>
   </tbody>
 </table>
-```js
-var piezo = new five.Piezo({
-  pin: 3
-});
-```
 
-### Shape
+## Shape
 
 ```js
 { 
@@ -46,7 +41,18 @@ var piezo = new five.Piezo({
 }
 ```
 
-### Usage
+## Component Initialization
+
+```js
+var piezo = new five.Piezo({
+  pin: 3
+});
+```
+
+![piezo diagram](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/piezo.png)
+
+
+## Usage
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -56,15 +62,36 @@ board.on("ready", function() {
   // Create a standard `piezo` instance on pin 3
   var piezo = new five.Piezo(3);
 
-  // Inject piezo object into REPL session
-  this.repl.inject({
-    piezo: piezo
+  // Plays a song
+  piezo.play({
+    // song is composed by an array of pairs of notes and beats
+    // The first argument is the note (null means "no note")
+    // The second argument is the length of time (beat) of the note (or non-note)
+    song: [
+      ["C4", 1 / 4],
+      ["D4", 1 / 4],
+      ["F4", 1 / 4],
+      ["D4", 1 / 4],
+      ["A4", 1 / 4],
+      [null, 1 / 4],
+      ["A4", 1],
+      ["G4", 1],
+      [null, 1 / 2],
+      ["C4", 1 / 4],
+      ["D4", 1 / 4],
+      ["F4", 1 / 4],
+      ["D4", 1 / 4],
+      ["G4", 1 / 4],
+      [null, 1 / 4],
+      ["G4", 1],
+      ["F4", 1],
+      [null, 1 / 2]
+    ],
+    tempo: 100
   });
 });
 ```
-![piezo diagram](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/piezo.png)
 
-[docs/breadboard/piezo.fzz](https://github.com/rwaldron/johnny-five/blob/master/docs/breadboard/piezo.fzz)    
 ## API
 
 - **frequency(frequency, duration)** Play tone at `frequency` (in Hz) for `duration` milliseconds.
