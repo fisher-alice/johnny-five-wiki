@@ -51,6 +51,9 @@ var joystick = new five.Joystick({
 
 ![Joystick](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/joystick.png)
 
+## API
+
+There are no special API functions for this class.
 
 ## Events
 
