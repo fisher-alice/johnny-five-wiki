@@ -3,9 +3,9 @@ The `Piezo` class constructs objects that represent a single piezo component att
 ## Parameters
 
 - **pin** A Number or String address for the Piezo (+) pin (digital):
-```js
-var piezo = new five.Piezo(3);
-```
+  ```js
+  var piezo = new five.Piezo(3);
+  ```
 
 - **options** An object of property parameters.
 <table>
