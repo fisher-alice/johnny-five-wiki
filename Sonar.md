@@ -64,28 +64,9 @@ var sonar = new five.Sonar("A0");
     </tr>
   </tbody>
 </table>
-```js
-// Create an analog Sonar object:
-// 
-//   - attached to pin "A0"
-//   - emits data events every 250ms
-//
-var sonar = new five.Sonar({
-  pin: "A0", 
-  freq: 250
-});
 
-// Create an I2C Sonar object:
-// 
-//   - use device model "SRF08"
-//   - emits data events every 250ms
-//
-var sonar = new five.Sonar({
-  device: "SRF08",
-  freq: 250
-});
 
-```
+
 
 ### Shape
 
@@ -99,22 +80,50 @@ var sonar = new five.Sonar({
 }
 ```
 
+## Component Initialization
+
+```js
+// Create an analog Sonar object:
+// 
+//   - attached to pin "A0"
+//
+var sonar = new five.Sonar({
+  pin: "A0", 
+});
+```
+
+
+
+
+
+```js
+// Create an I2C Sonar object:
+// 
+//   - use device model "SRF10"
+
+var sonar = new five.Sonar({
+  controller: "SRF10"
+});
+```
+
+![Sonar I2C](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/sonar-srf10.png)
 
 
 ### Usage
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("../lib/johnny-five.js");
+var board = new five.Board();
 
 board.on("ready", function() {
-
-  // Create a new analog `sonar` hardware instance.
   var sonar = new five.Sonar("A0");
 
   sonar.on("data", function() {
-    console.log( this.cm );
+    console.log("inches     : " + this.in);
+    console.log("centimeters: " + this.cm);
+    console.log("-----------------------");
   });
 });
+
 ```
 
 
