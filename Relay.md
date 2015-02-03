@@ -2,7 +2,7 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 
 ## Parameters
 
-- **pin** A Number or String address for the pin. If digital, use the number, if analog use the "A" prefixed string.
+- **pin** A Number or String address for the pin.
 
 - **options** An object of property parameters.
 <table>
