@@ -1,12 +1,8 @@
 The `Relay` class constructs objects that represent a single digital Relay  attached to the physical board.
 
-### Parameters
+## Parameters
 
 - **pin** A Number or String address for the pin. If digital, use the number, if analog use the "A" prefixed string.
-```js
-var relay = new five.Relay(13);
-```
-
 
 - **options** An object of property parameters.
 <table>
@@ -37,6 +33,22 @@ var relay = new five.Relay(13);
     </tr>
   </tbody>
 </table>
+
+
+## Shape
+
+```
+{ 
+  id: A user definable id value. Defaults to a generated uid
+  pin: The pin value.
+  isOn: true|false. READONLY
+  type: "NO" or "NC". READONLY
+}
+```
+
+
+## Component Initialization
+
 ```js
 // Create a Relay object:
 // 
@@ -52,23 +64,12 @@ var relay = new five.Relay({
 });
 ```
 
-### Shape
+![Relay](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/relay.png)
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin value.
-  isOn: true|false. READONLY
-  type: "NO" or "NC". READONLY
-}
-```
-
-
-
-### Usage
+## Usage
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
@@ -79,3 +80,15 @@ board.on("ready", function() {
   relay.off();
 });
 ```
+
+## API
+
+- **open()** Open the circuit.
+
+- **close()** Close the circuit.
+
+- **toggle()** Toggle the circuit open/close.
+
+## Events
+
+Relay objects are output only and therefore do not emit any events.
