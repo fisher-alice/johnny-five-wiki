@@ -11,7 +11,7 @@ Johnny-Five currently supports several kinds of Temperatures:
 
 This list will continue to be updated as more devices are confirmed.
 
-### Parameters
+## Parameters
 
 - **General Options**
 <table>
@@ -53,27 +53,7 @@ This list will continue to be updated as more devices are confirmed.
   </tbody>
 </table>
 
-```js
-// Create an analog Temperature object:
-var temperature = new five.Temperature({
-  pin: "A0",
-  toCelsius: function(raw) { // optional
-    return (raw / sensivity) + offset;
-  }
-});
-```
-
-```js
-// Create an MPU-6050 Temperature object:
-//
-//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
-//  - specify the MPU6050 controller
-var temperature = new five.Temperature({
-  controller: "MPU6050"
-});
-```
-
-### Shape
+## Shape
 
 ```
 { 
@@ -85,12 +65,67 @@ var temperature = new five.Temperature({
 }
 ```
 
+## Component Initialization
 
 
-### Usage
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+// Create an analog Temperature object:
+var temperature = new five.Temperature({
+  pin: "A0",
+  toCelsius: function(raw) { // optional
+    return (raw / sensivity) + offset;
+  }
+});
+```
+
+```js
+// LM35
+var temperature = new five.Temperature({
+  controller: "LM35",
+  pin: "A0"
+});
+```
+
+![LM35](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-lm35.png)
+
+```js
+// TMP36
+var temperature = new five.Temperature({
+  controller: "TMP36",
+  pin: "A0"
+});
+```
+
+![TMP36](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-tmp36.png)
+
+
+```js
+// DS18S20
+var temperature = new five.Temperature({
+  controller: "DS18S20",
+  pin: "A0"
+});
+```
+
+![DS18S20](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-ds18s20.png)
+
+
+```js
+// Create an MPU-6050 Temperature object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the MPU6050 controller
+var temperature = new five.Temperature({
+  controller: "MPU6050"
+});
+```
+
+![MPU6050](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-mpu6050.png)
+
+## Usage
+```js
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
