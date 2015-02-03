@@ -2,7 +2,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 **It is absolutely REQUIRED to flash your board with a special version of StandardFirmata. Instructions are [here](https://github.com/rwaldron/johnny-five/wiki/Ping#setup)**
 
-### Parameters
+## Parameters
 
 - **pin** A Number or String address for the ping sensor
 
@@ -102,7 +102,7 @@ board.on("ready", function() {
 
 Ping does not have any API functions
 
-### Events
+## Events
 
 - **change** The "change" event is emitted whenever the distance detected by the sensor changes more then the threshold value allows. 
 
