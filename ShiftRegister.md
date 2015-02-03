@@ -1,6 +1,6 @@
 The `ShiftRegister` class constructs an object that represents a shift register.
 
-### Parameters
+## Parameters
 
 * **options** An object of property parameters
  <table>
@@ -18,9 +18,7 @@ The `ShiftRegister` class constructs an object that represents a shift register.
       <td>pins</td>
       <td>Object</td>
       <td>
-```js
 { data, clock, latch }
-```
 </td>
      <td>
        Sets the values of the data , clock and latch pins
@@ -32,94 +30,85 @@ The `ShiftRegister` class constructs an object that represents a shift register.
   </tbody>
   </table>
 
-   * **pins**
-       <table>
-        <thead>
-          <tr>
-            <th>Property Name</th>
-            <th>Type</th>
-            <th>Value(s)</th>
-            <th>Description</th>
-            <th>Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>data</td>
-            <td>Number</td>
-            <td>
-              Any pin on board
-            </td>
-            <td>
-             Sets the pin corresponding to the shiftregisters's data pin
-            </td>
-            <td>
-              yes
-            </td>
-          </tr>
-          <tr>
-            <td>clock</td>
-            <td>Number</td>
-            <td>
-              Any pin on board
-            </td>
-            <td>
-             Sets the pin corresponding to the shiftregisters's clock pin
-            </td>
-            <td>
-              yes
-            </td>
-          </tr>
-          <tr>
-            <td>latch</td>
-            <td>Number</td>
-            <td>
-              Any pin on board
-            </td>
-            <td>
-             Sets the pin corresponding to the shiftregisters's latch pin
-            </td>
-            <td>
-              yes
-            </td>
-          </tr>
-        </tbody>
-       </table>
+  - **pins**
+    <table>
+      <thead>
+        <tr>
+          <th>Property Name</th>
+          <th>Type</th>
+          <th>Value(s)</th>
+          <th>Required</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>data</td>
+          <td>Number</td>
+          <td>
+            Any pin on board
+          </td>
+          <td>
+            yes
+          </td>
+        </tr>
+        <tr>
+          <td>clock</td>
+          <td>Number</td>
+          <td>
+            Any pin on board
+          </td>
+          <td>
+            yes
+          </td>
+        </tr>
+        <tr>
+          <td>latch</td>
+          <td>Number</td>
+          <td>
+            Any pin on board
+          </td>
+          <td>
+            yes
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-### Shape
+## Shape
 
 ```js
 {
+  id: A user definable id value. Defaults to a generated uid
   pins : the object containing the pin values for data, clock and latch 
 }
 ```
 
-### Usage
+## Component Initialization
 
 ```js
-var five = require("johnny-five"),
-    board, shiftRegister;
-
-board = new five.Board();
-
-board.on("ready", function() {
-  shiftRegister = new five.ShiftRegister({
-    pins: {
-      data: 2,
-      clock: 3,
-      latch: 4
-    }
-  });
-
+var register = new five.ShiftRegister({
+  pins: {
+    data: 2,
+    clock: 3,
+    latch: 4
+  }
 });
-
 ```
 
-## API
+![Shift Register](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/shift-register.png)
 
-* **send(value)** send a value to the shiftregister
-  ```js
-  shiftRegister = new five.ShiftRegister({
+## Usage
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+// This works with the 74HC595 that comes with the SparkFun Inventor's kit.
+// Your mileage may vary with other chips. For more information on working
+// with shift registers, see http://arduino.cc/en/Tutorial/ShiftOut
+
+board.on("ready", function() {
+  var register = new five.ShiftRegister({
     pins: {
       data: 2,
       clock: 3,
@@ -129,13 +118,23 @@ board.on("ready", function() {
 
   var value = 0;
 
-  shiftRegister.send( 0x11 );    
+  function next() {
+    value = value > 0x11 ? value >> 1 : 0x88;
+    register.send(value);
+    setTimeout(next, 200);
+  }
 
-  ```
+  next();
+});
+```
+
+## API
+
+- **send(value)** send a value to the shift register.
 
 ## Events
 
-Shiftregisters do not emit any events.
+ShiftRegisters objects are output only and therefore do not emit any events.
 
 ## Examples
 
