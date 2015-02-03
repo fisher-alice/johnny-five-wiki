@@ -42,46 +42,61 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
   </tbody>
 </table>
+
+## Shape
+
+```js
+{
+  id: A user definable id value. Defaults to a generated uid.
+  pin: The pin address that the Ping Sensor is attached to.
+  inches: The detected distance in inches. READONLY
+  in: The detected distance in inches. READONLY
+  cm: The detected distance in centimetres. READONLY
+}
+```
+
+## Component Initialization
+
 ```js
 // Create a Ping sensor...
 // 
 //   - attached to pin 7
-//   - emits data events every 250ms
 //
+var ping = new five.Ping(7);
+
 var ping = new five.Ping({
-  pin: 7, 
-  freq: 250
+  pin: 7
 });
 ```
 
-### Shape
+![Ping](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/ping.png)
 
-```js
-{
-  pin: The pin address that the Ping Sensor is attached to.
-  freq: The frequency of read events.
-  pulse: The frequency of pulses.
 
-  inches: The detected distance in inches. READONLY
-  cm: The detected distance in centimetres. READONLY
-}
-```
 ## Usage
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
-  //Create new Ping and show distance on change
+  // Create a new `ping` hardware instance.
   var ping = new five.Ping(7);
 
-  ping.on("change", function() {
-    console.log("Object is " + this.cm + " cm away");
-    console.log("Object is " + this.inches + " inches away");
+  // ping.in
+  //
+  // Calculated distance to obstruction in inches
+  //
+
+  // ping.cm
+  //
+  // Calculated distance to obstruction in centimeters
+  //
+
+  ping.on("change", function(err, value) {
+    console.log("Object is " + this.in + "inches away");
   });
-});  
+});
 ```
 ## API
 
