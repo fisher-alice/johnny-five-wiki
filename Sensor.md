@@ -152,6 +152,9 @@ board.on("ready", function() {
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the deprecated "read" event)
 
+
+<!--remove-start-->
+
 ## Examples
 
 - [Sensor Component](https://github.com/rwaldron/johnny-five/blob/master/docs/sensor.md)
@@ -160,3 +163,5 @@ board.on("ready", function() {
 - [Sensor - Force Sensitive Servo Controller](https://github.com/rwaldron/johnny-five/blob/master/docs/sensor-fsr-servo.md)
 - [Sensor - Slide Potentiometer](https://github.com/rwaldron/johnny-five/blob/master/docs/sensor-slider.md)
 - [Sensor - Slide Potentiometer Servo Controller](https://github.com/rwaldron/johnny-five/blob/master/docs/slider-servo-control.md)
+
+<!--remove-end-->
