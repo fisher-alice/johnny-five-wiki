@@ -125,6 +125,10 @@ The IMU does not have an explicit API.  Refer to the individual components for t
 
 - **change** The "change" event is fired whenever a corresponding "change" is fired from a component.
 
+<!--remove-start-->
+
 ## Examples
 
 - [MPU6050 IMU](https://github.com/rwaldron/johnny-five/blob/master/docs/imu-mpu6050.md)
+
+<!--remove-end-->
