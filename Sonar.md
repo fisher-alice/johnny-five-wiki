@@ -11,15 +11,10 @@ The `Sonar` class constructs objects that represent a single analog or I2C Sonar
 
 This list will continue to be updated as more Sonar devices are confirmed.
 
-### Parameters
+## Parameters
 
 
 - **pin** A String address for the Sonar pin (analog only).
-```js
-var sonar = new five.Sonar("A0");
-```
-
-
 
 - **options** An object of property parameters.
 <table>
@@ -68,7 +63,7 @@ var sonar = new five.Sonar("A0");
 
 
 
-### Shape
+## Shape
 
 ```
 { 
@@ -92,7 +87,7 @@ var sonar = new five.Sonar({
 });
 ```
 
-
+![Sonar](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/sonar.png)
 
 
 
@@ -109,7 +104,7 @@ var sonar = new five.Sonar({
 ![Sonar I2C](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/sonar-srf10.png)
 
 
-### Usage
+## Usage
 ```js
 var five = require("../lib/johnny-five.js");
 var board = new five.Board();
@@ -148,9 +143,3 @@ sonar.within([ 5, 10 ], "inches", function() {
 - **change** The "change" event is emitted whenever the value of the sonar changes more then the threshold value allows.
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
-
-<!--remove-start-->
-
-## Examples
-
-<!--remove-end-->
