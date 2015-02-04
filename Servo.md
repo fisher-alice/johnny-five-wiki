@@ -1,94 +1,79 @@
 The `Servo` class constructs objects that represent a single Servo attached to the physical board. This class is designed to work well with both **Standard** and **Continuous** rotation servos.
 
-### Parameters
+## Parameters
 
-- **pin** A Number or String address for the Servo pin (PWM).
-```js
-var servo = new five.Servo(11);
-```
-
+- **pin** A Number or String address for the Servo pin.
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number, String</td>
-      <td>Any PWM Pin</td>
-      <td>The address of the pin the servo is attached to, ie. 12 or "O1" (if using TinkerKit)</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>range</td>
-      <td>Array</td>
-      <td>[ lower, upper ]</td>
-      <td>The range of motion in degrees. Defaults to [0, 180]</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>type</td>
-      <td>String</td>
-      <td>"standard", "continuous"</td>
-      <td>The type of servo being created. Defaults to "standard"</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>startAt</td>
-      <td>Number</td>
-      <td>Any number between 0-180</td>
-      <td>Degrees to initialize the servo at.</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>isInverted</td>
-      <td>Boolean</td>
-      <td>true or false</td>
-      <td>Invert servo movement</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>center</td>
-      <td>Boolean</td>
-      <td>true or false</td>
-      <td>Optionally center the servo on initialization. Defaults to `false`</td>
-      <td>no</td>
-    </tr>
-<tr>
-      <td>controller</td>
-      <td>String</td>
-      <td>Servo controller interface type</td>
-      <td></td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>address</td>
-      <td>Number (usually in hexadecimal)</td>
-      <td>An I2C device address</td>
-      <td></td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
-```js
-// Create a standard servo...
-// 
-//   - attached to pin 11
-//   - limited range of 45-135 degrees
-//
-var esc = new five.Servo({
-  pin: 11,
-  range: [45, 135]
-});
-```
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pin</td>
+        <td>Number, String</td>
+        <td>Any PWM Pin</td>
+        <td>The address of the pin the servo is attached to, ie. 12 or "O1" (if using TinkerKit)</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>range</td>
+        <td>Array</td>
+        <td>[ lower, upper ]</td>
+        <td>The range of motion in degrees. Defaults to [0, 180]</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>String</td>
+        <td>"standard", "continuous"</td>
+        <td>The type of servo being created. Defaults to "standard"</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>startAt</td>
+        <td>Number</td>
+        <td>Any number between 0-180</td>
+        <td>Degrees to initialize the servo at.</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>isInverted</td>
+        <td>Boolean</td>
+        <td>true or false</td>
+        <td>Invert servo movement</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>center</td>
+        <td>Boolean</td>
+        <td>true or false</td>
+        <td>Optionally center the servo on initialization. Defaults to `false`</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>controller</td>
+        <td>String</td>
+        <td>PCA9685</td>
+        <td>Servo controller interface type</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>address</td>
+        <td>Number (usually in hexadecimal)</td>
+        <td></td>
+        <td>I2C device address. (PCA9685 defaults to 0x40)</td>
+        <td>no</td>
+      </tr>
+    </tbody>
+  </table>
 
 ### Shape
 
@@ -107,18 +92,111 @@ var esc = new five.Servo({
 }
 ```
 
+## Component Initialization
+
+
+```js
+// Create a standard servo...
+// 
+//   - attached to pin 10
+//
+var servo = new five.Servo(10);
+```
+
+```js
+// Create a standard servo...
+// 
+//   - attached to pin 10
+//   - centered
+//
+var servo = new five.Servo({
+  pin: 10,
+  center: true
+});
+```
+
+```js
+// Create a standard servo...
+// 
+//   - attached to pin 10
+//   - limited range of 45-135 degrees
+//
+var servo = new five.Servo({
+  pin: 10,
+  range: [45, 135]
+});
+```
+
+```js
+// Create a standard servo...
+// 
+//   - attached to pin 10
+//   - starts at 120°
+//
+var servo = new five.Servo({
+  pin: 10,
+  startAt: 120
+});
+```
+
+```js
+// Create a standard servo...
+// 
+//   - attached to pin 10
+//   - limited range of 45-135 degrees
+//   - starts at 120°
+//
+var servo = new five.Servo({
+  pin: 10,
+  range: [45, 135],
+  startAt: 120
+});
+```
+
+```js
+// Create a continuous servo...
+var servo = new five.Servo.Continuous(10);
+```
+
+![Standard or Continuous](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servo.png)
+
+
+```js
+// Create a standard servo controlled by a PCA9685...
+// 
+//   - attached to pin 0 (of the PCA9685)
+//
+var servo = new five.Servo({
+  controller: "PCA9685",
+  pin: 0
+});
+```
+
+
+```js
+// Create a continuous servo controlled by a PCA9685...
+// 
+//   - attached to pin 0 (of the PCA9685)
+//
+var servo = new five.Servo.Continuous({
+  controller: "PCA9685",
+  pin: 0
+});
+```
+
+![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servo-PCA9685.png)
 
 
 ### Usage
 
 Standard Servo
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
-  var servo = new five.Servo(11);
+  var servo = new five.Servo(10);
 
   // Sweep from 0-180 and repeat.
   servo.sweep();
@@ -128,13 +206,14 @@ board.on("ready", function() {
 
 Continuous Servo
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
+
 
 board.on("ready", function() {
 
   var servo = new five.Servo({
-    pin: 11, 
+    pin: 10, 
     type: "continuous"
   });
 
@@ -145,8 +224,9 @@ board.on("ready", function() {
 
 I2C Servo (i.e. via Adafruit PWM controller)
 ```js
-var five = require("johnny-five"), 
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
+
 
 board.on("ready", function() {
 
@@ -165,124 +245,115 @@ board.on("ready", function() {
 ## API
 
 - **to(degrees 0-180 [, ms [, rate]])** Move a servo horn to specified position in degrees, 0-180 (or whatever the current valid range is). If `ms` is specified, the servo will take that amount of time to move to the position. If `rate` is specified, the angle change will be split into distance/rate steps for the `ms` option. If the specified angle is the same as the current angle, no commands are sent.
-```js
-var servo = new five.Servo(11);
+  ```js
+  var servo = new five.Servo(10);
 
-// Set the horn to 90degrees
-servo.to(90);
+  // Set the horn to 90degrees
+  servo.to(90);
 
-// Angle change takes 500ms to complete
-servo.to(90, 500);
+  // Angle change takes 500ms to complete
+  servo.to(90, 500);
 
-// Angle change takes 500ms to complete over 10 steps
-servo.to(90, 500, 10);
-```
+  // Angle change takes 500ms to complete over 10 steps
+  servo.to(90, 500, 10);
+  ```
 
 - **min()** Set Servo to minimum degrees. Defaults to 0deg, respects explicit range.
-```js
-var servo = new five.Servo(11);
+  ```js
+  var servo = new five.Servo(10);
 
-// Set horn to 0degrees
-servo.min();
-```
-Or 
-```js
-var servo = new five.Servo({
-  pin: 11, 
-  range: [ 45, 135 ]
-});
+  // Set horn to 0degrees
+  servo.min();
+  ```
+  Or 
+  ```js
+  var servo = new five.Servo({
+    pin: 10, 
+    range: [ 45, 135 ]
+  });
 
-// Set horn to 45degrees
-servo.min();
-```
+  // Set horn to 45°
+  servo.min();
+  ```
 
 - **max()** Set Servo to maximum degrees. Defaults to 180deg, respects explicit range.
-```js
-var servo = new five.Servo(11);
+  ```js
+  var servo = new five.Servo(10);
 
-// Set horn to 135degrees
-servo.max();
-```
-Or 
-```js
-var servo = new five.Servo({
-  pin: 11, 
-  range: [ 45, 135 ]
-});
+  // Set horn to 135°
+  servo.max();
+  ```
+  Or 
+  ```js
+  var servo = new five.Servo({
+    pin: 10, 
+    range: [ 45, 135 ]
+  });
 
-// Set horn to 135degrees
-servo.max();
-```
+  // Set horn to 135°
+  servo.max();
+  ```
 
 
 - **center()** Set Servo to center point. Defaults to 90deg, respects explicit range.
-```js
-var servo = new five.Servo(11);
+  ```js
+  var servo = new five.Servo(10);
 
-// Set horn to 90degrees
-servo.center();
-```
-Or 
-```js
-var servo = new five.Servo({
-  pin: 11, 
-  range: [ 40, 80 ]
-});
+  // Set horn to 90degrees
+  servo.center();
+  ```
+  Or 
+  ```js
+  var servo = new five.Servo({
+    pin: 10, 
+    range: [ 40, 80 ]
+  });
 
-// Set horn to 60degrees
-servo.center();
-```
+  // Set horn to 60degrees
+  servo.center();
+  ```
 
 - **sweep()** Sweep the servo between min and max or provided range
-```js
-var servo = new five.Servo(11);
+  ```js
+  var servo = new five.Servo(10);
 
-// Repeated full range movement
-servo.sweep();
-```
+  // Repeated full range movement
+  servo.sweep();
+  ```
 
-- **stop()** Stop a moving servo. 
-```js
-var servo = new five.Servo(11);
+  - **stop()** Stop a moving servo. 
+  ```js
+  var servo = new five.Servo(10);
 
-servo.stop();
-```
+  servo.stop();
+  ```
 
 
-- **cw(speed)** Move a **continuous** servo clockwise at speed, 0-1
-```js
-var servo = new five.Servo({
-  pin: 11, 
-  type: "continuous"
-});
+- **cw(speed)** (Continuous only) Move a **continuous** servo clockwise at speed, 0-1
+  ```js
+  var servo = new five.Servo({
+    pin: 10, 
+    type: "continuous"
+  });
 
-servo.cw(1);
-```
+  servo.cw(1);
+  ```
 
-- **ccw(speed)** Move a **continuous** servo counter clockwise at speed, 0-1
-```js
-var servo = new five.Servo({
-  pin: 11, 
-  type: "continuous"
-});
+- **ccw(speed)** (Continuous only) Move a **continuous** servo counter clockwise at speed, 0-1
+  ```js
+  var servo = new five.Servo({
+    pin: 10, 
+    type: "continuous"
+  });
 
-servo.ccw(1);
-```
+  servo.ccw(1);
+  ```
 
 ## Events
 
 It's recommended to use a rotary potentiometer as the mechanism for determining servo movement.
 
-## Examples
-- [Servo](https://github.com/rwldrn/johnny-five/blob/master/docs/servo.md)
-- [Servo Options](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-options.md)
-- [Servo Array](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
-- [Servo Digital](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-digital.md)
-- [Servo Dual](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-dual.md)
-- [I2C Controlled Servo](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-PCA9685.md)
-- [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
-- [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
-- [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
+- **move:complete** this is emitted when a timed move is completed.
 
 
 ## Additional Information
@@ -316,3 +387,18 @@ Although servos can run on digital pins, this can sometimes cause issues. For th
 If you are experiencing memory leak crashes when using your servo, make sure that you are not powering the servo directly from your board. Excessive power draw on the USB port causes such crashes. The following diagram shows an example of how to provide external power for servos: 
 
 <img src="https://dl.dropboxusercontent.com/u/3531958/external-servo-power.png">
+
+If your continuous servo moves when it should be stopped, it likely needs to be calibrated. Find instructions [here](http://bocoup.com/weblog/assembling-preparing-robotsconf-sumobot-with-johnny-five/).
+
+
+## Examples
+
+- [Servo](https://github.com/rwldrn/johnny-five/blob/master/docs/servo.md)
+- [Servo Options](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-options.md)
+- [Servo Array](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
+- [Servo Digital](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-digital.md)
+- [Servo Dual](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-dual.md)
+- [I2C Controlled Servo](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-PCA9685.md)
+- [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
+- [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
+- [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
