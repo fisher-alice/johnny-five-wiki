@@ -2,92 +2,103 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 
 ### Parameters
  * **pin** A Number or String address for the Non-Directional Motor pin (PWM).
-```js
-var motor = new five.Motor(9);
-```
  * **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
+
+ * **options** An object of property parameters.
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pins</td>
+        <td>Object</td>
+        <td>A valid pins object or pins array</td>
+        <td></td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>current</td>
+        <td>Object</td>
+        <td>A valid Sensor options object*</td>
+        <td>
+          
+        </td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>invertPWM</td>
+        <td>Boolean</td>
+        <td>true or false</td>
+        <td>
+          
+        </td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>address</td>
+        <td>Number (usually in hexadecimal)</td>
+        <td>An I2C device address</td>
+        <td>
+          
+        </td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>controller</td>
+        <td>String</td>
+        <td>Motor controller interface type</td>
+        <td>
+          
+        </td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>register</td>
+        <td>Object {data, clock, latch}</td>
+        <td>Pin configuration for a ShiftRegister</td>
+        <td></td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>bits</td>
+        <td>Object {a, b}</td>
+        <td>Switch bits to be flipped to control an HBridge from a ShiftRegister</td>
+        <td></td>
+        <td>only if register is defined</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+## Shape
+
+```
+{ 
+  isOn: A boolean flag, true when motor is moving or braking, false when not READONLY
+}
+```
+
+## Component Initialization
+
 ```js
 // Two elements passed [pwm, dir]
 var motor = new five.Motor([3, 12]);
 ```
-or
+
+
 ```js
 // Three elements passed [pwm, dir, cdir]
 var motor = new five.Motor([3, 12, 11]);
 ```
 
- * **options**
-An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pins</td>
-      <td>Object</td>
-      <td>A valid pins object or pins array</td>
-      <td></td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>current</td>
-      <td>Object</td>
-      <td>A valid Sensor options object*</td>
-      <td>
-        
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>invertPWM</td>
-      <td>Boolean</td>
-      <td>true or false</td>
-      <td>
-        
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>address</td>
-      <td>Number (usually in hexadecimal)</td>
-      <td>An I2C device address</td>
-      <td>
-        
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>controller</td>
-      <td>String</td>
-      <td>Motor controller interface type</td>
-      <td>
-        
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>register</td>
-      <td>Object {data, clock, latch}</td>
-      <td>Pin configuration for a ShiftRegister</td>
-      <td></td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>bits</td>
-      <td>Object {a, b}</td>
-      <td>Switch bits to be flipped to control an HBridge from a ShiftRegister</td>
-      <td></td>
-      <td>only if register is defined</td>
-    </tr>
-  </tbody>
-</table>
+
 *See [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor) for valid options on the current object
 ```js
 // Create a motor with...
@@ -116,15 +127,8 @@ var motor = new five.Motor({
 });
 ```
 
-### Shape
 
-```
-{ 
-  isOn: A boolean flag, true when motor is moving or braking, false when not READONLY
-}
-```
-
-### Usage
+## Usage
 
 Non-Directional Motor
 ```js
@@ -270,82 +274,84 @@ board.on("ready", function() {
 
 - **forward(speed 0-255)** Set a motor moving forward
 - **fwd(speed 0-255)** Alias to forward()
-```js
-var motor = new five.Motor([11, 12]);
+  ```js
+  var motor = new five.Motor([11, 12]);
 
-// Forward at half speed
-motor.forward(128);
-```
+  // Forward at half speed
+  motor.forward(128);
+  ```
 
 - **reverse(speed 0-255)** Set a motor moving in reverse
 - **rev(speed 0-255)** Alias to reverse()
 
-```js
-var motor = new five.Motor([11, 12]);
+  ```js
+  var motor = new five.Motor([11, 12]);
 
-// Reverse at full speed
-motor.reverse(255);
-```
+  // Reverse at full speed
+  motor.reverse(255);
+  ```
 
 - **start([speed 0-255])** Set a motor moving in the current direction
-```js
-var motor = new five.Motor([11, 12]);
+  ```js
+  var motor = new five.Motor([11, 12]);
 
-// Forward at half speed
-motor.forward(128);
+  // Forward at half speed
+  motor.forward(128);
 
-// Stop
-motor.stop();
+  // Stop
+  motor.stop();
 
-// Resume forward at half speed
-motor.start();
+  // Resume forward at half speed
+  motor.start();
 
-// Continue forward at full speed
-motor.start(255);
+  // Continue forward at full speed
+  motor.start(255);
 
-```
+  ```
 
 - **stop()** Let the motor coast to a stop
-```js
-var motor = new five.Motor([11, 12]);
+  ```js
+  var motor = new five.Motor([11, 12]);
 
-// Forward at full speed
-motor.forward(255);
+  // Forward at full speed
+  motor.forward(255);
 
-// Roll to stop
-motor.stop();
-```
+  // Roll to stop
+  motor.stop();
+  ```
 
 - **brake()** Force a motor to stop (as opposed to coasting). Please note that this only works on boards with a dedicated brake pin. Other boards and interfaces will simply coast.
-```js
-var motor = new five.Motor([11, 12]);
+  ```js
+  var motor = new five.Motor([11, 12]);
 
-// Forward at full speed
-motor.forward(255);
+  // Forward at full speed
+  motor.forward(255);
 
-// Stop fast
-motor.brake();
+  // Stop fast
+  motor.brake();
 
-board.wait(100, function() {
-  motor.stop();
-});
-```
+  board.wait(100, function() {
+    motor.stop();
+  });
+  ```
 
 - **release()** Release the brake and resume current speed and direction
-```js
-var motor = new five.Motor([11, 12]);
+  ```js
+  var motor = new five.Motor([11, 12]);
 
-// Forward at full speed
-motor.forward(255);
+  // Forward at full speed
+  motor.forward(255);
 
-// Stop fast
-motor.brake();
+  // Stop fast
+  motor.brake();
 
-// Wait five seconds and release the brake
-board.wait(5000, function() {
-  motor.release();
-});
-```
+  // Wait five seconds and release the brake
+  board.wait(5000, function() {
+    motor.release();
+  });
+  ```
+
+<!--remove-start-->
 
 ## Examples
 - [Motor](https://github.com/rwldrn/johnny-five/blob/master/docs/motor.md)
@@ -355,6 +361,7 @@ board.wait(5000, function() {
 - [Motor with Current Sensor](https://github.com/rwldrn/johnny-five/blob/master/docs/motor-current.md)
 - [Motor PCA9685 via I2C](https://github.com/rwldrn/johnny-five/blob/master/docs/motor-PCA9685.md)
 
+<!--remove-end-->
 
 ## Additional Notes
 
@@ -596,6 +603,7 @@ This is by no means exhaustive
 1. Indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
 
 ### Pre-packaged Shield Configs
+
 There are several shields that Johnny-Five has created pre-configured objects for.  Instantiating motors using these shield configurations is designed to be extremely simple.  If the tables above include a shield config, you can use them like this:
 
 ```js
