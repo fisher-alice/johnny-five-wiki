@@ -2,11 +2,11 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 
 ## Parameters
 
-* **options** An object of property parameters
+* **options** An object of constructor parameters
  <table>
   <thead>
     <tr>
-      <th>Property Name</th>
+      <th>Name</th>
       <th>Type</th>
       <th>Value(s)</th>
       <th>Description</th>
