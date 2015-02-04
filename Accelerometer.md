@@ -278,6 +278,7 @@ accelerometer.disable();
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
 
+<!--remove-start-->
 ## Examples
 
 - [Tinkerkit Accelerometer](https://github.com/rwaldron/johnny-five/blob/master/docs/tinkerkit-accelerometer.md)
@@ -285,3 +286,5 @@ accelerometer.disable();
 - [MMA7361 Accelerometer](https://github.com/rwaldron/johnny-five/blob/master/docs/accelerometer-mma7361.md)
 - [Accelerometer](https://github.com/rwaldron/johnny-five/blob/master/docs/accelerometer.md)
 - [Accelerometer Pan and Tilt](https://github.com/rwaldron/johnny-five/blob/master/docs/accelerometer-pan-tilt.md)
+
+<!--remove-end-->
