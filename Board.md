@@ -19,7 +19,7 @@ For non-Arduino based projects, a number of [IO Plugins](https://github.com/rwal
 
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
-### Parameters
+## Parameters
 
 - **options** Optional object of themselves optional parameters.
 <table>
@@ -58,16 +58,14 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
   </tbody>
 </table>
 
-### Shape
+## Shape
 ```js
 { 
-  ready: ...A boolean value that indicates the readiness of the physical board
-  firmata: ...A reference to the protocol layer
-  id: ...A user definable id value. Defaults to a generated uid
-  pins: ...An array of all pins produced by the capabilities query
-  type: ...A string identifier of the board type, one of: "UNO", "MEGA", "LEONARDO" or "UNKOWN"
-  repl: ...A reference to the repl session object
-  port: A string illustrating the device path or COM address
+  ready: A boolean value that indicates the readiness of the physical board
+  io: A reference to the IO protocol layer.
+  id: A user definable id value. Defaults to a generated uid
+  pins: An array of all pins and pin capabilities
+  port: A string value of the device path or COM address
 }
 ```
 
@@ -76,22 +74,22 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 The easiest way to initialize a board object is to call the `Board` constructor function with `new`. Don't worry about knowing your device's path or COM port, Johnny-Five will figure out which USB the board is plugged into and connect to that automatically.
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 ```
 
 You may optionally specify the port by providing it as a property of the options object parameter:
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board({ port: "/dev/tty.usbmodemNNNN" });
+var five = require("johnny-five");
+var board = new five.Board({ port: "/dev/tty.usbmodemNNNN" });
 ```
 
 or 
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board({ port: "COM1" });
+var five = require("johnny-five");
+var board = new five.Board({ port: "COM1" });
 ```
 
 or you can specify a SerialPort object by providing it as a property of the options object parameter:
@@ -110,11 +108,11 @@ var board = new five.Board({
 
 ### Board Ready
 
-Once the board object has been initialized, it must connect to the physical board with a set of handshake steps, once this has completed, the board is ready to communicate with the program. This process is asynchronous, and signified to the program via a "ready" event.
+Once the board object has been initialized, it must connect to the physical board with a set of handshake steps, once this has completed, the board is ready to communicate with the program. This process is asynchronous, and completion is signified to the program via a "ready" event.
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // The board can now communicate with this program.
@@ -127,8 +125,8 @@ A basic, but complete example usage of the `Board` constructor:
 
 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
 
@@ -147,8 +145,8 @@ board.on("ready", function() {
 
 - **repl.inject(object)** Inject objects or values, from the program, into the REPL session.
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // Initialize an Led object that can be controlled from the REPL session
@@ -159,12 +157,10 @@ board.on("ready", function() {
 /*
   From the terminal...
 
-  > node program.js
-  1375291815062 Board Connecting... 
-  1375291815081 Serial Found possible serial port /dev/whatever-this-port-is
-  1375291815082 Board -> Serialport connected /dev/whatever-this-port-is
-  1375291816115 Board <- Serialport ready /dev/whatever-this-port-is
-  1375291816116 Repl Initialized 
+  $ node program.js
+  1423012815316 Device(s) /dev/cu.usbmodem1421
+  1423012818908 Connected /dev/cu.usbmodem1421
+  1423012818908 Repl Initialized  
   >> 
   (Since the led object is available here...)
   >> led.on();
@@ -211,10 +207,11 @@ Mode constants are exposed via the `Pin` class
     </tr>
   </tbody>
 </table>
+
 ```js
 // Set a pin to INPUT mode
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   
@@ -225,8 +222,8 @@ board.on("ready", function() {
 
 - **analogWrite(pin, value)** Write an analog value (0-255) to a digital `pin`.
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // Assuming an Led is attached to pin 9, this will turn it on at full brightness
@@ -238,8 +235,8 @@ board.on("ready", function() {
 
 - **analogRead(pin, handler(voltage))** Register a handler to be called whenever the board reports the voltage value (0-1023) of the specified analog `pin`.
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // Assuming a sensor is attached to pin "A1"
@@ -252,8 +249,8 @@ board.on("ready", function() {
 
 - **digitalWrite(pin, value)** Write a digital value (0 or 1) to a digital `pin`.
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // Assuming an Led is attached to pin 13, this will turn it on
@@ -264,8 +261,8 @@ board.on("ready", function() {
 
 - **digitalRead(pin, handler(value))** Register a handler to be called whenever the board reports the value (0 or 1) of the specified digital `pin`.
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // Assuming a button is attached to pin 9
@@ -280,8 +277,8 @@ board.on("ready", function() {
 
 - **wait(ms, handler())** Register a handler to be called once in another execution turn and after the amount of time specified in milliseconds has passed.
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   // Assuming an Led is attached to pin 13
@@ -299,8 +296,8 @@ board.on("ready", function() {
 
 - **loop(ms, handler())** Register a handler to be called repeatedly in another execution turn, every time the specified milliseconds has lapsed. 
 ```js
-var five = require("johnny-five"),
-    board = new five.Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
   var byte;
