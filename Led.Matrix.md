@@ -322,7 +322,7 @@ Note: `clear()` does not shut off the device.
     }
   });
 
-  // Turn on the top-left led of the specified device
+  // Turn on the top-left led of device 1
   matrix.led(0, 0, 0, 1);
 
   // Turn on the top-left led of all devices
@@ -336,7 +336,7 @@ Note: `clear()` does not shut off the device.
     controller: "HT16K33",
     isBicolor: true
   });
-  // Turn top-left led of the specified device yellow
+  // Turn top-left led of device 1 yellow
   matrix.led(0, 0, 0, LedControl.COLORS.YELLOW);
   ```
 
@@ -353,19 +353,19 @@ Note: `clear()` does not shut off the device.
     }
   });
 
-  // Turn on the entire first row of the specified device
-  matrix.row(0, 0, 255);
+  // Turn on the entire first row of device 1
+  matrix.row(1, 0, 255);
 
   // Turn on the entire first row of all devices
-  matrix.row(0, 255);
+  matrix.row(1, 255);
 
   // 8x16 I2C device
   var matrix = new five.Led.Matrix({ 
     controller: "HT16K33",
-    dims: [8,16]
+    dims: [8, 16]
   });
   // Turn on entire first row of all devices (16-bit value)
-  matrix.row(0,0xFFFF)
+  matrix.row(1, 0xFFFF)
   ```
 
 
@@ -381,11 +381,11 @@ Note: `clear()` does not shut off the device.
     }
   });
 
-  // Turn on the entire first column of the specified device
-  matrix.column(0, 0, 255);
+  // Turn on the entire first column of device 1
+  matrix.column(1, 0, 255);
 
   // Turn on the entire first column of all devices
-  matrix.column(0, 255);
+  matrix.column(1, 255);
   ```
 
 - **draw(character)** Draw a "character" to all devices.
@@ -430,8 +430,8 @@ Valid "character" values:
     "00000000"
   ];
 
-  // Draw a heart to the specified device
-  matrix.draw(0, heart);
+  // Draw a heart to device 1
+  matrix.draw(1, heart);
 
   // Draw a heart to all devices
   matrix.draw(heart);
@@ -448,16 +448,16 @@ Valid "character" values:
     0x00
   ];
 
-  // Draw an exclamation to the specified device
-  matrix.draw(0, exclamation);
+  // Draw an exclamation to device 1
+  matrix.draw(1, exclamation);
 
   // Draw an exclamation to all devices
   matrix.draw(exclamation);
 
   var asterisk = "*";
 
-  // Draw an asterisk to the specified device
-  matrix.draw(0, asterisk);
+  // Draw an asterisk to device 1
+  matrix.draw(1, asterisk);
 
   // Draw an asterisk to all devices
   matrix.draw(asterisk);
