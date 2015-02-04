@@ -69,7 +69,7 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 }
 ```
 
-### Initializing a Board
+## Component Initialization
 
 The easiest way to initialize a board object is to call the `Board` constructor function with `new`. Don't worry about knowing your device's path or COM port, Johnny-Five will figure out which USB the board is plugged into and connect to that automatically.
 
@@ -106,20 +106,8 @@ var board = new five.Board({
 ```
 
 
-### Board Ready
 
-Once the board object has been initialized, it must connect to the physical board with a set of handshake steps, once this has completed, the board is ready to communicate with the program. This process is asynchronous, and completion is signified to the program via a "ready" event.
-
-```js
-var five = require("johnny-five");
-var board = new five.Board();
-
-board.on("ready", function() {
-  // The board can now communicate with this program.
-});
-```
-
-### Usage
+## Usage
 
 A basic, but complete example usage of the `Board` constructor:
 
@@ -311,6 +299,13 @@ board.on("ready", function() {
   });
 });
 ```
+
+## Events
+
+- **connect** This event will be emitted once the program has "connected" to the board. This may be immediate, or after some amount of time, but is always asynchronous. 
+
+- **ready** This event will be emitted _after_ the **connect** event and only when the `Board` instance object has completed any hardware initialization that must take place before the program can operate. This process is asynchronous, and completion is signified to the program via a "ready" event.
+
 
 ## Examples
 
