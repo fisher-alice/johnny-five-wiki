@@ -45,7 +45,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 ## Shape
 
-```js
+```
 {
   id: A user definable id value. Defaults to a generated uid.
   pin: The pin address that the Ping Sensor is attached to.
@@ -861,6 +861,10 @@ void loop()
 }
 ```
 
+<!--remove-start-->
+
 ## Examples
 * [Ping](https://github.com/rwldrn/johnny-five/blob/master/docs/ping.md)
 * [Hc Sr04](https://github.com/rwaldron/johnny-five/blob/master/docs/hc-sr04.md)
+
+<!--remove-end-->
