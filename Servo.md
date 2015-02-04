@@ -391,6 +391,8 @@ If you are experiencing memory leak crashes when using your servo, make sure tha
 If your continuous servo moves when it should be stopped, it likely needs to be calibrated. Find instructions [here](http://bocoup.com/weblog/assembling-preparing-robotsconf-sumobot-with-johnny-five/).
 
 
+<!--remove-start-->
+
 ## Examples
 
 - [Servo](https://github.com/rwldrn/johnny-five/blob/master/docs/servo.md)
@@ -402,3 +404,5 @@ If your continuous servo moves when it should be stopped, it likely needs to be 
 - [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
 - [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
 - [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
+
+<!--remove-end-->
