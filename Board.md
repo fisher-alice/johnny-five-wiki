@@ -132,30 +132,30 @@ board.on("ready", function() {
 - **repl** This is a property of the board object that represents the automatically generated REPL that's created when a Johnny-Five program is executed. This object has an `inject` method that may be called as many times as desired. 
 
 - **repl.inject(object)** Inject objects or values, from the program, into the REPL session.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  // Initialize an Led object that can be controlled from the REPL session
-  this.repl.inject({
-    led: new five.Led(13)
-  });  
-});
-/*
-  From the terminal...
+  board.on("ready", function() {
+    // Initialize an Led object that can be controlled from the REPL session
+    this.repl.inject({
+      led: new five.Led(13)
+    });  
+  });
+  /*
+    From the terminal...
 
-  $ node program.js
-  1423012815316 Device(s) /dev/cu.usbmodem1421
-  1423012818908 Connected /dev/cu.usbmodem1421
-  1423012818908 Repl Initialized  
-  >> 
-  (Since the led object is available here...)
-  >> led.on();
-  >> led.off();
-  
-*/
-```
+    $ node program.js
+    1423012815316 Device(s) /dev/cu.usbmodem1421
+    1423012818908 Connected /dev/cu.usbmodem1421
+    1423012818908 Repl Initialized  
+    >> 
+    (Since the led object is available here...)
+    >> led.on();
+    >> led.off();
+    
+  */
+  ```
 
 - **pinMode(pin, mode)** Set the `mode` of a specific `pin`, one of INPUT, OUTPUT, ANALOG, PWM, SERVO.
 Mode constants are exposed via the `Pin` class
