@@ -150,3 +150,4 @@ There are no special API functions for this class.
 - **change** The "change" event is emitted whenever the value of the temperature changes more then the threshold value allows.
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
+
