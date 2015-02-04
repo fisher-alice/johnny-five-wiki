@@ -219,7 +219,7 @@ board.on("ready", function() {
 
 ## API
 
-> NOTE: An `Led.Matrix` instance can represent up to 8 chained devices, where each can be addressed directly by its zero-based index in the chain (0-7).
+> NOTE: An `Led.Digits` instance can represent up to 8 chained devices (1 device can support up to 8 seven-segment digits), where each can be addressed directly by its device index in the chain (1-8).
 
 
 > NOTE: When the device is turned off (with the `off` method), data is retained and will be displayed on the device when turned on (with the `on` method). This is useful when powering the devices from a battery, by providing a power saving mechanism.
