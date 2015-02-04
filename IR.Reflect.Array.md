@@ -171,6 +171,9 @@ eyes.loadCalibration({
 
 - **line** The "line" event is fired as frequently as the user defined `freq` will allow in milliseconds.  **It also requires that the devide has been calibrated**.  It is a single value between 0 and (n-1)*1000+1.  An array with 6 sensors will yield a value between 0 and 5001.
 
+<!--remove-start-->
 ## Examples
 - [Line Follower](https://github.com/rwaldron/johnny-five/blob/master/eg/line-follower.js)
 - [Line Follower Video](https://www.youtube.com/watch?v=i6n4CwqQer0)
+
+<!--remove-end-->
