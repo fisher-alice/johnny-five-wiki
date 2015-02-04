@@ -5,7 +5,7 @@ Supported Compass/Magnetometer:
 - HMC6352
 - HMC5883L
 
-### Parameters
+## Parameters
 
  * **options** An object of property parameters.
   <table>
@@ -36,7 +36,7 @@ Supported Compass/Magnetometer:
     </tbody>
   </table>
 
-### Shape
+## Shape
 
 ```js
 {
@@ -122,10 +122,18 @@ board.on("ready", function() {
 });
 ```
 
-### Events
+## API
 
-* **change** The "change" event is emitted whenever the heading of the compass has changed from it's last position
-* **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
+There are no special API functions for this class.
+
+
+## Events
+
+- **change** The "change" event is emitted whenever the heading of the compass has changed from it's last position
+- **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
+
+<!--remove-start-->
 
 ## Examples
 
+<!--remove-end-->
