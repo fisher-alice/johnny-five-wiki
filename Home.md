@@ -1,12 +1,15 @@
+<!--extract-start:guides-->
 - **[Getting Started](https://github.com/rwaldron/johnny-five/wiki/Getting-Started)** - Get Johnny-Five alive on your machine. ([es_ES][], [nl_NL][], [pt_BR][], [fr_FR][])
 - **[Prerequisites](https://github.com/rwaldron/johnny-five/wiki/Prerequites)** - Prerequisites for Linux, OSX, and Windows.
 - **[IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins)** - Create IO Plugins for any platform!
 - **[Control System Hierarchy Overview](https://github.com/rwaldron/johnny-five/wiki/Control-System-Hierarchy-Overview)** - A terminology primer for component class and IO Plugin authors.
+<!--extract-end:guides-->
 
 [es_ES]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-es_ES
 [nl_NL]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-nl_NL
 [pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-pt_BR
 [fr_FR]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-fr_FR
+
 
 ### Documentation 
 
@@ -48,10 +51,12 @@
 [Button-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Button-pt_BR
 
 ### How-To Guides
+
+<!--extract-start:guides-->
 - [Getting started with Johnny Five and Node Webkit](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Node-Webkit)
 - [Getting started with Johnny Five and Proteus](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Proteus)
 - [Getting started with Johnny Five and the Intel Galileo gen2](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-the-Intel-Galileo-gen2)
 - [Getting Started with Johnny Five and JY MCU Bluetooth Serial Port Module](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-JY-MCU-Bluetooth-Serial-Port-Module)
 - [Getting Started with Johnny Five and Xbee](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-Xbee)
-
+<!--extract-end:guides-->
 
