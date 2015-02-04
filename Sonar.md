@@ -149,4 +149,8 @@ sonar.within([ 5, 10 ], "inches", function() {
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
 
+<!--remove-start-->
+
 ## Examples
+
+<!--remove-end-->
