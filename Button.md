@@ -123,6 +123,7 @@ board.on("ready", function() {
 
 - **up**, **release** The button has been released.
 
+<!--remove-start-->
 
 ## Examples
 
@@ -131,3 +132,5 @@ board.on("ready", function() {
 - [Button Options](https://github.com/rwldrn/johnny-five/blob/master/docs/button-options.md)
 - [Button Pullup](https://github.com/rwldrn/johnny-five/blob/master/docs/button-pullup.md)
 - [Tinkerkit Button](https://github.com/rwldrn/johnny-five/blob/master/docs/tinkerkit-button.md)
+
+<!--remove-end-->
