@@ -168,6 +168,7 @@ var matrix = new five.Led.Matrix({
 
 ![Led.Matrix Mono Color](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-matrix-HT16K33.png)
 
+```js
 // 16x8 I2C device
 var matrix = new five.Led.Matrix({
   controller: "HT16K33",
