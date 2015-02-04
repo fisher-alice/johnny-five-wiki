@@ -30,53 +30,9 @@ The `ShiftRegister` class constructs an object that represents a shift register.
   </tbody>
   </table>
 
-  - **pins**
-    <table>
-      <thead>
-        <tr>
-          <th>Property Name</th>
-          <th>Type</th>
-          <th>Value(s)</th>
-          <th>Required</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>data</td>
-          <td>Number</td>
-          <td>
-            Any pin on board
-          </td>
-          <td>
-            yes
-          </td>
-        </tr>
-        <tr>
-          <td>clock</td>
-          <td>Number</td>
-          <td>
-            Any pin on board
-          </td>
-          <td>
-            yes
-          </td>
-        </tr>
-        <tr>
-          <td>latch</td>
-          <td>Number</td>
-          <td>
-            Any pin on board
-          </td>
-          <td>
-            yes
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
 ## Shape
 
-```js
+```
 {
   id: A user definable id value. Defaults to a generated uid
   pins : the object containing the pin values for data, clock and latch 
@@ -134,8 +90,13 @@ board.on("ready", function() {
 
 ## Events
 
-ShiftRegisters objects are output only and therefore do not emit any events.
+`ShiftRegister` objects are output only and therefore do not emit any events.
+
+
+<!--remove-start-->
 
 ## Examples
 
 * [Shiftregister](https://github.com/rwaldron/johnny-five/blob/master/docs/shiftregister.md)
+
+<!--remove-end-->
