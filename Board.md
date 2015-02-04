@@ -1,6 +1,6 @@
 The `Board` class constructs objects that represent the physical board itself. All device objects depend on an initialized and ready board object.
 
-Johnny-Five has been tested on, but is not limited to, the following boards:
+Johnny-Five (sans IO Plugin) has been tested on, but is not limited to, the following boards:
 
 - [Arduino UNO](http://arduino.cc/en/Main/arduinoBoardUno)
 - [Arduino Leonardo](http://arduino.cc/en/Main/arduinoBoardLeonardo)
@@ -64,7 +64,7 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
   ready: A boolean value that indicates the readiness of the physical board
   io: A reference to the IO protocol layer.
   id: A user definable id value. Defaults to a generated uid
-  pins: An array of all pins and pin capabilities
+  pins: An array of all pin capabilities objects
   port: A string value of the device path or COM address
 }
 ```
@@ -74,21 +74,18 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 The easiest way to initialize a board object is to call the `Board` constructor function with `new`. Don't worry about knowing your device's path or COM port, Johnny-Five will figure out which USB the board is plugged into and connect to that automatically.
 
 ```js
-var five = require("johnny-five");
 var board = new five.Board();
 ```
 
 You may optionally specify the port by providing it as a property of the options object parameter:
 
 ```js
-var five = require("johnny-five");
 var board = new five.Board({ port: "/dev/tty.usbmodemNNNN" });
 ```
 
 or 
 
 ```js
-var five = require("johnny-five");
 var board = new five.Board({ port: "COM1" });
 ```
 
