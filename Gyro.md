@@ -183,9 +183,13 @@ board.on("ready", function() {
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
 
+<!--remove-start-->
+
 ## Examples
 
 - [Tinkerkit Gyroscope](https://github.com/rwldrn/johnny-five/blob/master/docs/tinkerkit-gyroscope.md)
 - [MPU6050 Gyroscope](https://github.com/rwaldron/johnny-five/blob/master/docs/gyro-mpu6050.md)
 - [Analog Gyroscope](https://github.com/rwaldron/johnny-five/blob/master/docs/gyro-lpr5150l.md)
 - [Gyro](https://github.com/rwldrn/johnny-five/blob/master/docs/gyro.md)
+
+<!--remove-end-->
