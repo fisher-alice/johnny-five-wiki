@@ -305,6 +305,7 @@ Mode constants are exposed via the `Pin` class
 
 - **ready** This event will be emitted _after_ the **connect** event and only when the `Board` instance object has completed any hardware initialization that must take place before the program can operate. This process is asynchronous, and completion is signified to the program via a "ready" event.
 
+<!--remove-start-->
 
 ## Examples
 
@@ -312,3 +313,5 @@ Mode constants are exposed via the `Pin` class
 - [Board With Port](https://github.com/rwldrn/johnny-five/blob/master/docs/board-with-port.md)
 - [Board Multi](https://github.com/rwldrn/johnny-five/blob/master/docs/board-multi.md)
 - [Repl](https://github.com/rwldrn/johnny-five/blob/master/docs/repl.md)
+
+<!--remove-end-->
