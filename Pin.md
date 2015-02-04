@@ -1,5 +1,7 @@
 The `Pin` class constructs objects that represent any one pin on the physical board.
 
+**For most cases, a proper Component class should be used instead of `Pin`.**
+
 
 ## Parameters
 
@@ -63,6 +65,11 @@ var digital = new five.Pin({
 
 var analog = new five.Pin({
   pin: "A0"
+});
+
+var analogAsDigital = new five.Pin({
+  pin: 14,
+  type: "digital"
 });
 ```
 
