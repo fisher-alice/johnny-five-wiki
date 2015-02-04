@@ -213,10 +213,12 @@ The available properties for keyFrame objects are:
 ...  cuePoints: [0, 0.5, 1], keyFrames : [ { position: [10, 10, 0 ] }, { position: [20, 50, 90 ] }, { position: [10, 10, 0 ] } ] ...
 ```
 
-
+<!--remove-start-->
 ## Examples
 - [Animation](https://github.com/rwldrn/johnny-five/blob/master/docs/animation.md)
 - [Phoenix](https://github.com/rwldrn/johnny-five/blob/master/docs/phoenix.md)
+
+<!--remove-end-->
 
 ## Additional Tips
 
