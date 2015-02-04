@@ -89,7 +89,7 @@ var temp = new five.Sensor({
 ```
 
 
-### Usage
+## Usage
 
 ```js
 var five = require("johnny-five");
