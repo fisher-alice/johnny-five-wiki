@@ -196,109 +196,111 @@ Mode constants are exposed via the `Pin` class
     </tbody>
   </table>
 
-```js
-// Set a pin to INPUT mode
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  // Set a pin to INPUT mode
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  
-  // pin mode constants are available on the Pin class
-  this.pinMode(13, five.Pin.INPUT);
-});
-```
+  board.on("ready", function() {
+    
+    // pin mode constants are available on the Pin class
+    this.pinMode(13, five.Pin.INPUT);
+  });
+  ```
 
 - **analogWrite(pin, value)** Write an analog value (0-255) to a digital `pin`.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  // Assuming an Led is attached to pin 9, this will turn it on at full brightness
-  // PWM is the mode used to write ANALOG signals to a digital pin
-  this.pinMode(9, five.Pin.PWM);
-  this.analogWrite(9, 255);
-});
-```
+  board.on("ready", function() {
+    // Assuming an Led is attached to pin 9, 
+    // this will turn it on at full brightness
+    // PWM is the mode used to write ANALOG 
+    // signals to a digital pin
+    this.pinMode(9, five.Pin.PWM);
+    this.analogWrite(9, 255);
+  });
+  ```
 
 - **analogRead(pin, handler(voltage))** Register a handler to be called whenever the board reports the voltage value (0-1023) of the specified analog `pin`.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  // Assuming a sensor is attached to pin "A1"
-  this.pinMode(1, five.Pin.ANALOG);
-  this.analogRead(1, function(voltage) {
-    console.log(voltage);
+  board.on("ready", function() {
+    // Assuming a sensor is attached to pin "A1"
+    this.pinMode(1, five.Pin.ANALOG);
+    this.analogRead(1, function(voltage) {
+      console.log(voltage);
+    });
   });
-});
-```
+  ```
 
 - **digitalWrite(pin, value)** Write a digital value (0 or 1) to a digital `pin`.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  // Assuming an Led is attached to pin 13, this will turn it on
-  this.pinMode(13, five.Pin.OUTPUT);
-  this.digitalWrite(13, 1);
-});
-```
+  board.on("ready", function() {
+    // Assuming an Led is attached to pin 13, this will turn it on
+    this.pinMode(13, five.Pin.OUTPUT);
+    this.digitalWrite(13, 1);
+  });
+  ```
 
 - **digitalRead(pin, handler(value))** Register a handler to be called whenever the board reports the value (0 or 1) of the specified digital `pin`.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  // Assuming a button is attached to pin 9
-  this.pinMode(9, five.Pin.INPUT);
-  this.digitalRead(9, function(value) {
-    console.log(value);
+  board.on("ready", function() {
+    // Assuming a button is attached to pin 9
+    this.pinMode(9, five.Pin.INPUT);
+    this.digitalRead(9, function(value) {
+      console.log(value);
+    });
   });
-});
-```
+  ```
 
 - **shiftOut(dataPin, clockPin, isBigEndian, value)** Write a byte to `dataPin`, followed by toggling the `clockPin`. [Understanding Big and Little Endian Byte Order](http://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/)
 
 - **wait(ms, handler())** Register a handler to be called once in another execution turn and after the amount of time specified in milliseconds has passed.
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  // Assuming an Led is attached to pin 13
-  this.pinMode(13, five.Pin.OUTPUT);
+  board.on("ready", function() {
+    // Assuming an Led is attached to pin 13
+    this.pinMode(13, five.Pin.OUTPUT);
 
-  // Turn it on...
-  this.digitalWrite(13, 1);
+    // Turn it on...
+    this.digitalWrite(13, 1);
 
-  this.wait(1000, function() {
-    // Turn it off...
-    this.digitalWrite(13, 0);
+    this.wait(1000, function() {
+      // Turn it off...
+      this.digitalWrite(13, 0);
+    });
   });
-});
-```
+  ```
 
 - **loop(ms, handler())** Register a handler to be called repeatedly in another execution turn, every time the specified milliseconds has lapsed. 
-```js
-var five = require("johnny-five");
-var board = new five.Board();
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
 
-board.on("ready", function() {
-  var byte;
+  board.on("ready", function() {
+    var byte;
 
-  // Assuming an Led is attached to pin 13
-  this.pinMode(13, five.Pin.OUTPUT);
+    // Assuming an Led is attached to pin 13
+    this.pinMode(13, five.Pin.OUTPUT);
 
-  // Homemade strobe
-  this.loop(500, function() {
-    this.digitalWrite(13, (byte ^= 0x01));
+    // Homemade strobe
+    this.loop(500, function() {
+      this.digitalWrite(13, (byte ^= 0x01));
+    });
   });
-});
-```
+  ```
 
 ## Events
 
