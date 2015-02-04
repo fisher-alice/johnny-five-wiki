@@ -8,39 +8,39 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 - **pin** A Number or String address for the pin. If digital, use the number, if analog use the "A" prefixed string.
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number, String</td>
-      <td>Any Pin</td>
-      <td>The Number or String address of the pin</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>type</td>
-      <td>String</td>
-      <td>"digital", "analog"</td>
-      <td>For most cases, this can be omitted; the type will be inferred based on the pin address number.</td>
-      <td>no</td>
-    </tr>
+  <table>
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Value(s)</th>
+        <th>Description</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pin</td>
+        <td>Number, String</td>
+        <td>Any Pin</td>
+        <td>The Number or String address of the pin</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>String</td>
+        <td>"digital", "analog"</td>
+        <td>For most cases, this can be omitted; the type will be inferred based on the pin address number.</td>
+        <td>no</td>
+      </tr>
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
 
 ## Shape
 
-```js
+```
 { 
   id: A user definable id value. Defaults to null
   pin: The pin address of the pin
@@ -250,6 +250,10 @@ Whenever a pin is set to `INPUT` or `ANALOG`, it will automatically emit the fol
   });
   ```
 
+<!--remove-start-->
+
 ## Examples
 - [Pin](https://github.com/rwldrn/johnny-five/blob/master/docs/pin.md)
 - [Pin Circuit Event](https://github.com/rwldrn/johnny-five/blob/master/docs/pin-circuit-event.md)
+
+<!--remove-end-->
