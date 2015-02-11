@@ -50,6 +50,14 @@ This list will continue to be updated as more devices are confirmed.
       <td>controller-dependent</td>
       <td>no</td>
     </tr>
+<tr>
+      <td>freq</td>
+      <td>Number</td>
+      <td>milliseconds</td>
+      <td>the rate in millisecond to emit the data event</td>
+      <td></td>
+      <td>no</td>
+    </tr>
   </tbody>
 </table>
 
