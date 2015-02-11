@@ -54,7 +54,7 @@ This list will continue to be updated as more devices are confirmed.
       <td>freq</td>
       <td>Number</td>
       <td>milliseconds</td>
-      <td>the rate in millisecond to emit the data event</td>
+      <td>the rate in milliseconds to emit the data event</td>
       <td></td>
       <td>no</td>
     </tr>
