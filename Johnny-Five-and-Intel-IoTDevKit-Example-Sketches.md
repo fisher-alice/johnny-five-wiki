@@ -31,7 +31,7 @@ The purpose of this guide is to provide a working Intel XDK IoT Edition project 
 
 Before running each example with Intel IoT XDK Edition, you must modify the "package.json" file to set the target script. The default is "blink.js." 
 
-[All sketches may be found here](https://github.com/mashery/edison-guides/tree/master/recipies/Johnny-Five%20Sensor%20Examples)
+[All sketches may be found here](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/)
 
 ### Blink Sketch
 
@@ -43,7 +43,7 @@ Take out the LED sensor and plug in an LED, make sure the "long" wire goes in th
 
 Plug the LED sensor into "pin 4." Change the "blink.js" script from pin 13 to pin 4 then upload and run to make the LED blink.
 
-You can view the source code here: [blink.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/blink.js)
+You can view the source code here: [blink.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/blink.js)
 
 ### Light Sensor Sketch
 
@@ -53,7 +53,7 @@ You can view the source code here: [blink.js](https://github.com/mashery/edison-
 
 Plug the light sensor into Analog slot 0. Modify the package.json to make the target file "light.js." 
 
-You can view the source code here: [light.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/light.js)
+You can view the source code here: [light.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/light.js)
 
 ### Sound Sensor Sketch
 
@@ -65,7 +65,7 @@ Plug the sound sensor into Analog slot 0. Modify the package.json to make the ta
 
 **NOTE: This example also uses an Led component plugged into the D4 slot. This version is no shown in the photos above, but corresponds to the Johnny-Five version of the example.**
 
-You can view the source code here: [sound.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/sound.js)
+You can view the source code here: [sound.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/sound.js)
 
 # Buzzer
 
@@ -75,7 +75,7 @@ Plug the Buzzer into pin 4. Modify the package.json to make the target file "buz
 
 **NOTE: This example requires the j5-songs module, which is installed by executing `npm install j5-songs`**
 
-You can view the source code here: [buzzer.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/buzzer.js)
+You can view the source code here: [buzzer.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/buzzer.js)
 
 ### Rotary Angle Sensor
 
@@ -85,7 +85,7 @@ You can view the source code here: [buzzer.js](https://github.com/mashery/edison
 
 Plug the rotary sensor into Analog slot 0. Modify the package.json to make the target file "rotary.js." 
 
-You can view the source code here: [rotary.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/rotary.js)
+You can view the source code here: [rotary.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/rotary.js)
 
 ### Temperature Sensor
 
@@ -95,7 +95,7 @@ You can view the source code here: [rotary.js](https://github.com/mashery/edison
 
 Plug the temperature sensor into Analog slot 0. Modify the package.json to make the target file "temperature.js."
 
-You can view the source code here: [temperature.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/temperature.js)
+You can view the source code here: [temperature.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/temperature.js)
 
 ### LCD 
 
@@ -103,7 +103,7 @@ You can view the source code here: [temperature.js](https://github.com/mashery/e
 
 Plug the LCD sensor into the I2C slot shown in the image. Modify the package.json to make the target file "lcd-screen.js."
 
-You can view the source code here: [lcd-screen.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/lcd-screen.js)
+You can view the source code here: [lcd-screen.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/lcd-screen.js)
 
 ### Buttons
 
@@ -115,7 +115,7 @@ You can view the source code here: [lcd-screen.js](https://github.com/mashery/ed
 
 Plug the button (either the touch or black tipped button) into pin 4. Modify the package.json to make the target file "button.js."
 
-You can view the source code here: [button.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/button.js)
+You can view the source code here: [button.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/button.js)
 
 ### Servo
 
@@ -127,7 +127,7 @@ You can view the source code here: [button.js](https://github.com/mashery/edison
 
 Plug the Servo into Pin 3 (D3) on the shield. Remember to change the target in `package.json` to the file `servo.js`
 
-You can view the source code here: [servo.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/servo.js)
+You can view the source code here: [servo.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/servo.js)
 
 ### Relay
 
@@ -137,4 +137,4 @@ You can view the source code here: [servo.js](https://github.com/mashery/edison-
 
 Plug the Relay into Pin 4 (D4) on the shield. Remember to change the target in `package.json` to the file `relay.js`
 
-You can view the source code here: [relay.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Sensor%20Examples/relay.js)
+You can view the source code here: [relay.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/relay.js)
