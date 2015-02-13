@@ -21,7 +21,7 @@ The purpose of this guide is to provide a working Intel XDK IoT Edition project 
 1. Plug in and flash your Intel Edison
 2. Make sure both your Intel Edison and computer running Intel XDK IoT Edition are on the same network
 3. Download and install Intel XDK IoT Edition
-4. git clone the Johnny-Five example [from this location](https://github.com/mashery/edison-guides/tree/master/recipies/Johnny-Five%20Sensor%20Examples)
+4. git clone the Johnny-Five example [from this location](https://github.com/mashery/edison-guides/tree/master/recipies/Johnny-Five%20Examples)
 5. Follow the instructions to get your Edison online
 6. Add your computer to Intel Edison's whitelist
 7. Open settings and ensure that NPM install is run automatically on your Intel Edison
