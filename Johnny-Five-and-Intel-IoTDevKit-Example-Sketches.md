@@ -1,4 +1,4 @@
-> This guide was forked from Mashery's [ntel IoTDevKit Example Sketches](https://github.com/mashery/edison-guides/wiki/Cylon.js-and-Intel-IoTDevKit-Example-Sketches)
+> This guide was forked from Mashery's [Intel IoTDevKit Example Sketches](https://github.com/mashery/edison-guides/wiki/Cylon.js-and-Intel-IoTDevKit-Example-Sketches)
 
 **Galileo-IO/Edison-IO will install a version of libmraa that is known to be stable and well tested.**
 
