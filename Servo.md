@@ -187,7 +187,7 @@ var servo = new five.Servo.Continuous({
 ![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servo-PCA9685.png)
 
 
-### Usage
+## Usage
 
 Standard Servo
 ```js
