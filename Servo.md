@@ -313,15 +313,44 @@ board.on("ready", function() {
   servo.center();
   ```
 
-- **sweep()** Sweep the servo between min and max or provided range
+- **sweep()** Sweep the servo between `min` and `max`, repeatedly.
+  ```js
+  var servo = new five.Servo(10);
+
+  servo.sweep();
+  ```
+- **sweep([ low, high ])** Sweep the servo between an explicit range, repeatedly.
   ```js
   var servo = new five.Servo(10);
 
   // Repeated full range movement
-  servo.sweep();
+  servo.sweep([45, 135]);
   ```
 
-  - **stop()** Stop a moving servo. 
+- **sweep(opts)** Sweep the servo between an (optional) explicit range, within an (optional) explicit interval, and  (optional) explicit steps (in degrees), repeatedly.
+  - `opts`: An object containing: 
+    - `range`: An array containing `[low, high]` boundaries to sweep between. 
+    - `interval`: The interval of a half sweep (eg. `low -> high`; a full sweep is `low -> high -> low`)
+    - `step`: The size of each step in degrees.
+    ```js
+    var servo = new five.Servo(10);
+    servo.sweep({
+      range: [45, 135]
+    });
+
+    servo.sweep({
+      range: [45, 135], 
+      interval: 1000,
+    });
+
+    servo.sweep({
+      range: [45, 135], 
+      interval: 1000,
+      step: 10
+    });
+    ```
+
+- **stop()** Stop a moving servo. 
   ```js
   var servo = new five.Servo(10);
 
