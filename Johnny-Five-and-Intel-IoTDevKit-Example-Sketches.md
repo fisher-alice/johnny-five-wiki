@@ -31,7 +31,7 @@ The purpose of this guide is to provide a working Intel XDK IoT Edition project 
 
 Before running each example with Intel IoT XDK Edition, you must modify the "package.json" file to set the target script. The default is "blink.js." 
 
-[All sketches may be found here](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/)
+[All sketches may be found here](https://github.com/mashery/edison-guides/tree/master/recipies/Johnny-Five%20Examples)
 
 ### Blink Sketch
 
