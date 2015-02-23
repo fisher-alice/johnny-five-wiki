@@ -1,4 +1,4 @@
-The `LCD` class constructs an object that represents an LCD Display.
+The `LCD` class constructs an object that represents an LCD Display. Controllers are generally named for the chip used or component model number. Most LCD's use the HD44780 screen (or similar), so be sure to check the model number or chip name for the right controller (valid controllers are listed below).
 
 ## Parameters
 
