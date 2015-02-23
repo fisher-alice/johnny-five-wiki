@@ -8,34 +8,13 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 - **pin** A Number or String address for the pin. If digital, use the number, if analog use the "A" prefixed string.
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>Any Pin</td>
-        <td>The Number or String address of the pin</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td>String</td>
-        <td>"digital", "analog"</td>
-        <td>For most cases, this can be omitted; the type will be inferred based on the pin address number.</td>
-        <td>no</td>
-      </tr>
 
-    </tbody>
-  </table>
+  | Property Name | Type | Value(s) | Description | Required | 
+  | --- | --- | --- | --- | --- | 
+  | id | Number, String | Non-specific | Any string or number value. Defaults to `null` | no | 
+  | pin | Number, String | Any Pin | The Number or String address of the pin |  yes | 
+  | type | String | "digital", "analog" | For most cases, this can be omitted; the type will be inferred based on the pin address number. | no | 
+
 
 
 ## Shape
