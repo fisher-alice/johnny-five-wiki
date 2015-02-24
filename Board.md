@@ -23,7 +23,7 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 
 - **options** Optional object of themselves optional parameters.
 
-  | Property Name | Type             | Value(s)                                | Description                                          | Required |
+  | Property | Type             | Value(s)                                | Description                                          | Required |
   |---------------|------------------|-----------------------------------------|------------------------------------------------------|----------|
   | id            | Number, String   | Any                                     | User definable identification                        | no       |
   | port          | String or object | "/dev/ttyAM0", "COM1", new SerialPort() | Path or name of device port/COM or SerialPort object | no       |
