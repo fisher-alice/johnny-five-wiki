@@ -14,40 +14,13 @@ var eyes = new five.IR.Reflect.Array({
 ```
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pins</td>
-      <td>Array of Number, String</td>
-      <td>["A0", "I1", 5] (Any pin on board)</td>
-      <td>The pins that the sensors are connected to</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>emitter</td>
-      <td>Number, String</td>
-      <td>"A0", 13 (Any pin on board)</td>
-      <td>The pin that the light emitter is connected to</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>Milliseconds</td>
-      <td>The frequency in ms of data events. Defaults to 25ms</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+
+  | Property Name | Type                    | Value(s)                           | Description                                          | Required |
+  |---------------|-------------------------|------------------------------------|------------------------------------------------------|----------|
+  | pins          | Array of Number, String | [“A0”, “I1”, 5] (Any pin on board) | The pins that the sensors are connected to           | yes      |
+  | emitter       | Number, String          | “A0”, 13 (Any pin on board)        | The pin that the light emitter is connected to       | yes      |
+  | freq          | Number                  | Milliseconds                       | The frequency in ms of data events. Defaults to 25ms | no       |
+
 
 ### Shape
 
