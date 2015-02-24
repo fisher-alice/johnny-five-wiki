@@ -3,118 +3,29 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 ## Parameters
 
 - **General Options**
- <table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>rows</td>
-      <td>Number</td>
-      <td>
-        The number of rows on the device
-      </td>
-      <td>
-        Defaults to 2
-      </td>
-      <td>
-        No
-      </td>
-    </tr>
-    <tr>
-      <td>cols</td>
-      <td>Number</td>
-      <td>
-        The number of columns on the device
-      </td>
-      <td>
-        Defaults to 16
-      </td>
-      <td>
-        No
-      </td>
-    </tr>
-  </tbody>
-  </table>
+
+  | Property Name | Type   | Value(s)                            | Description    | Required |
+  |---------------|--------|-------------------------------------|----------------|----------|
+  | rows          | Number | The number of rows on the device    | Defaults to 2  | No       |
+  | cols          | Number | The number of columns on the device | Defaults to 16 | No       |
 
 
 - **I2C Options**
- <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>controller</td>
-        <td>String</td>
-        <td>
-  PCF8574, PCF8574A, JHD1313M1 (Grove)
-  </td>
-       <td>
-         The name of the controller to use.
-       </td>
-        <td>
-          yes
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type   | Value(s)                             | Description                        | Required |
+  |---------------|--------|--------------------------------------|------------------------------------|----------|
+  | controller    | String | PCF8574, PCF8574A, JHD1313M1 (Grove) | The name of the controller to use. | yes      |
 
 
 
 
 - **Parallel Options (Default)**
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Object</td>
-        <td>
-{ 
-  rs, 
-  en, 
-  d4, 
-  d5, 
-  d6, 
-  d7 
-}
-        </td>
-        <td>
-          Sets the values of the rs, en, d4, d5, d6 and d7 pins.
-        </td>
-      </tr>
-      <tr>
-        <td>pins</td>
-        <td>Array</td>
-        <td>
-[ rs, en, d4, d5, d6, d7 ]
-        </td>
-        <td>
-          Sets the values of the rs, en, d4, d5, d6 and d7 pins.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type   | Value(s)                   | Description                                            |
+  |---------------|--------|----------------------------|--------------------------------------------------------|
+  | pins          | Object | { rs, en, d4, d5, d6, d7 } | Sets the values of the rs, en, d4, d5, d6 and d7 pins. |
+  | pins          | Array  | [ rs, en, d4, d5, d6, d7 ] | Sets the values of the rs, en, d4, d5, d6 and d7 pins. |
+
 
 
 
