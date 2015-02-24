@@ -9,38 +9,11 @@ The `IR.Proximity` class constructs an object that represents a single Infrared 
 ## Parameters
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>9, "D7" (Any pin on board)</td>
-        <td>The Number or String address of the pin the sensor is attached to, ie. 9, "D7"</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>controller</td>
-        <td>String</td>
-        <td>GP2Y0A21YK, 
-GP2D120XJ00F, 
-GP2Y0A02YK0F, 
-GP2Y0A41SK0F
-</td>
-        <td>The name of the controller to use</td>
-        <td>yes</td>
-      </tr>
 
-    </tbody>
-  </table>
+  | Property Name | Type           | Value(s)                                             | Description                                                                    | Required |
+  |---------------|----------------|------------------------------------------------------|--------------------------------------------------------------------------------|----------|
+  | pin           | Number, String | 9, “D7” (Any pin on board)                           | The Number or String address of the pin the sensor is attached to, ie. 9, “D7” | yes      |
+  | controller    | String         | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F | The name of the controller to use                                              | yes      |
 
 
 ## Shape
