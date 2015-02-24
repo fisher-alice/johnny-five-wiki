@@ -3,32 +3,11 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 ## Parameters
 
 * **options** An object of constructor parameters
- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pins</td>
-      <td>Object</td>
-      <td>
-{ data, clock, latch }
-</td>
-     <td>
-       Sets the values of the data , clock and latch pins
-     </td>
-      <td>
-        yes
-      </td>
-    </tr>
-  </tbody>
-  </table>
+
+  | Name | Type   | Properties             | Description                                        | Required |
+  |------|--------|------------------------|----------------------------------------------------|----------|
+  | pins | Object | `{ data, clock, latch }` | Sets the values of the data , clock and latch pins | yes      |
+
 
 ## Shape
 
