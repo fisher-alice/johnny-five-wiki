@@ -9,60 +9,17 @@ This list will continue to be updated as more devices are confirmed.
 ## Parameters
 
 - **General Options**
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>controller</td>
-        <td>string</td>
-        <td>"MPU6050"</td>
-        <td>The Name of the controller to use</td>
-        <td>"MPU6050"</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>freq</td>
-        <td>Number</td>
-        <td>ms</td>
-        <td>The delay in reporting data from this device</td>
-        <td>100</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property | Type   | Value(s)  | Description                                  | Default   | Required |
+  |---------------|--------|-----------|----------------------------------------------|-----------|----------|
+  | controller    | string | “MPU6050” | The Name of the controller to use            | “MPU6050” | no       |
+  | freq          | Number | ms        | The delay in reporting data from this device | 100       | no       |
 
 - **MPU6050 Options(`controller: "MPU6050"`)** 
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>address</td>
-        <td>Number</td>
-        <td>8-bit value</td>
-        <td>The address of the component (can be switched via ADO pin)</td>
-        <td>0x68</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property | Type   | Value(s)    | Description                                                | Default | Required |
+  |---------------|--------|-------------|------------------------------------------------------------|---------|----------|
+  | address       | Number | 8-bit value | The address of the component (can be switched via ADO pin) | 0x68    | no       |
 
 
 ## Shape 
