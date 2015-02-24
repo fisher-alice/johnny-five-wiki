@@ -16,40 +16,13 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 - **pin** A Number or String address for the Sensor pin (analog).
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>"A0", "I1", 5 (Any pin on board)</td>
-        <td>The Number or String address of the pin the sensor is attached to, ie. "A0" or "I1"</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>freq</td>
-        <td>Number</td>
-        <td>Milliseconds</td>
-        <td>The frequency in ms of data events. Defaults to 25ms</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>threshold</td>
-        <td>Number</td>
-        <td>Any</td>
-        <td>The change threshold (+/- value). Defaults to 1</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type           | Value(s)                         | Description                                                                         | Required |
+  |---------------|----------------|----------------------------------|-------------------------------------------------------------------------------------|----------|
+  | pin           | Number, String | “A0”, “I1”, 5 (Any pin on board) | The Number or String address of the pin the sensor is attached to, ie. “A0” or “I1” | yes      |
+  | freq          | Number         | Milliseconds                     | The frequency in ms of data events. Defaults to 25ms                                | no       |
+  | threshold     | Number         | Any                              | The change threshold (+/- value). Defaults to 1                                     | no       |
+
 
 
 ## Shape
