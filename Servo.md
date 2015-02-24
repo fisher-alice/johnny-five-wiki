@@ -9,12 +9,13 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | Property Name | Type           | Value/Description                                                                           | Required |
   |---------------|----------------|---------------------------------------------------------------------------------------------|----------|
   | pin           | Number, String | The address of the pin the servo is attached to                                             | yes      |
-  | range         | Array          | \`[ lower, upper ]\` The range of motion in degrees. Defaults to [0, 180]                   | no       |
+  | range         | Array          | `[ lower, upper ]` The range of motion in degrees. Defaults to [0, 180]                   | no       |
   | type          | String         | “standard”, “continuous”. The type of servo being created. Defaults to “standard”           | no       |
   | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               | no       |
-  | isInverted    | Boolean        | \`true\` or \`false\`. Optionally Invert servo movement. Defaults to \`false\`              | no       |
-  | center        | Boolean        | \`true\` or \`false\`. Optionally center the servo on initialization. Defaults to \`false\` | no       |
+  | isInverted    | Boolean        | `true` or `false`. Optionally Invert servo movement. Defaults to `false`              | no       |
+  | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. Defaults to `false` | no       |
   | controller    | String         | PCA9685                                                                                     | no       |
+
 
 
 - **PCA9685 Options (`controller: "PCA9685"`)** 
