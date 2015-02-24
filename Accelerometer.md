@@ -13,134 +13,36 @@ This list will continue to be updated as more component support is implemented.
 ## Parameters
 
 - **General Options**
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>controller</td>
-        <td>string</td>
-        <td>ANALOG, MPU6050, ADXL345, ADXL335, MMA7361</td>
-        <td>The Name of the controller to use</td>
-        <td>"ANALOG"</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Name | Type   | Value(s)                                   | Description                       | Default  | Required |
+  |---------------|--------|--------------------------------------------|-----------------------------------|----------|----------|
+  | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361 | The Name of the controller to use | “ANALOG” | no       |
 
 - **Analog Options (`controller: "ANALOG"`)** 
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Array of Strings</td>
-        <td>["A*"]</td>
-        <td>The String analog pins that X, Y, and Z (optional) are attached to</td>
-        <td>none</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>sensitivity</td>
-        <td>Number</td>
-        <td>Varies by device</td>
-        <td>This value can be identified in the device's datasheet.</td>
-        <td>96 (Tinkerkit)</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>aref</td>
-        <td>Number</td>
-        <td>Voltage reference</td>
-        <td>This is the value of the VCC pin</td>
-        <td>5</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>zeroV</td>
-        <td>Number or Array</td>
-        <td>0-1023</td>
-        <td>The analog input when at rest, perpendicular to gravity.  When an array, specifies the zeroV for the individual axes.</td>
-        <td>478</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>autoCalibrate</td>
-        <td>Boolean</td>
-        <td>true/false</td>
-        <td>Whether to auto-calibrate the `zeroV` values.  The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky.</td>
-        <td>false</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type             | Value(s)          | Description                                                                                                                                                  | Default        | Required |
+  |---------------|------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|----------|
+  | pins          | Array of Strings | [“A\*”]           | The String analog pins that X, Y, and Z (optional) are attached to                                                                                           | none           | yes      |
+  | sensitivity   | Number           | Varies by device  | This value can be identified in the device's datasheet.                                                                                                      | 96 (Tinkerkit) | no       |
+  | aref          | Number           | Voltage reference | This is the value of the VCC pin                                                                                                                             | 5              | no       |
+  | zeroV         | Number or Array  | 0-1023            | The analog input when at rest, perpendicular to gravity. When an array, specifies the zeroV for the individual axes.                                         | 478            | no       |
+  | autoCalibrate | Boolean          | true/false        | Whether to auto-calibrate the `zeroV` values. The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky. | false          | no       |
+
 
 
 
 - **MPU6050 Options (`controller: "MPU6050"`)** 
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>sensitivity</td>
-        <td>Number</td>
-        <td>16 bit value</td>
-        <td>The sensitivity for the +- 250 setting of this device</td>
-        <td>16384</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type   | Value(s)     | Description                                           | Default | Required |
+  |---------------|--------|--------------|-------------------------------------------------------|---------|----------|
+  | sensitivity   | Number | 16 bit value | The sensitivity for the +- 250 setting of this device | 16384   | no       |
 
 - **MMA7361 Options (`controller: "MMA7361"`)** 
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>sleepPin</td>
-        <td>Number or String</td>
-        <td>Digital Pin Address</td>
-        <td>The digital pin that controls the sleep pin on the device.  If you don't set this pin, you need to pull it up to Vcc with a 10k resistor.</td>
-        <td>null</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type             | Value(s)            | Description                                                                                                                              | Default | Required |
+  |---------------|------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|
+  | sleepPin      | Number or String | Digital Pin Address | The digital pin that controls the sleep pin on the device. If you don't set this pin, you need to pull it up to Vcc with a 10k resistor. | null    | no       |
+
 
 ## Shape
 
