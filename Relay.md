@@ -5,34 +5,11 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 - **pin** A Number or String address for the pin.
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>Any Pin</td>
-        <td>The Number or String address of the Relay pin</td>
-        <td>yes</td>
-      </tr>
 
-      <tr>
-        <td>type</td>
-        <td>String</td>
-        <td>"NO", "NC"</td>
-        <td>Normally Open or Normally Closed. Defaults to "NO"</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+  | Property Name | Type           | Value(s)   | Description                                        | Required |
+  |---------------|----------------|------------|----------------------------------------------------|----------|
+  | pin           | Number, String | Any Pin    | The Number or String address of the Relay pin      | yes      |
+  | type          | String         | “NO”, “NC” | Normally Open or Normally Closed. Defaults to “NO” | no       |
 
 
 ## Shape
