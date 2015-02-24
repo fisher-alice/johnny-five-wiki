@@ -3,78 +3,17 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 ### Parameters
  * **pin** A Number or String address for the Non-Directional Motor pin (PWM).
  * **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
-
  * **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Object</td>
-        <td>A valid pins object or pins array</td>
-        <td></td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>current</td>
-        <td>Object</td>
-        <td>A valid Sensor options object*</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>invertPWM</td>
-        <td>Boolean</td>
-        <td>true or false</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>address</td>
-        <td>Number (usually in hexadecimal)</td>
-        <td>An I2C device address</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>controller</td>
-        <td>String</td>
-        <td>Motor controller interface type</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>register</td>
-        <td>Object {data, clock, latch}</td>
-        <td>Pin configuration for a ShiftRegister</td>
-        <td></td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>bits</td>
-        <td>Object {a, b}</td>
-        <td>Switch bits to be flipped to control an HBridge from a ShiftRegister</td>
-        <td></td>
-        <td>only if register is defined</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type                            | Value/Description                                                    | Required                    |
+  |---------------|---------------------------------|----------------------------------------------------------------------|-----------------------------|
+  | pins          | Object                          | A valid pins object or pins array                                    | yes                         |
+  | current       | Object                          | A valid Sensor options object*                                      | no                          |
+  | invertPWM     | Boolean                         | true or false                                                        | no                          |
+  | address       | Number (usually in hexadecimal) | An I2C device address                                                | no                          |
+  | controller    | String                          | Motor controller interface type                                      | no                          |
+  | register      | Object {data, clock, latch}     | Pin configuration for a ShiftRegister                                | no                          |
+  | bits          | Object {a, b}                   | Switch bits to be flipped to control an HBridge from a ShiftRegister | only if register is defined |
 
 
 ## Shape
@@ -387,121 +326,67 @@ Controllers that use 2 pins instead of 3 are essentially the same. Both arrangem
 This is by no means exhaustive
 
 #### 2 Pin
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Motor A pins</th>
-      <th>Motor B pins</th>
-      <th>Shield Config</th>
-      <th>Operating Voltage(1)</th>
-      <th>Max A per Channel</th>
-      <th>Stackable(2)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="http://arduino.cc/en/Main/ArduinoMotorShieldR3">Arduino Motor Shield R3</a></td>
-      <td>pwm:3,<br/>dir:12,<br/>[brake:9,]<br/>[current:A0]</td>
-      <td>pwm:11,<br/>dir:13,<br/>[brake:8,]<br/>[current:A1]</td>
-      <td>ARDUINO_MOTOR_SHIELD_R3_1 {A, B} (vanilla)<br/>ARDUINO_MOTOR_SHIELD_R3_2 {A, B} (w/brake)<br/>ARDUINO_MOTOR_SHIELD_R3_3 {A, B} (w/brake & current)</td>
-      <td>7-12V</td>
-      <td>2A</td>
-      <td>No</td>
-    </tr>    
-    <tr>
-      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=59">DF Robot 1A</a></td>
-      <td>pwm:6,<br/>dir:7</td>
-      <td>pwm:5,<br/>dir:4</td>
-      <td>DF_ROBOT {A, B}</td>
-      <td>7 - 12V</td>
-      <td>1A</td>
-      <td>No</td>
-    </tr>    
-    <tr>
-      <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=69">DF Robot 2A</a></td>
-      <td>pwm:6,<br/>dir:7</td>
-      <td>pwm:5,<br/>dir:4</td>
-      <td>DF_ROBOT {A, B}</td>
-      <td>4.8 - 35V</td>
-      <td>2A</td>
-      <td>No</td>
-    </tr>    
-    <tr>
-      <td><a href="http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html">NKC Electronics Motor Control Shield Kit</a></td>
-      <td>pwm:9,<br/>dir:12</td>
-      <td>pwm:10,<br/>dir:13</td>
-      <td>NKC_ELECTRONICS_KIT {A, B}</td>
-      <td>6 - 15V shared</td>
-      <td>1A</td>
-      <td>No</td>
-    </tr>    
-    <tr>
-      <td><a href="http://www.ruggedcircuits.com/motor-control/rugged-motor-driver">Rugged Circuits Rugged Motor Driver</a></td>
-      <td>pwm:3,<br/>dir:12</td>
-      <td>pwm:11,<br/>dir:13</td>
-      <td>RUGGED_CIRCUITS {A, B}</td>
-      <td>8-30V</td>
-      <td>2.8A</td>
-      <td>Yes</td>
-    </tr>    
-    <tr>
-      <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits Basic Motor Driver</a></td>
-      <td>pwm:3,<br/>dir:12</td>
-      <td>pwm:11,<br/>dir:13</td>
-      <td>RUGGED_CIRCUITS {A, B}</td>
-      <td>8-30V</td>
-      <td>2A</td>
-      <td>Yes</td>
-    </tr>    
-    <tr>
-      <td><a href="https://www.sparkfun.com/products/9815">Sparkfun Ardumoto</a></td>
-      <td>pwm:3,<br/>dir:12</td>
-      <td>pwm:11,<br/>dir:13</td>
-      <td>SPARKFUN_ARDUMOTO {A, B}</td>
-      <td>6 - 15V shared</td>
-      <td>2A</td>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
+
+| Name                                         | Motor A pins | Motor B pins | Shield Config                                            | Operating Voltage(1) | Max A per Channel | Stackable(2) |
+|----------------------------------------------|--------------|--------------|----------------------------------------------------------|----------------------|-------------------|--------------|
+| [Arduino Motor Shield R3][]                  | pwm:3,       
+                                                dir:12,       
+                                                [brake:9,]    
+                                                [current:A0]  | pwm:11,      
+                                                               dir:13,       
+                                                               [brake:8,]    
+                                                               [current:A1]  | ARDUINO_MOTOR_SHIELD_R3_1 {A, B} (vanilla)           
+                                                                              ARDUINO_MOTOR_SHIELD_R3_2 {A, B} (w/brake)            
+                                                                              ARDUINO_MOTOR_SHIELD_R3_3 {A, B} (w/brake & current)  | 7-12V                | 2A                | No           |
+| [DF Robot 1A][]                              | pwm:6,       
+                                                dir:7         | pwm:5,       
+                                                               dir:4         | DF_ROBOT {A, B}                                         | 7 - 12V              | 1A                | No           |
+| [DF Robot 2A][]                              | pwm:6,       
+                                                dir:7         | pwm:5,       
+                                                               dir:4         | DF_ROBOT {A, B}                                         | 4.8 - 35V            | 2A                | No           |
+| [NKC Electronics Motor Control Shield Kit][] | pwm:9,       
+                                                dir:12        | pwm:10,      
+                                                               dir:13        | NKC_ELECTRONICS_KIT {A, B}                             | 6 - 15V shared       | 1A                | No           |
+| [Rugged Circuits Rugged Motor Driver][]      | pwm:3,       
+                                                dir:12        | pwm:11,      
+                                                               dir:13        | RUGGED_CIRCUITS {A, B}                                  | 8-30V                | 2.8A              | Yes          |
+| [Rugged Circuits Basic Motor Driver][]       | pwm:3,       
+                                                dir:12        | pwm:11,      
+                                                               dir:13        | RUGGED_CIRCUITS {A, B}                                  | 8-30V                | 2A                | Yes          |
+| [Sparkfun Ardumoto][]                        | pwm:3,       
+                                                dir:12        | pwm:11,      
+                                                               dir:13        | SPARKFUN_ARDUMOTO {A, B}                                | 6 - 15V shared       | 2A                | No           |
+
+  [Arduino Motor Shield R3]: http://arduino.cc/en/Main/ArduinoMotorShieldR3
+  [DF Robot 1A]: http://www.dfrobot.com/index.php?route=product/product&product_id=59
+  [DF Robot 2A]: http://www.dfrobot.com/index.php?route=product/product&product_id=69
+  [NKC Electronics Motor Control Shield Kit]: http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html
+  [Rugged Circuits Rugged Motor Driver]: http://www.ruggedcircuits.com/motor-control/rugged-motor-driver
+  [Rugged Circuits Basic Motor Driver]: http://www.ruggedcircuits.com/motor-control/basic-motor-driver
+  [Sparkfun Ardumoto]: https://www.sparkfun.com/products/9815
+
 
 #### 3 Pin
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Motor A pins</th>
-      <th>Motor B pins</th>
-      <th>Shield Config</th>
-      <th>Operating Voltage(1)</th>
-      <th>Max A</th>
-      <th>Stackable(2)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a> and <a href="http://www.seeedstudio.com/depot/motor-shield-v20-p-1377.html?cPath=132_134">V2</a></td>
-      <td>pwm:9,<br/>dir:8,<br/>cdir: 11</td>
-      <td>pwm:10,<br/>dir:12,<br/>cdir: 13</td>
-      <td>SEEED_STUDIO {A, B}</td>
-      <td>6-15V</td>
-      <td>2A</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td><a href="http://www.freetronics.com/products/hbridge-dual-channel-h-bridge-motor-driver-shield">Freetronics Dual Channel H-Bridge Motor Driver Shield</a></td>
-      <td>pwm:6,<br/>dir:4,<br/>cdir: 7</td>
-      <td>pwm:5,<br/>dir:3,<br/>cdir: 2</td>
-      <td>FREETRONICS_HBRIDGE: {A, B}</td>
-      <td>8-40V</td>
-      <td>2A</td>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
+
+| Name                                                      | Motor A pins | Motor B pins | Shield Config                | Operating Voltage(1) | Max A | Stackable(2) |
+|-----------------------------------------------------------|--------------|--------------|------------------------------|----------------------|-------|--------------|
+| [Seeed Studios Motor Shield V1][] and [V2][]              | pwm:9,       
+                                                             dir:8,        
+                                                             cdir: 11      | pwm:10,      
+                                                                            dir:12,       
+                                                                            cdir: 13      | SEEED_STUDIO {A, B}         | 6-15V                | 2A    | No           |
+| [Freetronics Dual Channel H-Bridge Motor Driver Shield][] | pwm:6,       
+                                                             dir:4,        
+                                                             cdir: 7       | pwm:5,       
+                                                                            dir:3,        
+                                                                            cdir: 2       | FREETRONICS_HBRIDGE: {A, B} | 8-40V                | 2A    | No           |
+
+  [Seeed Studios Motor Shield V1]: http://www.seeedstudio.com/depot/Motor-Shield-p-913.html
+  [V2]: http://www.seeedstudio.com/depot/motor-shield-v20-p-1377.html?cPath=132_134
+  [Freetronics Dual Channel H-Bridge Motor Driver Shield]: http://www.freetronics.com/products/hbridge-dual-channel-h-bridge-motor-driver-shield
 
 #### I2C
+
 <table>
   <thead>
     <tr>
