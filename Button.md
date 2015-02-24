@@ -17,47 +17,13 @@ The `Button` class constructs objects that represents a single Button attached t
 
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>5, "I1" (Any digital pin on board)</td>
-        <td>The Number or String address of the pin the button is attached to, ie. 5 or "I1"</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>invert</td>
-        <td>Boolean</td>
-        <td>true or false</td>
-        <td>Invert the up and down values. This is useful for inverting button signals when the pin itself doesn't have built-in pullup resistor capabilities.</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>isPullup</td>
-        <td>Boolean</td>
-        <td>true or false</td>
-        <td>Initialize as a pullup button</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>holdtime</td>
-        <td>Number</td>
-        <td>milliseconds</td>
-        <td>Number of milliseconds the button must be held until emitting a "hold" event. Defaults to 500ms</td>
-        <td>no</td>
-      </tr>    
-    </tbody>
-  </table>
+
+  | Property Name | Type           | Value(s)                           | Description                                                                                                                                        | Required |
+  |---------------|----------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+  | pin           | Number, String | 5, “I1” (Any digital pin on board) | The Number or String address of the pin the button is attached to, ie. 5 or “I1”                                                                   | yes      |
+  | invert        | Boolean        | true or false                      | Invert the up and down values. This is useful for inverting button signals when the pin itself doesn’t have built-in pullup resistor capabilities. | no       |
+  | isPullup      | Boolean        | true or false                      | Initialize as a pullup button                                                                                                                      | no       |
+  | holdtime      | Number         | milliseconds                       | Number of milliseconds the button must be held until emitting a “hold” event. Defaults to 500ms                                                    | no       |
 
 
 ## Shape
