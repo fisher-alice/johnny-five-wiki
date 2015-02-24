@@ -18,36 +18,12 @@ Known supported devices:
 
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Properties</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Object</td>
-        <td>A valid pins object or pins array</td>
-        <td>data, clock, cs</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>devices</td>
-        <td>Number</td>
-        <td>1-8</td>
-        <td>
-          For single device cases, this can be omitted. Defaults to 1.
-        </td>
-        <td>no</td>
-      </tr>
 
-    </tbody>
-  </table>
+  | Property Name | Type   | Value(s)                          | Properties                                                   | Required |
+  |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
+  | pins          | Object | A valid pins object or pins array | data, clock, cs                                              | yes      |
+  | devices       | Number | 1-8                               | For single device cases, this can be omitted. Defaults to 1. | no       |
+
 
 
 ## Shape
