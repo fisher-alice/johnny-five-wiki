@@ -11,40 +11,13 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>Any PWM Pin</td>
-        <td>The address of the pin the esc is attached to, ie. 12 or "O1" (if using TinkerKit)</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>range</td>
-        <td>Array</td>
-        <td>[ lower, upper ]</td>
-        <td>The range of speed in percent. Defaults to [0, 100]</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>startAt</td>
-        <td>Number</td>
-        <td>Any fractional number value from 0-100</td>
-        <td>Initial speed percentage</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property | Type           | Value(s)                               | Description                                                                        | Required |
+  |----------|----------------|----------------------------------------|------------------------------------------------------------------------------------|----------|
+  | pin      | Number, String | Any PWM Pin                            | The address of the PWM pin the ESC is attached to | yes      |
+  | range    | Array          | [ lower, upper ]                       | The range of speed in percent. Defaults to [0, 100]                                | no       |
+  | startAt  | Number         | Any fractional number value from 0-100 | Initial speed percentage                                                           | no       |
+
 
 
 ## Shape
