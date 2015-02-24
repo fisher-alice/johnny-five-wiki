@@ -8,26 +8,10 @@ The `Piezo` class constructs objects that represent a single piezo component att
   ```
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number</td>
-        <td>Any Digital Pin</td>
-        <td>The Number address of the pin the + input your piezo is attached to</td>
-        <td>yes</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type   | Value(s)        | Description                                                         | Required |
+  |---------------|--------|-----------------|---------------------------------------------------------------------|----------|
+  | pin           | Number | Any Digital Pin | The Number address of the pin the + input your piezo is attached to | yes      |
 
 ## Shape
 
