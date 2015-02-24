@@ -8,7 +8,7 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
   <table>
     <thead>
       <tr>
-        <th>Property Name</th>
+        <th>Property</th>
         <th>Type</th>
         <th>Value(s)</th>
         <th>Description</th>

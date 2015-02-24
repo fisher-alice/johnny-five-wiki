@@ -15,9 +15,9 @@ var eyes = new five.IR.Reflect.Array({
 
 - **options** An object of property parameters.
 
-  | Property Name | Type                    | Value(s)                           | Description                                          | Required |
+  | Property | Type                    | Value(s)                           | Description                                          | Required |
   |---------------|-------------------------|------------------------------------|------------------------------------------------------|----------|
-  | pins          | Array of Number, String | [“A0”, “I1”, 5] (Any pin on board) | The pins that the sensors are connected to           | yes      |
+  | pins          | Array of Numbers, Strings | `[“A0”, “I1”, 5]` (Any pin on board) | The pins that the sensors are connected to           | yes      |
   | emitter       | Number, String          | “A0”, 13 (Any pin on board)        | The pin that the light emitter is connected to       | yes      |
   | freq          | Number                  | Milliseconds                       | The frequency in ms of data events. Defaults to 25ms | no       |
 

@@ -8,7 +8,7 @@ See also: [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
 <table>
   <thead>
     <tr>
-      <th>Property Name</th>
+      <th>Property</th>
       <th>Type</th>
       <th>Value(s)</th>
       <th>Description</th>

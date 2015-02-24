@@ -6,7 +6,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 <table>
   <thead>
     <tr>
-      <th>Property Name</th><th>Type</th><th>Value(s)</th><th>Description</th><th>Required</th>
+      <th>Property</th><th>Type</th><th>Value(s)</th><th>Description</th><th>Required</th>
     </tr>
   </thead>
   <tbody>
@@ -41,7 +41,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
   <table>
     <thead>
       <tr>
-        <th>Property Name</th>
+        <th>Property</th>
         <th>Type</th>
         <th>Value(s)</th>
         <th>Description</th>

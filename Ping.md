@@ -8,7 +8,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 - **options** An object of property parameters.
 
-  | Property Name | Type           | Value(s)                           | Description                                                              | Required |
+  | Property | Type           | Value(s)                           | Description                                                              | Required |
   |---------------|----------------|------------------------------------|--------------------------------------------------------------------------|----------|
   | pin           | Number, String | 9, “I1” (Any digital pin on board) | The Number or String address of the pin the sensor is attached to, ie. 7 | yes      |
   | freq          | Number         | Milliseconds                       | The frequency in ms of `data` events. Defaults to 100ms                | no       |

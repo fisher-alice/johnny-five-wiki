@@ -18,7 +18,7 @@ This list will continue to be updated as more Sonar devices are confirmed.
 
 - **options** An object of property parameters.
 
-  | Property Name | Type           | Value(s)                         | Description                                                                        | Required         |
+  | Property | Type           | Value(s)                         | Description                                                                        | Required         |
   |---------------|----------------|----------------------------------|------------------------------------------------------------------------------------|------------------|
   | pin           | Number, String | “A0”, “I1”, 5 (Any pin on board) | The Number or String address of the pin the sonar is attached to, ie. “A0” or “I1” | yes (for analog) |
   | device        | String         | “SRF02”, “SRF08”                 | A String model id of a Sonar device (I2C only), ie. “SRF02”, “SRF08”, “SRF10”      | yes (for I2C)    |

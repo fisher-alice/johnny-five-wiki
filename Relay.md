@@ -6,7 +6,7 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 
 - **options** An object of property parameters.
 
-  | Property Name | Type           | Value(s)   | Description                                        | Required |
+  | Property | Type           | Value(s)   | Description                                        | Required |
   |---------------|----------------|------------|----------------------------------------------------|----------|
   | pin           | Number, String | Any Pin    | The Number or String address of the Relay pin      | yes      |
   | type          | String         | “NO”, “NC” | Normally Open or Normally Closed. Defaults to “NO” | no       |

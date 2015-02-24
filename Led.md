@@ -19,7 +19,7 @@ For Leds that only have on/off states, use a digital pin:
 
 - **options** An object of property parameters.
 
-  | Property Name | Type    | Value(s)             | Description                                                                                     | Required |
+  | Property | Type    | Value(s)             | Description                                                                                     | Required |
   |---------------|---------|----------------------|-------------------------------------------------------------------------------------------------|----------|
   | pin           | Number  | Any Digital Pin      | The Number address of the pin the led is attached to                                            | yes      |
   | type          | String  | "OUTPUT", "PWM"      | For most cases, this can be omitted; the type will be inferred based on the pin address number. | no       |

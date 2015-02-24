@@ -15,7 +15,7 @@ This list will continue to be updated as more devices are confirmed.
 
 - **General Options**
 
-  | Property Name | Type          | Value(s)                                                      | Description                                             | Required                                                               |
+  | Property | Type          | Value(s)                                                      | Description                                             | Required                                                               |
   |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
   | controller    | string        | “ANALOG” | “LM35” | “TMP36” | “DS18B20” | “MPU6050” | “GROVE” | The Name of the controller to use. Defaults to “ANALOG” | no                                                                     |
   | pin           | string or int | “A0”, 2, etc                                                  | The Name of the controller to use                       | Yes, for analog devices. No for digitial devices (MPU-6050 or DS18B20) |

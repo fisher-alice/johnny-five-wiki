@@ -19,7 +19,7 @@ Known supported devices:
 
 - **options** An object of property parameters.
 
-  | Property Name | Type   | Value(s)                          | Properties                                                   | Required |
+  | Property | Type   | Value(s)                          | Properties                                                   | Required |
   |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
   | pins          | Object | A valid pins object or pins array | data, clock, cs                                              | yes      |
   | devices       | Number | 1-8                               | For single device cases, this can be omitted. Defaults to 1. | no       |

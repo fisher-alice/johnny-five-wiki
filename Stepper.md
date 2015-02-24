@@ -11,7 +11,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
   <table>
     <thead>
       <tr>
-        <th>Property Name</th>
+        <th>Property</th>
         <th>Type</th>
         <th>Value(s)</th>
         <th>Description</th>

@@ -43,14 +43,14 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
 - **shift register options** An object of property parameters.
 
-  | Property Name | Type   | Value(s)                          | Properties                                                   | Required |
+  | Property | Type   | Value(s)                          | Properties                                                   | Required |
   |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
   | pins          | Object | A valid pins object or pins array | data, clock, cs                                              | yes      |
   | devices       | Number | 1-8                               | For single device cases, this can be omitted. Defaults to 1. | no       |
 
 - **I2C options** (Requires StandardFirmata 2.4.0 or greater)
 
-  | Property Name | Type                                 | Value(s)                      | Properties                                                                             | Required |
+  | Property | Type                                 | Value(s)                      | Properties                                                                             | Required |
   |---------------|--------------------------------------|-------------------------------|----------------------------------------------------------------------------------------|----------|
   | controller    | string                               | A valid controller model name | HT16K33                                                                                | yes      |
   | addresses     | array                                | An array of I2C addresses     | Defaults to array of addresses in range 0x70 - 0x77, up to length specified by devices | no       |

@@ -6,7 +6,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 - **General options** An object of property parameters.
 
-  | Property Name | Type           | Value/Description                                                                           | Required |
+  | Property | Type           | Value/Description                                                                           | Required |
   |---------------|----------------|---------------------------------------------------------------------------------------------|----------|
   | pin           | Number, String | The address of the pin the servo is attached to                                             | yes      |
   | range         | Array          | `[ lower, upper ]` The range of motion in degrees. Defaults to [0, 180]                   | no       |
@@ -20,7 +20,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 - **PCA9685 Options (`controller: "PCA9685"`)** 
 
-  | Property Name | Type                            | Value/Description                              | Required |
+  | Property | Type                            | Value/Description                              | Required |
   |---------------|---------------------------------|------------------------------------------------|----------|
   | address       | Number (usually in hexadecimal) | I2C device address. (PCA9685 defaults to 0x40) | no       |
 
@@ -344,7 +344,7 @@ Although servos can run on digital pins, this can sometimes cause issues. For th
   <thead>
     <thead>
       <tr>
-        <th>Property Name</th>
+        <th>Property</th>
         <th>Type</th>
         <th>Value(s)</th>
         <th>Description</th>

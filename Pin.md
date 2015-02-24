@@ -9,7 +9,7 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 
 - **options** An object of property parameters.
 
-  | Property Name | Type | Value(s) | Description | Required | 
+  | Property | Type | Value(s) | Description | Required | 
   | --- | --- | --- | --- | --- | 
   | id | Number, String | Non-specific | Any string or number value. Defaults to `null` | no | 
   | pin | Number, String | Any Pin | The Number or String address of the pin |  yes | 
