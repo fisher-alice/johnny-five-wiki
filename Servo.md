@@ -4,76 +4,25 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 - **pin** A Number or String address for the Servo pin.
 
-- **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>Any PWM Pin</td>
-        <td>The address of the pin the servo is attached to, ie. 12 or "O1" (if using TinkerKit)</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>range</td>
-        <td>Array</td>
-        <td>[ lower, upper ]</td>
-        <td>The range of motion in degrees. Defaults to [0, 180]</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td>String</td>
-        <td>"standard", "continuous"</td>
-        <td>The type of servo being created. Defaults to "standard"</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>startAt</td>
-        <td>Number</td>
-        <td>Any number between 0-180</td>
-        <td>Degrees to initialize the servo at.</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>isInverted</td>
-        <td>Boolean</td>
-        <td>true or false</td>
-        <td>Invert servo movement</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>center</td>
-        <td>Boolean</td>
-        <td>true or false</td>
-        <td>Optionally center the servo on initialization. Defaults to `false`</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>controller</td>
-        <td>String</td>
-        <td>PCA9685</td>
-        <td>Servo controller interface type</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>address</td>
-        <td>Number (usually in hexadecimal)</td>
-        <td></td>
-        <td>I2C device address. (PCA9685 defaults to 0x40)</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+- **General options** An object of property parameters.
+
+  | Property Name | Type           | Value/Description                                                                           | Required |
+  |---------------|----------------|---------------------------------------------------------------------------------------------|----------|
+  | pin           | Number, String | The address of the pin the servo is attached to                                             | yes      |
+  | range         | Array          | \`[ lower, upper ]\` The range of motion in degrees. Defaults to [0, 180]                   | no       |
+  | type          | String         | “standard”, “continuous”. The type of servo being created. Defaults to “standard”           | no       |
+  | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               | no       |
+  | isInverted    | Boolean        | \`true\` or \`false\`. Optionally Invert servo movement. Defaults to \`false\`              | no       |
+  | center        | Boolean        | \`true\` or \`false\`. Optionally center the servo on initialization. Defaults to \`false\` | no       |
+  | controller    | String         | PCA9685                                                                                     | no       |
+
+
+- **PCA9685 Options (`controller: "PCA9685"`)** 
+
+  | Property Name | Type                            | Value/Description                              | Required |
+  |---------------|---------------------------------|------------------------------------------------|----------|
+  | address       | Number (usually in hexadecimal) | I2C device address. (PCA9685 defaults to 0x40) | no       |
+
 
 ### Shape
 
