@@ -17,48 +17,14 @@ This list will continue to be updated as more Sonar devices are confirmed.
 - **pin** A String address for the Sonar pin (analog only).
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number, String</td>
-      <td>"A0", "I1", 5 (Any pin on board)</td>
-      <td>The Number or String address of the pin the sonar is attached to, ie. "A0" or "I1"</td>
-      <td>yes (for analog)</td>
-    </tr>
-    <tr>
-      <td>device</td>
-      <td>String</td>
-      <td>"SRF02", "SRF08"</td>
-      <td>A String model id of a Sonar device (I2C only), ie. "SRF02", "SRF08", "SRF10"</td>
-      <td>yes (for I2C)</td>
-    </tr>
 
-    <tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>Milliseconds</td>
-      <td>The frequency in ms of data events. Defaults to 25ms</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>threshold</td>
-      <td>Number</td>
-      <td>Any</td>
-      <td>The change threshold (+/- value). Defaults to 1</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+  | Property Name | Type           | Value(s)                         | Description                                                                        | Required         |
+  |---------------|----------------|----------------------------------|------------------------------------------------------------------------------------|------------------|
+  | pin           | Number, String | “A0”, “I1”, 5 (Any pin on board) | The Number or String address of the pin the sonar is attached to, ie. “A0” or “I1” | yes (for analog) |
+  | device        | String         | “SRF02”, “SRF08”                 | A String model id of a Sonar device (I2C only), ie. “SRF02”, “SRF08”, “SRF10”      | yes (for I2C)    |
+  | freq          | Number         | Milliseconds                     | The frequency in ms of data events. Defaults to 25ms                               | no               |
+  | threshold     | Number         | Any                              | The change threshold (+/- value). Defaults to 1                                    | no               |
+
 
 
 
