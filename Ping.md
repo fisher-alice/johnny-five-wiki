@@ -7,41 +7,13 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 - **pin** A Number or String address for the ping sensor
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number, String</td>
-      <td>9, "I1" (Any digital pin on board)</td>
-      <td>The Number or String address of the pin the sensor is attached to, ie. 7</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>Milliseconds</td>
-      <td>The frequency in ms of `data` events. Defaults to 100ms</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>pulse</td>
-      <td>Number</td>
-      <td>Milliseconds</td>
-      <td>The frequency in ms to wait for a pulse. Defaults to 500ms</td>
-      <td>no</td>
-    </tr>
 
-  </tbody>
-</table>
+  | Property Name | Type           | Value(s)                           | Description                                                              | Required |
+  |---------------|----------------|------------------------------------|--------------------------------------------------------------------------|----------|
+  | pin           | Number, String | 9, “I1” (Any digital pin on board) | The Number or String address of the pin the sensor is attached to, ie. 7 | yes      |
+  | freq          | Number         | Milliseconds                       | The frequency in ms of `data` events. Defaults to 100ms                | no       |
+  | pulse         | Number         | Milliseconds                       | The frequency in ms to wait for a pulse. Defaults to 500ms               | no       |
+
 
 ## Shape
 
