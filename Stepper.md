@@ -7,6 +7,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
 ## Parameters
 
 - **options** An object of property parameters.
+
   <table>
     <thead>
       <tr>
