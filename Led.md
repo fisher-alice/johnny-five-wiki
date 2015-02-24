@@ -18,63 +18,14 @@ For Leds that only have on/off states, use a digital pin:
   ```
 
 - **options** An object of property parameters.
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pin</td>
-      <td>Number</td>
-      <td>Any Digital Pin</td>
-      <td>The Number address of the pin the led is attached to</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>type</td>
-      <td>String</td>
-      <td>"OUTPUT", "PWM"</td>
-      <td>
-        For most cases, this can be omitted; the type will be inferred based on the pin address number.
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>controller</td>
-      <td>String</td>
-      <td>"DEFAULT", "PCA9685"</td>
-      <td>
-        Controller interface type. Defaults to `"DEFAULT"`.
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>address</td>
-      <td>Number</td>
-      <td>0x40</td>
-      <td>
-        Address for I2C devices. Defaults to `0x40`.
-      </td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>isAnode</td>
-      <td>Boolean</td>
-      <td>true, false</td>
-      <td>
-        Set the LED to Anode mode. Defaults to `false`.
-      </td>
-      <td>no</td>
-    </tr>
 
-  </tbody>
-</table>
+  | Property Name | Type    | Value(s)             | Description                                                                                     | Required |
+  |---------------|---------|----------------------|-------------------------------------------------------------------------------------------------|----------|
+  | pin           | Number  | Any Digital Pin      | The Number address of the pin the led is attached to                                            | yes      |
+  | type          | String  | "OUTPUT", "PWM"      | For most cases, this can be omitted; the type will be inferred based on the pin address number. | no       |
+  | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type. Defaults to `"DEFAULT"`.                                           | no       |
+  | address       | Number  | 0x40                 | Address for I2C devices. Defaults to `0x40`.                                                  | no       |
+  | isAnode       | Boolean | true, false          | Set the LED to Anode mode. Defaults to `false`.                                               | no       |
 
 ## Shape
 
