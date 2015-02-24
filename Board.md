@@ -22,41 +22,12 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 ## Parameters
 
 - **options** Optional object of themselves optional parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>id</td>
-        <td>Number, String</td>
-        <td>Any</td>
-        <td>User definable identification</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>port</td>
-        <td>String or object</td>
-        <td>"/dev/ttyAM0", "COM1", new SerialPort()</td>
-        <td>Path or name of device port/COM or SerialPort object</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>repl</td>
-        <td>Boolean</td>
-        <td>true, false</td>
-        <td>Set to `false` to disable REPL</td>
-        <td>no</td>
-      </tr>
 
-    </tbody>
-  </table>
+  | Property Name | Type             | Value(s)                                | Description                                          | Required |
+  |---------------|------------------|-----------------------------------------|------------------------------------------------------|----------|
+  | id            | Number, String   | Any                                     | User definable identification                        | no       |
+  | port          | String or object | "/dev/ttyAM0", "COM1", new SerialPort() | Path or name of device port/COM or SerialPort object | no       |
+  | repl          | Boolean          | true, false                             | Set to `false` to disable REPL                     | no       |
 
 ## Shape
 ```js
@@ -156,42 +127,14 @@ board.on("ready", function() {
 
 - **pinMode(pin, mode)** Set the `mode` of a specific `pin`, one of INPUT, OUTPUT, ANALOG, PWM, SERVO.
 Mode constants are exposed via the `Pin` class
-  <table>
-    <thead>
-      <tr>
-        <th>Mode</th>
-        <th>Value</th>
-        <th>Constant</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>INPUT</td>
-        <td>0</td>
-        <td>Pin.INPUT</td>
-      </tr>
-      <tr>
-        <td>OUTPUT</td>
-        <td>1</td>
-        <td>Pin.OUTPUT</td>
-      </tr>
-      <tr>
-        <td>ANALOG</td>
-        <td>2</td>
-        <td>Pin.ANALOG</td>
-      </tr>
-      <tr>
-        <td>PWM</td>
-        <td>3</td>
-        <td>Pin.PWM</td>
-      </tr>
-      <tr>
-        <td>SERVO</td>
-        <td>4</td>
-        <td>Pin.SERVO</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Mode   | Value | Constant   |
+  |--------|-------|------------|
+  | INPUT  | 0     | Pin.INPUT  |
+  | OUTPUT | 1     | Pin.OUTPUT |
+  | ANALOG | 2     | Pin.ANALOG |
+  | PWM    | 3     | Pin.PWM    |
+  | SERVO  | 4     | Pin.SERVO  |
 
   ```js
   // Set a pin to INPUT mode
