@@ -6,7 +6,7 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 
   | Name | Type   | Properties             | Description                                        | Required |
   |------|--------|------------------------|----------------------------------------------------|----------|
-  | pins | Object | `{ data, clock, latch }` | Sets the values of the data , clock and latch pins | yes      |
+  | pins | Object | data, clock, latch | Sets the values of the data , clock and latch pins | yes      |
 
 
 ## Shape
