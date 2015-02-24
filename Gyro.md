@@ -17,7 +17,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 
 - **Analog Options (`controller: "ANALOG"`)** 
 
-  | Property Name | Type             | Value(s)                                                                | Description                                                        | Default | Required |
+  | Property | Type             | Value(s)                                                                | Description                                                        | Default | Required |
   |---------------|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|---------|----------|
   | pins          | Array of Strings | ["A*"]                                                                 | The String analog pins that X, Y, and Z (optional) are attached to | none    | yes      |
   | sensitivity   | Number           | Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X` | This value can be identified in the device’s datasheet.            | none    | yes      |
@@ -28,7 +28,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 
 - **MPU6050 Options (`controller: "MPU6050"`)** 
 
-  | Property Name | Type   | Value(s)             | Description                                                                                       | Default | Required |
+  | Property | Type   | Value(s)             | Description                                                                                       | Default | Required |
   |---------------|--------|----------------------|---------------------------------------------------------------------------------------------------|---------|----------|
   | sensitivity   | Number | LSB/DegreesPerSecond | The sensitivity of the device. The MPU-6050 is currently configured at +/- 250 degrees per second | 131     | no       |
 
