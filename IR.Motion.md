@@ -8,26 +8,10 @@ The `IR.Motion` class constructs an object that represents a single Passive Infr
 - **pin** A Number pin address for Motion sensor.
 
 - **options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pin</td>
-        <td>Number, String</td>
-        <td>9, "D7" (Any pin on board)</td>
-        <td>The Number or String address of the pin the sensor is attached to, ie. 9, "D7"</td>
-        <td>yes</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property | Type           | Value(s)                   | Description                                                                    | Required |
+  |---------------|----------------|----------------------------|--------------------------------------------------------------------------------|----------|
+  | pin           | Number, String | 9, “D7” (Any pin on board) | The Number or String address of the pin the sensor is attached to, ie. 9, “D7” | yes      |
 
 
 ## Shape
