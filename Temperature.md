@@ -14,52 +14,13 @@ This list will continue to be updated as more devices are confirmed.
 ## Parameters
 
 - **General Options**
-<table>
-  <thead>
-    <tr>
-      <th>Property Name</th>
-      <th>Type</th>
-      <th>Value(s)</th>
-      <th>Description</th>
-      <th>Default</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>controller</td>
-      <td>string</td>
-      <td>"ANALOG" | "LM35" | "TMP36" | "DS18B20" | "MPU6050" | "GROVE"</td>
-      <td>The Name of the controller to use</td>
-      <td>"ANALOG"</td>
-      <td>no</td>
-    </tr>
-    <tr>
-      <td>pin</td>
-      <td>string or int</td>
-      <td>"A0", 2, etc</td>
-      <td>The Name of the controller to use</td>
-      <td>none</td>
-      <td>Yes, for analog devices. No for digitial devices (MPU-6050 or DS18B20)</td>
-    </tr>
-    <tr>
-      <td>toCelsius</td>
-      <td>function</td>
-      <td>function toCelsius(raw) {}</td>
-      <td>A raw-to-celsius transform override</td>
-      <td>controller-dependent</td>
-      <td>no</td>
-    </tr>
-<tr>
-      <td>freq</td>
-      <td>Number</td>
-      <td>milliseconds</td>
-      <td>the rate in milliseconds to emit the data event</td>
-      <td></td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+
+  | Property Name | Type          | Value(s)                                                      | Description                                             | Required                                                               |
+  |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
+  | controller    | string        | “ANALOG” | “LM35” | “TMP36” | “DS18B20” | “MPU6050” | “GROVE” | The Name of the controller to use. Defaults to “ANALOG” | no                                                                     |
+  | pin           | string or int | “A0”, 2, etc                                                  | The Name of the controller to use                       | Yes, for analog devices. No for digitial devices (MPU-6050 or DS18B20) |
+  | toCelsius     | function      | function toCelsius(raw) {}                                    | A raw-to-celsius transform override                     | no                                                                     |
+  | freq          | Number        | milliseconds.                                                 | The rate in milliseconds to emit the data event         | no                                                                     |
 
 ## Shape
 
