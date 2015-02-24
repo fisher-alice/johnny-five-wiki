@@ -65,7 +65,26 @@ board.on("ready", function() {
 
 ## API
 
-- **send(value)** send a value to the shift register.
+- **send(value..)** send a value or values to the shift register.  If the shift registers are daisy-chained, you may send as many values as you have shift registers.
+
+> **Note**: If multiple values are set, the value of the `value` property will be an `Array`: 
+
+> 
+  ```js
+  var register = new five.ShiftRegister({
+    pins: {
+      data: 2,
+      clock: 3,
+      latch: 4
+    }
+  });
+
+>  register.send(0);
+ register.value; // 0
+
+>  register.send(2, 8);
+ register.value; // [2, 8]
+ ```
 
 ## Events
 
@@ -76,6 +95,9 @@ board.on("ready", function() {
 
 ## Examples
 
-* [Shiftregister](https://github.com/rwaldron/johnny-five/blob/master/docs/shiftregister.md)
+* [Shift Register](https://github.com/rwaldron/johnny-five/blob/master/docs/shift-register.md)
+* [Shift Register w/ Seven Segment LED](https://github.com/rwaldron/johnny-five/blob/master/docs/shift-register-seven-segment.md)
+* [Daisy-Chained Shift Register](https://github.com/rwaldron/johnny-five/blob/master/docs/shift-register-daisy-chain.md)
+
 
 <!--remove-end-->
