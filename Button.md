@@ -18,7 +18,7 @@ The `Button` class constructs objects that represents a single Button attached t
 
 - **options** An object of property parameters.
 
-  | Property Name | Type           | Value(s)                           | Description                                                                                                                                        | Required |
+  | Property | Type           | Value(s)                           | Description                                                                                                                                        | Required |
   |---------------|----------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
   | pin           | Number, String | 5, “I1” (Any digital pin on board) | The Number or String address of the pin the button is attached to, ie. 5 or “I1”                                                                   | yes      |
   | invert        | Boolean        | true or false                      | Invert the up and down values. This is useful for inverting button signals when the pin itself doesn’t have built-in pullup resistor capabilities. | no       |
