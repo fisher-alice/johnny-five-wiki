@@ -5,28 +5,10 @@ This list will continue to be updated as more Joystick devices are confirmed.
 ## Parameters
 
 - **General Options**
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Array of Pins</td>
-        <td>["A*"]</td>
-        <td>The String analog pins that X and Y</td>
-        <td>none</td>
-        <td>yes</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type          | Value(s) | Description                         | Default | Required |
+  |---------------|---------------|----------|-------------------------------------|---------|----------|
+  | pins          | Array of Pins | [“A\*”]  | The String analog pins that X and Y | none    | yes      |
 
 ## Shape
 
