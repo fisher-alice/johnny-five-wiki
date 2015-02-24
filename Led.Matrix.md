@@ -42,84 +42,20 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
 
 - **shift register options** An object of property parameters.
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Properties</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Object</td>
-        <td>A valid pins object or pins array</td>
-        <td>data, clock, cs</td>
-        <td>yes</td>
-      </tr>
-      <tr> 
-        <td>devices</td>
-        <td>Number</td>
-        <td>1-8</td>
-        <td>
-          For single device cases, this can be omitted. Defaults to 1.
-        </td>
-        <td>no</td>
-      </tr>
 
-    </tbody>
-  </table>
+  | Property Name | Type   | Value(s)                          | Properties                                                   | Required |
+  |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
+  | pins          | Object | A valid pins object or pins array | data, clock, cs                                              | yes      |
+  | devices       | Number | 1-8                               | For single device cases, this can be omitted. Defaults to 1. | no       |
 
 - **I2C options** (Requires StandardFirmata 2.4.0 or greater)
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Properties</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>controller</td>
-        <td>string</td>
-        <td>A valid controller model name</td>
-        <td>HT16K33</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>addresses</td>
-        <td>array</td>
-        <td>An array of I2C addresses</td>
-        <td>Defaults to array of addresses in range 0x70 - 0x77, up to length specified by devices</td>
-        <td>no</td>
-      </tr>
-      <tr> 
-        <td>isBicolor</td>
-        <td>Boolean</td>
-        <td>true|false</td>
-        <td>
-          Defaults to false
-        </td>
-        <td>no</td>
-      </tr>
-      <tr> 
-        <td>dims</td>
-        <td>A valid dims object, array or string</td>
-        <td>rows, columns</td>
-        <td>
-          The dimensions for the devices being used: either 8x8, 16x8 or 8x16.
-        </td>
-        <td>no</td>
-      </tr>
 
-    </tbody>
-  </table>
+  | Property Name | Type                                 | Value(s)                      | Properties                                                                             | Required |
+  |---------------|--------------------------------------|-------------------------------|----------------------------------------------------------------------------------------|----------|
+  | controller    | string                               | A valid controller model name | HT16K33                                                                                | yes      |
+  | addresses     | array                                | An array of I2C addresses     | Defaults to array of addresses in range 0x70 - 0x77, up to length specified by devices | no       |
+  | isBicolor     | Boolean                              | true|false                    | Defaults to false                                                                      | no       |
+  | dims          | A valid dims object, array or string | rows, columns                 | The dimensions for the devices being used: either 8x8, 16x8 or 8x16.                   | no       |
 
 
 
