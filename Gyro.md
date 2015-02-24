@@ -10,94 +10,27 @@ This list will continue to be updated as more Gyro devices are confirmed.
 ## Parameters
 
 - **General Options**
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>controller</td>
-        <td>string</td>
-        <td>ANALOG, MPU6050</td>
-        <td>The Name of the controller to use</td>
-        <td>"ANALOG"</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property | Type   | Value(s)        | Description                       | Default  | Required |
+  |---------------|--------|-----------------|-----------------------------------|----------|----------|
+  | controller    | string | ANALOG, MPU6050 | The Name of the controller to use | "ANALOG" | no       |
 
 - **Analog Options (`controller: "ANALOG"`)** 
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Array of Strings</td>
-        <td>["A*"]</td>
-        <td>The String analog pins that X, Y, and Z (optional) are attached to</td>
-        <td>none</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>sensitivity</td>
-        <td>Number</td>
-        <td>Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X`</td>
-        <td>This value can be identified in the device's datasheet.</td>
-        <td>none</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>resolution</td>
-        <td>Number</td>
-        <td>Varies by device</td>
-        <td>This value can be identified in the device's datasheet</td>
-        <td>4.88</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type             | Value(s)                                                                | Description                                                        | Default | Required |
+  |---------------|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|---------|----------|
+  | pins          | Array of Strings | ["A*"]                                                                 | The String analog pins that X, Y, and Z (optional) are attached to | none    | yes      |
+  | sensitivity   | Number           | Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X` | This value can be identified in the device’s datasheet.            | none    | yes      |
+  | resolution    | Number           | Varies by device                                                        | This value can be identified in the device’s datasheet             | 4.88    | no       |
+
 
 
 
 - **MPU6050 Options (`controller: "MPU6050"`)** 
-  <table>
-    <thead>
-      <tr>
-        <th>Property Name</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Default</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>sensitivity</td>
-        <td>Number</td>
-        <td>LSB/DegreesPerSecond</td>
-        <td>The sensitivity of the device.  The MPU-6050 is currently configured at +/- 250 degrees per second</td>
-        <td>131</td>
-        <td>no</td>
-      </tr>
-    </tbody>
-  </table>
+
+  | Property Name | Type   | Value(s)             | Description                                                                                       | Default | Required |
+  |---------------|--------|----------------------|---------------------------------------------------------------------------------------------------|---------|----------|
+  | sensitivity   | Number | LSB/DegreesPerSecond | The sensitivity of the device. The MPU-6050 is currently configured at +/- 250 degrees per second | 131     | no       |
 
 ## Shape
 
