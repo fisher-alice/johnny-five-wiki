@@ -164,21 +164,21 @@ board.on("ready", function() {
 ## API
 
 - **hasAxis(name)** Does the device support the axis? 
-```js
-if (accelerometer.hasAxis("z")) {
-  console.log(accelerometer.z)
-}
-```
+  ```js
+  if (accelerometer.hasAxis("z")) {
+    console.log(accelerometer.z)
+  }
+  ```
 
 - **enable()** Enable the device and events (enabled by default).  For devices that can be put to sleep (like the MMA7361), wake it up.
-```js
-accelerometer.enable();
-```
+  ```js
+  accelerometer.enable();
+  ```
 
 - **disable()** Disable the device and events.  For devices that can be put to sleep (like the MMA7361), put it to sleep.
-```js
-accelerometer.disable();
-```
+  ```js
+  accelerometer.disable();
+  ```
 
 ## Events
 
