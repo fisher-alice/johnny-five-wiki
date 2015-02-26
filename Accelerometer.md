@@ -83,7 +83,8 @@ var accelerometer = new five.Accelerometer({
 ```js
 // Create an MPU-6050 Accelerometer object:
 //
-//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - attach SDA and SCL to the I2C pins on 
+//     your board (A4 and A5 for the Uno)
 //  - specify the MPU6050 controller
 var accelerometer = new five.Accelerometer({
   controller: "MPU6050",
@@ -96,7 +97,8 @@ var accelerometer = new five.Accelerometer({
 ```js
 // Create an ADXL345 Accelerometer object:
 //
-//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - attach SDA and SCL to the I2C pins on 
+//     your board (A4 and A5 for the Uno)
 //  - specify the ADXL345 controller
 var accelerometer = new five.Accelerometer({
   controller: "ADXL345"
@@ -125,13 +127,17 @@ var accelerometer = new five.Accelerometer({
 // - specify the MMA7361 controller
 // - optionally, specify the sleepPin
 // - optionally, set it to auto-calibrate
-// - optionally, set the zeroV values.  This can be done when retrieving them after an autoCalibrate
+// - optionally, set the zeroV values.  
+//    This can be done when retrieving them 
+//    after an autoCalibrate
 var accelerometer = new five.Accelerometer({
     controller: "MMA7361",
     pins: ["A0", "A1", "A2"],
     sleepPin: 13,
     autoCalibrate: true,
-    zeroV: [320, 365, 295] // override the zeroV values if you know what they are from a previous autoCalibrate
+    // override the zeroV values if you know what 
+    // they are from a previous autoCalibrate
+    zeroV: [320, 365, 295] 
   });
 ```
 
@@ -148,7 +154,7 @@ board.on("ready", function() {
     pins: ["A0", "A1"]
   });
 
-  accelerometer.on("change", function(err, data) {
+  accelerometer.on("change", function() {
     console.log("X: %d", this.x);
     console.log("Y: %d", this.y);
   });
