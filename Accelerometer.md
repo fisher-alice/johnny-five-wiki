@@ -131,14 +131,14 @@ var accelerometer = new five.Accelerometer({
 //    This can be done when retrieving them 
 //    after an autoCalibrate
 var accelerometer = new five.Accelerometer({
-    controller: "MMA7361",
-    pins: ["A0", "A1", "A2"],
-    sleepPin: 13,
-    autoCalibrate: true,
-    // override the zeroV values if you know what 
-    // they are from a previous autoCalibrate
-    zeroV: [320, 365, 295] 
-  });
+  controller: "MMA7361",
+  pins: ["A0", "A1", "A2"],
+  sleepPin: 13,
+  autoCalibrate: true,
+  // override the zeroV values if you know what 
+  // they are from a previous autoCalibrate
+  zeroV: [320, 365, 295] 
+});
 ```
 
 ![MMA7361](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-mma7361.png)
