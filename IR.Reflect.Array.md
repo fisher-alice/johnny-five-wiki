@@ -67,12 +67,12 @@ board.on("ready", function() {
     freq: 25
   });
 
-  eyes.on('data', function(err, rawValues) {
-    console.log( "Raw Values: ", rawValues );
+  eyes.on('data', function() {
+    console.log( "Raw Values: ", this.raw );
   });
 
-  eyes.on('line', function(err, lineValue) {
-    console.log( "Line Position: ", lineValue);
+  eyes.on('line', function() {
+    console.log( "Line Position: ", this.line);
   });
 
   eyes.enable();
