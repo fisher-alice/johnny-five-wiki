@@ -31,6 +31,8 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 
 ## Component Initialization
 
+#### Basic
+
 ```js
 var digital = new five.Pin(13);
 
