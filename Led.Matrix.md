@@ -71,9 +71,8 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
 ## Component Initialization
 
-
+#### Shift Register Device
 ```js
-// Shift Register device
 var matrix = new five.Led.Matrix({
   pins: {
     data: 2,
@@ -85,6 +84,7 @@ var matrix = new five.Led.Matrix({
 
 ![Led.Matrix](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-matrix.png)
 
+#### I2C HT16K33
 ```js
 // Led.Matrix HT16K33
 var matrix = new five.Led.Matrix({ 
@@ -104,6 +104,7 @@ var matrix = new five.Led.Matrix({
 
 ![Led.Matrix Mono Color](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-matrix-HT16K33.png)
 
+#### I2C HT16K33 16x8
 ```js
 // 16x8 I2C device
 var matrix = new five.Led.Matrix({
