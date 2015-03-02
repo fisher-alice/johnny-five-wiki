@@ -36,6 +36,7 @@ This list will continue to be updated as more devices are confirmed.
 
 ## Component Initialization
 
+#### Analog
 
 ```js
 // Create an analog Temperature object:
@@ -78,6 +79,7 @@ var temperature = new five.Temperature({
 
 ![DS18S20](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-ds18s20.png)
 
+#### MPU6050
 
 ```js
 // Create an MPU-6050 Temperature object:
