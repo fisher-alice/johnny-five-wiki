@@ -65,6 +65,7 @@ This list will continue to be updated as more component support is implemented.
 
 ## Component Initialization 
 
+#### Analog
 ```js
 // Create an analog Accelerometer object:
 // 
@@ -80,6 +81,7 @@ var accelerometer = new five.Accelerometer({
 
 ![LIS344AL](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-lis344al.png)
 
+#### MPU6050
 ```js
 // Create an MPU-6050 Accelerometer object:
 //
@@ -94,6 +96,7 @@ var accelerometer = new five.Accelerometer({
 
 ![MPU6050](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-mpu6050.png)
 
+#### ADXL345
 ```js
 // Create an ADXL345 Accelerometer object:
 //
@@ -107,6 +110,7 @@ var accelerometer = new five.Accelerometer({
 
 ![ADXL345](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-adxl345.png)
 
+#### ADXL335
 ```js
 // Create an ADXL335 Accelerometer object:
 //
@@ -120,6 +124,7 @@ var accelerometer = new five.Accelerometer({
 
 ![ADXL335](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-adxl335.png)
 
+#### MMA7361
 ```js
 // Create an MMA7361 Accelerometer object:
 //
