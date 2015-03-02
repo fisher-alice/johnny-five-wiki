@@ -28,10 +28,12 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
 
 - **pins** An Array containing the pins **red**, **green** and **blue**.
-```js
-var digital = new five.Led.RGB([9, 10, 11]);
-```
 
+  | Index | Type   | Value(s)             | Description              | Required |
+  |-------|--------|----------------------|--------------------------|----------|
+  | 0  | Number | Any PWM capable pin | Sets the Led's red pin   | yes      |
+  | 1  | Number | Any PWM capable pin | Sets the Led's green pin | yes      |
+  | 2  | Number | Any PWM capable pin | Sets the Led's blue pin  | yes      |
 
 ## Shape
 
@@ -47,22 +49,34 @@ var digital = new five.Led.RGB([9, 10, 11]);
 ## Component Initialization
 
 
+### LED RGB
 ```js
-// LED RGB
-var anode = new five.Led.RGB({
+// With Options object & pins object
+var rgb = new five.Led.RGB({
   pins: {
     red: 9,
     green: 10,
     blue: 11
   }
 });
+
+// With Options object & pins array
+var rgb = new five.Led.RGB({
+  pins: [9, 10, 11]
+});
+
+// With pins array
+var rgb = new five.Led.RGB([9, 10, 11]);
 ```
 
 ![led rgb](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb.png)
 
+
+### LED RGB Anode
+
 ```js
-// LED RGB (Common Anode)
-var anode = new five.Led.RGB({
+// With Options object & pins object
+var rgb = new five.Led.RGB({
   pins: {
     red: 9,
     green: 10,
@@ -70,13 +84,20 @@ var anode = new five.Led.RGB({
   },
   isAnode: true
 });
+
+// With Options object & pins array
+var rgb = new five.Led.RGB({
+  pins: [9, 10, 11],
+  isAnode: true
+});
 ```
 
 ![led rgb anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-anode.png)
 
 
+### LED RGB PCA9685
 ```js
-// LED RGB PCA9685
+// With Options object & pins object
 var led = new five.Led.RGB({
   controller: "PCA9685",
   pins: {
@@ -85,6 +106,13 @@ var led = new five.Led.RGB({
     blue: 2
   }
 });
+
+// With Options object & pins array
+var led = new five.Led.RGB({
+  controller: "PCA9685",
+  pins: [0, 1, 2]
+});
+
 ```
 
 ![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
