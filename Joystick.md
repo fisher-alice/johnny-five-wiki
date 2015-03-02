@@ -23,6 +23,7 @@ This list will continue to be updated as more Joystick devices are confirmed.
 
 ## Component Initialization
 
+#### Analog
 
 ```js
 var joystick = new five.Joystick({
