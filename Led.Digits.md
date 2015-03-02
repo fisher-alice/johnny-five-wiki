@@ -37,6 +37,8 @@ Known supported devices:
 
 ## Component Initialization
 
+#### Shift Register Device
+
 ```js
 var digits = new five.Led.Digits({
   pins: {
