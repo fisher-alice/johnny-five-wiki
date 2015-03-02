@@ -29,11 +29,12 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
 - **pins** An Array containing the pins **red**, **green** and **blue**.
 
-  | Index | Type   | Value(s)             | Description              | Required |
-  |-------|--------|----------------------|--------------------------|----------|
-  | 0  | Number | Any PWM capable pin | Sets the Led's red pin   | yes      |
-  | 1  | Number | Any PWM capable pin | Sets the Led's green pin | yes      |
-  | 2  | Number | Any PWM capable pin | Sets the Led's blue pin  | yes      |
+  | Index | Type   | Value/Description              | Required |
+  |-------|--------|--------------------------------|----------|
+  | 0     | Number | PWM capable to control red   | yes      |
+  | 1     | Number | PWM capable to control green | yes      |
+  | 2     | Number | PWM capable to control blue  | yes      |
+
 
 ## Shape
 
