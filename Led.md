@@ -1,5 +1,11 @@
 The `Led` class constructs objects that represent a single Led attached to the physical board.
 
+See also: 
+
+- [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
+- [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
+- [Led.RGB](https://github.com/rwaldron/johnny-five/wiki/Led.RGB)
+
 
 ## Parameters
 
@@ -66,6 +72,7 @@ var led = new five.Led({
   controller: "PCA9685",
   pin: 0, 
 });
+```
 
 ![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-PCA9685.png)
 
@@ -97,8 +104,8 @@ var board = new five.Board();
 
 board.on("ready", function() {
   var led = new five.Led({
+    controller: "PCA9685",
     pin: 0,
-    controller: "PCA9685"
   });
 
   led.blink()
