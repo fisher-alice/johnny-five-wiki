@@ -2,6 +2,14 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
 ## Parameters
 
+- **pins** An Array containing the pins **red**, **green** and **blue**.
+
+  | Index | Type   | Value/Description              | Required |
+  |-------|--------|--------------------------------|----------|
+  | 0     | Number | PWM capable to control red   | yes      |
+  | 1     | Number | PWM capable to control green | yes      |
+  | 2     | Number | PWM capable to control blue  | yes      |
+
 - **options**
 
   | Property | Type    | Value(s)                                    | Description                                                                                                     | Required |
@@ -27,13 +35,6 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
     | 2     | Number | PWM capable to control blue  | yes      |
 
 
-- **pins** An Array containing the pins **red**, **green** and **blue**.
-
-  | Index | Type   | Value/Description              | Required |
-  |-------|--------|--------------------------------|----------|
-  | 0     | Number | PWM capable to control red   | yes      |
-  | 1     | Number | PWM capable to control green | yes      |
-  | 2     | Number | PWM capable to control blue  | yes      |
 
 
 ## Shape
