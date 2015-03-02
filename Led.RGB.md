@@ -1,107 +1,101 @@
 The `Led.RGB` class constructs objects that represent an RGB Led.
 
-### Parameters
+## Parameters
 
 - **options**
-<table>
-  <thead>
-    <tr>
-      <th>Property</th><th>Type</th><th>Value(s)</th><th>Description</th><th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>pins</td>
-      <td>Object</td>
-      <td>
-        ```
-        {
-          red: 3,
-          green: 5,
-          blue: 6
-        }
-        ```
-      </td>
-      <td>
-        Sets the pins for each corresponding color
-      </td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <td>isAnode</td>
-      <td>Boolean</td>
-      <td>true, false</td>
-      <td>Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED.</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
-      
-  * **pins**
-  <table>
-    <thead>
-      <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>red</td>
-        <td>Number</td>
-        <td>
-          Any PWM pin on board
-        </td>
-        <td>Sets the Led's red pin</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>green</td>
-        <td>Number</td>
-        <td>
-          Any PWM pin on board
-        </td>
-        <td>Sets the Led's green pin</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>blue</td>
-        <td>Number</td>
-        <td>
-          Any PWM pin on board
-        </td>
-        <td>Sets the Led's blue pin</td>
-        <td>yes</td>
-      </tr>
-    </tbody>
-  </table>
 
-- **pins** An Array containing the respective values for the red, green and blue pins.
+  | Property | Type    | Value(s)                                    | Description                                                                                                     | Required |
+  |----------|---------|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------|
+  | pins     | Object, Array  | See **pins** table below | Sets the pins for each corresponding color                                                                      | yes      |
+  | isAnode  | Boolean | true, false                                 | Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED. | no       |
+  | controller  | String  | "DEFAULT", "PCA9685" | Controller interface type. Defaults to `"DEFAULT"`. | no |                                           
+
+  * **pins** (Object)
+
+  | Property | Type   | Value(s)             | Description              | Required |
+  |----------|--------|----------------------|--------------------------|----------|
+  | red      | Number | Any PWM capable pin | Sets the Led's red pin   | yes      |
+  | green    | Number | Any PWM capable pin | Sets the Led's green pin | yes      |
+  | blue     | Number | Any PWM capable pin | Sets the Led's blue pin  | yes      |
+
+  * **pins** (Array)
+
+  | Index | Type   | Value(s)             | Description              | Required |
+  |-------|--------|----------------------|--------------------------|----------|
+  | 0  | Number | Any PWM capable pin | Sets the Led's red pin   | yes      |
+  | 1  | Number | Any PWM capable pin | Sets the Led's green pin | yes      |
+  | 2  | Number | Any PWM capable pin | Sets the Led's blue pin  | yes      |
+
+
+- **pins** An Array containing the pins **red**, **green** and **blue**.
 ```js
 var digital = new five.Led.RGB([9, 10, 11]);
 ```
 
 
-### Shape
+## Shape
 
 ```
 {
   red: Led object
   green: Led object
-  blue: Led object
+  blue: Led object, 
+  isAnode: true | false. READONLY
 }
 ```
 
+## Component Initialization
 
-### Usage
+
+```js
+// LED RGB
+var anode = new five.Led.RGB({
+  pins: {
+    red: 9,
+    green: 10,
+    blue: 11
+  }
+});
+```
+
+![led rgb](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb.png)
+
+```js
+// LED RGB (Common Anode)
+var anode = new five.Led.RGB({
+  pins: {
+    red: 9,
+    green: 10,
+    blue: 11
+  },
+  isAnode: true
+});
+```
+
+![led rgb anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-anode.png)
+
+
+```js
+// LED RGB PCA9685
+var led = new five.Led.RGB({
+  controller: "PCA9685",
+  pins: {
+    red: 0,
+    green: 1,
+    blue: 2
+  }
+});
+```
+
+![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
+
+## Usage
 
 ```js
 var five = require("johnny-five");
+var board = new five.Board();
 
-five.Board().on("ready", function() {
+board.on("ready", function() {
   var a = new five.Led.RGB([ 9, 10, 11 ]);
 
   var b = new five.Led.RGB({
