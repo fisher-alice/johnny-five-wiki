@@ -41,20 +41,22 @@ The `Button` class constructs objects that represents a single Button attached t
 
 ## Component Initialization
 
-```js
-// A basic button
-// 
-//   - attached to pin 8
-//   - emits down/press event
-//
-var button = new five.Button(8);
+#### Basic
 
-button.on("press", function() {
-  console.log( "Button has been pressed" );
-});
+```js
+var button = new five.Button(8);
 ```
 ![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
+#### Invert
+
+```js
+var button = new five.Button({
+  pin: 8, 
+  invert: true
+});
+```
+![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
 ### Usage
 ```js
