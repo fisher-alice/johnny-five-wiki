@@ -51,6 +51,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 
 ## Component Initialization
 
+#### Analog
 
 ```js
 // Analog Gyro:
@@ -66,6 +67,8 @@ var gyro = new five.Gyro({
 ```
 
 ![lpr5150l](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/gyro-lpr5150l.png)
+
+#### MPU6050
 
 ```js
 // Create an MPU-6050 Gyro object:
