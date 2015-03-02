@@ -51,7 +51,7 @@ var relay = new five.Relay({
 });
 ```
 
-![Relay](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/relay.png)
+![Relay](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/relay-breadboard-closed.png)
 
 ## Usage
 ```js
