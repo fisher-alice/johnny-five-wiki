@@ -48,7 +48,7 @@ var button = new five.Button(8);
 ```
 ![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
-#### Invert
+#### Inverted
 
 ```js
 var button = new five.Button({
