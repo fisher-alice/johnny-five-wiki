@@ -32,6 +32,8 @@ The `IR.Proximity` class constructs an object that represents a single Infrared 
 ## Component Initialization
 
 
+#### Analog
+
 ```js
 var proximity = new five.IR.Proximity({
   controller: "GP2Y0A21YK",
