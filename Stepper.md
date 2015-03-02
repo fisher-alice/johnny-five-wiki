@@ -102,6 +102,8 @@ Stepper motors generally require significantly involved hardware setup (that is,
 
 ## Component Initialization
 
+#### Driver
+
 ```js
 // Create a stepper motor
 // 
@@ -150,7 +152,8 @@ var stepper = five.Stepper({
 
 ![Stepper.Stepper.TYPE.DRIVER](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/stepper-easy-driver.png)
 
- 
+#### TWO WIRE
+
 ```js
 var stepper = five.Stepper({
   type: five.Stepper.TYPE.TWO_WIRE
@@ -182,6 +185,8 @@ var stepper = five.Stepper({
   }
 });
 ```
+
+#### FOUR WIRE
 
 ```js
 var stepper = five.Stepper({
