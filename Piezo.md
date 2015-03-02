@@ -27,6 +27,8 @@ The `Piezo` class constructs objects that represent a single piezo component att
 
 ## Component Initialization
 
+#### Basic
+
 ```js
 var piezo = new five.Piezo({
   pin: 3
