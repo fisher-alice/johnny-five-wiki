@@ -43,6 +43,8 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 
 ## Component Initialization
 
+#### Parallel
+
 ```js
 // Parallel LCD
 var lcd = new five.LCD({ 
@@ -66,6 +68,8 @@ var lcd = new five.LCD({
 
 ![LCD](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd.png)
 
+#### I2C, PCF8574
+
 ```js
 // I2C LCD, PCF8574
 var lcd = new five.LCD({ 
@@ -81,14 +85,19 @@ var lcd = new five.LCD({
 var lcd = new five.LCD({ 
   controller: "PCF8574"
 });
+```
 
-// I2C LCD (RGB Controller), JHD1313M1 (this is the Grove LCD)
+![LCD I2C](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd-i2c-PCF8574.png)
+
+#### I2C JHD1313M1 (gGove)
+
+```js
 var lcd = new five.LCD({ 
   controller: "JHD1313M1"
 });
 ```
 
-![LCD I2C](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd-i2c-PCF8574.png)
+![LCD Grove](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/grove-lcd-rgb.png)
 
 ## Usage
 
