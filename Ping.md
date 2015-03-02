@@ -29,6 +29,9 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 ## Component Initialization
 
+
+#### Basic
+
 ```js
 // Create a Ping sensor...
 // 
