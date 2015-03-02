@@ -50,36 +50,24 @@ var led = new five.Led({
 ![LED](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led.png)
 
 ```js
-// LED Standard (anode)
+// LED (Common Anode)
 var led = new five.Led({
-  pin: 13, 
+  pin: 3, 
   isAnode: true
 });
 ```
 
-![LED RGB Anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-anode.png)
+![LED Anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-anode.png)
 
 
 ```js
 // LED PCA9685
 var led = new five.Led({
+  controller: "PCA9685",
   pin: 0, 
-  controller: "PCA9685"
 });
 
-
-// LED RGB PCA9685
-var led = new five.Led.RGB({
-  pins: {
-    red: 0,
-    green: 1,
-    blue: 2
-  },
-  controller: "PCA9685"
-});
-```
-
-![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
+![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-PCA9685.png)
 
 ## Usage
 
