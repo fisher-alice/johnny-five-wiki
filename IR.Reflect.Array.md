@@ -1,17 +1,17 @@
 The `IR.Reflect.Array` class constructs an array of analog (digital arrays are not currently supported) reflectance sensors like the [QTR-8A](http://www.pololu.com/product/960) from Pololu.
 
-### Parameters
+## Parameters
 
 - **pins** An array Numbers or Strings for the analog sensor pins.
 
 - **emitter** The pin where the emitter LED is attached.  For these arrays, there is one pin that controls all of the emitters.
 
-```js
-var eyes = new five.IR.Reflect.Array({
-  emitter: 13,
-  pins: ["A0", "A1", "A2", "A3", "A4", "A5"]
-});
-```
+  ```js
+  var eyes = new five.IR.Reflect.Array({
+    emitter: 13,
+    pins: ["A0", "A1", "A2", "A3", "A4", "A5"]
+  });
+  ```
 
 - **options** An object of property parameters.
 
@@ -22,7 +22,7 @@ var eyes = new five.IR.Reflect.Array({
   | freq          | Number                  | Milliseconds                       | The frequency in ms of data events. Defaults to 25ms | no       |
 
 
-### Shape
+## Shape
 
 ```
 {
@@ -40,9 +40,20 @@ var eyes = new five.IR.Reflect.Array({
 }
 ```
 
+## Component Initialization
+
+#### Analog
+
+```js
+var eyes = new five.IR.Reflect.Array({
+  emitter: 13,
+  pins: ["A0", "A1", "A2"], // any number of pins
+  freq: 25
+});
+```
 
 
-### Usage
+## Usage
 ```js
 var five = require("johnny-five"),
     board = new five.Board();
@@ -73,68 +84,68 @@ board.on("ready", function() {
 
 - **enable()** Turn the light emitters on.
 
-```js
-var eyes = new five.Sensor({
-  emitter: 13,
-  pins: ["A0", "A1"]
-});
+  ```js
+  var eyes = new five.Sensor({
+    emitter: 13,
+    pins: ["A0", "A1"]
+  });
 
-eyes.enable();
-```
+  eyes.enable();
+  ```
 
 - **disable()** turn the light emitters off
 
-```js
-var eyes = new five.Sensor({
-  emitter: 13,
-  pins: ["A0", "A1"]
-});
+  ```js
+  var eyes = new five.Sensor({
+    emitter: 13,
+    pins: ["A0", "A1"]
+  });
 
-eyes.disable();
-```
+  eyes.disable();
+  ```
 
 - **calibrate()** Read all of the sensors and store the min/max values.  Used to calculate calibrated values and line values.  You should call `calibrate()` multiple times.
 
-```js
-var eyes = new five.Sensor({
-  emitter: 13,
-  pins: ["A0", "A1"]
-});
+  ```js
+  var eyes = new five.Sensor({
+    emitter: 13,
+    pins: ["A0", "A1"]
+  });
 
-for(var i=0; i<100; i++) {
-  eyes.calibrate();
-}
-```
+  for(var i = 0; i < 100; i++) {
+    eyes.calibrate();
+  }
+  ```
 
 - **calibrateUntil(predicate)** A convenience function that will call calibrate until a predicate function returns true.  This allows you to decide when calibration is done.  This trigger may be user input, time, or execution count.  You decide.
 
-```js
-var eyes = new five.Sensor({
-  emitter: 13,
-  pins: ["A0", "A1"]
-});
+  ```js
+  var eyes = new five.Sensor({
+    emitter: 13,
+    pins: ["A0", "A1"]
+  });
 
-var calibrating = true;
-eyes.calibrateUntil(function() {
-  return !calibrating;
-});
+  var calibrating = true;
+  eyes.calibrateUntil(function() {
+    return !calibrating;
+  });
 
-setTimeout(function() { calibrating = false; }, 1000 ); // calibrate for one second
-```
+  setTimeout(function() { calibrating = false; }, 1000 ); // calibrate for one second
+  ```
 
 - **loadCalibration(calibration)** Prime the array with calibration data.  This allows you to load calibration data from a file.  You can get it from the device using the `calibration` after it has been calibrated.
 
-```js
-var eyes = new five.Sensor({
-  emitter: 13,
-  pins: ["A0", "A1"]
-});
+  ```js
+  var eyes = new five.Sensor({
+    emitter: 13,
+    pins: ["A0", "A1"]
+  });
 
-eyes.loadCalibration({
-  min: [37, 39],
-  max: [1010, 1015]
-});
-```
+  eyes.loadCalibration({
+    min: [37, 39],
+    max: [1010, 1015]
+  });
+  ```
 
 ## Events
 
