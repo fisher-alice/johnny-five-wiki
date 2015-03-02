@@ -44,10 +44,13 @@ For Leds that only have on/off states, use a digital pin:
 
 ## Component Initialization
 
+
+#### LED 
 ```js
-// LED Standard (cathode)
+// Just a pin
 var led = new five.Led(13);
 
+// Options object with pin property
 var led = new five.Led({
   pin: 13
 });
@@ -55,8 +58,9 @@ var led = new five.Led({
 
 ![LED](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led.png)
 
+
+#### LED Common Anode
 ```js
-// LED (Common Anode)
 var led = new five.Led({
   pin: 3, 
   isAnode: true
@@ -65,9 +69,8 @@ var led = new five.Led({
 
 ![LED Anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-anode.png)
 
-
+#### LED PCA9685
 ```js
-// LED PCA9685
 var led = new five.Led({
   controller: "PCA9685",
   pin: 0, 
