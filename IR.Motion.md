@@ -23,7 +23,6 @@ The `IR.Motion` class constructs an object that represents a single Passive Infr
   value: Digital state reading (0 or 1). READONLY
   isCalibrated: Boolean flag indicating calibration state of motion sensor 
 }
-
 ```
 
 
