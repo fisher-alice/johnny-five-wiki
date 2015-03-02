@@ -44,6 +44,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 ## Component Initialization
 
+#### Basic
 
 ```js
 // Create a standard servo...
@@ -52,6 +53,8 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 //
 var servo = new five.Servo(10);
 ```
+
+#### Auto Centered
 
 ```js
 // Create a standard servo...
@@ -65,6 +68,8 @@ var servo = new five.Servo({
 });
 ```
 
+#### Specify Range
+
 ```js
 // Create a standard servo...
 // 
@@ -77,6 +82,8 @@ var servo = new five.Servo({
 });
 ```
 
+#### Specify Starting Position
+
 ```js
 // Create a standard servo...
 // 
@@ -88,6 +95,8 @@ var servo = new five.Servo({
   startAt: 120
 });
 ```
+
+#### Specify Both Range and Starting Position
 
 ```js
 // Create a standard servo...
@@ -103,13 +112,24 @@ var servo = new five.Servo({
 });
 ```
 
+#### Continuous 
+
 ```js
-// Create a continuous servo...
+// Direct Constructor
 var servo = new five.Servo.Continuous(10);
+
+
+// Options object with type property
+var servo = new five.Servo({
+  pin: 10,
+  type: "continuous"
+});
 ```
 
 ![Standard or Continuous](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servo.png)
 
+
+#### Servo PCA9685
 
 ```js
 // Create a standard servo controlled by a PCA9685...
@@ -122,6 +142,7 @@ var servo = new five.Servo({
 });
 ```
 
+#### Continuous PCA9685
 
 ```js
 // Create a continuous servo controlled by a PCA9685...
