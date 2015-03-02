@@ -26,15 +26,25 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 
 ## Component Initialization
 
+#### Normally Open (default)
+
 ```js
-// Create a Relay object:
-// 
+// Pin only
+var relay = new five.Relay(10);
+
+// Options object with pin property
 var relay = new five.Relay({
   pin: 10
 });
+```
 
-// Create a Normally Closed Relay object:
-// 
+![Relay](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/relay.png)
+
+
+#### Normally Closed 
+
+```js
+// Options object with pin and type properties
 var relay = new five.Relay({
   pin: 10, 
   type: "NC"
