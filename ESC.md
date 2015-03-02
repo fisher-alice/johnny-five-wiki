@@ -33,6 +33,9 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 
 ## Component Initialization
 
+
+#### Basic
+
 ```js
 // Create an esc...
 // 
