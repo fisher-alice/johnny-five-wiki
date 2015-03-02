@@ -43,6 +43,8 @@ This list will continue to be updated as more Sonar devices are confirmed.
 
 ## Component Initialization
 
+#### Maxbotix Analog Sonar
+
 ```js
 // Create an analog Sonar object:
 // 
@@ -56,6 +58,7 @@ var sonar = new five.Sonar({
 ![Sonar](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/sonar.png)
 
 
+#### I2C Sonar
 
 ```js
 // Create an I2C Sonar object:
