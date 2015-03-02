@@ -29,12 +29,13 @@ The `IR.Motion` class constructs an object that represents a single Passive Infr
 
 ## Component Initialization
 
+#### Basic
 
 ```js
+// Pin only
 var motion = new five.IR.Motion(7);
-```
 
-```js
+// Options object with pin property
 var motion = new five.IR.Motion({
   pin: 7
 });
