@@ -42,14 +42,15 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 
 ## Component Initialization
 
+#### Basic 
+
 ```js
 var sensor = new five.Sensor("A0");
 ```
 
+#### Common Options
 
 ```js
-// Create a sensor...
-// 
 //   - attached to pin "A0"
 //   - emits data events every 250ms
 //   - emits change events when the ADC value has changed by +5/-5
