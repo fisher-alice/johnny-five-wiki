@@ -87,45 +87,118 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 
 ## Component Initialization
 
+#### Two Pin H-Bridge [pwm, dir]
+
 ```js
-// Two elements passed [pwm, dir]
 var motor = new five.Motor([3, 12]);
-```
 
-
-```js
-// Three elements passed [pwm, dir, cdir]
-var motor = new five.Motor([3, 12, 11]);
-```
-
-
-*See [Sensor](https://github.com/rwldrn/johnny-five/wiki/Sensor) for valid options on the current object
-```js
-// Create a motor with...
-//
-//   - pwm (speed) on pin 3
-//   - dir (direction) on pin 12
-//   - and brake on pin 11
-//
-// ... with a current sensor...
-//
-//   - that gets the value from pin "A0"
-//   - every 250ms
-//   - and scales the raw data to value between 0 and 2000
-//
 var motor = new five.Motor({
   pins: {
     pwm: 3,
-    dir: 12,
-    brake: 11
-  }, 
-  current: {
-    pin: "A0",
-    freq: 250,
-    range: [0, 2000]
+    dir: 12
   }
 });
 ```
+
+#### Three Pin H-Bridge [pwm, dir]
+
+```js
+var motor = new five.Motor([9, 8, 11]);
+
+var motor = new five.Motor({
+  pins: {
+    pwm:9,
+    dir:8,
+    cdir: 11  
+  }
+});
+```
+
+#### Arduino Motor Shield R3
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.ARDUINO_MOTOR_SHIELD_R3_1;
+
+var motorA = new five.Motor(configs.A);
+var motorB = new five.Motor(configs.B);
+```
+
+#### DF Robot
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.DF_ROBOT;
+
+var motorA = new five.Motor(configs.A);
+var motorB = new five.Motor(configs.B);
+```
+
+
+#### Rugged Circuits Rugged Motor Driver
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.RUGGED_CIRCUITS;
+
+var motorA = new five.Motor(configs.A);
+var motorB = new five.Motor(configs.B);
+```
+
+
+#### Sparkfun Ardumoto
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.SPARKFUN_ARDUMOTO;
+
+var motorA = new five.Motor(configs.A);
+var motorB = new five.Motor(configs.B);
+```
+
+
+#### Seeed Studios Motor Shield V1 or V2
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.SEEED_STUDIO;
+
+var motorA = new five.Motor(configs.A);
+var motorB = new five.Motor(configs.B);
+```
+
+
+#### Freetronics Dual Channel H-Bridge Motor Driver Shield
+
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.FREETRONICS_HBRIDGE;
+
+var motorA = new five.Motor(configs.A);
+var motorB = new five.Motor(configs.B);
+```
+
+#### Adafruit Motor/Stepper/Servo Shield V1
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.ADAFRUIT_V1;
+
+var motor1 = new five.Motor(configs.M1);
+var motor2 = new five.Motor(configs.M2);
+var motor3 = new five.Motor(configs.M3);
+var motor4 = new five.Motor(configs.M4);
+```
+
+
+#### Adafruit Motor/Stepper/Servo Shield V2
+
+```js
+var configs = five.Motor.SHIELD_CONFIGS.ADAFRUIT_V2;
+
+var motor1 = new five.Motor(configs.M1);
+var motor2 = new five.Motor(configs.M2);
+var motor3 = new five.Motor(configs.M3);
+var motor4 = new five.Motor(configs.M4);
+```
+
+
+
+
 
 
 ## Usage
