@@ -100,7 +100,7 @@ var motor = new five.Motor({
 });
 ```
 
-#### Three Pin H-Bridge [pwm, dir]
+#### Three Pin H-Bridge [pwm, dir, cdir]
 
 ```js
 var motor = new five.Motor([9, 8, 11]);
@@ -110,6 +110,20 @@ var motor = new five.Motor({
     pwm:9,
     dir:8,
     cdir: 11  
+  }
+});
+```
+
+#### Three Pin H-Bridge [pwm, dir, brake]
+
+```js
+var motor = new five.Motor([9, 8, 11]);
+
+var motor = new five.Motor({
+  pins: {
+    pwm:9,
+    dir:8,
+    brake: 11  
   }
 });
 ```
