@@ -237,3 +237,5 @@ Led objects are output only and therefore do not emit any events.
 
 ## Examples
 * [Led Rgb](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb.md)
+* [Led Rainbow](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rainbow.md)
+* [Led Rgb PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-PCA9685.md)
