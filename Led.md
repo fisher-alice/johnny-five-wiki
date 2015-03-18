@@ -31,7 +31,6 @@ For Leds that only have on/off states, use a digital pin:
   | type          | String  | "OUTPUT", "PWM"      | For most cases, this can be omitted; the type will be inferred based on the pin address number. | no       |
   | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type. Defaults to `"DEFAULT"`.                                           | no       |
   | address       | Number  | 0x40                 | Address for I2C devices. Defaults to `0x40`.                                                  | no       |
-  | isAnode       | Boolean | true, false          | Set the LED to Anode mode. Defaults to `false`.                                               | no       |
 
 ## Shape
 
@@ -57,17 +56,6 @@ var led = new five.Led({
 ```
 
 ![LED](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led.png)
-
-
-#### LED Common Anode
-```js
-var led = new five.Led({
-  pin: 3, 
-  isAnode: true
-});
-```
-
-![LED Anode](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-anode.png)
 
 #### LED PCA9685
 ```js
