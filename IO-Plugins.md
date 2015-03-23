@@ -22,6 +22,8 @@ The following platform IO Plugins are currently available:
   - [Nino-IO](https://github.com/rwaldron/nino-io/)
 - Pinoccio
   - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
+- pcDuino
+  - [pcDuino-IO](https://github.com/rwaldron/pcDuino-io/)
 - Raspberry Pi
   - [Raspi-IO](https://github.com/bryan-m-hughes/raspi-io)
 - Spark Core
