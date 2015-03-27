@@ -24,7 +24,7 @@ When using Johnny-Five, one is required to remap the PWM pins that control the M
 
 First you’ll cut the connection between Pins 9 and 10 and the Motor Driver.  This is located on the bottom of the Zumo Shield and can be accessed via the battery compartment.
 
-![Where to cut](https://www.dropbox.com/s/vxdxoysjcg5g826/Cutting.jpeg)
+![Where to cut](https://www.dropbox.com/s/vxdxoysjcg5g826/Cutting.jpeg?dl=0)
 
 Using a sharp knife, sever the connections between the innermost two columns of Pins, as I have shown above.
 
@@ -32,7 +32,7 @@ Using a sharp knife, sever the connections between the innermost two columns of 
 
 Your next step is to remap the PWM pins, so that you can control the speed of your Motors.  I remapped pin 9 to pin 5, and pin 10 to pin 11.  To do this you’ll need to place jumper cables between the relevant pins in the innermost column.
 
-![Remapping the pins](https://www.dropbox.com/s/6plzqin34cx4h4w/Remapping.jpeg)
+![Remapping the pins](https://www.dropbox.com/s/6plzqin34cx4h4w/Remapping.jpeg?dl=0)
 
 This picture shows where the jumper cables are located.  I had to squash them down (especially the jumper cable between 10 and 11), but it should be reasonably clear what you need to do. 
 
