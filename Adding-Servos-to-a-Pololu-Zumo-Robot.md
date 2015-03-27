@@ -2,7 +2,7 @@
 
 Adding Servos to the Pololu Zumo Robot results in a loss of fine Motor control.  In other words the Motors only responds to setting the speed to 0 or 255.  All other settings are seemingly ignored, which can give the impression that the Motors are not working at all.
 
-## Underlying problem
+### Underlying problem
 
 Four Arduino pins are used to control the motor driver and therefore control movement of the robot:
 * Digital pin 7 controls the right motor direction (LOW drives the motor forward, HIGH drives it in reverse).
