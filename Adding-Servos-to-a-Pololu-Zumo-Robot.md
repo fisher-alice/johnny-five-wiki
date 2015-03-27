@@ -1,8 +1,8 @@
-# Symptom
+## Symptom
 
 Adding Servos to the Pololu Zumo Robot results in a loss of fine Motor control.  In other words the Motors only responds to setting the speed to 0 or 255.  All other settings are seemingly ignored, which can give the impression that the Motors are not working at all.
 
-# Underlying problem
+## Underlying problem
 
 Four Arduino pins are used to control the motor driver and therefore control movement of the robot:
 * Digital pin 7 controls the right motor direction (LOW drives the motor forward, HIGH drives it in reverse).
@@ -12,7 +12,7 @@ Four Arduino pins are used to control the motor driver and therefore control mov
 
 When adding Servos to the Zumo the PWM Pins are disabled (both in Arduino and Firmata).  This is the rootcause of the above problem.  The reasons for this are [discussed here](http://arduino.cc/en/reference/servo#.Uxo-UOddVR4).
 
-# Solution
+## Solution
 
 When using the Arduino programming language, one can solve this [programmatically by using Timers](https://www.pololu.com/docs/0J57/8.a).
 
@@ -24,15 +24,19 @@ When using Johnny-Five, one is required to remap the PWM pins that control the M
 
 First you’ll cut the connection between Pins 9 and 10 and the Motor Driver.  This is located on the bottom of the Zumo Shield and can be accessed via the battery compartment.
 
+/Users/mark.west/Desktop/Cutting.jpeg
+
 Using a sharp knife, sever the connections between the innermost two columns of Pins, as I have shown above.
 
 ### Step 2 : Remapping the Connections
 
 Your next step is to remap the PWM pins, so that you can control the speed of your Motors.  I remapped pin 9 to pin 5, and pin 10 to pin 11.  To do this you’ll need to place jumper cables between the relevant pins in the innermost column.
 
+/Users/mark.west/Desktop/Remapping.jpeg
+
 This picture shows where the jumper cables are located.  I had to squash them down (especially the jumper cable between 10 and 11), but it should be reasonably clear what you need to do. 
 
-Step 3 :Updating your Johnny-Five Code
+### Step 3 :Updating your Johnny-Five Code
 
 Don’t forget to update your code to reflect the remapped pins!  In my case...
 
