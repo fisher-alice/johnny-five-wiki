@@ -10,7 +10,7 @@ Four Arduino pins are used to control the motor driver and therefore control mov
 * **Digital pin 9** controls the right motor speed with PWM (pulse width modulation).
 * **Digital pin 10** controls the left motor speed with PWM.
 
-When adding Servos to the Zumo the PWM Pins are disabled (both in Arduino and Firmata).  This is the rootcause of the above problem.  The reasons for this are [discussed here](http://arduino.cc/en/reference/servo#.Uxo-UOddVR4).
+When adding Servos to the Zumo, PWM is disabled on pins 9 & 10 (both in Arduino and Firmata).  This is the root cause of the above problem.  The reasons for this are [discussed here](http://arduino.cc/en/reference/servo#.Uxo-UOddVR4).
 
 ## Solution
 
