@@ -18,7 +18,7 @@ When using the Arduino programming language, one can solve this [programmaticall
 
 When using Johnny-Five, one is required to remap the PWM pins that control the Motor.  Note that this involves permanently cutting the connections between the pins 9 and 10 and the Motor Driver.  This also requires that you have two pins available to function as the new PWM pins.
 
-***Warning : Doing this will permanently damage your Pololu Zumo!  Read through all steps before starting and only continue if you have the relevant skills and knowledge to resolve any problems that arise!***
+***Warning : Doing this may permanently damage your Pololu Zumo!  Read through all steps before starting and only continue if you have the relevant skills and knowledge to resolve any problems that arise!***
 
 ### Step 1 : Cutting the Connections
 
