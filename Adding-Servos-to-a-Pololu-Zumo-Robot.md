@@ -49,3 +49,8 @@ Don’t forget to update your code to reflect the remapped pins!  In my case...
 `var rightMotor = new five.Motor([5, 7]);`
 
 You should now be able to control both the Motors and your Servos!  If you still encounter problems you should check that the Zumo's power supply is adequate to support the Zumo and all the extra stuff you've added.
+
+## References
+
+* [Pololu Robotics Forum](http://forum.pololu.com/viewtopic.php?f=29&t=9622&sid=49c73328d8ed0aec87189b91385a40a0).
+* [GitHub Discussion](https://github.com/rwaldron/johnny-five/issues/309).
