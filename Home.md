@@ -63,6 +63,6 @@
 - [Getting started with Johnny-Five and the Intel Galileo gen2](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-the-Intel-Galileo-gen2)
 - [Getting Started with Johnny-Five and JY MCU Bluetooth Serial Port Module](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-JY-MCU-Bluetooth-Serial-Port-Module)
 - [Getting Started with Johnny-Five and Xbee](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-Xbee)
+- [Adding Servos to a Pololu Zumo Robot](https://github.com/rwaldron/johnny-five/wiki/Adding-Servos-to-a-Pololu-Zumo-Robot)
 
 <!--extract-end:guides-->
-
