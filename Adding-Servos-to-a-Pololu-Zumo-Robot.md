@@ -40,13 +40,18 @@ This picture shows where the jumper cables are located.  I had to squash them do
 
 Don’t forget to update your code to reflect the remapped pins!  In my case...
 
-`var leftMotor = new five.Motor([10, 8]);`
-`var rightMotor = new five.Motor([9, 7]);`
+```js
+var leftMotor = new five.Motor([10, 8]);
+var rightMotor = new five.Motor([9, 7]);
+```
 
 ...was replaced with...
 
-`var leftMotor = new five.Motor([11, 8]);`
-`var rightMotor = new five.Motor([5, 7]);`
+```js
+var leftMotor = new five.Motor([11, 8]);
+var rightMotor = new five.Motor([5, 7]);
+```
+
 
 You should now be able to control both the Motors and your Servos!  If you still encounter problems you should check that the Zumo's power supply is adequate to support the Zumo and all the extra stuff you've added.
 
