@@ -70,14 +70,14 @@ var temperature = new five.Temperature({
 
 
 ```js
-// DS18S20
+// DS18B20
 var temperature = new five.Temperature({
-  controller: "DS18S20",
+  controller: "DS18B20",
   pin: "A0"
 });
 ```
 
-![DS18S20](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-ds18s20.png)
+![DS18B20](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-ds18b20.png)
 
 #### MPU6050
 
