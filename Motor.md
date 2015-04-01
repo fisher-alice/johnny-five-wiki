@@ -68,6 +68,11 @@ var motor = new five.Motor({
 });
 ```
 
+### Pre-packaged Shield Configs
+
+There are several shields that Johnny-Five provides preset configuration objects for. Instantiating motors using these shield configurations is designed to be extremely simple:
+
+
 #### Arduino Motor Shield R3
 
 ```js
@@ -436,8 +441,8 @@ This is by no means exhaustive
   <tbody>
     <tr>
       <td><a href="http://arduino.cc/en/Main/ArduinoMotorShieldR3">Arduino Motor Shield R3</a></td>
-      <td>pwm:3,<br/>dir:12,<br/>[brake:9,]<br/>[current:A0]</td>
-      <td>pwm:11,<br/>dir:13,<br/>[brake:8,]<br/>[current:A1]</td>
+      <td>pwm:3<br/>dir:12<br/>[brake:9,]<br/>[current:A0]</td>
+      <td>pwm:11<br/>dir:13<br/>[brake:8,]<br/>[current:A1]</td>
       <td>ARDUINO_MOTOR_SHIELD_R3_1 {A, B} (vanilla)<br/>ARDUINO_MOTOR_SHIELD_R3_2 {A, B} (w/brake)<br/>ARDUINO_MOTOR_SHIELD_R3_3 {A, B} (w/brake & current)</td>
       <td>7-12V</td>
       <td>2A</td>
@@ -445,8 +450,8 @@ This is by no means exhaustive
     </tr>    
     <tr>
       <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=59">DF Robot 1A</a></td>
-      <td>pwm:6,<br/>dir:7</td>
-      <td>pwm:5,<br/>dir:4</td>
+      <td>pwm:6<br/>dir:7</td>
+      <td>pwm:5<br/>dir:4</td>
       <td>DF_ROBOT {A, B}</td>
       <td>7 - 12V</td>
       <td>1A</td>
@@ -454,8 +459,8 @@ This is by no means exhaustive
     </tr>    
     <tr>
       <td><a href="http://www.dfrobot.com/index.php?route=product/product&product_id=69">DF Robot 2A</a></td>
-      <td>pwm:6,<br/>dir:7</td>
-      <td>pwm:5,<br/>dir:4</td>
+      <td>pwm:6<br/>dir:7</td>
+      <td>pwm:5<br/>dir:4</td>
       <td>DF_ROBOT {A, B}</td>
       <td>4.8 - 35V</td>
       <td>2A</td>
@@ -463,8 +468,8 @@ This is by no means exhaustive
     </tr>    
     <tr>
       <td><a href="http://www.nkcelectronics.com/freeduino-arduino-motor-control-shield-kit.html">NKC Electronics Motor Control Shield Kit</a></td>
-      <td>pwm:9,<br/>dir:12</td>
-      <td>pwm:10,<br/>dir:13</td>
+      <td>pwm:9<br/>dir:12</td>
+      <td>pwm:10<br/>dir:13</td>
       <td>NKC_ELECTRONICS_KIT {A, B}</td>
       <td>6 - 15V shared</td>
       <td>1A</td>
@@ -472,8 +477,8 @@ This is by no means exhaustive
     </tr>    
     <tr>
       <td><a href="http://www.ruggedcircuits.com/motor-control/rugged-motor-driver">Rugged Circuits Rugged Motor Driver</a></td>
-      <td>pwm:3,<br/>dir:12</td>
-      <td>pwm:11,<br/>dir:13</td>
+      <td>pwm:3<br/>dir:12</td>
+      <td>pwm:11<br/>dir:13</td>
       <td>RUGGED_CIRCUITS {A, B}</td>
       <td>8-30V</td>
       <td>2.8A</td>
@@ -481,8 +486,8 @@ This is by no means exhaustive
     </tr>    
     <tr>
       <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits Basic Motor Driver</a></td>
-      <td>pwm:3,<br/>dir:12</td>
-      <td>pwm:11,<br/>dir:13</td>
+      <td>pwm:3<br/>dir:12</td>
+      <td>pwm:11<br/>dir:13</td>
       <td>RUGGED_CIRCUITS {A, B}</td>
       <td>8-30V</td>
       <td>2A</td>
@@ -490,8 +495,8 @@ This is by no means exhaustive
     </tr>    
     <tr>
       <td><a href="https://www.sparkfun.com/products/9815">Sparkfun Ardumoto</a></td>
-      <td>pwm:3,<br/>dir:12</td>
-      <td>pwm:11,<br/>dir:13</td>
+      <td>pwm:3<br/>dir:12</td>
+      <td>pwm:11<br/>dir:13</td>
       <td>SPARKFUN_ARDUMOTO {A, B}</td>
       <td>6 - 15V shared</td>
       <td>2A</td>
@@ -516,8 +521,8 @@ This is by no means exhaustive
   <tbody>
     <tr>
       <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a> and <a href="http://www.seeedstudio.com/depot/motor-shield-v20-p-1377.html?cPath=132_134">V2</a></td>
-      <td>pwm:9,<br/>dir:8,<br/>cdir: 11</td>
-      <td>pwm:10,<br/>dir:12,<br/>cdir: 13</td>
+      <td>pwm:9<br/>dir:8<br/>cdir: 11</td>
+      <td>pwm:10<br/>dir:12<br/>cdir: 13</td>
       <td>SEEED_STUDIO {A, B}</td>
       <td>6-15V</td>
       <td>2A</td>
@@ -525,8 +530,8 @@ This is by no means exhaustive
     </tr>
     <tr>
       <td><a href="http://www.freetronics.com/products/hbridge-dual-channel-h-bridge-motor-driver-shield">Freetronics Dual Channel H-Bridge Motor Driver Shield</a></td>
-      <td>pwm:6,<br/>dir:4,<br/>cdir: 7</td>
-      <td>pwm:5,<br/>dir:3,<br/>cdir: 2</td>
+      <td>pwm:6<br/>dir:4<br/>cdir: 7</td>
+      <td>pwm:5<br/>dir:3<br/>cdir: 2</td>
       <td>FREETRONICS_HBRIDGE: {A, B}</td>
       <td>8-40V</td>
       <td>2A</td>
@@ -573,10 +578,10 @@ This is by no means exhaustive
           </thead>
           <tbody>
             <tr>
-              <td>pwm:8,<br/>dir:9,<br/>cdir: 10</td>
-              <td>pwm:13,<br/>dir:12,<br/>cdir: 11</td>
-              <td>pwm:2,<br/>dir:3,<br/>cdir: 4</td>
-              <td>pwm:7,<br/>dir:6,<br/>cdir: 5</td>
+              <td>pwm:8<br/>dir:9<br/>cdir: 10</td>
+              <td>pwm:13<br/>dir:12<br/>cdir: 11</td>
+              <td>pwm:2<br/>dir:3<br/>cdir: 4</td>
+              <td>pwm:7<br/>dir:6<br/>cdir: 5</td>
             </tr>
           </tbody>
         </table>
@@ -600,7 +605,7 @@ This is by no means exhaustive
   <tbody>
     <tr>
       <td><a href="http://www.sainsmart.com/arduino/arduino-shields/motor-shields/sainsmart-l293d-motor-drive-shield-for-arduino-duemilanove-mega-uno-r3-avr-atmel.html">SainSmart L293D Motor Drive Shield <br/>(clone of AdaFruit Motor Shield v1)</a></td>
-      <td>data: 8,<br/>clock: 4,<br/>latch: 12</td>
+      <td>data: 8<br/>clock: 4<br/>latch: 12</td>
       <td>ADAFRUIT_V1: {M1, M2, M3, M4}</td>
       <td>4.5-10V</td>
       <td>1.2A per motor</td>
@@ -635,16 +640,3 @@ This is by no means exhaustive
 
 1. Beware of shared voltage, the shield may be able to handle higher voltages than your Arduino. 
 1. Indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
-
-### Pre-packaged Shield Configs
-
-There are several shields that Johnny-Five has created pre-configured objects for.  Instantiating motors using these shield configurations is designed to be extremely simple.  If the tables above include a shield config, you can use them like this:
-
-```js
-var config = five.Motor.SHIELD_CONFIGS.ADAFRUIT_V1;
-
-var m1 = new five.Motor(config.M1);
-var m2 = new five.Motor(config.M2);
-var m3 = new five.Motor(config.M3);
-var m4 = new five.Motor(config.M4);
-```
