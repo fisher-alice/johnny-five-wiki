@@ -5,6 +5,7 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
  * **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
 
  * **options** An object of property parameters.
+
   <table>
     <thead>
       <tr>
