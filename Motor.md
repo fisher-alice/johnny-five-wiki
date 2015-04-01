@@ -3,79 +3,18 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 ### Parameters
  * **pin** A Number or String address for the Non-Directional Motor pin (PWM).
  * **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
-
  * **options** An object of property parameters.
 
-  <table>
-    <thead>
-      <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Object</td>
-        <td>A valid pins object or pins array</td>
-        <td></td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>current</td>
-        <td>Object</td>
-        <td>A valid Sensor options object*</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>invertPWM</td>
-        <td>Boolean</td>
-        <td>true or false</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>address</td>
-        <td>Number (usually in hexadecimal)</td>
-        <td>An I2C device address</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>controller</td>
-        <td>String</td>
-        <td>Motor controller interface type</td>
-        <td>
-          
-        </td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>register</td>
-        <td>Object {data, clock, latch}</td>
-        <td>Pin configuration for a ShiftRegister</td>
-        <td></td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>bits</td>
-        <td>Object {a, b}</td>
-        <td>Switch bits to be flipped to control an HBridge from a ShiftRegister</td>
-        <td></td>
-        <td>only if register is defined</td>
-      </tr>
-    </tbody>
-  </table>
+    | Property   | Type                            | Value(s)/Description                                                 | Required                    |
+    |------------|---------------------------------|----------------------------------------------------------------------|-----------------------------|
+    | pins       | Object                          | A valid pins object or pins array                                    | yes                         |
+    | current    | Object                          | A valid Sensor options object\*                                      | no                          |
+    | invertPWM  | Boolean                         | true or false                                                        | no                          |
+    | address    | Number (usually in hexadecimal) | An I2C device address                                                | no                          |
+    | controller | String                          | Motor controller interface type                                      | no                          |
+    | register   | Object {data, clock, latch}     | Pin configuration for a ShiftRegister                                | no                          |
+    | bits       | Object {a, b}                   | Switch bits to be flipped to control an HBridge from a ShiftRegister | only if register is defined |
+
 
 
 ## Shape
