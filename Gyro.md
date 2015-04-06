@@ -66,7 +66,7 @@ var gyro = new five.Gyro({
 });
 ```
 
-![lpr5150l](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/gyro-lpr5150l.png)
+![lpr5150l](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gyro-lpr5150l.png)
 
 #### MPU6050
 
@@ -81,7 +81,7 @@ var gyro = new five.Gyro({
 });
 ```
 
-![MPU6050](https://github.com/rwaldron/johnny-five/blob/master/docs/breadboard/gyro-mpu6050.png)
+![MPU6050](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gyro-mpu6050.png)
 
 
 ## Usage
