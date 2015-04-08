@@ -34,6 +34,9 @@ var joystick = new five.Joystick({
 
 ![Joystick](https://github.com/rwaldron/johnny-five/raw/master/docs/images/joystick.jpg)
 
+![Adafruit Joystick](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/joystick-adafruit.png)
+
+![SparkFun Joystick](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/joystick-sparkfun.png)
 ## API
 
 There are no special API functions for this class.
