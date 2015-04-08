@@ -32,7 +32,7 @@ var joystick = new five.Joystick({
 });
 ```
 
-![Joystick](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/joystick.png)
+![Joystick](https://github.com/rwaldron/johnny-five/raw/master/docs/images/joystick.jpg)
 
 ## API
 
