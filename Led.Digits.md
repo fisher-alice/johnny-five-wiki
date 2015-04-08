@@ -7,7 +7,6 @@ The `Led.Digits` class constructs an object that may represent one or more (chai
 
 Known supported devices: 
 
-- [MAX7219 Red Module 8-Digit 7 Segment Digital LED](http://www.newegg.com/Product/Product.aspx?Item=9SIA2C516T9999)
 - [Sunkee MAX7219 with 8-Digit LED Display Module](http://www.amazon.com/Sunkee-MAX7219-8-Digit-Display-Module/dp/B00D3J04JC/)
 - [5V MAX7219 8-Digit Red LED Display Module 7 Segment Digital Tube For Arduino MCU](http://www.amazon.com/MAX7219-8-Digit-Display-Segment-Digital/dp/B00IHQ7STK)
 
