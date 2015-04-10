@@ -55,7 +55,7 @@ var led = new five.Led({
 });
 ```
 
-![LED](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led.png)
+![LED](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-13.png)
 
 #### LED PCA9685
 ```js
