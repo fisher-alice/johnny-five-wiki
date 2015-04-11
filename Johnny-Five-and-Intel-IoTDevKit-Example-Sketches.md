@@ -16,6 +16,7 @@ The purpose of this guide is to provide a working Intel XDK IoT Edition project 
 * [Sensor: Button(s) Example](Johnny-Five-and-Intel-IoTDevKit-Example-Sketches#buttons)
 * [Sensor: Servo Example](Johnny-Five-and-Intel-IoTDevKit-Example-Sketches#servo)
 * [Sensor: Relay Example](Johnny-Five-and-Intel-IoTDevKit-Example-Sketches#relay)
+* [Sensor: Accelerometer Example](Johnny-Five-and-Intel-IoTDevKit-Example-Sketches#accelerometer)
 
 ### Getting Started
 1. Plug in and flash your Intel Edison
@@ -138,3 +139,14 @@ You can view the source code here: [servo.js](https://github.com/mashery/edison-
 Plug the Relay into Pin 4 (D4) on the shield. Remember to change the target in `package.json` to the file `relay.js`
 
 You can view the source code here: [relay.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/relay.js)
+
+### Accelerometer
+
+![](http://rexstjohn.com/wp-content/uploads/2015/04/accel_plug.png)
+
+![](http://rexstjohn.com/wp-content/uploads/2015/04/plugs_accel.png)
+
+This is a guide for using the Grove ADXL335 [3-axis accelerometer](http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Accelerometer15g-p-765.html). Plug the 3.3v and ground into the illustrated configuration and three analog pins as shown.
+
+You can view the source code here: [accelerometer.js](https://github.com/mashery/edison-guides/blob/master/recipies/Johnny-Five%20Examples/accelerometer.js)
+
