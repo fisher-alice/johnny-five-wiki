@@ -129,7 +129,7 @@ board.on("ready", function() {
   led.toggle();
   ```
 
-- **strobe(ms)** Strobe/Blink the Led on/off in phases over `ms`. This is an **interval** operation and can be stopped by calling `led.stop()`, however that will not necessarily turn it "off". Defaults to 500ms.
+- **strobe(ms, callback)** Strobe/Blink the Led on/off in phases over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `led.stop()`, however that will not necessarily turn it "off". The callback will be invoked every time the Led turns on or off. Defaults to 500ms.
 
   ```js
   var led = new five.Led(13);
@@ -138,7 +138,7 @@ board.on("ready", function() {
   led.strobe(500);
   ```
 
-- **blink(ms)** alias to strobe.
+- **blink(ms, callback)** alias to strobe.
 
   ```js
   var led = new five.Led(13);
@@ -157,7 +157,7 @@ board.on("ready", function() {
   led.brightness(128);
   ```
 
-- **fade(brightness, ms)** Fade from current brightness to `brightness` over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
+- **fade(brightness, ms, callback)** Fade from current brightness to `brightness` over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
   ```js
   var led = new five.Led(11);
@@ -166,7 +166,7 @@ board.on("ready", function() {
   led.fade(128, 2000);
   ```
 
-- **fadeIn(ms)** Fade in from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
+- **fadeIn(ms, callback)** Fade in from current brightness over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
   ```js
   var led = new five.Led(11);
@@ -175,7 +175,7 @@ board.on("ready", function() {
   led.fadeIn(500);
   ```
 
-- **fadeOut(ms)** Fade out from current brightness over `ms`. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
+- **fadeOut(ms, callback)** Fade out from current brightness over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
   ```js
   var led = new five.Led(11);
@@ -185,7 +185,7 @@ board.on("ready", function() {
   ```
 
 
-- **pulse(ms)** Pulse the Led in phases from on to off over `ms` time. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
+- **pulse(ms, callback)** Pulse the Led in phases from on to off over `ms` time, with an optional callback. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". The callback will be invoked every time the Led is fully on or off. This operation will only work with Leds attached to PWM pins.
 
   ```js
   var led = new five.Led(11);
