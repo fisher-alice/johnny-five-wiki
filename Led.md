@@ -129,7 +129,7 @@ board.on("ready", function() {
   led.toggle();
   ```
 
-- **strobe(ms, callback)** Strobe/Blink the Led on/off in phases over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `led.stop()`, however that will not necessarily turn it "off". The callback will be invoked every time the Led turns on or off. Defaults to 500ms.
+- **strobe(ms, callback)** Strobe/Blink the Led on/off in phases over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `led.stop()`, however that will not necessarily turn it "off". The callback will be invoked every time the Led turns on or off. Defaults to 100ms.
 
   ```js
   var led = new five.Led(13);
