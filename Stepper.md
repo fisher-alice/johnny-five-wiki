@@ -41,7 +41,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
         </td>
 
         <td>An array containing the pin addresses for the 3 supported types</td>
-        <td>yes *</td>
+        <td>yes<sup>1</sup></td>
       </tr>
 
 
@@ -63,7 +63,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
         <td>rpm</td>
         <td>Number</td>
         <td>Per device</td>
-        <td>Revolutions per minute, used to calculate speed. Defaluts to 180</td>
+        <td>Revolutions per minute, used to calculate speed. Defaults to 180</td>
         <td>no</td>
       </tr>
       <tr>
@@ -77,13 +77,14 @@ Stepper motors generally require significantly involved hardware setup (that is,
           - five.Stepper.DIRECTION.CCW
 
         </td>
-        <td>no</td>
+        <td>no<sup>2</sup></td>
       </tr>
     </tbody>
   </table>
 
 
-* The **pins** property is required, but can be EITHER an object or an array.
+1. The **pins** property is required, but can be EITHER an object or an array.  
+2. The **direction** property is not required, but if it is undefined then Stepper.step() will do nothing.
 
 ## Shape
 
