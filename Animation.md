@@ -215,7 +215,7 @@ The available properties for keyFrame objects are:
 
 <!--remove-start-->
 ## Examples
-- [Animation](https://github.com/rwldrn/johnny-five/blob/master/docs/animation.md)
+- [Animation](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-animation.md)
 - [Phoenix](https://github.com/rwldrn/johnny-five/blob/master/docs/phoenix.md)
 
 <!--remove-end-->
