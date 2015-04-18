@@ -2,7 +2,7 @@ The `Stepper` class constructs objects that represent a single stepper motor att
 
 In order to use the `Stepper` class, your board must be flashed with `AdvancedFirmata`, which is available here: https://github.com/soundanalogous/AdvancedFirmata
 
-Stepper motors generally require significantly involved hardware setup (that is, more then just plugging a single lead into a pin).
+Stepper motors generally require significantly involved hardware setup (that is, more than just plugging a single lead into a pin).
 
 ## Parameters
 
