@@ -47,18 +47,18 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 
 ```js
 // Parallel LCD
-var lcd = new five.LCD({ 
+new five.LCD({ 
   pins: [8, 9, 4, 5, 6, 7]
 });
 
 // Parallel LCD w/ Backlight
-var lcd = new five.LCD({ 
+new five.LCD({ 
   pins: [8, 9, 4, 5, 6, 7],
   backlight: 13,
 });
 
 // Parallel LCD w/ Backlight & Explicit Rows and Columns (20 cols, 2 rows)
-var lcd = new five.LCD({ 
+new five.LCD({ 
   pins: [8, 9, 4, 5, 6, 7],
   backlight: 13,
   rows: 2,
@@ -72,17 +72,17 @@ var lcd = new five.LCD({
 
 ```js
 // I2C LCD, PCF8574
-var lcd = new five.LCD({ 
+new five.LCD({ 
   controller: "PCF8574"
 });
 
 // I2C LCD, PCF8574A
-var lcd = new five.LCD({ 
+new five.LCD({ 
   controller: "PCF8574A"
 });
 
 // I2C LCD, PCF8574
-var lcd = new five.LCD({ 
+new five.LCD({ 
   controller: "PCF8574"
 });
 ```
@@ -92,7 +92,7 @@ var lcd = new five.LCD({
 #### I2C, JHD1313M1 (Grove)
 
 ```js
-var lcd = new five.LCD({ 
+new five.LCD({ 
   controller: "JHD1313M1"
 });
 ```
