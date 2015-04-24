@@ -44,14 +44,14 @@ The `Button` class constructs objects that represents a single Button attached t
 #### Basic
 
 ```js
-var button = new five.Button(8);
+new five.Button(8);
 ```
 ![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
 #### Inverted
 
 ```js
-var button = new five.Button({
+new five.Button({
   pin: 8, 
   invert: true
 });
