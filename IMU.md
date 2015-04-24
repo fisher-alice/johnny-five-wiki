@@ -42,7 +42,7 @@ Some of these properties may or may not exist depending on whether the IMU suppo
 //
 //  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
 //  - specify the MPU6050 controller
-var accelerometer = new five.IMU({
+new five.IMU({
   controller: "MPU6050",
   address: 0x68, // optional
   freq: 100      // optional
