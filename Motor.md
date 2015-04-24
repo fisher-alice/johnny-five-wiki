@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/a3003d544f7c58468acdb07793194f2b.png)
+
 The `Motor` class constructs objects that represent a single Motor. The motor may attach to the physical board or a motor controller. The controller may be a third party shield or custom built motor controller. This class works well with both **Directional** and **Non-Directional** motors. It also works well with 2-pin or 3-pin controllers.
 
 ### Parameters
