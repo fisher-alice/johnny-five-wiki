@@ -17,7 +17,13 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | pin      | Number, String | Any PWM Pin                            | The address of the PWM pin the ESC is attached to | yes      |
   | range    | Array          | [ lower, upper ]                       | The range of speed in percent. Defaults to [0, 100]                                | no       |
   | startAt  | Number         | Any fractional number value from 0-100 | Initial speed percentage                                                           | no       |
+  | controller    | String         | PCA9685                                                                                     | no       |
 
+- **PCA9685 Options (`controller: "PCA9685"`)** 
+
+  | Property | Type                            | Value/Description                              | Required |
+  |---------------|---------------------------------|------------------------------------------------|----------|
+  | address       | Number (usually in hexadecimal) | I2C device address. (PCA9685 defaults to 0x40) | no       |
 
 
 ## Shape
@@ -42,7 +48,7 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 //   - attached to pin 12
 //   - limited speed range to 0-80%
 //
-var esc = new five.ESC({
+new five.ESC({
   pin: 12, 
   range: [ 0, 80 ]
 });
@@ -50,6 +56,21 @@ var esc = new five.ESC({
 
 ![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png)
 
+
+#### ESC PCA9685
+
+```js
+// Create an ESC controlled by a PCA9685...
+// 
+//   - attached to pin 1 (of the PCA9685)
+//
+new five.ESC({
+  controller: "PCA9685",
+  pin: 1
+});
+```
+
+![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-PCA9685-b.png)
 
 
 ## Usage
