@@ -68,7 +68,7 @@ var lcd = new five.LCD({
 
 ![LCD](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd.png)
 
-#### I2C, PCF8574
+#### I2C, PCF8574 (Generic)
 
 ```js
 // I2C LCD, PCF8574
@@ -89,7 +89,7 @@ var lcd = new five.LCD({
 
 ![LCD I2C](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/lcd-i2c-PCF8574.png)
 
-#### I2C JHD1313M1 (gGove)
+#### I2C, JHD1313M1 (Grove)
 
 ```js
 var lcd = new five.LCD({ 
