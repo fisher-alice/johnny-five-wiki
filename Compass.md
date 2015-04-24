@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/5808690439afa3eb111d82234ed97f76.png)
+
 The `Compass` class constructs an object that represents a single Compass or Magnetometer.
 
 Supported Compass/Magnetometer:
