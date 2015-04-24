@@ -54,7 +54,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 #### LED RGB
 ```js
 // With Options object & pins object
-var rgb = new five.Led.RGB({
+new five.Led.RGB({
   pins: {
     red: 9,
     green: 10,
@@ -63,12 +63,12 @@ var rgb = new five.Led.RGB({
 });
 
 // With Options object & pins array
-var rgb = new five.Led.RGB({
+new five.Led.RGB({
   pins: [9, 10, 11]
 });
 
 // With pins array
-var rgb = new five.Led.RGB([9, 10, 11]);
+new five.Led.RGB([9, 10, 11]);
 ```
 
 ![led rgb](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb.png)
@@ -78,7 +78,7 @@ var rgb = new five.Led.RGB([9, 10, 11]);
 
 ```js
 // With Options object & pins object
-var rgb = new five.Led.RGB({
+new five.Led.RGB({
   pins: {
     red: 9,
     green: 10,
@@ -88,7 +88,7 @@ var rgb = new five.Led.RGB({
 });
 
 // With Options object & pins array
-var rgb = new five.Led.RGB({
+new five.Led.RGB({
   pins: [9, 10, 11],
   isAnode: true
 });
@@ -100,7 +100,7 @@ var rgb = new five.Led.RGB({
 #### LED RGB PCA9685
 ```js
 // With Options object & pins object
-var led = new five.Led.RGB({
+new five.Led.RGB({
   controller: "PCA9685",
   pins: {
     red: 0,
@@ -110,7 +110,7 @@ var led = new five.Led.RGB({
 });
 
 // With Options object & pins array
-var led = new five.Led.RGB({
+new five.Led.RGB({
   controller: "PCA9685",
   pins: [0, 1, 2]
 });
