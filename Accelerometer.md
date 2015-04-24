@@ -71,7 +71,7 @@ This list will continue to be updated as more component support is implemented.
 // 
 //   - attach X and Y to "A0" and "A1" respectively
 //
-var accelerometer = new five.Accelerometer({
+new five.Accelerometer({
   pins: ["A0", "A1"],
   sensitivity: 96, // optional
   aref: 5,         // optional
@@ -88,7 +88,7 @@ var accelerometer = new five.Accelerometer({
 //  - attach SDA and SCL to the I2C pins on 
 //     your board (A4 and A5 for the Uno)
 //  - specify the MPU6050 controller
-var accelerometer = new five.Accelerometer({
+new five.Accelerometer({
   controller: "MPU6050",
   sensitivity: 16384 // optional
 });
@@ -103,7 +103,7 @@ var accelerometer = new five.Accelerometer({
 //  - attach SDA and SCL to the I2C pins on 
 //     your board (A4 and A5 for the Uno)
 //  - specify the ADXL345 controller
-var accelerometer = new five.Accelerometer({
+new five.Accelerometer({
   controller: "ADXL345"
 });
 ```
@@ -116,7 +116,7 @@ var accelerometer = new five.Accelerometer({
 //
 //  - attach Xout, Yout and Zout to A0, A1, A2
 //  - specify the ADXL335 controller
-var accelerometer = new five.Accelerometer({
+new five.Accelerometer({
   controller: "ADXL335",
   pins: ["A0", "A1", "A2"]
 });
@@ -135,7 +135,7 @@ var accelerometer = new five.Accelerometer({
 // - optionally, set the zeroV values.  
 //    This can be done when retrieving them 
 //    after an autoCalibrate
-var accelerometer = new five.Accelerometer({
+new five.Accelerometer({
   controller: "MMA7361",
   pins: ["A0", "A1", "A2"],
   sleepPin: 13,
