@@ -11,6 +11,8 @@ The `Sonar` class constructs objects that represent a single analog or I2C Sonar
 
 This list will continue to be updated as more Sonar devices are confirmed.
 
+**NOTE:** The `Sonar` class is being replaced by the `Proximity` class, which will support all proximity/ranging sensors. 
+
 ## Parameters
 
 
@@ -50,7 +52,7 @@ This list will continue to be updated as more Sonar devices are confirmed.
 // 
 //   - attached to pin "A0"
 //
-var sonar = new five.Sonar({
+new five.Sonar({
   pin: "A0", 
 });
 ```
@@ -65,7 +67,7 @@ var sonar = new five.Sonar({
 // 
 //   - use device model "SRF10"
 
-var sonar = new five.Sonar({
+new five.Sonar({
   controller: "SRF10"
 });
 ```
