@@ -46,7 +46,7 @@ This list will continue to be updated as more component support is implemented.
 
 ## Shape
 
-```
+```js
 { 
   id: A user definable id value. Defaults to a generated uid
   zeroV: The current zeroV value (or values).  
