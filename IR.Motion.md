@@ -3,6 +3,9 @@ The `IR.Motion` class constructs an object that represents a single Passive Infr
 - Motion
     - [Passive Infra-Red by Parallax, Digital](http://www.parallax.com/tabid/768/productid/83/default.aspx)
 
+
+**NOTE:** The `IR.Motion` class is being replaced by the `Motion` class, which will support all motion sensors.
+
 ## Parameters
 
 - **pin** A Number pin address for Motion sensor.
@@ -32,7 +35,7 @@ The `IR.Motion` class constructs an object that represents a single Passive Infr
 
 ```js
 // Pin only
-var motion = new five.IR.Motion(7);
+new five.IR.Motion(7);
 
 // Options object with pin property
 var motion = new five.IR.Motion({
