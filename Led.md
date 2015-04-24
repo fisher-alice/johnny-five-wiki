@@ -50,7 +50,7 @@ For Leds that only have on/off states, use a digital pin:
 var led = new five.Led(13);
 
 // Options object with pin property
-var led = new five.Led({
+new five.Led({
   pin: 13
 });
 ```
@@ -59,7 +59,7 @@ var led = new five.Led({
 
 #### LED PCA9685
 ```js
-var led = new five.Led({
+new five.Led({
   controller: "PCA9685",
   pin: 0, 
 });
