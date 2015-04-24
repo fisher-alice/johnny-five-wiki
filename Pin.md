@@ -226,15 +226,19 @@ Whenever a pin is set to `INPUT` or `ANALOG`, it will automatically emit the fol
 
 ### Methods
 
-- **Pin.write(pin, value)** Write a `value` to a `pin`.
+- **Pin.write(pin instance, value)** Write a `value` to a `pin`.
   ```js
   // This will set pin 13 High
-  five.Pin.write(13, 1);
+  var pin = new five.Pin(13);
+
+  five.Pin.write(pin, 1);
   ```
 
-- **Pin.read(pin, callback)** Register a handler to be called whenever the board reports the value (digital or analog) of the specified pin. 
+- **Pin.read(pin instance, callback)** Register a handler to be called whenever the board reports the value (digital or analog) of the specified pin. 
   ```js
-  five.Pin.read(13, function(error, value) {
+  var pin = new five.Pin(13);
+
+  five.Pin.read(pin, function(error, value) {
     console.log(value);
   });
   ```
