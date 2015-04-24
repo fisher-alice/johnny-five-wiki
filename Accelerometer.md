@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/68628475fed220178a90d19f85133f97.png)
+
 The `Accelerometer` class constructs objects that represent a single Accelerometer sensor attached to the physical board.
 
 Supported Accelerometers:
