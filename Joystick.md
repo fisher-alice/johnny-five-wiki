@@ -26,7 +26,7 @@ This list will continue to be updated as more Joystick devices are confirmed.
 #### Analog
 
 ```js
-var joystick = new five.Joystick({
+new five.Joystick({
   // [ x, y ]
   pins: ["A0", "A1"]
 });
