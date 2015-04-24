@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/d886380feb6d3a929772ad0e89c6dd18.png)
+
 The `Gyro` class constructs objects that represent a single Gyro sensor attached to the physical board.
 
 We currently support two kinds of Gyros:
