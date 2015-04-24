@@ -51,19 +51,19 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 #### Analog Sensor (Most common case)
 
 ```js
-var sensor = new five.Sensor("A0");
+new five.Sensor("A0");
 ```
 
 #### Digital Sensor (Less common, but supported experimentally)
 
 ```js
-var sensor = new five.Sensor({
+new five.Sensor({
   pin: 2, 
   type: "digital"
 });
 
 // Can also be written as: 
-var sensor = new five.Sensor.Digital(2);
+new five.Sensor.Digital(2);
 ```
 
 
