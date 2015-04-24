@@ -58,7 +58,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
 //   - Uses a Driver board
 //
 
-var stepper = new five.Stepper({
+new five.Stepper({
   type: five.Stepper.TYPE.DRIVER,
   stepsPerRev: 200,
   pins: [ 11, 12 ]
@@ -66,7 +66,7 @@ var stepper = new five.Stepper({
 
 // Is the same as...
 
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.DRIVER
   stepsPerRev: 200,
   pins: {
@@ -77,7 +77,7 @@ var stepper = five.Stepper({
 ```
 
 ```js
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.DRIVER
   stepsPerRev: number,
   pins: {
@@ -88,7 +88,7 @@ var stepper = five.Stepper({
 ```
 
 ```js
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.DRIVER
   stepsPerRev: number,
   pins: [ step, dir ]
@@ -100,7 +100,7 @@ var stepper = five.Stepper({
 #### TWO WIRE
 
 ```js
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.TWO_WIRE
   stepsPerRev: number,
   pins: {
@@ -111,7 +111,7 @@ var stepper = five.Stepper({
 ```
 
 ```js
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.TWO_WIRE
   stepsPerRev: number,
   pins: [ motor1, motor2 ]
@@ -119,7 +119,7 @@ var stepper = five.Stepper({
 ```
  
 ```js
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.FOUR_WIRE
   stepsPerRev: number,
   pins: {
@@ -134,7 +134,7 @@ var stepper = five.Stepper({
 #### FOUR WIRE
 
 ```js
-var stepper = five.Stepper({
+five.Stepper({
   type: five.Stepper.TYPE.FOUR_WIRE
   stepsPerRev: number,
   pins: [ motor1, motor2, motor3, motor4 ]
