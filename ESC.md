@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/cd7a0b9df8390de58cecdb589fc8cb1c.png)
+
 The `ESC` class constructs objects that represent a single ESC attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC. Currently, this class assumes the ESC is [pre-calibrated](#wiki-calibrating-an-esc).
 
 
