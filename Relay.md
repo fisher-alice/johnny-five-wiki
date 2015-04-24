@@ -33,12 +33,13 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 var relay = new five.Relay(10);
 
 // Options object with pin property
+// Defaults to Normally Open: "NO"
 var relay = new five.Relay({
   pin: 10
 });
 ```
 
-![Relay](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/relay.png)
+![Relay Open](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/relay-open.png)
 
 
 #### Normally Closed 
@@ -51,7 +52,7 @@ var relay = new five.Relay({
 });
 ```
 
-![Relay](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/relay-breadboard-closed.png)
+![Relay](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/relay-closed.png)
 
 ## Usage
 ```js
