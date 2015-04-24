@@ -24,7 +24,7 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 #### Basic
 
 ```js
-var register = new five.ShiftRegister({
+new five.ShiftRegister({
   pins: {
     data: 2,
     clock: 3,
