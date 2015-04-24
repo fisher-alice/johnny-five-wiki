@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/ca0827715b2ff121a7dc4bfee0a66b6f.png)
+
 The `Relay` class constructs objects that represent a single digital Relay  attached to the physical board.
 
 ## Parameters
