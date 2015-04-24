@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/6bfe16c39837476090a147ae69f6d48b.png)
+
 The `Joystick` class constructs objects that represent a single Joystick sensor attached to the physical board.
 
 This list will continue to be updated as more Joystick devices are confirmed.
