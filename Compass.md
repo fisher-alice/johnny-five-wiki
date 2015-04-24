@@ -35,7 +35,7 @@ Supported Compass/Magnetometer:
 #### HMC6352
 
 ```js
-var compass = new five.Compass({
+new five.Compass({
   controller: "HMC6352"
 });
 ```
@@ -44,7 +44,7 @@ var compass = new five.Compass({
 #### HMC5883L
 
 ```js
-var compass = new five.Compass({
+new five.Compass({
   controller: "HMC5883L"
 });
 ```
