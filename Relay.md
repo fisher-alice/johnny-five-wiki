@@ -30,11 +30,11 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 
 ```js
 // Pin only
-var relay = new five.Relay(10);
+new five.Relay(10);
 
 // Options object with pin property
 // Defaults to Normally Open: "NO"
-var relay = new five.Relay({
+new five.Relay({
   pin: 10
 });
 ```
@@ -46,7 +46,7 @@ var relay = new five.Relay({
 
 ```js
 // Options object with pin and type properties
-var relay = new five.Relay({
+new five.Relay({
   pin: 10, 
   type: "NC"
 });
