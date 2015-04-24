@@ -30,9 +30,9 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 #### Two Pin H-Bridge [pwm, dir]
 
 ```js
-var motor = new five.Motor([3, 12]);
+new five.Motor([3, 12]);
 
-var motor = new five.Motor({
+new five.Motor({
   pins: {
     pwm: 3,
     dir: 12
@@ -43,9 +43,9 @@ var motor = new five.Motor({
 #### Three Pin H-Bridge [pwm, dir, cdir]
 
 ```js
-var motor = new five.Motor([9, 8, 11]);
+new five.Motor([9, 8, 11]);
 
-var motor = new five.Motor({
+new five.Motor({
   pins: {
     pwm:9,
     dir:8,
@@ -57,9 +57,9 @@ var motor = new five.Motor({
 #### Three Pin H-Bridge [pwm, dir, brake]
 
 ```js
-var motor = new five.Motor([9, 8, 11]);
+new five.Motor([9, 8, 11]);
 
-var motor = new five.Motor({
+new five.Motor({
   pins: {
     pwm:9,
     dir:8,
