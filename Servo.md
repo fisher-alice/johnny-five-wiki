@@ -1,3 +1,6 @@
+![](http://i.gyazo.com/d3bb767e9fb54c220fd4f6391e135600.png)
+
+
 The `Servo` class constructs objects that represent a single Servo attached to the physical board. This class is designed to work well with both **Standard** and **Continuous** rotation servos.
 
 ## Parameters
