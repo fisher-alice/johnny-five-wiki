@@ -19,15 +19,15 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 
   | Property | Type           | Value(s)                         | Description                                                                         | Required |
   |---------------|----------------|----------------------------------|-------------------------------------------------------------------------------------|----------|
-  | pin           | Number, String | “A0”, “I1”, 5 (Any pin on board) | The Number or String address of the pin the sensor is attached to, ie. “A0” or “I1” | yes      |
+  | pin           | Number, String | Any analog pin name | The Number or String address of the pin the sensor is attached to, ie. “A0” or “I1” | yes      |
   | freq          | Number         | Milliseconds                     | The frequency in ms of data events. Defaults to 25ms                                | no       |
   | threshold     | Number         | Any                              | The change threshold (+/- value). Defaults to 1                                     | no       |
 
 - **options (experimental)** These options can be used with the `Sensor` class, but are considered experimental.
+
   | Property | Type           | Value(s)                         | Description                                                                         | Required |
   |---------------|----------------|----------------------------------|-------------------------------------------------------------------------------------|----------|
-
-  | type     | String         | "digital", "analog" | Specify that this is a sensor attached to a digital pin| no       |
+  | type     | String         | "digital", "analog" | Specify that this is a sensor attached to a digital pin. Allows using a digital pin as the value of the `pin` option| no       |
 
 
 
