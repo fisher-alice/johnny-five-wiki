@@ -37,21 +37,26 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 #### Basic
 
 ```js
-var digital = new five.Pin(13);
+// Digital
+new five.Pin(13);
 
-var analog = new five.Pin("A0");
+// Analog
+new five.Pin("A0");
 ```
 
 ```js
-var digital = new five.Pin({
+// Digital
+new five.Pin({
   pin: 13
 });
 
-var analog = new five.Pin({
+// Analog
+new five.Pin({
   pin: "A0"
 });
 
-var analogAsDigital = new five.Pin({
+// Analog As Digital
+new five.Pin({
   pin: 14,
   type: "digital"
 });
