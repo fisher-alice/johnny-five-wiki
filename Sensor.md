@@ -23,6 +23,12 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
   | freq          | Number         | Milliseconds                     | The frequency in ms of data events. Defaults to 25ms                                | no       |
   | threshold     | Number         | Any                              | The change threshold (+/- value). Defaults to 1                                     | no       |
 
+- **options (experimental)** These options can be used with the `Sensor` class, but are considered experimental.
+  | Property | Type           | Value(s)                         | Description                                                                         | Required |
+  |---------------|----------------|----------------------------------|-------------------------------------------------------------------------------------|----------|
+
+  | type     | String         | "digital", "analog" | Specify that this is a sensor attached to a digital pin| no       |
+
 
 
 ## Shape
