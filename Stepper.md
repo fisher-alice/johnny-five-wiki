@@ -8,79 +8,23 @@ Stepper motors generally require significantly involved hardware setup (that is,
 
 - **options** An object of property parameters.
 
-  <table>
-    <thead>
-      <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>pins</td>
-        <td>Object *</td>
-        <td>
-  DRIVER: <br>`{ step, dir }`<br>
-  TWO_WIRE: <br>`{ m1, m2 }`<br>
-  FOUR_WIRE: <br>`{ m1, m2, m3, m4 }`<br>
-
-        </td>
-        <td>An object containing the named pin addresses for the 3 supported types</td>
-        <td>yes *</td>
-      </tr>
-      <tr>
-        <td>pins</td>
-        <td>Array *</td>
-        <td>
-  DRIVER: <br>`[ step, dir ]` <br>
-  TWO_WIRE: <br>`[ m1, m2 ]`<br>
-  FOUR_WIRE: <br>`[ m1, m2, m3, m4 ]`<br>
-        </td>
-
-        <td>An array containing the pin addresses for the 3 supported types</td>
-        <td>yes<sup>1</sup></td>
-      </tr>
+| Property    | Type      | Value(s)                      | Description                                                                                              | Required        |
+|-------------|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------|-----------------|
+| pins        | Object \* | See Table | An object containing the named pin addresses for the 3 supported types                                   | yes \*          |
+| pins        | Array \*  | See Table | An array containing the pin addresses for the 3 supported types                                          | yes<sup>1</sup> |
+| stepsPerRev | Number    | \#                            | Steps per revolution. This will differ by motor, refer to motor specs for value                          | yes             |
+| type        | constant  | DRIVER, TWO\_WIRE, FOUR\_WIRE | five.Stepper.TYPE.DRIVER, five.Stepper.TYPE.TWO\_WIRE, five.Stepper.TYPE.FOUR\_WIRE                      | yes             |
+| rpm         | Number    | Per device                    | Revolutions per minute, used to calculate speed. Defaults to 180                                         | no              |
+| direction   | Number    | -1, 0, 1                      | Counter-Clockwise: 0, Clockwise: 1, Default: -1 - five.Stepper.DIRECTION.CW - five.Stepper.DIRECTION.CCW | no<sup>2</sup>  |
 
 
-      <tr>
-        <td>stepsPerRev</td>
-        <td>Number</td>
-        <td>#</td>
-        <td>Steps per revolution. This will differ by motor, refer to motor specs for value</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td>constant</td>
-        <td>DRIVER, TWO_WIRE, FOUR_WIRE</td>
-        <td>five.Stepper.TYPE.DRIVER, five.Stepper.TYPE.TWO_WIRE, five.Stepper.TYPE.FOUR_WIRE</td>
-        <td>yes</td>
-      </tr>
-      <tr>
-        <td>rpm</td>
-        <td>Number</td>
-        <td>Per device</td>
-        <td>Revolutions per minute, used to calculate speed. Defaults to 180</td>
-        <td>no</td>
-      </tr>
-      <tr>
-        <td>direction</td>
-        <td>Number</td>
-        <td>-1, 0, 1</td>
-        <td>
-          Counter-Clockwise: 0, Clockwise: 1, Default: -1
 
-          - five.Stepper.DIRECTION.CW
-          - five.Stepper.DIRECTION.CCW
+| Config | As Object  | As Array |
+|--------|------------|----------|
+| DRIVER | `{ step, dir }` | `[ step, dir ]` |
+| TWO\_WIRE | `{ m1, m2 }` | `[ m1, m2 ]` |
+| FOUR\_WIRE | `{ m1, m2, m3, m4 }` | `[ m1, m2, m3, m4 ]` |
 
-        </td>
-        <td>no<sup>2</sup></td>
-      </tr>
-    </tbody>
-  </table>
 
 
 1. The **pins** property is required, but can be EITHER an object or an array.  
