@@ -39,7 +39,7 @@ Known supported devices:
 #### Shift Register Device
 
 ```js
-var digits = new five.Led.Digits({
+new five.Led.Digits({
   pins: {
     data: 2,
     clock: 3,
