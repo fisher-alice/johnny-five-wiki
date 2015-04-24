@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/64310ac819ea06fe771101c95dbf8e96.png)
+
 The `Button` class constructs objects that represents a single Button attached to the physical board. 
 
 
