@@ -45,7 +45,7 @@ The `IR.Reflect.Array` class constructs an array of analog (digital arrays are n
 #### Analog
 
 ```js
-var eyes = new five.IR.Reflect.Array({
+new five.IR.Reflect.Array({
   emitter: 13,
   pins: ["A0", "A1", "A2"], // any number of pins
   freq: 25
