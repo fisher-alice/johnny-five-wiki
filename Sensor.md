@@ -9,7 +9,7 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 - Tilt Sensor
 - Photoresistor/Light Dependent Resistor
 
-...And more, see [examples](https://github.com/rwaldron/johnny-five/wiki/Sensor#examples)
+...And more, see [examples](#examples)
 
 ## Parameters
 
