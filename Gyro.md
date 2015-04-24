@@ -59,7 +59,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 //   - attach X and Y to "A0" and "A1" respectively
 //   - Use the LPR5150AL 4X sensitivity rating
 //
-var gyro = new five.Gyro({
+new five.Gyro({
   pins: ["A0", "A1"],
   sensitivity: 0.67, // optional
   resolution: 4.88   // optional
@@ -75,7 +75,7 @@ var gyro = new five.Gyro({
 //
 //  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
 //  - specify the MPU6050 controller
-var gyro = new five.Gyro({
+new five.Gyro({
   controller: "MPU6050",
   sensitivity: 131 // optional
 });
