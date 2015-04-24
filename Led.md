@@ -1,3 +1,5 @@
+![](http://i.gyazo.com/b804a48064ea4db0bdb8fd7c5af352de.png)
+
 The `Led` class constructs objects that represent a single Led attached to the physical board.
 
 See also: 
