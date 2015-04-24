@@ -27,6 +27,7 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
   pin: The pin address of the pin
   type: The type of pin this is, either "digital" or "analog"
   value: The most recently reported value for this pin.
+  mode: The mode (number) for the pin.  See "Modes" below
 }
 ```
 
