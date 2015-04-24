@@ -1,5 +1,7 @@
 The 'Ping' class constructs an object that represents a single sonar ping sensor.
 
+**NOTE:** The `Ping` class is being replaced by the `Proximity` class, which will support all proximity/ranging sensors.
+
 **It is absolutely REQUIRED to flash your board with a special version of StandardFirmata. Instructions are [here](https://github.com/rwaldron/johnny-five/wiki/Ping#setup)**
 
 ## Parameters
@@ -37,9 +39,9 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 // 
 //   - attached to pin 7
 //
-var ping = new five.Ping(7);
+new five.Ping(7);
 
-var ping = new five.Ping({
+new five.Ping({
   pin: 7
 });
 ```
@@ -532,7 +534,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
       query[queryIndex].bytes = argv[4] + (argv[5] << 7);
       break;
     case I2C_STOP_READING:
-	  byte queryIndexToSkip;      
+    byte queryIndexToSkip;      
       // if read continuous mode is enabled for only 1 i2c device, disable
       // read continuous reporting for that device
       if (queryIndex <= 0) {
@@ -645,9 +647,9 @@ void sysexCallback(byte command, byte argc, byte *argv)
       Serial.write(pin);
       if (pin < TOTAL_PINS) {
         Serial.write((byte)pinConfig[pin]);
-	Serial.write((byte)pinState[pin] & 0x7F);
-	if (pinState[pin] & 0xFF80) Serial.write((byte)(pinState[pin] >> 7) & 0x7F);
-	if (pinState[pin] & 0xC000) Serial.write((byte)(pinState[pin] >> 14) & 0x7F);
+  Serial.write((byte)pinState[pin] & 0x7F);
+  if (pinState[pin] & 0xFF80) Serial.write((byte)(pinState[pin] >> 7) & 0x7F);
+  if (pinState[pin] & 0xC000) Serial.write((byte)(pinState[pin] >> 14) & 0x7F);
       }
       Serial.write(END_SYSEX);
     }
@@ -746,11 +748,11 @@ void systemResetCallback()
   // initialize a defalt state
   // TODO: option to load config from EEPROM instead of default
   if (isI2CEnabled) {
-  	disableI2CPins();
+    disableI2CPins();
   }
   for (byte i=0; i < TOTAL_PORTS; i++) {
     reportPINs[i] = false;      // by default, reporting off
-    portConfigInputs[i] = 0;	// until activated
+    portConfigInputs[i] = 0;  // until activated
     previousPINs[i] = 0;
   }
   // pins with analog capability default to analog input
