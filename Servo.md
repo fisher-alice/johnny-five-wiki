@@ -51,7 +51,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 // 
 //   - attached to pin 10
 //
-var servo = new five.Servo(10);
+new five.Servo(10);
 ```
 
 #### Auto Centered
@@ -62,7 +62,7 @@ var servo = new five.Servo(10);
 //   - attached to pin 10
 //   - centered
 //
-var servo = new five.Servo({
+new five.Servo({
   pin: 10,
   center: true
 });
@@ -76,7 +76,7 @@ var servo = new five.Servo({
 //   - attached to pin 10
 //   - limited range of 45-135 degrees
 //
-var servo = new five.Servo({
+new five.Servo({
   pin: 10,
   range: [45, 135]
 });
@@ -90,7 +90,7 @@ var servo = new five.Servo({
 //   - attached to pin 10
 //   - starts at 120°
 //
-var servo = new five.Servo({
+new five.Servo({
   pin: 10,
   startAt: 120
 });
@@ -105,7 +105,7 @@ var servo = new five.Servo({
 //   - limited range of 45-135 degrees
 //   - starts at 120°
 //
-var servo = new five.Servo({
+new five.Servo({
   pin: 10,
   range: [45, 135],
   startAt: 120
@@ -116,11 +116,11 @@ var servo = new five.Servo({
 
 ```js
 // Direct Constructor
-var servo = new five.Servo.Continuous(10);
+new five.Servo.Continuous(10);
 
 
 // Options object with type property
-var servo = new five.Servo({
+new five.Servo({
   pin: 10,
   type: "continuous"
 });
@@ -136,7 +136,7 @@ var servo = new five.Servo({
 // 
 //   - attached to pin 0 (of the PCA9685)
 //
-var servo = new five.Servo({
+new five.Servo({
   controller: "PCA9685",
   pin: 0
 });
@@ -149,7 +149,7 @@ var servo = new five.Servo({
 // 
 //   - attached to pin 0 (of the PCA9685)
 //
-var servo = new five.Servo.Continuous({
+new five.Servo.Continuous({
   controller: "PCA9685",
   pin: 0
 });
