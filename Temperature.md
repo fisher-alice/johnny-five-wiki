@@ -40,7 +40,7 @@ This list will continue to be updated as more devices are confirmed.
 
 ```js
 // Create an analog Temperature object:
-var temperature = new five.Temperature({
+new five.Temperature({
   pin: "A0",
   toCelsius: function(raw) { // optional
     return (raw / sensivity) + offset;
@@ -50,7 +50,7 @@ var temperature = new five.Temperature({
 
 ```js
 // LM35
-var temperature = new five.Temperature({
+new five.Temperature({
   controller: "LM35",
   pin: "A0"
 });
@@ -60,7 +60,7 @@ var temperature = new five.Temperature({
 
 ```js
 // TMP36
-var temperature = new five.Temperature({
+new five.Temperature({
   controller: "TMP36",
   pin: "A0"
 });
@@ -71,7 +71,7 @@ var temperature = new five.Temperature({
 
 ```js
 // DS18B20
-var temperature = new five.Temperature({
+new five.Temperature({
   controller: "DS18B20",
   pin: "A0"
 });
@@ -86,7 +86,7 @@ var temperature = new five.Temperature({
 //
 //  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
 //  - specify the MPU6050 controller
-var temperature = new five.Temperature({
+new five.Temperature({
   controller: "MPU6050"
 });
 ```
