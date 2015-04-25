@@ -96,48 +96,19 @@ board.on("ready", function() {
     mode: 0,
     value: 0,
     report: 1,
+    state: 1,
     analogChannel: 127 
   }
   ```
 
-  **Modes**
-
-  <table>
-    <thead>
-      <tr>
-        <th>Mode</th>
-        <th>Value</th>
-        <th>Constant</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>INPUT</td>
-        <td>0</td>
-        <td>Pin.INPUT</td>
-      </tr>
-      <tr>
-        <td>OUTPUT</td>
-        <td>1</td>
-        <td>Pin.OUTPUT</td>
-      </tr>
-      <tr>
-        <td>ANALOG</td>
-        <td>2</td>
-        <td>Pin.ANALOG</td>
-      </tr>
-      <tr>
-        <td>PWM</td>
-        <td>3</td>
-        <td>Pin.PWM</td>
-      </tr>
-      <tr>
-        <td>SERVO</td>
-        <td>4</td>
-        <td>Pin.SERVO</td>
-      </tr>
-    </tbody>
-  </table>
+  | Property | Description |
+  | -------- | ----------- |
+  | `supportedModes` | This is a list of modes that are supported by the pin. These numbers correspond to the [modes](#modes) below. |
+  | `mode` | This is the present mode of the pin (eg. A digital output pin would have `mode: 1`).
+  | `value` | This is the present value of the pin (eg. An analog pin with half voltage reading would have `value: 512`). |
+  | `report` | This pin is presently reporting its value. 
+  | `state` | For output modes, the `state` is any value that has been previously written to the pin. For input modes, the state is the status of the pullup resistor. |
+  | `analogChannel` | The numeric "index" of an analog (ADC) pin, or `127` if digital (eg. "A0" would have `analogChannel: 0`). |
 
 
 - **high()** Set the pin `HIGH`.
@@ -187,42 +158,14 @@ Whenever a pin is set to `INPUT` or `ANALOG`, it will automatically emit the fol
 ## Static
 
 ### Modes
-<table>
-  <thead>
-    <tr>
-      <th>Mode</th>
-      <th>Value</th>
-      <th>Constant</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>INPUT</td>
-      <td>0</td>
-      <td>Pin.INPUT</td>
-    </tr>
-    <tr>
-      <td>OUTPUT</td>
-      <td>1</td>
-      <td>Pin.OUTPUT</td>
-    </tr>
-    <tr>
-      <td>ANALOG</td>
-      <td>2</td>
-      <td>Pin.ANALOG</td>
-    </tr>
-    <tr>
-      <td>PWM</td>
-      <td>3</td>
-      <td>Pin.PWM</td>
-    </tr>
-    <tr>
-      <td>SERVO</td>
-      <td>4</td>
-      <td>Pin.SERVO</td>
-    </tr>
-  </tbody>
-</table>
+
+| Mode   | Value | Constant   |
+|--------|-------|------------|
+| INPUT  | 0     | Pin.INPUT  |
+| OUTPUT | 1     | Pin.OUTPUT |
+| ANALOG | 2     | Pin.ANALOG |
+| PWM    | 3     | Pin.PWM    |
+| SERVO  | 4     | Pin.SERVO  |
 
 ### Methods
 
