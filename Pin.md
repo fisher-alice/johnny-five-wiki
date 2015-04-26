@@ -9,13 +9,12 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 
 - **options** An object of property parameters.
 
-  | Property | Type | Value(s) | Description | Required | 
+  | Property | Type | Value/Description | Default | Required | 
   | --- | --- | --- | --- | --- | 
-  | id | Number, String | Non-specific | Any string or number value. Defaults to `null` | no | 
-  | pin | Number, String | Any Pin | The Number or String address of the pin, defaults to 0, or addr when that is supplied | no | 
-  | type | String | "digital", "analog" | For most cases, this can be omitted; the type will be inferred based on the pin address number. | no | 
-  | mode | Number | 0 .. 4 | The available mode constants are described further down the page.  If not specified, mode defaults to 1 or 2 depending on type | no |
-  | addr | Number, String | Any Pin | The Number or String address of the pin | no | 
+  | id | Number, String | Non-specific. Any string or number value. Defaults to `null` || no | 
+  | pin | Number, String | Any Pin. The Number or String address of the pin, defaults to 0, or addr when that is supplied | no || 
+  | type | String | "digital", "analog". For most cases, this can be omitted; the type will be inferred based on the pin address number. | Inferred | no | 
+  | mode | Number | See [Modes](#Modes) | 1 or 2 depending on type | no |
 
 
 
