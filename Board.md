@@ -17,30 +17,18 @@ Johnny-Five (sans IO Plugin) has been tested on, but is not limited to, the foll
 
 For non-Arduino based projects, a number of [IO Plugins](https://github.com/rwaldron/IO-Plugins) are available:
 
-- Beagle Bone Black
-  - [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
-- Blend Micro
-  - [Blend-Micro-IO](https://github.com/noopkat/blend-micro-io)
-- Intel Galileo, Edison
-  - [Galileo-IO](https://github.com/rwaldron/galileo-io/)
-- LightBlue Bean
-  - [Bean-IO](https://github.com/monteslu/bean-io/)
-- Linino One
-  - [Nino-IO](https://github.com/rwaldron/nino-io/)
-- pcDuino
-  - [pcDuino-IO](https://github.com/rwaldron/pcDuino-io/)
-- Pinoccio
-  - [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
-- Raspberry Pi
-  - [Raspi-IO](https://github.com/bryan-m-hughes/raspi-io)
-- Spark Core
-  - [Spark-IO](https://github.com/rwaldron/spark-io/)
-- Electric Imp
-  - [Imp-IO](https://github.com/rwaldron/imp-io/)
-- RemoteIO (Wrapper to remote control another IO class)
-  - [Remote-IO](https://github.com/monteslu/remote-io)
-- BoardIO (Generic IO Plugin class to make your own!)
-  - [Board-IO](https://github.com/achingbrain/board-io)
+- [BeagleBone-IO](https://github.com/julianduque/beaglebone-io)
+- [Blend-Micro-IO](https://github.com/noopkat/blend-micro-io)
+- [Galileo-IO](https://github.com/rwaldron/galileo-io/)
+- [Bean-IO](https://github.com/monteslu/bean-io/)
+- [Nino-IO](https://github.com/rwaldron/nino-io/)
+- [pcDuino-IO](https://github.com/rwaldron/pcDuino-io/)
+- [Pinoccio-IO](https://github.com/soldair/pinoccio-io/)
+- [Raspi-IO](https://github.com/bryan-m-hughes/raspi-io)
+- [Spark-IO](https://github.com/rwaldron/spark-io/)
+- [Imp-IO](https://github.com/rwaldron/imp-io/)
+- [Remote-IO](https://github.com/monteslu/remote-io)
+- [Board-IO](https://github.com/achingbrain/board-io)
 
 
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
