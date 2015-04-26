@@ -50,8 +50,9 @@ new five.Temperature({
 });
 ```
 
+#### LM35
+
 ```js
-// LM35
 new five.Temperature({
   controller: "LM35",
   pin: "A0"
@@ -60,8 +61,9 @@ new five.Temperature({
 
 ![LM35](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-lm35.png)
 
+
+#### TMP36
 ```js
-// TMP36
 new five.Temperature({
   controller: "TMP36",
   pin: "A0"
@@ -71,8 +73,10 @@ new five.Temperature({
 ![TMP36](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-tmp36.png)
 
 
+#### DS18B20
+
+
 ```js
-// DS18B20
 new five.Temperature({
   controller: "DS18B20",
   pin: "A0"
