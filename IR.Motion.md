@@ -12,9 +12,9 @@ The `IR.Motion` class constructs an object that represents a single Passive Infr
 
 - **options** An object of property parameters.
 
-  | Property | Type           | Value/Description                                                                    | Required |
-  |---------------|----------------|----------------------------|--------------------------------------------------------------------------------|----------|
-  | pin           | Number, String | Digital Pin. The Number or String address of the pin the sensor is attached to, ie. 9, “D7” | yes      |
+  | Property | Type           | Value/Description                                                                    | Default | Required |
+  |---------------|----------------|----------------------------|-------------------------|-----|
+  | pin           | Number, String | Digital Pin. The Number or String address of the pin the sensor is attached to, ie. 9, “D7” | | yes      |
 
 
 ## Shape
