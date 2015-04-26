@@ -8,16 +8,17 @@ Stepper motors generally require significantly involved hardware setup (that is,
 
 - **options** An object of property parameters.
 
-| Property    | Type      | Value(s)                      | Description                                                                                              | Required        |
+| Property    | Type      | Value/Description                                                                                              | Default | Required        |
 |-------------|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------|-----------------|
-| pins        | Object \* | See Table | An object containing the named pin addresses for the 3 supported types                                   | yes \*          |
-| pins        | Array \*  | See Table | An array containing the pin addresses for the 3 supported types                                          | yes<sup>1</sup> |
-| stepsPerRev | Number    | \#                            | Steps per revolution. This will differ by motor, refer to motor specs for value                          | yes             |
-| type        | constant  | DRIVER, TWO\_WIRE, FOUR\_WIRE | five.Stepper.TYPE.DRIVER, five.Stepper.TYPE.TWO\_WIRE, five.Stepper.TYPE.FOUR\_WIRE                      | yes             |
-| rpm         | Number    | Per device                    | Revolutions per minute, used to calculate speed. Defaults to 180                                         | no              |
-| direction   | Number    | -1, 0, 1                      | Counter-Clockwise: 0, Clockwise: 1, Default: -1 - five.Stepper.DIRECTION.CW - five.Stepper.DIRECTION.CCW | no<sup>2</sup>  |
+| pins        | Object \* | See Table. An object containing the named pin addresses for the 3 supported types                                   | | yes \*          |
+| pins        | Array \*  | See Table. An array containing the pin addresses for the 3 supported types                                          | | yes<sup>1</sup> |
+| stepsPerRev | Number    | Steps per revolution. This will differ by motor, refer to motor specs for value                          | | yes             |
+| type        | constant  | `five.Stepper.TYPE.DRIVER`, `five.Stepper.TYPE.TWO_WIRE`, `five.Stepper.TYPE.FOUR_WIRE`                       | | yes             |
+| rpm         | Number    | Revolutions per minute, used to calculate speed. | 180                                         | no              |
+| direction   | constant    | `five.Stepper.DIRECTION.CW`, `five.Stepper.DIRECTION.CCW` | | no<sup>2</sup>  |
 
 
+### Pins 
 
 | Config | As Object  | As Array |
 |--------|------------|----------|
