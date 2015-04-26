@@ -20,12 +20,12 @@ This list will continue to be updated as more Sonar devices are confirmed.
 
 - **options** An object of property parameters.
 
-  | Property | Type           | Value(s)                         | Description                                                                        | Required         |
+  | Property | Type           | Value/Description                                                                        | Default | Required         |
   |---------------|----------------|----------------------------------|------------------------------------------------------------------------------------|------------------|
-  | pin           | Number, String | “A0”, “I1”, 5 (Any pin on board) | The Number or String address of the pin the sonar is attached to, ie. “A0” or “I1” | yes (for analog) |
-  | device        | String         | “SRF02”, “SRF08”                 | A String model id of a Sonar device (I2C only), ie. “SRF02”, “SRF08”, “SRF10”      | yes (for I2C)    |
-  | freq          | Number         | Milliseconds                     | The frequency in ms of data events. Defaults to 25ms                               | no               |
-  | threshold     | Number         | Any                              | The change threshold (+/- value). Defaults to 1                                    | no               |
+  | pin           | Number, String | Any pin. The Number or String address of the pin the sonar is attached to, ie. “A0” or “I1” || yes (for analog) |
+  | controller        | String         | “SRF02”, “SRF08”.  A String model id of a Sonar device (I2C only), ie. “SRF02”, “SRF08”, “SRF10”      || yes (for I2C)    |
+  | freq          | Number         | Milliseconds. The frequency in ms of data events. | 25ms                               | no               |
+  | threshold     | Number         | Any. The change threshold (+/- value). |1                                    | no               |
 
 
 
