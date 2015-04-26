@@ -10,11 +10,11 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 - **options** An object of property parameters.
 
-  | Property | Type           | Value(s)                           | Description                                                              | Required |
+  | Property | Type | Value/Description | Default | Required |
   |---------------|----------------|------------------------------------|--------------------------------------------------------------------------|----------|
-  | pin           | Number, String | 9, “I1” (Any digital pin on board) | The Number or String address of the pin the sensor is attached to, ie. 7 | yes      |
-  | freq          | Number         | Milliseconds                       | The frequency in ms of `data` events. Defaults to 100ms                | no       |
-  | pulse         | Number         | Milliseconds                       | The frequency in ms to wait for a pulse. Defaults to 500ms               | no       |
+  | pin           | Number, String | Digital Pin | | yes      |
+  | freq          | Number         | Milliseconds. The frequency in ms of `data` events. | 100 | no      |
+  | pulse         | Number         | Milliseconds. The frequency in ms to wait for a pulse. | 500 | no       |
 
 
 ## Shape
