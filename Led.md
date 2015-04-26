@@ -25,14 +25,19 @@ For Leds that only have on/off states, use a digital pin:
   var pwm = new five.Led(11);
   ```
 
-- **options** An object of property parameters.
+- **General Options** An object of property parameters.
 
-  | Property | Type    | Value(s)             | Description                                                                                     | Required |
-  |---------------|---------|----------------------|-------------------------------------------------------------------------------------------------|----------|
-  | pin           | Number  | Any Digital Pin      | The Number address of the pin the led is attached to                                            | yes      |
-  | type          | String  | "OUTPUT", "PWM"      | For most cases, this can be omitted; the type will be inferred based on the pin address number. | no       |
-  | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type. Defaults to `"DEFAULT"`.                                           | no       |
-  | address       | Number  | 0x40                 | Address for I2C devices. Defaults to `0x40`.                                                  | no       |
+  | Property | Type    | Value/Description                                                                                     | Default | Required |
+  |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
+  | pin           | Number  | Digital Pin. The Number address of the pin the led is attached to                                            |  | yes      |
+  | type          | String  | "OUTPUT", "PWM". For most cases, this can be omitted; the type will be inferred based on the pin address number. | Detected       | no       |
+  | controller    | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"`                                      | no       |
+
+- **PCA9685 Options (controller: "PCA9685")** An object of property parameters.
+
+  | Property | Type    | Value/Description                                                                                   | Default | Required |
+  |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
+  | address       | Number  | Address for I2C devices. | `0x04` | no       |
 
 ## Shape
 
