@@ -39,7 +39,6 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
 ## Parameters
 
-
 - **General Options** An object of property parameters.
 
   | Property | Type   | Value/Description                                                   |Default| Required |
