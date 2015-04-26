@@ -25,9 +25,6 @@ This list will continue to be updated as more Gyro devices are confirmed.
   | sensitivity   | Number           | Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X`. This value can be identified in the device's datasheet.            |    | yes      |
   | resolution    | Number           | Varies by device. This value can be identified in the device's datasheet             | 4.88    | no       |
 
-
-
-
 - **MPU6050 Options (`controller: "MPU6050"`)** 
 
   | Property | Type   | Value/Description                      | Default | Required |
