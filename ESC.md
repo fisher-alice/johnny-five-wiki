@@ -22,9 +22,9 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | controller    | String  | `"DEFAULT"`, `"PCA9685"`. Controller interface type. | "DEFAULT"                                           | no       |
 - **PCA9685 Options (`controller: "PCA9685"`)** 
 
-  | Property | Type                            | Value/Description                              | Required |
-  |---------------|---------------------------------|------------------------------------------------|----------|
-  | address       | Number (usually in hexadecimal) | I2C device address. (PCA9685 defaults to 0x40) | no       |
+  | Property | Type                            | Value/Description                              | Default | Required |
+  |---------------|---------------------------------|----------------------------------------|----|----------|
+  | address       | Number (usually in hexadecimal) | I2C device address. | `0x40` | no       |
 
 
 ## Shape
