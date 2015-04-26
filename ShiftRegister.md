@@ -4,10 +4,10 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 
 * **options** An object of constructor parameters
 
-  | Name | Type   | Properties             | Description                                        | Required |
+  | Name | Type   | Value/Description                                        | Default| Required |
   |------|--------|------------------------|----------------------------------------------------|----------|
-  | pins | Object | data, clock, latch | Sets the values of the data , clock and latch pins | yes      |
-
+  | pins | Object | `{data, clock, latch}` | | Yes (either)     |
+  | pins | Array | `[data, clock, latch]` | | Yes (either)     |
 
 ## Shape
 
