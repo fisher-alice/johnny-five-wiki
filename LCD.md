@@ -4,7 +4,7 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 
 - **General Options**
 
-  | Property | Type   | Value(s)                            | Description    | Required |
+  | Property | Type   | Value/Description    | Default | Required |
   |---------------|--------|-------------------------------------|----------------|----------|
   | rows          | Number | The number of rows on the device    | Defaults to 2  | No       |
   | cols          | Number | The number of columns on the device | Defaults to 16 | No       |
@@ -12,19 +12,19 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 
 - **I2C Options**
 
-  | Property | Type   | Value(s)                             | Description                        | Required |
+  | Property | Type   | Value/Description                        | Required |
   |---------------|--------|--------------------------------------|------------------------------------|----------|
-  | controller    | String | PCF8574, PCF8574A, JHD1313M1 (Grove) | The name of the controller to use. | yes      |
+  | controller    | String | "PCF8574", "PCF8574A", "JHD1313M1" (Grove). The name of the controller to use. | Yes      |
 
 
 
 
-- **Parallel Options (Default)**
+- **Parallel Options (Default Controller)**
 
-  | Property | Type   | Value(s)                   | Description                                            |
-  |---------------|--------|----------------------------|--------------------------------------------------------|
-  | pins          | Object | { rs, en, d4, d5, d6, d7 } | Sets the values of the rs, en, d4, d5, d6 and d7 pins. |
-  | pins          | Array  | [ rs, en, d4, d5, d6, d7 ] | Sets the values of the rs, en, d4, d5, d6 and d7 pins. |
+  | Property | Type   | Value/Description                                            | Required |
+  |---------------|--------|---------------------------------------------------------|----------|
+  | pins          | Object | `{ rs, en, d4, d5, d6, d7 }`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | Yes (Either) |
+  | pins          | Array  | `[ rs, en, d4, d5, d6, d7 ]`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | Yes (Either) |
 
 
 
