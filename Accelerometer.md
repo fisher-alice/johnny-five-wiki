@@ -36,13 +36,13 @@ This list will continue to be updated as more component support is implemented.
 - **MPU6050 Options (`controller: "MPU6050"`)** 
 
   | Property | Type   | Value/Description                                           | Default | Required |
-  |---------------|--------|--------------|-------------------------------------------------------|---------|----------|
+  |---------------|--------|--------------|-------------------------------------------------------|---------|
   | sensitivity   | Number | 16 bit value. The sensitivity for the +- 250 setting of this device | 16384   | no       |
 
 - **MMA7361 Options (`controller: "MMA7361"`)** 
 
   | Property | Type             | Value/Description                                                                                                                              | Default | Required |
-  |---------------|------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|
+  |---------------|------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------|
   | sleepPin      | Number or String | The digital pin that controls the sleep pin on the device. If you don't set this pin, you need to pull it up to Vcc with a 10k resistor. | null    | no       |
 
 
