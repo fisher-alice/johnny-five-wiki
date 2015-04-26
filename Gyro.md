@@ -14,15 +14,15 @@ This list will continue to be updated as more Gyro devices are confirmed.
 - **General Options**
 
   | Property | Type   | Value/Description                       | Default  | Required |
-  |---------------|--------|-----------------|-----------------------------------|----------|----------|
+  |---------------|--------|-----------------|-----------------------------------|----------|
   | controller    | string | "ANALOG", "MPU6050". The Name of the controller to use | "ANALOG" | no       |
 
 - **Analog Options (`controller: "ANALOG"`)** 
 
   | Property | Type             | Value/Description  | Default | Required |
-  |---------------|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|---------|----------|
-  | pins          | Array of Strings | `["A*"]`. The String analog pins that X, Y, and Z (optional) are attached to | none    | yes      |
-  | sensitivity   | Number           | Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X`. This value can be identified in the device's datasheet.            | none    | yes      |
+  |---------------|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|---------|
+  | pins          | Array of Strings | `["A*"]`. The String analog pins that X, Y, and Z (optional) are attached to |    | yes      |
+  | sensitivity   | Number           | Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X`. This value can be identified in the device's datasheet.            |    | yes      |
   | resolution    | Number           | Varies by device. This value can be identified in the device's datasheet             | 4.88    | no       |
 
 
