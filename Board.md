@@ -192,7 +192,7 @@ Mode constants are exposed via the `Pin` class
   });
   ```
 
-- **analogWrite(pin, value)** Write an analog value (0-255) to a digital `pin`.
+- **analogWrite(pin, value)** Write an unsigned, 8-bit value (0-255) to a digital `pin`.
   ```js
   var five = require("johnny-five");
   var board = new five.Board();
@@ -247,6 +247,129 @@ Mode constants are exposed via the `Pin` class
   });
   ```
   > Note: `digitalRead` will only call its handler when the value of the pin **changes**.
+
+
+- **i2cConfig([milliseconds])** This must be called prior to any I2C reads or writes. Optionally accepts a period in milliseconds to delay between read operations. 
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    // Safely interact with I2C components
+  });
+  ```
+
+- **i2cWrite(address, arrayOfBytes)** Write an `arrayOfBytes` to the component at `address`.
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cWrite(0x01, [0x02, 0x03]);
+  });
+  ```
+
+- **i2cWrite(address, register, arrayOfBytes)** Write an `arrayOfBytes` to the component at `address`, for a specific `register`.
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cWrite(0x01, 0x00, [0x02, 0x03]);
+  });
+  ```
+
+- **i2cWriteReg(address, register, byte)** Write a single `byte` to the component at `address`, for a specific `register`.
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cWrite(0x01, 0x00, 0x7e);
+  });
+  ```
+
+
+- **i2cRead(address, bytesToRead, handler(arrayOfBytes))** Repeatedly read the specified number of bytes (`bytesToRead`) and call `handler` with the results as `arrayOfBytes`. 
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cRead(0x01, 0x02, 6, function(bytes) {
+      console.log("Bytes read: ", bytes);
+    });
+  });
+  ```
+
+
+- **i2cRead(address, register, bytesToRead, handler(arrayOfBytes))** Repeatedly read the specified number of bytes (`bytesToRead`), starting at a specific register, and call `handler` with the results as `arrayOfBytes`.
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cRead(0x01, 0x00, 6, function(bytes) {
+      console.log("Bytes read: ", bytes);
+    });
+  });
+  ```
+
+- **i2cReadOnce(address, register, bytesToRead, handler(arrayOfBytes))** Read the specified number of bytes (`bytesToRead`), starting at a specific register, and call `handler` with the results as `arrayOfBytes`.
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cReadOnce(0x01, 0x02, 6, function(bytes) {
+      console.log("Bytes read: ", bytes);
+      console.log("Done!");
+    });
+  });
+  ```
+
+- **i2cReadOnce(address, bytesToRead, handler)** Read the specified number of bytes (`bytesToRead`) and call `handler` with the results as `arrayOfBytes`. 
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.i2cConfig();
+    this.i2cRead(0x01, 6, function(bytes) {
+      console.log("Bytes read: ", bytes);
+      console.log("Done!");
+    });
+  });
+  ```
+
+- **servoWrite(pin, angle)** Write an angle in degrees from 0-180 to a servo.
+
+  ```js
+  var five = require("johnny-five");
+  var board = new five.Board();
+
+  board.on("ready", function() {
+    this.pinMode(9, five.Pin.SERVO);
+    this.servoWrite(9, 90);
+  });
+  ```
+
+
+
 
 - **shiftOut(dataPin, clockPin, isBigEndian, value)** Write a byte to `dataPin`, followed by toggling the `clockPin`. [Understanding Big and Little Endian Byte Order](http://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/)
 
