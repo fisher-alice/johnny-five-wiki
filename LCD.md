@@ -6,15 +6,15 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 
   | Property | Type   | Value/Description    | Default | Required |
   |---------------|--------|-------------------------------------|----------------|----------|
-  | rows          | Number | The number of rows on the device    | Defaults to 2  | No       |
-  | cols          | Number | The number of columns on the device | Defaults to 16 | No       |
+  | rows          | Number | The number of rows on the device    | 2  | No       |
+  | cols          | Number | The number of columns on the device | 16 | No       |
 
 
 - **I2C Options**
 
-  | Property | Type   | Value/Description                        | Required |
+  | Property | Type   | Value/Description                        | Default | Required |
   |---------------|--------|--------------------------------------|------------------------------------|----------|
-  | controller    | String | "PCF8574", "PCF8574A", "JHD1313M1" (Grove). The name of the controller to use. | Yes      |
+  | controller    | String | "PCF8574", "PCF8574A", "JHD1313M1" (Grove). The name of the controller to use. | | Yes      |
 
 
 
