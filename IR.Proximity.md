@@ -13,10 +13,10 @@ The `IR.Proximity` class constructs an object that represents a single Infrared 
 
 - **options** An object of property parameters.
 
-  | Property | Type           | Value(s)                                             | Description                                                                    | Required |
+  | Property | Type           | Value/Description                                                                    | Required |
   |---------------|----------------|------------------------------------------------------|--------------------------------------------------------------------------------|----------|
-  | pin           | Number, String | 9, “D7” (Any pin on board)                           | The Number or String address of the pin the sensor is attached to, ie. 9, “D7” | yes      |
-  | controller    | String         | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F | The name of the controller to use                                              | yes      |
+  | pin           | Number, String | Analog Pin. The Number or String address of the pin the sensor is attached to, ie. 9, “D7” | yes      |
+  | controller    | String         | "GP2Y0A21YK", "GP2D120XJ00F", "GP2Y0A02YK0F", "GP2Y0A41SK0F". The name of the controller to use                                              | yes      |
 
 
 ## Shape
