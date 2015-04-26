@@ -6,12 +6,10 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 ## Parameters
 
 - **pin** A Number or String address for the ESC pin (PWM).
+
   ```js
   var esc = new five.ESC(9);
   ```
-
-
-
 - **options** An object of property parameters.
 
   | Property | Type           | Value/ Description                                                                        | Default| Required |
@@ -20,6 +18,7 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | range    | Array          | `[ lower, upper ]`. The range of speed in percent. | `[0, 100]`                                | no       |
   | startAt  | Number         | Initial speed, 0-100% | `0` | no       |
   | controller    | String  | `"DEFAULT"`, `"PCA9685"`. Controller interface type. | "DEFAULT"                                           | no       |
+
 - **PCA9685 Options (`controller: "PCA9685"`)** 
 
   | Property | Type                            | Value/Description                              | Default | Required |
