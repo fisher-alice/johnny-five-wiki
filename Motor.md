@@ -14,9 +14,13 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
     | invertPWM  | Boolean                         | true or false                                                        | | no                          |
     | address    | Number | An I2C device address                                                | | no                          |
     | controller | String                          | Motor controller interface type                                      | | no                          |
-    | register   | Object      | `{data, clock, latch}` Pin configuration for a ShiftRegister                                | | no                          |
-    | bits       | Object   | `{a, b}` Switch bits to be flipped to control an HBridge from a ShiftRegister | | only if register is defined |
 
+ * **Shift Register Options** An object of property parameters.
+
+    | Property   | Type                            | Value(s)/Description                                                 | Default | Required                    |
+    |------------|---------------------------------|----------------------------------------------------------------------|---------|-----------|
+    | register   | Object      | `{data, clock, latch}` Pin configuration                              | | no                          |
+    | bits       | Object   | `{a, b}` Switch bits to be flipped to control an HBridge | | only if register is defined |
 
 
 ## Shape
