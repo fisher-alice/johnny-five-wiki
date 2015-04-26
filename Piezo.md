@@ -9,9 +9,9 @@ The `Piezo` class constructs objects that represent a single piezo component att
 
 - **options** An object of property parameters.
 
-  | Property | Type   | Value(s)        | Description                                                         | Required |
+  | Property | Type   | Value/Description                                                         | Required |
   |---------------|--------|-----------------|---------------------------------------------------------------------|----------|
-  | pin           | Number | Any Digital Pin | The Number address of the pin the + input your piezo is attached to | yes      |
+  | pin           | Number | Digital Pin. | yes      |
 
 ## Shape
 
