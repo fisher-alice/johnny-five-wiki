@@ -15,11 +15,11 @@ The `IR.Reflect.Array` class constructs an array of analog (digital arrays are n
 
 - **options** An object of property parameters.
 
-  | Property | Type                    | Value(s)                           | Description                                          | Required |
+  | Property | Type                    | Value/Description                                          | Required |
   |---------------|-------------------------|------------------------------------|------------------------------------------------------|----------|
-  | pins          | Array of Numbers, Strings | `[“A0”, “I1”, 5]` (Any pin on board) | The pins that the sensors are connected to           | yes      |
-  | emitter       | Number, String          | “A0”, 13 (Any pin on board)        | The pin that the light emitter is connected to       | yes      |
-  | freq          | Number                  | Milliseconds                       | The frequency in ms of data events. Defaults to 25ms | no       |
+  | pins          | Array of Numbers, Strings | `["A*", ...], The pins that the sensors are connected to           | yes      |
+  | emitter       | Number, String          | Digital Pin. The pin that the light emitter is connected to       | yes      |
+  | freq          | Number                  | Milliseconds. The frequency in ms of data events. Defaults to 25ms | no       |
 
 
 ## Shape
