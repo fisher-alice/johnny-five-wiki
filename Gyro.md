@@ -31,7 +31,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 - **MPU6050 Options (`controller: "MPU6050"`)** 
 
   | Property | Type   | Value/Description                      | Default | Required |
-  |---------------|--------|----------------------|---------------------------------------------------------------------------------------------------|---------|----------|
+  |---------------|--------|----------------------|---------------------------------------------------------------------------------------------------|---------|
   | sensitivity   | Number | LSB/DegreesPerSecond. The sensitivity of the device. The MPU-6050 is currently configured at +/- 250 degrees per second | 131     | no       |
 
 ## Shape
