@@ -30,9 +30,6 @@ This list will continue to be updated as more component support is implemented.
   | zeroV         | Number or Array  | 0-1023. The analog input when at rest, perpendicular to gravity. When an array, specifies the zeroV for the individual axes.                                         | 478            | no       |
   | autoCalibrate | Boolean          | `true`, `false`. Whether to auto-calibrate the `zeroV` values. The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky. | false          | no       |
 
-
-
-
 - **MPU6050 Options (`controller: "MPU6050"`)** 
 
   | Property | Type   | Value/Description                                           | Default | Required |
