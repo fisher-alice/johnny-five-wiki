@@ -20,6 +20,7 @@
 - [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
 - [Board](https://github.com/rwaldron/johnny-five/wiki/Board) 
   - ([pt_BR][])
+- [Boards](https://github.com/rwaldron/johnny-five/wiki/Boards) 
 - [Button](https://github.com/rwaldron/johnny-five/wiki/Button) 
   - ([Button-pt_BR][])
 - [Compass](https://github.com/rwaldron/johnny-five/wiki/Compass)
