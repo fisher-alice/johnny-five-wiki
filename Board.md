@@ -49,12 +49,12 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 
 - **options** Optional object of themselves optional parameters.
 
-  | Property | Type             | Value/Description                                          | Required |
+  | Property | Type             | Value/Description                                          | Default | Required |
   |---------------|------------------|-----------------------------------------|------------------------------------------------------|----------|
-  | id            | Number, String   | Any. User definable identification                        | no       |
-  | port          | String or object | eg. `/dev/ttyAM0`, `COM1`, `new SerialPort()`. Path or name of device port/COM or SerialPort object | no       |
-  | repl          | Boolean          | `true`, `false`. Set to `false` to disable REPL                     | no       |
-  | debug         | Boolean          | `true`, `false`. Set to `false` to disable debugging output. Defaults to `true`                     | no       |
+  | id            | Number, String   | Any. User definable identification                        | Generated | no       |
+  | port          | String or object | eg. `/dev/ttyAM0`, `COM1`, `new SerialPort()`. Path or name of device port/COM or SerialPort object | Detected | no       |
+  | repl          | Boolean          | `true`, `false`. Set to `false` to disable REPL                 | `true` | no       |
+  | debug         | Boolean          | `true`, `false`. Set to `false` to disable debugging output | `true`                     | no       |
 
 ## Shape
 ```js
