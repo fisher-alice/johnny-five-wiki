@@ -9,7 +9,7 @@ Supported Compass/Magnetometer:
 
 ## Parameters
 
- - **options** An object of property parameters.
+- **options** An object of property parameters.
 
   | Property | Type   | Value/Description | Default | Required |
   |----------|--------|-------------------|---------|----------|
