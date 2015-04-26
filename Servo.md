@@ -9,23 +9,23 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 - **General options** An object of property parameters.
 
-  | Property | Type           | Value/Description                                                                           | Required |
-  |---------------|----------------|---------------------------------------------------------------------------------------------|----------|
-  | pin           | Number, String | The address of the pin the servo is attached to                                             | yes      |
-  | range         | Array          | `[ lower, upper ]` The range of motion in degrees. Defaults to [0, 180]                   | no       |
-  | type          | String         | “standard”, “continuous”. The type of servo being created. Defaults to “standard”           | no       |
+  | Property | Type           | Value/Description                                                                           | Default | Required |
+  |---------------|----------------|---------------------------------------------------------------------------------------------|----------|----------|
+  | pin           | Number, String | The address of the pin the servo is attached to                                             | | yes      |
+  | range         | Array          | `[ lower, upper ]` The range of motion in degrees. | `[0, 180]`                   | no       |
+  | type          | String         | “standard”, “continuous”. The type of servo being created. | “standard”           | no       |
   | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               | no       |
-  | isInverted    | Boolean        | `true` or `false`. Optionally Invert servo movement. Defaults to `false`              | no       |
-  | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. Defaults to `false` | no       |
-  | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type. Defaults to `"DEFAULT"`.                                           | no       |
+  | isInverted    | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
+  | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. | `false` | no       |
+  | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type.  | `"DEFAULT"`.                                           | no       |
 
 
 
 - **PCA9685 Options (`controller: "PCA9685"`)** 
 
-  | Property | Type                            | Value/Description                              | Required |
-  |---------------|---------------------------------|------------------------------------------------|----------|
-  | address       | Number (usually in hexadecimal) | I2C device address. (PCA9685 defaults to 0x40) | no       |
+  | Property | Type                            | Value/Description          |Default | Required |
+  |---------------|---------------------------------|----------------------------------------|----------|
+  | address       | Number | I2C device address. | `0x40` | yes       |
 
 
 ### Shape
