@@ -15,12 +15,11 @@ Known supported devices:
 
 ### Parameters
 
-
 - **options** An object of property parameters.
 
-  | Property | Type   | Value/Description                                                   |Default| Required |
-  |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
-  | pins          | Object | `{ data, clock, cs }`. Object of digital pin names.                                             || yes      |
+  | Property | Type   | Value/Description                 |Default| Required |
+  |----------|--------|-----------------------------------|---------------------------------|----------|
+  | pins     | Object | `{ data, clock, cs }`. Object of digital pin names.                                             || yes      |
   | pins          | Array | `[ data, clock, cs ]`. Array of digital pin names.                                              || yes      |
   | devices       | Number | `1-8`. For single device cases, this can be omitted. |`1`| no       |
 
