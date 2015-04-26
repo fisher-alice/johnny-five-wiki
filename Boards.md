@@ -108,23 +108,22 @@ new five.Boards(ports).on("ready", function() {
 
   });
   ```
+  Override this by providing explicit port paths:
 
-Override this by providing explicit port paths:
 
+  ```js
+  var ports = [
+    { id: "A", port: "/dev/cu.usbmodem621" },
+    { id: "B", port: "/dev/cu.usbmodem411" }
+  ];
 
-```js
-var ports = [
-  { id: "A", port: "/dev/cu.usbmodem621" },
-  { id: "B", port: "/dev/cu.usbmodem411" }
-];
+  new five.Boards(ports).on("ready", function() {
 
-new five.Boards(ports).on("ready", function() {
+    // Both "A" and "B" are initialized
+    // (connected and available for communication)
 
-  // Both "A" and "B" are initialized
-  // (connected and available for communication)
-
-});
-```
+  });
+  ```
 
 
 
