@@ -8,9 +8,9 @@ This list will continue to be updated as more Joystick devices are confirmed.
 
 - **General Options**
 
-  | Property | Type          | Value(s) | Description                         | Default | Required |
+  | Property | Type          | Value/Description                         | Default | Required |
   |---------------|---------------|----------|-------------------------------------|---------|----------|
-  | pins          | Array of Pins | [“A*”]  | The String analog pins that X and Y | none    | yes      |
+  | pins          | Array of Pins | `["A*", ...]`. Analog pins connected to X and Y | none    | yes      |
 
 ## Shape
 
