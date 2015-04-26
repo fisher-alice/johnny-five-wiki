@@ -13,7 +13,7 @@ This list will continue to be updated as more devices are confirmed.
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|----------------------------------------------|-----------|----------|
   | controller    | string | “MPU6050”. The Name of the controller to use            | “MPU6050” | no       |
-  | freq          | Number | The time in milliseconds to delay in reporting data from this device | 100       | no       |
+  | freq          | Number | Milliseconds. The frequency in ms of data events. Defaults to 25ms | 100       | no       |
 
 - **MPU6050 Options(`controller: "MPU6050"`)** 
 
