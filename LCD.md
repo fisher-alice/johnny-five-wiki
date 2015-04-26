@@ -21,10 +21,10 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 
 - **Parallel Options (Default Controller)**
 
-  | Property | Type   | Value/Description                                            | Required |
-  |---------------|--------|---------------------------------------------------------|----------|
-  | pins          | Object | `{ rs, en, d4, d5, d6, d7 }`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | Yes (Either) |
-  | pins          | Array  | `[ rs, en, d4, d5, d6, d7 ]`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | Yes (Either) |
+  | Property | Type   | Value/Description                                           |Default | Required |
+  |---------------|--------|--------------------------------------------------------|---|----------|
+  | pins          | Object | `{ rs, en, d4, d5, d6, d7 }`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | | Yes (Either) |
+  | pins          | Array  | `[ rs, en, d4, d5, d6, d7 ]`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | | Yes (Either) |
 
 
 
