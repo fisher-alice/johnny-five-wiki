@@ -24,7 +24,7 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 
   | Property | Type                            | Value/Description                              | Default | Required |
   |---------------|---------------------------------|----------------------------------------|----|----------|
-  | address       | Number (usually in hexadecimal) | I2C device address. | `0x40` | no       |
+  | address       | Number | I2C device address. | `0x40` | no       |
 
 
 ## Shape
