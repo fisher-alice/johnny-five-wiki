@@ -10,16 +10,16 @@ This list will continue to be updated as more devices are confirmed.
 
 - **General Options**
 
-  | Property | Type   | Value(s)  | Description                                  | Default   | Required |
+  | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|----------------------------------------------|-----------|----------|
-  | controller    | string | “MPU6050” | The Name of the controller to use            | “MPU6050” | no       |
-  | freq          | Number | ms        | The delay in reporting data from this device | 100       | no       |
+  | controller    | string | “MPU6050”. The Name of the controller to use            | “MPU6050” | no       |
+  | freq          | Number | The time in milliseconds to delay in reporting data from this device | 100       | no       |
 
 - **MPU6050 Options(`controller: "MPU6050"`)** 
 
-  | Property | Type   | Value(s)    | Description                                                | Default | Required |
+  | Property | Type   | Value/Description                                                | Default | Required |
   |---------------|--------|-------------|------------------------------------------------------------|---------|----------|
-  | address       | Number | 8-bit value | The address of the component (can be switched via ADO pin) | 0x68    | no       |
+  | address       | Number | 8-bit value. The address of the component (can be switched via ADO pin) | 0x68    | no       |
 
 
 ## Shape 
