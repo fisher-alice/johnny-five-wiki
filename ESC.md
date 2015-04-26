@@ -14,13 +14,12 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
 
 - **options** An object of property parameters.
 
-  | Property | Type           | Value(s)                               | Description                                                                        | Required |
+  | Property | Type           | Value/ Description                                                                        | Required |
   |----------|----------------|----------------------------------------|------------------------------------------------------------------------------------|----------|
-  | pin      | Number, String | Any PWM Pin                            | The address of the PWM pin the ESC is attached to | yes      |
-  | range    | Array          | [ lower, upper ]                       | The range of speed in percent. Defaults to [0, 100]                                | no       |
-  | startAt  | Number         | Any fractional number value from 0-100 | Initial speed percentage                                                           | no       |
-  | controller    | String         | PCA9685                                                                                     | no       |
-
+  | pin      | Number, String | Any PWM Pin. The address of the PWM pin the ESC is attached to | yes      |
+  | range    | Array          | `[ lower, upper ]`. The range of speed in percent. Defaults to [0, 100]                                | no       |
+  | startAt  | Number         | Initial speed, 0-100% | no       |
+  | controller    | String  | `"DEFAULT"`, `"PCA9685"`. Controller interface type. Defaults to `"DEFAULT"`.                                           | no       |
 - **PCA9685 Options (`controller: "PCA9685"`)** 
 
   | Property | Type                            | Value/Description                              | Required |
