@@ -16,6 +16,7 @@ Supported Compass/Magnetometer:
   | controller    | String | "HMC6352", "HMC5883L". Defines the compass module device  | | yes      |
   | gauss         | Number | cgs units. Set the scale gauss for compass readings. | 1.3 | no       |
 
+
 ## Shape
 
 ```js
