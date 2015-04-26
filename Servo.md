@@ -17,7 +17,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               | no       |
   | isInverted    | Boolean        | `true` or `false`. Optionally Invert servo movement. Defaults to `false`              | no       |
   | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. Defaults to `false` | no       |
-  | controller    | String         | PCA9685                                                                                     | no       |
+  | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type. Defaults to `"DEFAULT"`.                                           | no       |
 
 
 
