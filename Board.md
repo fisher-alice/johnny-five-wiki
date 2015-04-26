@@ -52,41 +52,46 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
   | Property | Type             | Value(s)                                | Description                                          | Required |
   |---------------|------------------|-----------------------------------------|------------------------------------------------------|----------|
   | id            | Number, String   | Any                                     | User definable identification                        | no       |
-  | port          | String or object | "/dev/ttyAM0", "COM1", new SerialPort() | Path or name of device port/COM or SerialPort object | no       |
-  | repl          | Boolean          | true, false                             | Set to `false` to disable REPL                     | no       |
+  | port          | String or object | eg. `/dev/ttyAM0`, `COM1`, `new SerialPort()` | Path or name of device port/COM or SerialPort object | no       |
+  | repl          | Boolean          | `true`, `false`                             | Set to `false` to disable REPL                     | no       |
+  | debug         | Boolean          | `true`, `false`                             | Set to `false` to disable debugging output. Defaults to `true`                     | no       |
 
 ## Shape
 ```js
 { 
-  ready: A boolean value that indicates the readiness of the physical board
   io: A reference to the IO protocol layer.
-  id: A user definable id value. Defaults to a generated uid
-  pins: An array of all pin capabilities objects
-  port: A string value of the device path or COM address
+  id: A user definable id value. Defaults to a generated uid.
+  repl: A reference to the active REPL.
 }
 ```
 
 ## Component Initialization
 
-The easiest way to initialize a board object is to call the `Board` constructor function with `new`. Don't worry about knowing your device's path or COM port, Johnny-Five will figure out which USB the board is plugged into and connect to that automatically.
+To initialize control of a board, construct an instance of the `Board` class.
+
+
+> When connecting to a USB serial device, such as an Arduino, you **do not** need to specify the device path or COM port, Johnny-Five will determine which to connect to and connect automatically.
 
 ```js
 new five.Board();
 ```
 
-You may optionally specify the port by providing it as a property of the options object parameter:
+You may optionally specify the port by providing it as a property of the options object parameter.
 
 ```js
-new five.Board({ port: "/dev/tty.usbmodemNNNN" });
+// OSX
+new five.Board({ port: "/dev/tty.usbmodem****" });
+
+// Linux
+new five.Board({ port: "/dev/ttyUSB*" });
+
+// Windows
+new five.Board({ port: "COM*" });
 ```
 
-or 
+\* Denotes system specific enumeration value (ie. a number)
 
-```js
-new five.Board({ port: "COM1" });
-```
-
-or you can specify a SerialPort object by providing it as a property of the options object parameter:
+You can specify a `SerialPort` object by providing it as a property of the options object parameter:
 
 ```js
 var SerialPort = require("serialport").SerialPort;
@@ -111,45 +116,58 @@ var five = require("johnny-five");
 var board = new five.Board();
 
 board.on("ready", function() {
-
-  // Create an Led on pin 13
+  /*
+    Initialize pin 13, which 
+    controls the built-in LED
+  */
   var led = new five.Led(13);
+  
+  /*
+    Injecting object into the REPL
+    allow access while the program
+    is running. 
+    
+    Try these in the REPL: 
+    
+    led.on();
+    led.off();
+    led.blink();
 
-  // Strobe the pin on/off, defaults to 100ms phases
-  led.strobe();
-
+    (One at a time to see each action)
+  */
+  this.repl.inject({
+    led: led
+  });
 });
 ```
 
 ## API
 
-- **repl** This is a property of the board object that represents the automatically generated REPL that's created when a Johnny-Five program is executed. This object has an `inject` method that may be called as many times as desired. 
+- **repl** This is a reference to the active REPL automatically created by the `Board` class. This object has an `inject` method that may be called as many times as desired: 
+  - **repl.inject(object)** Inject objects or values, from the program, into the REPL session.
 
-- **repl.inject(object)** Inject objects or values, from the program, into the REPL session.
-  ```js
-  var five = require("johnny-five");
-  var board = new five.Board();
+    ```js
+    var five = require("johnny-five");
+    var board = new five.Board();
 
-  board.on("ready", function() {
-    // Initialize an Led object that can be controlled from the REPL session
-    this.repl.inject({
-      led: new five.Led(13)
-    });  
-  });
-  /*
-    From the terminal...
+    board.on("ready", function() {
+      // Initialize an LED directly in the REPL
+      this.repl.inject({
+        led: new five.Led(13)
+      });  
+    });
+    /*
+      From the terminal...
 
-    $ node program.js
-    1423012815316 Device(s) /dev/cu.usbmodem1421
-    1423012818908 Connected /dev/cu.usbmodem1421
-    1423012818908 Repl Initialized  
-    >> 
-    (Since the led object is available here...)
-    >> led.on();
-    >> led.off();
-    
-  */
-  ```
+      $ node program.js
+      1423012815316 Device(s) /dev/cu.usbmodem1421
+      1423012818908 Connected /dev/cu.usbmodem1421
+      1423012818908 Repl Initialized  
+      >> led.on();
+      >> led.off();
+      
+    */
+    ```
 
 - **pinMode(pin, mode)** Set the `mode` of a specific `pin`, one of INPUT, OUTPUT, ANALOG, PWM, SERVO.
 Mode constants are exposed via the `Pin` class
@@ -215,7 +233,7 @@ Mode constants are exposed via the `Pin` class
   });
   ```
 
-- **digitalRead(pin, handler(value))** Register a handler to be called whenever the board reports the value (0 or 1) of the specified digital `pin`.
+- **digitalRead(pin, handler(value))** Register a `handler` to be called whenever the board reports the value (0 or 1) of the specified digital `pin`.
   ```js
   var five = require("johnny-five");
   var board = new five.Board();
@@ -228,10 +246,11 @@ Mode constants are exposed via the `Pin` class
     });
   });
   ```
+  > Note: `digitalRead` will only call its handler when the value of the pin **changes**.
 
 - **shiftOut(dataPin, clockPin, isBigEndian, value)** Write a byte to `dataPin`, followed by toggling the `clockPin`. [Understanding Big and Little Endian Byte Order](http://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/)
 
-- **wait(ms, handler())** Register a handler to be called once in another execution turn and after the amount of time specified in milliseconds has passed.
+- **wait(milliseconds, handler())** Register a handler to be called once in another execution turn and after `milliseconds` has elapsed.
   ```js
   var five = require("johnny-five");
   var board = new five.Board();
@@ -250,7 +269,7 @@ Mode constants are exposed via the `Pin` class
   });
   ```
 
-- **loop(ms, handler())** Register a handler to be called repeatedly in another execution turn, every time the specified milliseconds has lapsed. 
+- **loop(milliseconds, handler())** Register a handler to be called repeatedly, in another execution turn, every `milliseconds` period.
   ```js
   var five = require("johnny-five");
   var board = new five.Board();
@@ -261,7 +280,7 @@ Mode constants are exposed via the `Pin` class
     // Assuming an Led is attached to pin 13
     this.pinMode(13, five.Pin.OUTPUT);
 
-    // Homemade strobe
+    // Homemade blink
     this.loop(500, function() {
       this.digitalWrite(13, (byte ^= 0x01));
     });
@@ -270,9 +289,9 @@ Mode constants are exposed via the `Pin` class
 
 ## Events
 
-- **connect** This event will be emitted once the program has "connected" to the board. This may be immediate, or after some amount of time, but is always asynchronous. 
+- **connect** This event will emit once the program has "connected" to the board. This may be immediate, or after some amount of time, but is always asynchronous. For on-board execution, `connect` should emit as soon as possible, but asynchronously.
 
-- **ready** This event will be emitted _after_ the **connect** event and only when the `Board` instance object has completed any hardware initialization that must take place before the program can operate. This process is asynchronous, and completion is signified to the program via a "ready" event.
+- **ready** This event will emit _after_ the **connect** event and only when the `Board` instance object has completed any hardware initialization that must take place before the program can operate. This process is asynchronous, and completion is signified to the program via a "ready" event. For on-board execution, `ready` should emit after `connect`. 
 
 <!--remove-start-->
 
