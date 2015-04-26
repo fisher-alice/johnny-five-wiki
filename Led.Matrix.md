@@ -1,9 +1,8 @@
+![](https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg)
+
 The `Led.Matrix` class constructs an object that may represent one or more (chained) 8x8 or 8x16 LED Matrix (MAX7219, MAX7221 and HT16K33) devices attached to the physical board. Up to 8 devices can be controlled with one instance, giving you 512 controllable LEDs.
 
 
-![](https://cdn.sparkfun.com//assets/parts/8/2/6/4/11861-04.jpg)
-
-![](https://d3s5r33r268y59.cloudfront.net/27271/products/thumbs/2014-06-04T15:00:16.610Z-481.jpg.855x570_q85_pad_rcrop.jpg)
 
 
 Known supported devices: 
@@ -41,23 +40,33 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 ## Parameters
 
 
-- **shift register options** An object of property parameters.
+- **General Options** An object of property parameters.
 
-  | Property | Type   | Value(s)                          | Properties                                                   | Required |
+  | Property | Type   | Value/Description                                                   |Default| Required |
   |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
-  | pins          | Object | A valid pins object or pins array | data, clock, cs                                              | yes      |
-  | devices       | Number | 1-8                               | For single device cases, this can be omitted. Defaults to 1. | no       |
+  | pins          | Object | `{ data, clock, cs }`. Object of digital pin names.                                             || yes      |
+  | pins          | Array | `[ data, clock, cs ]`. Array of digital pin names.                                              || yes      |
+  | devices       | Number | `1-8`. For single device cases, this can be omitted. |`1`| no       |
+  | controller    | string                               | "HT16K33". A valid controller model name |                                                                                 | no      |
 
-- **I2C options** (Requires StandardFirmata 2.4.0 or greater)
+- **HT16K33 options (`controller: "HT16K33"`)** (Arduino Requires StandardFirmata 2.4.0 or greater)
 
-  | Property | Type                                 | Value(s)                      | Properties                                                                             | Required |
+  | Property | Type                                 | Value/Description                                                                             | Default | Required |
   |---------------|--------------------------------------|-------------------------------|----------------------------------------------------------------------------------------|----------|
-  | controller    | string                               | A valid controller model name | HT16K33                                                                                | yes      |
-  | addresses     | array                                | An array of I2C addresses     | Defaults to array of addresses in range 0x70 - 0x77, up to length specified by devices | no       |
-  | isBicolor     | Boolean                              | true|false                    | Defaults to false                                                                      | no       |
-  | dims          | A valid dims object, array or string | rows, columns                 | The dimensions for the devices being used: either 8x8, 16x8 or 8x16.                   | no       |
+  | addresses     | array                                | An array of I2C addresses     | Range 0x70-0x77| no       |
+  | isBicolor     | Boolean                              | `true`, `false`. | `false` | no       |
+  | dims          | Object | `{rows, columns}`. See Dimensions table | 8x8 | no       |
+  | dims          | Array | `[rows, columns]`. See Dimensions table | 8x8 | no       |
+  | dims          | String | "8x8", "16x8" or "8x16". | 8x8 | no       |
 
 
+### Dimensions
+
+| Name | Rows | Columns | 
+|------|------|---------|
+| 8x8  | 8    | 8       |
+| 16x8 | 16   | 8       |
+| 8x16 | 8    | 16      |
 
 ## Shape
 
