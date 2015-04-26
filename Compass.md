@@ -9,13 +9,12 @@ Supported Compass/Magnetometer:
 
 ## Parameters
 
- * **options** An object of property parameters.
+ - **options** An object of property parameters.
 
   | Property | Type   | Value/Description | Default | Required |
   |----------|--------|-------------------|---------|----------|
   | controller    | String | "HMC6352", "HMC5883L". Defines the compass module device  | | yes      |
   | gauss         | Number | cgs units. Set the scale gauss for compass readings. | 1.3 | no       |
-
 
 ## Shape
 
