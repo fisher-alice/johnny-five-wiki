@@ -17,13 +17,13 @@ This list will continue to be updated as more component support is implemented.
 - **General Options**
 
   | Property | Type   | Value/Description                       | Default  | Required |
-  |---------------|--------|--------------------------------------------|-----------------------------------|----------|----------|
+  |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361. The Name of the controller to use | “ANALOG” | no       |
 
 - **Analog Options (`controller: "ANALOG"`)** 
 
   | Property | Type             | Value/Description                                                                                                                                                  | Default        | Required |
-  |---------------|------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|----------|
+  |---------------|------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
   | pins          | Array of Strings | [“A\*”]. The String analog pins that X, Y, and Z (optional) are attached to                                                                                           | none           | yes      |
   | sensitivity   | Number           | Varies by device. This value can be identified in the device's datasheet.                                                                                                      | 96 (Tinkerkit) | no       |
   | aref          | Number           | Voltage reference. This is the value of the VCC pin                                                                                                                             | 5              | no       |
