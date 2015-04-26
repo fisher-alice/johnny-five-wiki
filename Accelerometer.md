@@ -16,34 +16,34 @@ This list will continue to be updated as more component support is implemented.
 
 - **General Options**
 
-  | Property | Type   | Value(s)                                   | Description                       | Default  | Required |
+  | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|----------|
-  | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361 | The Name of the controller to use | “ANALOG” | no       |
+  | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361. The Name of the controller to use | “ANALOG” | no       |
 
 - **Analog Options (`controller: "ANALOG"`)** 
 
-  | Property | Type             | Value(s)          | Description                                                                                                                                                  | Default        | Required |
+  | Property | Type             | Value/Description                                                                                                                                                  | Default        | Required |
   |---------------|------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|----------|
-  | pins          | Array of Strings | [“A\*”]           | The String analog pins that X, Y, and Z (optional) are attached to                                                                                           | none           | yes      |
-  | sensitivity   | Number           | Varies by device  | This value can be identified in the device's datasheet.                                                                                                      | 96 (Tinkerkit) | no       |
-  | aref          | Number           | Voltage reference | This is the value of the VCC pin                                                                                                                             | 5              | no       |
-  | zeroV         | Number or Array  | 0-1023            | The analog input when at rest, perpendicular to gravity. When an array, specifies the zeroV for the individual axes.                                         | 478            | no       |
-  | autoCalibrate | Boolean          | true/false        | Whether to auto-calibrate the `zeroV` values. The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky. | false          | no       |
+  | pins          | Array of Strings | [“A\*”]. The String analog pins that X, Y, and Z (optional) are attached to                                                                                           | none           | yes      |
+  | sensitivity   | Number           | Varies by device. This value can be identified in the device's datasheet.                                                                                                      | 96 (Tinkerkit) | no       |
+  | aref          | Number           | Voltage reference. This is the value of the VCC pin                                                                                                                             | 5              | no       |
+  | zeroV         | Number or Array  | 0-1023. The analog input when at rest, perpendicular to gravity. When an array, specifies the zeroV for the individual axes.                                         | 478            | no       |
+  | autoCalibrate | Boolean          | `true`, `false`. Whether to auto-calibrate the `zeroV` values. The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky. | false          | no       |
 
 
 
 
 - **MPU6050 Options (`controller: "MPU6050"`)** 
 
-  | Property | Type   | Value(s)     | Description                                           | Default | Required |
+  | Property | Type   | Value/Description                                           | Default | Required |
   |---------------|--------|--------------|-------------------------------------------------------|---------|----------|
-  | sensitivity   | Number | 16 bit value | The sensitivity for the +- 250 setting of this device | 16384   | no       |
+  | sensitivity   | Number | 16 bit value. The sensitivity for the +- 250 setting of this device | 16384   | no       |
 
 - **MMA7361 Options (`controller: "MMA7361"`)** 
 
-  | Property | Type             | Value(s)            | Description                                                                                                                              | Default | Required |
+  | Property | Type             | Value/Description                                                                                                                              | Default | Required |
   |---------------|------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|
-  | sleepPin      | Number or String | Digital Pin Address | The digital pin that controls the sleep pin on the device. If you don't set this pin, you need to pull it up to Vcc with a 10k resistor. | null    | no       |
+  | sleepPin      | Number or String | The digital pin that controls the sleep pin on the device. If you don't set this pin, you need to pull it up to Vcc with a 10k resistor. | null    | no       |
 
 
 ## Shape
