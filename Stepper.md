@@ -119,6 +119,9 @@ five.Stepper({
 }); 
 ```
  
+
+#### FOUR WIRE
+
 ```js
 five.Stepper({
   type: five.Stepper.TYPE.FOUR_WIRE
@@ -131,8 +134,6 @@ five.Stepper({
   }
 });
 ```
-
-#### FOUR WIRE
 
 ```js
 five.Stepper({
