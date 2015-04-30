@@ -120,7 +120,7 @@ new five.Proximity({
 
 ```js
 new five.Proximity({
-  controller: "LIDARLITE"
+  controller: "SRF10"
 });
 ```
 
