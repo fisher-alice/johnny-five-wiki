@@ -40,6 +40,7 @@
 - [Piezo](https://github.com/rwaldron/johnny-five/wiki/Piezo)
 - [Pin](https://github.com/rwaldron/johnny-five/wiki/Pin)
 - [Ping](https://github.com/rwaldron/johnny-five/wiki/Ping)
+- [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity)
 - [Relay](https://github.com/rwaldron/johnny-five/wiki/Relay)
 - [Sensor](https://github.com/rwaldron/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwaldron/johnny-five/wiki/Servo)
