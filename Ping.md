@@ -1,6 +1,8 @@
 The 'Ping' class constructs an object that represents a single sonar ping sensor.
 
-**NOTE:** The `Ping` class is being replaced by the `Proximity` class, which will support all proximity/ranging sensors.
+**NOTE:** The `Ping` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
+
+
 
 **It is absolutely REQUIRED to flash your board with a special version of StandardFirmata. Instructions are [here](https://github.com/rwaldron/johnny-five/wiki/Ping#setup)**
 
