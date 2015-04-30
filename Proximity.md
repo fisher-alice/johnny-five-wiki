@@ -13,8 +13,11 @@ Supported Proximity sensors:
   - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) (Use HCSR04 controller) \*
   - [SRF10, I2C](http://www.robotshop.com/en/devantech-srf10-ultrasonic-range-finder.html)
 - Sonar 
-  - [MB1003 HRLV-MaxSonar-EZ0, Analog](http://maxbotix.com/Ultrasonic_Sensors/High_Resolution_Sensors.htm)
-
+  - [MB1003 HRLV-MaxSonar-EZ0, Analog](http://maxbotix.com/Ultrasonic_Sensors/MB1003.htm)
+  - [MB1230 XL-MaxSonar-EZ3, Analog](http://maxbotix.com/Ultrasonic_Sensors/MB1230.htm)
+    - Object detection resolution of 1cm (0.4") for distances beyond 20 cm (8"). All readings from 0-20cm result in a 20cm reading. This is a hardware constraint. 
+- Lidar
+  - [LIDAR-Lite](https://www.sparkfun.com/products/13167)
 
 
 ## Parameters
@@ -24,7 +27,7 @@ Supported Proximity sensors:
   | Property | Type | Value/Description  | Default | Required |
   |----------|------|--------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
-  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, HCSR04 \*, MB1003. See aliases || Yes |
+  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, HCSR04 \*, MB1003, MB1230, LIDARLITE. See aliases || Yes |
   | freq     | Number         | Milliseconds. The frequency in ms of data events. | 25ms | No |
 
 
