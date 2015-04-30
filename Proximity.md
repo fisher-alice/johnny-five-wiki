@@ -83,7 +83,7 @@ new five.Proximity({
 > \* It is absolutely REQUIRED to flash your board with a special version of StandardFirmata (PingFirmata). Instructions are [here](#PingFirmata)
 
 
-#### MB1003 HRLV-MaxSonar-EZ0
+##### MB1003 HRLV-MaxSonar-EZ0
 
 ```js
 new five.Proximity({
@@ -92,7 +92,39 @@ new five.Proximity({
 });
 ```
 
+##### MB1230 XL-MaxSonar-EZ3
+
+```js
+new five.Proximity({
+  controller: "MB1230",
+  pin: "A0"
+});
+```
+
 ![Sonar](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/sonar.png)
+
+#### LIDAR-Lite
+
+
+```js
+new five.Proximity({
+  controller: "LIDARLITE"
+});
+```
+
+![LIDAR](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/proximity-lidarlite.png)
+
+
+#### SRF10
+
+
+```js
+new five.Proximity({
+  controller: "LIDARLITE"
+});
+```
+
+![SRF10](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/proximity-srf10.png)
 
 
 
