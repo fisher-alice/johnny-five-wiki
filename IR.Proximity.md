@@ -7,7 +7,7 @@ The `IR.Proximity` class constructs an object that represents a single Infrared 
     - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728)
 
 
-**NOTE:** The `IR.Proximity` class will soon be replaced by the `Proximity` class, which will support all proximity/ranging sensors.
+**NOTE:** The `IR.Proximity` is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
 
 ## Parameters
 
