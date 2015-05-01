@@ -183,7 +183,7 @@ board.on("ready", function() {
 
 ## PingFirmata 
 
-The HCSR04 and Parallax Ping sensors require a special version of Firmata to be loaded onto the Arduino in order to function properly. Copy and Paste the following into the Arduino IDE and click the Upload button: 
+The HCSR04 and Parallax Ping sensors require a special version of Firmata to be loaded onto the Arduino in order to function properly. **This is only necessary for the HCSR04 and Parallax Ping components**. Copy and Paste the following into the Arduino IDE and click the Upload button: 
 
 ```c
 /*
