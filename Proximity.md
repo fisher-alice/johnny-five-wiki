@@ -13,9 +13,15 @@ Supported Proximity sensors:
   - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) (Use HCSR04 controller) \*
   - [SRF10, I2C](http://www.robotshop.com/en/devantech-srf10-ultrasonic-range-finder.html)
 - Sonar 
+  - [MB1000 LV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1000.htm)
+    - All readings from 0-15cm result in a 15cm reading. From 15-50cm may experience acoustic phase cancellation. This is a hardware constraint. 
+    - Likely supports the entire `LV-MaxSonar-EZ*` line, additional sensors to be confirmed.
   - [MB1003 HRLV-MaxSonar-EZ0, Analog](http://maxbotix.com/Ultrasonic_Sensors/MB1003.htm)
+    - All readings from 0-30cm result in a 30cm reading. This is a hardware constraint. 
+    - Likely supports the entire `HRLV-MaxSonar-EZ*` line, additional sensors to be confirmed.
   - [MB1230 XL-MaxSonar-EZ3, Analog](http://maxbotix.com/Ultrasonic_Sensors/MB1230.htm)
-    - Object detection resolution of 1cm (0.4") for distances beyond 20 cm (8"). All readings from 0-20cm result in a 20cm reading. This is a hardware constraint. 
+    - All readings from 0-20cm result in a 20cm reading. This is a hardware constraint. 
+    - Likely supports the entire `XL-MaxSonar-EZ*` line, additional sensors to be confirmed.
 - Lidar
   - [LIDAR-Lite](https://www.sparkfun.com/products/13167)
 
@@ -27,7 +33,7 @@ Supported Proximity sensors:
   | Property | Type | Value/Description  | Default | Required |
   |----------|------|--------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
-  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, HCSR04 \*, MB1003, MB1230, LIDARLITE. See aliases || Yes |
+  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, HCSR04 \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
   | freq     | Number         | Milliseconds. The frequency in ms of data events. | 25ms | No |
 
 
@@ -82,6 +88,15 @@ new five.Proximity({
 
 > \* It is absolutely REQUIRED to flash your board with a special version of StandardFirmata (PingFirmata). Instructions are [here](#PingFirmata)
 
+
+##### MB1000 LV-MaxSonar-EZ0
+
+```js
+new five.Proximity({
+  controller: "MB1000",
+  pin: "A0"
+});
+```
 
 ##### MB1003 HRLV-MaxSonar-EZ0
 
