@@ -8,6 +8,7 @@ Supported Proximity sensors:
   - [GP2D120XJ00F, Analog](https://www.sparkfun.com/products/8959)
   - [GP2Y0A02YK0F, Analog](https://www.sparkfun.com/products/8958)
   - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728)
+  - [GP2Y0A710K0F, Analog](https://www.adafruit.com/products/1568)
 - Ultrasonic
   - [HCSR04, Pulse In](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
   - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) (Use HCSR04 controller) \*
@@ -33,7 +34,7 @@ Supported Proximity sensors:
   | Property | Type | Value/Description  | Default | Required |
   |----------|------|--------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
-  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, HCSR04 \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
+  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, GP2Y0A710K0F, HCSR04 \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
   | freq     | Number         | Milliseconds. The frequency in ms of data events. | 25ms | No |
 
 
@@ -74,6 +75,16 @@ new five.Proximity({
 
 ![Proximity](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/ir-proximity.png)
 
+#### Analog GP2Y0A710K0F
+
+```js
+new five.Proximity({
+  controller: "GP2Y0A710K0F",
+  pin: "A0"
+});
+```
+
+![Proximity](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/proximity-GP2Y0A710K0F.png)
 
 #### HCSR04/Parallax Ping \*
 
