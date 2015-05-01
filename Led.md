@@ -173,6 +173,23 @@ board.on("ready", function() {
   led.fade(128, 2000);
   ```
 
+- **fade(animation options)** Control the fading of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/Animation#segment-properties).
+
+  ```js
+  var led = new five.Led(11);
+
+  led.fade({
+    easing: "linear",
+    duration: 1000,
+    cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
+    keyFrames: [0, 250, 25, 150, 100, 125],
+    onstop: function() {
+      console.log("Animation stopped");
+    }
+  });
+  ```
+
+
 - **fadeIn(ms, callback)** Fade in from current brightness over `ms` with an optional callback. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". This operation will only work with Leds attached to PWM pins.
 
   ```js
@@ -199,6 +216,22 @@ board.on("ready", function() {
 
   // Pulse from on to off in 500ms phases
   led.pulse(500);
+  ```
+
+- **pulse(animation options)** Control the pulse of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/Animation#segment-properties).  
+
+  ```js
+  var led = new five.Led(11);
+
+  led.pulse({
+    easing: "linear",
+    duration: 3000,
+    cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
+    keyFrames: [0, 10, 0, 50, 0, 255],
+    onstop: function() {
+      console.log("Animation stopped");
+    }
+  });
   ```
 
 - **stop()** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`. This operation will only work with Leds attached to PWM pins.
