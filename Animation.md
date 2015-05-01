@@ -128,7 +128,7 @@ Each keyFrame array should have an element that maps to each cue point in the cu
 
 Elements in a keyFrame array represent a device's position at the corresponding cuePoint. Positions can be described in a number of ways:
 
-###A Number
+#### A Number
 This is a step in degrees from the previous cuePoint's position.
 ```
 // servo.last.degrees === 90
@@ -136,7 +136,7 @@ This is a step in degrees from the previous cuePoint's position.
 ```
 ![keyFrames as a number](https://raw.githubusercontent.com/rwaldron/johnny-five/master/assets/Animation-Graph(1).png)
 
-###null
+#### null
 The behavior of null varies depending upon its position in the array. If used in the first position, it will adopt the device's current value at the time the animation segment is played.
 ```
 // servo.last.degrees === 90
@@ -158,7 +158,7 @@ If used between two keyFrames this cuePoint will be ignored for this device and 
 ```
 ![null in middle](https://raw.githubusercontent.com/rwaldron/johnny-five/master/assets/Animation-Graph(4).png)
 
-###false
+#### false
 Will copy the previous known value (don't move the device)
 ```
 // servo.last.degrees === 90
@@ -166,7 +166,7 @@ Will copy the previous known value (don't move the device)
 ```
 ![false as a keyFrame](https://raw.githubusercontent.com/rwaldron/johnny-five/master/assets/Animation-Graph(5).png)
 
-###A keyFrame object
+#### A keyFrame object
 The available properties for keyFrame objects are:
 
 **step**: A step in degrees from the previous cuePoint position.
