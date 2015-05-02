@@ -37,6 +37,22 @@ Supported Proximity sensors:
   | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, GP2Y0A710K0F, HCSR04 \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
   | freq     | Number         | Milliseconds. The frequency in ms of data events. | 25ms | No |
 
+  ##### Controller Alias Table
+
+  | Controller | Alias |
+  |------------|-------|
+  | GP2Y0A21YK | 2Y0A21 |
+  | GP2D120XJ00F | 2D120X |
+  | GP2Y0A02YK0F | 2Y0A02 |
+  | GP2Y0A41SK0F | OA41SK |
+  | GP2Y0A21YK | 0A21 |
+  | GP2Y0A02YK0F | 0A02 |
+  | MB1000 | LV-MaxSonar-EZ |
+  | MB1003 | HRLV-MaxSonar-EZ0 |
+  | MB1230 | XL-MaxSonar-EZ3 |
+  | HCSR04 | HC-SR04 |
+  | LIDARLITE | LIDAR-Lite |
+
 
 ## Shape
 
