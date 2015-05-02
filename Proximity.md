@@ -10,8 +10,11 @@ Supported Proximity sensors:
   - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728)
   - [GP2Y0A710K0F, Analog](https://www.adafruit.com/products/1568)
 - Ultrasonic
-  - [HCSR04, Pulse In](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
-  - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) (Use HCSR04 controller) \*
+  - "Pulse In" Components
+    - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
+    - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
+    - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) \*
+    - [SeeedStudio Ultrasonic Range, Pulse In](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html) \*
   - [SRF10, I2C](http://www.robotshop.com/en/devantech-srf10-ultrasonic-range-finder.html)
 - Sonar 
   - [MB1000 LV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1000.htm)
