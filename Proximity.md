@@ -53,7 +53,11 @@ Supported Proximity sensors:
   | LV-MaxSonar-EZ | MB1000 |
   | HRLV-MaxSonar-EZ0 | MB1003 |
   | XL-MaxSonar-EZ3 | MB1230 |
-  | HC-SR04 | HCSR04 |
+  | HC-SR04 | SR04 |
+  | HCSR04 | SR04 |
+  | SRF05 | SR04 |
+  | PARALLAXPING | SR04 |
+  | SEEEDPING | SR04 |
   | LIDAR-Lite | LIDARLITE |
 
 
