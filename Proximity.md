@@ -47,11 +47,11 @@ Supported Proximity sensors:
   | GP2Y0A41SK0F | OA41SK |
   | GP2Y0A21YK | 0A21 |
   | GP2Y0A02YK0F | 0A02 |
-  | MB1000 | LV-MaxSonar-EZ |
-  | MB1003 | HRLV-MaxSonar-EZ0 |
-  | MB1230 | XL-MaxSonar-EZ3 |
-  | HCSR04 | HC-SR04 |
-  | LIDARLITE | LIDAR-Lite |
+  | LV-MaxSonar-EZ | MB1000 |
+  | HRLV-MaxSonar-EZ0 | MB1003 |
+  | XL-MaxSonar-EZ3 | MB1230 |
+  | HC-SR04 | HCSR04 |
+  | LIDAR-Lite | LIDARLITE |
 
 
 ## Shape
