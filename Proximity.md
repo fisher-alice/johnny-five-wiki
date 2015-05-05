@@ -3,32 +3,89 @@ The `Proximity` class constructs an object that represents a single Proximity se
 
 Supported Proximity sensors: 
 
-- Infrared
-  - [GP2Y0A21YK, Analog](https://www.sparkfun.com/products/242)
-  - [GP2D120XJ00F, Analog](https://www.sparkfun.com/products/8959)
-  - [GP2Y0A02YK0F, Analog](https://www.sparkfun.com/products/8958)
-  - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728)
-  - [GP2Y0A710K0F, Analog](https://www.adafruit.com/products/1568)
-- Ultrasonic
-  - "Pulse In" Components (All use `controller: "HCSR04"`)
+- Pulse/PWM
+  - Ultrasonic (All use `controller: "HCSR04"`, require [PingFirmata](#PingFirmata))
     - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
     - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
     - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) \*
     - [SeeedStudio Ultrasonic Range, Pulse In](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html) \*
-  - [SRF10, I2C](http://www.robotshop.com/en/devantech-srf10-ultrasonic-range-finder.html)
-- Sonar 
-  - [MB1000 LV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1000.htm)
-    - All readings from 0-15cm result in a 15cm reading. From 15-50cm may experience acoustic phase cancellation. This is a hardware constraint. 
-    - Likely supports the entire `LV-MaxSonar-EZ*` line, additional sensors to be confirmed.
-  - [MB1003 HRLV-MaxSonar-EZ0, Analog](http://maxbotix.com/Ultrasonic_Sensors/MB1003.htm)
-    - All readings from 0-30cm result in a 30cm reading. This is a hardware constraint. 
-    - Likely supports the entire `HRLV-MaxSonar-EZ*` line, additional sensors to be confirmed.
-  - [MB1230 XL-MaxSonar-EZ3, Analog](http://maxbotix.com/Ultrasonic_Sensors/MB1230.htm)
-    - All readings from 0-20cm result in a 20cm reading. This is a hardware constraint. 
-    - Likely supports the entire `XL-MaxSonar-EZ*` line, additional sensors to be confirmed.
-- Lidar
-  - [LIDAR-Lite](https://www.sparkfun.com/products/13167)
-
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-2cm (will result in 2cm reading)
+          - Long: 2–400cm
+        - Resolution: ~0.3cm
+- Analog
+  - Ultrasonic
+    - [MB1000, LV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1000.htm)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-15cm (will result in 15cm reading)
+          - Long: 15-645cm (15-50cm may experience acoustic phase cancellation)
+        - Resolution: 2.54cm
+      - Likely supports the entire `LV-MaxSonar-EZ*` line, additional sensors to be confirmed.
+    - [MB1010, LV-MaxSonar-EZ1](http://maxbotix.com/Ultrasonic_Sensors/MB1010.htm)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-15cm (will result in 15cm reading)
+          - Long: 15-645cm
+        - Resolution: 2.54cm
+    - [MB1003, HRLV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1003.htm)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-30cm (will result in 30cm reading)
+          - Long: 30-500cm
+        - Resolution: 1cm
+    - [MB1230, XL-MaxSonar-EZ3](http://maxbotix.com/Ultrasonic_Sensors/MB1230.htm)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-20cm (will result in 20cm reading)
+          - Long: 20-765cm
+        - Resolution: 1cm
+  - Infrared
+    - [GP2Y0A21YK](https://www.sparkfun.com/products/242)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-10cm (will result in 10cm reading)
+          - Long: 10-80cm
+        - Resolution: 1cm       
+    - [GP2D120XJ00F](https://www.sparkfun.com/products/8959)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-4cm (will result in 4cm reading)
+          - Long: 4-30cm
+        - Resolution: 1cm       
+    - [GP2Y0A02YK0F](https://www.sparkfun.com/products/8958)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-15cm (will result in 15cm reading)
+          - Long: 15-150cm
+        - Resolution: 1cm          
+    - [GP2Y0A41SK0F](https://www.sparkfun.com/products/12728)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-4cm (will result in 4cm reading)
+          - Long: 4-30cm
+        - Resolution: 1cm      
+    - [GP2Y0A710K0F](https://www.adafruit.com/products/1568)   
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-50cm (will result in 50cm reading)
+          - Long: 50-500cm
+        - Resolution: 1cm         
+- I2C
+  - Lidar
+    - [LIDAR-Lite](https://www.sparkfun.com/products/13167)
+      - Hardware Constraints
+        - Range: 
+          - Long: 0-4000cm
+        - Resolution: < 1cm
+  - Ultrasonic
+    - [SRF10](http://www.robotshop.com/en/devantech-srf10-ultrasonic-range-finder.html)
+      - Hardware Constraints
+        - Range: 
+          - Close: 0-6cm (will result in 6cm reading)
+          - Long: 6-600cm
+        - Resolution: < 1cm
 
 ## Parameters
 
@@ -256,7 +313,7 @@ The HCSR04 and Parallax Ping sensors require a special version of Firmata to be 
 #define MINIMUM_SAMPLING_INTERVAL 10
 
 #define REGISTER_NOT_SPECIFIED -1
-#define PULSE_IN                0x74 // send a pulse in command
+#define PING_READ                0x75 // send a pulse in command
 
 /*==============================================================================
  * GLOBAL VARIABLES
@@ -719,7 +776,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
     }
     Serial.write(END_SYSEX);
     break;
-  case PULSE_IN:{
+  case PING_READ:{
       byte pulseDurationArray[4] = {
         (argv[2] & 0x7F) | ((argv[3] & 0x7F) << 7)
        ,(argv[4] & 0x7F) | ((argv[5] & 0x7F) << 7)
@@ -763,7 +820,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
       responseArray[2] = (((unsigned long)duration >> 16) & 0xFF) ;
       responseArray[3] = (((unsigned long)duration >> 8) & 0xFF);
       responseArray[4] = (((unsigned long)duration & 0xFF));
-      Firmata.sendSysex(PULSE_IN,5,responseArray);
+      Firmata.sendSysex(PING_READ,5,responseArray);
       break;
     }
   }
