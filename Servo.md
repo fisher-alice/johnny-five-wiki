@@ -15,7 +15,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | range         | Array          | `[ lower, upper ]` The range of motion in degrees. | `[0, 180]`                   | no       |
   | type          | String         | “standard”, “continuous”. The type of servo being created. | “standard”           | no       |
   | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               | no       |
-  | isInverted    | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
+  | invert        | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
   | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. | `false` | no       |
   | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type.  | `"DEFAULT"`.                                           | no       |
 
@@ -35,7 +35,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Servo is attached to
   range: The range of motion in degrees. Defaults to [0, 180]
-  isInverted: A boolean, indicates whether servo values are inverted
+  invert: A boolean, indicates whether servo values are inverted
   history: An array containing records of each movement 
   interval: A reference to the current interval, if one exists
   isMoving: A boolean flag, true when moving, false when still
