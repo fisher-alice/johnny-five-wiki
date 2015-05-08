@@ -47,6 +47,7 @@
 - [ShiftRegister](https://github.com/rwaldron/johnny-five/wiki/ShiftRegister)
 - [Sonar](https://github.com/rwaldron/johnny-five/wiki/Sonar)
 - [Stepper](https://github.com/rwaldron/johnny-five/wiki/Stepper)
+- [Switch](https://github.com/rwaldron/johnny-five/wiki/Switch)
 - [Temperature](https://github.com/rwaldron/johnny-five/wiki/Temperature)
 
 
