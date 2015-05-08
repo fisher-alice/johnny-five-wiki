@@ -21,11 +21,11 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 
 
-- **PCA9685 Options (`controller: "PCA9685"`)** 
+- **PCA9685 Options (`controller: "PCA9685"`)**
 
-  | Property | Type                            | Value/Description          |Default | Required |
-  |---------------|---------------------------------|----------------------------------------|----------|
-  | address       | Number | I2C device address. | `0x40` | yes       |
+  | Property | Type           | Value/Description                                                                           | Default | Required |
+  |---------------|----------------|---------------------------------------------------------------------------------------------|----------|----------|
+  | address           | Number | I2C device address.                                             | `0x40` | yes      |
 
 
 ### Shape
