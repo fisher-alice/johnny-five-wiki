@@ -15,6 +15,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | range         | Array          | `[ lower, upper ]` The range of motion in degrees. | `[0, 180]`                   | no       |
   | type          | String         | “standard”, “continuous”. The type of servo being created. | “standard”           | no       |
   | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               | no       |
+  | offset        | Number        | A positive or negative value to adjust the servo. | `false`              | no       |
   | invert        | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
   | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. | `false` | no       |
   | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type.  | `"DEFAULT"`.                                           | no       |
