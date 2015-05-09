@@ -7,8 +7,8 @@ Supported Proximity sensors:
   - Ultrasonic (All use `controller: "HCSR04"`, require [PingFirmata](#PingFirmata))
     - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
     - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
-    - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) \*
-    - [SeeedStudio Ultrasonic Range, Pulse In](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html)
+    - [Parallax Ping](https://www.parallax.com/product/28015) \*
+    - [SeeedStudio Ultrasonic Range](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html)
     - [Grove - Ultrasonic Ranger](http://www.seeedstudio.com/depot/Grove-Ultrasonic-Ranger-p-960.html) \*
       - Hardware Constraints
         - Range: 
@@ -95,7 +95,7 @@ Supported Proximity sensors:
   | Property | Type | Value/Description  | Default | Required |
   |----------|------|--------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
-  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, GP2Y0A710K0F, HCSR04 \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
+  | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, GP2Y0A710K0F, PING_PULSEIN \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
   | freq     | Number         | Milliseconds. The frequency in ms of data events. | 25ms | No |
 
   ##### Controller Alias Table
@@ -111,11 +111,12 @@ Supported Proximity sensors:
   | LV-MaxSonar-EZ | MB1000 |
   | HRLV-MaxSonar-EZ0 | MB1003 |
   | XL-MaxSonar-EZ3 | MB1230 |
-  | HC-SR04 | SR04 |
-  | HCSR04 | SR04 |
-  | SRF05 | SR04 |
-  | PARALLAXPING | SR04 |
-  | SEEEDPING | SR04 |
+  | HC-SR04 | PING_PULSE_IN |
+  | HCSR04 | PING_PULSE_IN |
+  | SRF05 | PING_PULSE_IN |
+  | PARALLAXPING | PING_PULSE_IN |
+  | SEEEDPING | PING_PULSE_IN |
+  | GROVEPING | PING_PULSE_IN |
   | LIDAR-Lite | LIDARLITE |
 
 
