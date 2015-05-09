@@ -8,7 +8,8 @@ Supported Proximity sensors:
     - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
     - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
     - [Parallax Ping, Pulse In](https://www.parallax.com/product/28015) \*
-    - [SeeedStudio Ultrasonic Range, Pulse In](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html) \*
+    - [SeeedStudio Ultrasonic Range, Pulse In](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html)
+    - [Grove - Ultrasonic Ranger](http://www.seeedstudio.com/depot/Grove-Ultrasonic-Ranger-p-960.html) \*
       - Hardware Constraints
         - Range: 
           - Close: 0-2cm (will result in 2cm reading)
@@ -263,7 +264,18 @@ board.on("ready", function() {
 
 ## PingFirmata 
 
-The HCSR04 and Parallax Ping sensors require a special version of Firmata to be loaded onto the Arduino in order to function properly. **This is only necessary for the HCSR04 and Parallax Ping components**. Copy and Paste the following into the Arduino IDE and click the Upload button: 
+For use with: 
+
+- [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6)
+- [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html)
+- [Parallax Ping](https://www.parallax.com/product/28015)
+- [SeeedStudio Ultrasonic Range](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html)
+- [Grove - Ultrasonic Ranger](http://www.seeedstudio.com/depot/Grove-Ultrasonic-Ranger-p-960.html)
+
+
+The above listed devices require a special version of Firmata (shown below) to be loaded onto the Arduino in order to function properly. **This is only necessary for the components listed in this section!** 
+
+Copy and Paste the following into the Arduino IDE and click the Upload button: 
 
 ```c
 /*
@@ -282,7 +294,8 @@ The HCSR04 and Parallax Ping sensors require a special version of Firmata to be 
   Copyright (C) 2010-2011 Paul Stoffregen.  All rights reserved.
   Copyright (C) 2009 Shigeru Kobayashi.  All rights reserved.
   Copyright (C) 2009-2011 Jeff Hoefs.  All rights reserved.
-  
+  Copyright (C) 2012 Julian Gaultier.  All rights reserved.
+
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
