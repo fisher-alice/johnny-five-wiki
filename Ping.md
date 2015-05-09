@@ -1,6 +1,6 @@
 The 'Ping' class constructs an object that represents a single sonar ping sensor.
 
-**NOTE:** The `Ping` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
+# The `Ping` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
 
 
 
@@ -89,68 +89,6 @@ Ping does not have any API functions
 
 ## Setup
 
-Ping requires a specific version of firmata to be loaded onto the Arduino in order to work.
-
-If you have the Arduino IDE open, you should close it before you start.
-
-First get to the following directory with your Terminal or Git command line:
-
-**OS X:**
-`/Applications/Arduino.app/Contents/Resources/Java/libraries/`
-
-**Linux:**
-`/usr/share/arduino/libraries/`
-
-**Windows:**
-`C:\Program Files (x86)\Arduino\libraries\`
-
-Then proceed with the following in your command line:
-```bash
-
-    # make a backup of the existing Firmata
-    cp -r Firmata Firmata_stable
-
-    # rm Firmata
-    rm -r Firmata
-
-    # clone the experimental repo branch
-    git clone git://github.com/jgautier/arduino-1.git Firmata
-
-    # enter!
-    cd Firmata
-
-    # get the branch with pulseIn
-    git checkout -b pulseIn origin/pulseIn
-```
-Now open the Arduino IDE.
-
-- File > Examples > Firmata > Standard Firmata
-
-- Once that's loaded into the IDE, confirm it is the correct program by searching for "PULSE_IN".
-
-- You should now be able to Compile and upload this version of Standard Firmata to your Arduino.
-
-If you receive an error about 'PULSE_IN' not being in scope, then find the following line:
-
-```c
-#define REGISTER_NOT_SPECIFIED -1
-```
-
-And below it, add this:
-
-```c
-#define PULSE_IN                0x74 // send a pulse in command
-```
-
-So that it reads:
-
-```c
-#define REGISTER_NOT_SPECIFIED -1
-#define PULSE_IN                0x74 // send a pulse in command
-```
-
-### OR...
-
 Copy and Paste the following into the Arduino IDE and click the Upload button: 
 
 ```c
@@ -170,12 +108,13 @@ Copy and Paste the following into the Arduino IDE and click the Upload button:
   Copyright (C) 2010-2011 Paul Stoffregen.  All rights reserved.
   Copyright (C) 2009 Shigeru Kobayashi.  All rights reserved.
   Copyright (C) 2009-2011 Jeff Hoefs.  All rights reserved.
-  
+  Copyright (C) 2012 Julian Gaultier.  All rights reserved.
+
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
   version 2.1 of the License, or (at your option) any later version.
- 
+
   See file LICENSE.txt for further informations on licensing terms.
 
   formatted using the GNU C formatting and indenting
@@ -201,7 +140,7 @@ Copy and Paste the following into the Arduino IDE and click the Upload button:
 #define MINIMUM_SAMPLING_INTERVAL 10
 
 #define REGISTER_NOT_SPECIFIED -1
-#define PULSE_IN                0x74 // send a pulse in command
+#define PING_READ                0x75 // send a pulse in command
 
 /*==============================================================================
  * GLOBAL VARIABLES
@@ -485,7 +424,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
   byte slaveRegister;
   byte data;
   unsigned int delayTime; 
-  
+
   switch(command) {
   case I2C_REQUEST:
     mode = argv[1] & I2C_READ_WRITE_MODE_MASK;
@@ -551,7 +490,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
             break;
           }
         }
-        
+
         for (byte i = queryIndexToSkip; i<queryIndex + 1; i++) {
           if (i < MAX_QUERIES) {
             query[i].addr = query[i+1].addr;
@@ -576,7 +515,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
     if (!isI2CEnabled) {
       enableI2CPins();
     }
-    
+
     break;
   case SERVO_CONFIG:
     if(argc > 4) {
@@ -664,7 +603,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
     }
     Serial.write(END_SYSEX);
     break;
-  case PULSE_IN:{
+  case PING_READ:{
       byte pulseDurationArray[4] = {
         (argv[2] & 0x7F) | ((argv[3] & 0x7F) << 7)
        ,(argv[4] & 0x7F) | ((argv[5] & 0x7F) << 7)
@@ -708,7 +647,7 @@ void sysexCallback(byte command, byte argc, byte *argv)
       responseArray[2] = (((unsigned long)duration >> 16) & 0xFF) ;
       responseArray[3] = (((unsigned long)duration >> 8) & 0xFF);
       responseArray[4] = (((unsigned long)duration & 0xFF));
-      Firmata.sendSysex(PULSE_IN,5,responseArray);
+      Firmata.sendSysex(PING_READ,5,responseArray);
       break;
     }
   }
@@ -725,9 +664,9 @@ void enableI2CPins()
       setPinModeCallback(i, I2C);
     } 
   }
-   
+
   isI2CEnabled = true; 
-  
+
   // is there enough time before the first I2C request to call this here?
   Wire.begin();
 }
