@@ -68,5 +68,6 @@
 - [Getting Started with Johnny-Five and Xbee](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-Xbee)
 - [Adding Servos to a Pololu Zumo Robot](https://github.com/rwaldron/johnny-five/wiki/Adding-Servos-to-a-Pololu-Zumo-Robot)
 - [Getting Started with Johnny-Five and HC-05 Bluetooth Serial Port Module](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-HC-05-Bluetooth-Serial-Port-Module)
+- [Arduino Micro/Pro Mini troubleshooting](https://github.com/rwaldron/johnny-five/wiki/Arduino-Micro-and-Pro-Mini-Firmata-J5-troubleshooting)
 
 <!--extract-end:guides-->
