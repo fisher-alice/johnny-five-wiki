@@ -11,6 +11,9 @@ This list will continue to be updated as more Joystick devices are confirmed.
   | Property | Type          | Value/Description                         | Default | Required |
   |---------------|---------------|----------|-------------------------------------|---------|
   | pins          | Array of Pins | `["A*", ...]`. Analog pins connected to X and Y |    | yes      |
+  | invert        | Boolean | `true|false`. Invert both axes | `false`   | no      |
+  | invertX        | Boolean | `true|false`. Invert the X axis | `false`   | no      |
+  | invertY        | Boolean | `true|false`. Invert the Y axis | `false`   | no      |
 
 ## Shape
 
@@ -39,6 +42,60 @@ new five.Joystick({
 ![Adafruit Joystick](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/joystick-adafruit.png)
 
 ![SparkFun Joystick](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/joystick-sparkfun.png)
+
+#### Axis Inversion
+
+```js
+var joy = new Joystick({ pins: ["A0", "A1"], invertY: true });
+```
+
+Produces the following default axes:
+
+```
+    -1
+-1   *   1
+     1      
+```
+
+
+```js
+var joy = new Joystick({ pins: ["A0", "A1"], invertY: true });
+```
+
+Produces an inverted Y axis, with a default X axis: 
+
+```
+     1
+-1   *   1
+    -1      
+```
+
+```js
+var joy = new Joystick({ pins: ["A0", "A1"], invertX: true });
+```
+
+Produces an inverted X axis, with a default Y axis: 
+
+```
+   -1
+1   *   -1
+    1      
+```
+
+```js
+var joy = new Joystick({ pins: ["A0", "A1"], invert: true });
+```
+
+Produces an both inverted X and Y axes: 
+
+```
+    1
+1   *   -1
+   -1      
+```
+
+
+
 ## API
 
 There are no special API functions for this class.
