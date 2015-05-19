@@ -20,7 +20,6 @@ This list will continue to be updated as more Joystick devices are confirmed.
 ```
 { 
   id: A user definable id value. Defaults to a generated uid
-  pins: The pins defined for X and Y.
   x: -1, 1. READONLY
   y: -1, 1. READONLY
 }
@@ -104,7 +103,7 @@ Produces an inverted X axis, with a default Y axis:
 
 ```
    -1
-1   *   -1
+1   *  -1
     1      
 ```
 
@@ -118,7 +117,7 @@ Produces an both inverted X and Y axes:
 
 ```
     1
-1   *   -1
+1   *  -1
    -1      
 ```
 
@@ -129,8 +128,6 @@ Produces an both inverted X and Y axes:
 There are no special API functions for this class.
 
 ## Events
-
-- **axismove** Is an alias for "change".
 
 - **change** The "change" event is emitted whenever the value of the gyro changes more then the threshold value allows.
 
