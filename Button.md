@@ -43,7 +43,7 @@ The `Button` class constructs objects that represents a single Button attached t
 #### Basic
 
 ```js
-new five.Button(8);
+new five.Button(2);
 ```
 ![button breadboard](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/button.png)
 
@@ -51,7 +51,7 @@ new five.Button(8);
 
 ```js
 new five.Button({
-  pin: 8, 
+  pin: 2, 
   invert: true
 });
 ```
@@ -65,7 +65,7 @@ var board = new five.Board();
 board.on("ready", function() {
 
   // Create a new `button` hardware instance.
-  var button = new five.Button(8);
+  var button = new five.Button(2);
 
   button.on("hold", function() {
     console.log( "Button held" );
