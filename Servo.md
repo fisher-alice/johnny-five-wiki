@@ -357,7 +357,7 @@ board.on("ready", function() {
 
 It's recommended to use a rotary potentiometer as the mechanism for determining servo movement.
 
-- **move:complete** this is emitted when a timed move is completed.
+- **move:complete** This is emitted when a timed move is completed. The event won't fire unless a time argument has been passed to the ```servo.to()``` method.
 
 
 ## Additional Information
