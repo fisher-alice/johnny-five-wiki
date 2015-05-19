@@ -11,9 +11,9 @@ This list will continue to be updated as more Joystick devices are confirmed.
   | Property | Type          | Value/Description                         | Default | Required |
   |---------------|---------------|----------|-------------------------------------|---------|
   | pins          | Array of Pins | `["A*", ...]`. Analog pins connected to X and Y |    | yes      |
-  | invert        | Boolean | `true|false`. Invert both axes | `false`   | no      |
-  | invertX        | Boolean | `true|false`. Invert the X axis | `false`   | no      |
-  | invertY        | Boolean | `true|false`. Invert the Y axis | `false`   | no      |
+  | invert        | Boolean | `true, false`. Invert both axes | `false`   | no      |
+  | invertX        | Boolean | `true, false`. Invert the X axis | `false`   | no      |
+  | invertY        | Boolean | `true, false`. Invert the Y axis | `false`   | no      |
 
 ## Shape
 
