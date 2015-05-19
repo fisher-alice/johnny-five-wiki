@@ -43,7 +43,30 @@ new five.Joystick({
 
 ![SparkFun Joystick](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/joystick-sparkfun.png)
 
+
+#### Sparkfun Shield 
+
+```js
+new five.Joystick({
+  pins: ["A0", "A1"], 
+  invertY: true
+});
+```
+
+![SparkFun JoyStick Shield](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/joystick-shield.png)
+
+#### Esplora
+
+```js
+new five.Joystick({
+  controller: "ESPLORA"
+});
+```
+![Esplora](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/esplora.png)
+
 #### Axis Inversion
+
+##### Default 
 
 ```js
 var joy = new Joystick({ pins: ["A0", "A1"], invertY: true });
@@ -57,6 +80,7 @@ Produces the following default axes:
      1      
 ```
 
+##### Invert Y 
 
 ```js
 var joy = new Joystick({ pins: ["A0", "A1"], invertY: true });
@@ -70,6 +94,8 @@ Produces an inverted Y axis, with a default X axis:
     -1      
 ```
 
+##### Invert X
+
 ```js
 var joy = new Joystick({ pins: ["A0", "A1"], invertX: true });
 ```
@@ -81,6 +107,8 @@ Produces an inverted X axis, with a default Y axis:
 1   *   -1
     1      
 ```
+
+##### Invert Both
 
 ```js
 var joy = new Joystick({ pins: ["A0", "A1"], invert: true });
