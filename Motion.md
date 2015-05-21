@@ -7,7 +7,9 @@ Supported Motion sensors:
 - [Generic Passive Infra-Red, HC-SR501](http://www.amazon.com/HC-SR501-Sensor-Module-Pyroelectric-Infrared/dp/B007XQRKD4)
 - [OSEPP IR Proximity Sensor](http://osepp.com/products/sensors-arduino-compatible/osepp-ir-proximity-sensor-module/)
   - Note: despite its name, this **is not** a proximity sensor that outputs a measured distance to an obstruction.
-
+- Sharp IR Motion Detection
+  - [GP2Y0D810Z0F](https://www.pololu.com/product/1134)
+  - [GP2Y0D815Z0F](https://www.pololu.com/product/1133)
 
 ## Parameters
 
@@ -18,7 +20,7 @@ Supported Motion sensors:
   | Property | Type  | Value/Description | Default | Required |
   |----------|-------|-------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
-  | controller | String | PIR, HCSR501, GP2Y0D805Z0F. See aliases | `PIR` | No |
+  | controller | String | PIR, HCSR501, GP2Y0D805Z0F, GP2Y0D810Z0F, GP2Y0D815Z0F. See aliases | `PIR` | No |
 
   ##### Controller Alias Table
 
@@ -28,6 +30,10 @@ Supported Motion sensors:
   | HCSR501 | PIR |
   | GP2Y0D805Z0F | 0D805 |
   | GP2Y0D805Z0F | 805 |
+  | GP2Y0D810Z0F | 0D810 |
+  | GP2Y0D810Z0F | 810 |
+  | GP2Y0D815Z0F | 0D815 |
+  | GP2Y0D815Z0F | 815 |
 
 
 ## Shape
@@ -73,6 +79,21 @@ var motion = new five.Motion({
 ![Motion](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/motion-gp2y0d805z0f.png)
 
 
+#### GP2Y0D810Z0F and GP2Y0D815Z0F
+
+```js
+var motion = new five.Motion({
+  controller: "GP2Y0D810Z0F", 
+  pin: "A0"
+});
+
+var motion = new five.Motion({
+  controller: "GP2Y0D815Z0F", 
+  pin: "A0"
+});
+```
+
+![Motion](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/GP2Y0D810Z0F.png)
 
 
 ## Usage
