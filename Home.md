@@ -27,8 +27,6 @@
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
-- [IR.Motion](https://github.com/rwaldron/johnny-five/wiki/IR.Motion)
-- [IR.Proximity](https://github.com/rwaldron/johnny-five/wiki/IR.Proximity)
 - [IR.Reflectance](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
 - [Joystick](https://github.com/rwaldron/johnny-five/wiki/Joystick)
 - [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
