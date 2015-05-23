@@ -4,9 +4,9 @@ The `Led` class constructs objects that represent a single Led attached to the p
 
 See also: 
 
-- [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
-- [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
-- [Led.RGB](https://github.com/rwaldron/johnny-five/wiki/Led.RGB)
+- [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/led.digits)
+- [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/led.matrix)
+- [Led.RGB](https://github.com/rwaldron/johnny-five/wiki/led.rgb)
 
 
 ## Parameters
