@@ -57,19 +57,19 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 // With Options object & pins object
 new five.Led.RGB({
   pins: {
-    red: 9,
-    green: 10,
-    blue: 11
+    red: 6,
+    green: 5,
+    blue: 3
   }
 });
 
 // With Options object & pins array
 new five.Led.RGB({
-  pins: [9, 10, 11]
+  pins: [6, 5, 3]
 });
 
 // With pins array
-new five.Led.RGB([9, 10, 11]);
+new five.Led.RGB([6, 5, 3]);
 ```
 
 ![led rgb](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb.png)
@@ -81,16 +81,16 @@ new five.Led.RGB([9, 10, 11]);
 // With Options object & pins object
 new five.Led.RGB({
   pins: {
-    red: 9,
-    green: 10,
-    blue: 11
+    red: 6,
+    green: 5,
+    blue: 3
   },
   isAnode: true
 });
 
 // With Options object & pins array
 new five.Led.RGB({
-  pins: [9, 10, 11],
+  pins: [6, 5, 3],
   isAnode: true
 });
 ```
