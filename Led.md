@@ -30,7 +30,6 @@ For Leds that only have on/off states, use a digital pin:
   | Property | Type    | Value/Description                                                                                     | Default | Required |
   |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
   | pin           | Number  | Digital Pin. The Number address of the pin the led is attached to                                            |  | yes      |
-  | type          | String  | "OUTPUT", "PWM". For most cases, this can be omitted; the type will be inferred based on the pin address number. | Detected       | no       |
   | controller    | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"`                                      | no       |
 
 - **PCA9685 Options (controller: "PCA9685")** An object of property parameters.
