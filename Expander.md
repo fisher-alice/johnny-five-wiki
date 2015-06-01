@@ -297,34 +297,34 @@ While the API of an `Expander` instance will be the same as a `Board` instance, 
   expander.normalize(1); // 1;
   ```
 
-- **pinMode(pin, mode)** Set the mode of a pin. Must correspond to a mode listed in the `MODES` property.
+- **pinMode(pin, mode)** Set the mode of a pin. Must correspond to a mode listed in the `MODES` property. [Expander Capabilities](#expander-capabilities)
   ```js
   expander.pinMode(0, expander.MODES.INPUT);
   ```
 
-- **analogRead(pin, handler)** Read an `ANALOG` pin. [Expander Capabilities](#Expander-Capabilities)
+- **analogRead(pin, handler)** Read an `ANALOG` pin. [Expander Capabilities](#expander-capabilities)
   ```js
   expander.analogRead(0, function(value) { ... });
   ```
 
-- **digitalRead(pin, handler)** Read an `INPUT` pin. [Expander Capabilities](#Expander-Capabilities)
+- **digitalRead(pin, handler)** Read an `INPUT` pin. [Expander Capabilities](#expander-capabilities)
   ```js
   expander.digitalRead(0, function(value) { ... });
   ```
 
 - **analogWrite(pin, 0-255)** An alias to `pwmWrite`, for backward compat only. Use `pwmWrite` instead.
 
-- **digitalWrite(pin, HIGH | LOW)** Write a `HIGH` or `LOW` value to an `OUTPUT` pin. [Expander Capabilities](#Expander-Capabilities)
+- **digitalWrite(pin, HIGH | LOW)** Write a `HIGH` or `LOW` value to an `OUTPUT` pin. [Expander Capabilities](#expander-capabilities)
   ```js
   expander.digitalWrite(0, 1);
   ```
 
-- **pwmWrite(pin, 0-255)** Write an 8-bit PWM value to a `PWM` pin. [Expander Capabilities](#Expander-Capabilities)
+- **pwmWrite(pin, 0-255)** Write an 8-bit PWM value to a `PWM` pin. [Expander Capabilities](#expander-capabilities)
   ```js
   expander.pwmWrite(0, 255);
   ```
 
-- **servoWrite(pin, 0-180)** Write a 0-180° value to a `SERVO` pin. [Expander Capabilities](#Expander-Capabilities)
+- **servoWrite(pin, 0-180)** Write a 0-180° value to a `SERVO` pin. [Expander Capabilities](#expander-capabilities)
   ```js
   expander.servoWrite(0, 180);
   ```
