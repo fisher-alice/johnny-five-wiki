@@ -39,6 +39,12 @@ This list will continue to be updated as more component support is implemented.
   new five.Expander({
     controller: "MCP23017"
   });
+
+  // or
+
+  new five.Expander({
+    controller: "MCP23017"
+  });
   ```
 
   ##### Expander Capabilities 
