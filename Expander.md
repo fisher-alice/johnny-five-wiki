@@ -224,7 +224,7 @@ new five.Expander({
 
 
 
-#### Expander: Digital or PWM Output
+#### Example: Digital or PWM Output
 
 ```js
 var five = require("johnny-five");
@@ -251,7 +251,7 @@ board.on("ready", function() {
 ![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-PCA9685.png)
 
 
-#### Expander: Digital Input & Output
+#### Example: Digital Input & Output
 
 ```js
 var five = require("johnny-five");
