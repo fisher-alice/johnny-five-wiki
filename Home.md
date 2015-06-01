@@ -25,6 +25,7 @@
   - ([Button-pt_BR][])
 - [Compass](https://github.com/rwaldron/johnny-five/wiki/Compass)
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
+- [Expander](https://github.com/rwaldron/johnny-five/wiki/Expander)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
 - [IR.Reflectance](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
