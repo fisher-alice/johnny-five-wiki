@@ -335,3 +335,5 @@ While the API of an `Expander` instance will be the same as a `Board` instance, 
 - **digital-read-#** Whenever `digitalRead(pin, ...)` is called, an event handler with naming form of `digital-read-#` (where # is the pin number) is registered.
 
 - **analog-read-#** Whenever `analogRead(pin, ...)` is called, an event handler with naming form of `analog-read-#` (where # is the pin number) is registered.
+
+- **ready** For compatibility with IO Plugins only. This event is meaningless, so don't use it. 
