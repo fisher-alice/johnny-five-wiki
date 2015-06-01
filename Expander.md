@@ -23,6 +23,7 @@ This list will continue to be updated as more component support is implemented.
   - `PCF8575`
   - `PCA9685`
 
+
   ```js
   new five.Expander("MCP23017");
   ```
@@ -32,7 +33,7 @@ This list will continue to be updated as more component support is implemented.
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575. The Name of the controller to use |  | Yes       |
-  | address       | Number  | Address for I2C device. | By Device \* | no       |
+  | address       | Number  | Address for I2C device. | [By Device]() | no       |
 
   ```js
   new five.Expander({
