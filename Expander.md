@@ -245,6 +245,8 @@ board.on("ready", function() {
   });
 
   led.on();
+  // or
+  // led.pulse();
 });
 ```
 
