@@ -43,7 +43,8 @@ This list will continue to be updated as more component support is implemented.
   // or
 
   new five.Expander({
-    controller: "MCP23017"
+    controller: "MCP23017", 
+    address: 0x??
   });
   ```
 
