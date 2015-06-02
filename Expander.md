@@ -9,6 +9,7 @@ Supported Expanders:
 - [PCF8574A](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
 - [PCF8575](https://www.sparkfun.com/products/8130)
 - [PCA9685](https://www.adafruit.com/products/815)
+- [PCF8591](http://www.amazon.com/PCF8591-Converter-Module-Digital-Conversion/dp/B00BXX4UWC)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -21,6 +22,7 @@ This list will continue to be updated as more component support is implemented.
   - `PCF8574`
   - `PCF8574A`
   - `PCF8575`
+  - `PCF8591`
   - `PCA9685`
 
 
@@ -32,7 +34,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575. The Name of the controller to use |  | Yes       |
+  | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685. The Name of the controller to use |  | Yes       |
   | address       | Number  | Address for I2C device. | [By Device](#default-addresses) | no       |
 
   ```js
@@ -57,6 +59,7 @@ This list will continue to be updated as more component support is implemented.
   | PCF8574 | 8 | `INPUT`, `OUTPUT` |
   | PCF8574A | 8 | `INPUT`, `OUTPUT` |
   | PCF8575 | 16 | `INPUT`, `OUTPUT` |
+  | PCF8591 | 4 | `ANALOG` |
   | PCA9685 | 16 | `OUTPUT`, `PWM`, `SERVO` |  
 
   ##### Default Addresses
@@ -68,6 +71,7 @@ This list will continue to be updated as more component support is implemented.
   | PCF8574 | `0x20-0x27` | `0x20` |
   | PCF8574A | `0x38-0x3F` | `0x38` |
   | PCF8575 | `0x20-0x27` | `0x20` |
+  | PCF8591 | `0x48-0x4F` | `0x48` |  
   | PCA9685 | `0x40-0x4F` | `0x40` |  
  
 
@@ -103,7 +107,7 @@ new five.Expander({
 // or 
 
 new five.Expander({
-  controller: "PCA9685",
+  controller: "MCP23017",
   address: 0x??
 });
 ```
@@ -130,7 +134,7 @@ new five.Expander({
 // or 
 
 new five.Expander({
-  controller: "PCA9685",
+  controller: "MCP23008",
   address: 0x??
 });
 ```
@@ -156,7 +160,7 @@ new five.Expander({
 // or 
 
 new five.Expander({
-  controller: "PCA9685",
+  controller: "PCF8574",
   address: 0x??
 });
 ```
@@ -183,7 +187,7 @@ new five.Expander({
 // or 
 
 new five.Expander({
-  controller: "PCA9685",
+  controller: "PCF8575",
   address: 0x??
 });
 ```
@@ -217,6 +221,33 @@ new five.Expander({
 
 ![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-PCA9685.png)
 
+
+
+#### PCF8591
+```js
+// Create a PCF8591 Expander object:
+//
+//  - attach SDA and SCL to the I2C pins on 
+//     your board (A4 and A5 for the Uno)
+//  - specify the PCF8591 controller
+
+new five.Expander("PCF8591");
+
+// or 
+
+new five.Expander({
+  controller: "PCF8591"
+});
+
+// or 
+
+new five.Expander({
+  controller: "PCF8591",
+  address: 0x??
+});
+```
+
+![PCF8591](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-PCF8591.png)
 
 ## Usage
 
