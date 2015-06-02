@@ -247,7 +247,7 @@ new five.Expander({
 });
 ```
 
-![PCF8591](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-PCF8591.png)
+![PCF8591](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/expander-PCF8591.png)
 
 ## Usage
 
