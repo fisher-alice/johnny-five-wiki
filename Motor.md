@@ -184,7 +184,7 @@ board.on("ready", function() {
 
   var motor = new five.Motor(5);
 
-  // Start the motor at maximum speed, wait 2 seconds and stop.
+  // Start the motor at maximum speed
   motor.start(255);
 
 });
