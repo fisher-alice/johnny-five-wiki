@@ -8,6 +8,11 @@ Johnny-Five currently supports several kinds of Temperatures:
 - [DS18B20](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) (requires [ConfigurableFirmata](https://github.com/firmata/arduino/tree/configurable))
 - [MPU6050](http://www.invensense.com/mems/gyro/mpu6050.html) IMU
 - [Grove Temperature](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)
+- BMP180
+  - [Adafruit](https://www.adafruit.com/products/1603)
+  - [SparkFun](https://www.sparkfun.com/products/11824)
+- MPL115A2
+  - [Adafruit](https://www.adafruit.com/products/992)
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -17,7 +22,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property | Type          | Value/Description                                             | Default | Required                                                               |
   |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
-  | controller    | string        | “ANALOG”, “LM35”, “TMP36”, “DS18B20”, “MPU6050”, “GROVE”. The Name of the controller to use. | “ANALOG” | no                                                                     |
+  | controller    | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2. The Name of the controller to use. | “ANALOG” | no                                                                     |
   | pin           | string or int | Analog Pin. Use with analog sensor. | | Yes<sup>1</sup> |
   | toCelsius     | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override    |                 | no                                                                     |
   | freq          | Number        | Milliseconds. The rate in milliseconds to emit the data event         | 25ms | no                                                                     |
@@ -99,6 +104,23 @@ new five.Temperature({
 
 ![MPU6050](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-mpu6050.png)
 
+#### MPL115A2
+```js
+new five.Temperature({
+  controller: "MPL115A2"
+});
+```
+
+![MPL115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
+
+#### BMP180
+```js
+new five.Temperature({
+  controller: "BMP180"
+});
+```
+
+![BMP180](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
 ## Usage
 ```js
 var five = require("johnny-five");
