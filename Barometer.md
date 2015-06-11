@@ -2,8 +2,12 @@ The `Barometer` class constructs objects that represent a single Barometer senso
 
 Supported Barometers:
 
-- MPL115A2 (I2C)
-- BMP180 (I2C)
+- BMP180
+  - [Adafruit](https://www.adafruit.com/products/1603)
+  - [SparkFun](https://www.sparkfun.com/products/11824)
+- MPL115A2
+  - [Adafruit](https://www.adafruit.com/products/992)
+
 
 This list will continue to be updated as more component support is implemented.
 
@@ -47,16 +51,16 @@ new five.Barometer({
 });
 ```
 
-![BMP180](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
+![MPL115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
 
-#### ADXL345
+#### BMP180
 ```js
 new five.Barometer({
   controller: "BMP180"
 });
 ```
 
-![ADXL345](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
+![BMP180](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
 
 
 ## Usage
