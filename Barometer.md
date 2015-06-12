@@ -30,7 +30,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type             | Value/Description     | Default | Required |
   |---------------|-------|------------|--------------------------------------------|---------|
-  | mode | number | 0-3. Oversampling ration mode. | 3 | No |
+  | mode | number | 0-3. Oversampling ratio mode. | 3 | No |
 
 ## Shape
 
