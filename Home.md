@@ -18,6 +18,7 @@
 
 - [Accelerometer](https://github.com/rwaldron/johnny-five/wiki/Accelerometer)
 - [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
+- [Barometer](https://github.com/rwaldron/johnny-five/wiki/Barometer)
 - [Board](https://github.com/rwaldron/johnny-five/wiki/Board) 
   - ([pt_BR][])
 - [Boards](https://github.com/rwaldron/johnny-five/wiki/Boards) 
