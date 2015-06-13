@@ -6,7 +6,7 @@ Johnny-Five currently supports several kinds of Temperatures:
 - [LM35](http://www.ti.com/product/lm35)
 - [TMP36](http://www.analog.com/en/mems-sensors/digital-temperature-sensors/tmp36/products/product.html)
 - [DS18B20](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) (requires [ConfigurableFirmata](https://github.com/firmata/arduino/tree/configurable))
-- [MPU6050](http://www.invensense.com/mems/gyro/mpu6050.html) IMU
+- [MPU6050](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/) IMU
 - [Grove Temperature](http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html)
 - BMP180
   - [Adafruit](https://www.adafruit.com/products/1603)
