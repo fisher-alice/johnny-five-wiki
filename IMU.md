@@ -2,7 +2,7 @@ The `IMU` class constructs objects that represent a single IMU module attached t
 
 Johnny-Five currently supports one kind of IMU:
 
-- [MPU-6050](http://www.invensense.com/mems/gyro/mpu6050.html)
+- [MPU-6050](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
 
 This list will continue to be updated as more devices are confirmed.
 
