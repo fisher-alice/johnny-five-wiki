@@ -172,7 +172,7 @@ board.on("ready", function() {
   led.fade(128, 2000);
   ```
 
-- **fade(animation options)** Control the fading of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/Animation#segment-properties).
+- **fade(animation options)** Control the fading of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/animation#segment-properties).
 
   ```js
   var led = new five.Led(11);
