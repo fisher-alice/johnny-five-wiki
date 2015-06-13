@@ -491,7 +491,7 @@ This is by no means exhaustive
       <td>Yes</td>
     </tr>    
     <tr>
-      <td><a href="http://www.ruggedcircuits.com/motor-control/basic-motor-driver">Rugged Circuits Basic Motor Driver</a></td>
+      <td>Rugged Circuits Basic Motor Driver</td>
       <td>pwm:3<br/>dir:12</td>
       <td>pwm:11<br/>dir:13</td>
       <td>RUGGED_CIRCUITS {A, B}</td>
