@@ -11,7 +11,7 @@ The `Sonar` class constructs objects that represent a single analog or I2C Sonar
 
 This list will continue to be updated as more Sonar devices are confirmed.
 
-**NOTE:** The `Sonar` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
+**NOTE:** The `Sonar` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/proximity) class.
 
 ## Parameters
 
