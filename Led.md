@@ -217,7 +217,7 @@ board.on("ready", function() {
   led.pulse(500);
   ```
 
-- **pulse(animation options)** Control the pulse of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/Animation#segment-properties).  
+- **pulse(animation options)** Control the pulse of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/animation#segment-properties).  
 
   ```js
   var led = new five.Led(11);
