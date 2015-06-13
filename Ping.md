@@ -1,6 +1,6 @@
 The 'Ping' class constructs an object that represents a single sonar ping sensor.
 
-# The `Ping` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
+# The `Ping` class is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/proximity) class.
 
 
 
