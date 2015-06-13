@@ -4,7 +4,7 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 
 
-**It is absolutely REQUIRED to flash your board with a special version of StandardFirmata. Instructions are [here](https://github.com/rwaldron/johnny-five/wiki/Ping#setup)**
+**It is absolutely REQUIRED to flash your board with a special version of StandardFirmata. Instructions are [here](https://github.com/rwaldron/johnny-five/wiki/ping#setup)**
 
 ## Parameters
 
