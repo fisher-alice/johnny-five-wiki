@@ -27,8 +27,11 @@ This list will continue to be updated as more component support is implemented.
   - `PCA9685`
 
   ```js
+  // Examples: 
   new five.Expander("MCP23017");
+
   new five.Expander("PCF8574");
+
   new five.Expander("PCF8575");
   ```
 
