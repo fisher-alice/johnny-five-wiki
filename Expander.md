@@ -28,6 +28,8 @@ This list will continue to be updated as more component support is implemented.
 
   ```js
   new five.Expander("MCP23017");
+  new five.Expander("PCF8574");
+  new five.Expander("PCF8575");
   ```
 
 - **General Options**
