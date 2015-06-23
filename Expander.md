@@ -16,6 +16,7 @@ This list will continue to be updated as more component support is implemented.
 ## Parameters
 
 - **Controller String**
+  When using _just_ the controller name as an argument, the default I2C bus address will be used.
 
   - `MCP23017`
   - `MCP23008`
@@ -24,7 +25,6 @@ This list will continue to be updated as more component support is implemented.
   - `PCF8575`
   - `PCF8591`
   - `PCA9685`
-
 
   ```js
   new five.Expander("MCP23017");
