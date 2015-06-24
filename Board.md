@@ -368,7 +368,7 @@ Mode constants are exposed via the `Pin` class
 
   board.on("ready", function() {
     // Assuming an Led is attached to pin 13
-    this.pinMode(13, five.Pin.OUTPUT);
+    this.pinMode(13, this.MODES.OUTPUT);
 
     // Turn it on...
     this.digitalWrite(13, 1);
@@ -386,14 +386,12 @@ Mode constants are exposed via the `Pin` class
   var board = new five.Board();
 
   board.on("ready", function() {
-    var byte;
+    var state = 0;
 
-    // Assuming an Led is attached to pin 13
-    this.pinMode(13, five.Pin.OUTPUT);
+    this.pinMode(13, this.MODES.OUTPUT);
 
-    // Homemade blink
     this.loop(500, function() {
-      this.digitalWrite(13, (byte ^= 0x01));
+      this.digitalWrite(13, (state ^= 1));
     });
   });
   ```
