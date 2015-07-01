@@ -4,7 +4,7 @@ The `Proximity` class constructs an object that represents a single Proximity se
 Supported Proximity sensors: 
 
 - Pulse/PWM
-  - Ultrasonic (All use `controller: "HCSR04"`, require [PingFirmata](#PingFirmata))
+  - Ultrasonic (All use `controller: "HCSR04"`, require [PingFirmata](#pingfirmata))
     - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
     - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
     - [Parallax Ping](https://www.parallax.com/product/28015) \*
