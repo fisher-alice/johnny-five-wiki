@@ -4,7 +4,7 @@ The `Proximity` class constructs an object that represents a single Proximity se
 Supported Proximity sensors: 
 
 - Pulse/PWM
-  - Ultrasonic (All use `controller: "HCSR04"`, require [PingFirmata](#pingfirmata))
+  - Ultrasonic (All use `controller: "HCSR04"`, Arduino boards require [PingFirmata](#pingfirmata))
     - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
     - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
     - [Parallax Ping](https://www.parallax.com/product/28015) \*
@@ -179,7 +179,7 @@ new five.Proximity({
 
 ![Ping](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/ping.png)
 
-> \* It is absolutely REQUIRED to flash your board with a special version of StandardFirmata (PingFirmata). Instructions are [here](#PingFirmata)
+> \* For Arduino boards, it is absolutely REQUIRED to flash your board with a special version of StandardFirmata (PingFirmata). Instructions are [here](#pingfirmata)
 
 
 ##### MB1000 LV-MaxSonar-EZ0
@@ -264,6 +264,8 @@ board.on("ready", function() {
 
 
 ## PingFirmata 
+
+**DOES NOT APPLY TO NON-ARDUINO PLATFORMS**
 
 For use with: 
 
