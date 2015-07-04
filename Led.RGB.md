@@ -104,16 +104,16 @@ new five.Led.RGB({
 new five.Led.RGB({
   controller: "PCA9685",
   pins: {
-    red: 0,
+    red: 2,
     green: 1,
-    blue: 2
+    blue: 0
   }
 });
 
 // With Options object & pins array
 new five.Led.RGB({
   controller: "PCA9685",
-  pins: [0, 1, 2]
+  pins: [2, 1, 0]
 });
 
 ```
