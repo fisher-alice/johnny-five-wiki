@@ -2,7 +2,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
 ## Parameters
 
-- **pins** An Array containing the pins **red**, **green** and **blue**.
+- **pins** An Array containing the pins **red**, **green** and **blue**. All pins must support PWM.
 
   | Index | Type   | Value/Description              | Default | Required |
   |-------|--------|--------------------------------|---------|----------|
@@ -174,6 +174,20 @@ board.on("ready", function() {
   // {red: 255, blue: 0, green: 255}
   ```
 
+- **intensity(value)** Sets the overall intensity or "brightness" of the Led. Maintains current color state. If no value is supplied, it returns the current intensity value.
+  ```js
+  var led = new five.Led.RGB([9, 10, 11]);
+  
+  // Set the initial color (red)
+  led.color("#ff0000");
+  
+  ...Sometime later...
+  
+  // Stays red, but at 30% intensity
+  led.intensity(30);
+
+  ```
+
 - **toggle()** Toggle the current state, if on then turn off, if off then turn on.
   ```js
   var led = new five.Led.RGB([9, 10, 11]);
@@ -189,7 +203,7 @@ board.on("ready", function() {
   led.strobe(500);
   ```
 
-- **stop(ms)** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`. This operation will only work with Leds attached to PWM pins.
+- **stop(ms)** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`.
   ```js
   var led = new five.Led.RGB([9, 10, 11]);
   
@@ -201,7 +215,6 @@ board.on("ready", function() {
   led.stop();
 
   ```
-
 
 ## Events
 Led objects are output only and therefore do not emit any events.
