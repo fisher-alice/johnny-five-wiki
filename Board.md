@@ -131,6 +131,29 @@ board.on("ready", function() {
 
 ## API
 
+
+
+- **info(class, message [, ...detail])** Displays an _info_ message in the console (when `debug: true`, which is the default) and emits an event of the same name, as well as a generic _message_ event. `class` is the class that triggered the message, or that is being reported for; `message` is any relevant message. This argument accept an arbitrary number of _detail_ arguments. If the last _detail_ argument is an object or array, it will be passed along as the value of a `data` property of the event object.
+  ```js
+  board.info("Board", "I got somethin' to say!", { foo: 1 });
+
+  board.info("Servo", "This pin doesn't have hardware PWM support, but will function correctly with software Servo support.");
+  ```
+
+- **warn(class, message [, ...detail])** Displays a _warn_ message in the console (when `debug: true`, which is the default) and emits an event of the same name, as well as a generic _message_ event. `class` is the class that triggered the message, or that is being reported for; `message` is any relevant message. This argument accept an arbitrary number of _detail_ arguments. If the last _detail_ argument is an object or array, it will be passed along as the value of a `data` property of the event object.
+  ```js
+  board.warn("Board", "Watch out!", { bar: 2 });
+  ```
+
+- **fail(class, message [, ...detail])** Displays a _fail_ message in the console (when `debug: true`, which is the default) and emits an event of the same name, as well as a generic _message_ event. `class` is the class that triggered the message, or that is being reported for; `message` is any relevant message. This argument accept an arbitrary number of _detail_ arguments. If the last _detail_ argument is an object or array, it will be passed along as the value of a `data` property of the event object.
+  ```js
+  board.fail("Led", "This pin is already in use!", { baz: NaN });
+
+  board.fail("Board", "This program attempted to do something that isn't possible");  
+  ```
+
+
+
 - **repl** This is a reference to the active REPL automatically created by the `Board` class. This object has an `inject` method that may be called as many times as desired: 
   - **repl.inject(object)** Inject objects or values, from the program, into the REPL session.
 
@@ -401,6 +424,66 @@ Mode constants are exposed via the `Pin` class
 - **connect** This event will emit once the program has "connected" to the board. This may be immediate, or after some amount of time, but is always asynchronous. For on-board execution, `connect` should emit as soon as possible, but asynchronously.
 
 - **ready** This event will emit _after_ the **connect** event and only when the `Board` instance object has completed any hardware initialization that must take place before the program can operate. This process is asynchronous, and completion is signified to the program via a "ready" event. For on-board execution, `ready` should emit after `connect`. 
+
+- **info** This event will emit for `board.info(class, message [, ...])`
+  ```js
+  board.on("info", function(event) {
+    /*
+      Event {
+        type: "info"|"warn"|"fail",
+        timestamp: Time of event in milliseconds,
+        class: name of relevant component class,
+        message: message [+ ...detail]
+      }
+    */
+    console.log("%s sent an 'info' message: %s", event.class, event.message);
+  });
+  ```
+  
+- **warn** This event will emit for `board.warn(class, message [, ...])`
+  ```js
+  board.on("warn", function(event) {
+    /*
+      Event {
+        type: "info"|"warn"|"fail",
+        timestamp: Time of event in milliseconds,
+        class: name of relevant component class,
+        message: message [+ ...detail]
+      }
+    */
+    console.log("%s sent a 'warn' message: %s", event.class, event.message);
+  });
+  ```
+
+- **fail** This event will emit for `board.fail(class, message [, ...])`
+  ```js
+  board.on("fail", function(event) {
+    /*
+      Event {
+        type: "info"|"warn"|"fail",
+        timestamp: Time of event in milliseconds,
+        class: name of relevant component class,
+        message: message [+ ...detail]
+      }
+    */
+    console.log("%s sent a 'fail' message: %s", event.class, event.message);
+  });
+  ```
+
+- **message** This event will emit for any logging message: `info`, `warn` or `fail`.
+  ```js
+  board.on("message", function(event) {
+    /*
+      Event {
+        type: "info"|"warn"|"fail",
+        timestamp: Time of event in milliseconds,
+        class: name of relevant component class,
+        message: message [+ ...detail]
+      }
+    */
+    console.log("Received a %s message, from %s, reporting: %s", event.type, event.class, event.message);
+  });
+  ```
 
 <!--remove-start-->
 
