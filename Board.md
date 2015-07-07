@@ -132,6 +132,7 @@ board.on("ready", function() {
 ## API
 
 
+### Logging 
 
 - **info(class, message [, ...detail])** Displays an _info_ message in the console (when `debug: true`, which is the default) and emits an event of the same name, as well as a generic _message_ event. `class` is the class that triggered the message, or that is being reported for; `message` is any relevant message. This argument accept an arbitrary number of _detail_ arguments. If the last _detail_ argument is an object or array, it will be passed along as the value of a `data` property of the event object.
   ```js
@@ -152,6 +153,7 @@ board.on("ready", function() {
   board.fail("Board", "This program attempted to do something that isn't possible");  
   ```
 
+See [Events](#events) for specific log event details. 
 
 
 - **repl** This is a reference to the active REPL automatically created by the `Board` class. This object has an `inject` method that may be called as many times as desired: 
