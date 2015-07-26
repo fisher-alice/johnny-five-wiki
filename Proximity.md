@@ -15,6 +15,7 @@ Supported Proximity sensors:
           - Close: 0-2cm (will result in 2cm reading)
           - Long: 2–400cm
         - Resolution: ~0.3cm
+    - [RadioShack 2760342](http://comingsoon.radioshack.com/radioshack-ultrasonic-range-sensor/2760342.html)
 - Analog
   - Ultrasonic
     - [MB1000, LV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1000.htm)
