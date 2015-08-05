@@ -46,7 +46,6 @@ FORWARD_REVERSE
 #### Basic 
 
 ```js
-// Limited speed range to 0-80%
 new five.ESC(9);
 ```
 
