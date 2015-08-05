@@ -17,8 +17,11 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | pin      | Number, String | Any PWM Pin. The address of the PWM pin the ESC is attached to || yes      |
   | range    | Array          | `[ lower, upper ]`. The range of speed in percent. | `[0, 100]`                                | no       |
   | startAt  | Number         | Initial speed, 0-100% | `0` | no       |
-  | controller    | String  | `"DEFAULT"`, `"PCA9685"`. Controller interface type. | "DEFAULT"                                           | no       |
+  | controller    | String  | DEFAULT, PCA9685. Controller interface type. | "DEFAULT"                                           | no       |
+  | device    | String  | FORWARD, FORWARD_REVERSE. Device capability type. | "FORWARD"                                           | no       |
+  | neutral    | Number  | Neutral point, 0-100. | 0 | no       |
 
+FORWARD_REVERSE
 - **PCA9685 Options (`controller: "PCA9685"`)** 
 
   | Property | Type                            | Value/Description                              | Default | Required |
