@@ -43,16 +43,21 @@ FORWARD_REVERSE
 ## Component Initialization
 
 
-#### Basic
+#### Basic 
 
 ```js
-// Create an esc...
-// 
-//   - attached to pin 12
-//   - limited speed range to 0-80%
-//
+// Limited speed range to 0-80%
+new five.ESC(9);
+```
+
+![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png)
+
+#### Limited Speed Range
+
+```js
+// Limited speed range to 0-80%
 new five.ESC({
-  pin: 12, 
+  pin: 9, 
   range: [ 0, 80 ]
 });
 ```
@@ -63,10 +68,6 @@ new five.ESC({
 #### ESC PCA9685
 
 ```js
-// Create an ESC controlled by a PCA9685...
-// 
-//   - attached to pin 1 (of the PCA9685)
-//
 new five.ESC({
   controller: "PCA9685",
   pin: 1
@@ -74,6 +75,19 @@ new five.ESC({
 ```
 
 ![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-PCA9685-b.png)
+
+
+#### Bidirectional 
+
+```js
+new five.ESC({
+  pin: 9, 
+  device: "FORWARD_REVERSE", 
+  neutral: 50
+});
+```
+
+![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-bidirectional.png)
 
 
 ## Usage
