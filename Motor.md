@@ -175,7 +175,7 @@ var motor2 = new five.Motor(configs.M2);
 
 ## Usage
 
-Non-Directional Motor
+#### Non-Directional Motor
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -190,7 +190,7 @@ board.on("ready", function() {
 });
 ```
 
-Directional Motor
+#### Directional Motor
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -206,7 +206,7 @@ board.on("ready", function() {
 ```
 
 
-Directional Motor with Brake
+#### Directional Motor with Brake
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -242,7 +242,7 @@ board.on("ready", function() {
 ```
 
 
-Directional Motor with Current Sensing
+#### Directional Motor with Current Sensing
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -270,7 +270,7 @@ board.on("ready", function() {
 });
 ```
 
-Directional Motor with ShiftRegister to control HBridge (Like the AdaFruit Motor Shield V1)
+#### Directional Motor with ShiftRegister to control HBridge (Like the AdaFruit Motor Shield V1)
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -290,7 +290,7 @@ board.on("ready", function() {
 });
 ```
 
-Directional Motor via Adafruit Motor Shield V2
+#### Directional Motor via Adafruit Motor Shield V2
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
