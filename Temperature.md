@@ -38,6 +38,9 @@ This list will continue to be updated as more devices are confirmed.
   celsius: The temperature in celsius degrees. READONLY
   fahrenheit: The temperature in fahrenheit degrees. READONLY
   kelvin: The temperature in kelvin degrees. READONLY
+  C: A convenience alias for celsius.
+  F: A convenience alias for fahrenheit.
+  K: A convenience alias for kelvin.
 }
 ```
 
@@ -133,9 +136,9 @@ board.on("ready", function() {
   });
 
   temperature.on("change", function(err, data) {
-    console.log("celsius: %d", data.celsius);
-    console.log("fahrenheit: %d", data.fahrenheit);
-    console.log("kelvin: %d", data.kelvin);
+    console.log("celsius: %d", data.C);
+    console.log("fahrenheit: %d", data.F);
+    console.log("kelvin: %d", data.K);
   });
 });
 ```
@@ -149,4 +152,3 @@ There are no special API functions for this class.
 - **change** The "change" event is emitted whenever the value of the temperature changes more then the threshold value allows.
 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
-
