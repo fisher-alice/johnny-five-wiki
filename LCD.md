@@ -166,9 +166,9 @@ board.on("ready", function() {
   lcd.home().print("Bleep");
   ```
 
-- **display()** Turn the display on.
+- **on()** Turn the display on.
 
-- **noDisplay()** Turn the display off.
+- **off()** Turn the display off.
 
 - **blink()** This causes the cursor to show and blink
 
