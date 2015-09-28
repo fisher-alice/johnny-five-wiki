@@ -133,6 +133,8 @@ new five.Temperature({
 ```
 
 ![BMP180](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
+
+
 ## Usage
 ```js
 var five = require("johnny-five");
@@ -144,10 +146,10 @@ board.on("ready", function() {
     pin: "A0"
   });
 
-  temperature.on("change", function(err, data) {
-    console.log("celsius: %d", data.C);
-    console.log("fahrenheit: %d", data.F);
-    console.log("kelvin: %d", data.K);
+  temperature.on("change", function() {
+    console.log("celsius: %d", this.C);
+    console.log("fahrenheit: %d", this.F);
+    console.log("kelvin: %d", this.K);
   });
 });
 ```
