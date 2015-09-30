@@ -117,9 +117,7 @@ NOTE: An `Led.Digits` instance can represent up to 8 chained devices (1 device c
 
 
 - **clear()** Shut off all LEDs, for all devices.
-- **clear(device index)** Shut off all LEDs, for a device at specified device index.
-
-Note: `clear()` does not shut off the device.
+- **clear(device index)** Shut off all LEDs, for a device at specified device index. (Note: `clear()` does not shut off the device.)
 
   ```js
   // Clear the entire display of a specified device.
@@ -145,41 +143,40 @@ Note: `clear()` does not shut off the device.
 
 - **draw(position, character)** Draw a `character` to a digit `position` (0-7) on all devices.
 - **draw(device index, position, character)** Draw a `character` to a digit `position` (0-7) on a device at the specified `device index`.
+  - **This is probably not the API you want to use. See `print(string)` below**
 
-Valid `character` values: 
+  - Valid `character` values: 
 
-- A single number
-- A single number or character string
-- A string containing a number or letter character followed by a decimal point character.
+    - A single number
+    - A single number or character string
+    - A string containing a number or letter character followed by a decimal point character.
+    ```js
+    // Draw a "1" to device 1, digit position 0
+    digits.draw(1, 0, "1");
 
+    // Draw a "1" to all devices at digit position 0
+    digits.draw(0, "1");
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-001.png)
 
-  ```js
-  // Draw a "1" to device 1, digit position 0
-  digits.draw(1, 0, "1");
+    ```js
+    // Draw an "A" to device 1, digit position 0
+    digits.draw(1, 0, "A");
 
-  // Draw a "1" to all devices at digit position 0
-  digits.draw(0, "1");
-  ```
-  ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-001.png)
+    // Draw an "A" to all devices at digit position 0
+    digits.draw(0, "A");
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-002.png)
 
-  ```js
-  // Draw an "A" to device 1, digit position 0
-  digits.draw(1, 0, "A");
+    ```js
+    // Draw a "1." to device 1, digit position 0
+    digits.draw(1, 0, "1.");
 
-  // Draw an "A" to all devices at digit position 0
-  digits.draw(0, "A");
-  ```
-  ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-002.png)
+    // Draw a "1." to all devices at digit position 0
+    digits.draw(1, "1.");
+    ```
 
-  ```js
-  // Draw a "1." to device 1, digit position 0
-  digits.draw(1, 0, "1.");
-
-  // Draw a "1." to all devices at digit position 0
-  digits.draw(1, "1.");
-  ```
-
-  ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-003.png)
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-003.png)
 
 - **print(string)** Display a string across available digits. 
   - If a colon `:` is present on the display unit, then it is treated as a single character. That means that a 4 digit display that includes a colon will be treated as a 5 character display. 
@@ -211,7 +208,7 @@ Valid `character` values:
 
 ## Predefined Characters
 
-`Led.Digits.CHARS`
+`Led.Digits.DIGIT_CHARS`
 
 ```
 0 1 2 3 4 5 6 7 8 9   
