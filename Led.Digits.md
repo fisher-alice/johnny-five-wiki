@@ -173,7 +173,7 @@ NOTE: An `Led.Digits` instance can represent up to 8 chained devices (1 device c
     digits.draw(1, 0, "1.");
 
     // Draw a "1." to all devices at digit position 0
-    digits.draw(1, "1.");
+    digits.draw(0, "1.");
     ```
 
     ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-003.png)
