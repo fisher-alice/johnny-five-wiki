@@ -2,13 +2,12 @@ The `Led.Digits` class constructs an object that may represent one or more (chai
 
 \* Support for varying segment devices is in progress.
 
-![](http://ecx.images-amazon.com/images/I/61LJiwBPXHL._SL1500_.jpg)
-
-
 Known supported devices: 
 
 - [Sunkee MAX7219 with 8-Digit LED Display Module](http://www.amazon.com/Sunkee-MAX7219-8-Digit-Display-Module/dp/B00D3J04JC/)
 - [5V MAX7219 8-Digit Red LED Display Module 7 Segment Digital Tube For Arduino MCU](http://www.amazon.com/MAX7219-8-Digit-Display-Segment-Digital/dp/B00IHQ7STK)
+- [4 Digit, 7 Segment HT16K33](https://www.adafruit.com/search?q=7-segment&b=1)
+
 
 (This list only represents devices that I've personally confirmed, please add devices as needed.)
 
@@ -22,6 +21,7 @@ Known supported devices:
   | pins     | Object | `{ data, clock, cs }`. Object of digital pin names.                                             || yes      |
   | pins          | Array | `[ data, clock, cs ]`. Array of digital pin names.                                              || yes      |
   | devices       | Number | `1-8`. For single device cases, this can be omitted. | `1` | no       |
+  | controller    | string | HT16K33. The Name of the controller to use |  | no       |
 
 
 
@@ -31,6 +31,7 @@ Known supported devices:
 { 
   isMatrix: false. READONLY
   devices: ...Number of devices controlled. READONLY
+  digitOrder: -1|1. -1 for RTL, 1 for LTR. 
 }
 ```
 
@@ -51,6 +52,15 @@ new five.Led.Digits({
 ![Led.Digits](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-digits-clock.png)
 
 
+#### HT16K33
+
+```js
+new five.Led.Digits({
+  controller: "HT16K33"
+});
+```
+
+![Led.Digits](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-digits-clock-HT16K33.png)
 
 
 ## Usage
@@ -69,7 +79,7 @@ board.on("ready", function() {
     }
   });
 
-  digits.print("Hello!");
+  digits.print("----");
 });
 ```
 
@@ -149,33 +159,55 @@ Valid `character` values:
 
   // Draw a "1" to all devices at digit position 0
   digits.draw(0, "1");
+  ```
+  ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-001.png)
 
+  ```js
   // Draw an "A" to device 1, digit position 0
   digits.draw(1, 0, "A");
 
   // Draw an "A" to all devices at digit position 0
   digits.draw(0, "A");
+  ```
+  ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-002.png)
 
+  ```js
   // Draw a "1." to device 1, digit position 0
   digits.draw(1, 0, "1.");
 
   // Draw a "1." to all devices at digit position 0
   digits.draw(1, "1.");
-
-
-  // Write a message to a single device, using the default device:
-
-  var message = "Hello";
-
-  message.split("").forEach(function(char, i) {
-    digits.draw(i, char);
-  });
-
-  // NOTE: This last example will hopefully be replaced by an easier 
-  // API. Overtime I hope that use patterns will emerge that will 
-  // help guide the design of an easier "print to device" API.
   ```
 
+  ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-draw-003.png)
+
+- **print(string)** Display a string across available digits. 
+  - If a colon `:` is present on the display unit, then it is treated as a single character. That means that a 4 digit display that includes a colon will be treated as a 5 character display. 
+    ```js
+    digits.print("12:00"); // display the colon
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-print-001.png)
+
+    ```js
+    digits.print("12 00"); // do not display the colon
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-print-002.png)
+
+    ```js
+    digits.print("HOLA");
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-with-colon-001.png)
+
+  - Periods following a digit are **not** considered a character, they are interpreted as being part of the preceding character. 
+    ```js
+    digits.print("0.0.0.0."); 
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-print-003.png)
+
+    ```js
+    digits.print("0.0.:0.0."); 
+    ```
+    ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/4-digit-7-segment-print-004.png)
 
 ## Predefined Characters
 
