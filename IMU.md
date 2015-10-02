@@ -1,10 +1,10 @@
 The `IMU` class constructs objects that represent a single IMU module attached to the physical board.  An IMU is an Inertial Measurement Unit.  IMUs come in all shapes and DOFs (Degrees of Freedom).  They are often made up of several components like Accelerometers, Gyros, Temperature Sensors, and Magnetometers.
 
-Johnny-Five currently supports one kind of IMU:
+Supported modules: 
 
 - [MPU-6050](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
 
-This list will continue to be updated as more devices are confirmed.
+This list will continue to be updated as more component support is implemented.
 
 ## Parameters
 
@@ -12,8 +12,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | “MPU6050”. The Name of the controller to use            | “MPU6050” | no       |
-  | freq          | Number | Milliseconds. The frequency in ms of data events. Defaults to 25ms | 100       | no       |
+  | controller    | string | MPU6050. The Name of the controller to use            | “MPU6050” | no       |
 
 - **MPU6050 Options(`controller: "MPU6050"`)** 
 
