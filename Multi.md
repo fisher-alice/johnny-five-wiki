@@ -1,0 +1,99 @@
+The `Multi` class constructs objects that represent a single "breakout" module attached to the physical board. The "breakout" module will itself contain 2 or more components, such as a thermistor and a hygrometer, or an altimeter and a pressure sensor. 
+
+Supported multi sensor modules: 
+
+- BMP180
+  - [Adafruit](https://www.adafruit.com/products/1603)
+  - [Sparkfun](https://www.sparkfun.com/products/11824)
+- MPL115A2
+  - [Adafruit](https://www.adafruit.com/products/992)
+  - [Sparkfun](https://www.sparkfun.com/products/9721)
+- SI7020
+  - [Tessel](http://start.tessel.io/modules/climate)
+
+This list will continue to be updated as more component support is implemented.
+
+## Parameters
+
+- **General Options**
+
+  | Property | Type   | Value/Description                                  | Default   | Required |
+  |---------------|--------|-----------|-------------------------------------|-----------|
+  | controller    | string | BMP180, MPL115A2, SI7020. The Name of the controller to use            |  | yes       |
+
+
+## Shape 
+Some of these properties may or may not exist depending on whether the multi sensor supports it.
+
+```
+{ 
+  barometer: An instance of `Barometer` class. READONLY
+  hygrometer: An instance of `Hygrometer` class. READONLY
+  temperature: An instance of `Temperature` class. READONLY
+}
+```
+
+## Component Initialization
+
+#### BMP180
+
+```js
+new five.Multi({
+  controller: "BMP180"
+});
+```
+
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)   
+
+
+#### MPL115A2
+
+```js
+new five.Multi({
+  controller: "MPL115A2"
+});
+```
+
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)   
+
+
+#### SI7020
+
+```js
+new five.Multi({
+  controller: "SI7020"
+});
+```
+
+![](http://johnny-five.io/img/breadboard/temperature-SI7020.png)   
+
+
+## Usage
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  var multi = new five.Multi({
+    controller: "MPL115A2"
+  });
+
+  multi.on("data", function(err, data) {
+    console.log("Barometer: %d", this.barometer.pressure);
+    console.log("Temperature: %d", this.temperature.celsius);
+  });
+});
+```
+
+## API
+
+The Multi class does not have an explicit API.  Refer to the individual components for their APIs
+
+## Events
+
+- **data** The "data" event is fired as frequently as new data becomes available.
+
+- **change** The "change" event is fired whenever a corresponding "change" is fired from a component.
+
