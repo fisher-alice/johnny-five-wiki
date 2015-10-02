@@ -38,6 +38,7 @@
 - [Led.RGB](https://github.com/rwaldron/johnny-five/wiki/Led.RGB)
 - [Motion](https://github.com/rwaldron/johnny-five/wiki/Motion)
 - [Motor](https://github.com/rwaldron/johnny-five/wiki/Motor)
+- [Multi](https://github.com/rwaldron/johnny-five/wiki/Multi)
 - [Piezo](https://github.com/rwaldron/johnny-five/wiki/Piezo)
 - [Pin](https://github.com/rwaldron/johnny-five/wiki/Pin)
 - [Ping](https://github.com/rwaldron/johnny-five/wiki/Ping)
