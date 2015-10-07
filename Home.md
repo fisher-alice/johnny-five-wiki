@@ -29,6 +29,7 @@
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [Expander](https://github.com/rwaldron/johnny-five/wiki/Expander)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
+- [Hygrometer](https://github.com/rwaldron/johnny-five/wiki/Hygrometer)
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
 - [IR.Reflectance](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
 - [Joystick](https://github.com/rwaldron/johnny-five/wiki/Joystick)
