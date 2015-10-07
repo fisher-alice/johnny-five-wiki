@@ -17,6 +17,7 @@
 <!--extract-start:api-->
 
 - [Accelerometer](https://github.com/rwaldron/johnny-five/wiki/Accelerometer)
+- [Altimeter](https://github.com/rwaldron/johnny-five/wiki/Altimeter)
 - [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
 - [Barometer](https://github.com/rwaldron/johnny-five/wiki/Barometer)
 - [Board](https://github.com/rwaldron/johnny-five/wiki/Board) 
