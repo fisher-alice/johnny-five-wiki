@@ -81,7 +81,7 @@ new five.Multi({
 });
 ```
 
-![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl3115a2.png)   
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)   
 
 #### SI7020
 
