@@ -5,9 +5,15 @@ Supported multi sensor modules:
 - BMP180
   - [Adafruit](https://www.adafruit.com/products/1603)
   - [Sparkfun](https://www.sparkfun.com/products/11824)
+- HTU21D
+  - [Adafruit](https://www.adafruit.com/products/1899)
+  - [Sparkfun](https://www.sparkfun.com/products/12064)
 - MPL115A2
   - [Adafruit](https://www.adafruit.com/products/992)
   - [Sparkfun](https://www.sparkfun.com/products/9721)
+- MPL3115A2
+  - [Adafruit](https://www.adafruit.com/products/1893)
+  - [Sparkfun](https://www.sparkfun.com/products/11084)
 - SI7020
   - [Tessel](http://start.tessel.io/modules/climate)
 
@@ -19,7 +25,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | BMP180, MPL115A2, SI7020. The Name of the controller to use            |  | yes       |
+  | controller    | string | BMP180, HTU21D, MPL115A2, MPL3115A2, SI7020. The Name of the controller to use            |  | yes       |
 
 
 ## Shape 
@@ -46,6 +52,17 @@ new five.Multi({
 ![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)   
 
 
+#### HTU21D
+
+```js
+new five.Multi({
+  controller: "HTU21D"
+});
+```
+
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/humidity-htu21d.png)   
+
+
 #### MPL115A2
 
 ```js
@@ -56,6 +73,15 @@ new five.Multi({
 
 ![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)   
 
+#### MPL3115A2
+
+```js
+new five.Multi({
+  controller: "MPL3115A2"
+});
+```
+
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl3115a2.png)   
 
 #### SI7020
 
@@ -80,9 +106,34 @@ board.on("ready", function() {
     controller: "MPL115A2"
   });
 
-  multi.on("data", function(err, data) {
+  multi.on("data", function() {
     console.log("Barometer: %d", this.barometer.pressure);
     console.log("Temperature: %d", this.temperature.celsius);
+  });
+});
+```
+
+
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  var multi = new five.Multi({
+    controller: "HTU21D"
+  });
+
+  multi.on("change", function() {
+    console.log("temperature");
+    console.log("  celsius           : ", this.temperature.celsius);
+    console.log("  fahrenheit        : ", this.temperature.fahrenheit);
+    console.log("  kelvin            : ", this.temperature.kelvin);
+    console.log("--------------------------------------");
+
+    console.log("Hygrometer");
+    console.log("  relative humidity : ", this.hygrometer.relativeHumidity);
+    console.log("--------------------------------------");
   });
 });
 ```
