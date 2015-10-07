@@ -7,7 +7,10 @@ Supported Barometers:
   - [SparkFun](https://www.sparkfun.com/products/11824)
 - MPL115A2
   - [Adafruit](https://www.adafruit.com/products/992)
-
+  - [Sparkfun](https://www.sparkfun.com/products/9721)
+- MPL3115A2
+  - [Adafruit](https://www.adafruit.com/products/1893)
+  - [Sparkfun](https://www.sparkfun.com/products/11084)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -17,7 +20,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | BMP180, MPL115A2. The Name of the controller to use |  | Yes       |
+  | controller    | string | BMP180, MPL115A2, MPL3115A2. The Name of the controller to use |  | Yes       |
   | address    | number | Address for I2C device. |  By Device | No       |
   | freq | number | Milliseconds. The rate in ms of data events. | 25 | No |
 
@@ -44,14 +47,6 @@ This list will continue to be updated as more component support is implemented.
 ## Component Initialization 
 
 
-#### MPL115A2
-```js
-new five.Barometer({
-  controller: "MPL115A2"
-});
-```
-
-![MPL115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
 
 #### BMP180
 ```js
@@ -62,6 +57,25 @@ new five.Barometer({
 
 ![BMP180](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
 
+
+#### MPL115A2
+```js
+new five.Barometer({
+  controller: "MPL115A2"
+});
+```
+
+![MPL115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
+
+
+#### MPL3115A2
+```js
+new five.Barometer({
+  controller: "MPL3115A2"
+});
+```
+
+![MPL3115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)
 
 ## Usage
 
