@@ -25,7 +25,6 @@ This list will continue to be updated as more devices are confirmed.
 ```
 { 
   id: A user definable id value. Defaults to a generated uid
-  pin: The pins defined for X, Y, and Z.
   relativeHumidity: The relative humidity in percent. READONLY
   RH: A convenience alias for relativeHumidity. READONLY
 }
