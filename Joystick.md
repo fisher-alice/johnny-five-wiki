@@ -129,6 +129,6 @@ There are no special API functions for this class.
 
 ## Events
 
-- **change** The "change" event is emitted whenever the value of the gyro changes more then the threshold value allows.
+- **change** The "change" event is emitted whenever the value of an axis changes.
 
-- **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the "read" event)
+- **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
