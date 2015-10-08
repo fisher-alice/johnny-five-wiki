@@ -33,7 +33,10 @@ Some of these properties may or may not exist depending on whether the multi sen
 
 ```
 { 
+  accelerometer: An instance of `Accelerometer` class. READONLY
+  altimeter: An instance of `Altimeter` class. READONLY
   barometer: An instance of `Barometer` class. READONLY
+  gyro: An instance of `Gyro` class. READONLY
   hygrometer: An instance of `Hygrometer` class. READONLY
   temperature: An instance of `Temperature` class. READONLY
 }
