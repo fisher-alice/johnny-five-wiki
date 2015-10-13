@@ -14,6 +14,13 @@ Johnny-Five currently supports several kinds of Temperatures:
   - [SparkFun](https://www.sparkfun.com/products/11824)
 - MPL115A2
   - [Adafruit](https://www.adafruit.com/products/992)
+  - [SparkFun](https://www.sparkfun.com/products/9721)
+- MPL3115A2
+  - [Adafruit](https://www.adafruit.com/products/1893)
+  - [Sparkfun](https://www.sparkfun.com/products/11084)
+    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
+    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
+
 
 This list will continue to be updated as more devices are confirmed.
 
