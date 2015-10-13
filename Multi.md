@@ -14,6 +14,8 @@ Supported multi sensor modules:
 - MPL3115A2
   - [Adafruit](https://www.adafruit.com/products/1893)
   - [Sparkfun](https://www.sparkfun.com/products/11084)
+    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
+    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
 - SI7020
   - [Tessel](http://start.tessel.io/modules/climate)
 
