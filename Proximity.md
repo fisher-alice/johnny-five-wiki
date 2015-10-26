@@ -749,6 +749,8 @@ void sysexCallback(byte command, byte argc, byte *argv)
         Serial.write(1);
         Serial.write((byte)OUTPUT);
         Serial.write(1);
+        Serial.write((byte)PING_READ);
+        Serial.write(1);
       }
       if (IS_PIN_ANALOG(pin)) {
         Serial.write(ANALOG);
