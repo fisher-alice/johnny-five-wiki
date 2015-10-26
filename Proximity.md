@@ -281,10 +281,6 @@ The above listed devices require a special version of Firmata (shown below) to b
 
 Copy and Paste the following into the Arduino IDE and click the Upload button: 
 
-<!--extract-start:copy-->
-<button class="btn" data-clipboard-target="#foo">Copy to clipboard</button>
-<!--extract-end:copy-->
-
 ```c
 /*
  * Firmata is a generic protocol for communicating with microcontrollers
