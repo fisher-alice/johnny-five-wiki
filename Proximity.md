@@ -281,9 +281,7 @@ The above listed devices require a special version of Firmata (shown below) to b
 
 Copy and Paste the following into the Arduino IDE and click the Upload button: 
 
-
-<script src="https://gist.github.com/rwaldron/0519fcd5c48bfe43b827.js"></script>
-
+<!--embed:https://gist.githubusercontent.com/rwaldron/0519fcd5c48bfe43b827/raw/f17fb09b92ed04722953823d9416649ff380c35b/PingFirmata.ino-->
 
 <!--remove-start-->
 ```c
