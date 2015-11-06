@@ -6,17 +6,17 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
   | Index | Type   | Value/Description              | Default | Required |
   |-------|--------|--------------------------------|---------|----------|
-  | 0     | Number | PWM capable to control red   | | yes      |
-  | 1     | Number | PWM capable to control green | | yes      |
-  | 2     | Number | PWM capable to control blue  | | yes      |
+  | 0     | Number | PWM capable to control red     |         | yes      |
+  | 1     | Number | PWM capable to control green   |         | yes      |
+  | 2     | Number | PWM capable to control blue    |         | yes      |
 
 - **options**
 
   | Property | Type    | Value/Description                                                                                                     | Default | Required |
   |----------|---------|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------|
-  | pins     | Object  | See **pins** table below | Yes (either)      |
-  | pins     | Array  | See **pins** table below | Yes (either)      |
-  | isAnode  | Boolean | `true`, `false`. Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED. | no       |
+  | pins     | Object  | See **pins** table below | | Yes (either)      |
+  | pins     | Array  | See **pins** table below | | Yes (either)      |
+  | isAnode  | Boolean | `true`, `false`. Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED. | | no       |
   | controller  | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"` | no |                                           
 
   * **pins** (Object)
