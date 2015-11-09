@@ -118,9 +118,11 @@ new five.Led.RGB({
 
 ```
 
+![Tessel PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-pca9685-tessel.png)
+
 ![Arduino PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
 
-![Tessel PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-pca9685-tessel.png)
+
 
 #### LED RGB BlinkM
 
