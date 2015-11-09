@@ -118,9 +118,11 @@ new five.Led.RGB({
 
 ```
 
-![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
+![Arduino PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
 
-#### LED RGB PCA9685
+![Tessel PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-pca9685-tessel.png)
+
+#### LED RGB BlinkM
 
 ```js
 new five.Led.RGB({
@@ -129,7 +131,9 @@ new five.Led.RGB({
 
 ```
 
-![BlinkM](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-led-blinkm-basic.png)
+![BlinkM](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-blinkm-basic-tessel.png)
+
+![BlinkM](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-blinkm-basic-arduino.png)
 
 ## Usage
 
