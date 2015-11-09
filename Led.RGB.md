@@ -17,7 +17,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
   | pins     | Object  | See **pins** table below | | Yes (either)      |
   | pins     | Array  | See **pins** table below | | Yes (either)      |
   | isAnode  | Boolean | `true`, `false`. Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED. | | no       |
-  | controller  | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"` | no |                                           
+  | controller  | String  | DEFAULT, PCA9685, BLINKM. Controller interface type. | `"DEFAULT"` | no |                                           
 
   * **pins** (Object)
 
@@ -119,6 +119,17 @@ new five.Led.RGB({
 ```
 
 ![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/led-rgb-PCA9685.png)
+
+#### LED RGB PCA9685
+
+```js
+new five.Led.RGB({
+  controller: "BLINKM",
+});
+
+```
+
+![BlinkM](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-led-blinkm-basic.png)
 
 ## Usage
 
