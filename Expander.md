@@ -86,13 +86,11 @@ This list will continue to be updated as more component support is implemented.
 
 ## Shape
 
-```js
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pins: An array of pin objects, containing capability data.
-  MODES: An object containing supported modes.
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pins | An array of pin objects, containing capability data. | No |
+| MODES | An object containing supported modes. | No |
 
 ## Component Initialization 
 
