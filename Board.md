@@ -47,9 +47,9 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 ## Shape
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| io | A reference to the IO protocol layer. | No |
-| id | A user definable id value. Defaults to a generated uid. | No |
-| repl | A reference to the active REPL. | No |
+| `io` | A reference to the IO protocol layer. | No |
+| `id` | A user definable id value. Defaults to a generated uid. | No |
+| `repl` | A reference to the active REPL. | No |
 
 ## Component Initialization
 
