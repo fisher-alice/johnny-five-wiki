@@ -15,15 +15,13 @@ The `Piezo` class constructs objects that represent a single piezo component att
 
 ## Shape
 
-```
-{ 
-  board: A reference to the board object the Led is attached to
-  id: A user definable id value. Defaults to null
-  pin: The pin address that the Led is attached to
-  mode: Mode the piezo's pin is set to: output (1). READONLY
-  isPlaying: Boolean: is the piezo currently playing?
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `board` | A reference to the board object the Led is attached to | No |
+| `id` | A user definable id value. Defaults to null | No |
+| `pin` | The pin address that the Led is attached to | No |
+| `mode` | Mode the piezo's pin is set to: output (1). | Yes |
+| `isPlaying` | Boolean: is the piezo currently playing? | No |
 
 ## Component Initialization
 
