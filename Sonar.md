@@ -33,15 +33,14 @@ This list will continue to be updated as more Sonar devices are confirmed.
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Sonar is attached to
-  cm: Value of current reading in centimeters. READONLY
-  inches: Value of current reading in inches. READONLY
-  value: cm: Value of current reading.
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pin | The pin address that the Sonar is attached to | No |
+| cm | Value of current reading in centimeters. | Yes |
+| inches | Value of current reading in inches. | Yes |
+| value | Value of current reading in cm. | No |
+
 
 ## Component Initialization
 
