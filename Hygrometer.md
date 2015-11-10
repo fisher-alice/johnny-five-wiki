@@ -33,7 +33,7 @@ This list will continue to be updated as more devices are confirmed.
 ## Component Initialization
 
 
-#### MPU6050
+#### HTU21D
 
 ```js
 new five.Hygrometer({
@@ -41,7 +41,18 @@ new five.Hygrometer({
 });
 ```
 
-![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/humidity-htu21d.png)
+#### HTU21D
+```js
+new five.Temperature({
+  controller: "HTU21D"
+});
+```
+
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-HTU21D-F.png)
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-HTU21D.png)
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D-F.png)
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
+
 
 
 ## Usage
