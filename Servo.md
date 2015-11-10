@@ -33,16 +33,16 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| id | A user definable id value. Defaults to a generated uid | No |
-| pin | The pin address that the Servo is attached to | No |
-| range | The range of motion in degrees. Defaults to [0, 180] | No |
-| invert | A boolean, indicates whether servo values are inverted | No |
-| history | An array containing records of each movement  | No |
-| interval | A reference to the current interval, if one exists | No |
-| isMoving | A boolean flag, true when moving, false when still | No |
-| last | The last movement record. | Yes |
-| position | The angle the servo is at in the physical world. | Yes |
-| value | The angle the servo was last set to. | No |
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pin` | The pin address that the Servo is attached to | No |
+| `range` | The range of motion in degrees. Defaults to [0, 180] | No |
+| `invert` | A boolean, indicates whether servo values are inverted | No |
+| `history` | An array containing records of each movement  | No |
+| `interval` | A reference to the current interval, if one exists | No |
+| `isMoving` | A boolean flag, true when moving, false when still | No |
+| `last` | The last movement record. | Yes |
+| `position` | The angle the servo is at in the physical world. | Yes |
+| `value` | The angle the servo was last set to. | No |
 
 
 ## Component Initialization
