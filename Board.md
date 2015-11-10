@@ -45,13 +45,11 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
   | debug         | Boolean          | `true`, `false`. Set to `false` to disable debugging output | `true`                     | no       |
 
 ## Shape
-```js
-{ 
-  io: A reference to the IO protocol layer.
-  id: A user definable id value. Defaults to a generated uid.
-  repl: A reference to the active REPL.
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| io | A reference to the IO protocol layer. | No |
+| id | A user definable id value. Defaults to a generated uid. | No |
+| repl | A reference to the active REPL. | No |
 
 ## Component Initialization
 
