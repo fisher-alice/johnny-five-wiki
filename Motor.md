@@ -25,11 +25,9 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 
 ## Shape
 
-```
-{ 
-  isOn: A boolean flag, true when motor is moving or braking, false when not READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `isOn` | A boolean flag, `true` when motor is moving or braking, `false` when not. | Yes |
 
 ## Component Initialization
 
