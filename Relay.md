@@ -16,14 +16,12 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin value.
-  isOn: true|false. READONLY
-  type: "NO" or "NC". READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pin` | The pin value. | No |
+| `isOn` | `true` or `false`. | Yes |
+| `type` | `"NO"` or `"NC"`. | Yes |
 
 
 ## Component Initialization
