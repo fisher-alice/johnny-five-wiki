@@ -88,9 +88,9 @@ This list will continue to be updated as more component support is implemented.
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| id | A user definable id value. Defaults to a generated uid | No |
-| pins | An array of pin objects, containing capability data. | No |
-| MODES | An object containing supported modes. | No |
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pins` | An array of pin objects, containing capability data. | No |
+| `MODES` | An object containing supported modes. | No |
 
 ## Component Initialization 
 
