@@ -24,21 +24,18 @@ The `IR.Reflect.Array` class constructs an array of analog (digital arrays are n
 
 ## Shape
 
-```
-{
-  id: A user definable id value. Defaults to a generated uid
-  pins: The pin addresses that the sensors are attached to
-
-  isOn: Are the emitters on? READONLY
-  isCalibrated: Does the array have calibration data? READONLY
-  isOnLine: Is the array currently tracking a line? READONLY, isCalibrated===true
-  sensors: An array of sensor objects that represent each sensor in the array. READONLY
-  calibration: The current calibration data. READONLY
-  raw: An array of raw values from all the sensors. READONLY
-  values: If calibrated, an array of calibrated values (between 0 and 1000).  If not calibrated, raw data (between 0 and 1023). READONLY
-  line: If calibrated, a value between 0 and (n-1)*1000+1. For example, 6 sensors will have a line between 0 and 5001. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pins` | The pin addresses that the sensors are attached to | No |
+| `isOn` | Are the emitters on? | Yes |
+| `isCalibrated` | Does the array have calibration data? | Yes |
+| `isOnLine` | Is the array currently tracking a line? `isCalibrated===true` | Yes |
+| `sensors` | An array of sensor objects that represent each sensor in the array. | Yes |
+| `calibration` | The current calibration data. | Yes |
+| `raw` | An array of raw values from all the sensors. | Yes |
+| `values` | If calibrated, an array of calibrated values (between 0 and 1000).  If not calibrated, raw data (between 0 and 1023). | Yes |
+| `line` | If calibrated, a value between 0 and (n-1)*1000+1. For example, 6 sensors will have a line between 0 and 5001. | Yes |
 
 ## Component Initialization
 
