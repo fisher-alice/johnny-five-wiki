@@ -33,20 +33,18 @@ This list will continue to be updated as more Gyro devices are confirmed.
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pins: The pins defined for X, Y, and Z.
-  isCalibrated: The calibration state of the device. READONLY
-  pitch: An object containing values for the pitch rate and angle. READONLY
-  roll: An object containing values for the roll rate and angle. READONLY
-  yaw: An object containing values for the yaw rate and angle. READONLY
-  rate: And object containing the rate values of X, Y, and Z. READONLY
-  x: Value of x axis. READONLY
-  y: Value of y axis. READONLY
-  z: Value of z axis. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pins | The pins defined for X, Y, and Z. | No |
+| isCalibrated | The calibration state of the device. | Yes |
+| pitch | An object containing values for the pitch rate and angle. | Yes |
+| roll | An object containing values for the roll rate and angle. | Yes |
+| yaw | An object containing values for the yaw rate and angle. | Yes |
+| rate | And object containing the rate values of X, Y, and Z. | Yes |
+| x | Value of x axis. | Yes |
+| y | Value of y axis. | Yes |
+| z | Value of z axis. | Yes |
 
 ## Component Initialization
 
