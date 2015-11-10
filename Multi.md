@@ -41,7 +41,7 @@ Some of these properties may or may not exist depending on whether the multi sen
 | `gyro` | An instance of `Gyro` class. | Yes |
 | `hygrometer` | An instance of `Hygrometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~Yes~~ |
+| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
 ## Component Initialization
@@ -58,7 +58,7 @@ new five.Multi({
 |---------------| ----------- | ----------|
 | `barometer` | An instance of `Barometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~Yes~~ |
+| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
 ![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)   
@@ -78,7 +78,7 @@ new five.Multi({
 |---------------| ----------- | ----------|
 | `hygrometer` | An instance of `Hygrometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~Yes~~ |
+| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
 
@@ -102,7 +102,7 @@ new five.Multi({
 |---------------| ----------- | ----------|
 | `barometer` | An instance of `Barometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~Yes~~ |
+| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
 
@@ -121,7 +121,7 @@ new five.Multi({
 | `altimeter` | An instance of `Altimeter` class. | Yes |
 | `barometer` | An instance of `Barometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~Yes~~ |
+| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
 ![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)   
@@ -138,7 +138,7 @@ new five.Multi({
 |---------------| ----------- | ----------|
 | `hygrometer` | An instance of `Hygrometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~Yes~~ |
+| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 ![](http://johnny-five.io/img/breadboard/temperature-SI7020.png)   
 
