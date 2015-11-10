@@ -17,9 +17,9 @@ The `Switch` class constructs objects that represent a single Switch attached to
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| id | A user definable id value. Defaults to a generated uid. | No |
-| pin | The pin value. | No |
-| isClosed | Boolean indicating whether the switch is closed. | Yes |
+| `id` | A user definable id value. Defaults to a generated uid. | No |
+| `pin` | The pin value. | No |
+| `isClosed` | Boolean indicating whether the switch is closed. | Yes |
 
 
 
