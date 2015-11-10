@@ -40,12 +40,10 @@ For Leds that only have on/off states, use a digital pin:
 
 ## Shape
 
-```js
-{ 
-  id: ...A user definable id value. Defaults to null
-  pin: ...The pin address that the Led is attached to
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to null | No |
+| `pin` | The pin address that the Led is attached to | No |
 
 ## Component Initialization
 
