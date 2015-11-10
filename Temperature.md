@@ -20,7 +20,9 @@ Johnny-Five currently supports several kinds of Temperatures:
   - [Sparkfun](https://www.sparkfun.com/products/11084)
     - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
     - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
-
+- HTU21D
+  - [Adafruit](https://www.adafruit.com/product/1899)
+  - [Sparkfun](https://www.sparkfun.com/products/12064)
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -30,13 +32,13 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property | Type          | Value/Description                                             | Default | Required                                                               |
   |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
-  | controller    | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2. The Name of the controller to use. | “ANALOG” | no                                                                     |
+  | controller    | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D. The Name of the controller to use. | “ANALOG” | no                                                                     |
   | pin           | string or int | Analog Pin. Use with analog sensor. | | Yes<sup>1</sup> |
   | toCelsius     | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override    |                 | no                                                                     |
   | freq          | Number        | Milliseconds. The rate in milliseconds to emit the data event         | 25ms | no                                                                     |
 
 
-<sup>1</sup> Yes for analog devices. No for digitial devices (MPU-6050 or DS18B20)
+<sup>1</sup> Yes for analog devices. No for digital devices (MPU6050 or DS18B20)
 ## Shape
 
 ```
@@ -132,6 +134,16 @@ new five.Temperature({
 
 ![MPL115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
 
+#### MPL3115A2
+```js
+new five.Temperature({
+  controller: "MPL3115A2"
+});
+```
+
+![MPL3115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)
+
+
 #### BMP180
 ```js
 new five.Temperature({
@@ -140,6 +152,23 @@ new five.Temperature({
 ```
 
 ![BMP180](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
+
+
+#### HTU21D
+```js
+new five.Temperature({
+  controller: "HTU21D"
+});
+```
+
+
+
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D-F.png)
+
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
+
+
+
 
 
 ## Usage
