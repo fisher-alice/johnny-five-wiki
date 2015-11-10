@@ -21,15 +21,14 @@ The 'Ping' class constructs an object that represents a single sonar ping sensor
 
 ## Shape
 
-```
-{
-  id: A user definable id value. Defaults to a generated uid.
-  pin: The pin address that the Ping Sensor is attached to.
-  inches: The detected distance in inches. READONLY
-  in: The detected distance in inches. READONLY
-  cm: The detected distance in centimetres. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid. | No |
+| `pin` | The pin address that the Ping Sensor is attached to. | No |
+| `inches` | The detected distance in inches. | Yes |
+| `in` | The detected distance in inches. | Yes |
+| `cm` | The detected distance in centimeters. | Yes |
+
 
 ## Component Initialization
 
