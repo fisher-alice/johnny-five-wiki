@@ -20,15 +20,13 @@ The `Pin` class constructs objects that represent any one pin on the physical bo
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to null
-  pin: The pin address of the pin
-  type: The type of pin this is, either "digital" or "analog"
-  value: The most recently reported value for this pin.
-  mode: The mode (number) for the pin.  See "Modes" below
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to null | No |
+| `pin` | The pin address of the pin | No |
+| `type` | The type of pin this is, either "digital" or "analog" | No |
+| `value` | The most recently reported value for this pin. | No |
+| `mode` | The mode (number) for the pin.  See "Modes" below | No |
 
 
 ## Component Initialization
