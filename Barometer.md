@@ -41,8 +41,8 @@ This list will continue to be updated as more component support is implemented.
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| id | A user definable id value. Defaults to a generated uid | No |
-| pressure | The current pressure value in kPa. | Yes |
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pressure` | The current pressure value in kPa. | Yes |
 
 ## Component Initialization 
 
