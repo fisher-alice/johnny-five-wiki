@@ -17,13 +17,12 @@ This list will continue to be updated as more Joystick devices are confirmed.
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  x: -1, 1. READONLY
-  y: -1, 1. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `x` | -1, 1. | Yes |
+| `y` | -1, 1. | Yes |
+
 
 ## Component Initialization
 
