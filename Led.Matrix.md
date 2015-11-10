@@ -69,12 +69,10 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
 ## Shape
 
-```
-{ 
-  isMatrix: true. READONLY
-  devices: ...Number of devices controlled. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `isMatrix` | true. | Yes |
+| `devices` | Number of devices controlled. | Yes |
 
 
 ## Component Initialization
