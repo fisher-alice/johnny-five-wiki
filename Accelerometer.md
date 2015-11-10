@@ -47,17 +47,17 @@ This list will continue to be updated as more component support is implemented.
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| id | A user definable id value. Defaults to a generated uid | No |
-| zeroV | The current zeroV value (or values). May be different from initial values if auto-calibrated. | No |
-| pins | The pins defined for X, Y, and Z. | No |
-| pitch | The pitch angle in degrees. | Yes |
-| roll | The roll angle in degrees. | Yes |
-| x | Value of x axis in G forces. | Yes |
-| y | Value of y axis in G forces. | Yes |
-| z | Value of z axis in G forces. | Yes |
-| acceleration | The magnitude of the acceleration in G forces. | Yes |
-| inclination | The incline of the device in degrees. | Yes |
-| orientation | The orientation of the device (-3, -2, -1, 1, 2, 3). | Yes |
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `zeroV` | The current zeroV value (or values). May be different from initial values if auto-calibrated. | No |
+| `pins` | The pins defined for X, Y, and Z. | No |
+| `pitch` | The pitch angle in degrees. | Yes |
+| `roll` | The roll angle in degrees. | Yes |
+| `x` | Value of x axis in G forces. | Yes |
+| `y` | Value of y axis in G forces. | Yes |
+| `z` | Value of z axis in G forces. | Yes |
+| `acceleration` | The magnitude of the acceleration in G forces. | Yes |
+| `inclination` | The incline of the device in degrees. | Yes |
+| `orientation` | The orientation of the device (-3, -2, -1, 1, 2, 3). | Yes |
 
 ## Component Initialization 
 
