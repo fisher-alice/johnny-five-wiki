@@ -27,13 +27,12 @@ Known supported devices:
 
 ## Shape
 
-```js
-{ 
-  isMatrix: false. READONLY
-  devices: ...Number of devices controlled. READONLY
-  digitOrder: -1|1. -1 for RTL, 1 for LTR. 
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `isMatrix` | false. | Yes |
+| `devices` | Number of devices controlled. | Yes |
+| `digitOrder` | -1\|1. -1 for RTL, 1 for LTR.  | No |
+
 
 ## Component Initialization
 
