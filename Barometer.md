@@ -39,12 +39,10 @@ This list will continue to be updated as more component support is implemented.
 
 ## Shape
 
-```js
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pressure: The current pressure value in kPa. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pressure | The current pressure value in kPa. | Yes |
 
 ## Component Initialization 
 
