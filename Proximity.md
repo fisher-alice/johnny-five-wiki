@@ -123,16 +123,13 @@ Supported Proximity sensors:
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  cm: Distance to obstruction in centimeters. READONLY
-  centimeters: Distance to obstruction in centimeters. READONLY
-  in: Distance to obstruction in inches. READONLY
-  inches: Distance to obstruction in inches. READONLY
-}
-
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `cm` | Distance to obstruction in centimeters. | Yes |
+| `centimeters` | Distance to obstruction in centimeters. | Yes |
+| `in` | Distance to obstruction in inches. | Yes |
+| `inches` | Distance to obstruction in inches. | Yes |
 
 
 ## Component Initialization
