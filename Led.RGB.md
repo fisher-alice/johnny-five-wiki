@@ -40,14 +40,12 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 
 ## Shape
 
-```
-{
-  red: Led object
-  green: Led object
-  blue: Led object, 
-  isAnode: true | false. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `red` | `Led` object | No |
+| `green` | `Led` object | No |
+| `blue` | `Led` object | No |
+| `isAnode` | true \| false. | Yes |
 
 ## Component Initialization
 
