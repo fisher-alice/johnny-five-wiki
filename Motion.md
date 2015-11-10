@@ -38,15 +38,13 @@ Supported Motion sensors:
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Sensor is attached to
-  value: Sensor value. READONLY
-  detectedMotion: Boolean value. READONLY
-  isCalibrated: Boolean flag indicating calibration state. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pin` | The pin address that the Sensor is attached to | No |
+| `value` | Sensor value. | Yes |
+| `detectedMotion` | Boolean value. | Yes |
+| `isCalibrated` | Boolean flag indicating calibration state. | Yes |
 
 
 ## Component Initialization
