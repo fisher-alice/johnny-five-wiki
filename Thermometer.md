@@ -42,18 +42,17 @@ This list will continue to be updated as more devices are confirmed.
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pins defined for X, Y, and Z.
-  celsius: The temperature in celsius degrees. READONLY
-  fahrenheit: The temperature in fahrenheit degrees. READONLY
-  kelvin: The temperature in kelvin degrees. READONLY
-  C: A convenience alias for celsius.
-  F: A convenience alias for fahrenheit.
-  K: A convenience alias for kelvin.
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `pin` | The pins defined for X, Y, and Z. | No |
+| `celsius` | The temperature in celsius degrees. | Yes |
+| `fahrenheit` | The temperature in fahrenheit degrees. | Yes |
+| `kelvin` | The temperature in kelvin degrees. | Yes |
+| `C` | A convenience alias for celsius. | No |
+| `F` | A convenience alias for fahrenheit. | No |
+| `K` | A convenience alias for kelvin. | No |
+
 
 ## Component Initialization
 
