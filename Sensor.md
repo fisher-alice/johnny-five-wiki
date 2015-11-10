@@ -32,18 +32,16 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Sensor is attached to
-  threshold: The change threshold (+/- value). Defaults to 1
-  boolean: ADC value scaled to a boolean. READONLY
-  raw: ADC value (0-1023). READONLY
-  analog: ADC reading _scaled_ to 8 bit values (0-255). READONLY
-  constrained: ADC reading _constrained_ to 8 bit values (0-255). READONLY
-  value: ADC reading, scaled. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pin | The pin address that the Sensor is attached to | No |
+| threshold | The change threshold (+/- value). Defaults to 1 | No |
+| boolean | ADC value scaled to a boolean. | Yes |
+| raw | ADC value (0-1023). | Yes |
+| analog | ADC reading _scaled_ to 8 bit values (0-255). | Yes |
+| constrained | ADC reading _constrained_ to 8 bit values (0-255). | Yes |
+| value | ADC reading, scaled. | Yes |
 
 ## Component Initialization
 
