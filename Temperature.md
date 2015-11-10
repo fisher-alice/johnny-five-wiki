@@ -8,4 +8,4 @@ The `Temperature` class has been renamed `Thermometer`. Migration phases:
 | 0.11.x  | `Temperature` alias completely removed |
 
 
-New API docs page: [Thermometer](https://github.com/rwaldron/johnny-five/wiki/Thermometer)
+New API docs page: [Thermometer](https://github.com/rwaldron/johnny-five/wiki/thermometer)
