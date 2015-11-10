@@ -23,19 +23,13 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
   | pins          | Array  | `[ rs, en, d4, d5, d6, d7 ]`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | | Yes (Either) |
 
 
-
-
-
-
 ## Shape
 
-```js
-{
-  id: A user definable id value. Defaults to null
-  rows: The number of rows that the LCD display supports. Defaults to 2.
-  cols: The number of columns that the LCD display contains. Defaults to 16.
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to null | No |
+| `rows` | The number of rows that the LCD display supports. Defaults to 2. | No |
+| `cols` | The number of columns that the LCD display contains. Defaults to 16. | No |
 
 ## Component Initialization
 
