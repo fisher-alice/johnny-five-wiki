@@ -24,13 +24,11 @@ This list will continue to be updated as more component support is implemented.
 ## Shape 
 Some of these properties may or may not exist depending on whether the IMU supports it.
 
-```
-{ 
-  accelerometer: An instance of `Accelerometer` class. READONLY
-  gyro: An instance of `Gyro` class. READONLY
-  temperature: An instance of `Temperature` class. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `accelerometer` | An instance of `Accelerometer` class. | Yes |
+| `gyro` | An instance of `Gyro` class. | Yes |
+| `temperature` | An instance of `Temperature` class. | Yes |
 
 ## Component Initialization
 
