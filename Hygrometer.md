@@ -22,13 +22,11 @@ This list will continue to be updated as more devices are confirmed.
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  relativeHumidity: The relative humidity in percent. READONLY
-  RH: A convenience alias for relativeHumidity. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `id` | A user definable id value. Defaults to a generated uid | No |
+| `relativeHumidity` | The relative humidity in percent. | Yes |
+| `RH` | A convenience alias for relativeHumidity. | Yes |
 
 ## Component Initialization
 
