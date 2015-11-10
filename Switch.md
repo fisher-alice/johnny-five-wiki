@@ -15,13 +15,12 @@ The `Switch` class constructs objects that represent a single Switch attached to
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin value.
-  isClosed: true|false. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid. | No |
+| pin | The pin value. | No |
+| isClosed | Boolean indicating whether the switch is closed. | Yes |
+
 
 
 ## Component Initialization
