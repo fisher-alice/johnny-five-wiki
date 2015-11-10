@@ -31,14 +31,12 @@ FORWARD_REVERSE
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the ESC is attached to
-  range: The range of speed as an array of fractional percent values. Defaults to [0, 100]
-  value: The value of the last/current speed. READONLY
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pin | The pin address that the ESC is attached to | No |
+| range | The range of speed as an array of fractional percent values. Defaults to [0, 100] | No |
+| value | The value of the last/current speed. | Yes |
 
 ## Component Initialization
 
