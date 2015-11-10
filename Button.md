@@ -27,16 +27,14 @@ The `Button` class constructs objects that represents a single Button attached t
 
 ## Shape
 
-```
-{ 
-  id: A user definable id value. Defaults to a generated uid
-  pin: The pin address that the Button is attached to
-  
-  downValue: 0 or 1, depending on invert or pullup
-  upValue: 0 or 1, depending on invert or pullup
-  holdtime: milliseconds
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pin | The pin address that the Button is attached to | No |
+| downValue | 0 or 1, depending on invert or pullup | No |
+| upValue | 0 or 1, depending on invert or pullup | No |
+| holdtime | milliseconds | No |
+
 
 ## Component Initialization
 
