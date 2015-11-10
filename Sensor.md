@@ -129,7 +129,7 @@ board.on("ready", function() {
 - **scale([low, high])** Same as `scale(low, high)`. 
 
 
-- **booleanAt(barrier)** Set a midpoint barrier value used to calculate returned value of the .boolean property. Defaults to 512
+- **booleanAt(barrier)** Set a midpoint barrier value used to calculate returned value of the .boolean property. The barrier is based on the scaled value, not the raw value. Defaults to 50% (512 when unscaled).
   ```js
   var sensor = new five.Sensor("A0");
 
