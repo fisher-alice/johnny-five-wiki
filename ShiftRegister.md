@@ -11,12 +11,10 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 
 ## Shape
 
-```
-{
-  id: A user definable id value. Defaults to a generated uid
-  pins : the object containing the pin values for data, clock and latch 
-}
-```
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| id | A user definable id value. Defaults to a generated uid | No |
+| pins | the object containing the pin values for data, clock and latch | No |
 
 ## Component Initialization
 
