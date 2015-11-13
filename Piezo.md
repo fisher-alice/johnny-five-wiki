@@ -21,7 +21,7 @@ The `Piezo` class constructs objects that represent a single piezo component att
 | `id` | A user definable id value. Defaults to null | No |
 | `pin` | The pin address that the Led is attached to | No |
 | `mode` | Mode the piezo's pin is set to: output (1). | Yes |
-| `isPlaying` | Boolean: is the piezo currently playing? | No |
+| `isPlaying` | Boolean: is the piezo currently playing? | Yes |
 
 ## Component Initialization
 
