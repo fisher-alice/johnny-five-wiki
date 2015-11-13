@@ -33,6 +33,23 @@ Supported Compass/Magnetometer:
 }
 ```
 
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `heading` | The current heading in degrees, 0-360° | Yes |
+| `bearing` | An object containing properties whose values are relevant bearing information (See below) | Yes |
+
+#### 
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `point` | A cardinal direction, eg. "north", "south", "east", "west" | Yes |
+| `abbr` | Abbreviated `point`, eg. "N", "NE", "NEbE" | Yes |
+| `low` | Low end of cardinal range in degrees | Yes |
+| `mid` | Middle end of cardinal range in degrees | Yes |
+| `high` | High end of cardinal range in degrees | Yes |
+
+
 ## Component Initialization
 
 #### HMC6352
