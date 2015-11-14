@@ -15,7 +15,8 @@ The `Button` class constructs objects that represents a single Button attached t
   var button = new five.Button("A0");
   ```
 
-- **options** An object of property parameters.
+- **Options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type           | Value/Description                                                                                                                                        | Default | Required |
   |---------------|----------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -24,6 +25,7 @@ The `Button` class constructs objects that represents a single Button attached t
   | isPullup      | Boolean        | `true`, `false`. Initialize as a pullup button                                                                                                                      | `false` | no       |
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
 
+   </span>
 
 ## Shape
 
