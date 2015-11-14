@@ -7,12 +7,13 @@ The `Relay` class constructs objects that represent a single digital Relay  atta
 - **pin** A Number or String address for the pin.
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type           | Value/Description                                        | Default | Required |
   |---------------|----------------|------------|----------------------------------------------------|----------|
   | pin           | Number, String | Any Pin. The Number or String address of the Relay pin     | | yes      |
   | type          | String         | “NO”, “NC”. Normally Open or Normally Closed. | “NO” | no       |
-
+  </span>
 
 ## Shape
 
