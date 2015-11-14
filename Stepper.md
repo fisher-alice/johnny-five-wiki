@@ -7,6 +7,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
 ## Parameters
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property    | Type      | Value/Description                                                                                              | Default | Required        |
   |-------------|-----------|-------------------------------|----------------------------------------------------------------------------------------------------------|-----------------|
@@ -16,7 +17,7 @@ Stepper motors generally require significantly involved hardware setup (that is,
   | type        | constant  | `five.Stepper.TYPE.DRIVER`, `five.Stepper.TYPE.TWO_WIRE`, `five.Stepper.TYPE.FOUR_WIRE`                       | | yes             |
   | rpm         | Number    | Revolutions per minute, used to calculate speed. | 180                                         | no              |
   | direction   | constant    | `five.Stepper.DIRECTION.CW`, `five.Stepper.DIRECTION.CCW` | | no<sup>2</sup>  |
-
+  </span>
 
 ### Pins 
 
@@ -259,86 +260,25 @@ board.on("ready", function() {
 ## Static
 
 ### Types
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Value</th>
-      <th>Constant</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DRIVER</td>
-      <td>1</td>
-      <td>Stepper.TYPE.DRIVER</td>
-    </tr>
-    <tr>
-      <td>DRIVER</td>
-      <td>2</td>
-      <td>Stepper.TYPE.TWO_WIRE</td>
-    </tr>
-    <tr>
-      <td>DRIVER</td>
-      <td>4</td>
-      <td>Stepper.TYPE.FOUR_WIRE</td>
-    </tr>
-  </tbody>
-</table>
+
+| Type   | Value | Constant                |
+|--------|-------|-------------------------|
+| DRIVER | 1     | Stepper.TYPE.DRIVER     |
+| DRIVER | 2     | Stepper.TYPE.TWO\_WIRE  |
+| DRIVER | 4     | Stepper.TYPE.FOUR\_WIRE |
 
 ### Run States
-<table>
-  <thead>
-    <tr>
-      <th>State</th>
-      <th>Value</th>
-      <th>Constant</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>STOP</td>
-      <td>0</td>
-      <td>Stepper.RUNSTATE.STOP</td>
-    </tr>
-    <tr>
-      <td>DRIVER</td>
-      <td>1</td>
-      <td>Stepper.RUNSTATE.ACCEL</td>
-    </tr>
-    <tr>
-      <td>DRIVER</td>
-      <td>2</td>
-      <td>Stepper.RUNSTATE.DECEL</td>
-    </tr>
-    <tr>
-      <td>DRIVER</td>
-      <td>3</td>
-      <td>Stepper.RUNSTATE.RUN</td>
-    </tr>
-  </tbody>
-</table>
+
+| State  | Value | Constant               |
+|--------|-------|------------------------|
+| STOP   | 0     | Stepper.RUNSTATE.STOP  |
+| DRIVE  | 1     | Stepper.RUNSTATE.ACCEL |
+| DRIVE  | 2     | Stepper.RUNSTATE.DECEL |
+| DRIVE  | 3     | Stepper.RUNSTATE.RUN   |
 
 ### Directions
 
-<table>
-  <thead>
-    <tr>
-      <th>Direction</th>
-      <th>Value</th>
-      <th>Constant</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CCW</td>
-      <td>0</td>
-      <td>Stepper.DIRECTION.CCW</td>
-    </tr>
-    <tr>
-      <td>CW</td>
-      <td>1</td>
-      <td>Stepper.DIRECTION.CW</td>
-    </tr>
-  </tbody>
-</table>
+| Direction | Value | Constant              |
+|-----------|-------|-----------------------|
+| CCW       | 0     | Stepper.DIRECTION.CCW |
+| CW        | 1     | Stepper.DIRECTION.CW  |
