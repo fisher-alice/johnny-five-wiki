@@ -8,6 +8,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 - **pin** A Number or String address for the Servo pin.
 
 - **General options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type           | Value/Description                                                                           | Default | Required |
   |---------------|----------------|---------------------------------------------------------------------------------------------|----------|----------|
@@ -19,15 +20,16 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | invert        | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
   | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. | `false` | no       |
   | controller    | String  | "DEFAULT", "PCA9685" | Controller interface type.  | `"DEFAULT"`.                                           | no       |
-
+  </span>
 
 
 - **PCA9685 Options (`controller: "PCA9685"`)**
+  <span class="abbreviate-table">
 
   | Property | Type           | Value/Description                                                                           | Default | Required |
   |---------------|----------------|---------------------------------------------------------------------------------------------|----------|----------|
   | address           | Number | I2C device address.                                             | `0x40` | yes      |
-
+  </span>
 
 ### Shape
 
