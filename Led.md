@@ -26,17 +26,21 @@ For Leds that only have on/off states, use a digital pin:
   ```
 
 - **General Options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type    | Value/Description                                                                                     | Default | Required |
   |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
   | pin           | Number  | Digital Pin. The Number address of the pin the led is attached to                                            |  | yes      |
   | controller    | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"`                                      | no       |
+  </span>
 
 - **PCA9685 Options (controller: "PCA9685")** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type    | Value/Description                                                                                   | Default | Required |
   |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
   | address       | Number  | Address for I2C devices. | `0x04` | no       |
+  </span>
 
 ## Shape
 
