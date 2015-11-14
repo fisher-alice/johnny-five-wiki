@@ -2,7 +2,9 @@ The `IMU` class constructs objects that represent a single IMU module attached t
 
 Supported modules: 
 
-- [MPU-6050](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
+- MPU6050
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
+  - [SparkFun](https://www.sparkfun.com/products/11028)
 
 This list will continue to be updated as more component support is implemented.
 
