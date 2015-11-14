@@ -7,11 +7,12 @@ The `Switch` class constructs objects that represent a single Switch attached to
 - **pin** A Number or String address for the pin.
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type           | Value/Description                                        | Default | Required |
   |---------------|----------------|------------|----------------------------------------------------|----------|
   | pin           | Number, String | Any Pin. The Number or String address of the Switch pin     | | yes      |
-  
+  </span>  
 
 ## Shape
 
