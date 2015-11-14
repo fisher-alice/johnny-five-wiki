@@ -2,16 +2,19 @@ The `Boards` class constructs a collection object containing multiple board obje
 
 This class has only been tested with Arduino compatible boards. 
 
-See also: [Board](https://github.com/rwldrn/johnny-five/wiki/Board)
+See also: [Board](https://github.com/rwaldron/johnny-five/wiki/Board)
 
 ## Parameters
 
 - **ports** A list of port objects or port address strings. Port objects may have the following properties:
+  <span class="abbreviate-table">
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
   | id       | Number, String | Any. User definable identification   | Generated | no       |
   | port     | String         | `/dev/ttyAM0`, `COM1`. Path or name of device port/COM | Detected | no       |
+
+  </span>
 
 ## Component Initialization
 
