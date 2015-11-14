@@ -15,6 +15,7 @@ Known supported devices:
 ## Parameters
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                 |Default| Required |
   |----------|--------|-----------------------------------|---------------------------------|----------|
@@ -22,7 +23,7 @@ Known supported devices:
   | pins          | Array | `[ data, clock, cs ]`. Array of digital pin names.                                              || yes      |
   | devices       | Number | `1-8`. For single device cases, this can be omitted. | `1` | no       |
   | controller    | string | HT16K33. The Name of the controller to use |  | no       |
-
+  </span>
 
 
 ## Shape
