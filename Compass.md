@@ -19,10 +19,12 @@ This list will continue to be updated as more component support is implemented.
 
 - **Options** An object of property parameters.
   <span class="abbreviate-table">
+
   | Property | Type   | Value/Description | Default | Required |
   |----------|--------|-------------------|---------|----------|
   | controller    | String | HMC6352, HMC5883L. The name of the controller to use | | yes      |
   | gauss         | Number | cgs units. Set the scale gauss for compass readings. | 1.3 | no       |
+
   </span>
 
 ## Shape
