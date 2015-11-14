@@ -92,12 +92,14 @@ Supported Proximity sensors:
 ## Parameters
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type | Value/Description  | Default | Required |
   |----------|------|--------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
   | controller | String | GP2Y0A21YK, GP2D120XJ00F, GP2Y0A02YK0F, GP2Y0A41SK0F, GP2Y0A710K0F, PING_PULSEIN \*, MB1000, MB1003, MB1230, LIDARLITE. See aliases || Yes |
   | freq     | Number         | Milliseconds. The frequency in ms of data events. | 25ms | No |
+  </span>
 
   ##### Controller Alias Table
 
