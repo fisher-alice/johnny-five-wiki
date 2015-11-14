@@ -5,10 +5,19 @@ The `Accelerometer` class constructs objects that represent a single Acceleromet
 Supported Accelerometers:
 
 - Analog (Like the Tinkerkit 2/3-Axis Accelerometer)
+  - ADXL335
+    - [Adafruit ADXL335](https://www.adafruit.com/product/163)
+    - [SparkFun ADXL335](https://www.sparkfun.com/products/9269)
+  - ADXL362
+    - [SparkFun ADXL362](https://www.sparkfun.com/products/11446)
+  - LIS344AL
+  - MMA7361
+    - [SparkFun MMA7361](https://www.sparkfun.com/products/retired/9652) (Retired)
 - MPU6050 (I2C IMU)
+  - [SparkFun MPU6050](https://www.sparkfun.com/products/11028)
 - ADXL345 (I2C)
-- ADXL335 (Analog)
-- MMA7361 (Analog)
+  - [Adafruit ADXL345](https://www.adafruit.com/products/1231)
+  - [SparkFun ADXL345](https://www.sparkfun.com/products/9836)
 
 This list will continue to be updated as more component support is implemented.
 
