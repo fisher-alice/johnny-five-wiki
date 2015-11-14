@@ -40,6 +40,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 ## Parameters
 
 - **General Options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                                   |Default| Required |
   |---------------|--------|-----------------------------------|--------------------------------------------------------------|----------|
@@ -47,8 +48,10 @@ Adafruit offers a selection of 8x8 matrices in various colors:
   | pins          | Array | `[ data, clock, cs ]`. Array of digital pin names.                                              || yes      |
   | devices       | Number | `1-8`. For single device cases, this can be omitted. |`1`| no       |
   | controller    | string                               | "HT16K33". A valid controller model name |                                                                                 | no      |
+  </span>
 
 - **HT16K33 options (`controller: "HT16K33"`)** (Arduino Requires StandardFirmata 2.4.0 or greater)
+  <span class="abbreviate-table">
 
   | Property | Type                                 | Value/Description                                                                             | Default | Required |
   |---------------|--------------------------------------|-------------------------------|----------------------------------------------------------------------------------------|----------|
@@ -57,7 +60,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
   | dims          | Object | `{rows, columns}`. See Dimensions table | 8x8 | no       |
   | dims          | Array | `[rows, columns]`. See Dimensions table | 8x8 | no       |
   | dims          | String | "8x8", "16x8" or "8x16". | 8x8 | no       |
-
+  </span>
 
 ### Dimensions
 
