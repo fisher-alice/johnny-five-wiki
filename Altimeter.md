@@ -13,6 +13,7 @@ This list will continue to be updated as more component support is implemented.
 ## Parameters
 
 - **General Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
@@ -20,6 +21,7 @@ This list will continue to be updated as more component support is implemented.
   | address    | number | Address for I2C device. |  By Device | No       |
   | freq | number | Milliseconds. The rate in ms of data events. | 25 | No |
 
+  </span>
 
 ## Shape
 
