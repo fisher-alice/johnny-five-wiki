@@ -8,10 +8,12 @@ The `Piezo` class constructs objects that represent a single piezo component att
   ```
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                                 |Default | Required |
   |---------------|--------|-----------------|---------------------------------------------------------------------|----------|
   | pin           | Number | Digital Pin. || yes      |
+  </span>
 
 ## Shape
 
