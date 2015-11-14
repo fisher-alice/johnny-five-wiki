@@ -3,11 +3,13 @@ The `ShiftRegister` class constructs an object that represents a shift register.
 ## Parameters
 
 * **options** An object of constructor parameters
+  <span class="abbreviate-table">
 
   | Name | Type   | Value/Description                                        | Default| Required |
   |------|--------|------------------------|----------------------------------------------------|----------|
   | pins | Object | `{data, clock, latch}` | | Yes (either)     |
   | pins | Array | `[data, clock, latch]` | | Yes (either)     |
+  </span>
 
 ## Shape
 
