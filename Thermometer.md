@@ -3,12 +3,24 @@ The `Thermometer` class constructs objects that represents a single Thermometer/
 Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
 
 - Analog (with user-supplied `toCelsius(raw)` function)
-- [LM35](http://www.ti.com/product/lm35)
-- [TMP36](http://www.analog.com/en/mems-sensors/digital-temperature-sensors/tmp36/products/product.html)
-- [TMP102](https://www.sparkfun.com/products/11931)
-- [DS18B20](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) (requires [ConfigurableFirmata](https://github.com/firmata/arduino/tree/configurable))
-- [MPU6050](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/) IMU
-- [Grove Thermometer](http://www.seeedstudio.com/depot/Grove-Thermometer-Sensor-p-774.html)
+- LM35
+  - [Mouser](http://www.mouser.com/search/ProductDetail.aspx?R=0virtualkey0virtualkeyLM35DZ-NOPB)
+  - [TI](http://www.ti.com/product/lm35)
+- TMP36
+  - [Adafruit](https://www.adafruit.com/products/165)
+  - [Analog Devices](http://www.analog.com/en/mems-sensors/digital-temperature-sensors/tmp36/products/product.html)
+  - [SparkFun](https://www.sparkfun.com/products/10988)
+- TMP102
+  - [SparkFun](https://www.sparkfun.com/products/11931)
+- DS18B20 (requires [ConfigurableFirmata](https://github.com/firmata/arduino/tree/configurable))
+  - [Adafruit](https://www.adafruit.com/products/374)
+  - [Maxim Integrated](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) 
+  - [SparkFun](https://www.sparkfun.com/products/245)
+- MPU6050
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
+  - [SparkFun](https://www.sparkfun.com/products/11028)
+- Grove Thermometer
+  - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Thermometer-Sensor-p-774.html)
 - BMP180
   - [Adafruit](https://www.adafruit.com/products/1603)
   - [SparkFun](https://www.sparkfun.com/products/11824)
@@ -29,14 +41,15 @@ This list will continue to be updated as more devices are confirmed.
 ## Parameters
 
 - **General Options**
+  <span class="abbreviate-table">
 
-  | Property | Type          | Value/Description                                             | Default | Required                                                               |
-  |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
-  | controller    | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D. The Name of the controller to use. | `ANALOG` | no                                                                     |
-  | pin           | string or int | Analog Pin. Use with analog sensor. | | Yes<sup>1</sup> |
-  | toCelsius     | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override    |                 | no                                                                     |
-  | freq          | Number        | Milliseconds. The rate in milliseconds to emit the data event         | 25ms | no                                                                     |
-
+  | Property   | Type          | Value/Description                                                                                                     | Default  | Required        |
+  |------------|---------------|-----------------------------------------------------------------------------------------------------------------------|----------|-----------------|
+  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D. The Name of the controller to use. | `ANALOG` | no              |
+  | pin        | string or int | Analog Pin. Use with analog sensor.                                                                                   |          | Yes<sup>1</sup> |
+  | toCelsius  | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override                                                      |          | no              |
+  | freq       | Number        | Milliseconds. The rate in milliseconds to emit the data event                                                         | 25ms     | no              |                                                              |
+  </span>
 
 <sup>1</sup> Yes for analog devices. No for digital devices (MPU6050 or DS18B20)
 
@@ -45,7 +58,6 @@ This list will continue to be updated as more devices are confirmed.
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
 | `id` | A user definable id value. Defaults to a generated uid | No |
-| `pin` | The pins defined for X, Y, and Z. | No |
 | `celsius` | The temperature in celsius degrees. | Yes |
 | `fahrenheit` | The temperature in fahrenheit degrees. | Yes |
 | `kelvin` | The temperature in kelvin degrees. | Yes |
