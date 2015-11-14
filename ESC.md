@@ -10,7 +10,8 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   ```js
   var esc = new five.ESC(9);
   ```
-- **options** An object of property parameters.
+- **Options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type           | Value/ Description                                                                        | Default| Required |
   |----------|----------------|----------------------------------------|------------------------------------------------------------------------------------|----------|
@@ -21,13 +22,16 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | device    | String  | FORWARD, FORWARD_REVERSE. Device capability type. | "FORWARD"                                           | no       |
   | neutral    | Number  | Neutral point, 0-100. | 0 | no       |
 
-FORWARD_REVERSE
+  </span>
+
 - **PCA9685 Options (`controller: "PCA9685"`)** 
+  <span class="abbreviate-table">
 
   | Property | Type                            | Value/Description                              | Default | Required |
   |---------------|---------------------------------|----------------------------------------|----|----------|
   | address       | Number | I2C device address. | `0x40` | no       |
-
+  
+  </span>
 
 ## Shape
 
@@ -165,6 +169,8 @@ board.on("ready", function() {
 <!--remove-end-->
 
 ## Calibrating an ESC
+
+**This isn't a requirement, but if you experience issues with your ESCs, it might prove helpful**
 
 Load the following sketch onto your Arduino, via the Arduino IDE follow the instructions.
 
