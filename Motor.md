@@ -3,10 +3,10 @@
 The `Motor` class constructs objects that represent a single Motor. The motor may attach to the physical board or a motor controller. The controller may be a third party shield or custom built motor controller. This class works well with both **Directional** and **Non-Directional** motors. It also works well with 2-pin or 3-pin controllers.
 
 ## Parameters
- * **pin** A Number or String address for the Non-Directional Motor pin (PWM).
- * **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
- * **options** An object of property parameters.
-  <span class="abbreviate-table">
+  - **pin** A Number or String address for the Non-Directional Motor pin (PWM).
+  - **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
+  - **options** An object of property parameters.
+    <span class="abbreviate-table">
 
     | Property   | Type                            | Value(s)/Description                                                 | Default | Required                    |
     |------------|---------------------------------|----------------------------------------------------------------------|---------|-----------|
@@ -15,15 +15,16 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
     | invertPWM  | Boolean                         | true or false                                                        | | no                          |
     | address    | Number | An I2C device address                                                | | no                          |
     | controller | String                          | Motor controller interface type                                      | | no                          |
-   </span>
- * **Shift Register Options** An object of property parameters.
-  <span class="abbreviate-table">
+     </span>
+
+  - **Shift Register Options** An object of property parameters.
+    <span class="abbreviate-table">
 
     | Property   | Type                            | Value(s)/Description                                                 | Default | Required                    |
     |------------|---------------------------------|----------------------------------------------------------------------|---------|-----------|
     | register   | Object      | `{data, clock, latch}` Pin configuration                              | | no                          |
     | bits       | Object   | `{a, b}` Switch bits to be flipped to control an HBridge | | only if register is defined |
-  </span>
+    </span>
   
 ## Shape
 
