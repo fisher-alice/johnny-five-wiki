@@ -16,11 +16,13 @@ Supported Motion sensors:
 - **pin** A Number pin address for Motion sensor.
 
 - **options** An object of property parameters.
+  <span class="abbreviate-table">
 
   | Property | Type  | Value/Description | Default | Required |
   |----------|-------|-------------------|---------|----------|
   | pin      | Number, String | Analog or Digital Pin. Use for non-I2C sensors | | Yes (non-I2C) |
   | controller | String | PIR, HCSR501, GP2Y0D805Z0F, GP2Y0D810Z0F, GP2Y0D815Z0F. See aliases | `PIR` | No |
+  </span>
 
   ##### Controller Alias Table
 
