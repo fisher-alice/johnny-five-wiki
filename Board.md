@@ -36,6 +36,7 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
 ## Parameters
 
 - **options** Optional object of themselves optional parameters.
+  <span class="abbreviate-table">
 
   | Property | Type             | Value/Description                                          | Default | Required |
   |---------------|------------------|-----------------------------------------|------------------------------------------------------|----------|
@@ -44,7 +45,10 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
   | repl          | Boolean          | `true`, `false`. Set to `false` to disable REPL                 | `true` | no       |
   | debug         | Boolean          | `true`, `false`. Set to `false` to disable debugging output | `true`                     | no       |
 
+  </span>
+
 ## Shape
+
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
 | `io` | A reference to the IO protocol layer. | No |
