@@ -6,6 +6,7 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
  * **pin** A Number or String address for the Non-Directional Motor pin (PWM).
  * **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
  * **options** An object of property parameters.
+  <span class="abbreviate-table">
 
     | Property   | Type                            | Value(s)/Description                                                 | Default | Required                    |
     |------------|---------------------------------|----------------------------------------------------------------------|---------|-----------|
@@ -14,15 +15,16 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
     | invertPWM  | Boolean                         | true or false                                                        | | no                          |
     | address    | Number | An I2C device address                                                | | no                          |
     | controller | String                          | Motor controller interface type                                      | | no                          |
-
+   </span>
  * **Shift Register Options** An object of property parameters.
+  <span class="abbreviate-table">
 
     | Property   | Type                            | Value(s)/Description                                                 | Default | Required                    |
     |------------|---------------------------------|----------------------------------------------------------------------|---------|-----------|
     | register   | Object      | `{data, clock, latch}` Pin configuration                              | | no                          |
     | bits       | Object   | `{a, b}` Switch bits to be flipped to control an HBridge | | only if register is defined |
-
-
+  </span>
+  
 ## Shape
 
 | Property Name | Description | Read Only |
@@ -430,6 +432,8 @@ Controllers that use 2 pins instead of 3 are essentially the same. Both arrangem
 This is by no means exhaustive
 
 #### 2 Pin
+<span class="abbreviate-table">
+
 <table>
   <thead>
     <tr>
@@ -508,8 +512,10 @@ This is by no means exhaustive
     </tr>
   </tbody>
 </table>
+</span>
 
 #### 3 Pin
+<span class="abbreviate-table">
 <table>
   <thead>
     <tr>
@@ -543,8 +549,10 @@ This is by no means exhaustive
     </tr>
   </tbody>
 </table>
+</span>
 
 #### I2C
+<span class="abbreviate-table">
 <table>
   <thead>
     <tr>
@@ -593,8 +601,11 @@ This is by no means exhaustive
     </tr>    
   </tbody>
 </table>
+</span>
 
 #### ShiftRegister
+
+<span class="abbreviate-table">
 <table>
   <thead>
     <tr>
@@ -641,6 +652,7 @@ This is by no means exhaustive
     </tr>    
   </tbody>
 </table>
+</span>
 
 1. Beware of shared voltage, the shield may be able to handle higher voltages than your Arduino. 
 1. Indicates that the pins can be reconfigured so that you can stack multiple shields of this type or other shields that use the same pins.
