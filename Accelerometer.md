@@ -15,12 +15,16 @@ This list will continue to be updated as more component support is implemented.
 ## Parameters
 
 - **General Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361. The Name of the controller to use | “ANALOG” | no       |
 
+ </span>
+
 - **Analog Options (`controller: "ANALOG"`)** 
+  <span class="abbreviate-table">
 
   | Property | Type             | Value/Description                                                                                                                                                  | Default        | Required |
   |---------------|------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
@@ -29,19 +33,25 @@ This list will continue to be updated as more component support is implemented.
   | aref          | Number           | Voltage reference. This is the value of the VCC pin                                                                                                                             | 5              | no       |
   | zeroV         | Number or Array  | 0-1023. The analog input when at rest, perpendicular to gravity. When an array, specifies the zeroV for the individual axes.                                         | 478            | no       |
   | autoCalibrate | Boolean          | `true`, `false`. Whether to auto-calibrate the `zeroV` values. The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky. | false          | no       |
+  
+  </span>
 
 - **MPU6050 Options (`controller: "MPU6050"`)** 
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                           | Default | Required |
   |---------------|--------|--------------|-------------------------------------------------------|---------|
   | sensitivity   | Number | 16 bit value. The sensitivity for the +- 250 setting of this device | 16384   | no       |
+  </span>
 
 - **MMA7361 Options (`controller: "MMA7361"`)** 
+  <span class="abbreviate-table">
 
   | Property | Type             | Value/Description                                                                                                                              | Default | Required |
   |---------------|------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------|
   | sleepPin      | Number or String | The digital pin that controls the sleep pin on the device. If you don't set this pin, you need to pull it up to Vcc with a 10k resistor. | null    | no       |
 
+  </span>
 
 ## Shape
 
