@@ -7,13 +7,21 @@ The `Expander` class constructs objects that represent a single I2C IO Expander 
  
 Supported Expanders:
 
-- [MCP23017](https://www.adafruit.com/products/732)
-- [MCP23008](https://www.adafruit.com/product/593)
-- [PCF8574](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
-- [PCF8574A](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
-- [PCF8575](https://www.sparkfun.com/products/8130)
-- [PCA9685](https://www.adafruit.com/products/815)
-- [PCF8591](http://www.amazon.com/PCF8591-Converter-Module-Digital-Conversion/dp/B00BXX4UWC)
+- MCP23017
+  - [Adafruit](https://www.adafruit.com/products/732)
+- MCP23008
+  - [Adafruit](https://www.adafruit.com/product/593)
+- PCF8574
+  - [Amazon](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
+- PCF8574A
+  - [Amazon](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
+- PCF8575
+  - [SparkFun](https://www.sparkfun.com/products/8130)
+- PCA9685
+  - [Adafruit](https://www.adafruit.com/products/815)
+- PCF8591
+  - [Amazon](http://www.amazon.com/PCF8591-Converter-Module-Digital-Conversion/dp/B00BXX4UWC)
+
 
 This list will continue to be updated as more component support is implemented.
 
@@ -40,11 +48,14 @@ This list will continue to be updated as more component support is implemented.
   ```
 
 - **General Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685. The Name of the controller to use |  | Yes       |
   | address       | Number  | Address for I2C device. | [By Device](#default-addresses) | no       |
+
+  </span>
 
   ```js
   new five.Expander({
