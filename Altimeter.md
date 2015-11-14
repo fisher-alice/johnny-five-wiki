@@ -20,7 +20,6 @@ This list will continue to be updated as more component support is implemented.
   | controller    | string | MPL3115A2. The Name of the controller to use |  | Yes       |
   | address    | number | Address for I2C device. |  By Device | No       |
   | freq | number | Milliseconds. The rate in ms of data events. | 25 | No |
-
   </span>
 
 ## Shape

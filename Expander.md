@@ -54,7 +54,6 @@ This list will continue to be updated as more component support is implemented.
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685. The Name of the controller to use |  | Yes       |
   | address       | Number  | Address for I2C device. | [By Device](#default-addresses) | no       |
-
   </span>
 
   ```js

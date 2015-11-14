@@ -433,7 +433,6 @@ This is by no means exhaustive
 
 #### 2 Pin
 <span class="abbreviate-table">
-
 <table>
   <thead>
     <tr>

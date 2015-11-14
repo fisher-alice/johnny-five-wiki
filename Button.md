@@ -24,8 +24,7 @@ The `Button` class constructs objects that represents a single Button attached t
   | invert        | Boolean        | `true`, `false`. Invert the up and down values. This is useful for inverting button signals when the pin itself doesn’t have built-in pullup resistor capabilities. | `false` | no       |
   | isPullup      | Boolean        | `true`, `false`. Initialize as a pullup button                                                                                                                      | `false` | no       |
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
-
-   </span>
+  </span>
 
 ## Shape
 

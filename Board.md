@@ -44,7 +44,6 @@ See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Board
   | port          | String or object | eg. `/dev/ttyAM0`, `COM1`, `new SerialPort()`. Path or name of device port/COM or SerialPort object | Detected | no       |
   | repl          | Boolean          | `true`, `false`. Set to `false` to disable REPL                 | `true` | no       |
   | debug         | Boolean          | `true`, `false`. Set to `false` to disable debugging output | `true`                     | no       |
-
   </span>
 
 ## Shape

@@ -26,15 +26,6 @@ This list will continue to be updated as more component support is implemented.
   | controller    | string | BMP180, MPL115A2, MPL3115A2. The Name of the controller to use |  | Yes       |
   | address    | number | Address for I2C device. |  By Device | No       |
   | freq | number | Milliseconds. The rate in ms of data events. | 25 | No |
-
-  </span>
-
-- **MPL115A2 Options (`controller: "MPL115A2"`)** 
-  <span class="abbreviate-table">
-
-  | Property | Type   | Value/Description                                           | Default | Required |
-  |---------------|--------|--------------|-------------------------------------------------------|---------|
-  
   </span>
 
 - **BMP180 Options (`controller: "BMP180"`)** 
@@ -43,7 +34,6 @@ This list will continue to be updated as more component support is implemented.
   | Property | Type             | Value/Description     | Default | Required |
   |---------------|-------|------------|--------------------------------------------|---------|
   | mode | number | 0-3. Oversampling ratio mode. | 3 | No |
-
   </span>
 
 ## Shape

@@ -21,7 +21,6 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | controller    | String  | DEFAULT, PCA9685. Controller interface type. | "DEFAULT"                                           | no       |
   | device    | String  | FORWARD, FORWARD_REVERSE. Device capability type. | "FORWARD"                                           | no       |
   | neutral    | Number  | Neutral point, 0-100. | 0 | no       |
-
   </span>
 
 - **PCA9685 Options (`controller: "PCA9685"`)** 
@@ -30,7 +29,6 @@ The `ESC` class constructs objects that represent a single ESC attached to the p
   | Property | Type                            | Value/Description                              | Default | Required |
   |---------------|---------------------------------|----------------------------------------|----|----------|
   | address       | Number | I2C device address. | `0x40` | no       |
-  
   </span>
 
 ## Shape

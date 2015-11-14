@@ -13,7 +13,6 @@ See also: [Board](https://github.com/rwaldron/johnny-five/wiki/Board)
   |----------|----------------|-----------------------|---------------------------------|----------|
   | id       | Number, String | Any. User definable identification   | Generated | no       |
   | port     | String         | `/dev/ttyAM0`, `COM1`. Path or name of device port/COM | Detected | no       |
-
   </span>
 
 ## Component Initialization

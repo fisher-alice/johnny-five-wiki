@@ -16,7 +16,6 @@ This list will continue to be updated as more component support is implemented.
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
   | controller    | string | MPU6050. The Name of the controller to use            | “MPU6050” | no       |
-
   </span>
 
 - **MPU6050 Options(`controller: "MPU6050"`)** 
@@ -25,7 +24,6 @@ This list will continue to be updated as more component support is implemented.
   | Property | Type   | Value/Description                                                | Default | Required |
   |---------------|--------|-------------|-------------------------------------|----------|
   | address       | Number | 8-bit value. The address of the component (can be switched via ADO pin) | `0x68`    | no       |
-  
   </span>
 
 ## Shape 
