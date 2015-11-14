@@ -5,17 +5,25 @@ The `Compass` class constructs an object that represents a single Compass or Mag
 Supported Compass/Magnetometer:
 
 - HMC6352
+  - No longer in production, but we assume people may still have them. 
 - HMC5883L
+  - [Triple-axis Magnetometer (Compass) Board - HMC5883L](https://www.adafruit.com/products/1746)
+  - [SparkFun Triple Axis Magnetometer Breakout - HMC5883L](https://www.sparkfun.com/products/10530)
+
+
+This list will continue to be updated as more component support is implemented.
+
+
 
 ## Parameters
 
-- **options** An object of property parameters.
-
+- **Options** An object of property parameters.
+  <span class="abbreviate-table">
   | Property | Type   | Value/Description | Default | Required |
   |----------|--------|-------------------|---------|----------|
-  | controller    | String | "HMC6352", "HMC5883L". Defines the compass module device  | | yes      |
+  | controller    | String | HMC6352, HMC5883L. The name of the controller to use | | yes      |
   | gauss         | Number | cgs units. Set the scale gauss for compass readings. | 1.3 | no       |
-
+  </span>
 
 ## Shape
 
@@ -29,11 +37,12 @@ Supported Compass/Magnetometer:
 
   | Property Name | Description | Read Only |
   |---------------| ----------- | ----------|
-  | `point` | A cardinal direction, eg. "north", "south", "east", "west" | Yes |
-  | `abbr` | Abbreviated `point`, eg. "N", "NE", "NEbE" | Yes |
-  | `low` | Low end of cardinal range in degrees | Yes |
-  | `mid` | Middle end of cardinal range in degrees | Yes |
-  | `high` | High end of cardinal range in degrees | Yes |
+  | `point`       | A cardinal direction, eg. "north", "south", "east", "west" | No |
+  | `abbr`        | Abbreviated `point`, eg. "N", "NE", "NEbE" | No |
+  | `low`         | Low end of cardinal range in degrees | No |
+  | `mid`         | Middle end of cardinal range in degrees | No |
+  | `high`        | High end of cardinal range in degrees | No |
+
 
 
 ## Component Initialization
