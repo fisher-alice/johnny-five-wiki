@@ -24,11 +24,12 @@ This list will continue to be updated as more component support is implemented.
 ## Parameters
 
 - **General Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
   | controller    | string | BMP180, HTU21D, MPL115A2, MPL3115A2, SI7020. The Name of the controller to use            |  | yes       |
-
+  </span>
 
 ## Shape 
 Some of these properties may or may not exist depending on whether the multi sensor supports it.
