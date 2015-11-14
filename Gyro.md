@@ -4,20 +4,27 @@ The `Gyro` class constructs objects that represent a single Gyro sensor attached
 
 We currently support two kinds of Gyros:
 
-- Analog (Like the Tinkerkit 2-Axis Gyro)
-- MPU6050
+- LPR5150 (Analog)
+  - Used on the TinkerKit Gyro breakout
+- MPU6050 (I2C)
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
+  - [SparkFun](https://www.sparkfun.com/products/11028)
 
 This list will continue to be updated as more Gyro devices are confirmed.
 
 ## Parameters
 
 - **General Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|-----------------|-----------------------------------|----------|
   | controller    | string | "ANALOG", "MPU6050". The Name of the controller to use | "ANALOG" | no       |
 
+  </span>
+
 - **Analog Options (`controller: "ANALOG"`)** 
+  <span class="abbreviate-table">
 
   | Property | Type             | Value/Description  | Default | Required |
   |---------------|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|---------|
@@ -25,11 +32,16 @@ This list will continue to be updated as more Gyro devices are confirmed.
   | sensitivity   | Number           | Varies by device. For Tinkerkit, use `Gyro.TK_4X` or `Gyro.TK_1X`. This value can be identified in the device's datasheet.            |    | yes      |
   | resolution    | Number           | Varies by device. This value can be identified in the device's datasheet             | 4.88    | no       |
 
+  </span>
+
 - **MPU6050 Options (`controller: "MPU6050"`)** 
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                      | Default | Required |
   |---------------|--------|----------------------|---------------------------------------------------------------------------------------------------|---------|
   | sensitivity   | Number | LSB/DegreesPerSecond. The sensitivity of the device. The MPU-6050 is currently configured at +/- 250 degrees per second | 131     | no       |
+
+  </span>
 
 ## Shape
 
