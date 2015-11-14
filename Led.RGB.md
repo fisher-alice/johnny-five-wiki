@@ -3,14 +3,17 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 ## Parameters
 
 - **pins** An Array containing the pins **red**, **green** and **blue**. All pins must support PWM.
+  <span class="abbreviate-table">
 
   | Index | Type   | Value/Description              | Default | Required |
   |-------|--------|--------------------------------|---------|----------|
   | 0     | Number | PWM capable to control red     |         | yes      |
   | 1     | Number | PWM capable to control green   |         | yes      |
   | 2     | Number | PWM capable to control blue    |         | yes      |
+  </span>
 
 - **options**
+  <span class="abbreviate-table">
 
   | Property | Type    | Value/Description                                                                                                     | Default | Required |
   |----------|---------|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------|
@@ -18,23 +21,27 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
   | pins     | Array  | See **pins** table below | | Yes (either)      |
   | isAnode  | Boolean | `true`, `false`. Set this to true to indicate the LED is a common anode LED. Defaults to false, indicating a common cathode LED. | | no       |
   | controller  | String  | DEFAULT, PCA9685, BLINKM. Controller interface type. | `"DEFAULT"` | no |                                           
+  </span>
 
   * **pins** (Object)
+    <span class="abbreviate-table">
 
-    | Property | Type   | Value/Description              | Required |
-    |----------|--------|--------------------------------|----------|
-    | red      | Number | PWM capable to control **red**   | yes      |
-    | green    | Number | PWM capable to control **green** | yes      |
-    | blue     | Number | PWM capable to control **blue**  | yes      |
+    | Property | Type   | Value/Description              | Default | Required |
+    |----------|--------|--------------------------------|---------|----------|
+    | red      | Number | PWM capable to control **red**   |  | yes      |
+    | green    | Number | PWM capable to control **green** |  | yes      |
+    | blue     | Number | PWM capable to control **blue**  |  | yes      |
+    </span>
 
   * **pins** (Array)
+    <span class="abbreviate-table">
 
-    | Index | Type   | Value/Description              | Required |
-    |-------|--------|--------------------------------|----------|
-    | 0     | Number | PWM capable to control **red**   | yes      |
-    | 1     | Number | PWM capable to control **green** | yes      |
-    | 2     | Number | PWM capable to control **blue**  | yes      |
-
+    | Index | Type   | Value/Description              | Default | Required |
+    |-------|--------|--------------------------------|---------|----------|
+    | 0     | Number | PWM capable to control **red**   |  | yes      |
+    | 1     | Number | PWM capable to control **green** |  | yes      |
+    | 2     | Number | PWM capable to control **blue**  |  | yes      |
+    </span>
 
 
 
