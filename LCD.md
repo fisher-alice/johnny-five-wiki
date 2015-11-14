@@ -3,24 +3,30 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 ## Parameters
 
 - **General Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description    | Default | Required |
   |---------------|--------|-------------------------------------|----------------|----------|
   | rows          | Number | The number of rows on the device    | 2  | No       |
   | cols          | Number | The number of columns on the device | 16 | No       |
+  </span>
 
 - **I2C Options**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                        | Default | Required |
   |---------------|--------|--------------------------------------|------------------------------------|----------|
   | controller    | String | "PCF8574", "PCF8574A", "JHD1313M1" (Grove). The name of the controller to use. | | Yes      |
+  </span>
 
 - **Parallel Options (Default Controller)**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                           |Default | Required |
   |---------------|--------|--------------------------------------------------------|---|----------|
   | pins          | Object | `{ rs, en, d4, d5, d6, d7 }`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | | Yes (Either) |
   | pins          | Array  | `[ rs, en, d4, d5, d6, d7 ]`. Sets the values of the rs, en, d4, d5, d6 and d7 pins. | | Yes (Either) |
+  </span>
 
 
 ## Shape
