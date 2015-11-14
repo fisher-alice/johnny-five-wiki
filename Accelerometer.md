@@ -14,6 +14,7 @@ Supported Accelerometers:
   - MMA7361
     - [SparkFun](https://www.sparkfun.com/products/retired/9652) (Retired)
 - MPU6050 (I2C IMU)
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
   - [SparkFun](https://www.sparkfun.com/products/11028)
 - ADXL345 (I2C)
   - [Adafruit](https://www.adafruit.com/products/1231)
