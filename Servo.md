@@ -22,6 +22,12 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | controller    | String  | `"DEFAULT"`, `"PCA9685"`. Controller interface type. | `"DEFAULT"`  |                                          no  |
   </span>
 
+- **Debug Options** Although servos can run on digital pins, this can sometimes cause issues. For this reason servos are forced to use only PWM under debug mode and will emit an error if used on a digital pin.
+
+  | Property | Type    | Value/Description       | Default | Required |
+  |----------|---------|-------------------------|----------|----------|
+  | debug    | Boolean | `true` or `false`. Set servo to debug mode | `false` | no       |
+
 
 - **PCA9685 Options (`controller: "PCA9685"`)**
   <span class="abbreviate-table">
@@ -360,32 +366,6 @@ It's recommended to use a rotary potentiometer as the mechanism for determining 
 
 - **move:complete** This is emitted when a timed move is completed. The event won't fire unless a time argument has been passed to the ```servo.to()``` method.
 
-
-## Additional Information
-
-Although servos can run on digital pins, this can sometimes cause issues. For this reason servos are forced to use only PWM under debug mode and will emit an error if used on a digital pin.
-
-**Servo debug option:**
-<table>
-  <thead>
-    <thead>
-      <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Value(s)</th>
-        <th>Description</th>
-        <th>Required</th>
-      </tr>
-    </thead>
-    <tr>
-      <td>debug</td>
-      <td>Boolean</td>
-      <td>true or false</td>
-      <td>Set servo to debug mode</td>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Troubleshooting
 
