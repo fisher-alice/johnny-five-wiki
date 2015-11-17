@@ -19,7 +19,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   | offset        | Number        | A positive or negative value to adjust the servo. | `false`              | no       |
   | invert        | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
   | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. | `false` | no       |
-  | controller    | String  | `"DEFAULT"`, `"PCA9685"`. Controller interface type. | `"DEFAULT"`  |                                          no  |
+  | controller    | String  | DEFAULT, PCA9685. Controller interface type. | DEFAULT  |                                          no  |
   </span>
 
 - **Debug Options** Although servos can run on digital pins, this can sometimes cause issues. For this reason servos are forced to use only PWM under debug mode and will emit an error if used on a digital pin.
@@ -28,6 +28,16 @@ The `Servo` class constructs objects that represent a single Servo attached to t
   |----------|---------|-------------------------|----------|----------|
   | debug    | Boolean | `true` or `false`. Set servo to debug mode | `false` | no       |
 
+- **Continuous Servo Options** 
+
+  | Property | Type    | Value/Description       | Default | Required |
+  |----------|---------|-------------------------|----------|----------|
+  | deadband | Array   | `[ lower, upper ]`. The deadband/stop point of the servo.\* | `[90, 90]` | no |
+
+  > \* Some continuous servos do not have a trim pot for fine tuning the stop point, instead they have a built-in "deadband" range, which should be documented but otherwise requires manual measurement.
+  > Examples: 
+  > - [HSR-1425CR](https://www.servocity.com/html/hsr-1425cr__continuous_rotatio.html#.VktWWN-rTOQ)
+  > - [Generic High Torque Continuous Rotation Servo](http://tinkersphere.com/motors-wheels/241-high-torque-continuous-rotation-servo-4kg.html)
 
 - **PCA9685 Options (`controller: "PCA9685"`)**
   <span class="abbreviate-table">
