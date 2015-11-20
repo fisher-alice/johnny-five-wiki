@@ -72,8 +72,7 @@ new five.Keypad({
 
 ```javascript
 new five.Keypad({
-   controller: "MPR121",
-   keys: ["!", "@", "#", "$", "%", "^", "&", "-", "+", "_", "=", ":"]
+   controller: "MPR121"
 });
 ```
 
