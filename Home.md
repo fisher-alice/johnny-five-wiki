@@ -33,6 +33,7 @@
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
 - [IR.Reflectance](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
 - [Joystick](https://github.com/rwaldron/johnny-five/wiki/Joystick)
+- [Keypad](https://github.com/rwaldron/johnny-five/wiki/Keypad)
 - [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
 - [Led](https://github.com/rwaldron/johnny-five/wiki/Led)
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/Led.Digits)
