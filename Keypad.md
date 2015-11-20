@@ -1,3 +1,5 @@
+
+
 The `Keypad` class constructs an object that represents a single Keypad attached to the board.
 
 Supported Keypads:
@@ -48,6 +50,48 @@ Supported Keypads:
 
 ## Component Initialization
 
+#### ANALOG
+
+```javascript
+new five.Keypad({
+  pin: "A0",
+  length: 16
+});
+```
+
+#### VKEY
+
+```javascript
+new five.Keypad({
+  controller: "VKEY",
+  pin: "A0",
+});
+```
+
+#### MPR121
+
+```javascript
+new five.Keypad({
+   controller: "MPR121",
+   keys: ["!", "@", "#", "$", "%", "^", "&", "-", "+", "_", "=", ":"]
+});
+```
+
+#### MPR121QR2
+
+```javascript
+new five.Keypad({
+   controller: "MPR121QR2"
+});
+```
+
+#### QTOUCH / AT42QT1070
+
+```javascript
+new five.Keypad({
+  controller: "QTOUCH", // or "AT42QT1070"
+});
+```
 ## Events
 
 - **hold** The key has been held for `holdtime` milliseconds
