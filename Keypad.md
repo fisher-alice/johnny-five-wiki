@@ -194,6 +194,8 @@ keypad.on("press", function(event) {
 
 ## Events
 
+- **change** Emitted for **hold**, **down**, **up**
+
 - **hold** The key has been held for `holdtime` milliseconds
 
 - **down**, **press** The key has been pressed.
