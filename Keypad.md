@@ -34,6 +34,11 @@ Supported Keypads:
 
 ## Shape
 
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `which` | Value of button pressed from `keys` array | No |
+| `timestamp` | Timestamp at time of button press | No |
+
 ## Component Initialization
 
 ## API
