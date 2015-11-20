@@ -30,17 +30,23 @@ Supported Keypads:
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | pin    | number, string | Analog pin | | Yes |
-  | length | number | Number of buttons (required only if `keys` is not specified) | | Yes |
+  | length | number | Number of keys (required only if `keys` is not specified) | | Yes |
 
 ## Shape
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| `which` | Value of button pressed from `keys` array | No |
-| `timestamp` | Timestamp at time of button press | No |
+| `which` | Value of key pressed from `keys` array | No |
+| `timestamp` | Timestamp at time of key press | No |
 
 ## Component Initialization
 
 ## API
 
 ## Events
+
+- **hold** The key has been held for `holdtime` milliseconds
+
+- **down**, **press** The key has been pressed.
+
+- **up**, **release** The key has been released.
