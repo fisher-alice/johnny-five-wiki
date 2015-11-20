@@ -26,6 +26,7 @@ Supported Keypads:
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | controller    | string | AT42QT1070, MPR121, MPR121QR2, QTOUCH, VKEY, ANALOG. The Name of the controller to use | ANALOG | Yes       |
   | keys    | array | Mapping of key values |  By Device | No       |
+  | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
   </span>
 
 - **VKEY Options (`controller: "VKEY"`)** 
@@ -84,6 +85,8 @@ new five.Keypad({
 });
 ```
 
+![](http://johnny-five.io/img/breadboard/keypad-MPR121QR2.png)
+
 #### QTOUCH / AT42QT1070
 
 ```javascript
@@ -117,6 +120,77 @@ board.on("ready", function() {
   });
 });
 ```
+
+#### A Note About The `keys` Option
+
+The `keys` option allows the assignment of _any_ value to _any_ key/button on the device. The value of `keys` may be a flat array of strings, or an array of arrays where the nested array are "rows" on the device. The values given in the `keys` array are the values that the instance will report for key/button presses. 
+
+Using the `MPR121QR2` to illustrate `keys`: 
+
+![](http://johnny-five.io/img/breadboard/keypad-MPR121QR2.png)
+
+
+The buttons are labelled `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`. If the instance of `Keypad` is created **without** an explicit `keys` property, the output will be _exactly_ those numbers; ie. pressing `1` will result in an event whose data object's `which` property is the value `1` (and so on):
+
+
+```js
+var keypad = new five.Keypad({
+  controller: "MPR121QR2"
+});
+
+keypad.on("press", function(event) {
+  console.log("Which button?", event.which);
+});
+```
+
+However, the `keys` property allows a program to assign **any** value to be the resulting value (because who knows&mdash;you may want to use symbols!)
+
+```js
+var keypad = new five.Keypad({
+  controller: "MPR121QR2",
+  keys: [
+    ["", "△", ""],
+    ["◁", "☐", "▷"],
+    ["", "▽", ""]
+  ]
+});
+
+keypad.on("press", function(event) {
+  if (event.which) {
+    console.log(event.which);
+  }
+});
+```
+
+Pressing `2`, `8`, `4`, `6`, `5` would result in the following output: 
+
+```
+$ node eg/keypad-symbol-MPR121QR2.js
+1448040971577 Device(s) /dev/cu.usbmodem1411
+1448040971586 Connected /dev/cu.usbmodem1411
+1448040975171 Repl Initialized
+>> △
+▽
+◁
+▷
+☐
+```
+
+If your program prefers a flat array, the equivalent program would be: 
+
+```js
+var keypad = new five.Keypad({
+  controller: "MPR121QR2",
+  keys: ["", "△", "", "◁", "☐", "▷", "", "▽", ""]
+});
+
+keypad.on("press", function(event) {
+  if (event.which) {
+    console.log(event.which);
+  }
+});
+```
+
 
 ## Events
 
