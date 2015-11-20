@@ -99,3 +99,16 @@ new five.Keypad({
 - **down**, **press** The key has been pressed.
 
 - **up**, **release** The key has been released.
+
+<!--remove-start-->
+
+## Examples
+
+- [Atmel AT42QT1070 (Q Touch)](https://github.com/rwaldron/johnny-five/blob/master/docs/keypad-AT42QT1070.md)
+- [MPR121](https://github.com/rwaldron/johnny-five/blob/master/docs/keypad-MPR121.md)
+- [MPR121QR2](https://github.com/rwaldron/johnny-five/blob/master/docs/keypad-MPR121QR2.md)
+- [Grove QTouch](https://github.com/rwaldron/johnny-five/blob/master/docs/keypad-QTOUCH.md)
+- [Waveshare AD](https://github.com/rwaldron/johnny-five/blob/master/docs/keypad-analog-ad.md)
+- [VKEY](https://github.com/rwaldron/johnny-five/blob/master/docs/keypad-analog-vkey.md)
+
+<!--remove-end-->
