@@ -45,8 +45,8 @@ Supported Keypads:
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| `which` | Value of key pressed from `keys` array | No |
-| `timestamp` | Timestamp at time of key press | No |
+| `value` | Index of the pressed key | No |
+| `target` | Mapped key value of pressed key | No |
 
 ## Component Initialization
 
@@ -125,6 +125,13 @@ board.on("ready", function() {
 - **down**, **press** The key has been pressed.
 
 - **up**, **release** The key has been released.
+
+The following data object is emitted with each event:
+
+| Key Name | Description |
+|---------------| ----------- |
+| `which` | Value of key pressed from `keys` array |
+| `timestamp` | Timestamp at time of key press |
 
 <!--remove-start-->
 
