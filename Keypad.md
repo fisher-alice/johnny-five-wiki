@@ -1,4 +1,4 @@
-
+![](http://i.imgur.com/Il23mnI.png)
 
 The `Keypad` class constructs an object that represents a single Keypad attached to the board.
 
