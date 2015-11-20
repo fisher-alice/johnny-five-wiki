@@ -92,6 +92,33 @@ new five.Keypad({
   controller: "QTOUCH", // or "AT42QT1070"
 });
 ```
+
+### Usage
+
+```javascript
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  // MPR121 3x4 Capacitive Touch Pad
+  var keypad = new five.Keypad({
+    controller: "MPR121",
+    keys: [
+      ["!", "@", "#"],
+      ["$", "%", "^"],
+      ["&", "-", "+"],
+      ["_", "=", ":"]
+    ]
+  });
+
+  ["change", "press", "hold", "release"].forEach(function(eventType) {
+    keypad.on(eventType, function(data) {
+      console.log("Event: %s, Target: %s", eventType, data.which);
+    });
+  });
+});
+```
+
 ## Events
 
 - **hold** The key has been held for `holdtime` milliseconds
