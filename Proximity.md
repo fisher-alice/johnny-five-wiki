@@ -243,7 +243,7 @@ var five = require("johnny-five");
 var board = new five.Board();
 
 board.on("ready", function() {
-  var proximity = new five.IR.Proximity({
+  var proximity = new five.Proximity({
     controller: ...,
     pin: "A0"
   });
