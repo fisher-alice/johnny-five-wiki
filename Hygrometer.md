@@ -1,10 +1,10 @@
-The `Hygrometer` class constructs objects that represent a single Hygrometer sensor attached to the physical board. Hygrometers are used to measure absolute and relative humidity. 
+The `Hygrometer` class constructs objects that represent a single Hygrometer sensor attached to the physical board. Hygrometers are used to measure absolute and relative humidity.
 
 Supported Hygrometers:
 
 - HTU21D
-  - [Adafruit](https://www.adafruit.com/products/1899)
-  - [Sparkfun](https://www.sparkfun.com/products/12064)
+  - [Adafruit](https://www.adafruit.com/products/1899?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
 
 
 This list will continue to be updated as more devices are confirmed.

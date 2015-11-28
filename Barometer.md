@@ -3,16 +3,16 @@ The `Barometer` class constructs objects that represent a single Barometer senso
 Supported Barometers:
 
 - BMP180
-  - [Adafruit](https://www.adafruit.com/products/1603)
-  - [SparkFun](https://www.sparkfun.com/products/11824)
+  - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/11824?utm_source=j5)
 - MPL115A2
-  - [Adafruit](https://www.adafruit.com/products/992)
-  - [SparkFun](https://www.sparkfun.com/products/9721)
+  - [Adafruit](https://www.adafruit.com/products/992?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/9721?utm_source=j5)
 - MPL3115A2
-  - [Adafruit](https://www.adafruit.com/products/1893)
-  - [Sparkfun](https://www.sparkfun.com/products/11084)
-    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
-    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
+  - [Adafruit](https://www.adafruit.com/products/1893?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/11084?utm_source=j5)
+    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081?utm_source=j5)
+    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -28,7 +28,7 @@ This list will continue to be updated as more component support is implemented.
   | freq | number | Milliseconds. The rate in ms of data events. | 25 | No |
   </span>
 
-- **BMP180 Options (`controller: "BMP180"`)** 
+- **BMP180 Options (`controller: "BMP180"`)**
   <span class="abbreviate-table">
 
   | Property | Type             | Value/Description     | Default | Required |
@@ -43,7 +43,7 @@ This list will continue to be updated as more component support is implemented.
 | `id` | A user definable id value. Defaults to a generated uid | No |
 | `pressure` | The current pressure value in kPa. | Yes |
 
-## Component Initialization 
+## Component Initialization
 
 
 

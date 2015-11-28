@@ -1,21 +1,21 @@
-The `Multi` class constructs objects that represent a single "breakout" module attached to the physical board. The "breakout" module will itself contain 2 or more components, such as a thermistor and a hygrometer, or an altimeter and a pressure sensor. 
+The `Multi` class constructs objects that represent a single "breakout" module attached to the physical board. The "breakout" module will itself contain 2 or more components, such as a thermistor and a hygrometer, or an altimeter and a pressure sensor.
 
-Supported multi sensor modules: 
+Supported multi sensor modules:
 
 - BMP180
-  - [Adafruit](https://www.adafruit.com/products/1603)
-  - [Sparkfun](https://www.sparkfun.com/products/11824)
+  - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/11824?utm_source=j5)
 - HTU21D
-  - [Adafruit](https://www.adafruit.com/products/1899)
-  - [Sparkfun](https://www.sparkfun.com/products/12064)
+  - [Adafruit](https://www.adafruit.com/products/1899?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
 - MPL115A2
-  - [Adafruit](https://www.adafruit.com/products/992)
-  - [Sparkfun](https://www.sparkfun.com/products/9721)
+  - [Adafruit](https://www.adafruit.com/products/992?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/9721?utm_source=j5)
 - MPL3115A2
-  - [Adafruit](https://www.adafruit.com/products/1893)
-  - [Sparkfun](https://www.sparkfun.com/products/11084)
-    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
-    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
+  - [Adafruit](https://www.adafruit.com/products/1893?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/11084?utm_source=j5)
+    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081?utm_source=j5)
+    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
 - SI7020
   - [Tessel](http://start.tessel.io/modules/climate)
 
@@ -31,7 +31,7 @@ This list will continue to be updated as more component support is implemented.
   | controller    | string | BMP180, HTU21D, MPL115A2, MPL3115A2, SI7020. The Name of the controller to use            |  | yes       |
   </span>
 
-## Shape 
+## Shape
 Some of these properties may or may not exist depending on whether the multi sensor supports it.
 
 | Property Name | Description | Read Only |
@@ -62,7 +62,7 @@ new five.Multi({
 | ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
-![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)   
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-bmp180.png)
 
 
 #### HTU21D
@@ -107,7 +107,7 @@ new five.Multi({
 
 
 
-![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)   
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-mpl115a2.png)
 
 #### MPL3115A2
 
@@ -125,7 +125,7 @@ new five.Multi({
 | ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 
-![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)   
+![](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)
 
 #### SI7020
 
@@ -141,7 +141,7 @@ new five.Multi({
 | `thermometer` | An instance of `Thermometer` class. | Yes |
 | ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
-![](http://johnny-five.io/img/breadboard/temperature-SI7020.png)   
+![](http://johnny-five.io/img/breadboard/temperature-SI7020.png)
 
 
 ## Usage

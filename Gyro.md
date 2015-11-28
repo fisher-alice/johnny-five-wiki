@@ -8,7 +8,7 @@ We currently support two kinds of Gyros:
   - Used on the TinkerKit Gyro breakout
 - MPU6050 (I2C)
   - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
-  - [SparkFun](https://www.sparkfun.com/products/11028)
+  - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 
 This list will continue to be updated as more Gyro devices are confirmed.
 
@@ -22,7 +22,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
   | controller    | string | "ANALOG", "MPU6050". The Name of the controller to use | "ANALOG" | no       |
   </span>
 
-- **Analog Options (`controller: "ANALOG"`)** 
+- **Analog Options (`controller: "ANALOG"`)**
   <span class="abbreviate-table">
 
   | Property | Type             | Value/Description  | Default | Required |
@@ -32,7 +32,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
   | resolution    | Number           | Varies by device. This value can be identified in the device's datasheet             | 4.88    | no       |
   </span>
 
-- **MPU6050 Options (`controller: "MPU6050"`)** 
+- **MPU6050 Options (`controller: "MPU6050"`)**
   <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                      | Default | Required |
@@ -61,7 +61,7 @@ This list will continue to be updated as more Gyro devices are confirmed.
 
 ```js
 // Analog Gyro:
-// 
+//
 //   - attach X and Y to "A0" and "A1" respectively
 //   - Use the LPR5150AL 4X sensitivity rating
 //

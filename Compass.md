@@ -5,10 +5,10 @@ The `Compass` class constructs an object that represents a single Compass or Mag
 Supported Compass/Magnetometer:
 
 - HMC6352
-  - No longer in production, but we assume people may still have them. 
+  - No longer in production, but we assume people may still have them.
 - HMC5883L
-  - [Triple-axis Magnetometer (Compass) Board - HMC5883L](https://www.adafruit.com/products/1746)
-  - [SparkFun Triple Axis Magnetometer Breakout - HMC5883L](https://www.sparkfun.com/products/10530)
+  - [Triple-axis Magnetometer (Compass) Board - HMC5883L](https://www.adafruit.com/products/1746?utm_source=j5)
+  - [SparkFun Triple Axis Magnetometer Breakout - HMC5883L](https://www.sparkfun.com/products/10530?utm_source=j5)
 
 
 This list will continue to be updated as more component support is implemented.

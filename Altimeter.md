@@ -3,10 +3,10 @@ The `Altimeter` class constructs objects that represent a single Altimeter senso
 Supported Altimeters:
 
 - MPL3115A2
-  - [Adafruit](https://www.adafruit.com/products/1893)
-  - [Sparkfun](https://www.sparkfun.com/products/11084)
-    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
-    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
+  - [Adafruit](https://www.adafruit.com/products/1893?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/11084?utm_source=j5)
+    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081?utm_source=j5)
+    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -30,7 +30,7 @@ This list will continue to be updated as more component support is implemented.
 | `feet` | The current altitude value in feet. | Yes |
 | `meters` | The current altitude value in meters. | Yes |
 
-## Component Initialization 
+## Component Initialization
 
 
 

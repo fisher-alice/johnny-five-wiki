@@ -1,24 +1,24 @@
 
-The `Expander` class constructs objects that represent a single I2C IO Expander attached to the physical board. Expansion chips are useful for adding additional I/O to a project. In certain cases, I/O expansion chips can be used to provide capabilities on platforms that don't support natively support them. A couple examples: 
+The `Expander` class constructs objects that represent a single I2C IO Expander attached to the physical board. Expansion chips are useful for adding additional I/O to a project. In certain cases, I/O expansion chips can be used to provide capabilities on platforms that don't support natively support them. A couple examples:
 
 - To add "Analog Read" (ADC) capabilities to your Raspberry Pi project, use a `PCF8591`
 - To add "Servo Write" (60Hz PWM) capabilities to your Raspberry Pi or pcDuino project, use a `PCA9685`
 
- 
+
 Supported Expanders:
 
 - MCP23017
-  - [Adafruit](https://www.adafruit.com/products/732)
+  - [Adafruit](https://www.adafruit.com/products/732?utm_source=j5)
 - MCP23008
-  - [Adafruit](https://www.adafruit.com/product/593)
+  - [Adafruit](https://www.adafruit.com/product/593?utm_source=j5)
 - PCF8574
   - [Amazon](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
 - PCF8574A
   - [Amazon](http://www.amazon.com/Expansion-PCF8574-Expander-Evaluation-Development/dp/B00DUO17J6/)
 - PCF8575
-  - [SparkFun](https://www.sparkfun.com/products/8130)
+  - [SparkFun](https://www.sparkfun.com/products/8130?utm_source=j5)
 - PCA9685
-  - [Adafruit](https://www.adafruit.com/products/815)
+  - [Adafruit](https://www.adafruit.com/products/815?utm_source=j5)
 - PCF8591
   - [Amazon](http://www.amazon.com/PCF8591-Converter-Module-Digital-Conversion/dp/B00BXX4UWC)
 
@@ -39,7 +39,7 @@ This list will continue to be updated as more component support is implemented.
   - `PCA9685`
 
   ```js
-  // Examples: 
+  // Examples:
   new five.Expander("MCP23017");
 
   new five.Expander("PCF8574");
@@ -64,12 +64,12 @@ This list will continue to be updated as more component support is implemented.
   // or
 
   new five.Expander({
-    controller: "MCP23017", 
+    controller: "MCP23017",
     address: 0x??
   });
   ```
 
-  ##### Expander Capabilities 
+  ##### Expander Capabilities
 
   | Chip | Pins | Modes |
   |------|------|-------|
@@ -79,7 +79,7 @@ This list will continue to be updated as more component support is implemented.
   | PCF8574A | 8 | `INPUT`, `OUTPUT` |
   | PCF8575 | 16 | `INPUT`, `OUTPUT` |
   | PCF8591 | 4 | `ANALOG` |
-  | PCA9685 | 16 | `OUTPUT`, `PWM`, `SERVO` |  
+  | PCA9685 | 16 | `OUTPUT`, `PWM`, `SERVO` |
 
   ##### Default Addresses
 
@@ -90,9 +90,9 @@ This list will continue to be updated as more component support is implemented.
   | PCF8574 | `0x20-0x27` | `0x20` |
   | PCF8574A | `0x38-0x3F` | `0x38` |
   | PCF8575 | `0x20-0x27` | `0x20` |
-  | PCF8591 | `0x48-0x4F` | `0x48` |  
-  | PCA9685 | `0x40-0x4F` | `0x40` |  
- 
+  | PCF8591 | `0x48-0x4F` | `0x48` |
+  | PCA9685 | `0x40-0x4F` | `0x40` |
+
 
 ## Shape
 
@@ -102,26 +102,26 @@ This list will continue to be updated as more component support is implemented.
 | `pins` | An array of pin objects, containing capability data. | No |
 | `MODES` | An object containing supported modes. | No |
 
-## Component Initialization 
+## Component Initialization
 
 
 #### MCP23017
 ```js
 // Create a MCP23017 Expander object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the MCP23017 controller
 
 new five.Expander("MCP23017");
 
-// or 
+// or
 
 new five.Expander({
   controller: "MCP23017"
 });
 
-// or 
+// or
 
 new five.Expander({
   controller: "MCP23017",
@@ -136,19 +136,19 @@ new five.Expander({
 ```js
 // Create a MCP23008 Expander object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the MCP23008 controller
 
 new five.Expander("MCP23008");
 
-// or 
+// or
 
 new five.Expander({
   controller: "MCP23008"
 });
 
-// or 
+// or
 
 new five.Expander({
   controller: "MCP23008",
@@ -162,19 +162,19 @@ new five.Expander({
 ```js
 // Create a PCF8574 Expander object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the PCF8574 controller
 
 new five.Expander("PCF8574");
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCF8574"
 });
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCF8574",
@@ -189,19 +189,19 @@ new five.Expander({
 ```js
 // Create a PCF8575 Expander object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the PCF8575 controller
 
 new five.Expander("PCF8575");
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCF8575"
 });
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCF8575",
@@ -216,19 +216,19 @@ new five.Expander({
 ```js
 // Create a PCA9685 Expander object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the PCA9685 controller
 
 new five.Expander("PCA9685");
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCA9685"
 });
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCA9685",
@@ -244,19 +244,19 @@ new five.Expander({
 ```js
 // Create a PCF8591 Expander object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the PCF8591 controller
 
 new five.Expander("PCF8591");
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCF8591"
 });
 
-// or 
+// or
 
 new five.Expander({
   controller: "PCF8591",
@@ -288,7 +288,7 @@ board.on("ready", function() {
   });
 
   var led = new five.Led({
-    pin: 0, 
+    pin: 0,
     board: virtual
   });
 
@@ -308,7 +308,7 @@ var five = require("johnny-five");
 var board = new five.Board();
 
 board.on("ready", function() {
-  // An Expander instance can also be passed 
+  // An Expander instance can also be passed
   // directly as an argument to Virtual
   var virtual = new five.Board.Virtual(
     new five.Expander("PCF8575")
@@ -316,12 +316,12 @@ board.on("ready", function() {
 
   var led = new five.Led({
     board: virtual,
-    pin: 0, 
+    pin: 0,
   });
 
   var button = new five.Button({
     board: virtual,
-    pin: 17, 
+    pin: 17,
   });
 
   button.on("press", function() {
@@ -340,7 +340,7 @@ board.on("ready", function() {
 
 While the API of an `Expander` instance will be the same as a `Board` instance, not all capabilities will always be supported. In latter cases, attempts to call methods that would result in attempting an unsupported operation will throw an exception.
 
-- **normalize(pin)** Provides pin value normalization. In most cases, this will simply return the value it was passed. It exists to override the default Firmata-centric normalization. 
+- **normalize(pin)** Provides pin value normalization. In most cases, this will simply return the value it was passed. It exists to override the default Firmata-centric normalization.
   ```js
   expander.normalize(1); // 1;
   ```
@@ -384,4 +384,4 @@ While the API of an `Expander` instance will be the same as a `Board` instance, 
 
 - **analog-read-#** Whenever `analogRead(pin, ...)` is called, an event handler with naming form of `analog-read-#` (where # is the pin number) is registered.
 
-- **ready** For compatibility with IO Plugins only. This event is meaningless, so don't use it. 
+- **ready** For compatibility with IO Plugins only. This event is meaningless, so don't use it.

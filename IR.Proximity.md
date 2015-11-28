@@ -1,10 +1,10 @@
 The `IR.Proximity` class constructs an object that represents a single Infrared Proximity sensor.
 
 - Proximity
-    - [GP2Y0A21YK, Analog](https://www.sparkfun.com/products/242)
-    - [GP2D120XJ00F, Analog](https://www.sparkfun.com/products/8959)
-    - [GP2Y0A02YK0F, Analog](https://www.sparkfun.com/products/8958)
-    - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728)
+    - [GP2Y0A21YK, Analog](https://www.sparkfun.com/products/242?utm_source=j5)
+    - [GP2D120XJ00F, Analog](https://www.sparkfun.com/products/8959?utm_source=j5)
+    - [GP2Y0A02YK0F, Analog](https://www.sparkfun.com/products/8958?utm_source=j5)
+    - [GP2Y0A41SK0F, Analog](https://www.sparkfun.com/products/12728?utm_source=j5)
 
 
 **NOTE:** The `IR.Proximity` is deprecated. Please use the [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity) class.
@@ -22,7 +22,7 @@ The `IR.Proximity` class constructs an object that represents a single Infrared 
 ## Shape
 
 ```
-{ 
+{
   id: A user definable id value. Defaults to a generated uid
   pin: The pin address that the Sensor is attached to
   cm: Distance to obstruction in centimeters. READONLY

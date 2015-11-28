@@ -8,7 +8,7 @@
     - [Arduino Pro](http://arduino.cc/en/Main/ArduinoBoardPro)
     - [Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)
     - [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
-- [Sparkfun Inventor's Kit](https://www.sparkfun.com/products/11576) (Wordt aangeraden als je net begint)
+- [Sparkfun Inventor's Kit](https://www.sparkfun.com/products/11576?utm_source=j5) (Wordt aangeraden als je net begint)
 
 ### OSX
 
@@ -16,7 +16,7 @@
 - Installeer Xcode
 - Installeer node-gyp `npm install -g node-gyp`
 
-### Windows 
+### Windows
 
 Door @ThomasDeutsch in https://github.com/rwldrn/johnny-five/issues/48#issuecomment-7696662
 

@@ -1,7 +1,7 @@
 The `Proximity` class constructs an object that represents a single Proximity sensor.
 
 
-Supported Proximity sensors: 
+Supported Proximity sensors:
 
 - Pulse/PWM
   - Ultrasonic (All use `controller: "HCSR04"`, Arduino boards require [PingFirmata](#pingfirmata))
@@ -11,7 +11,7 @@ Supported Proximity sensors:
     - [SeeedStudio Ultrasonic Range](http://www.seeedstudio.com/depot/Ultra-Sonic-range-measurement-module-p-626.html)
     - [Grove - Ultrasonic Ranger](http://www.seeedstudio.com/depot/Grove-Ultrasonic-Ranger-p-960.html) \*
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-2cm (will result in 2cm reading)
           - Long: 2–400cm
         - Resolution: ~0.3cm
@@ -20,71 +20,71 @@ Supported Proximity sensors:
   - Ultrasonic
     - [MB1000, LV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1000.htm)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-15cm (will result in 15cm reading)
           - Long: 15-645cm (15-50cm may experience acoustic phase cancellation)
         - Resolution: 2.54cm
       - Likely supports the entire `LV-MaxSonar-EZ*` line, additional sensors to be confirmed.
     - [MB1010, LV-MaxSonar-EZ1](http://maxbotix.com/Ultrasonic_Sensors/MB1010.htm)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-15cm (will result in 15cm reading)
           - Long: 15-645cm
         - Resolution: 2.54cm
     - [MB1003, HRLV-MaxSonar-EZ0](http://maxbotix.com/Ultrasonic_Sensors/MB1003.htm)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-30cm (will result in 30cm reading)
           - Long: 30-500cm
         - Resolution: 1cm
     - [MB1230, XL-MaxSonar-EZ3](http://maxbotix.com/Ultrasonic_Sensors/MB1230.htm)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-20cm (will result in 20cm reading)
           - Long: 20-765cm
         - Resolution: 1cm
   - Infrared
-    - [GP2Y0A21YK](https://www.sparkfun.com/products/242)
+    - [GP2Y0A21YK](https://www.sparkfun.com/products/242?utm_source=j5)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-10cm (will result in 10cm reading)
           - Long: 10-80cm
-        - Resolution: 1cm       
-    - [GP2D120XJ00F](https://www.sparkfun.com/products/8959)
+        - Resolution: 1cm
+    - [GP2D120XJ00F](https://www.sparkfun.com/products/8959?utm_source=j5)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-4cm (will result in 4cm reading)
           - Long: 4-30cm
-        - Resolution: 1cm       
-    - [GP2Y0A02YK0F](https://www.sparkfun.com/products/8958)
+        - Resolution: 1cm
+    - [GP2Y0A02YK0F](https://www.sparkfun.com/products/8958?utm_source=j5)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-15cm (will result in 15cm reading)
           - Long: 15-150cm
-        - Resolution: 1cm          
-    - [GP2Y0A41SK0F](https://www.sparkfun.com/products/12728)
+        - Resolution: 1cm
+    - [GP2Y0A41SK0F](https://www.sparkfun.com/products/12728?utm_source=j5)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-4cm (will result in 4cm reading)
           - Long: 4-30cm
-        - Resolution: 1cm      
-    - [GP2Y0A710K0F](https://www.adafruit.com/products/1568)   
+        - Resolution: 1cm
+    - [GP2Y0A710K0F](https://www.adafruit.com/products/1568?utm_source=j5)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-50cm (will result in 50cm reading)
           - Long: 50-500cm
-        - Resolution: 1cm         
+        - Resolution: 1cm
 - I2C
   - Lidar
-    - [LIDAR-Lite](https://www.sparkfun.com/products/13167)
+    - [LIDAR-Lite](https://www.sparkfun.com/products/13167?utm_source=j5)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Long: 0-4000cm
         - Resolution: < 1cm
   - Ultrasonic
     - [SRF10](http://www.robotshop.com/en/devantech-srf10-ultrasonic-range-finder.html)
       - Hardware Constraints
-        - Range: 
+        - Range:
           - Close: 0-6cm (will result in 6cm reading)
           - Long: 6-600cm
         - Resolution: < 1cm
@@ -141,7 +141,7 @@ Supported Proximity sensors:
 
 ```js
 /*
-  Use with: 
+  Use with:
 
   - GP2Y0A21YK
   - GP2D120XJ00F
@@ -258,16 +258,16 @@ board.on("ready", function() {
 
 ## Events
 
-- **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds. 
+- **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
 
 - **change** The "change" event is fired when the distance to obstruction reading changes within the observable range of the sensor.
 
 
-## PingFirmata 
+## PingFirmata
 
 **DOES NOT APPLY TO NON-ARDUINO PLATFORMS**
 
-For use with: 
+For use with:
 
 - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6)
 - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html)
@@ -276,6 +276,6 @@ For use with:
 - [Grove - Ultrasonic Ranger](http://www.seeedstudio.com/depot/Grove-Ultrasonic-Ranger-p-960.html)
 
 
-The above listed devices require a special version of Firmata (shown below) to be loaded onto the Arduino in order to function properly. **This is only necessary for the components listed in this section!** 
+The above listed devices require a special version of Firmata (shown below) to be loaded onto the Arduino in order to function properly. **This is only necessary for the components listed in this section!**
 
-Copy and paste [the source](https://gist.githubusercontent.com/rwaldron/0519fcd5c48bfe43b827/raw/f17fb09b92ed04722953823d9416649ff380c35b/PingFirmata.ino) into the Arduino IDE and click the Upload button. 
+Copy and paste [the source](https://gist.githubusercontent.com/rwaldron/0519fcd5c48bfe43b827/raw/f17fb09b92ed04722953823d9416649ff380c35b/PingFirmata.ino) into the Arduino IDE and click the Upload button.

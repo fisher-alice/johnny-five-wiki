@@ -6,19 +6,19 @@ Supported Accelerometers:
 
 - Analog (Like the Tinkerkit 2/3-Axis Accelerometer)
   - ADXL335
-    - [Adafruit](https://www.adafruit.com/product/163)
-    - [SparkFun](https://www.sparkfun.com/products/9269)
+    - [Adafruit](https://www.adafruit.com/product/163?utm_source=j5)
+    - [SparkFun](https://www.sparkfun.com/products/9269?utm_source=j5)
   - ADXL362
-    - [SparkFun](https://www.sparkfun.com/products/11446)
+    - [SparkFun](https://www.sparkfun.com/products/11446?utm_source=j5)
   - LIS344AL
   - MMA7361
-    - [SparkFun](https://www.sparkfun.com/products/retired/9652) (Retired)
+    - [SparkFun](https://www.sparkfun.com/products/retired/9652?utm_source=j5) (Retired)
 - MPU6050 (I2C IMU)
   - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
-  - [SparkFun](https://www.sparkfun.com/products/11028)
+  - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 - ADXL345 (I2C)
-  - [Adafruit](https://www.adafruit.com/products/1231)
-  - [SparkFun](https://www.sparkfun.com/products/9836)
+  - [Adafruit](https://www.adafruit.com/products/1231?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/9836?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -32,7 +32,7 @@ This list will continue to be updated as more component support is implemented.
   | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361. The Name of the controller to use | “ANALOG” | no       |
   </span>
 
-- **Analog Options (`controller: "ANALOG"`)** 
+- **Analog Options (`controller: "ANALOG"`)**
   <span class="abbreviate-table">
 
   | Property | Type             | Value/Description                                                                                                                                                  | Default        | Required |
@@ -44,7 +44,7 @@ This list will continue to be updated as more component support is implemented.
   | autoCalibrate | Boolean          | `true`, `false`. Whether to auto-calibrate the `zeroV` values. The device must be initialized with X/Y axes perpendicular to the earth, and the Z axis pointing to the sky. | false          | no       |
   </span>
 
-- **MPU6050 Options (`controller: "MPU6050"`)** 
+- **MPU6050 Options (`controller: "MPU6050"`)**
   <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                           | Default | Required |
@@ -52,7 +52,7 @@ This list will continue to be updated as more component support is implemented.
   | sensitivity   | Number | 16 bit value. The sensitivity for the +- 250 setting of this device | 16384   | no       |
   </span>
 
-- **MMA7361 Options (`controller: "MMA7361"`)** 
+- **MMA7361 Options (`controller: "MMA7361"`)**
   <span class="abbreviate-table">
 
   | Property | Type             | Value/Description                                                                                                                              | Default | Required |
@@ -76,12 +76,12 @@ This list will continue to be updated as more component support is implemented.
 | `inclination` | The incline of the device in degrees. | Yes |
 | `orientation` | The orientation of the device (-3, -2, -1, 1, 2, 3). | Yes |
 
-## Component Initialization 
+## Component Initialization
 
 #### Analog
 ```js
 // Create an analog Accelerometer object:
-// 
+//
 //   - attach X and Y to "A0" and "A1" respectively
 //
 new five.Accelerometer({
@@ -98,7 +98,7 @@ new five.Accelerometer({
 ```js
 // Create an MPU-6050 Accelerometer object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the MPU6050 controller
 new five.Accelerometer({
@@ -113,7 +113,7 @@ new five.Accelerometer({
 ```js
 // Create an ADXL345 Accelerometer object:
 //
-//  - attach SDA and SCL to the I2C pins on 
+//  - attach SDA and SCL to the I2C pins on
 //     your board (A4 and A5 for the Uno)
 //  - specify the ADXL345 controller
 new five.Accelerometer({
@@ -145,17 +145,17 @@ new five.Accelerometer({
 // - specify the MMA7361 controller
 // - optionally, specify the sleepPin
 // - optionally, set it to auto-calibrate
-// - optionally, set the zeroV values.  
-//    This can be done when retrieving them 
+// - optionally, set the zeroV values.
+//    This can be done when retrieving them
 //    after an autoCalibrate
 new five.Accelerometer({
   controller: "MMA7361",
   pins: ["A0", "A1", "A2"],
   sleepPin: 13,
   autoCalibrate: true,
-  // override the zeroV values if you know what 
+  // override the zeroV values if you know what
   // they are from a previous autoCalibrate
-  zeroV: [320, 365, 295] 
+  zeroV: [320, 365, 295]
 });
 ```
 
@@ -163,7 +163,7 @@ new five.Accelerometer({
 
 ## Usage
 ```js
-var five = require("johnny-five"), 
+var five = require("johnny-five"),
     board = new five.Board();
 
 board.on("ready", function() {
@@ -181,7 +181,7 @@ board.on("ready", function() {
 
 ## API
 
-- **hasAxis(name)** Does the device support the axis? 
+- **hasAxis(name)** Does the device support the axis?
   ```js
   if (accelerometer.hasAxis("z")) {
     console.log(accelerometer.z)

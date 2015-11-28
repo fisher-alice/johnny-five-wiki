@@ -5,17 +5,17 @@ The `Keypad` class constructs an object that represents a single Keypad attached
 Supported Keypads:
 
 - VKEY
-  - [SparkFun](https://www.sparkfun.com/products/12080)
+  - [SparkFun](https://www.sparkfun.com/products/12080?utm_source=j5)
 - Waveshare AD (Analog)
   - [Amazon](http://www.amazon.com/Waveshare-Accessory-buttons-controlled-keyboard/dp/B00KM6UXVS)
 - MPR121
-  - [SparkFun](https://www.sparkfun.com/products/12017)
-  - [Adafruit](https://www.adafruit.com/products/2024)
+  - [SparkFun](https://www.sparkfun.com/products/12017?utm_source=j5)
+  - [Adafruit](https://www.adafruit.com/products/2024?utm_source=j5)
 - MPR121QR2
-  - [SparkFun](https://www.sparkfun.com/products/12013)
+  - [SparkFun](https://www.sparkfun.com/products/12013?utm_source=j5)
 - Grove QTouch (AT42QT1070)
   - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html)
-  - [Adafruit](https://www.adafruit.com/products/1362)
+  - [Adafruit](https://www.adafruit.com/products/1362?utm_source=j5)
 
 ## Parameters
 
@@ -29,13 +29,13 @@ Supported Keypads:
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
   </span>
 
-- **VKEY Options (`controller: "VKEY"`)** 
+- **VKEY Options (`controller: "VKEY"`)**
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | pin    | number, string | Analog pin | | Yes |
 
-- **ANALOG Options (`controller: "ANALOG"`)** 
+- **ANALOG Options (`controller: "ANALOG"`)**
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
@@ -123,9 +123,9 @@ board.on("ready", function() {
 
 #### A Note About The `keys` Option
 
-The `keys` option allows the assignment of _any_ value to _any_ key/button on the device. The value of `keys` may be a flat array of strings, or an array of arrays where the nested array are "rows" on the device. The values given in the `keys` array are the values that the instance will report for key/button presses. 
+The `keys` option allows the assignment of _any_ value to _any_ key/button on the device. The value of `keys` may be a flat array of strings, or an array of arrays where the nested array are "rows" on the device. The values given in the `keys` array are the values that the instance will report for key/button presses.
 
-Using the `MPR121QR2` to illustrate `keys`: 
+Using the `MPR121QR2` to illustrate `keys`:
 
 ![](http://johnny-five.io/img/breadboard/keypad-MPR121QR2.png)
 
@@ -162,7 +162,7 @@ keypad.on("press", function(event) {
 });
 ```
 
-Pressing `2`, `8`, `4`, `6`, `5` would result in the following output: 
+Pressing `2`, `8`, `4`, `6`, `5` would result in the following output:
 
 ```
 $ node eg/keypad-symbol-MPR121QR2.js
@@ -176,7 +176,7 @@ $ node eg/keypad-symbol-MPR121QR2.js
 ☐
 ```
 
-If your program prefers a flat array, the equivalent program would be: 
+If your program prefers a flat array, the equivalent program would be:
 
 ```js
 var keypad = new five.Keypad({

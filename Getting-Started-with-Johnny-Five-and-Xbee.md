@@ -1,10 +1,10 @@
 # Hardware:
-* [Shield for the Arduino](https://www.sparkfun.com/products/10854)
-* [Explorer for your Computer](https://www.sparkfun.com/products/8687)
-* [XBee](https://www.sparkfun.com/products/11215) x2
+* [Shield for the Arduino](https://www.sparkfun.com/products/10854?utm_source=j5)
+* [Explorer for your Computer](https://www.sparkfun.com/products/8687?utm_source=j5)
+* [XBee](https://www.sparkfun.com/products/11215?utm_source=j5) x2
 
 Or
-* [XBee Kit](https://www.sparkfun.com/products/11445)
+* [XBee Kit](https://www.sparkfun.com/products/11445?utm_source=j5)
 
 # Software:
 * [XbeeConfigTool](https://www.dropbox.com/s/hiqv52whj1ak8av/XBeeConfigTool.zip)

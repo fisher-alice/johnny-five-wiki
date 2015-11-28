@@ -7,34 +7,34 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Mouser](http://www.mouser.com/search/ProductDetail.aspx?R=0virtualkey0virtualkeyLM35DZ-NOPB)
   - [TI](http://www.ti.com/product/lm35)
 - TMP36
-  - [Adafruit](https://www.adafruit.com/products/165)
+  - [Adafruit](https://www.adafruit.com/products/165?utm_source=j5)
   - [Analog Devices](http://www.analog.com/en/mems-sensors/digital-temperature-sensors/tmp36/products/product.html)
-  - [SparkFun](https://www.sparkfun.com/products/10988)
+  - [SparkFun](https://www.sparkfun.com/products/10988?utm_source=j5)
 - TMP102
-  - [SparkFun](https://www.sparkfun.com/products/11931)
+  - [SparkFun](https://www.sparkfun.com/products/11931?utm_source=j5)
 - DS18B20 (requires [ConfigurableFirmata](https://github.com/firmata/arduino/tree/configurable))
-  - [Adafruit](https://www.adafruit.com/products/374)
-  - [Maxim Integrated](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) 
-  - [SparkFun](https://www.sparkfun.com/products/245)
+  - [Adafruit](https://www.adafruit.com/products/374?utm_source=j5)
+  - [Maxim Integrated](http://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html)
+  - [SparkFun](https://www.sparkfun.com/products/245?utm_source=j5)
 - MPU6050
   - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
-  - [SparkFun](https://www.sparkfun.com/products/11028)
+  - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 - Grove Thermometer
   - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Thermometer-Sensor-p-774.html)
 - BMP180
-  - [Adafruit](https://www.adafruit.com/products/1603)
-  - [SparkFun](https://www.sparkfun.com/products/11824)
+  - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/11824?utm_source=j5)
 - MPL115A2
-  - [Adafruit](https://www.adafruit.com/products/992)
-  - [SparkFun](https://www.sparkfun.com/products/9721)
+  - [Adafruit](https://www.adafruit.com/products/992?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/9721?utm_source=j5)
 - MPL3115A2
-  - [Adafruit](https://www.adafruit.com/products/1893)
-  - [Sparkfun](https://www.sparkfun.com/products/11084)
-    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081)
-    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630)
+  - [Adafruit](https://www.adafruit.com/products/1893?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/11084?utm_source=j5)
+    - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081?utm_source=j5)
+    - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
 - HTU21D
-  - [Adafruit](https://www.adafruit.com/product/1899)
-  - [Sparkfun](https://www.sparkfun.com/products/12064)
+  - [Adafruit](https://www.adafruit.com/product/1899?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
 
 This list will continue to be updated as more devices are confirmed.
 

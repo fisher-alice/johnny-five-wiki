@@ -1,10 +1,10 @@
 The `IMU` class constructs objects that represent a single IMU module attached to the physical board.  An IMU is an Inertial Measurement Unit.  IMUs come in all shapes and DOFs (Degrees of Freedom).  They are often made up of several components like Accelerometers, Gyros, Temperature Sensors, and Magnetometers.
 
-Supported modules: 
+Supported modules:
 
 - MPU6050
   - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
-  - [SparkFun](https://www.sparkfun.com/products/11028)
+  - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -18,7 +18,7 @@ This list will continue to be updated as more component support is implemented.
   | controller    | string | MPU6050. The Name of the controller to use            | “MPU6050” | no       |
   </span>
 
-- **MPU6050 Options(`controller: "MPU6050"`)** 
+- **MPU6050 Options(`controller: "MPU6050"`)**
   <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                                                | Default | Required |
@@ -26,7 +26,7 @@ This list will continue to be updated as more component support is implemented.
   | address       | Number | 8-bit value. The address of the component (can be switched via ADO pin) | `0x68`    | no       |
   </span>
 
-## Shape 
+## Shape
 Some of these properties may or may not exist depending on whether the IMU supports it.
 
 | Property Name | Description | Read Only |
@@ -52,7 +52,7 @@ new five.IMU({
 ```
 
 
-![imu-mpu6050.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-mpu6050.png)   
+![imu-mpu6050.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-mpu6050.png)
 
 
 ## Usage

@@ -5,14 +5,14 @@ The `Led.Matrix` class constructs an object that may represent one or more (chai
 
 
 
-Known supported devices: 
+Known supported devices:
 
 [See all on Tindie!](https://www.tindie.com/search/?q=MAX7219)
 
 - Shift Register Devices
   - MAX7219
     - [MAX7219 Dot Matrix MCU LED Display Control Module Kit For Arduino With Dupont Cable](https://www.tindie.com/products/mmm999/max7219-dot-matrix-mcu-led-display-control-module-kit-for-arduino-with-dupont-cable/)
-    - [LED Matrix Kit](https://www.sparkfun.com/products/11861)
+    - [LED Matrix Kit](https://www.sparkfun.com/products/11861?utm_source=j5)
     - [DIY MAX7219 Red LED Dot Matrix Display Module for Arduino](http://www.amazon.com/gp/product/B009U7LAS0/)
     - [Dot Matrix Display Kit w/MAX7219 IC, PCB](http://www.electrodragon.com/product/dot-matrix-display-kit-wmax7219-ic-pcb/)
     - [Dot Matrix Chain Display Kit Max7219 V2](http://www.electrodragon.com/product/dot-matrix-chain-display-kit-max7219-v2/)
@@ -22,18 +22,18 @@ Known supported devices:
     - [Adafruit 0.8 8x8 LED Matrix (Any color)](https://learn.adafruit.com/adafruit-led-backpack/0-8-8x8-matrix)
     - [Adafruit 1.2 8x8 LED Matrix bicolor](https://learn.adafruit.com/adafruit-led-backpack/bi-color-8x8-matrix)
     - [Adafruit 1.2 8x8 LED Matrix (Any color)](https://learn.adafruit.com/adafruit-led-backpack/1-2-8x8-matrix)
-    - [Adafruit 1.2 16x8 LED Matrix (Any color)](https://www.adafruit.com/products/2040)
+    - [Adafruit 1.2 16x8 LED Matrix (Any color)](https://www.adafruit.com/products/2040?utm_source=j5)
     - [OCROBOT 8x8 LED Matrix - bicolor](http://www.aliexpress.com/item/Free-Shipping-1pc-Red-and-green-color-dot-matrix-module-I2C-1-8-inches-3mm-8/1364967656.html)
 
 If you are working with HT16K33 devices, you will need to run at least version 2.4.0 of Firmata on the board, currently available in [beta](http://sourceforge.net/projects/firmata/files/Firmata/).
 
-Adafruit offers a selection of 8x8 matrices in various colors: 
+Adafruit offers a selection of 8x8 matrices in various colors:
 
-- [White](https://www.adafruit.com/products/1821)
-- [Amber](https://www.adafruit.com/products/1818)
-- [Yellow](https://www.adafruit.com/products/1819)
-- [Green](https://www.adafruit.com/products/1820)
-- [Blue](https://www.adafruit.com/products/1817)
+- [White](https://www.adafruit.com/products/1821?utm_source=j5)
+- [Amber](https://www.adafruit.com/products/1818?utm_source=j5)
+- [Yellow](https://www.adafruit.com/products/1819?utm_source=j5)
+- [Green](https://www.adafruit.com/products/1820?utm_source=j5)
+- [Blue](https://www.adafruit.com/products/1817?utm_source=j5)
 
 (This list only represents devices that I've personally confirmed, please add devices as needed.)
 
@@ -64,7 +64,7 @@ Adafruit offers a selection of 8x8 matrices in various colors:
 
 ### Dimensions
 
-| Name | Rows | Columns | 
+| Name | Rows | Columns |
 |------|------|---------|
 | 8x8  | 8    | 8       |
 | 16x8 | 16   | 8       |
@@ -96,7 +96,7 @@ new five.Led.Matrix({
 #### I2C HT16K33
 ```js
 // Led.Matrix HT16K33
-new five.Led.Matrix({ 
+new five.Led.Matrix({
   controller: "HT16K33"
 });
 ```
@@ -105,7 +105,7 @@ new five.Led.Matrix({
 
 ```js
 // Led.Matrix HT16K33
-new five.Led.Matrix({ 
+new five.Led.Matrix({
   controller: "HT16K33",
   isBicolor: true
 });
@@ -143,7 +143,7 @@ board.on("ready", function() {
       data: 2,
       clock: 3,
       cs: 4
-    }, 
+    },
     devices: 1
   });
 
@@ -278,7 +278,7 @@ Note: `clear()` does not shut off the device.
   matrix.led(0, 0, 0);
 
   // I2C device (bicolor)
-  var matrix = new five.Led.Matrix({ 
+  var matrix = new five.Led.Matrix({
     controller: "HT16K33",
     isBicolor: true
   });
@@ -306,7 +306,7 @@ Note: `clear()` does not shut off the device.
   matrix.row(1, 255);
 
   // 8x16 I2C device
-  var matrix = new five.Led.Matrix({ 
+  var matrix = new five.Led.Matrix({
     controller: "HT16K33",
     dims: [8, 16]
   });
@@ -337,7 +337,7 @@ Note: `clear()` does not shut off the device.
 - **draw(character)** Draw a "character" to all devices.
 - **draw(device index, character)** Draw a "character" to a device at the specified `device index`.
 
-Valid "character" values: 
+Valid "character" values:
 
 - A single character string, eg. `"A", "b", "1", "$"`
 - An array (with 8 or 16 elements) of 8-bit or 16-bit values, eg. `[0x00, 0x04, 0x15, 0x0E, 0x15, 0x04, 0x00, 0x00]` (That array represents `*` character). The dimensions of the character array must match the dimensions of the matrix i.e. 8x8, 8x16 or 16x8
@@ -384,13 +384,13 @@ Valid "character" values:
 
   // NOTE: this is actually a predefined character
   var exclamation = [
-    0x04, 
-    0x04, 
-    0x04, 
-    0x04, 
-    0x00, 
-    0x00, 
-    0x04, 
+    0x04,
+    0x04,
+    0x04,
+    0x04,
+    0x00,
+    0x00,
+    0x04,
     0x00
   ];
 
@@ -416,9 +416,9 @@ Valid "character" values:
 Led.Matrix.CHARS
 
 ```
-0 1 2 3 4 5 6 7 8 9   
-! " # $ % & ' ( ) * + , - . / : ; < = > ? @ 
-A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` 
+0 1 2 3 4 5 6 7 8 9
+! " # $ % & ' ( ) * + , - . / : ; < = > ? @
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ `
 a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 ```
 
