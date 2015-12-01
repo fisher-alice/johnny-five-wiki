@@ -190,8 +190,8 @@ new five.Thermometer({
 });
 ```
 
-![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808.png)
-![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808-tessel.png)
+![MCP9808](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808.png)
+![MCP9808](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808-tessel.png)
 
 
 
