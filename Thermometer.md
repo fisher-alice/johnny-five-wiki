@@ -35,6 +35,10 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
 - HTU21D
   - [Adafruit](https://www.adafruit.com/product/1899?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
+- MCP9808
+  - [Adafruit](https://www.adafruit.com/product/1782?utm_source=j5)
+- SI7020
+  - [Tessel Climate](https://shop.tessel.io/Modules/Climate%20Module?utm_source=j5)
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -45,7 +49,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property   | Type          | Value/Description                                                                                                     | Default  | Required        |
   |------------|---------------|-----------------------------------------------------------------------------------------------------------------------|----------|-----------------|
-  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D. The Name of the controller to use. | `ANALOG` | no              |
+  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D, MCP9808, SI7020. The Name of the controller to use. | `ANALOG` | no              |
   | pin        | string or int | Analog Pin. Use with analog sensor.                                                                                   |          | Yes<sup>1</sup> |
   | toCelsius  | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override                                                      |          | no              |
   | freq       | Number        | Milliseconds. The rate in milliseconds to emit the data event                                                         | 25ms     | no              |                                                              |
