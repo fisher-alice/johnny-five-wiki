@@ -183,7 +183,15 @@ new five.Thermometer({
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
 
 
+#### MCP9808
+```js
+new five.Thermometer({
+  controller: "MCP9808"
+});
+```
 
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808.png)
+![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808-tessel.png)
 
 
 
