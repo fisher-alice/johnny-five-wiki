@@ -65,9 +65,9 @@ This list will continue to be updated as more devices are confirmed.
 | `celsius` | The temperature in celsius degrees. | Yes |
 | `fahrenheit` | The temperature in fahrenheit degrees. | Yes |
 | `kelvin` | The temperature in kelvin degrees. | Yes |
-| `C` | A convenience alias for celsius. | No |
-| `F` | A convenience alias for fahrenheit. | No |
-| `K` | A convenience alias for kelvin. | No |
+| `C` | A convenience alias for celsius. | Yes |
+| `F` | A convenience alias for fahrenheit. | Yes |
+| `K` | A convenience alias for kelvin. | Yes |
 
 
 ## Component Initialization
