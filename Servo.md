@@ -153,7 +153,7 @@ new five.Servo({
 #### Servo PCA9685
 
 ```js
-// Create a standard servo controlled by a PCA9685...
+// Create a standard servo controlled via PCA9685...
 // 
 //   - attached to pin 0 (of the PCA9685)
 //
@@ -166,7 +166,7 @@ new five.Servo({
 #### Continuous PCA9685
 
 ```js
-// Create a continuous servo controlled by a PCA9685...
+// Create a continuous servo controlled via PCA9685...
 // 
 //   - attached to pin 0 (of the PCA9685)
 //
