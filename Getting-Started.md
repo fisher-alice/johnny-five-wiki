@@ -12,7 +12,7 @@
 
 ### OSX
 
-- Install Node.js 0.10.x
+- Install Node.js >= 0.10.x
 - Install Xcode
 - Install node-gyp `npm install -g node-gyp`
 
@@ -20,11 +20,17 @@
 
 Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomment-7696662
 
-- Install Node.js 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
+- Install Node.js >= 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
 - Install Visual Studio Express 2010 32 bit (make sure you have the C++ dependencies checked)
 - Install [Python 2.7.3](http://www.python.org/getit/releases/2.7.3/)
 - Open up cmd (Start > Run.. > cmd) and enter `set PATH=%PATH%;C:\Python27`
 - Install node-gyp `npm install -g node-gyp`
+
+### Ubuntu and Debian
+
+- Install Node.js >= 0.10.x ```apt-get install nodejs```
+- Install the nodejs-legacy package ```apt-get install nodejs-legacy```
+- Install build-essential or a suitable alternative ```apt-get install build-essential```
 
 ## Hello World
 
