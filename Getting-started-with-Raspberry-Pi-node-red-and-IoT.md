@@ -80,7 +80,7 @@ If you have an LED connected to GPIO4 it should start blinking!
 
 ## Let's add some Internet of Things messaging.
 
-Node-red comes with things like websocket and MQTT nodes.  Another really cool set of nodes to add to help connect devices are the nodesfor the open source [meshblu](https://github.com/octoblu/meshblu) project.
+Node-red comes with things like websocket and MQTT nodes.  Another really cool set of nodes to add to help connect devices are the nodes for the open source [meshblu](https://github.com/octoblu/meshblu) project.
 
 From the same `/root/.node-red` directory, we can run:
 
