@@ -4,7 +4,7 @@ In this tutorial we will learn how to set up a Raspberry Pi development board an
 
 ## Install Raspbian
 
-You will need the [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) Jessie image installed on the pi.  The doc was written with the `2015-21-11` release.
+You will need the [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) Jessie image installed on the pi.  This doc was written based on the `2015-21-11` release.
 
 You will also need to have network configured.  Wifi or wired ethernet will do.
 
@@ -29,11 +29,13 @@ The startup also created a `/root/.node-red` folder which contains settings node
 ## Adding npm
 
 The raspbian image doesn't include npm, however it is easy to install:
+
 `sudo apt-get update`
 
 `sudo apt-get install npm`
 
 Unfortunately this only gets us npm version 1.4.21 which wont work for us, but that's easily updatable:
+
 `sudo npm i npm -g`
 
 
