@@ -49,6 +49,7 @@
 - [Relay](https://github.com/rwaldron/johnny-five/wiki/Relay)
 - [Sensor](https://github.com/rwaldron/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwaldron/johnny-five/wiki/Servo)
+- [Servos](https://github.com/rwaldron/johnny-five/wiki/Servos)
 - [ShiftRegister](https://github.com/rwaldron/johnny-five/wiki/ShiftRegister)
 - [Sonar](https://github.com/rwaldron/johnny-five/wiki/Sonar)
 - [Stepper](https://github.com/rwaldron/johnny-five/wiki/Stepper)
