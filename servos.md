@@ -93,3 +93,11 @@ All methods and properties in the [Servo API](#api) are available on Servo
 ## Events
 
 Events are emitted on the individual Servo objects so listeners must be attached there.
+
+<!--remove-start-->
+
+## Examples
+
+- [Servos](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
+
+<!--remove-end-->
