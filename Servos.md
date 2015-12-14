@@ -88,11 +88,11 @@ var joints = new five.Servos([shoulder, elbow]);
 
 ## API
 
-All methods and properties in the [Servo API](#api) are available on Servo
+All methods and properties in the [Servo API](https://github.com/rwaldron/johnny-five/wiki/Servo#api) are available on Servo
 
 ## Events
 
-Events are emitted on the individual Servo objects so listeners must be attached there.
+Events are emitted on the individual Servo objects so listeners must be attached there. See [Servo events](https://github.com/rwaldron/johnny-five/wiki/Servo#events)
 
 <!--remove-start-->
 
