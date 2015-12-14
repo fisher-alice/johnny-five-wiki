@@ -7,7 +7,7 @@ The `Servos` class constructs a collection object containing multiple servo obje
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
-  | numsOrObjects       | Array | An element for each servo. Any valid [servo parameters](#parameters) will work  |  | yes       |
+  | numsOrObjects       | Array | An element for each servo. Any valid [servo parameters](https://github.com/rwaldron/johnny-five/wiki/Servo#parameters) will work  |  | yes       |
   </span>
 
 ## Component Initialization
