@@ -3,6 +3,8 @@
 
 The `Servo` class constructs objects that represent a single Servo attached to the physical board. This class is designed to work well with both **Standard** and **Continuous** rotation servos.
 
+For working with multiple servos check out the [Servos](servos) class.
+
 ## Parameters
 
 - **pin** A Number or String address for the Servo pin.
