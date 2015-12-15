@@ -4,7 +4,7 @@ The `Proximity` class constructs an object that represents a single Proximity se
 Supported Proximity sensors:
 
 - Pulse/PWM
-  - Ultrasonic (All use `controller: "HCSR04"`, Arduino boards require [PingFirmata](#pingfirmata))
+  - Ultrasonic (All use `controller: "HCSR04"`, Arduino boards require [PingFirmata](#pingfirmata) alternatively an HCSR04 backpack can be used to make the sensor I2C compatible.)
     - [SR04 or HCSR04](http://www.amazon.com/SainSmart-HC-SR04-Ranging-Detector-Distance/dp/B004U8TOE6) \*
     - [SRF05](http://www.robotshop.com/en/devantech-ultrasonic-range-finder-srf05.html) \*
     - [Parallax Ping](https://www.parallax.com/product/28015) \*
@@ -88,6 +88,15 @@ Supported Proximity sensors:
           - Close: 0-6cm (will result in 6cm reading)
           - Long: 6-600cm
         - Resolution: < 1cm
+    - [HCSR04 (or similar see above) using and I2C backpack]
+      - Hardware Constraints
+        - Additional hardware:
+          - Requires addition of another board such as an Arduino Nano to provide the I2C support.
+        - Range:
+          - Close: 0-2cm (will result in 2cm reading)
+          - Long: 2-300cm
+        - Resolution: < 1cm
+
 
 ## Parameters
 
@@ -179,8 +188,21 @@ new five.Proximity({
 
 ![Ping](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/ping.png)
 
-> \* For Arduino boards, it is absolutely REQUIRED to flash your board with a special version of StandardFirmata (PingFirmata). Instructions are [here](#pingfirmata)
+> \* For Arduino boards, it is absolutely REQUIRED to flash your board with a special version of StandardFirmata (PingFirmata). Instructions are [here](#pingfirmata). 
 
+Alternatively also consider an I2C Backpack which will keep your firmata the same and allow you to use this sensor on alternative boards such as a Raspberry Pi, BeagleBone or other non-Arduino board.
+
+#### HCSR04 (and friends) I2C Backpack \*
+
+```js
+new five.Proximity({
+  controller: "HCSR04I2CBACKPACK",
+});
+```
+
+![Ping](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/proximity-hcsr04-i2c.png)
+
+The I2C backpack requires using an Arduino (eg Nano or pro-mini) to provide the I2C capability. This removes the blocking behaviour of the PingFirmata firmware and makes this sensor more portable across alternative boards (anything that has I2C support in its IO plugin). See [NodeBots Interchange HC-SR04 module](https://github.com/ajfisher/nodebots-hcsr04) for more details.
 
 ##### MB1000 LV-MaxSonar-EZ0
 
@@ -278,4 +300,18 @@ For use with:
 
 The above listed devices require a special version of Firmata (shown below) to be loaded onto the Arduino in order to function properly. **This is only necessary for the components listed in this section!**
 
-Copy and paste [the source](https://gist.githubusercontent.com/rwaldron/0519fcd5c48bfe43b827/raw/f17fb09b92ed04722953823d9416649ff380c35b/PingFirmata.ino) into the Arduino IDE and click the Upload button.
+The most straightforward method to enabling this module is to use the [Ping I2C Backpack](https://github.com/ajfisher/nodebots-hcsr04). If you still want / need to use a custom firmata then the easiest way to get the firmata onto your board is to use [interchange](https://github.com/ajfisher/nodebots-interchange). Follow the directions below:
+
+```
+npm install nodebots-interchange
+```
+
+With your arduino plugged in then issue the following instruction, where <port> is the serial port your arduino is plugged into (COM3, /dev/ttyUSB0 etc).
+
+```
+interchange install hc-sr04 -a uno -p <port> --firmata
+```
+
+The latest firmware will be downloaded and installed upon your board.
+
+The final alternative is to copy and paste [the source](https://gist.githubusercontent.com/rwaldron/0519fcd5c48bfe43b827/raw/f17fb09b92ed04722953823d9416649ff380c35b/PingFirmata.ino) into the Arduino IDE and click the Upload button.
