@@ -561,7 +561,7 @@ This is by no means exhaustive
 </a></td>
       <td>pwm:20<br/>dir:33<br/>cdir: 46</td>
       <td>pwm:14<br/>dir:48<br/>cdir: 36</td>
-      <td>SPARKFUN_LUDUS {A, B}</td>
+      <td>SPARKFUN_DUAL_HBRIDGE_INTEL_BLOCK {A, B}</td>
       <td>2.7V-15V</td>
       <td>1A</td>
       <td>No</td>
