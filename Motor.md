@@ -529,7 +529,7 @@ This is by no means exhaustive
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr> 
       <td><a href="http://www.seeedstudio.com/depot/Motor-Shield-p-913.html">Seeed Studios Motor Shield V1</a> and <a href="http://www.seeedstudio.com/depot/motor-shield-v20-p-1377.html?cPath=132_134">V2</a></td>
       <td>pwm:9<br/>dir:8<br/>cdir: 11</td>
       <td>pwm:10<br/>dir:12<br/>cdir: 13</td>
@@ -547,6 +547,26 @@ This is by no means exhaustive
       <td>2A</td>
       <td>No</td>
     </tr>
+    <tr> 
+      <td><a href="https://www.sparkfun.com/products/13295">SparkFun Ludus Protoshield Wireless</a> and <a href="https://www.sparkfun.com/products/13310">SparkFun Ludus Protoshield</a></td>
+      <td>pwm:3<br/>dir:4<br/>cdir: 5</td>
+      <td>pwm:6<br/>dir:7<br/>cdir: 8</td>
+      <td>SPARKFUN_LUDUS {A, B}</td>
+      <td>13V</td>
+      <td>1.2A</td>
+      <td>No</td>
+    </tr>
+    <tr> 
+      <td><a href="https://www.sparkfun.com/products/13043">SparkFun Block for Intel® Edison - Dual H-Bridge
+</a></td>
+      <td>pwm:20<br/>dir:33<br/>cdir: 46</td>
+      <td>pwm:14<br/>dir:48<br/>cdir: 36</td>
+      <td>SPARKFUN_LUDUS {A, B}</td>
+      <td>2.7V-15V</td>
+      <td>1A</td>
+      <td>No</td>
+    </tr>
+
   </tbody>
 </table>
 </span>
