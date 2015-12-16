@@ -307,6 +307,20 @@ board.on("ready", function() {
   servo.center();
   ```
 
+- **home()** Set Servo to it's startAt position.
+  ```js
+  var servo = new five.Servo({
+    pin: 10,
+    startAt: 20
+  });
+
+  // Set horn to 90 degrees
+  servo.to(90);
+
+  // Return to startAt value of 20 degrees
+  servo.home();
+  ```
+
 - **sweep()** Sweep the servo between `min` and `max`, repeatedly.
   ```js
   var servo = new five.Servo(10);
