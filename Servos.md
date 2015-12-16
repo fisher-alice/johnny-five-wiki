@@ -1,5 +1,7 @@
 The `Servos` class constructs a collection object containing multiple servo objects. Any method called on a Servos object will be called on each member of the Servos object with the same parameters.
 
+For working with a single servo check out the [Servo](../servo) class.
+
 ## Parameters
 
 - **numsOrObjects** An array of pins, servo parameter objects and/or Servo objects:
@@ -61,6 +63,23 @@ board.on("ready", function() {
 
   // Sweep the servo on pin 9 from 0-180 and repeat.
   servos[0].sweep();
+});
+```
+
+Using multiple controllers in a single Servos instance:
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  var servos = new five.Servos([
+    { controller: "PCA9685", pin: 0 }, // Attached to an Adafruit PWM shield
+    { pin: 10 } // Attached directly to the Arduino
+  ]);
+
+  // Sweep both servos from 0-180 and repeat.
+  servos.sweep();
 });
 ```
 
