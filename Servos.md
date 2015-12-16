@@ -52,7 +52,7 @@ board.on("ready", function() {
 });
 ```
 
-![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servos.png)
+![servos](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servos.png)
 
 Control a single servo in a Servos instance:
 ```js
@@ -84,6 +84,8 @@ board.on("ready", function() {
   servos.sweep();
 });
 ```
+
+![Two Controllers](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servos-two-controllers.png)
 
 Using Servo objects in Servos:
 ```js
