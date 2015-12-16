@@ -52,6 +52,8 @@ board.on("ready", function() {
 });
 ```
 
+![PCA9685](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servos.png)
+
 Control a single servo in a Servos instance:
 ```js
 var five = require("johnny-five");
