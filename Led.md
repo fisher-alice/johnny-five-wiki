@@ -7,6 +7,7 @@ See also:
 - [Led.Digits](https://github.com/rwaldron/johnny-five/wiki/led.digits)
 - [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/led.matrix)
 - [Led.RGB](https://github.com/rwaldron/johnny-five/wiki/led.rgb)
+- [Leds](https://github.com/rwaldron/johnny-five/wiki/leds)
 
 
 ## Parameters
