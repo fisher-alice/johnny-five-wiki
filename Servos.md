@@ -1,6 +1,6 @@
 The `Servos` class constructs a collection object containing multiple servo objects. Any method called on a Servos object will be called on each member of the Servos object with the same parameters.
 
-For working with a single servo check out the [Servo](../servo) class.
+For working with a single servo check out the [Servo](servo) class.
 
 ## Parameters
 
