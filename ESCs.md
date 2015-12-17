@@ -49,7 +49,7 @@ board.on("ready", function() {
 });
 ```
 
-![ESCs](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/escs.png)
+![ESCs](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/esc-array.png)
 
 Control a single ESC in an ESCs instance:
 ```js
