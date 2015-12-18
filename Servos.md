@@ -1,5 +1,7 @@
 The `Servos` class constructs a collection object containing multiple servo objects. Any method called on a Servos object will be called on each member of the Servos object with the same parameters.
 
+Once instantiated, a Servos object is static. You may not ```push()``` additional Servo instances onto the array.
+
 For working with a single servo check out the [Servo](servo) class.
 
 ## Parameters
