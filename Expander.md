@@ -21,7 +21,10 @@ Supported Expanders:
   - [Adafruit](https://www.adafruit.com/products/815?utm_source=j5)
 - PCF8591
   - [Amazon](http://www.amazon.com/PCF8591-Converter-Module-Digital-Conversion/dp/B00BXX4UWC)
-
+- MUXSHIELD2
+  - [Mayhew](http://mayhewlabs.com/products/mux-shield-2)
+- GROVEPI
+  - [Dexter](http://www.dexterindustries.com/grovepi/)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -37,6 +40,8 @@ This list will continue to be updated as more component support is implemented.
   - `PCF8575`
   - `PCF8591`
   - `PCA9685`
+  - `MUXSHIELD2`
+  - `GROVEPI`
 
   ```js
   // Examples:
@@ -52,7 +57,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685. The Name of the controller to use |  | Yes       |
+  | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685, MUXSHIELD2, GROVEPI. The Name of the controller to use |  | Yes       |
   | address       | Number  | Address for I2C device. | [By Device](#default-addresses) | no       |
   </span>
 
@@ -80,6 +85,11 @@ This list will continue to be updated as more component support is implemented.
   | PCF8575 | 16 | `INPUT`, `OUTPUT` |
   | PCF8591 | 4 | `ANALOG` |
   | PCA9685 | 16 | `OUTPUT`, `PWM`, `SERVO` |
+  | MUXSHIELD2 | 48 | `INPUT`, `OUTPUT`, `ANALOG` \* |
+  | GROVEPI | 10 \** | `INPUT`, `OUTPUT`, `ANALOG`, `PWM`, `SERVO`  |
+
+  \* Modes limited to one per row
+  \** 7 Digital, 3 Analog
 
   ##### Default Addresses
 
@@ -92,6 +102,7 @@ This list will continue to be updated as more component support is implemented.
   | PCF8575 | `0x20-0x27` | `0x20` |
   | PCF8591 | `0x48-0x4F` | `0x48` |
   | PCA9685 | `0x40-0x4F` | `0x40` |
+  | GROVEPI | `0x04` | `0x04` |
 
 
 ## Shape
