@@ -7,7 +7,8 @@ The `Expander` class constructs objects that represent a single I2C IO Expander 
 - To add "Servo Write" (60Hz PWM) capabilities to your Raspberry Pi or pcDuino project, use either: 
   - `PCA9685`
   - `GROVEPI`
-
+- To add "Ping Read" capabilities (`Proximity` instances for HCSR04, Ultrasonic Ping, Parallax Ping, etc.) to your Raspberry Pi project, use:
+  - `GROVEPI`
 
 Supported Expanders:
 
