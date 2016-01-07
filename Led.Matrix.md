@@ -25,7 +25,7 @@ Known supported devices:
     - [Adafruit 1.2 16x8 LED Matrix (Any color)](https://www.adafruit.com/products/2040?utm_source=j5)
     - [OCROBOT 8x8 LED Matrix - bicolor](http://www.aliexpress.com/item/Free-Shipping-1pc-Red-and-green-color-dot-matrix-module-I2C-1-8-inches-3mm-8/1364967656.html)
 
-If you are working with HT16K33 devices, you will need to run at least version 2.4.0 of Firmata on the board, currently available in [beta](http://sourceforge.net/projects/firmata/files/Firmata/).
+If you are working with HT16K33 devices, you will need to run at least version 2.4.0 of Firmata on the board.
 
 Adafruit offers a selection of 8x8 matrices in various colors:
 
