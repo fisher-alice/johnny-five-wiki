@@ -1,8 +1,12 @@
 
 The `Expander` class constructs objects that represent a single I2C IO Expander attached to the physical board. Expansion chips are useful for adding additional I/O to a project. In certain cases, I/O expansion chips can be used to provide capabilities on platforms that don't support natively support them. A couple examples:
 
-- To add "Analog Read" (ADC) capabilities to your Raspberry Pi project, use a `PCF8591`
-- To add "Servo Write" (60Hz PWM) capabilities to your Raspberry Pi or pcDuino project, use a `PCA9685`
+- To add "Analog Read" (ADC) capabilities to your Raspberry Pi project, use either:
+  - `PCF8591`
+  - `GROVEPI`
+- To add "Servo Write" (60Hz PWM) capabilities to your Raspberry Pi or pcDuino project, use either: 
+  - `PCA9685`
+  - `GROVEPI`
 
 
 Supported Expanders:
