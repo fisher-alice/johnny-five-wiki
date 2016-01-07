@@ -93,6 +93,7 @@ This list will continue to be updated as more component support is implemented.
   | GROVEPI | 10 \** | `INPUT`, `OUTPUT`, `ANALOG`, `PWM`, `SERVO`  |
 
   \* Modes limited to one per row
+
   \** 7 Digital, 3 Analog
 
   ##### Default Addresses
