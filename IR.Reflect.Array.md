@@ -110,7 +110,7 @@ board.on("ready", function() {
     pins: ["A0", "A1"]
   });
 
-  for(var i = 0; i < 100; i++) {
+  for (var i = 0; i < 100; i++) {
     eyes.calibrate();
   }
   ```
@@ -127,8 +127,11 @@ board.on("ready", function() {
   eyes.calibrateUntil(function() {
     return !calibrating;
   });
-
-  setTimeout(function() { calibrating = false; }, 1000 ); // calibrate for one second
+  
+  // calibrate for one second
+  setTimeout(function() { 
+    calibrating = false; 
+  }, 1000); 
   ```
 
 - **loadCalibration(calibration)** Prime the array with calibration data.  This allows you to load calibration data from a file.  You can get it from the device using the `calibration` after it has been calibrated.
