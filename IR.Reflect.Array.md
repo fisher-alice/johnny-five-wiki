@@ -83,7 +83,7 @@ board.on("ready", function() {
 - **enable()** Turn the light emitters on.
 
   ```js
-  var eyes = new five.Sensor({
+  var eyes = new five.IR.Reflect.Array({
     emitter: 13,
     pins: ["A0", "A1"]
   });
@@ -94,7 +94,7 @@ board.on("ready", function() {
 - **disable()** turn the light emitters off
 
   ```js
-  var eyes = new five.Sensor({
+  var eyes = new five.IR.Reflect.Array({
     emitter: 13,
     pins: ["A0", "A1"]
   });
@@ -105,7 +105,7 @@ board.on("ready", function() {
 - **calibrate()** Read all of the sensors and store the min/max values.  Used to calculate calibrated values and line values.  You should call `calibrate()` multiple times.
 
   ```js
-  var eyes = new five.Sensor({
+  var eyes = new five.IR.Reflect.Array({
     emitter: 13,
     pins: ["A0", "A1"]
   });
@@ -118,7 +118,7 @@ board.on("ready", function() {
 - **calibrateUntil(predicate)** A convenience function that will call calibrate until a predicate function returns true.  This allows you to decide when calibration is done.  This trigger may be user input, time, or execution count.  You decide.
 
   ```js
-  var eyes = new five.Sensor({
+  var eyes = new five.IR.Reflect.Array({
     emitter: 13,
     pins: ["A0", "A1"]
   });
@@ -134,7 +134,7 @@ board.on("ready", function() {
 - **loadCalibration(calibration)** Prime the array with calibration data.  This allows you to load calibration data from a file.  You can get it from the device using the `calibration` after it has been calibrated.
 
   ```js
-  var eyes = new five.Sensor({
+  var eyes = new five.IR.Reflect.Array({
     emitter: 13,
     pins: ["A0", "A1"]
   });
