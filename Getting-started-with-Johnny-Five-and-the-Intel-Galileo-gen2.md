@@ -55,17 +55,21 @@ where x.x.x.x is a system with the correct date
 
 ## Running a blink example
 
-The Yocto Linux image already has node installed so all thats left to do is write some johnny-five code, push it to the board and then run it.
+The Yocto Linux image already has node installed so all that's left to do is write some Johnny-Five code, push it to the board and then run it.
 
-We will do this in a folder on our local machine and then copy it to the Galileo to run. You can either set up the Galileo with an LED on pin 13 or you can just watch the built in LED labeled `L` right next to the USB port on the board.
+We will do this in a folder on our local machine and then copy it to the Galileo to run. You can either set up the Galileo with an LED on pin 13 or you can just watch the built in LED labeled `L` right next to the USB port on the board. This example is the same as the standard Johnny-Five blink example, except it specifies the use of the `galileo-io` IO-Plugin so it will run directly on the board.
 
-Lets create an *index.js* with the following code:
+Let's create an *index.js* with the following code:
 ```js
 var five = require("johnny-five");
-var board = new five.Board();
+var Galileo = require("galileo-io");
+var board = new five.Board({
+  io: new Galileo()
+});
+
 board.on("ready", function() {
   var led = new five.Led(13);
-  led.blink();
+  led.blink(500);
 });
 ```
 
@@ -75,12 +79,11 @@ scp index.js root@x.x.x.x:~
 ```
 
 Now ssh back into the board and let's run our code.
-First we run `npm install johnny-five` and then `node index.js`.
+First we run `npm install johnny-five galileo-io` to install our dependencies, and then `node index.js` to run our program.
 
 We should now have a blinking light on pin 13!
 
 ## Further reading
 
 * [Can't update Galileo firmware](https://communities.intel.com/message/237438)
-* [Galileo Blink Example](https://github.com/divanvisagie/galileo-example)
 * [On-Board: Intel Galileo Programming with JavaScript and Node.js](http://bocoup.com/weblog/intel-galileo-javascript-nodejs/)
