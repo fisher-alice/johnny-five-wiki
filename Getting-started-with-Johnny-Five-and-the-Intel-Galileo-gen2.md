@@ -79,7 +79,13 @@ scp index.js root@x.x.x.x:~
 ```
 
 Now ssh back into the board and let's run our code.
-First we run `npm install johnny-five galileo-io` to install our dependencies, and then `node index.js` to run our program.
+
+First we we install our dependencies:
+
+``` bash
+npm install johnny-five galileo-io
+```
+Then we run our program with `node index.js`.
 
 We should now have a blinking light on pin 13!
 
