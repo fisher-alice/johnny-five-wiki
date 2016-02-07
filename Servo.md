@@ -63,7 +63,7 @@ For working with multiple servos check out the [Servos](servos) class.
 | `last` | The last movement record. | Yes |
 | `position` | The angle the servo is at in the physical world. | Yes |
 | `value` | The angle the servo was last set to. | No |
-
+| `startAt` | The angle the servo was specified to start at upon initialization | No |
 
 ## Component Initialization
 
