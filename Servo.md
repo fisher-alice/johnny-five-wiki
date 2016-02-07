@@ -289,7 +289,7 @@ board.on("ready", function() {
   ```
 
 
-- **center()** Set Servo to center point. Defaults to 90deg, respects explicit range.
+- **center([ ms [, rate ]])** Set Servo to center point. Defaults to 90deg, respects explicit `range`. If `ms` is specified, the servo will take that amount of time to move to the position. If `rate` is specified, the angle change will be split into distance/rate steps for the `ms` option. If the specified angle is the same as the current angle, no commands are sent.
   ```js
   var servo = new five.Servo(10);
 
@@ -307,6 +307,7 @@ board.on("ready", function() {
   servo.center();
   ```
 
+
 - **home()** Set Servo to it's startAt position.
   ```js
   var servo = new five.Servo({
@@ -321,12 +322,13 @@ board.on("ready", function() {
   servo.home();
   ```
 
-- **sweep()** Sweep the servo between `min` and `max`, repeatedly.
+- **sweep()** Sweep the servo between default `min` and `max`, repeatedly.
   ```js
   var servo = new five.Servo(10);
 
   servo.sweep();
   ```
+
 - **sweep([ low, high ])** Sweep the servo between an explicit range, repeatedly.
   ```js
   var servo = new five.Servo(10);
@@ -335,8 +337,8 @@ board.on("ready", function() {
   servo.sweep([45, 135]);
   ```
 
-- **sweep(opts)** Sweep the servo between an (optional) explicit range, within an (optional) explicit interval, and  (optional) explicit steps (in degrees), repeatedly.
-  - `opts`: An object containing: 
+- **sweep(options)** Sweep the servo between an (optional) explicit range, within an (optional) explicit interval, and  (optional) explicit steps (in degrees), repeatedly.
+  - `options`: An object containing: 
     - `range`: An array containing `[low, high]` boundaries to sweep between. 
     - `interval`: The interval of a half sweep (eg. `low -> high`; a full sweep is `low -> high -> low`)
     - `step`: The size of each step in degrees.
@@ -366,23 +368,23 @@ board.on("ready", function() {
   ```
 
 
-- **cw(speed)** (Continuous only) Move a **continuous** servo clockwise at speed, 0-1
+- **cw(speed)** (Continuous only) Move a _continuous_ servo clockwise at speed, 0-1
   ```js
   var servo = new five.Servo({
     pin: 10, 
     type: "continuous"
   });
-
+  // full speed 
   servo.cw(1);
   ```
 
-- **ccw(speed)** (Continuous only) Move a **continuous** servo counter clockwise at speed, 0-1
+- **ccw(speed)** (Continuous only) Move a _continuous_ servo counter clockwise at speed, 0-1
   ```js
   var servo = new five.Servo({
     pin: 10, 
     type: "continuous"
   });
-
+  // full speed 
   servo.ccw(1);
   ```
 
@@ -390,7 +392,7 @@ board.on("ready", function() {
 
 It's recommended to use a rotary potentiometer as the mechanism for determining servo movement.
 
-- **move:complete** This is emitted when a timed move is completed. The event won't fire unless a time argument has been passed to the ```servo.to()``` method.
+- **move:complete** This is emitted when a timed move is completed. The event won't fire unless a time argument has been passed to the `servo.to()` method.
 
 
 ## Troubleshooting
