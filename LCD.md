@@ -44,18 +44,18 @@ The `LCD` class constructs an object that represents an LCD Display. Controllers
 ```js
 // Parallel LCD
 new five.LCD({ 
-  pins: [8, 9, 4, 5, 6, 7]
+  pins: [7, 8, 9, 10, 11, 12]
 });
 
 // Parallel LCD w/ Backlight
 new five.LCD({ 
-  pins: [8, 9, 4, 5, 6, 7],
+  pins: [7, 8, 9, 10, 11, 12],
   backlight: 13,
 });
 
 // Parallel LCD w/ Backlight & Explicit Rows and Columns (20 cols, 2 rows)
 new five.LCD({ 
-  pins: [8, 9, 4, 5, 6, 7],
+  pins: [7, 8, 9, 10, 11, 12],
   backlight: 13,
   rows: 2,
   cols: 16
@@ -103,7 +103,7 @@ var board = new five.Board();
 
 board.on("ready", function() {
 
-  var lcd = new five.LCD({ pins: [ 2, 3, 4, 5, 11, 12 ] });
+  var lcd = new five.LCD({ pins: [7, 8, 9, 10, 11, 12] });
 
   lcd.print("Hello");
 });
