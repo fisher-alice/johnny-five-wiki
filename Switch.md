@@ -12,6 +12,8 @@ The `Switch` class constructs objects that represent a single Switch attached to
   | Property | Type           | Value/Description                                        | Default | Required |
   |---------------|----------------|------------|----------------------------------------------------|----------|
   | pin           | Number, String | Any Pin. The Number or String address of the Switch pin     | | yes      |
+  | type           | String | "NO" or "NC". Indicate if the switch is "normally open" or "normally closed" | "NO" | no |
+
   </span>  
 
 ## Shape
@@ -21,7 +23,7 @@ The `Switch` class constructs objects that represent a single Switch attached to
 | `id` | A user definable id value. Defaults to a generated uid. | No |
 | `pin` | The pin value. | No |
 | `isClosed` | Boolean indicating whether the switch is closed. | Yes |
-
+| `isOpen` | Boolean indicating whether the switch is open. | Yes |
 
 
 ## Component Initialization
