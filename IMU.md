@@ -1,10 +1,15 @@
-The `IMU` class constructs objects that represent a single IMU module attached to the physical board.  An IMU is an Inertial Measurement Unit.  IMUs come in all shapes and DOFs (Degrees of Freedom).  They are often made up of several components like Accelerometers, Gyros, Temperature Sensors, and Magnetometers.
+The `IMU` class constructs objects that represent a single IMU module attached to the physical board.  An IMU is an Inertial Measurement Unit.  IMUs come in all shapes and DOFs (Degrees of Freedom).  They are often made up of several components like Accelerometers, Gyros, Thermometer, and Compass/Magnetometers.
 
 Supported modules:
 
 - MPU6050
   - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
   - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
+- BNO055
+  - [Adafruit](https://www.adafruit.com/products/2472)
+  - [Atmel](http://www.atmel.com/tools/ATBNO055-XPRO.aspx)
+  - [Tindie](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-sensor-fusion/)
+
 
 This list will continue to be updated as more component support is implemented.
 
