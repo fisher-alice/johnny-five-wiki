@@ -7,8 +7,13 @@ We currently support two kinds of Gyros:
 - LPR5150 (Analog)
   - Used on the TinkerKit Gyro breakout
 - MPU6050 (I2C)
-  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/?utm_source=j5)
   - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
+- BNO055
+  - [Adafruit](https://www.adafruit.com/products/2472?utm_source=j5)
+  - [Atmel](http://www.atmel.com/tools/ATBNO055-XPRO.aspx?utm_source=j5)
+  - [Tindie](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-sensor-fusion/?utm_source=j5)
+
 
 This list will continue to be updated as more Gyro devices are confirmed.
 
@@ -88,6 +93,22 @@ new five.Gyro({
 ```
 
 ![MPU6050](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gyro-mpu6050.png)
+
+
+#### BNO055
+
+```js
+// Create an BNO055 IMU object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the BNO055 controller
+new five.IMU({
+  controller: "BNO055"
+});
+```
+
+
+![imu-bno055.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-bno055.png)
 
 
 ## Usage
