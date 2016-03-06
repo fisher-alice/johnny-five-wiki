@@ -3,12 +3,12 @@ The `IMU` class constructs objects that represent a single IMU module attached t
 Supported modules:
 
 - MPU6050
-  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/)
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/?utm_source=j5)
   - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 - BNO055
-  - [Adafruit](https://www.adafruit.com/products/2472)
-  - [Atmel](http://www.atmel.com/tools/ATBNO055-XPRO.aspx)
-  - [Tindie](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-sensor-fusion/)
+  - [Adafruit](https://www.adafruit.com/products/2472?utm_source=j5)
+  - [Atmel](http://www.atmel.com/tools/ATBNO055-XPRO.aspx?utm_source=j5)
+  - [Tindie](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-sensor-fusion/?utm_source=j5)
 
 
 This list will continue to be updated as more component support is implemented.
