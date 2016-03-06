@@ -29,18 +29,46 @@ Supported Keypads:
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
   </span>
 
+- **MPR121 Options**
+  <span class="abbreviate-table">
+
+  | Property | Type   | Value/Description                       | Default  | Required |
+  |---------------|--------|--------------------------------------------|-----------------------------------|----------|
+  | controller    | string | MPR121, MPR121QR2. The Name of the controller to use | -- | Yes       |
+  | keys    | array | Mapping of key values |  By Device | No       |
+  | holdtime | Number | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no |
+  | sensitivity | Object | `{ press: 0-1, release: 0-1 }`. Use a generic sensitivity for all pads | \* | no |
+  | sensitivity | Array | An array of `{ press: 0-1, release: 0-1 }` objects | \* | no |
+  </span>
+
+  ##### \* Sensitivity
+  
+  The sensitivity setting allows the calibration of the keypad to compensate for factors such as humidity, temperature, etc. A too high sensitivity % might result in false positives; in some cases, just getting close to it might be enough to trigger a press.
+
+  | Type | Default |
+  |------|------|
+  | press | 0.95 |
+  | release | 0.975 |
+
+  Note: `release` should always have a higher sensitivity than `press`. 
+
+
 - **VKEY Options (`controller: "VKEY"`)**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | pin    | number, string | Analog pin | | Yes |
+  </span>
 
 - **ANALOG Options (`controller: "ANALOG"`)**
+  <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
   | pin    | number, string | Analog pin | | Yes |
   | length | number | Number of keys (required only if `keys` is not specified) | | Yes |
+  </span>
 
 ## Shape
 
