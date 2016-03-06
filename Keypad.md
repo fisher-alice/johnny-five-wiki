@@ -30,13 +30,13 @@ Supported Keypads:
   </span>
 
 - **MPR121 Options**
+
+  In addition to the General Options, the MPR121 supports the following: 
+
   <span class="abbreviate-table">
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | MPR121, MPR121QR2. The Name of the controller to use | -- | Yes       |
-  | keys    | array | Mapping of key values |  By Device | No       |
-  | holdtime | Number | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no |
   | sensitivity | Object | `{ press: 0-1, release: 0-1 }`. Use a generic sensitivity for all pads | \* | no |
   | sensitivity | Array | An array of `{ press: 0-1, release: 0-1 }` objects | \* | no |
   </span>
