@@ -15,7 +15,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | MPU6050. The Name of the controller to use            | “MPU6050” | no       |
+  | controller    | string | MPU6050, BNO055. The Name of the controller to use            | "MPU6050" | no       |
   </span>
 
 - **MPU6050 Options(`controller: "MPU6050"`)**
@@ -32,8 +32,10 @@ Some of these properties may or may not exist depending on whether the IMU suppo
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
 | `accelerometer` | An instance of `Accelerometer` class. | Yes |
+| `compass` | An instance of `Compass` class. | Yes |
 | `gyro` | An instance of `Gyro` class. | Yes |
-| `temperature` | An instance of `Temperature` class. | Yes |
+| `orientation` | An instance of `Orientiation` class. | Yes |
+| `thermometer` | An instance of `Thermometer` class. | Yes |
 
 ## Component Initialization
 
@@ -54,6 +56,21 @@ new five.IMU({
 
 ![imu-mpu6050.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-mpu6050.png)
 
+
+#### BNO055
+
+```js
+// Create an BNO055 IMU object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the BNO055 controller
+new five.IMU({
+  controller: "BNO055"
+});
+```
+
+
+![imu-bno055.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-bno055.png)
 
 ## Usage
 
@@ -84,6 +101,8 @@ The IMU does not have an explicit API.  Refer to the individual components for t
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds.
 
 - **change** The "change" event is fired whenever a corresponding "change" is fired from a component.
+
+- **calibrated** The "calibrated" event is fired whenever a corresponding "calibrated" is fired from a component.
 
 <!--remove-start-->
 
