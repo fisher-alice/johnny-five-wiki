@@ -29,7 +29,7 @@ Supported Keypads:
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
   </span>
 
-- **MPR121 Options**
+- **MPR121 Options (`controller: "MPR121" | "MPR121QR2"`)**
 
   In addition to the General Options, the MPR121 supports the following: 
 
