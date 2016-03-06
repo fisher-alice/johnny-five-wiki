@@ -7,14 +7,14 @@ Supported Keypads:
 - VKEY
   - [SparkFun](https://www.sparkfun.com/products/12080?utm_source=j5)
 - Waveshare AD (Analog)
-  - [Amazon](http://www.amazon.com/Waveshare-Accessory-buttons-controlled-keyboard/dp/B00KM6UXVS)
+  - [Amazon](http://www.amazon.com/Waveshare-Accessory-buttons-controlled-keyboard/dp/B00KM6UXVS?utm_source=j5)
 - MPR121
   - [SparkFun](https://www.sparkfun.com/products/12017?utm_source=j5)
   - [Adafruit](https://www.adafruit.com/products/2024?utm_source=j5)
 - MPR121QR2
   - [SparkFun](https://www.sparkfun.com/products/12013?utm_source=j5)
 - Grove QTouch (AT42QT1070)
-  - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html)
+  - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?utm_source=j5)
   - [Adafruit](https://www.adafruit.com/products/1362?utm_source=j5)
 
 ## Parameters
