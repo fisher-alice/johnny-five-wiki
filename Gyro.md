@@ -98,11 +98,11 @@ new five.Gyro({
 #### BNO055
 
 ```js
-// Create an BNO055 IMU object:
+// Create an BNO055 Gyro object:
 //
 //  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
 //  - specify the BNO055 controller
-new five.IMU({
+new five.Gyro({
   controller: "BNO055"
 });
 ```
