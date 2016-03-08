@@ -16,6 +16,11 @@ Supported Keypads:
 - Grove QTouch (AT42QT1070)
   - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?utm_source=j5)
   - [Adafruit](https://www.adafruit.com/products/1362?utm_source=j5)
+- 12 Button Keypad (requires I2C backpack)
+  - [Adafruit](https://www.adafruit.com/products/1824)
+    - This likely works with the 3x4 membrane as well, as long as the signal lines are connected correctly
+  - [Sparkfun](https://www.sparkfun.com/products/8653)
+
 
 ## Parameters
 
@@ -122,6 +127,33 @@ new five.Keypad({
   controller: "QTOUCH", // or "AT42QT1070"
 });
 ```
+
+#### 3x4 Keypad
+
+This requires using a Nano Backpack. It's possible to use a 3x4 membrane, as long as it's pins are connected correctly: 
+
+| Row | Nano Pin |
+| --- | -------- |
+| 1 | 7 |
+| 2 | 2 |
+| 3 | 3 |
+| 4 | 5 |
+
+
+| Col | Nano Pin |
+| --- | -------- |
+| 1 | 6 |
+| 2 | 8 |
+| 3 | 4 |
+
+
+```javascript
+new five.Keypad({
+  controller: "3X4_I2C_NANO_BACKPACK"
+});
+```
+
+![](http://johnny-five.io/img/breadboard/keypad-3X4_I2C_NANO_BACKPACK.png)
 
 ### Usage
 
