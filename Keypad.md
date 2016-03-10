@@ -9,17 +9,19 @@ Supported Keypads:
 - Waveshare AD (Analog)
   - [Amazon](http://www.amazon.com/Waveshare-Accessory-buttons-controlled-keyboard/dp/B00KM6UXVS?utm_source=j5)
 - MPR121
-  - [SparkFun](https://www.sparkfun.com/products/12017?utm_source=j5)
-  - [Adafruit](https://www.adafruit.com/products/2024?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/9695?utm_source=j5) (Breakout)
+  - [SparkFun](https://www.sparkfun.com/products/12017?utm_source=j5) (Keypad)
+  - [Adafruit](hhttps://www.adafruit.com/products/1982?utm_source=j5) (Breakout)
+  - [Adafruit](https://www.adafruit.com/products/2024?utm_source=j5) (Shield)
 - MPR121QR2
   - [SparkFun](https://www.sparkfun.com/products/12013?utm_source=j5)
 - Grove QTouch (AT42QT1070)
   - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?utm_source=j5)
   - [Adafruit](https://www.adafruit.com/products/1362?utm_source=j5)
 - 12 Button Keypad (requires I2C backpack)
-  - [Adafruit](https://www.adafruit.com/products/1824)
+  - [Adafruit](https://www.adafruit.com/products/1824?utm_source=j5)
     - This likely works with the 3x4 membrane as well, as long as the signal lines are connected correctly
-  - [Sparkfun](https://www.sparkfun.com/products/8653)
+  - [Sparkfun](https://www.sparkfun.com/products/8653?utm_source=j5)
 
 
 ## Parameters
