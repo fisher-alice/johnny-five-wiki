@@ -1,6 +1,6 @@
 ![](http://i.imgur.com/Il23mnI.png)
 
-The `Keypad` class constructs an object that represents a single Keypad attached to the board.
+The `Keypad` class constructs an object that represents a single Keypad attached to the board. `Touchpad` is an alias for `Keypad`.
 
 Supported Keypads:
 
@@ -122,15 +122,25 @@ new five.Keypad({
 });
 ```
 
-#### MPR121QR2
+#### MPR121QR2_SHIELD
 
 ```javascript
 new five.Keypad({
-   controller: "MPR121QR2"
+   controller: "MPR121QR2_SHIELD"
 });
 ```
 
 ![](http://johnny-five.io/img/breadboard/keypad-MPR121QR2.png)
+
+#### MPR121_KEYPAD
+
+```javascript
+new five.Keypad({
+   controller: "MPR121_KEYPAD"
+});
+```
+
+![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/keypad-MPR121_KEYPAD.png)
 
 #### QTOUCH / AT42QT1070
 
