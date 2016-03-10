@@ -46,13 +46,6 @@ Supported Keypads:
   | sensitivity | Array | An array of `{ press: 0-1, release: 0-1 }` objects | \* | no |
   </span>
 
-  | For this MPR121 variant... | Use this controller |
-  |----------------------------|---------------------|
-  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_breakout_blue.jpg) | `MPR121` |
-  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_breakout_red.jpg) | `MPR121` |
-  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_keypad.jpg) | `MPR121_KEYPAD` |
-  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_shield.jpg) | `MPR121_SHIELD` |
-  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121qr2_touch_shield.jpg) | `MPR121QR2_SHIELD` |
 
 
 
@@ -67,6 +60,15 @@ Supported Keypads:
 
   Note: `release` should always have a higher sensitivity than `press`. 
 
+  ##### MPR121 Variants
+
+  | For this MPR121 variant... | Use this controller |
+  |----------------------------|---------------------|
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_breakout_blue.jpg) | `MPR121` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_breakout_red.jpg) | `MPR121` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_keypad.jpg) | `MPR121_KEYPAD` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_shield.jpg) | `MPR121_SHIELD` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121qr2_touch_shield.jpg) | `MPR121QR2_SHIELD` |
 
 - **VKEY Options (`controller: "VKEY"`)**
   <span class="abbreviate-table">
