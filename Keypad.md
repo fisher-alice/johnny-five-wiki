@@ -11,7 +11,7 @@ Supported Keypads:
 - MPR121
   - [SparkFun](https://www.sparkfun.com/products/9695?utm_source=j5) (Breakout)
   - [SparkFun](https://www.sparkfun.com/products/12017?utm_source=j5) (Keypad)
-  - [Adafruit](hhttps://www.adafruit.com/products/1982?utm_source=j5) (Breakout)
+  - [Adafruit](https://www.adafruit.com/products/1982?utm_source=j5) (Breakout)
   - [Adafruit](https://www.adafruit.com/products/2024?utm_source=j5) (Shield)
 - MPR121QR2
   - [SparkFun](https://www.sparkfun.com/products/12013?utm_source=j5)
