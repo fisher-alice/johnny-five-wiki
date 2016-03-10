@@ -278,18 +278,18 @@ keypad.on("press", function(event) {
 
 - **change** Emitted for **hold**, **down**, **up**
 
-- **hold** The key has been held for `holdtime` milliseconds
+- **hold** The key or keys have been held for `holdtime` milliseconds
 
-- **down**, **press** The key has been pressed.
+- **down**, **press** The key or keys have been pressed.
 
-- **up**, **release** The key has been released.
+- **up**, **release** The key or keys have been released.
 
 The following data object is emitted with each event:
 
 | Key Name | Description |
 |---------------| ----------- |
-| `which` | Value of key pressed from `keys` array |
-| `timestamp` | Timestamp at time of key press |
+| `which` | An array containing keys of _which_ buttons or pads are pressed. |
+| `timestamp` | Timestamp at time of event |
 
 <!--remove-start-->
 
