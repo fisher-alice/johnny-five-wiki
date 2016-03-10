@@ -18,6 +18,8 @@ Supported multi sensor modules:
     - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
 - SI7020
   - [Tessel](http://start.tessel.io/modules/climate)
+- MS5611
+  - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -142,6 +144,22 @@ new five.Multi({
 | ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 ![](http://johnny-five.io/img/breadboard/temperature-SI7020.png)
+
+
+#### MS5611
+```js
+new five.Altimeter({
+  controller: "MS5611"
+});
+```
+
+![MS5611](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-MS5611.png)
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `altimeter` | An instance of `Altimeter` class. | Yes |
+| `barometer` | An instance of `Barometer` class. | Yes |
+| `thermometer` | An instance of `Thermometer` class. | Yes |
 
 
 ## Usage
