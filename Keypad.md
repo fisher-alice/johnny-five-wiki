@@ -29,12 +29,12 @@ Supported Keypads:
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | AT42QT1070, MPR121, MPR121QR2, QTOUCH, VKEY, ANALOG. The Name of the controller to use | ANALOG | Yes       |
+  | controller    | string | AT42QT1070, MPR121, MPR121_\* (variants below), QTOUCH, VKEY, ANALOG. The Name of the controller to use | ANALOG | Yes       |
   | keys    | array | Mapping of key values |  By Device | No       |
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
   </span>
 
-- **MPR121 Options (`controller: "MPR121" | "MPR121QR2"`)**
+- **MPR121 Options (`controller: "MPR121" | "MPR121_*"`)**
 
   In addition to the General Options, the MPR121 supports the following: 
 
@@ -45,6 +45,16 @@ Supported Keypads:
   | sensitivity | Object | `{ press: 0-1, release: 0-1 }`. Use a generic sensitivity for all pads | \* | no |
   | sensitivity | Array | An array of `{ press: 0-1, release: 0-1 }` objects | \* | no |
   </span>
+
+  | For this MPR121 variant... | Use this controller |
+  |----------------------------|---------------------|
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_breakout_blue.jpg) | `MPR121` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_breakout_red.jpg) | `MPR121` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_keypad.jpg) | `MPR121_KEYPAD` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121_shield.jpg) | `MPR121_SHIELD` |
+  | ![](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/images/mpr121qr2_touch_shield.jpg) | `MPR121QR2_SHIELD` |
+
+
 
   ##### \* Sensitivity
   
