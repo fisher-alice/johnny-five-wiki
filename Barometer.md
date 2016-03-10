@@ -13,6 +13,8 @@ Supported Barometers:
   - [Sparkfun](https://www.sparkfun.com/products/11084?utm_source=j5)
     - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081?utm_source=j5)
     - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
+- MS5611
+  - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -75,6 +77,16 @@ new five.Barometer({
 ```
 
 ![MPL3115A2](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/barometer-mpl3115a2.png)
+
+
+#### MS5611
+```js
+new five.Barometer({
+  controller: "MS5611"
+});
+```
+
+![MS5611](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-MS5611.png)
 
 ## Usage
 
