@@ -39,6 +39,8 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Adafruit](https://www.adafruit.com/product/1782?utm_source=j5)
 - SI7020
   - [Tessel Climate](https://shop.tessel.io/Modules/Climate%20Module?utm_source=j5)
+- MS5611
+  - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -193,6 +195,15 @@ new five.Thermometer({
 ![MCP9808](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808.png)
 ![MCP9808](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-MCP9808-tessel.png)
 
+
+#### MS5611
+```js
+new five.Thermometer({
+  controller: "MS5611"
+});
+```
+
+![MS5611](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-MS5611.png)
 
 
 ## Usage
