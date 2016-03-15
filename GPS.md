@@ -61,7 +61,7 @@ new five.GPS({
 });
 ```
 
-![gps.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gps.png)
+![gps.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gps-adafruit.png)
 
 ## Usage
 
