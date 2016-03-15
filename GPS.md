@@ -19,16 +19,29 @@ This list will continue to be updated as more component support is implemented a
 
 - **General Options**
 
-| Property | Type   | Value/Description                              | Default   | Required |
-|----------|--------|------------------------------------------------|-----------|----------|
-| port | string | The microcontroller's serial port to use. See more below | io.SERIAL_PORT_IDs.DEFAULT | no |
-| pins | array | { tx: ?, rx: ?[, onOff: ?]} | none | no |
-| breakout | string | The breakout or shield being used | none | no |
-| receiver | string | The receiver module being used | none | no |
-| chip | string | The chipset being used on the receiver module | none | no |
-| fixed | integer | The number of digits after the decimal | 6 | no |
-| baud | integer | The baud rate for communication over serial | 9600 | no |
-| frequency | integer | The frequency of updates in hz (per second) | 1 | no |
+
+    | Property | Type   | Value/Description                              | Default   | Required |
+    |----------|--------|------------------------------------------------|-----------|----------|
+    | port | string | The microcontroller's serial port to use. See more below | io.SERIAL_PORT_IDs.DEFAULT | no |
+    | pins | array | { tx: ?, rx: ?[, onOff: ?]} | none | no |
+    | breakout | string | The breakout or shield being used | none | no |
+    | receiver | string | The receiver module being used | none | no |
+    | chip | string | The chipset being used on the receiver module | none | no |
+    | fixed | integer | The number of digits after the decimal | 6 | no |
+    | baud | integer | The baud rate for communication over serial | 9600 | no |
+    | frequency | integer | The frequency of updates in Hz | 1 | no |
+
+
+    Breakouts
+
+    | Breakout | Use With... |
+    |----------|---------------------------------------------|
+    | ADAFRUIT_ULTIMATE_GPS | Adafruit Ultimate GPS Breakout |
+
+
+
+
+
 
 ## Shape
 
