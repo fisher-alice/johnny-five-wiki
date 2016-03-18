@@ -61,7 +61,7 @@ This list will continue to be updated as more component support is implemented a
 
 ```js
 // U-Blox NEO-6M attached to Arduino UNO on Software Serial 0, pins 10 and 11
-new five.GPS([10,11]);
+new five.GPS([11, 10]);  // [RX, TX]
 ```
 
 #### Adafruit Ultimate GPS Breakout
@@ -69,7 +69,7 @@ new five.GPS([10,11]);
 ```js
 // Adafruit Ultimate GPS attached to Arduino UNO on Software Serial 0, pins 10 and 11
 new five.GPS({
-  pins: [10,11],
+  pins: [11, 10], // [RX, TX]
   breakout: "ADAFRUIT_ULTIMATE_GPS"
 });
 ```
@@ -85,14 +85,16 @@ var board = new five.Board();
 board.on("ready", function() {
 
   var gps = new five.GPS({
-    pins: {tx: 10, rx: 11}
+    pins: {rx: 11, tx: 10}
   });
 
-  // If lat, long, course or speed change log it
+  // If latitude, longitude, course or speed change log it
   gps.on("change", function() {
-    console.log(this.longitude, this.latitude);
+    console.log("position");
+    console.log("  latitude   : ", this.latitude);
+    console.log("  longitude  : ", this.longitude);
+    console.log("--------------------------------------");
   });
-
 });
 ```
 
