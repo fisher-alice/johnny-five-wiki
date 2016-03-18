@@ -41,6 +41,10 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Tessel Climate](https://shop.tessel.io/Modules/Climate%20Module?utm_source=j5)
 - MS5611
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
+- TH02
+  - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
+
+
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -204,6 +208,15 @@ new five.Thermometer({
 ```
 
 ![MS5611](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-MS5611.png)
+
+#### TH02
+```js
+new five.Thermometer({
+  controller: "TH02"
+});
+```
+
+![TH02](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-TH02.png)
 
 
 ## Usage
