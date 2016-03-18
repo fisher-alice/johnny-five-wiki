@@ -5,6 +5,7 @@ Supported Barometers:
 - BMP180
   - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
   - [SparkFun](https://www.sparkfun.com/products/11824?utm_source=j5)
+  - [Grove](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP180-p-1840.html?utm_source=j5)
 - MPL115A2
   - [Adafruit](https://www.adafruit.com/products/992?utm_source=j5)
   - [SparkFun](https://www.sparkfun.com/products/9721?utm_source=j5)
