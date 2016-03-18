@@ -6,6 +6,8 @@ Supported Hygrometers:
   - [Adafruit](https://www.adafruit.com/products/1899?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
 
+- TH02
+  - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 
 This list will continue to be updated as more devices are confirmed.
 
@@ -46,6 +48,15 @@ new five.Hygrometer({
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
 
 
+#### TH02
+
+```js
+new five.Hygrometer({
+  controller: "TH02"
+});
+```
+
+![TH02](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-TH02.png)
 
 ## Usage
 ```js
