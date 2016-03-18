@@ -20,6 +20,10 @@ Supported multi sensor modules:
   - [Tessel](http://start.tessel.io/modules/climate)
 - MS5611
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
+- TH02
+  - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
+
+
 
 This list will continue to be updated as more component support is implemented.
 
@@ -148,7 +152,7 @@ new five.Multi({
 
 #### MS5611
 ```js
-new five.Altimeter({
+new five.Multi({
   controller: "MS5611"
 });
 ```
@@ -161,6 +165,20 @@ new five.Altimeter({
 | `barometer` | An instance of `Barometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
 
+
+#### TH02
+```js
+new five.Multi({
+  controller: "TH02"
+});
+```
+
+![TH02](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-TH02.png)
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `hygrometer` | An instance of `Hygrometer` class. | Yes |
+| `thermometer` | An instance of `Thermometer` class. | Yes |
 
 ## Usage
 
