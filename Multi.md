@@ -34,7 +34,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | BMP180, HTU21D, MPL115A2, MPL3115A2, SI7020. The Name of the controller to use            |  | yes       |
+  | controller    | string | BMP180, HTU21D, MPL115A2, MPL3115A2, SI7020, MS5611, TH02. The Name of the controller to use            |  | yes       |
   </span>
 
 ## Shape
