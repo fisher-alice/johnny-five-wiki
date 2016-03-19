@@ -1,6 +1,3 @@
-Getting started with Johnny-Five and NW.js (a.k.a. Node-Webkit)
-=========
-
 > ## For an updated tutorial on how to use Johnny-Five within NW.js, check out: [NW.js, Johnny-Five & Arduino: A Wicked Trio](http://tangiblejs.com/posts/nw-js-johnny-five-arduino-wicked-trio).
 
 ![j5nw](https://cloud.githubusercontent.com/assets/641525/3868798/7576b16a-2065-11e4-96a4-d016e7d5a093.png)
