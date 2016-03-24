@@ -222,6 +222,17 @@ new five.Thermometer({
 ![TH02](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-TH02.png)
 
 
+#### DHT11_I2C_NANO_BACKPACK
+```js
+new five.Multi({
+  controller: "DHT11_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT11_I2C_NANO_BACKPACK.png)
+
+
+
 ## Usage
 
 ```js
@@ -241,16 +252,6 @@ board.on("ready", function() {
   });
 });
 ```
-
-
-#### DHT11_I2C_NANO_BACKPACK
-```js
-new five.Multi({
-  controller: "DHT11_I2C_NANO_BACKPACK"
-});
-```
-
-![DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT11_I2C_NANO_BACKPACK.png)
 
 
 ## API
