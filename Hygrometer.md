@@ -9,6 +9,11 @@ Supported Hygrometers:
 - TH02
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 
+- DHT11 (Via I2C Backpack)
+  - [Google](https://www.google.com/search?q=DHT11?utm_source=j5)
+
+
+
 This list will continue to be updated as more devices are confirmed.
 
 ## Parameters
@@ -57,6 +62,18 @@ new five.Hygrometer({
 ```
 
 ![TH02](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-TH02.png)
+
+
+#### DHT11_I2C_NANO_BACKPACK
+```js
+new five.Multi({
+  controller: "DHT11_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT11_I2C_NANO_BACKPACK.png)
+
+
 
 ## Usage
 ```js
