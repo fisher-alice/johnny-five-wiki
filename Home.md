@@ -71,7 +71,7 @@
 <!--extract-start:guides-->
 
 - [Johnny Five and Intel IoTDevKit Example Sketches](https://github.com/rwaldron/johnny-five/wiki/Johnny-Five-and-Intel-IoTDevKit-Example-Sketches)
-- [Getting started with Johnny-Five and Node Webkit](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Node-Webkit)
+- [Getting started with Johnny-Five and Node Webkit](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-NW.js-(a.k.a.-node-webkit))
 - [Getting started with Johnny-Five and Proteus](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-Proteus)
 - [Getting started with Johnny-Five and the Intel Galileo gen2](https://github.com/rwaldron/johnny-five/wiki/Getting-started-with-Johnny-Five-and-the-Intel-Galileo-gen2)
 - [Getting Started with Johnny-Five and JY MCU Bluetooth Serial Port Module](https://github.com/rwaldron/johnny-five/wiki/Getting-Started-with-Johnny-Five-and-JY-MCU-Bluetooth-Serial-Port-Module)
