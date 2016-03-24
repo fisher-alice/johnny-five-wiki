@@ -44,6 +44,8 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 - TH02
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
+- DHT11 (Via I2C Backpack)
+  - [Google](https://www.google.com/search?q=DHT11?utm_source=j5)
 
 
 
@@ -239,6 +241,17 @@ board.on("ready", function() {
   });
 });
 ```
+
+
+#### DHT11_I2C_NANO_BACKPACK
+```js
+new five.Multi({
+  controller: "DHT11_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT11_I2C_NANO_BACKPACK.png)
+
 
 ## API
 
