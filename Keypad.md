@@ -17,7 +17,6 @@ Supported Keypads:
   - [SparkFun](https://www.sparkfun.com/products/12013?utm_source=j5)
 - Grove QTouch (AT42QT1070)
   - [Seeed Studio](http://www.seeedstudio.com/depot/Grove-Touch-Sensor-p-747.html?utm_source=j5)
-  - [Adafruit](https://www.adafruit.com/products/1362?utm_source=j5)
 - 12 Button Keypad (requires I2C backpack)
   - [Adafruit](https://www.adafruit.com/products/1824?utm_source=j5)
     - This likely works with the 3x4 membrane as well, as long as the signal lines are connected correctly
