@@ -151,7 +151,7 @@ new five.Keypad({
 });
 ```
 
-Note: the [Adafruit: Standalone 5-Pad Capacitive Touch Sensor Breakout - AT42QT1070](https://www.adafruit.com/products/1362?utm_source=j5) will not work with the keypad class, it has i2c disabled and must be used with the `Button` class instead.
+Note: the [Adafruit: Standalone 5-Pad Capacitive Touch Sensor Breakout - AT42QT1070](https://www.adafruit.com/products/1362?utm_source=j5) will not work with the `Keypad` class, it has i2c disabled and must be used with the `Button` class instead.
 
 #### 3x4 Keypad
 
