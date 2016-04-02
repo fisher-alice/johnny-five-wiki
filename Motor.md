@@ -306,7 +306,6 @@ board.on("ready", function() {
       },
       address: 0x60,
       controller: "PCA9685"
-    }
   });
 
   // Start the motor at maximum speed
