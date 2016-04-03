@@ -94,8 +94,8 @@ board.on("ready", function() {
   var sensor = new five.Sensor("A0");
   
   // Scale the sensor's data from 0-1023 to 0-10 and log changes
-  sensor.scale(0, 10).on("change", function() {
-    console.log(this.value);
+  sensor.scale(0, 10).on("change", function(value) {
+    console.log(value);
   });
 });
 ```
@@ -110,8 +110,8 @@ board.on("ready", function() {
 
   var sensor = new five.Sensor.Digital(2);
 
-  sensor.on("change", function() {
-    console.log(this.value);
+  sensor.on("change", function(value) {
+    console.log(value);
   });
 });
 ```
