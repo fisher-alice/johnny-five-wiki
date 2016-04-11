@@ -108,7 +108,7 @@ board.on("ready", function() {
 });
 ```
 
-## More Customize
+## More Customize Usage
 
 - **GPS Module connected to Arduino MEGA 2560's hardware serial with custom buadrate which is 4800**
 
