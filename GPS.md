@@ -78,6 +78,8 @@ new five.GPS({
 
 ## Usage
 
+- **GPS Module connected to Arduino UNO with default buadrate which is 9600**
+
 ```js
 var five = require("johnny-five");
 var board = new five.Board();
@@ -88,11 +90,52 @@ board.on("ready", function() {
     pins: {rx: 11, tx: 10}
   });
 
-  // If latitude, longitude, course or speed change log it
+  // If latitude, longitude change log it
   gps.on("change", function() {
     console.log("position");
     console.log("  latitude   : ", this.latitude);
     console.log("  longitude  : ", this.longitude);
+    console.log("  altitude   : ", this.altitude);
+    console.log("--------------------------------------");
+  });
+  // If speed, course change log it
+  gps.on("navigation", function() {
+    console.log("navigation");
+    console.log("  speed   : ", this.speed);
+    console.log("  course  : ", this.course);
+    console.log("--------------------------------------");
+  });
+});
+```
+
+## More Customize
+
+- **GPS Module connected to Arduino MEGA 2560's hardware serial with custom buadrate which is 4800**
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+
+  var gps = new five.GPS({
+    port: this.io.SERIAL_PORT_IDs.HW_SERIAL3,
+    baud: 4800
+  });
+
+  // If latitude, longitude change log it
+  gps.on("change", function() {
+    console.log("position");
+    console.log("  latitude   : ", this.latitude);
+    console.log("  longitude  : ", this.longitude);
+    console.log("  altitude   : ", this.altitude);
+    console.log("--------------------------------------");
+  });
+  // If speed, course change log it
+  gps.on("navigation", function() {
+    console.log("navigation");
+    console.log("  speed   : ", this.speed);
+    console.log("  course  : ", this.course);
     console.log("--------------------------------------");
   });
 });
@@ -136,7 +179,7 @@ board.on("ready", function() {
 
 GPS is the first class in Johnny-Five to leverage firmata's new support for serial. Other IO plugins are following suit and adding their own support for serial.
 
-The Arduino Uno has a single UART. Assuming your Arduino is connected to a computer via USB, that UART is already in use. By default the GPS class will try and use software serial to connect but please note that software serial does not work reliably above 57600bps. Other boards such as the Arduino Mega have multiple UART's so hardware serial is the better option on those boards.
+[Arduino Uno](https://www.arduino.cc/en/Main/ArduinoBoardUno) has a single UART. Assuming your Arduino is connected to a computer via USB, that UART is already in use. By default the GPS class will try and use software serial to connect but please note that software serial does not work reliably above 57600bps. Other boards such as [Arduino MEGA 2560](https://www.arduino.cc/en/Main/arduinoBoardMega2560) has 4 UARTs so hardware serial is the better option on those boards.
 
 Arduino boards that use the SAM and SAMD architectures (i.e. the Due and Zero) do not support Software Serial at all.
 
