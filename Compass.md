@@ -79,8 +79,8 @@ board.on("ready", function() {
     controller: "HMC6352"
   });
 
-  compass.on("headingchange", function() {
-    console.log("headingchange");
+  compass.on("change", function() {
+    console.log("change");
     console.log("  heading : ", Math.floor(this.heading));
     console.log("  bearing : ", this.bearing.name);
     console.log("--------------------------------------");
@@ -104,8 +104,8 @@ board.on("ready", function() {
     controller: "HMC5883L"
   });
 
-  compass.on("headingchange", function() {
-    console.log("headingchange");
+  compass.on("change", function() {
+    console.log("change");
     console.log("  heading : ", Math.floor(this.heading));
     console.log("  bearing : ", this.bearing.name);
     console.log("--------------------------------------");
