@@ -2,9 +2,11 @@ The `Multi` class constructs objects that represent a single "breakout" module a
 
 Supported multi sensor modules:
 
+
 - BMP180
   - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
-  - [Sparkfun](https://www.sparkfun.com/products/11824?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/11824?utm_source=j5)
+  - [Grove](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP180-p-1840.html?utm_source=j5)
 - BMP280
   - [Adafruit](https://www.adafruit.com/products/2651?utm_source=j5)
 - BME280
