@@ -11,6 +11,7 @@ Supported Hygrometers:
 - TH02
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 - SI7020
+  - [Tessel Climate](http://www.seeedstudio.com/depot/Tessel-Climate-Module-p-2225.html?utm_source=j5)
 - SHT31D
   - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
 - DHT11 (Via I2C Backpack)
