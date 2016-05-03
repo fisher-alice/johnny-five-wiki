@@ -28,7 +28,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property | Type          | Value/Description                                             | Default | Required                                                               |
   |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
-  | controller    | string        | HTU21D. The Name of the controller to use. |  | no |
+  | controller    | string        | BME280, HTU21D, TH02, SI7020, SHT31D. The Name of the controller to use. |  | no |
   | freq          | Number        | Milliseconds. The rate in milliseconds to emit the data event         | 25ms | no                                                                     |
   </span>
 
