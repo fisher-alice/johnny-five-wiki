@@ -44,13 +44,15 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
 - MCP9808
   - [Adafruit](https://www.adafruit.com/product/1782?utm_source=j5)
 - SI7020
-  - [Tessel Climate](https://shop.tessel.io/Modules/Climate%20Module?utm_source=j5)
+  - [Tessel Climate](http://www.seeedstudio.com/depot/Tessel-Climate-Module-p-2225.html?utm_source=j5)
 - MS5611
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 - TH02
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 - DHT11 (Via I2C Backpack)
   - [Google](https://www.google.com/search?q=DHT11?utm_source=j5)
+- SHT31D
+  - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
 
 
 
