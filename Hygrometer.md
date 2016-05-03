@@ -2,13 +2,17 @@ The `Hygrometer` class constructs objects that represent a single Hygrometer sen
 
 Supported Hygrometers:
 
+- BME280
+  - [Adafruit](https://www.adafruit.com/products/2652?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/13676?utm_source=j5)
 - HTU21D
   - [Adafruit](https://www.adafruit.com/products/1899?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
-
 - TH02
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
-
+- SI7020
+- SHT31D
+  - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
 - DHT11 (Via I2C Backpack)
   - [Google](https://www.google.com/search?q=DHT11?utm_source=j5)
 
