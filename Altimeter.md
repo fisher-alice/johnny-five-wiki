@@ -2,14 +2,20 @@ The `Altimeter` class constructs objects that represent a single Altimeter senso
 
 Supported Altimeters:
 
+- BMP180
+  - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/11824?utm_source=j5)
+  - [Grove](http://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP180-p-1840.html?utm_source=j5)
+- BMP280
+  - [Adafruit](https://www.adafruit.com/products/2651?utm_source=j5)
+- BME280
+  - [Adafruit](https://www.adafruit.com/products/2652?utm_source=j5)
+  - [Sparkfun](https://www.sparkfun.com/products/13676?utm_source=j5)
 - MPL3115A2
   - [Adafruit](https://www.adafruit.com/products/1893?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/11084?utm_source=j5)
     - [SparkFun Weather Shield](https://www.sparkfun.com/products/12081?utm_source=j5)
     - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
-- BMP180
-  - [Adafruit](https://www.adafruit.com/products/1603?utm_source=j5)
-  - [Sparkfun](https://www.sparkfun.com/products/11824?utm_source=j5)
 - MS5611
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 
