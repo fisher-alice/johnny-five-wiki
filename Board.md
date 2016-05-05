@@ -29,7 +29,8 @@ For non-Arduino based projects, a number of [IO Plugins](https://github.com/rwal
 - [Imp-IO](https://github.com/rwaldron/imp-io/)
 - [Remote-IO](https://github.com/monteslu/remote-io)
 - [Board-IO](https://github.com/achingbrain/board-io)
-
+- [Tessel-IO](https://github.com/rwaldron/tessel-io/)
+- [Playground-IO](https://github.com/rwaldron/playground-io/)
 
 See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
 
@@ -130,6 +131,24 @@ board.on("ready", function() {
   });
 });
 ```
+
+
+When running Johnny-Five programs as a sub-process (eg. init.d, or npm scripts), be sure to shut the REPL off!
+
+
+```js
+var five = require("johnny-five");
+var board = new five.Board({
+  repl: false,
+  debug: false,
+});
+
+board.on("ready", function() {
+  // it's very quiet in here now!
+});
+```
+
+
 
 ## API
 
