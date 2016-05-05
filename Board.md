@@ -133,6 +133,8 @@ board.on("ready", function() {
 ```
 
 
+## Sub-process Usage
+
 When running Johnny-Five programs as a sub-process (eg. init.d, or npm scripts), be sure to shut the REPL off!
 
 
