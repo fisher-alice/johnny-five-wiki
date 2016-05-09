@@ -16,6 +16,9 @@ As of this writing, node.js (version 0.10.29) and the node-red application come 
 Edit the `/etc/init.d/nodred` script in your favorite text editor on the pi.
 Switch the line containing `USER=pi` to `USER=root`
 
+In the latest version of raspbian (2016-03-18-raspbian-jessie), the service file is /lib/systemd/system/nodered.service and, in order to use node-red installed under /home/pi/.node-red, you need to have the following line under [Service]:
+
+Environment="NODE_RED_OPTIONS=-v -u /home/pi/.node-red" (the -v flag is optional, giving you verbose output)
 
 ## Trying node-red
 
