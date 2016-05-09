@@ -18,11 +18,6 @@ Switch the line containing `USER=pi` to `USER=root`
 
 In the latest version of raspbian (2016-03-18-raspbian-jessie), the script file is /lib/systemd/system/nodered.service.
 
-If you wish to have everything under /home/pi/.node-red, do not `sudo su -` and put this line under [Service]:
-
-Environment="NODE_RED_OPTIONS=-v -u /home/pi/.node-red" (the -v flag is optional, giving you verbose output)
-
-
 ## Trying node-red
 
 Run `sudo node-red-start` the open a web browser to `http://<YOUR PI's IP ADDRESS>:1880`
