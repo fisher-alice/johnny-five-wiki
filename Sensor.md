@@ -159,8 +159,7 @@ board.on("ready", function() {
 
 ## Events
 
-- **change** The "change" event is emitted whenever the value of the sensor changes more then the threshold value allows. The "change" event has aliases that can be used to better reason about the program being written: "slide", "touch", "force", "bend".
-
+- **change** The "change" event is emitted whenever the value of the sensor changes more than the threshold value allows. 
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the deprecated "read" event)
 
 
