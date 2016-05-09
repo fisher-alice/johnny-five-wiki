@@ -119,18 +119,36 @@ board.on("ready", function() {
 
 ## API
 
-- **scale(low, high)** Scale the sensor's value to a new value within a specified range.
+
+- **scaleTo(low, high)** (integer) Return the sensor's present value, scaled to a new value within the specified low/high range. 
+- **fscaleTo(low, high)** (float) Return the sensor's present value, scaled to a new value within the specified low/high range.
   ```js
   var sensor = new five.Sensor("A0");
 
-  sensor.scale(0, 180).on("change", function() {
+  sensor.on("change", function() {
     // this.value will reflect a scaling from 0-1023 to 0-180
-    console.log( this.value );
+    console.log(this.scaleTo(0, 180)); // integer
+    console.log(this.fscaleTo(0, 180)); // float
   });
   ```
 
-- **scale([low, high])** Same as `scale(low, high)`. 
+- **scaleTo([low, high])** (integer) Return the sensor's present value, scaled to a new value within the specified low/high range. 
+- **fscaleTo([low, high])** (float) Return the sensor's present value, scaled to a new value within the specified low/high range.
+  ```js
+  var sensor = new five.Sensor("A0");
 
+  sensor.on("change", function() {
+    // this.value will reflect a scaling from 0-1023 to 0-180
+    console.log(this.scaleTo([0, 180])); // integer
+    console.log(this.fscaleTo([0, 180])); // float
+  });
+  ```
+
+
+- **scale(low, high)** Scale the sensor's value to a new value within a specified range.
+  `scale(...)` is deprecated, use `scaleTo(...)`
+- **scale([low, high])** Same as `scale(low, high)`. 
+  `scale(...)` is deprecated, use `scaleTo(...)`
 
 - **booleanAt(barrier)** Set a midpoint barrier value used to calculate returned value of the .boolean property. The barrier is based on the scaled value, not the raw value. Defaults to 50% (512 when unscaled).
   ```js
