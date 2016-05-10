@@ -66,3 +66,16 @@ board.on("ready", function() {
 
 - **open** The `open` event will emit when the circuit opens. 
 - **close** The `close` event will emit when the circuit closes. 
+
+
+## Collection
+
+`Switch` supports a `Switches` collection class, which allows multiple `Switch` instances to be controlled via a single instance object. Events emitted by instances of the `Switch` class are forwarded through instances of the `Switches` class. The handler receives the instance that emitted the event as the first parameter.
+
+```js
+new five.Switches([ 2, 3, 4, 5 ]);
+new five.Switches([ { pin: 2 }, { pin: 3 }, { pin: 4 }, { pin: 5 } ]);
+new five.Switches([ switch1, switch2, switch3 ]);
+```
+
+
