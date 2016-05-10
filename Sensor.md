@@ -181,6 +181,18 @@ board.on("ready", function() {
 - **data** The "data" event is fired as frequently as the user defined `freq` will allow in milliseconds. ("data" replaced the deprecated "read" event)
 
 
+## Collection
+
+`Sensor` supports a `Sensors` collection class, which allows multiple `Sensor` instances to be controlled via a single instance object. Events emitted by instances of the `Sensor` class are forwarded through instances of the `Sensors` class. The handler receives the instance that emitted the event as the first parameter.
+
+```js
+new five.Sensors([ 2, 3, 4, 5 ]);
+new five.Sensors([ { pin: 2 }, { pin: 3 }, { pin: 4 }, { pin: 5 } ]);
+new five.Sensors([ sensor1, sensor2, sensor3 ]);
+```
+
+
+
 <!--remove-start-->
 
 ## Examples
