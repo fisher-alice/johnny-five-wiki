@@ -89,6 +89,18 @@ board.on("ready", function() {
 
 - **up**, **release** The button has been released.
 
+
+## Collection
+
+`Button` supports a `Buttons` collection class, which allows multiple `Button` instances to be controlled via a single instance object. Events emitted by instances of the `Button` class are forwarded through instances of the `Buttons` class. The handler receives the instance that emitted the event as the first parameter.
+
+```js
+new five.Buttons([ 2, 3, 4, 5 ]);
+new five.Buttons([ { pin: 2 }, { pin: 3 }, { pin: 4 }, { pin: 5 } ]);
+new five.Buttons([ button1, button2, button3 ]);
+```
+
+
 <!--remove-start-->
 
 ## Examples
