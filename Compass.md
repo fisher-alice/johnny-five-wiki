@@ -9,7 +9,10 @@ Supported Compass/Magnetometer:
 - HMC5883L
   - [Triple-axis Magnetometer (Compass) Board - HMC5883L](https://www.adafruit.com/products/1746?utm_source=j5)
   - [SparkFun Triple Axis Magnetometer Breakout - HMC5883L](https://www.sparkfun.com/products/10530?utm_source=j5)
-
+- BNO055
+  - [Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055](https://www.adafruit.com/product/2472)
+- MAG3110
+  - [SparkFun Triple Axis Magnetometer Breakout - MAG3110](https://www.sparkfun.com/products/12670)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -22,7 +25,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description | Default | Required |
   |----------|--------|-------------------|---------|----------|
-  | controller    | String | HMC6352, HMC5883L. The name of the controller to use | | yes      |
+  | controller    | String | BNO055, HMC6352, HMC5883L, MAG3110. The name of the controller to use | | yes      |
   | gauss         | Number | cgs units. Set the scale gauss for compass readings. | 1.3 | no       |
   </span>
 
@@ -48,6 +51,16 @@ This list will continue to be updated as more component support is implemented.
 
 ## Component Initialization
 
+#### BNO055
+
+```js
+new five.Compass({
+  controller: "BNO055"
+});
+```
+![BNO055](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/imu-bno055.png)
+
+
 #### HMC6352
 
 ```js
@@ -66,6 +79,14 @@ new five.Compass({
 ```
 ![HMC5883L](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/compass-hmc5883l.png)
 
+#### MAG3110
+
+```js
+new five.Compass({
+  controller: "MAG3110"
+});
+```
+![MAG3110](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/compass-MAG3110.png)
 
 ## Usage
 
