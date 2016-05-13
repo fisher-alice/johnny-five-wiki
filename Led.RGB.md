@@ -52,7 +52,7 @@ The `Led.RGB` class constructs objects that represent an RGB Led.
 | `red` | `Led` object | No |
 | `green` | `Led` object | No |
 | `blue` | `Led` object | No |
-| `isAnode` | true \| false. | Yes |
+| `isAnode` | Boolean | Yes |
 
 ## Component Initialization
 
