@@ -69,7 +69,9 @@ new five.Joystick({
 ##### Default 
 
 ```js
-var joy = new Joystick({ pins: ["A0", "A1"], invertY: true });
+var joy = new Joystick({ 
+  pins: ["A0", "A1"], 
+});
 ```
 
 Produces the following default axes:
@@ -83,7 +85,10 @@ Produces the following default axes:
 ##### Invert Y 
 
 ```js
-var joy = new Joystick({ pins: ["A0", "A1"], invertY: true });
+var joy = new Joystick({ 
+  pins: ["A0", "A1"], 
+  invertY: true 
+});
 ```
 
 Produces an inverted Y axis, with a default X axis: 
@@ -97,7 +102,10 @@ Produces an inverted Y axis, with a default X axis:
 ##### Invert X
 
 ```js
-var joy = new Joystick({ pins: ["A0", "A1"], invertX: true });
+var joy = new Joystick({ 
+  pins: ["A0", "A1"], 
+  invertX: true 
+});
 ```
 
 Produces an inverted X axis, with a default Y axis: 
@@ -111,7 +119,10 @@ Produces an inverted X axis, with a default Y axis:
 ##### Invert Both
 
 ```js
-var joy = new Joystick({ pins: ["A0", "A1"], invert: true });
+var joy = new Joystick({ 
+  pins: ["A0", "A1"], 
+  invert: true 
+});
 ```
 
 Produces an both inverted X and Y axes: 
