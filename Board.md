@@ -228,7 +228,7 @@ Mode constants are exposed via the `Pin` class
   });
   ```
 
-- **analogWrite(pin, value)** Write an unsigned, 8-bit value (0-255) to a digital `pin`.
+- **analogWrite(pin, value)** Write an unsigned, 8-bit value (0-255) to an analog `pin`.
   ```js
   var five = require("johnny-five");
   var board = new five.Board();
