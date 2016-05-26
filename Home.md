@@ -42,6 +42,7 @@
 - [Led.Matrix](https://github.com/rwaldron/johnny-five/wiki/Led.Matrix)
 - [Led.RGB](https://github.com/rwaldron/johnny-five/wiki/Led.RGB)
 - [Leds](https://github.com/rwaldron/johnny-five/wiki/Leds)
+- [Light](https://github.com/rwaldron/johnny-five/wiki/Light)
 - [Motion](https://github.com/rwaldron/johnny-five/wiki/Motion)
 - [Motor](https://github.com/rwaldron/johnny-five/wiki/Motor)
 - [Multi](https://github.com/rwaldron/johnny-five/wiki/Multi)
