@@ -1,6 +1,6 @@
 The `Light` class constructs objects that represent a single analog or digital light light component attached to the physical board. Light sensors are used to measure ambient or direct light intensity.
 
-Supported Hygrometers:
+Supported Light sensors:
 
 - Photoreistors
   - Sparkfun
