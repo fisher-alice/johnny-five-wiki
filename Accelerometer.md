@@ -79,6 +79,33 @@ This list will continue to be updated as more component support is implemented.
 ## Component Initialization
 
 #### Analog
+
+Simplified array of X and Y axis pins, all defaults: 
+
+```js
+new five.Accelerometer(["A0", "A1"]);
+```
+
+Options object with pins property, array of X and Y axis pins, all defaults: 
+
+```js
+new five.Accelerometer({
+  pins: ["A0", "A1"]
+});
+```
+
+Options object with pins property, array of X and Y axis pins: 
+
+```js
+new five.Accelerometer({
+  pins: ["A0", "A1"],
+  sensitivity: 96, // optional
+  aref: 5,         // optional
+  zeroV: 478       // optional
+});
+```
+
+
 ```js
 // Create an analog Accelerometer object:
 //
