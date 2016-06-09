@@ -195,6 +195,14 @@ board.on("ready", function() {
   console.log( led.color() );
   // {red: 255, blue: 0, green: 255}
   ```
+| Valid Color Arguments | Example(s) | In Situ |
+|-----------------------|-----------------------|-----------------------|
+| Any CSS color name string | `"red"`, `"green"`, `"blue"` | `rgb.color("red")` |
+| Hexadecimal color strings | `"ff0000"`, `"00ff00"`, `"0000ff"` | `rgb.color("0000ff")` |
+| Hexadecimal color strings, w/ leading \# | `"#ff0000"`, `"#00ff00"`, `"#0000ff"` | `rgb.color("#0000ff")` |
+| Array of 8-bit bytes | `[0xff, 0x00, 0x00]` | `rgb.color([0xff, 0x00, 0x00])` |
+| Object of 8-bit bytes | `{ red: 0x00, green: 0xFF, blue: 0x00 }` | `rgb.color({ red: 0x00, green: 0xFF, blue: 0x00 })` |
+
 
 - **intensity(value)** Sets the overall intensity or "brightness" of the Led. Maintains current color state. If no value is supplied, it returns the current intensity value.
   ```js
