@@ -3,7 +3,13 @@ A **target** is the device or list of devices that are being animated.
 
 A **segment** is a short modular animation sequence (i.e. sit, stand, walk, etc). Segments are synchronous and run first-in, first-out.
 
-Servos and Servo.Arrays may be animated. If you have a use case for another device type, open an issue.
+
+Things that can be animated: 
+
+- `Servo`, `Servos`
+- `Led`, `Leds`
+- `Led.RGB`, `Led.RGBs`
+
 
 You should be familiar with the API of the device(s) you will be animating. You don't have to call the device methods directly but if you haven't used them before this will be frustrating.
 
