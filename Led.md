@@ -181,7 +181,7 @@ board.on("ready", function() {
   var led = new five.Led(11);
 
   led.fade({
-    easing: "linear",
+    easing: "outSine",
     duration: 1000,
     cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
     keyFrames: [0, 250, 25, 150, 100, 125],
