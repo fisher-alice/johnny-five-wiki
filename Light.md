@@ -40,7 +40,7 @@ This list will continue to be updated as more devices are confirmed.
 | `pin` | The pin address that the Light is attached to | No |
 | `threshold` | The change threshold (+/- value). Defaults to 1 | No |
 | `value` | Raw value | Yes |
-| `level` | Intensity level 0-100 (%) | Yes |
+| `level` | Intensity level 0-1 (%) | Yes |
 
 ## Component Initialization
 
