@@ -15,14 +15,16 @@ For working with a single motor check out the [Motor](motor) class.
 ## Component Initialization
 
 ### With Pins
-````
+
+```js
 // Create three non-directional motors
 //
 new five.Motors([9, 10, 11]);
-````
+```
 
 ### With Objects
-````
+
+```js
 // Create two customized motors
 //
 new five.Motors([{
@@ -37,7 +39,7 @@ new five.Motors([{
     cdir: 11  
   }
 }]);
-````
+```
 
 
 ## Usage
