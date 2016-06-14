@@ -45,6 +45,7 @@
 - [Light](https://github.com/rwaldron/johnny-five/wiki/Light)
 - [Motion](https://github.com/rwaldron/johnny-five/wiki/Motion)
 - [Motor](https://github.com/rwaldron/johnny-five/wiki/Motor)
+- [Motor](https://github.com/rwaldron/johnny-five/wiki/Motors)
 - [Multi](https://github.com/rwaldron/johnny-five/wiki/Multi)
 - [Piezo](https://github.com/rwaldron/johnny-five/wiki/Piezo)
 - [Pin](https://github.com/rwaldron/johnny-five/wiki/Pin)
