@@ -9,6 +9,10 @@ The `Expander` class constructs objects that represent a single I2C IO Expander 
   - `GROVEPI`
 - To add "Ping Read" capabilities (`Proximity` instances for HCSR04, Ultrasonic Ping, Parallax Ping, etc.) to your Raspberry Pi project, use:
   - `GROVEPI`
+- Control a shift register as a "sub" board, use:
+  - `74HC595`
+
+
 
 Supported Expanders:
 
@@ -30,6 +34,10 @@ Supported Expanders:
   - [Mayhew](http://mayhewlabs.com/products/mux-shield-2)
 - GROVEPI
   - [Dexter](http://www.dexterindustries.com/grovepi/)
+- 74HC595, SN74HC595
+  - [Shift Register 8-Bit](https://www.sparkfun.com/products/13699)
+- CD74HC4067
+  - [SparkFun Analog/Digital MUX Breakout](https://www.sparkfun.com/products/9056)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -47,6 +55,8 @@ This list will continue to be updated as more component support is implemented.
   - `PCA9685`
   - `MUXSHIELD2`
   - `GROVEPI`
+  - `74HC595`
+  - `CD74HC4067`
 
   ```js
   // Examples:
@@ -62,7 +72,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685, MUXSHIELD2, GROVEPI. The Name of the controller to use |  | Yes       |
+  | controller    | string | MCP23017, MCP23008, PCF8574, PCF8574A, PCF8575, PCF8591, PCA9685, MUXSHIELD2, GROVEPI, 74HC595, CD74HC4067. The Name of the controller to use |  | Yes       |
   | address       | Number  | Address for I2C device. | [By Device](#default-addresses) | no       |
   </span>
 
@@ -109,7 +119,7 @@ This list will continue to be updated as more component support is implemented.
   | PCF8591 | `0x48-0x4F` | `0x48` |
   | PCA9685 | `0x40-0x4F` | `0x40` |
   | GROVEPI | `0x04` | `0x04` |
-
+  | CD74HC4067 | `0x0A-0x0D` | `0x0A` |
 
 ## Shape
 
@@ -282,6 +292,56 @@ new five.Expander({
 ```
 
 ![PCF8591](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/expander-PCF8591.png)
+
+
+#### 74HC595
+
+```js
+// Create a 74HC595 Expander object:
+// (change pins to appropriate pins for board)
+new five.Expander({
+  controller: "74HC595",
+  pins: {
+    data: 2,
+    clock: 3,
+    latch: 4
+  }
+});
+```
+
+![74HC595](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/expander-74HC595.png)
+
+
+
+#### CD74HC4067
+
+```js
+// Create a CD74HC4067 Expander object:
+//
+//  - attach SDA and SCL to the I2C pins on
+//     your board (A4 and A5 for the Uno)
+//  - specify the CD74HC4067 controller
+
+new five.Expander("CD74HC4067");
+
+// or
+
+new five.Expander({
+  controller: "CD74HC4067"
+});
+
+// or
+
+new five.Expander({
+  controller: "CD74HC4067",
+  address: 0x??
+});
+```
+
+
+![CD74HC4067](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/expander-CD74HC4067-14-pots.png)
+
+
 
 ## Usage
 
