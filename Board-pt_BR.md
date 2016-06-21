@@ -1,6 +1,6 @@
 A classe `Board` constrói objetos que representam a própria placa fisicamente. Todos os objetos do dispositivo dependem de um objeto de placa inicializado e pronto.
 
-Johnny-Five foi testado em, mas não está limitado às, seguintes placas:
+Johnny-Five foi testado, mas não está limitado às, seguintes placas:
 
 - [Arduino UNO](http://arduino.cc/en/Main/arduinoBoardUno)
 - [Arduino Leonardo](http://arduino.cc/en/Main/arduinoBoardLeonardo)
