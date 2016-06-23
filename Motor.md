@@ -251,8 +251,7 @@ var five = require("johnny-five"),
 board.on("ready", function() {
 
   var motor = new five.Motor({
-      pins: [3, 12]
-    },
+    pins: [3, 12],
     current: {
       pin: "A0",
       freq: 250,
@@ -272,6 +271,7 @@ board.on("ready", function() {
 ```
 
 #### Directional Motor with ShiftRegister to control HBridge (Like the AdaFruit Motor Shield V1)
+
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -279,10 +279,9 @@ var five = require("johnny-five"),
 board.on("ready", function() {
 
   var motor = new five.Motor({
-      pins: { pwm: 11 },
-      register: { data: 8, clock: 4, latch: 12 },
-      bits: { a: 2, b: 3 }
-    }
+    pins: { pwm: 11 },
+    register: { data: 8, clock: 4, latch: 12 },
+    bits: { a: 2, b: 3 }
   });
 
   // Start the motor at maximum speed
@@ -292,6 +291,7 @@ board.on("ready", function() {
 ```
 
 #### Directional Motor via Adafruit Motor Shield V2
+
 ```js
 var five = require("johnny-five"), 
     board = new five.Board();
@@ -299,13 +299,13 @@ var five = require("johnny-five"),
 board.on("ready", function() {
 
   var motor = new five.Motor({
-      pins: {
-        pwm: 8,
-        dir: 9,
-        cdir: 10
-      },
-      address: 0x60,
-      controller: "PCA9685"
+    controller: "PCA9685",
+    frequency: 200, // Hz
+    pins: {
+      pwm: 8,
+      dir: 9,
+      cdir: 10,
+    },
   });
 
   // Start the motor at maximum speed
