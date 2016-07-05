@@ -38,6 +38,18 @@ new five.Piezo({
 ![piezo diagram](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/piezo.png)
 
 
+#### i2C backpack
+```
+  var piezo = new five.Piezo({
+    controller: "I2C_BACKPACK",
+    pin: 3
+  });
+```
+
+
+Firmware: https://github.com/rwaldron/johnny-five/blob/master/firmwares/piezo_i2c_backpack.ino
+
+
 ## Usage
 
 ```js
