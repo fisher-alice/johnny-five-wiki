@@ -52,6 +52,7 @@
 - [Ping](https://github.com/rwaldron/johnny-five/wiki/Ping)
 - [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity)
 - [Relay](https://github.com/rwaldron/johnny-five/wiki/Relay)
+- [Relays](https://github.com/rwaldron/johnny-five/wiki/Relays)
 - [Sensor](https://github.com/rwaldron/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwaldron/johnny-five/wiki/Servo)
 - [Servos](https://github.com/rwaldron/johnny-five/wiki/Servos)
