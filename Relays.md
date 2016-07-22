@@ -16,15 +16,17 @@ For working with a single relay check out the [Relay](relay) class.
 
 ## Component Initialization
 
-###With Pins
-````
+### With Pins
+
+```js
 // Create three basic relays
 //
 new five.Relays([9, 10, 11]);
-````
+```
 
-###With Objects
-````
+### With Objects
+
+```js
 // Create two customized relays
 //
 new five.Relays([{
@@ -34,7 +36,7 @@ new five.Relays([{
   pin: 10, 
   type: "NC",
 }]);
-````
+```
 
 
 ## Usage
