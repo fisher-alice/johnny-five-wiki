@@ -450,6 +450,8 @@ Mode constants are exposed via the `Pin` class
 
 - **ready** This event will emit _after_ the **connect** event and only when the `Board` instance object has completed any hardware initialization that must take place before the program can operate. This process is asynchronous, and completion is signified to the program via a "ready" event. For on-board execution, `ready` should emit after `connect`. 
 
+- **exit** Emitted synchronously on `SIGINT`. Use this handler to do any necessary cleanup before your program is "disconnected" from the board.
+
 - **info** This event will emit for `board.info(class, message [, ...])`
   ```js
   board.on("info", function(event) {
