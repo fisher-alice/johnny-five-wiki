@@ -102,6 +102,9 @@ This list will continue to be updated as more component support is implemented.
   | PCA9685 | 16 | `OUTPUT`, `PWM`, `SERVO` |
   | MUXSHIELD2 | 48 | `INPUT`, `OUTPUT`, `ANALOG` \* |
   | GROVEPI | 10 \** | `INPUT`, `OUTPUT`, `ANALOG`, `PWM`, `SERVO`  |
+  | CD74HC4067 | 16 | `ANALOG` |
+  | LIS3DH | 2 | `ANALOG`, `I2C` |
+
 
   \* Modes limited to one per row
 
@@ -120,6 +123,8 @@ This list will continue to be updated as more component support is implemented.
   | PCA9685 | `0x40-0x4F` | `0x40` |
   | GROVEPI | `0x04` | `0x04` |
   | CD74HC4067 | `0x0A-0x0D` | `0x0A` |
+  | LIS3DH | `0x18` | `0x18` |
+
 
 ## Shape
 
