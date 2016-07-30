@@ -131,7 +131,7 @@ board.on("ready", function() {
   lcd.print(":heart:", { dontProcessSpecials: true });
   ```
 
-- **useChar(charCode|name)** Creates the character in LCD memory and adds character to current LCD character map. LCD memory is limited to 8 special characters at a time.
+- **useChar(charCode|name)** Creates the character in LCD memory and adds character to current LCD character map. LCD memory is limited to 8 special characters at a time (see predefined characters [here](#predefined-characters)).
 
   ``` js
   lcd.useChar("heart");
