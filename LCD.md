@@ -194,6 +194,20 @@ board.on("ready", function() {
   lcd.noAutoscroll().print("Bloop").print("Bleep");
   ```
 
+- **bgColor(color)** Set the background color for LCDs that support this capability.
+
+  ``` js
+  // R, G, B bytes
+  lcd.bgColor(red, green, blue);
+  // R, G, B byte array 
+  lcd.bgColor([red, green, blue]);
+  // Keyword 
+  lcd.bgColor("red");
+  // Hex Code 
+  lcd.bgColor("#ff0000");
+  // Hex Code, no #
+  lcd.bgColor("ff0000");
+  ```
 
 ## Predefined Characters
 
