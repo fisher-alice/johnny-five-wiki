@@ -114,7 +114,6 @@ board.on("ready", function() {
   var pin = new five.Pin(13);
   // This will set pin 13 high (on)
   pin.high();
-  pin.high();
   ```
 
 - **low()** Set the pin `LOW`.
