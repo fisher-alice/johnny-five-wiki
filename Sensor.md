@@ -94,8 +94,8 @@ board.on("ready", function() {
   var sensor = new five.Sensor("A0");
   
   // Scale the sensor's data from 0-1023 to 0-10 and log changes
-  sensor.scale(0, 10).on("change", function() {
-    console.log(this.value);
+  sensor.on("change", function() {
+    console.log(this.scaleTo(0, 10));
   });
 });
 ```
@@ -110,11 +110,45 @@ board.on("ready", function() {
 
   var sensor = new five.Sensor.Digital(2);
 
-  sensor.on("change", function(value) {
-    console.log(value);
+  sensor.on("change", function() {
+    console.log(this.value);
   });
 });
 ```
+
+If you prefer arrow functions...
+
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", () => {
+  var sensor = new five.Sensor("A0");
+  
+  // Scale the sensor's data from 0-1023 to 0-10 and log changes
+  sensor.on("change", () => {
+    console.log(sensor.scaleTo(0, 10));
+  });
+});
+```
+
+#### Digital Sensor 
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", () => {
+
+  var sensor = new five.Sensor.Digital(2);
+
+  sensor.on("change", () => {
+    console.log(sensor.value);
+  });
+});
+```
+
 
 
 ## API
@@ -131,6 +165,15 @@ board.on("ready", function() {
     console.log(this.fscaleTo(0, 180)); // float
   });
   ```
+  ```js
+  var sensor = new five.Sensor("A0");
+
+  sensor.on("change", () => {
+    // this.value will reflect a scaling from 0-1023 to 0-180
+    console.log(sensor.scaleTo(0, 180)); // integer
+    console.log(sensor.fscaleTo(0, 180)); // float
+  });
+  ```
 
 - **scaleTo([low, high])** (integer) Return the sensor's present value, scaled to a new value within the specified low/high range. 
 - **fscaleTo([low, high])** (float) Return the sensor's present value, scaled to a new value within the specified low/high range.
@@ -141,6 +184,15 @@ board.on("ready", function() {
     // this.value will reflect a scaling from 0-1023 to 0-180
     console.log(this.scaleTo([0, 180])); // integer
     console.log(this.fscaleTo([0, 180])); // float
+  });
+  ```
+  ```js
+  var sensor = new five.Sensor("A0");
+
+  sensor.on("change", () => {
+    // this.value will reflect a scaling from 0-1023 to 0-180
+    console.log(sensor.scaleTo([0, 180])); // integer
+    console.log(sensor.fscaleTo([0, 180])); // float
   });
   ```
 
