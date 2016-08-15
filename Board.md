@@ -285,17 +285,10 @@ Mode constants are exposed via the `Pin` class
   > Note: `digitalRead` will only call its handler when the value of the pin **changes**.
 
 
-- **i2cConfig([milliseconds])** This must be called prior to any I2C reads or writes. Optionally accepts a period in milliseconds to delay between read operations. 
+- **i2cConfig([milliseconds] | options)** This must be called prior to any I2C reads or writes. 
+  - May be called with a period in milliseconds to delay between read operations. 
+  - May be called with an object containing options relevant to the platform for which the code is being written. For more information, see: [IO-Plugins, i2cConfig(options)](https://github.com/rwaldron/io-plugins#i2cconfigoptions)
 
-  ```js
-  var five = require("johnny-five");
-  var board = new five.Board();
-
-  board.on("ready", function() {
-    this.i2cConfig();
-    // Safely interact with I2C components
-  });
-  ```
 
 - **i2cWrite(address, arrayOfBytes)** Write an `arrayOfBytes` to the component at `address`.
   ```js
