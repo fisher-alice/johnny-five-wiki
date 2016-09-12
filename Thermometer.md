@@ -41,6 +41,8 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
 - HTU21D
   - [Adafruit](https://www.adafruit.com/product/1899?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
+- HIH6130
+  - [Sparkfun](https://www.sparkfun.com/products/11295?utm_source=j5)
 - MCP9808
   - [Adafruit](https://www.adafruit.com/product/1782?utm_source=j5)
 - SI7020
@@ -197,6 +199,16 @@ new five.Thermometer({
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-HTU21D.png)
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D-F.png)
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
+
+
+#### HIH6130
+```js
+new five.Thermometer({
+  controller: "HIH6130"
+});
+```
+
+![HIH6130](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-HIH6130.png)
 
 
 #### MCP9808
