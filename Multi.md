@@ -15,6 +15,8 @@ Supported multi sensor modules:
 - HTU21D
   - [Adafruit](https://www.adafruit.com/products/1899?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
+- HIH6130
+  - [Sparkfun](https://www.sparkfun.com/products/11295?utm_source=j5)
 - MPL115A2
   - [Adafruit](https://www.adafruit.com/products/992?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/9721?utm_source=j5)
@@ -43,7 +45,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | BMP180, BMP280, BME280, HTU21D, MPL115A2, MPL3115A2, SI7020, MS5611, TH02. The Name of the controller to use            |  | yes       |
+  | controller    | string | BMP180, BMP280, BME280, HTU21D, HIH6130, MPL115A2, MPL3115A2, SI7020, MS5611, TH02. The Name of the controller to use            |  | yes       |
   </span>
 
 ## Shape
