@@ -8,6 +8,8 @@ Supported Hygrometers:
 - HTU21D
   - [Adafruit](https://www.adafruit.com/products/1899?utm_source=j5)
   - [Sparkfun](https://www.sparkfun.com/products/12064?utm_source=j5)
+- HIH6130
+  - [Sparkfun](https://www.sparkfun.com/products/11295?utm_source=j5)
 - TH02
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 - SI7020
@@ -28,7 +30,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property | Type          | Value/Description                                             | Default | Required                                                               |
   |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
-  | controller    | string        | BME280, HTU21D, TH02, SI7020, SHT31D. The Name of the controller to use. |  | no |
+  | controller    | string        | BME280, HTU21D, HIH6130, TH02, SI7020, SHT31D. The Name of the controller to use. |  | no |
   | freq          | Number        | Milliseconds. The rate in milliseconds to emit the data event         | 25ms | no                                                                     |
   </span>
 
@@ -57,6 +59,15 @@ new five.Hygrometer({
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D-F.png)
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
 
+
+#### HIH6130
+```js
+new five.Hygrometer({
+  controller: "HIH6130"
+});
+```
+
+![HIH6130](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-HIH6130.png)
 
 #### TH02
 
