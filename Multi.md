@@ -107,6 +107,15 @@ new five.Multi({
 ![HTU21D](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/tessel-temperature-HTU21D.png)
 
 
+#### HIH6130
+```js
+new five.Multi({
+  controller: "HIH6130"
+});
+```
+
+![HIH6130](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-HIH6130.png)
+
 
 #### MPL115A2
 
