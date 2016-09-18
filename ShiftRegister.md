@@ -66,7 +66,7 @@ new five.ShiftRegister({
 ```js
 new five.ShiftRegister({
   isAnode: true,
-  pins: pins: [2, 3, 4]
+  pins: [2, 3, 4]
 });
 ```
 
