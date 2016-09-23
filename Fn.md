@@ -93,14 +93,14 @@ The following functions allow you to build 16-, 24- and 32-bit numbers by cobbli
 
     ```js
     five.Fn.int16(8, 0); // --> 2048
-    fiveFn.int16(255, 255); // --> -1 (because signed)
+    five.Fn.int16(255, 255); // --> -1 (because signed)
     ```
     
 - **uint16(msb, lsb)** Combine `msb` (most-significant byte) and `lsb` (least-significant byte) into a 16-bit unsigned integer.
 
     ```js
     five.Fn.int16(8, 0); // --> 2048
-    fiveFn.int16(255, 255); // --> 65535 (because unsigned)
+    five.Fn.int16(255, 255); // --> 65535 (because unsigned)
     ```
     
 - **int24(b16, b8, b0)** Combine three bytes to make a signed 24-bit integer.
@@ -126,10 +126,10 @@ The following functions allow you to build 16-, 24- and 32-bit numbers by cobbli
     
 - **uint32(b24, b16, b8, b0)** Combine three bytes to make an unsigned 32-bit integer.
 
-```js
-five.Fn.uint32(127, 255, 255, 255); // --> 2147483647
-five.Fn.uint32(200, 255, 255, 255); // --> 4294967295 (because unsigned)
-```
+    ```js
+    five.Fn.uint32(127, 255, 255, 255); // --> 2147483647
+    five.Fn.uint32(200, 255, 255, 255); // --> 4294967295 (because unsigned)
+    ```
 
 #### Auto-Generated Functions
 
