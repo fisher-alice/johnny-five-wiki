@@ -88,6 +88,8 @@ var total = five.Fn.sum([3, 4, 2, 0, 5]); // -> 14
     ORed === 133;
     ```
 
+#### Ints from Multiple Bytes
+
 The following functions allow you to build 16-, 24- and 32-bit numbers by cobbling together multiple bytes:
 
 - **int16(msb, lsb)** Combine `msb` (most-significant byte) and `lsb` (least-significant byte) into a 16-bit signed integer.
@@ -121,9 +123,41 @@ The following functions allow you to build 16-, 24- and 32-bit numbers by cobbli
 - **int32(b24, b16, b8, b0)** Combine four bytes to make a signed 32-bit integer.
 
     ```js
-    five.Fn.int32(127, 255, 255, 255); // --> 2147483647;
+    five.Fn.int32(127, 255, 255, 255); // --> 2147483647
     five.Fn.int32(200, 255, 255, 255); // --> -922746881 (because signed)
     ```
     
 - **uint32(b24, b16, b8, b0)** Combine three bytes to make an unsigned 32-bit integer.
 
+```js
+five.Fn.uint32(127, 255, 255, 255); // --> 2147483647
+five.Fn.uint32(200, 255, 255, 255); // --> 4294967295 (because unsigned)
+```
+
+#### Auto-Generated Functions
+
+The following functions are available in the bitSizes of: `4, 8, 10, 12, 16, 20, 24, 32`
+
+- **u[bitSize](value)** (e.g. `Fn.u8`) Constrain `value` to the valid range of _unsigned_ ints for the given bitsize.
+
+    ```js
+    Fn.u8(255); // --> 255
+    Fn.u8(256); // --> 255
+    Fn.u8(0);   // --> 0
+    Fn.u4(255); // --> 15
+    ```
+
+- **s[bitSize](value)** (e.g. `Fn.s16`) Constrain `value` to the valid range of _signed_ ints for the given bitsize.
+
+    ```js
+    Fn.s8(255); // --> -1
+    Fn.s8(127); // --> 127
+    Fn.s8(128); // --> -128
+    ```
+
+### Useful "Constants"
+
+- **RAD_TO_DEG**
+- **DEG_TO_RAD**
+- **TAU**
+- **POW_2_0** through **POW_2_53** Powers of 2
