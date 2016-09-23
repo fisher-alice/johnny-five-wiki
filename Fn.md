@@ -138,7 +138,7 @@ five.Fn.uint32(200, 255, 255, 255); // --> 4294967295 (because unsigned)
 
 The following functions are available in the bitSizes of: `4, 8, 10, 12, 16, 20, 24, 32`
 
-- **u[bitSize](value)** (e.g. `Fn.u8`) Constrain `value` to the valid range of _unsigned_ ints for the given bitsize.
+- **u\[bitSize\](value)** (e.g. `Fn.u8`) Constrain `value` to the valid range of _unsigned_ ints for the given bitsize.
 
     ```js
     Fn.u8(255); // --> 255
@@ -147,7 +147,7 @@ The following functions are available in the bitSizes of: `4, 8, 10, 12, 16, 20,
     Fn.u4(255); // --> 15
     ```
 
-- **s[bitSize](value)** (e.g. `Fn.s16`) Constrain `value` to the valid range of _signed_ ints for the given bitsize.
+- **s\[bitSize\](value)** (e.g. `Fn.s16`) Constrain `value` to the valid range of _signed_ ints for the given bitsize.
 
     ```js
     Fn.s8(255); // --> -1
