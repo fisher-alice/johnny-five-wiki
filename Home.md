@@ -29,6 +29,7 @@
 - [ESC](https://github.com/rwaldron/johnny-five/wiki/ESC)
 - [ESCs](https://github.com/rwaldron/johnny-five/wiki/ESCs)
 - [Expander](https://github.com/rwaldron/johnny-five/wiki/Expander)
+- [Fn](https://github.com/rwaldron/johnny-five/wiki/Fn)
 - [GPS](https://github.com/rwaldron/johnny-five/wiki/GPS)
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [Hygrometer](https://github.com/rwaldron/johnny-five/wiki/Hygrometer)
