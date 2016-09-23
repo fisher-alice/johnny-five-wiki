@@ -9,14 +9,12 @@ var total = five.Fn.sum([3, 4, 2, 0, 5]); // -> 14
 
 ### General Utility Functions
 
-- **cloneDeep(value)** Reference to [lodash.cloneDeep](https://lodash.com/docs/4.16.1#cloneDeep)
 - **constrain(value, lower, upper)** Constrain `value` so that it falls within the range bounded by `lower` and `upper`.
 
     ```js
     five.Fn.constrain(235, 0, 255); // --> 235
     five.Fn.constrain(948, 0, 255); // --> 255
     ```
-- **debounce(func, [wait=0], [options={}])** Reference to [lodash.debounce](https://lodash.com/docs/4.16.1#debounce)
 - **inRange(value, lower, upper)** Is the `value` within the range bounded by `lower` and `upper`?
 
     ```js
