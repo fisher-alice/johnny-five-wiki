@@ -46,7 +46,6 @@ var total = five.Fn.sum([3, 4, 2, 0, 5]); // -> 14
     
 - **scale(...)** Alias for `Fn.map`
 - **fscale(...)** Alias for `Fn.fmap`
-- **square(x)** Square your `x`!
 - **sum(values)** Calculate a sum of all the elements in an Array.
 
     ```js
