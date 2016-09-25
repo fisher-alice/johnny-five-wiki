@@ -421,7 +421,7 @@ Mode constants are exposed via the `Pin` class
   });
   ```
 
-- **loop(milliseconds, handler())** Register a handler to be called repeatedly, in another execution turn, every `milliseconds` period.
+- **loop(milliseconds, handler())** Register a handler to be called repeatedly, in another execution turn, every `milliseconds` period. `handler` recieves one argument which is a function that will cancel the loop if called.
   ```js
   var five = require("johnny-five");
   var board = new five.Board();
