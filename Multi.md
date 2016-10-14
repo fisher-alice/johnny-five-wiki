@@ -33,6 +33,10 @@ Supported multi sensor modules:
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 - DHT11 (Via I2C Backpack)
   - [Google](https://www.google.com/search?q=DHT11?utm_source=j5)
+- DHT21 (Via I2C Backpack)
+  - [Google](https://www.google.com/search?q=DHT21?utm_source=j5)
+- DHT22 (Via I2C Backpack)
+  - [Google](https://www.google.com/search?q=DHT22?utm_source=j5)
 
 
 
@@ -214,6 +218,37 @@ new five.Multi({
 |---------------| ----------- | ----------|
 | `hygrometer` | An instance of `Hygrometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
+
+
+#### DHT21_I2C_NANO_BACKPACK
+```js
+new five.Multi({
+  controller: "DHT21_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT21_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT21_I2C_NANO_BACKPACK.png)
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `hygrometer` | An instance of `Hygrometer` class. | Yes |
+| `thermometer` | An instance of `Thermometer` class. | Yes |
+
+
+#### DHT22_I2C_NANO_BACKPACK
+```js
+new five.Multi({
+  controller: "DHT22_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT22_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT22_I2C_NANO_BACKPACK.png)
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `hygrometer` | An instance of `Hygrometer` class. | Yes |
+| `thermometer` | An instance of `Thermometer` class. | Yes |
+
 
 ## Usage
 
