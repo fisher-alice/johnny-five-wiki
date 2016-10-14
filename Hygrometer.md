@@ -18,6 +18,10 @@ Supported Hygrometers:
   - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
 - DHT11 (Via I2C Backpack)
   - [Google](https://www.google.com/search?q=DHT11?utm_source=j5)
+- DHT21 (Via I2C Backpack)
+  - [Google](https://www.google.com/search?q=DHT21?utm_source=j5)
+- DHT22 (Via I2C Backpack)
+  - [Google](https://www.google.com/search?q=DHT22?utm_source=j5)
 
 
 
@@ -80,14 +84,39 @@ new five.Hygrometer({
 ![TH02](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-TH02.png)
 
 
+
 #### DHT11_I2C_NANO_BACKPACK
 ```js
-new five.Multi({
+new five.Hygrometer({
   controller: "DHT11_I2C_NANO_BACKPACK"
 });
 ```
 
 ![DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT11_I2C_NANO_BACKPACK.png)
+
+
+
+#### DHT21_I2C_NANO_BACKPACK
+```js
+new five.Hygrometer({
+  controller: "DHT21_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT21_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT21_I2C_NANO_BACKPACK.png)
+
+
+
+#### DHT22_I2C_NANO_BACKPACK
+```js
+new five.Hygrometer({
+  controller: "DHT22_I2C_NANO_BACKPACK"
+});
+```
+
+![DHT22_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT22_I2C_NANO_BACKPACK.png)
+
+
 
 
 
