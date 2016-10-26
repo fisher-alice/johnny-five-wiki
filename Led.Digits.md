@@ -32,7 +32,7 @@ Known supported devices:
 |---------------| ----------- | ----------|
 | `isMatrix` | false. | Yes |
 | `devices` | Number of devices controlled. | Yes |
-| `digitOrder` | -1\|1. -1 for RTL, 1 for LTR.  | No |
+| `digitOrder` | -1 or 1. -1 for RTL, 1 for LTR.  | No |
 
 
 ## Component Initialization
