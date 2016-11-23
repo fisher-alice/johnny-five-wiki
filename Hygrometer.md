@@ -14,6 +14,8 @@ Supported Hygrometers:
   - [Grove](http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?utm_source=j5)
 - SI7020
   - [Tessel Climate](http://www.seeedstudio.com/depot/Tessel-Climate-Module-p-2225.html?utm_source=j5)
+- SI7021
+  - [Sparkfun](https://www.sparkfun.com/products/13763?utm_source=j5)
 - SHT31D
   - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
 - DHT11 (Via I2C Backpack)
@@ -34,7 +36,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property | Type          | Value/Description                                             | Default | Required                                                               |
   |---------------|---------------|---------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------|
-  | controller    | string        | BME280, HTU21D, HIH6130, TH02, SI7020, SHT31D. The Name of the controller to use. |  | no |
+  | controller    | string        | BME280, HTU21D, HIH6130, TH02, SI7020, SI7021, SHT31D. The Name of the controller to use. |  | no |
   | freq          | Number        | Milliseconds. The rate in milliseconds to emit the data event         | 25ms | no                                                                     |
   </span>
 
@@ -72,6 +74,27 @@ new five.Hygrometer({
 ```
 
 ![HIH6130](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-HIH6130.png)
+
+
+#### SI7020
+
+```js
+new five.Hygrometer({
+  controller: "SI7020"
+});
+```
+
+![SI7020](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-SI7020.png)
+
+#### SI7021
+
+```js
+new five.Hygrometer({
+  controller: "SI7021"
+});
+```
+
+![SI7021](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-SI7021.png)
 
 #### TH02
 
