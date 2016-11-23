@@ -27,6 +27,8 @@ Supported multi sensor modules:
     - [SparkFun Photon Weather Shield](https://www.sparkfun.com/products/13630?utm_source=j5)
 - SI7020
   - [Tessel](http://start.tessel.io/modules/climate)
+- SI7021
+  - [Sparkfun](https://www.sparkfun.com/products/13763?utm_source=j5)
 - MS5611
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 - TH02
@@ -49,7 +51,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | BMP180, BMP280, BME280, HTU21D, HIH6130, MPL115A2, MPL3115A2, SI7020, MS5611, TH02. The Name of the controller to use            |  | yes       |
+  | controller    | string | BMP180, BMP280, BME280, HTU21D, HIH6130, MPL115A2, MPL3115A2, SI7020, SI7021, MS5611, TH02. The Name of the controller to use            |  | yes       |
   </span>
 
 ## Shape
@@ -169,9 +171,23 @@ new five.Multi({
 |---------------| ----------- | ----------|
 | `hygrometer` | An instance of `Hygrometer` class. | Yes |
 | `thermometer` | An instance of `Thermometer` class. | Yes |
-| ~~`temperature`~~ | ~~An instance of `Thermometer` class.~~ | ~~Yes~~ |
 
 ![](http://johnny-five.io/img/breadboard/temperature-SI7020.png)
+
+#### SI7021
+
+```js
+new five.Multi({
+  controller: "SI7021"
+});
+```
+
+| Property Name | Description | Read Only |
+|---------------| ----------- | ----------|
+| `hygrometer` | An instance of `Hygrometer` class. | Yes |
+| `thermometer` | An instance of `Thermometer` class. | Yes |
+
+![](http://johnny-five.io/img/breadboard/multi-SI7021.png)
 
 
 #### MS5611
