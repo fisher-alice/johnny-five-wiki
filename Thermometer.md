@@ -47,6 +47,8 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Adafruit](https://www.adafruit.com/product/1782?utm_source=j5)
 - SI7020
   - [Tessel Climate](http://www.seeedstudio.com/depot/Tessel-Climate-Module-p-2225.html?utm_source=j5)
+- SI7021
+  - [Sparkfun](https://www.sparkfun.com/products/13763?utm_source=j5)
 - MS5611
   - [Amazon](http://www.amazon.com/MS5611-High-resolution-Atmospheric-Pressure-Module/dp/B00F4P6LKE?utm_source=j5)
 - TH02
@@ -57,7 +59,6 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Google](https://www.google.com/search?q=DHT21?utm_source=j5)
 - DHT22 (Via I2C Backpack)
   - [Google](https://www.google.com/search?q=DHT22?utm_source=j5)
-
 - SHT31D
   - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
 
@@ -72,7 +73,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property   | Type          | Value/Description                                                                                                     | Default  | Required        |
   |------------|---------------|-----------------------------------------------------------------------------------------------------------------------|----------|-----------------|
-  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D, MCP9808, SI7020. The Name of the controller to use. | `ANALOG` | no              |
+  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D, MCP9808, SI7020, SI7021. The Name of the controller to use. | `ANALOG` | no              |
   | pin        | string or int | Analog Pin. Use with analog sensor.                                                                                   |          | Yes<sup>1</sup> |
   | toCelsius  | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override                                                      |          | no              |
   | freq       | Number        | Milliseconds. The rate in milliseconds to emit the data event                                                         | 25ms     | no              |                                                              |
@@ -279,6 +280,26 @@ new five.Thermometer({
 ![DHT22_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-DHT22_I2C_NANO_BACKPACK.png)
 
 
+
+#### SI7020
+
+```js
+new five.Thermometer({
+  controller: "SI7020"
+});
+```
+
+![SI7020](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/temperature-SI7020.png)
+
+#### SI7021
+
+```js
+new five.Thermometer({
+  controller: "SI7021"
+});
+```
+
+![SI7021](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-SI7021.png)
 
 
 ## Usage
