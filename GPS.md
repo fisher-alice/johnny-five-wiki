@@ -2,12 +2,15 @@ The `GPS` class constructs objects that represent a single GPS (Global Positioni
 
 Supported chipsets, modules and breakouts:
 
-- [MediaTek MT3339](http://www.mediatek.com/en/products/connectivity/gps/mt3339)
-  - [66-Channel LS20031 GPS Receiver Module](https://www.pololu.com/product/2138)
-  - [G-Top LadyBird 1 (PA6H)](http://www.gtop-tech.com/en/product/LadyBird-1-PA6H/MT3339_GPS_Module_04.html)
-  - [Adafruit Ultimate GPS Breakout](https://www.adafruit.com/products/746)
-- [U-blox NEO-6M](https://www.u-blox.com/en/product/neo-6-series)
+- [MediaTek MT3339](http://www.mediatek.com/en/products/connectivity/gps/mt3339?utm_source=j5)
+  - [66-Channel LS20031 GPS Receiver Module](https://www.pololu.com/product/2138?utm_source=j5)
+  - [G-Top LadyBird 1 (PA6H)](http://www.gtop-tech.com/en/product/LadyBird-1-PA6H/MT3339_GPS_Module_04.html?utm_source=j5)
+  - [Adafruit Ultimate GPS Breakout](https://www.adafruit.com/products/746?utm_source=j5)
+- [U-blox NEO-6M](https://www.u-blox.com/en/product/neo-6-series?utm_source=j5)
  - [Crius Neo-6 v3.1](http://www.ebay.com/itm/like/281357870575?ul_noapp=true&chn=ps&lpid=82)
+- [GP-20U7 (56 Channel)](https://www.sparkfun.com/products/13740?utm_source=j5)
+
+
 
 Any GPS Module that by default transmits NMEA sentences over serial at 9600bps should "just work". If your device automatically transmits NMEA sentences at a different baud rate, you can set a custom baud rate in the configuration options.
 
@@ -60,9 +63,17 @@ This list will continue to be updated as more component support is implemented a
 #### Default
 
 ```js
-// U-Blox NEO-6M attached to Arduino UNO on Software Serial 0, pins 10 and 11
+// U-Blox NEO-6M
 new five.GPS([11, 10]);  // [RX, TX]
 ```
+
+```js
+// GPS Receiver - GP-20U7 (56 Channel)
+new five.GPS([11, 10]);  // [RX, TX]
+```
+
+![gps-GP-20U7.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gps-GP-20U7.png)
+
 
 #### Adafruit Ultimate GPS Breakout
 
@@ -74,7 +85,7 @@ new five.GPS({
 });
 ```
 
-![gps.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gps-adafruit.png)
+![gps-adafruit.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/gps-adafruit.png)
 
 ## Usage
 
