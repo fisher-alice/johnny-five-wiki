@@ -69,10 +69,10 @@ node strobe.js
 
 ## Trouble Shooting
 
-1. If the above didn't work as expected, make sure that StandardFirmata is installed on the board:
+1. If the above didn't work as expected, make sure that StandardFirmataPlus is installed on the board:
     - Download [Arduino IDE](http://arduino.cc/en/main/software)
     - Plug in your Arduino or Arduino compatible microcontroller via USB
-    - Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmata
+    - Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmataPlus
     - Click the "Upload" button.
     - If the upload was successful, the board is now prepared and you can close the Arduino IDE.
 
