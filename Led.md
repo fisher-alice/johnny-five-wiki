@@ -269,6 +269,5 @@ Led objects are output only and therefore do not emit any events.
 - [Led Rainbow](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rainbow.md)
 - [Led Strobe](https://github.com/rwaldron/johnny-five/blob/master/docs/led-strobe.md)
 - [Led Rgb PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-PCA9685.md)
-- [Seven Segment](https://github.com/rwaldron/johnny-five/blob/master/docs/seven-segment.md)
 
 <!--remove-end-->
