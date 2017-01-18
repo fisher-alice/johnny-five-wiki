@@ -27,7 +27,7 @@ To put the HC-05 in AT commands mode you must connect the KEY pin in an arduino 
 SoftwareSerial mySerial(10, 11); // RX, TX
 
 /*
-  The posible baudrates are:
+  The possible baudrates are:
     AT+UART=1200,0,0 -------1200
     AT+UART=2400,0,0 -------2400
     AT+UART=4800,0,0 -------4800
@@ -104,7 +104,7 @@ Done!
 
 If you saw that congratulations, you're done this step.
 
-If you see fhe following output instead, you will probably have to change BLUETOOTH_SPEED to another value and upload it again. This maybe could be because the HC-05 chip had different baud rate.
+If you see the following output instead, you will probably have to change BLUETOOTH_SPEED to another value and upload it again. This maybe could be because the HC-05 chip had different baud rate.
 ```
 Starting config
 
