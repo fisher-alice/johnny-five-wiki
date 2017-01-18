@@ -47,7 +47,7 @@ For Leds that only have on/off states, use a digital pin:
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
-| `id` | A user definable id value. Defaults to null | No |
+| `id` | A user definable id value. Defaults to a generated uid | No |
 | `pin` | The pin address that the Led is attached to | No |
 
 ## Component Initialization
