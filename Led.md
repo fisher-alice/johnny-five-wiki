@@ -260,14 +260,11 @@ Led objects are output only and therefore do not emit any events.
 <!--remove-start-->
 
 ## Examples
-- [Laser](https://github.com/rwaldron/johnny-five/blob/master/docs/laser.md)
 - [Led Matrix](https://github.com/rwaldron/johnny-five/blob/master/docs/led-matrix.md)
 - [Led Fade](https://github.com/rwaldron/johnny-five/blob/master/docs/led-fade.md)
-- [Led On Off](https://github.com/rwaldron/johnny-five/blob/master/docs/led-on-off.md)
 - [Led Pulse](https://github.com/rwaldron/johnny-five/blob/master/docs/led-pulse.md)
 - [Led Rgb](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb.md)
 - [Led Rainbow](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rainbow.md)
-- [Led Strobe](https://github.com/rwaldron/johnny-five/blob/master/docs/led-strobe.md)
 - [Led Rgb PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-PCA9685.md)
 
 <!--remove-end-->
