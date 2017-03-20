@@ -229,7 +229,7 @@ board.on("ready", function() {
 
 - **change** The "change" event is emitted whenever any reading changes.
 
-- **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
+- **data** The "data" event is fired as frequently as measurements can be reported.
 
 <!--remove-start-->
 ## Examples
