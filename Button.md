@@ -23,6 +23,7 @@ The `Button` class constructs objects that represents a single Button attached t
   | pin           | Number, String | Digital Pin. The Number or String address of the pin the button is attached to, ie. 5 or “I1”                                                                   | | yes      |
   | invert        | Boolean        | `true`, `false`. Invert the up and down values. This is useful for inverting button signals when the pin itself doesn’t have built-in pullup resistor capabilities. | `false` | no       |
   | isPullup      | Boolean        | `true`, `false`. Initialize as a pullup button                                                                                                                      | `false` | no       |
+  | isPulldown      | Boolean        | `true`, `false`. Initialize as a pulldown button                                                                                                                      | `false` | no       |
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
   </span>
 
