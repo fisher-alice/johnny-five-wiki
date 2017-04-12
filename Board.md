@@ -321,7 +321,7 @@ Mode constants are exposed via the `Pin` class
 
   board.on("ready", function() {
     this.i2cConfig();
-    this.i2cWrite(0x01, 0x00, 0x7e);
+    this.i2cWriteReg(0x01, 0x00, 0x7e);
   });
   ```
 
