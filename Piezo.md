@@ -158,7 +158,7 @@ board.on("ready", function() {
   });
   ```
 
-- **tone(frequency, duration)** Play a `tone` for `duration` ms. The `tone` value in this case is a computed duty cycle (in microseconds). This is a lower-level method than `frequency` (which does the translation from frequency to tone for you). Most of the time you likely want to use `frequency`.
+- **tone(tone, duration)** Play a `tone` for `duration` ms. The `tone` value in this case is a computed duty cycle (in microseconds). This is a lower-level method than `frequency` (which does the translation from frequency to tone for you). Most of the time you likely want to use `frequency`.
 
 - **noTone** Stop tone playing from Piezo. Will immediately stop playing a tone (`digitalWrite` the output pin low) and clear any existing queued tone timers.
 
