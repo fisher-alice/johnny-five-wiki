@@ -69,14 +69,59 @@ node strobe.js
 
 ## Trouble Shooting
 
-1. If the above didn't work as expected, make sure that StandardFirmataPlus is installed on the board:
-    - Download [Arduino IDE](http://arduino.cc/en/main/software)
-    - Plug in your Arduino or Arduino compatible microcontroller via USB
-    - Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmataPlus
-    - Click the "Upload" button.
-    - If the upload was successful, the board is now prepared and you can close the Arduino IDE.
+**Firmware**
 
-2. Sometimes Windows systems will fail to compile native dependencies, if you run across this case try:
+The StandardFirmataPlus firmware is the one that is used for Johnny-Five to communicate with the board.
+That means you have to install it first, then you can execute the nodejs programs.
+
+- Install `arduino` package on your operating system (otherwise [Arduino IDE](http://arduino.cc/en/main/software)).
+- Make a `firmware` folder and save [this firmware.ino](https://github.com/firmata/arduino/blob/master/examples/StandardFirmataPlus/StandardFirmataPlus.ino) into it. if the link is dead again and not appearing in the Arduino IDE, use [this gist backup](https://gist.github.com/cookiengineer/4f292c952209e0f74d4c18b995dac855).
+- Install arduino libraries via `arduino --install-library "Firmata,Servo"` in the Terminal.
+- Flash the arduino board via `arduino --board "arduino:avr:uno" --upload ./path/to/firmware/firmware.ino". Remember to change your board according to what you use. See below on how to figure out that identifier.
+- If the upload was successful, the board is now prepared for johnny-five usage.
+
+**Finding out your Board identifier for arduino-tools**
+
+- Go to the [package index file](https://github.com/arduino/Arduino/blob/master/hardware/package_index_bundled.json) of the Arduino tools.
+- Download the `url` entry of the package that contains your boards, for example `http://downloads.arduino.cc/cores/avr-1.6.18.tar.bz2`.
+- Inside the archive, there's a `boards.txt` file that contains all supported boards. These boards can be used as the last part of the identifier. For example, the boards.txt lists `yun` meaning the `arduino --board "arduino:avr:yun"` has to be used.
+
+
+**List of Arduino Board identifiers (May 2017)**
+
+This is a compiled list that may not be up-to-date. Use the method described above in case you can't find your board here.
+
+- "arduino:avr:yun" for Arduino Yun
+- "arduino:avr:uno" for Arduino/Genuino Uno
+- "arduino:avr:diecimila" for Arduino Duemilanove or Diecimila
+- "arduino:avr:nano" for Arduino Nano
+- "arduino:avr:mega" for Arduino/Genuio Mega or Mega 2560
+- "arduino:avr:megaADK" for Arduino Mega ADK
+- "arduino:avr:leonardo" for Arduino Leonardo
+- "arduino:avr:leonardoeth" for Arduino Leonardo ETH
+- "arduino:avr:micro" for Arduino/Genuino Micro
+- "arduino:avr:esplora" for Arduino Esplora
+- "arduino:avr:mini" for Arduino Mini
+- "arduino:avr:ethernet" for Arduino Ethernet
+- "arduino:avr:fio" for Arduino Fio
+- "arduino:avr:bt" for Arduino BT
+- "arduino:avr:LilyPadUSB" for LilyPad Arduino USB
+- "arduino:avr:lilypad" for LilyPad Arduino
+- "arduino:avr:pro" for Arduino Pro
+- "arduino:avr:atmegang" for Arduino NG or older
+- "arduino:avr:robotControl" for Arduino Robot Control
+- "arduino:avr:robotMotor" for Arduino Robot Motor
+- "arduino:avr:gemma" for Arduino Gemma
+- "arduino:avr:circuitplay32u4cat" for Arduino Circuit Playground
+- "arduino:avr:yunmini" for Arduino Yun Mini
+- "arduino:avr:chiwawa" for Arduino Industrial 101
+- "arduino:avr:one" for Linino One
+- "arduino:avr:unowifi" for Arduino Uno WiFi
+
+
+**Other**
+
+Sometimes Windows systems will fail to compile native dependencies, if you run across this case try:
 ```bash
 npm install johnny-five --msvs_version=2012
 ```
