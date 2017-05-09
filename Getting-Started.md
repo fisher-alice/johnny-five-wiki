@@ -32,6 +32,11 @@ Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomme
 - Install the nodejs-legacy package ```apt-get install nodejs-legacy```
 - Install build-essential or a suitable alternative ```apt-get install build-essential```
 
+### Arch Linux
+
+- Install Node.js ```pacman -S nodejs`
+- Install Arduino Libraries (for firmware flashing) ```pacman -S arduino```
+
 ## Hello World
 
 Generally Arduino boards (Uno, Mega, Leonardo, Fio, Mini) come pre-flashed with the compiled StandardFirmata firmware. In most cases, getting started is as simple as...
