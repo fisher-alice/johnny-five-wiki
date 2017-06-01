@@ -23,6 +23,7 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
   | pin           | Number, String | Analog Pin. The Number or String address of the pin the sensor is attached to, ie. “A0” or “I1” | | yes      |
   | freq          | Number         | Milliseconds. The frequency in ms of data events. | 25ms                                | no       |
   | threshold     | Number         | Any. The change threshold (+/- value). | 1                                     | no       |
+  | enabled    | boolean       | Whether to start emitting events right away (>= [v0.9.12](https://github.com/rwaldron/johnny-five/releases/tag/0.9.12)) | `true` | no |
   </span>
 
 - **options (experimental)** These options can be used with the `Sensor` class, but are considered experimental.
@@ -45,6 +46,7 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 | `analog` | ADC reading _scaled_ to 8 bit values (0-255). | Yes |
 | `constrained` | ADC reading _constrained_ to 8 bit values (0-255). | Yes |
 | `value` | ADC reading, scaled. | Yes |
+| `freq` | The rate in milliseconds to emit the data event. Disables the event if set to `null`. (>= [v0.9.12](https://github.com/rwaldron/johnny-five/releases/tag/v0.9.12)) | No |
 
 ## Component Initialization
 
@@ -226,6 +228,10 @@ board.on("ready", () => {
 
   });
   ```
+
+- **enable()** Start emitting "data" and "change" events, at a rate determined by the user defined `freq` in milliseconds.  No-op if Sensor is already enabled. (>= [v0.9.12](https://github.com/rwaldron/johnny-five/releases/tag/v0.9.12))
+
+- **disable()** Stop emitting "data" and "change" events.  No-op if Sensor is already disabled. (>= [v0.9.12](https://github.com/rwaldron/johnny-five/releases/tag/v0.9.12))
 
 ## Events
 
