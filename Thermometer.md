@@ -77,6 +77,7 @@ This list will continue to be updated as more devices are confirmed.
   | pin        | string or int | Analog Pin. Use with analog sensor.                                                                                   |          | Yes<sup>1</sup> |
   | toCelsius  | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override                                                      |          | no              |
   | freq       | Number        | Milliseconds. The rate in milliseconds to emit the data event                                                         | 25ms     | no              |                                                              |
+  | enabled    | boolean       | Whether to start emitting events right away (>= [v0.11](https://github.com/rwaldron/johnny-five/releases/tag/v0.11.0)) | `true` | no |
   </span>
 
 <sup>1</sup> Yes for analog devices. No for digital devices (MPU6050 or DS18B20)
@@ -92,6 +93,7 @@ This list will continue to be updated as more devices are confirmed.
 | `C` | A convenience alias for celsius. | Yes |
 | `F` | A convenience alias for fahrenheit. | Yes |
 | `K` | A convenience alias for kelvin. | Yes |
+| `freq` | The rate in milliseconds to emit the data event. Disables the event if set to `null`. (>= [v0.11](https://github.com/rwaldron/johnny-five/releases/tag/v0.11.0)) | No |
 
 
 ## Component Initialization
@@ -325,7 +327,9 @@ board.on("ready", function() {
 
 ## API
 
-There are no special API functions for this class.
+- **enable()** Start emitting "data" and "change" events, at a rate determined by the user defined `freq` in milliseconds.  No-op if Thermometer is already enabled. (>= [v0.11](https://github.com/rwaldron/johnny-five/releases/tag/v0.11.0))
+
+- **disable()** Stop emitting "data" and "change" events.  No-op if Thermometer is already disabled. (>= [v0.11](https://github.com/rwaldron/johnny-five/releases/tag/v0.11.0))
 
 ## Events
 
