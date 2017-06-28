@@ -82,7 +82,7 @@ That means you have to install it first, then you can execute the nodejs program
 - Install `arduino` package on your operating system (otherwise [Arduino IDE](http://arduino.cc/en/main/software)).
 - Make a `firmware` folder and save [this firmware.ino](https://github.com/firmata/arduino/blob/master/examples/StandardFirmataPlus/StandardFirmataPlus.ino) into it. if the link is dead again and not appearing in the Arduino IDE, use [this gist backup](https://gist.github.com/cookiengineer/4f292c952209e0f74d4c18b995dac855).
 - Install arduino libraries via `arduino --install-library "Firmata,Servo"` in the Terminal.
-- Flash the arduino board via `arduino --board "arduino:avr:uno" --upload ./path/to/firmware/firmware.ino". Remember to change your board according to what you use. See below on how to figure out that identifier.
+- Flash the arduino board via `arduino --board "arduino:avr:uno" --upload ./path/to/firmware/firmware.ino`. Remember to change your board according to what you use. See below on how to figure out that identifier.
 - If the upload was successful, the board is now prepared for johnny-five usage.
 
 **Finding out your Board identifier for arduino-tools**
