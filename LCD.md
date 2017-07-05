@@ -77,9 +77,14 @@ new five.LCD({
   controller: "PCF8574A"
 });
 
-// I2C LCD, PCF8574
+// I2C LCD, PCF8574T
 new five.LCD({ 
-  controller: "PCF8574"
+  controller: "PCF8574T"
+});
+
+// I2C LCD, PCF8574AT
+new five.LCD({ 
+  controller: "PCF8574AT"
 });
 ```
 
