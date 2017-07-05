@@ -20,7 +20,7 @@ The `Sensor` class constructs objects that represent a single analog sensor comp
 
   | Property | Type           | Value/Description                                                                         | Default | Required |
   |---------------|----------------|----------------------------------|-------------------------------------------------------------------------------------|----------|
-  | pin           | Number, String | Analog Pin. The Number or String address of the pin the sensor is attached to, ie. “A0” or “I1” | | yes      |
+  | pin           | Number, String | Analog Pin. The Number or String address of the pin the sensor is attached to, ie. `"A0"` or `0` mean the same thing.  | | yes      |
   | freq          | Number         | Milliseconds. The frequency in ms of data events. | 25ms                                | no       |
   | threshold     | Number         | Any. The change threshold (+/- value). | 1                                     | no       |
   | enabled    | boolean       | Whether to start emitting events right away (>= [v0.9.12](https://github.com/rwaldron/johnny-five/releases/tag/0.9.12)) | `true` | no |
