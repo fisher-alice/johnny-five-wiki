@@ -21,9 +21,7 @@
 Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomment-7696662
 
 - Install <a href="https://nodejs.org" target="_blank">Node.js</a> >= 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
-- Install <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">Visual Studio community edition</a> (make sure you have the C++ dependencies checked)
-- Install <a href="https://www.python.org/downloads/windows/" target="_blank">Python</a>
-- Open up cmd (Start > Run.. > cmd) and enter `set PATH=%PATH%;C:\Python27`
+- `npm --add-python-to-path install --global --production windows-build-tools`
 - Install node-gyp `npm install -g node-gyp`
 
 ### Ubuntu and Debian
