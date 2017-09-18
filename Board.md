@@ -431,7 +431,7 @@ Mode constants are exposed via the `Pin` class
 
     this.pinMode(13, this.MODES.OUTPUT);
 
-    this.loop(500, function() {
+    this.loop(500, () => {
       this.digitalWrite(13, (state ^= 1));
     });
   });
