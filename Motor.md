@@ -16,6 +16,15 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
     | address    | Number | An I2C device address                                                | | no                          |
     | controller | String                          | Motor controller interface type                                      | | no                          |
      </span>
+    
+  - **options.pins**     An object with pins required for the motor controller being used
+
+    | Pin&nbsp;name | Required | Description |
+    |-----------|----------|------------|
+    | pwm         | Yes          | Controls motor speed |
+    | dir             | Yes         | Controls motor direction |
+    | cdir           | No           | Only necessary for 3-pin motor controllers. Is used in conjunction with dir to control direction and braking |
+    | brake        | No           | Engages high impedance braking. Only a few motor controllers have a brake pin |
 
   - **Shift Register Options** An object of property parameters.
     <span class="abbreviate-table">
