@@ -66,7 +66,7 @@ We hope this will be a place where new and existing contributors will come to se
  - MAX6675 (Requires SPI) (#738)
 
 ------------------
-### New Features
+### New Class Features
 
 **IMU**
  - Access to DMP processed values (#1126)
