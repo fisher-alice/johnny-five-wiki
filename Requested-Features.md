@@ -16,7 +16,7 @@ We hope this will be a place where new and existing contributors will come to se
  - SIDuinoi2c [#1410](/rwaldron/johnny-five/issues/1410)
  - sid-arduino-lib backpack (Doesn't exist yet) [#1410](/rwaldron/johnny-five/issues/1410)
  - YM3812 OPL2 (requires SPI) [#1410](/rwaldron/johnny-five/issues/1410)
- - Adafruit Audio FX Sound Board (#936)[#936](/rwaldron/johnny-five/issues/936)
+ - Adafruit Audio FX Sound Board [#936](/rwaldron/johnny-five/issues/936)
 
 **GSM/Cellular**
  - SIM800l [#1136](/rwaldron/johnny-five/issues/1136)
@@ -47,50 +47,50 @@ We hope this will be a place where new and existing contributors will come to se
  - 8-bit 595 driver [#969](/rwaldron/johnny-five/issues/969)
 
 **LED.Matrix**
- - HT1632C (#1000, #1006)
- - MY9221 (#574)
+ - HT1632C [#1000](/rwaldron/johnny-five/issues/1000), [#1006](/rwaldron/johnny-five/issues/1006)
+ - MY9221 [#574](/rwaldron/johnny-five/issues/574)
 
 **Light**
-  - TSL2591 (#1105)
+  - TSL2591 [#1105](/rwaldron/johnny-five/issues/1105)
 
 **Sensor**
- - HX711 Load Cell Amplifier (Requires SPI)(#884)
+ - HX711 Load Cell Amplifier (Requires SPI)[#884](/rwaldron/johnny-five/issues/884)
 
 **Servo**
- - Five wire servos (#1019)
- - Multi-turn / winch servos (#1387, #1090)
+ - Five wire servos [#1019](/rwaldron/johnny-five/issues/1019)
+ - Multi-turn / winch servos [#1387](/rwaldron/johnny-five/issues/1387), [#1090](/rwaldron/johnny-five/issues/1090)
 
 **Thermometer**
- - MAX31855K (Requires SPI) (#1408, #738)
- - SHT11 (#1233)
- - MAX6675 (Requires SPI) (#738)
+ - MAX31855K (Requires SPI) [#1408](/rwaldron/johnny-five/issues/1408), [#738](/rwaldron/johnny-five/issues/738)
+ - SHT11 [#1233](/rwaldron/johnny-five/issues/1233)
+ - MAX6675 (Requires SPI) [#738](/rwaldron/johnny-five/issues/738)
 
 ------------------
 ### New Class Features
 
 **IMU**
- - Access to DMP processed values (#1126)
+ - Access to DMP processed values [#1126](/rwaldron/johnny-five/issues/1126)
 
 **Piezo**
- - Support RTTL, RTTL+ (#639)
+ - Support RTTL, RTTL+ [#639](/rwaldron/johnny-five/issues/639)
 
 **LED.RGB**
- - **Fade to color method** (#1309)
+ - **Fade to color method** [#1309](/rwaldron/johnny-five/issues/1309)
 
 **Servos**
- - **Bulk Servo Writes** - Add ability to accumulate multiple servo positions and send write command(s) on next tick. Ideal for PCA9685 that can receive multiple values in a single i2c message (and maybe one day bulk analog writes in firmata). (#1340)
+ - **Bulk Servo Writes** - Add ability to accumulate multiple servo positions and send write command(s) on next tick. Ideal for PCA9685 that can receive multiple values in a single i2c message (and maybe one day bulk analog writes in firmata). [#1340](/rwaldron/johnny-five/issues/1340)
 
 **Thermometer**
- - Add tolerance for temperature changes (#1137)
+ - Add tolerance for temperature changes [#1137](/rwaldron/johnny-five/issues/1137)
 
 ------------------
 ### New Modules
-**Fingerprint scanner module** - (#845)
+**Fingerprint scanner module** - [#845](/rwaldron/johnny-five/issues/845)
 
-**Gripper module** - (#698)
+**Gripper module** - [#698](/rwaldron/johnny-five/issues/698)
 
 ------------------
 ### Other Enhancements
-**DMX512 Protocol** - This would have to be added to firmata first (#1326)
+**DMX512 Protocol** - This would have to be added to firmata first [#1326](/rwaldron/johnny-five/issues/1326)
 
-**Leverage io.resolution** - (#1280, #1276, #1275)
+**Leverage io.resolution** - [#1280](/rwaldron/johnny-five/issues/1280), [#1276](/rwaldron/johnny-five/issues/1276), [#1275](/rwaldron/johnny-five/issues/1275)
