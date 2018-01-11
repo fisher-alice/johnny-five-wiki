@@ -8,43 +8,43 @@ We hope this will be a place where new and existing contributors will come to se
 ### New Boards/IO Plug-Ins
 **Asus Tinker Board** [#1421](/rwaldron/johnny-five/issues/1421)
 
-**Rainbowduino** Discontinued? (#574)
+**Rainbowduino** Discontinued? [#574](/rwaldron/johnny-five/issues/574)
 
 ------------------
 ### New Classes
-**Sound Generator/Synthesizer Class** (#1410)
- - SIDuinoi2c (#1410)
- - sid-arduino-lib backpack (Doesn't exist yet) (#1410)
- - YM3812 OPL2 (requires SPI) (#1410)
- - Adafruit Audio FX Sound Board (#936)
+**Sound Generator/Synthesizer Class** [#1410](/rwaldron/johnny-five/issues/1410)
+ - SIDuinoi2c [#1410](/rwaldron/johnny-five/issues/1410)
+ - sid-arduino-lib backpack (Doesn't exist yet) [#1410](/rwaldron/johnny-five/issues/1410)
+ - YM3812 OPL2 (requires SPI) [#1410](/rwaldron/johnny-five/issues/1410)
+ - Adafruit Audio FX Sound Board (#936)[#936](/rwaldron/johnny-five/issues/936)
 
 **GSM/Cellular**
- - SIM800l (#1136)
+ - SIM800l [#1136](/rwaldron/johnny-five/issues/1136)
 
 **Receiver**
- - IR Receiver Module (#434)
- - RC Receiver (#1071)
+ - IR Receiver Module [#434](/rwaldron/johnny-five/issues/434)
+ - RC Receiver [#1071](/rwaldron/johnny-five/issues/1071)
 
 ------------------
 ### New Devices
 
 **Expander**
- - Propeller Hat (#1139)
- - 74HC4067 (#939)
- - 74HC4051 (#939)
- - 74HC165 (#456)
- - CD4021B (#456)
+ - Propeller Hat [#1139](/rwaldron/johnny-five/issues/1139)
+ - 74HC4067 [#939](/rwaldron/johnny-five/issues/939)
+ - 74HC4051 [#939](/rwaldron/johnny-five/issues/939)
+ - 74HC165 [#456](/rwaldron/johnny-five/issues/456)
+ - CD4021B [#456](/rwaldron/johnny-five/issues/456)
 
 **GPS**
- - SIM808 (#1392)
- - Sparkfun Venus (#1074)
+ - SIM808 [#1392](/rwaldron/johnny-five/issues/1392)
+ - Sparkfun Venus [#1074](/rwaldron/johnny-five/issues/1074)
 
 **IMU**
- - LSM9DSO (#1072)
+ - LSM9DSO [#1072](/rwaldron/johnny-five/issues/1072)
 
 **LED.Digits**
- - HT16K33 Backpack (#1022)
- - 8-bit 595 driver (#969)
+ - HT16K33 Backpack [#1022](/rwaldron/johnny-five/issues/1022)
+ - 8-bit 595 driver [#969](/rwaldron/johnny-five/issues/969)
 
 **LED.Matrix**
  - HT1632C (#1000, #1006)
