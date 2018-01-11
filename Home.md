@@ -4,6 +4,7 @@
 - **[Prerequisites](https://github.com/rwaldron/johnny-five/wiki/Getting-Started#prerequisites)** Prerequisites for Linux, OSX, and Windows.
 - **[IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins)** Create IO Plugins for any platform!
 - **[Control System Hierarchy Overview](https://github.com/rwaldron/johnny-five/wiki/Control-System-Hierarchy-Overview)** A terminology primer for component class and IO Plugin authors.
+- **[Requested Features](../Requested-Features)** An index of requested features and enhancements for Johnny-Five.
 
 [es_ES]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-es_ES
 [nl_NL]: https://github.com/rwaldron/johnny-five/wiki/Getting-Started-nl_NL
