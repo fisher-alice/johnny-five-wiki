@@ -25,6 +25,10 @@ We hope this will be a place where new and existing contributors will come to se
  - IR Receiver Module [#434](/rwaldron/johnny-five/issues/434)
  - RC Receiver [#1071](/rwaldron/johnny-five/issues/1071)
 
+**Camera**
+This might be a new module instead of a class
+ - TTL Serial JPEG Camera (#420)
+
 ------------------
 ### New Devices
 
