@@ -27,7 +27,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Camera**
 This might be a new module instead of a class
- - TTL Serial JPEG Camera (/rwaldron/johnny-five/issues/420)
+ - TTL Serial JPEG Camera [#420](/rwaldron/johnny-five/issues/420)
 
 ------------------
 ### New Devices
