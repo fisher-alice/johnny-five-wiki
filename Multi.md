@@ -52,7 +52,11 @@ This list will continue to be updated as more component support is implemented.
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
   | controller    | string | BMP180, BMP280, BME280, HTU21D, HIH6130, MPL115A2, MPL3115A2, SI7020, SI7021, MS5611, TH02. The Name of the controller to use            |  | yes       |
+  | freq          | Number | In milliseconds, how often `data` events should fire | 20 | no |
+
   </span>
+
+In addition, anything in the `options` object passed to the `Multi` constructor will be passed along to each of its constituent component sensors (e.g. `Thermometer`, `Altimeter`, etc.). See relevant sensor component class documentation for more details about what options each takes.
 
 ## Shape
 Some of these properties may or may not exist depending on whether the multi sensor supports it.
@@ -318,5 +322,7 @@ The Multi class does not have an explicit API.  Refer to the individual componen
 
 - **data** The "data" event is fired as frequently as new data becomes available.
 
-- **change** The "change" event is fired whenever a corresponding "change" is fired from a component.
+- **change** The "change" event is fired whenever a corresponding "change" is fired from any constituent component.
+
+_Note_: You may also bind to events on `Multi` object component sensors directly, e.g. `myMulti.thermometer.on('change')`
 
