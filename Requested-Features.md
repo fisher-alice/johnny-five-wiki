@@ -76,6 +76,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **LED.RGB**
  - **Fade to color method** [#1309](/rwaldron/johnny-five/issues/1309)
+ - **Color Correction** [#811](/rwaldron/johnny-five/issues/811)
 
 **Servos**
  - **Bulk Servo Writes** - Add ability to accumulate multiple servo positions and send write command(s) on next tick. Ideal for PCA9685 that can receive multiple values in a single i2c message (and maybe one day bulk analog writes in firmata). [#1340](/rwaldron/johnny-five/issues/1340)
