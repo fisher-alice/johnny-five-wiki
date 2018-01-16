@@ -91,7 +91,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Camera** - [#420](/rwaldron/johnny-five/issues/420)
 
-**Apex 5400 Bill Accepter** - [#1317](/rwaldron/johnny-five/issues/1317)
+**Apex 5400 Bill Acceptor** - [#1317](/rwaldron/johnny-five/issues/1317)
 
 ------------------
 ### Other Enhancements
