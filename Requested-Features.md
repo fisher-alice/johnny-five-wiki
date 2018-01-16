@@ -85,7 +85,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 ------------------
 ### New Modules
-**Fingerprint scanner module** - [#845](/rwaldron/johnny-five/issues/845)
+**Fingerprint scanner module** - [#845](/rwaldron/johnny-five/issues/845), [#1353](/rwaldron/johnny-five/issues/1353)
 
 **Gripper module** - [#698](/rwaldron/johnny-five/issues/698)
 
