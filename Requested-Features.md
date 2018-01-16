@@ -93,6 +93,9 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Apex 5400 Bill Acceptor** - [#1317](/rwaldron/johnny-five/issues/1317)
 
+**RFID/NFC** - [#1108](/rwaldron/johnny-five/issues/1108), [#804](/rwaldron/johnny-five/issues/804)
+ - Adafruit PN532 RFID/NFC Breakout and Shield
+
 ------------------
 ### Other Enhancements
 **DMX512 Protocol** - This would have to be added to firmata first [#1326](/rwaldron/johnny-five/issues/1326)
