@@ -42,6 +42,9 @@ We hope this will be a place where new and existing contributors will come to se
 **IMU**
  - LSM9DSO [#1072](/rwaldron/johnny-five/issues/1072)
 
+**LCD**
+ - QC1602A v2.0 [#658](/rwaldron/johnny-five/issues/658)
+
 **LED.Digits**
  - HT16K33 Backpack [#1022](/rwaldron/johnny-five/issues/1022)
  - 8-bit 595 driver [#969](/rwaldron/johnny-five/issues/969)
