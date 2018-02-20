@@ -13,6 +13,9 @@ Supported Compass/Magnetometer:
   - [Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055](https://www.adafruit.com/product/2472)
 - MAG3110
   - [SparkFun Triple Axis Magnetometer Breakout - MAG3110](https://www.sparkfun.com/products/12670)
+- LSM303C
+  - [Adafruit](https://www.adafruit.com/product/1120?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/13303?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -25,7 +28,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description | Default | Required |
   |----------|--------|-------------------|---------|----------|
-  | controller    | String | BNO055, HMC6352, HMC5883L, MAG3110. The name of the controller to use | | yes      |
+  | controller    | String | BNO055, HMC6352, HMC5883L, MAG3110, LSM303C. The name of the controller to use | | yes      |
   | gauss         | Number | cgs units. Set the scale gauss for compass readings. | 1.3 | no       |
   </span>
 
@@ -87,6 +90,26 @@ new five.Compass({
 });
 ```
 ![MAG3110](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/compass-MAG3110.png)
+
+
+#### LSM303C
+
+```js
+// Create an LSM303C Compass/Magnetometer object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the LSM303C controller
+new five.Compass({
+  controller: "LSM303C"
+});
+// Or...
+new five.Magnetometer({
+  controller: "LSM303C"
+});
+```
+
+
+![imu-lsm303c.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-lsm303c.png)
 
 ## Usage
 
