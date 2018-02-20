@@ -19,6 +19,9 @@ Supported Accelerometers:
 - ADXL345 (I2C)
   - [Adafruit](https://www.adafruit.com/products/1231?utm_source=j5)
   - [SparkFun](https://www.sparkfun.com/products/9836?utm_source=j5)
+- LSM303C
+  - [Adafruit](https://www.adafruit.com/product/1120?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/13303?utm_source=j5)
 
 This list will continue to be updated as more component support is implemented.
 
@@ -29,7 +32,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                       | Default  | Required |
   |---------------|--------|--------------------------------------------|-----------------------------------|----------|
-  | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361. The Name of the controller to use | “ANALOG” | no       |
+  | controller    | string | ANALOG, MPU6050, ADXL345, ADXL335, MMA7361, LSM303C. The Name of the controller to use | “ANALOG” | no       |
   </span>
 
 - **Analog Options (`controller: "ANALOG"`)**
@@ -187,6 +190,21 @@ new five.Accelerometer({
 ```
 
 ![MMA7361](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/accelerometer-mma7361.png)
+
+
+#### LSM303C
+
+```js
+// Create an LSM303C Accelerometer object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the LSM303C controller
+new five.Accelerometer({
+  controller: "LSM303C"
+});
+```
+
+![imu-lsm303c.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-lsm303c.png)
 
 ## Usage
 ```js
