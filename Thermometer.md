@@ -61,7 +61,9 @@ Johnny-Five currently supports several kinds of Thermometer/Temperature sensors:
   - [Google](https://www.google.com/search?q=DHT22?utm_source=j5)
 - SHT31D
   - [Adafruit](https://www.adafruit.com/products/2857?utm_source=j5)
-
+- LSM303C
+  - [Adafruit](https://www.adafruit.com/product/1120?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/13303?utm_source=j5)
 
 
 This list will continue to be updated as more devices are confirmed.
@@ -73,7 +75,7 @@ This list will continue to be updated as more devices are confirmed.
 
   | Property   | Type          | Value/Description                                                                                                     | Default  | Required        |
   |------------|---------------|-----------------------------------------------------------------------------------------------------------------------|----------|-----------------|
-  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D, MCP9808, SI7020, SI7021. The Name of the controller to use. | `ANALOG` | no              |
+  | controller | string        | ANALOG, LM35, TMP36, DS18B20, MPU6050, GROVE, BMP180, MPL115A2, MPL3115A2, HTU21D, MCP9808, SI7020, SI7021, LSM303C. The Name of the controller to use. | `ANALOG` | no              |
   | pin        | string or int | Analog Pin. Use with analog sensor.                                                                                   |          | Yes<sup>1</sup> |
   | toCelsius  | function      | `function toCelsius(raw) {}` A raw-to-celsius transform override                                                      |          | no              |
   | freq       | Number        | Milliseconds. The rate in milliseconds to emit the data event                                                         | 25ms     | no              |                                                              |
@@ -303,6 +305,21 @@ new five.Thermometer({
 
 ![SI7021](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/multi-SI7021.png)
 
+
+#### LSM303C
+
+```js
+// Create an LSM303C Thermometer object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the LSM303C controller
+new five.Thermometer({
+  controller: "LSM303C"
+});
+```
+
+
+![imu-lsm303c.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-lsm303c.png)
 
 ## Usage
 
