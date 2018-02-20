@@ -2,13 +2,16 @@ The `IMU` class constructs objects that represent a single IMU module attached t
 
 Supported modules:
 
-- MPU6050
-  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/?utm_source=j5)
-  - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 - BNO055
   - [Adafruit](https://www.adafruit.com/products/2472?utm_source=j5)
   - [Atmel](http://www.atmel.com/tools/ATBNO055-XPRO.aspx?utm_source=j5)
   - [Tindie](https://www.tindie.com/products/onehorse/bno-055-9-axis-motion-sensor-with-hardware-sensor-fusion/?utm_source=j5)
+- LSM303C
+  - [Adafruit](https://www.adafruit.com/product/1120?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/13303?utm_source=j5)
+- MPU6050
+  - [Invensense](http://www.invensense.com/products/motion-tracking/6-axis/mpu-6050/?utm_source=j5)
+  - [SparkFun](https://www.sparkfun.com/products/11028?utm_source=j5)
 
 
 This list will continue to be updated as more component support is implemented.
@@ -20,7 +23,7 @@ This list will continue to be updated as more component support is implemented.
 
   | Property | Type   | Value/Description                                  | Default   | Required |
   |---------------|--------|-----------|-------------------------------------|-----------|
-  | controller    | string | MPU6050, BNO055. The Name of the controller to use            | "MPU6050" | no       |
+  | controller    | string | BNO055, LSM303C, MPU6050. The Name of the controller to use            | "MPU6050" | no       |
   </span>
 
 - **MPU6050 Options(`controller: "MPU6050"`)**
@@ -32,6 +35,7 @@ This list will continue to be updated as more component support is implemented.
   </span>
 
 ## Shape
+
 Some of these properties may or may not exist depending on whether the IMU supports it.
 
 | Property Name | Description | Read Only |
@@ -76,6 +80,21 @@ new five.IMU({
 
 
 ![imu-bno055.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-bno055.png)
+
+#### BNO055
+
+```js
+// Create an LSM303C IMU object:
+//
+//  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
+//  - specify the LSM303C controller
+new five.IMU({
+  controller: "LSM303C"
+});
+```
+
+
+![imu-lsm303c.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-lsm303c.png)
 
 ## Usage
 
