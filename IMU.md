@@ -81,7 +81,7 @@ new five.IMU({
 
 ![imu-bno055.png](https://raw.githubusercontent.com/rwaldron/johnny-five/master/docs/breadboard/imu-bno055.png)
 
-#### BNO055
+#### LSM303C
 
 ```js
 // Create an LSM303C IMU object:
