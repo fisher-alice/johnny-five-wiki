@@ -32,7 +32,7 @@ Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomme
 
 ### Arch Linux
 
-- Install Node.js ```pacman -S nodejs`
+- Install Node.js ```pacman -S nodejs```
 - Install Arduino Libraries (for firmware flashing) ```pacman -S arduino```
 
 ## Hello World
