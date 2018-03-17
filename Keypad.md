@@ -180,6 +180,34 @@ new five.Keypad({
 
 ![](http://johnny-five.io/img/breadboard/keypad-3X4_I2C_NANO_BACKPACK.png)
 
+#### 4x4 Keypad
+
+Similar to the 3x4 Keypad, this requires a Nano Backpack. However, it uses an extra pin for the 4th column of keys. Connect the pins according to the rows and columns to get the correct output.
+
+| Row | Nano Pin |
+| --- | -------- |
+| 1 | 7 |
+| 2 | 2 |
+| 3 | 3 |
+| 4 | 5 |
+
+
+| Col | Nano Pin |
+| --- | -------- |
+| 1 | 6 |
+| 2 | 8 |
+| 3 | 4 |
+| 4 | 9 |
+
+
+```javascript
+new five.Keypad({
+  controller: "4X4_I2C_NANO_BACKPACK"
+});
+```
+
+![](http://johnny-five.io/img/breadboard/keypad-4X4_I2C_NANO_BACKPACK.png)
+
 ### Usage
 
 ```javascript
