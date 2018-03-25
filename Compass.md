@@ -37,6 +37,7 @@ This list will continue to be updated as more component support is implemented.
 
 | Property Name | Description | Read Only |
 |---------------| ----------- | ----------|
+| `raw`     | The raw x/y/z values. | Yes |
 | `heading` | The current heading in degrees, 0-360° | Yes |
 | `bearing` | An object of properties whose values are relevant bearing information ★ | Yes |
 
