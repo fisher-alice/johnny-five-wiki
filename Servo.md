@@ -16,9 +16,10 @@ For working with multiple servos check out the [Servos](https://github.com/rwald
   |---------------|----------------|---------------------------------------------------------------------------------------------|----------|----------|
   | pin           | Number, String | The address of the pin the servo is attached to                                             | | yes      |
   | range         | Array          | `[ lower, upper ]` The range of motion in degrees. | `[0, 180]`                   | no       |
-  | pwmRange      | Array          | `[ min, max ]` The pulse width range in microseconds. |                       | no       |
+  | pwmRange      | Array          | `[ min, max ]` The pulse width range in microseconds. | `[600, 2400]`                      | no       |
+  | deviceRange   | Array          | `[ min, max ]` The physical range of the servo in degrees. | `[0, 180]`      | no       |
   | type          | String         | `“standard”`, `“continuous”`. The type of servo being created. | `“standard”`           | no       |
-  | startAt       | Number         | Any number between 0-180. Degrees to initialize the servo at.                               |       |   no 
+  | startAt       | Number         | Any number within the deviceRange. Degrees to initialize the servo at.                               |       |   no 
   | offset        | Number        | A positive or negative value to adjust the servo. | `false`              | no       |
   | invert        | Boolean        | `true` or `false`. Optionally Invert servo movement.| `false`              | no       |
   | center        | Boolean        | `true` or `false`. Optionally center the servo on initialization. | `false` | no       |
