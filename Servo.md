@@ -425,13 +425,9 @@ If your continuous servo moves when it should be stopped, it likely needs to be 
 ## Examples
 
 - [Servo](https://github.com/rwldrn/johnny-five/blob/master/docs/servo.md)
-- [Servo Options](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-options.md)
 - [Servo Array](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-array.md)
-- [Servo Digital](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-digital.md)
-- [Servo Dual](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-dual.md)
 - [I2C Controlled Servo](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-PCA9685.md)
-- [Servo Tutorial](https://github.com/rwldrn/johnny-five/blob/master/docs/servo-tutorial.md)
-- [Continuous Clock](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous-clock.md)
-- [Continuous](https://github.com/rwldrn/johnny-five/blob/master/docs/continuous.md)
+- [Continuous](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-continuous.md)
+- [Multi-Turn](https://github.com/rwaldron/johnny-five/blob/master/docs/servo-multi-turn.md)
 
 <!--remove-end-->
