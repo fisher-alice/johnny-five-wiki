@@ -151,6 +151,20 @@ new five.Servo({
 });
 ```
 
+#### Multi-turn
+
+```js
+// Create a multi-turn servo. 6 rotations = 2160 degrees
+// Note that this is not the same as a continuous rotation servo.
+// 
+//   - attached to pin 10
+//
+new five.Servo({
+  pin: 10,
+  deviceRange: [0, 2160]
+});
+```
+
 ![Standard or Continuous](https://github.com/rwaldron/johnny-five/raw/master/docs/breadboard/servo.png)
 
 
