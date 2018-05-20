@@ -24,6 +24,7 @@ We hope this will be a place where new and existing contributors will come to se
 **Receiver**
  - IR Receiver Module [#434](/rwaldron/johnny-five/issues/434)
  - RC Receiver [#1071](/rwaldron/johnny-five/issues/1071)
+ - RFID Receiver [#804](/rwaldron/johnny-five/issues/804)
 
 ------------------
 ### New Devices
