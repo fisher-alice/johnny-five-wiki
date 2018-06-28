@@ -83,7 +83,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Motor**
  - **Start Assist** [#995](https://github.com/rwaldron/johnny-five/issues/995)
- - **Encoder** [#995](https://github.com/rwaldron/johnny-five/issues/995)
+ - **Encoder** [#995](https://github.com/rwaldron/johnny-five/issues/995), [#1481](https://github.com/rwaldron/johnny-five/issues/1481)
 
 **Servos**
  - **Bulk Servo Writes** - Add ability to accumulate multiple servo positions and send write command(s) on next tick. Ideal for PCA9685 that can receive multiple values in a single i2c message (and maybe one day bulk analog writes in firmata). [#1340](/rwaldron/johnny-five/issues/1340)
