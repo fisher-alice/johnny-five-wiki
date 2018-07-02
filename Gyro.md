@@ -37,6 +37,14 @@ This list will continue to be updated as more Gyro devices are confirmed.
   | resolution    | Number           | Varies by device. This value can be identified in the device's datasheet             | 4.88    | no       |
   </span>
 
+- **Digital Options**
+  <span class="abbreviate-table">
+
+  | Property | Type             | Value/Description  | Default | Required |
+  |---------------|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|---------|
+  | address       | Hexadecimal Number | Sets the Gyro's address on the I2C bus.<br>Varies by device.<br>For MPU-6050 `0x68`,`0x69`. For BNO055 `0x28`,`0x29`.<br>Check the documentation for your Gyro for how to set its I2C address. | Lowest value address first. | no |
+  </span>
+
 - **MPU6050 Options (`controller: "MPU6050"`)**
   <span class="abbreviate-table">
 
@@ -88,6 +96,7 @@ new five.Gyro({
 //  - specify the MPU6050 controller
 new five.Gyro({
   controller: "MPU6050",
+  address: 0x68, // optional
   sensitivity: 131 // optional
 });
 ```
@@ -103,7 +112,8 @@ new five.Gyro({
 //  - attach SDA and SCL to the I2C pins on your board (A4 and A5 for the Uno)
 //  - specify the BNO055 controller
 new five.Gyro({
-  controller: "BNO055"
+  controller: "BNO055",
+  address: 0x28 // optional
 });
 ```
 
