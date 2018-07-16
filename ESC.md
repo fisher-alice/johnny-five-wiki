@@ -17,11 +17,10 @@ If you are interested in working with multiple ESCs, see the [ESCs page](escs).
   | Property | Type           | Value/ Description                                                                        | Default| Required |
   |----------|----------------|----------------------------------------|------------------------------------------------------------------------------------|----------|
   | pin      | Number, String | Any PWM Pin. The address of the PWM pin the ESC is attached to || yes      |
-  | range    | Array          | `[ lower, upper ]`. The range of speed in percent. | `[0, 100]`                                | no       |
-  | startAt  | Number         | Initial speed, 0-100% | `0` | no       |
   | controller    | String  | DEFAULT, PCA9685. Controller interface type. | "DEFAULT"                                           | no       |
+  | pwmRange      | Array          | `[ min, max ]` The pulse width range in microseconds. | `[600, 2400]`                      | no       |
   | device    | String  | FORWARD, FORWARD_REVERSE. Device capability type. | "FORWARD"                                           | no       |
-  | neutral    | Number  | Neutral point, 0-100. | 0 | no       |
+  | neutral    | Number  | Neutral point, usually the middle of the PWM range. | Varies by `device` | no       |
   </span>
 
 - **PCA9685 Options (`controller: "PCA9685"`)** 
@@ -38,7 +37,6 @@ If you are interested in working with multiple ESCs, see the [ESCs page](escs).
 |---------------| ----------- | ----------|
 | `id` | A user definable id value. Defaults to a generated uid | No |
 | `pin` | The pin address that the ESC is attached to | No |
-| `range` | The range of speed as an array of fractional percent values. Defaults to [0, 100] | No |
 | `value` | The value of the last/current speed. | Yes |
 
 ## Component Initialization
@@ -48,18 +46,6 @@ If you are interested in working with multiple ESCs, see the [ESCs page](escs).
 
 ```js
 new five.ESC(9);
-```
-
-![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png)
-
-#### Limited Speed Range
-
-```js
-// Limited speed range to 0-80%
-new five.ESC({
-  pin: 9, 
-  range: [ 0, 80 ]
-});
 ```
 
 ![ESC](https://raw.github.com/rwaldron/johnny-five/master/docs/breadboard/esc-keypress.png)
@@ -83,7 +69,6 @@ new five.ESC({
 new five.ESC({
   pin: 9, 
   device: "FORWARD_REVERSE", 
-  neutral: 50
 });
 ```
 
@@ -102,60 +87,28 @@ board.on("ready", function() {
   var esc = new five.ESC(11);
 
   // Set to top speed. (this can be physically dangerous, you've been warned.)
-  esc.max();
+  esc.throttle(esc.
 
 });
 ```
 
 ## API
 
-- **speed(value)** Set the speed of the ESC, any fractional number value from 0...100 as a percentage value. If the specified speed is the same as the current speed, no commands are sent.
-  ```js
-  var esc = new five.ESC(11);
+- **speed(value)** Deprecated. Use `throttle(μs)`
 
-  // Set the motor's speed to 50%
-  esc.speed(50);
+
+- **throttle(value)** Throttle the speed of the ESC by setting a pulse in μs.
+  ```js
+  var esc = new five.ESC(9);
+
+  esc.throttle(600); // 600μs
   ```
 
-- **min()** Set ESC to minimum speed. Defaults to 0%, respects explicit range.
+- **brake()** Brake the ESC
   ```js
-  var esc = new five.ESC(11);
+  var esc = new five.ESC(9);
 
-  esc.min();
-  ```
-  Or 
-  ```js
-  var esc = new five.ESC({
-    pin: 11, 
-    range: [ 10, 100 ]
-  });
-
-  // Minimum speed at 10%
-  esc.min();
-  ```
-
-- **max()** Set ESC to maximum speed. Defaults to 100%, respects specified range.
-  ```js
-  var esc = new five.ESC(11);
-
-  esc.max();
-  ```
-  Or 
-  ```js
-  var esc = new five.ESC({
-    pin: 11, 
-    range: [ 0, 80 ]
-  });
-
-  // Max at 80%
-  esc.max();
-  ```
-
-- **stop()** Stop a moving esc. 
-  ```js
-  var esc = new five.ESC(12);
-
-  esc.stop();
+  esc.brake();
   ```
 
 
@@ -178,8 +131,8 @@ This requires that the ESC's power source is **off or disconnected** at the star
 ```c
 #include <Servo.h>
 
-#define MAX_SIGNAL 2000
-#define MIN_SIGNAL 700
+#define MAX_SIGNAL 2400
+#define MIN_SIGNAL 544
 #define MOTOR_PIN 12
 
 Servo motor;
