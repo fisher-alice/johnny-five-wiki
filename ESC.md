@@ -18,7 +18,7 @@ If you are interested in working with multiple ESCs, see the [ESCs page](escs).
   |----------|----------------|----------------------------------------|------------------------------------------------------------------------------------|----------|
   | pin      | Number, String | Any PWM Pin. The address of the PWM pin the ESC is attached to || yes      |
   | controller    | String  | DEFAULT, PCA9685. Controller interface type. | "DEFAULT"                                           | no       |
-  | pwmRange      | Array          | `[ min, max ]` The pulse width range in microseconds. | `[600, 2400]`                      | no       |
+  | pwmRange      | Array          | `[ min, max ]` The pulse width range in microseconds. | `[1000, 2000]`                      | no       |
   | device    | String  | FORWARD, FORWARD_REVERSE. Device capability type. | "FORWARD"                                           | no       |
   | neutral    | Number  | Neutral point, usually the middle of the PWM range. | Varies by `device` | no       |
   </span>
@@ -85,9 +85,9 @@ var board = new five.Board();
 board.on("ready", function() {
 
   var esc = new five.ESC(11);
-
-  // Set to top speed. (this can be physically dangerous, you've been warned.)
-  esc.throttle(esc.
+  
+  board.loop(100, () => 
+  esc.throttle();
 
 });
 ```
@@ -101,7 +101,7 @@ board.on("ready", function() {
   ```js
   var esc = new five.ESC(9);
 
-  esc.throttle(600); // 600μs
+  esc.throttle(1500); // 1500μs is half speed of a single direction or neutral of a bidirectional
   ```
 
 - **brake()** Brake the ESC
@@ -131,8 +131,8 @@ This requires that the ESC's power source is **off or disconnected** at the star
 ```c
 #include <Servo.h>
 
-#define MAX_SIGNAL 2400
-#define MIN_SIGNAL 544
+#define MAX_SIGNAL 2000
+#define MIN_SIGNAL 1000
 #define MOTOR_PIN 12
 
 Servo motor;
