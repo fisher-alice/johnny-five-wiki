@@ -1,6 +1,6 @@
 The `ESCs` class constructs a collection object containing multiple ESC objects. Any method called on an ESCs object will be called on each member of the ESCs object with the same parameters.
 
-For working with a single ESC check out the [ESC](esc) class.
+For working with a single ESC check out the [ESC](https://github.com/rwaldron/johnny-five/wiki/esc) class.
 
 ## Parameters
 
@@ -9,7 +9,7 @@ For working with a single ESC check out the [ESC](esc) class.
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
-  | numsOrObjects       | Array | An element for each ESC. Any valid [ESC parameters](https://github.com/rwaldron/johnny-five/wiki/ESC#parameters) will work  |  | yes       |
+  | numsOrObjects       | Array | An element for each ESC. Any valid [ESC parameters](https://github.com/rwaldron/johnny-five/wiki/esc#parameters) will work  |  | yes       |
   </span>
 
 ## Component Initialization
@@ -108,11 +108,11 @@ var motors = new five.ESCs([escA, escB]);
 
 ## API
 
-All methods and properties in the [ESC API](https://github.com/rwaldron/johnny-five/wiki/ESC#api) are available on ESCs
+All methods and properties in the [ESC API](https://github.com/rwaldron/johnny-five/wiki/esc#api) are available on ESCs
 
 ## Events
 
-Events are emitted on the individual ESC objects so listeners must be attached there. See [ESC events](https://github.com/rwaldron/johnny-five/wiki/ESC#events)
+Events are emitted on the individual ESC objects so listeners must be attached there. See [ESC events](https://github.com/rwaldron/johnny-five/wiki/esc#events)
 
 <!--remove-start-->
 
