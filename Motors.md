@@ -1,6 +1,6 @@
 The `Motors` class constructs a collection object containing multiple motor objects. Any method called on a `Motors` object will be called on each entry of the `Motors` object with the same parameters.
 
-For working with a single motor check out the [Motor](motor) class.
+For working with a single motor check out the [Motor](https://github.com/rwaldron/johnny-five/wiki/motor) class.
 
 ## Parameters
 
@@ -9,7 +9,7 @@ For working with a single motor check out the [Motor](motor) class.
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
-  | numsOrObjects       | Array | An entry for each motor. Any valid [motor parameters](Motor#parameters) will work  |  | yes       |
+  | numsOrObjects       | Array | An entry for each motor. Any valid [motor parameters](https://github.com/rwaldron/johnny-five/wiki/motor#parameters) will work  |  | yes       |
   </span>
 
 ## Component Initialization
@@ -103,5 +103,4 @@ board.on("ready", function() {
 
 ## API
 
-All methods in the [Motor API](Motor#api) are available on Motors
-
+All methods in the [Motor API](https://github.com/rwaldron/johnny-five/wiki/motor#api) are available on Motors
