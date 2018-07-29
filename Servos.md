@@ -2,7 +2,7 @@ The `Servos` class constructs a collection object containing multiple servo obje
 
 Once instantiated, a Servos object is static. You may not ```push()``` additional Servo instances onto the array.
 
-For working with a single servo check out the [Servo](servo) class.
+For working with a single servo check out the [Servo](https://github.com/rwaldron/johnny-five/wiki/servo) class.
 
 ## Parameters
 
@@ -11,7 +11,7 @@ For working with a single servo check out the [Servo](servo) class.
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
-  | numsOrObjects       | Array | An element for each servo. Any valid [servo parameters](https://github.com/rwaldron/johnny-five/wiki/Servo#parameters) will work  |  | yes       |
+  | numsOrObjects       | Array | An element for each servo. Any valid [servo parameters](https://github.com/rwaldron/johnny-five/wiki/servo#parameters) will work  |  | yes       |
   </span>
 
 ## Component Initialization
@@ -113,11 +113,11 @@ var joints = new five.Servos([shoulder, elbow]);
 
 ## API
 
-All methods and properties in the [Servo API](https://github.com/rwaldron/johnny-five/wiki/Servo#api) are available on Servo
+All methods and properties in the [Servo API](https://github.com/rwaldron/johnny-five/wiki/servo#api) are available on Servo
 
 ## Events
 
-Events are emitted on the individual Servo objects so listeners must be attached there. See [Servo events](https://github.com/rwaldron/johnny-five/wiki/Servo#events)
+Events are emitted on the individual Servo objects so listeners must be attached there. See [Servo events](https://github.com/rwaldron/johnny-five/wiki/servo#events)
 
 <!--remove-start-->
 
