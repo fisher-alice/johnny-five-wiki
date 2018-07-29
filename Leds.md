@@ -1,6 +1,6 @@
 The `Leds` class constructs a collection object containing multiple Led objects. Any method called on an Leds object will be called on each member of the Leds object with the same parameters.
 
-For working with a single Led check out the [Led](led) class.
+For working with a single Led check out the [Led](https://github.com/rwaldron/johnny-five/wiki/led) class.
 
 ## Parameters
 
@@ -9,7 +9,7 @@ For working with a single Led check out the [Led](led) class.
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
-  | numsOrObjects       | Array | An element for each Led. Any valid [Led parameters](https://github.com/rwaldron/johnny-five/wiki/Led#parameters) will work  |  | yes       |
+  | numsOrObjects       | Array | An element for each Led. Any valid [Led parameters](https://github.com/rwaldron/johnny-five/wiki/led#parameters) will work  |  | yes       |
   </span>
 
 ## Component Initialization
@@ -109,11 +109,11 @@ var lights = new five.Leds([ledA, ledB]);
 
 ## API
 
-All methods and properties in the [Led API](https://github.com/rwaldron/johnny-five/wiki/Led#api) are available on Leds
+All methods and properties in the [Led API](https://github.com/rwaldron/johnny-five/wiki/led#api) are available on Leds
 
 ## Events
 
-Events are emitted on the individual Led objects so listeners must be attached there. See [Led events](https://github.com/rwaldron/johnny-five/wiki/Led#events)
+Events are emitted on the individual Led objects so listeners must be attached there. See [Led events](https://github.com/rwaldron/johnny-five/wiki/led#events)
 
 <!--remove-start-->
 
