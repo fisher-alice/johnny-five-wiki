@@ -11,7 +11,7 @@ Johnny-Five foi testado, mas não está limitado às, seguintes placas:
 - [Arduino Nano](http://arduino.cc/en/Main/arduinoBoardNano)
 - [TinyDuino](http://tiny-circuits.com/products/tinyduino/)
 
-Veja também: [Suporte Multi Placas](https://github.com/rwldrn/johnny-five/wiki/Boards)
+Veja também: [Suporte Multi Placas](https://github.com/rwldrn/johnny-five/wiki/boards)
 
 ### Parâmetros
 
