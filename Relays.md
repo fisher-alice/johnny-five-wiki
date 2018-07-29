@@ -2,7 +2,7 @@ The `Relays` class constructs a collection object containing multiple relay obje
 
 Once instantiated, a `Relays` collection object is static.
 
-For working with a single relay check out the [Relay](relay) class.
+For working with a single relay check out the [Relay](https://github.com/rwaldron/johnny-five/wiki/relay) class.
 
 ## Parameters
 
@@ -11,7 +11,7 @@ For working with a single relay check out the [Relay](relay) class.
   
   | Property | Type           | Value/ Description                     | Default | Required |
   |----------|----------------|-----------------------|---------------------------------|----------|
-  | numsOrObjects       | Array | An element for each relay. Any valid [relay parameters](https://github.com/rwaldron/johnny-five/wiki/Relay#parameters) will work  |  | yes       |
+  | numsOrObjects       | Array | An element for each relay. Any valid [relay parameters](https://github.com/rwaldron/johnny-five/wiki/relay#parameters) will work  |  | yes       |
   </span>
 
 ## Component Initialization
@@ -98,8 +98,8 @@ board.on("ready", function() {
 
 ## API
 
-All methods and properties in the [Relay API](https://github.com/rwaldron/johnny-five/wiki/Relay#api) are available on Relay
+All methods and properties in the [Relay API](https://github.com/rwaldron/johnny-five/wiki/relay#api) are available on Relay
 
 ## Events
 
-Events are emitted on the individual Relay objects so listeners must be attached there. See [Relay events](https://github.com/rwaldron/johnny-five/wiki/Relay#events)
+Events are emitted on the individual Relay objects so listeners must be attached there. See [Relay events](https://github.com/rwaldron/johnny-five/wiki/relay#events)
