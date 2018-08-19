@@ -2,7 +2,7 @@
 
 The `ESC` class constructs objects that represent a single ESC (Electronic Speed Control) component attached to the physical board. `ESC` objects are similar to `Servo` objects as they both use PWM pins to communicate with the physical ESC. Currently, this class assumes the ESC is [pre-calibrated](#wiki-calibrating-an-esc).
 
-If you are interested in working with multiple ESCs, see the [ESCs page](https://github.com/rwaldron/johnny-five/wiki/escs).
+If you are interested in working with multiple ESCs, see the [ESCs page](escs).
 
 ## Parameters
 
