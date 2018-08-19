@@ -2,7 +2,10 @@ The `Relays` class constructs a collection object containing multiple relay obje
 
 Once instantiated, a `Relays` collection object is static.
 
-For working with a single relay check out the [Relay](https://github.com/rwaldron/johnny-five/wiki/relay) class.
+See also: 
+
+- [Relay](relay)
+
 
 ## Parameters
 
