@@ -2,7 +2,10 @@ The `Servos` class constructs a collection object containing multiple servo obje
 
 Once instantiated, a Servos object is static. You may not ```push()``` additional Servo instances onto the array.
 
-For working with a single servo check out the [Servo](https://github.com/rwaldron/johnny-five/wiki/servo) class.
+See also: 
+
+- [Servo](servo)
+
 
 ## Parameters
 
