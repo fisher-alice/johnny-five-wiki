@@ -2,6 +2,11 @@
 
 The `Motor` class constructs objects that represent a single Motor. The motor may attach to the physical board or a motor controller. The controller may be a third party shield or custom built motor controller. This class works well with both **Directional** and **Non-Directional** motors. It also works well with 2-pin or 3-pin controllers.
 
+See also: 
+
+- [Motors](motors)
+
+
 ## Parameters
   - **pin** A Number or String address for the Non-Directional Motor pin (PWM).
   - **pins** An array of 2 or 3 Numbers or String addresses for the Bi-Directional Motor pins. 
