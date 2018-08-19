@@ -4,7 +4,7 @@ The `ESC` class constructs objects that represent a single ESC (Electronic Speed
 
 See also: 
 
-- [ESCs](escs)
+- [ESCs](https://github.com/rwaldron/johnny-five/wiki/escs)
 
 ## Parameters
 
