@@ -2,6 +2,10 @@
 
 The `Relay` class constructs objects that represent a single digital Relay  attached to the physical board.
 
+See also: 
+
+- [Relays](relays)
+
 ## Parameters
 
 - **pin** A Number or String address for the pin.
