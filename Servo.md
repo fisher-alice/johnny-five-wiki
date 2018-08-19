@@ -3,7 +3,9 @@
 
 The `Servo` class constructs objects that represent a single Servo attached to the physical board. This class is designed to work well with both **Standard** and **Continuous** rotation servos.
 
-For working with multiple servos check out the [Servos](https://github.com/rwaldron/johnny-five/wiki/servos) class.
+See also: 
+
+- [Servos](servos)
 
 ## Parameters
 
