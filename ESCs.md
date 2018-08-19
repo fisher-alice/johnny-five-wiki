@@ -3,7 +3,7 @@ The `ESCs` class constructs a collection object containing multiple ESC objects.
 
 See also: 
 
-- [ESC](esc)
+- [ESC](https://github.com/rwaldron/johnny-five/wiki/esc)
 
 
 ## Parameters
