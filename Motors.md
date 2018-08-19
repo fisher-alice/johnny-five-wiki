@@ -2,7 +2,7 @@ The `Motors` class constructs a collection object containing multiple motor obje
 
 See also: 
 
-- [Motor](motor)
+- [Motor](https://github.com/rwaldron/johnny-five/wiki/motor)
 
 
 ## Parameters
