@@ -5,7 +5,7 @@ The `Servo` class constructs objects that represent a single Servo attached to t
 
 See also: 
 
-- [Servos](servos)
+- [Servos](https://github.com/rwaldron/johnny-five/wiki/servos)
 
 ## Parameters
 
