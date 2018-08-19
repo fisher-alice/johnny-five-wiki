@@ -1,10 +1,10 @@
 ![](http://i.gyazo.com/1aaab47df9a262baa36bd7ba515b4cbc.png)
 
-The `Relay` class constructs objects that represent a single digital Relay  attached to the physical board.
+The `Relay` class constructs objects that represent a single digital Relay attached to the physical board.
 
 See also: 
 
-- [Relays](relays)
+- [Relays](https://github.com/rwaldron/johnny-five/wiki/relays)
 
 ## Parameters
 
