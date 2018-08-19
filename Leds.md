@@ -1,6 +1,6 @@
 The `Leds` class constructs a collection object containing multiple Led objects. Any method called on an Leds object will be called on each member of the Leds object with the same parameters.
 
-For working with a single Led check out the [Led](https://github.com/rwaldron/johnny-five/wiki/led) class.
+If you are interested in working with a single LED, see the [Led](led) class.
 
 ## Parameters
 
