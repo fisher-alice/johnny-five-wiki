@@ -4,7 +4,7 @@ The `Motor` class constructs objects that represent a single Motor. The motor ma
 
 See also: 
 
-- [Motors](motors)
+- [Motors](https://github.com/rwaldron/johnny-five/wiki/motors)
 
 
 ## Parameters
