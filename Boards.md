@@ -2,7 +2,9 @@ The `Boards` class constructs a collection object containing multiple board obje
 
 This class has only been tested with Arduino compatible boards. 
 
-See also: [Board](board)
+See also: 
+
+- [Board](board)
 
 ## Parameters
 
