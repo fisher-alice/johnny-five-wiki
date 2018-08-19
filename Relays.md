@@ -4,7 +4,7 @@ Once instantiated, a `Relays` collection object is static.
 
 See also: 
 
-- [Relay](relay)
+- [Relay](https://github.com/rwaldron/johnny-five/wiki/relay)
 
 
 ## Parameters
