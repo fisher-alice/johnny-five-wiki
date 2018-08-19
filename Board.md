@@ -34,7 +34,7 @@ For non-Arduino based projects, a number of [IO Plugins](https://github.com/rwal
 
 See also: 
 
-- [Boards](boards)
+- [Boards](https://github.com/rwaldron/johnny-five/wiki/boards)
 
 ## Parameters
 
