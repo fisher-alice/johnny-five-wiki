@@ -1,7 +1,9 @@
 The `ESCs` class constructs a collection object containing multiple ESC objects. Any method called on an ESCs object will be called on each member of the ESCs object with the same parameters.
 
 
-If you are interested in working with a single ESC, see the [ESC](esc) class.
+See also: 
+
+- [ESC](esc)
 
 
 ## Parameters
