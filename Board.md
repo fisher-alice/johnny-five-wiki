@@ -32,7 +32,7 @@ For non-Arduino based projects, a number of [IO Plugins](https://github.com/rwal
 - [Tessel-IO](https://github.com/rwaldron/tessel-io/)
 - [Playground-IO](https://github.com/rwaldron/playground-io/)
 
-See also: [Multi-Board Support](https://github.com/rwldrn/johnny-five/wiki/Boards)
+See also: [Multi-Board Support](Boards)
 
 ## Parameters
 
