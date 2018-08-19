@@ -4,7 +4,7 @@ Once instantiated, a Servos object is static. You may not ```push()``` additiona
 
 See also: 
 
-- [Servo](servo)
+- [Servo](https://github.com/rwaldron/johnny-five/wiki/servo)
 
 
 ## Parameters
