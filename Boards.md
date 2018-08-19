@@ -2,7 +2,7 @@ The `Boards` class constructs a collection object containing multiple board obje
 
 See also: 
 
-- [Board](board)
+- [Board](https://github.com/rwaldron/johnny-five/wiki/board)
 
 ## Parameters
 
