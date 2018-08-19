@@ -1,6 +1,9 @@
 The `Motors` class constructs a collection object containing multiple motor objects. Any method called on a `Motors` object will be called on each entry of the `Motors` object with the same parameters.
 
-For working with a single motor check out the [Motor](https://github.com/rwaldron/johnny-five/wiki/motor) class.
+See also: 
+
+- [Motor](motor)
+
 
 ## Parameters
 
