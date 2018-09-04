@@ -59,6 +59,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Sensor**
  - HX711 Load Cell Amplifier (Requires SPI)[#884](/rwaldron/johnny-five/issues/884)
+ - INA219 High Side DC Current Sensor Breakout [#1500] (/rwaldron/johnny-five/issues/1500)
 
 **Servo**
  - Five wire servos [#1019](/rwaldron/johnny-five/issues/1019)
