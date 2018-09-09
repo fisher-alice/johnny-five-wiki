@@ -8,6 +8,8 @@ We hope this will be a place where new and existing contributors will come to se
 ### New Boards/IO Plug-Ins
 **Asus Tinker Board** [#1421](/rwaldron/johnny-five/issues/1421)
 
+**NanoPC T-4** [#1502](/rwaldron/johnny-five/issues/1502)
+
 **Rainbowduino** Discontinued? [#574](/rwaldron/johnny-five/issues/574)
 
 ------------------
