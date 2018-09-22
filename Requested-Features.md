@@ -110,5 +110,3 @@ We hope this will be a place where new and existing contributors will come to se
 ------------------
 ### Other Enhancements
 **DMX512 Protocol** - This would have to be added to firmata first [#1326](/rwaldron/johnny-five/issues/1326)
-
-**Leverage io.resolution** - [#1280](/rwaldron/johnny-five/issues/1280), [#1276](/rwaldron/johnny-five/issues/1276), [#1275](/rwaldron/johnny-five/issues/1275)
