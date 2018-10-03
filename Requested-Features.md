@@ -10,6 +10,8 @@ We hope this will be a place where new and existing contributors will come to se
 
 **NanoPC T-4** [#1502](/rwaldron/johnny-five/issues/1502)
 
+**Orange Pi** [#1508](/rwaldron/johnny-five/issues/1508)
+
 **Rainbowduino** Discontinued? [#574](/rwaldron/johnny-five/issues/574)
 
 ------------------
