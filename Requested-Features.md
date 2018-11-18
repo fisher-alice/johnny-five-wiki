@@ -46,6 +46,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **IMU**
  - LSM9DSO [#1072](/rwaldron/johnny-five/issues/1072)
+ - MMA7455 [#1535](/rwaldron/johnny-five/issues/1535)
 
 **LCD**
  - QC1602A v2.0 [#658](/rwaldron/johnny-five/issues/658)
