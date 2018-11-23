@@ -14,6 +14,8 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Rainbowduino** Discontinued? [#574](/rwaldron/johnny-five/issues/574)
 
+**WeMos D1/D1 Mini** [#983](https://github.com/rwaldron/johnny-five/issues/983)
+
 ------------------
 ### New Classes
 **Sound Generator/Synthesizer Class** [#1410](/rwaldron/johnny-five/issues/1410)
