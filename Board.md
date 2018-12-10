@@ -47,7 +47,7 @@ See also:
   | port          | String or object | eg. `/dev/ttyAM0`, `COM1`, `new SerialPort()`. Path or name of device port/COM or SerialPort object | Detected | no       |
   | repl          | Boolean          | `true`, `false`. Set to `false` to disable REPL                 | `true` | no       |
   | debug         | Boolean          | `true`, `false`. Set to `false` to disable debugging output | `true`                     | no       |
-  | timeout       | Number           | Timeout in seconds for the board to get connected                | `10`   | no    |
+  | timeout       | Number           | Timeout in milliseconds for the board to get connected                | `10000`   | no    |
   </span>
 
 ## Shape
