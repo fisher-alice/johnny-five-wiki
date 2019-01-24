@@ -70,7 +70,7 @@ node strobe.js
 
 
 
-## Troublehooting
+## Troubleshooting
 
 **Firmware**
 
