@@ -70,14 +70,20 @@ node strobe.js
 
 
 
-## Trouble Shooting
+## Troublehooting
 
 **Firmware**
 
 The StandardFirmataPlus firmware is the one that is used for Johnny-Five to communicate with the board.
 That means you have to install it first, then you can execute the nodejs programs.
+**Arduiono IDE**
+- Open [Arduino IDE](http://arduino.cc/en/main/software)
+- Verify correct port and board
+- Navigate to File > Examples > Firmata > StandardFirmata
+- Load sketch onto board.
 
-- Install `arduino` package on your operating system (otherwise [Arduino IDE](http://arduino.cc/en/main/software)).
+**Packaged**
+- Install `arduino` package on your operating system ).
 - Make a `firmware` folder and save [this firmware.ino](https://github.com/firmata/arduino/blob/master/examples/StandardFirmataPlus/StandardFirmataPlus.ino) into it. if the link is dead again and not appearing in the Arduino IDE, use [this gist backup](https://gist.github.com/cookiengineer/4f292c952209e0f74d4c18b995dac855).
 - Install arduino libraries via `arduino --install-library "Firmata,Servo"` in the Terminal.
 - Flash the arduino board via `arduino --board "arduino:avr:uno" --upload ./path/to/firmware/firmware.ino`. Remember to change your board according to what you use. See below on how to figure out that identifier.
