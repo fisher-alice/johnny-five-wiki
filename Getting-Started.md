@@ -79,7 +79,7 @@ That means you have to install it first, then you can execute the nodejs program
 **Arduiono IDE**
 - Open [Arduino IDE](http://arduino.cc/en/main/software)
 - Verify correct port and board
-- Navigate to File > Examples > Firmata > StandardFirmata
+- Navigate to File > Examples > Firmata > StandardFirmataPlus
 - Load sketch onto board.
 
 **Packaged**
