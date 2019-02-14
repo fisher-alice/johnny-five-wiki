@@ -1,1 +1,1 @@
-I just edited the footer @toyrone007 on twitter
+I just edited the footer on twitter
