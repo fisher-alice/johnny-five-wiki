@@ -1,1 +1,1 @@
-I just edited the footer on twitter
+This footer is awesome!
