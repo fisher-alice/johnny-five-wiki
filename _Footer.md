@@ -1,1 +1,1 @@
-Does just anyone get to edit the footer?
+I just edited the footer @toyrone007 on twitter
