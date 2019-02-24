@@ -67,6 +67,11 @@ new five.LCD({
 #### I2C, PCF8574 (Generic)
 
 ```js
+/* I2C LCD Controllers PCF8574X Series have SDA and SCL pins which need to be connected to respective i/o ports on Arduino boards e.g
+* Arduino UNO SDA = A4  and SCL = A5
+* Arduino MEGA 2560 SDA = 20  and SCL = 21   
+*/
+
 // I2C LCD, PCF8574
 new five.LCD({ 
   controller: "PCF8574"
