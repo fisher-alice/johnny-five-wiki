@@ -70,6 +70,7 @@ new five.LCD({
 /* I2C LCD Controllers PCF8574X Series have SDA and SCL pins which need to be connected to respective i/o ports on Arduino boards e.g
 * Arduino UNO SDA = A4  and SCL = A5
 * Arduino MEGA 2560 SDA = 20  and SCL = 21   
+* + To Adjust the LCD text Brightness use blue color variable resistor on I2C board. turn it around with screw driver.
 */
 
 // I2C LCD, PCF8574
