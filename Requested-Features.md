@@ -72,6 +72,7 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Servo**
  - Five wire servos [#1019](/rwaldron/johnny-five/issues/1019)
+ - DMM Servos [#1559](/rwaldron/johnny-five/issues/1559)
 
 **Thermometer**
  - MAX31855K (Requires SPI) [#1408](/rwaldron/johnny-five/issues/1408), [#738](/rwaldron/johnny-five/issues/738)
