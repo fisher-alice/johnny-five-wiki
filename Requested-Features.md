@@ -42,7 +42,7 @@ We hope this will be a place where new and existing contributors will come to se
  - 74HC4067 [#939](/rwaldron/johnny-five/issues/939)
  - 74HC4051 [#939](/rwaldron/johnny-five/issues/939)
  - 74HC165 [#456](/rwaldron/johnny-five/issues/456)
- - CD4021B [#456](/rwaldron/johnny-five/issues/456)
+ - CD4021B [#456](/rwaldron/johnny-five/issues/456), [#1553](/rwaldron/johnny-five/issues/1553)
 
 **GPS**
  - SIM808 [#1392](/rwaldron/johnny-five/issues/1392)
