@@ -278,6 +278,25 @@ board.on("ready", function() {
 
 ```
 
+## API
+
+- **within(range, unit, handler)** When value is within the provided range for the specified unit (`cm`, `centimeters`, `in` or `inches`), execute callback.
+
+  ```js
+
+  var proximity = new five.Proximity({
+    controller: "GP2Y0A21YK",
+    pin: "A0"
+  });
+
+  proximity.within([ 100, 200 ], "cm", function() {
+    
+    // This is called when the proximity sensor's cm value falls within 100-200
+
+  });
+
+  ```
+
 ## Events
 
 - **data** The "data" event is fired as frequently as the user defined freq will allow in milliseconds.
