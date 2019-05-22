@@ -66,7 +66,7 @@ Make sure the board is plugged into your host machine (desktop, laptop, raspberr
 node strobe.js
 ```
 
-[Success should look like this](http://jsfiddle.net/rwaldron/dtudh/show/light/)
+
 
 
 
