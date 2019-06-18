@@ -81,6 +81,9 @@ We hope this will be a place where new and existing contributors will come to se
 ------------------
 ### New Class Features
 
+**Expander**
+ - Add the ability to specify PWM range per pin instead of per expander [#1585](/rwaldron/johnny-five/issues/1585)
+
 **IMU**
  - Access to DMP processed values [#1126](/rwaldron/johnny-five/issues/1126)
 
