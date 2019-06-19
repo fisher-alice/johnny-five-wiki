@@ -33,6 +33,7 @@ For Leds that only have on/off states, use a digital pin:
   |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
   | pin           | Number  | Digital Pin. The Number address of the pin the led is attached to                                            |  | yes      |
   | controller    | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"`                                      | no       |
+  | board           | Object Instance  | The board instance your LED is connected to.  Only required when multiple boards are mounted in your project.  | First board mounted | no      |
   </span>
 
 - **PCA9685 Options (controller: "PCA9685")** An object of property parameters.
@@ -85,6 +86,22 @@ var board = new five.Board();
 
 board.on("ready", function() {
   var led = new five.Led(13);
+  led.blink();
+});
+```
+```js
+// Blink LED's with multiple mounted boards
+var five = require("johnny-five");
+var board1 = new five.Board();
+var board2 = new five.Board();
+
+board1.on("ready", function() {
+  var led1 = new five.Led(board1, 13);
+  led.blink();
+});
+
+board2.on("ready", function() {
+  var led2 = new five.Led(board2, 13);
   led.blink();
 });
 ```
