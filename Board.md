@@ -447,7 +447,7 @@ Mode constants are exposed via the `Pin` class
 
 - **exit** This event is emitted synchronously on `SIGINT`. Use this handler to do any necessary cleanup before your program is "disconnected" from the board.
 
-- **close** This event is emmit when the device does not respond. This handle can be used to detect if board gets disconnected.
+- **close** This event is emmited when the device does not respond. Can be used to detect if board gets disconnected.
 
 - **info** This event will emit for `board.info(class, message [, ...])`
   ```js
