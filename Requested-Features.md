@@ -32,6 +32,9 @@ We hope this will be a place where new and existing contributors will come to se
  - RC Receiver [#1071](/rwaldron/johnny-five/issues/1071)
  - RFID Receiver [#804](/rwaldron/johnny-five/issues/804)
 
+**Magnetomoter**
+ - QMC5883 [#1486](/rwaldron/johnny-five/issues/1486)
+
 ------------------
 ### New Devices
 
