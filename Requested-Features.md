@@ -93,6 +93,9 @@ We hope this will be a place where new and existing contributors will come to se
 **Piezo**
  - Support RTTL, RTTL+ [#639](/rwaldron/johnny-five/issues/639)
 
+**LED**
+ - **Syncdrive/inverse/isAnode for non-PWM LEDs** [#1398](https://github.com/rwaldron/johnny-five/pull/1398)
+
 **LED.RGB**
  - **Fade to color method** [#1309](/rwaldron/johnny-five/issues/1309)
  - **Color Correction** [#811](/rwaldron/johnny-five/issues/811)
