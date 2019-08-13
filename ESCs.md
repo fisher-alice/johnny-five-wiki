@@ -48,8 +48,8 @@ board.on("ready", function() {
 
   var escs = new five.ESCs([3, 5]);
 
-  // Set ll ESCs to max.
-  escs.max();
+  // Set all ESCs to max.
+  escs.throttle(100);
 });
 ```
 
@@ -65,7 +65,7 @@ board.on("ready", function() {
   var escs = new five.ESCs([9, 10]);
 
   // Set the ESC on pin 9 to 90% of max speed.
-  escs[0].speed(90);
+  escs[0].throttle(90);
 });
 ```
 
@@ -82,7 +82,7 @@ board.on("ready", function() {
   ]);
 
   // Set both escs to 75% of max speed.
-  escs.speed(75);
+  escs.throttle(75);
 });
 ```
 
@@ -101,11 +101,11 @@ board.on("ready", function() {
 var motors = new five.ESCs([escA, escB]);
 
   // Set ESCs independently
-  escA.speed(20);
-  escB.speed(90);
+  escA.throttle(20);
+  escB.throttle(90);
 
   // Set all ESCs to max speed.
-  escs.max();
+  escs.throttle(100);
 
 });
 ```
