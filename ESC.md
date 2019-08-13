@@ -21,7 +21,7 @@ See also:
   | pin      | Number, String | Any PWM Pin. The address of the PWM pin the ESC is attached to || yes      |
   | controller    | String  | DEFAULT, PCA9685. Controller interface type. | "DEFAULT"                                           | no       |
   | pwmRange      | Array          | `[ min, max ]` The pulse width range in microseconds. | `[1000, 2000]`                      | no       |
-  | device    | String  | FORWARD, FORWARD_REVERSE. Device capability type. | "FORWARD"                                           | no       |
+  | device    | String  | FORWARD, FORWARD_REVERSE, FORWARD_BRAKE_REVERSE. Device capability type. | "FORWARD"                                           | no       |
   | neutral    | Number  | Neutral point, usually the middle of the PWM range. | Varies by `device` | no       |
   </span>
 
@@ -39,7 +39,8 @@ See also:
 |---------------| ----------- | ----------|
 | `id` | A user definable id value. Defaults to a generated uid | No |
 | `pin` | The pin address that the ESC is attached to | No |
-| `value` | The value of the last/current speed. | Yes |
+| `neutral` | The zero-state value of the ESC, middle of PWM range. | No |
+| `pwmRange` | `[ min, max ]` The pulse width range in microseconds. | No |
 
 ## Component Initialization
 
@@ -87,10 +88,14 @@ var board = new five.Board();
 board.on("ready", function() {
 
   var esc = new five.ESC(11);
-  
-  board.loop(100, () => 
-  esc.throttle();
+  var speed = 0;
 
+  board.loop(100, () => {
+    if (speed < 100) {
+      speed += 1;
+      esc.throttle(speed);
+    }
+  });
 });
 ```
 
@@ -99,11 +104,13 @@ board.on("ready", function() {
 - **speed(value)** Deprecated. Use `throttle(μs)`
 
 
-- **throttle(value)** Throttle the speed of the ESC by setting a pulse in μs.
+- **throttle(value|percentage)** Throttle the speed of the ESC by setting a pulse in μs or percentage (0-100).
   ```js
   var esc = new five.ESC(9);
 
   esc.throttle(1500); // 1500μs is half speed of a single direction or neutral of a bidirectional
+
+  esc.throttle(50); // 50% is half speed in a single direction or neutral of a bidirectional
   ```
 
 - **brake()** Brake the ESC
