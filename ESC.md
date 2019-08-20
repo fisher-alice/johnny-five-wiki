@@ -80,7 +80,7 @@ new five.ESC({
 
 ## Usage
 
-Standard ESC
+Standard, `FORWARD`-only ESC:
 ```js
 var five = require("johnny-five");
 var board = new five.Board();
@@ -101,10 +101,10 @@ board.on("ready", function() {
 
 ## API
 
-- **speed(value)** Deprecated. Use `throttle(μs)`
+- **speed(value)** Deprecated. Use `throttle(μs)` or `throttle(%)`
 
 
-- **throttle(value|percentage)** Throttle the speed of the ESC by setting a pulse in μs or percentage (0-100).
+- **throttle(μs|percentage)** Throttle the speed of the ESC by setting a pulse in μs or percentage (0-100).
   ```js
   var esc = new five.ESC(9);
 
@@ -124,8 +124,10 @@ board.on("ready", function() {
 <!--remove-start-->
 
 ## Examples
-- [Esc Keypress](https://github.com/rwldrn/johnny-five/blob/master/docs/esc-keypress.md)
-- [Esc Dualshock](https://github.com/rwldrn/johnny-five/blob/master/docs/esc-dualshock.md)
+- [ESC Bidirectional](https://github.com/rwaldron/johnny-five/blob/master/docs/esc-bidirectional.md)
+- [ESC Keypress Controls](https://github.com/rwaldron/johnny-five/blob/master/docs/esc-keypress.md)
+- [ESC PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/esc-PCA9685.md)
+
 
 <!--remove-end-->
 
