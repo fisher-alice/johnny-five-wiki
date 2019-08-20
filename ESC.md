@@ -39,7 +39,7 @@ See also:
 |---------------| ----------- | ----------|
 | `id` | A user definable id value. Defaults to a generated uid | No |
 | `pin` | The pin address that the ESC is attached to | No |
-| `neutral` | The zero-state value of the ESC, middle of PWM range. | No |
+| `neutral` | The stopped/brake-state value of the ESC, usually the middle of PWM range. | No |
 | `pwmRange` | `[ min, max ]` The pulse width range in microseconds. | No |
 
 ## Component Initialization
@@ -58,6 +58,7 @@ new five.ESC(9);
 
 ```js
 new five.ESC({
+  device: "FORWARD_REVERSE",
   controller: "PCA9685",
   pin: 1
 });
@@ -70,8 +71,8 @@ new five.ESC({
 
 ```js
 new five.ESC({
+  device: "FORWARD_REVERSE",   
   pin: 9, 
-  device: "FORWARD_REVERSE", 
 });
 ```
 
@@ -82,16 +83,17 @@ new five.ESC({
 
 Standard, `FORWARD`-only ESC:
 ```js
-var five = require("johnny-five");
-var board = new five.Board();
+const five = require("johnny-five");
+const board = new five.Board();
 
 board.on("ready", function() {
 
-  var esc = new five.ESC(11);
-  var speed = 0;
+  const esc = new five.ESC(11);
+  const speed = 0;
 
   board.loop(100, () => {
-    if (speed < 100) {
+    // limit to 10% for safety!
+    if (speed < 10) {
       speed += 1;
       esc.throttle(speed);
     }
