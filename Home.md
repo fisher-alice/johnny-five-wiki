@@ -24,7 +24,7 @@
 - [Animation](https://github.com/rwaldron/johnny-five/wiki/Animation)
 - [Barometer](https://github.com/rwaldron/johnny-five/wiki/Barometer)
 - [Board](https://github.com/rwaldron/johnny-five/wiki/Board) 
-  - ([pt_BR][])
+  - ([Board-pt_BR][])
 - [Boards](https://github.com/rwaldron/johnny-five/wiki/Boards) 
 - [Button](https://github.com/rwaldron/johnny-five/wiki/Button) 
   - ([Button-pt_BR][])
@@ -37,7 +37,6 @@
 - [Gyro](https://github.com/rwaldron/johnny-five/wiki/Gyro)
 - [Hygrometer](https://github.com/rwaldron/johnny-five/wiki/Hygrometer)
 - [IMU](https://github.com/rwaldron/johnny-five/wiki/IMU)
-- [IR.Reflectance](https://github.com/rwaldron/johnny-five/wiki/IR.Reflect.Array)
 - [Joystick](https://github.com/rwaldron/johnny-five/wiki/Joystick)
 - [Keypad](https://github.com/rwaldron/johnny-five/wiki/Keypad)
 - [LCD](https://github.com/rwaldron/johnny-five/wiki/LCD)
@@ -54,12 +53,14 @@
 - [Piezo](https://github.com/rwaldron/johnny-five/wiki/Piezo)
 - [Pin](https://github.com/rwaldron/johnny-five/wiki/Pin)
 - [Proximity](https://github.com/rwaldron/johnny-five/wiki/Proximity)
+- [ReflectanceArray](https://github.com/rwaldron/johnny-five/wiki/ReflectanceArray)
 - [Relay](https://github.com/rwaldron/johnny-five/wiki/Relay)
 - [Relays](https://github.com/rwaldron/johnny-five/wiki/Relays)
 - [Sensor](https://github.com/rwaldron/johnny-five/wiki/Sensor)
 - [Servo](https://github.com/rwaldron/johnny-five/wiki/Servo)
 - [Servos](https://github.com/rwaldron/johnny-five/wiki/Servos)
 - [ShiftRegister](https://github.com/rwaldron/johnny-five/wiki/ShiftRegister)
+- [SIP](https://github.com/rwaldron/johnny-five/wiki/System-in-Package)
 - [Stepper](https://github.com/rwaldron/johnny-five/wiki/Stepper)
 - [Switch](https://github.com/rwaldron/johnny-five/wiki/Switch)
 - [Thermometer](https://github.com/rwaldron/johnny-five/wiki/Thermometer)
@@ -67,7 +68,7 @@
 
 <!--extract-end:api-->
 
-[pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
+[Board-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Board-pt_BR
 [Button-pt_BR]: https://github.com/rwaldron/johnny-five/wiki/Button-pt_BR
 
 ### How-To Guides
