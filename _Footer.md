@@ -1,1 +1,1 @@
-A new footer? Wow!
+Hi! I'm the footer! <3
