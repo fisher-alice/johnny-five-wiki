@@ -1,1 +1,1 @@
-Hi! I'm the footer! <3
+Hi! I'm the foote  <3
