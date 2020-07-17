@@ -25,6 +25,7 @@ The `Button` class constructs objects that represents a single Button attached t
   | isPullup      | Boolean        | `true`, `false`. Initialize as a pullup button                                                                                                                      | `false` | no       |
   | isPulldown      | Boolean        | `true`, `false`. Initialize as a pulldown button                                                                                                                      | `false` | no       |
   | holdtime      | Number         | Time in milliseconds that the button must be held until emitting a "hold" event. | 500ms                                                    | no       |
+  | debounce      | Number         | Time in milliseconds to delay button events. Cleans up "noisy" state changes. | 7ms                                                    | no       |
   </span>
 
 ## Shape
