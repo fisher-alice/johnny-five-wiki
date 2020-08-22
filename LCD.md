@@ -149,6 +149,13 @@ board.on("ready", function() {
   lcd.print("Hello :heart:");
   ```
 
+- **createChar(name, charMap)** Creates a custom character in LCD memory and adds character to current LCD character map. LCD memory is limited to 8 special characters at a time.
+
+  ``` js
+  lcd.createChar("openheart", [0x00, 0x0a, 0x15, 0x11, 0x11, 0x0a, 0x04, 0x00]);
+  lcd.print("Hello :openheart:");
+  ```
+
 - **clear()** Clears all text on the LCD.
 
   ``` js
