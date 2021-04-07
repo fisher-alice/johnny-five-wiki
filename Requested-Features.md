@@ -123,8 +123,9 @@ We hope this will be a place where new and existing contributors will come to se
 
 **Apex 5400 Bill Acceptor** - [#1317](/rwaldron/johnny-five/issues/1317)
 
-**RFID/NFC** - [#1108](/rwaldron/johnny-five/issues/1108), [#804](/rwaldron/johnny-five/issues/804)
+**RFID/NFC** - [#1108](/rwaldron/johnny-five/issues/1108), [#804](/rwaldron/johnny-five/issues/804), [#1725](/rwaldron/johnny-five/issues/1725)
  - Adafruit PN532 RFID/NFC Breakout and Shield
+ - RC522 Card Sensor Module
 
 ------------------
 ### Other Enhancements
