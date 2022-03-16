@@ -22,7 +22,7 @@ Via @ThomasDeutsch en https://github.com/rwldrn/johnny-five/issues/48#issuecomme
 
 - Instalar Node.js 0.10.x **32 bit** (a no ser de que alguien pueda confirmar éxito con 64 bit)
 - Instalar Visual Studio Express 2010 32 bit (asegúrese de tener las dependencias de C++ checkeadas)
-- Instalar [Python 2.7.3](http://www.python.org/getit/releases/2.7.3/)
+- Instalar [Python 2.7.3](https://bit.ly/37u3DdX)
 - Abrir cmd (Inicio > Ejecutar.. > cmd) e ingresar `set PATH=%PATH%;C:\Python27`
 - Instalar node-gyp `npm install -g node-gyp`
 
