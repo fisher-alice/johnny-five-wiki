@@ -20,7 +20,7 @@
 
 Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomment-7696662
 
-- Install <a href="https://nodejs.org" target="_blank">Node.js</a> >= 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
+- Install <a href="https://bit.ly/3IhlcLd" target="_blank">Node.js</a> >= 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
 - `npm --add-python-to-path install --global --production windows-build-tools`
 - Install node-gyp `npm install -g node-gyp`
 
