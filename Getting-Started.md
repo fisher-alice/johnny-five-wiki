@@ -76,6 +76,7 @@ node strobe.js
 
 The StandardFirmataPlus firmware is the one that is used for Johnny-Five to communicate with the board.
 That means you have to install it first, then you can execute the nodejs programs.
+
 **Arduino IDE**
 - Open [Arduino IDE](http://arduino.cc/en/main/software)
 - Verify correct port and board
