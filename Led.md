@@ -31,7 +31,7 @@ For Leds that only have on/off states, use a digital pin:
 
   | Property | Type    | Value/Description                                                                                     | Default | Required |
   |---------------|---------|-----------------------------------------------------------------------------------------------------------------------|----------|----------|
-  | pin           | Number  | Digital Pin. The Number address of the pin the led is attached to                                            |  | yes      |
+  | pin           | Number, String  | Digital Pin. The Number address of the pin the led is attached to                                            |  | yes      |
   | controller    | String  | "DEFAULT", "PCA9685". Controller interface type. | `"DEFAULT"`                                      | no       |
   | board           | Object Instance  | The board instance your LED is connected to.  Only required when multiple boards are mounted in your project.  | First board mounted | no      |
   </span>
