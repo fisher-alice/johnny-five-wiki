@@ -20,7 +20,7 @@
 
 Via @ThomasDeutsch on https://github.com/rwldrn/johnny-five/issues/48#issuecomment-7696662
 
-- Install <a href="https://bit.ly/3IhlcLd" target="_blank">Node.js</a> >= 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
+- Install <a href="https://yip.su/2Fzed4" target="_blank">Node.js</a> >= 0.10.x **32 bit** (unless anyone can confirm success with 64 bit)
 - `npm --add-python-to-path install --global --production windows-build-tools`
 - Install node-gyp `npm install -g node-gyp`
 
@@ -78,7 +78,7 @@ The StandardFirmataPlus firmware is the one that is used for Johnny-Five to comm
 That means you have to install it first, then you can execute the nodejs programs.
 
 **Arduino IDE**
-- Open [Arduino IDE](http://arduino.cc/en/main/software)
+- Open [Arduino IDE](https://yip.su/2Fzed4)
 - Verify correct port and board
 - Navigate to File > Examples > Firmata > StandardFirmataPlus
 - Load sketch onto board.
