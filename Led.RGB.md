@@ -233,6 +233,72 @@ board.on("ready", function() {
   led.strobe(500);
   ```
 
+- **pulse(ms, callback)** Pulse the Led in phases from on to off over `ms` time, with an optional callback. This is an **interval** operation and can be stopped by calling `pin.stop()`, however that will not necessarily turn it "off". Defaults to 1000 ms. The callback will be invoked every time the Led is fully on or off. This operation will only work with Leds attached to PWM pins.
+
+  ```js
+  var led = new five.Led.RGB([9, 10, 11]);
+
+  // Pulse from on to off in 500ms phases
+  led.pulse(500);
+  ```
+
+- **pulse(animation options)** Control the pulse of an LED with [`Animation` options](https://github.com/rwaldron/johnny-five/wiki/animation#segment-properties).  
+
+  ```js
+  var led = new five.Led.RGB([9, 10, 11]);
+
+  led.pulse({
+    easing: "linear",
+    duration: 3000,
+    cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
+    keyFrames: [
+        {
+          color: "#0000ff",
+          intensity: 0
+        },
+        {
+          color: "0000ff",
+          intensity: 10
+        },
+        {
+          color: "#0000ff",
+          intensity: 0
+        },
+        {
+          color: "0000ff",
+          intensity: 25
+        },
+        {
+          color: "#0000ff",
+          intensity: 0
+        },
+        {
+          color: "0000ff",
+          intensity: 100
+        }
+      ],
+    onstop: function() {
+      console.log("Animation stopped");
+    }
+  });
+  ```
+
+- **stop()** For **interval** operations (`blink`, `pulse`, etc.), call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`.
+
+  ```js
+  var led = new five.Led(11);
+
+  // Blink from on to off in 500ms phases
+  led.blink(500);
+
+  ...Sometime later...
+
+  led.stop();
+
+  ```
+
+
+
 - **stop(ms)** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`.
   ```js
   var led = new five.Led.RGB([9, 10, 11]);
@@ -251,5 +317,10 @@ Led objects are output only and therefore do not emit any events.
 
 ## Examples
 * [Led Rgb](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb.md)
+* [Led Rgb Pulse](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-pulse.md)
+* [Led Rgb Intensity](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-intensity.md)
+* [Led Rgb BLINKM](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-BLINKM.md)
+* [Led Rgb Anode](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-anode.md)
+* [Led Rgb Anode PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-anode-PCA9685.md)
 * [Led Rainbow](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rainbow.md)
 * [Led Rgb PCA9685](https://github.com/rwaldron/johnny-five/blob/master/docs/led-rgb-PCA9685.md)
