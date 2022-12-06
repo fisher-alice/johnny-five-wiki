@@ -285,32 +285,33 @@ board.on("ready", function() {
 
 - **stop()** For **interval** operations (`blink`, `pulse`, etc.), call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`.
 
-  ```js
-  var led = new five.Led(11);
-
-  // Blink from on to off in 500ms phases
-  led.blink(500);
-
-  ...Sometime later...
-
-  led.stop();
-
-  ```
-
-
-
-- **stop(ms)** For **interval** operations, call `stop` to stop the interval. `stop` does not necessarily turn "off" the Led, in order to fully shut down an Led, a program must call `stop().off()`.
-  ```js
+```js
   var led = new five.Led.RGB([9, 10, 11]);
   
   // Blink from on to off in 500ms phases
-  led.strobe(500);
+  led.blink(500);
   
   ...Sometime later...
   
   led.stop();
 
   ```
+
+
+  ```js
+  var led = new five.Led.RGB([9, 10, 11]);
+
+  // Blink from on to off in 500ms phases
+  led.pulse(500);
+
+  ...Sometime later...
+
+  led.stop();
+
+  ```
+
+
+  
 
 ## Events
 Led objects are output only and therefore do not emit any events.
